@@ -1,5 +1,6 @@
 # security-workshops
-On this repository, you can find all the security workshops I organized at Epitech Paris.
+Security workshops to introduce students to security with CTF-like exercices.
+
 In each directory, you will find the exercices, a README explaining the purpose of the workshop and the slides used during the workshop.
 
 ## workshop-wireshark
