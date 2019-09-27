@@ -5,3 +5,5 @@ Mac address of the affected Windows host.
 Host name of the affected Windows host.
 User account name on the affected Windows host.
 A short summary of what happened.
+
+# HF
