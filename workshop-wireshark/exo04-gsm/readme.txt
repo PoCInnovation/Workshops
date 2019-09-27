@@ -1,3 +1,3 @@
-Vous êtes mandaté pour analyser une capture réseau. Vous devez remettre quelque chose de compréhensible à votre interlocuteur, même si à première vue la trace parait incomplète.
+Analyze a capture of gsm traffic. You have to find something understandable, even is at first sight some pieces of information appear to be missing...
 
 Source: root-me.org
