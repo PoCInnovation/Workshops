@@ -31,7 +31,7 @@ You will learn to:
 * learn what is a hash
 * recognize and uncipher substitution cryptography
 
-## workshop-ghidra
+## workshop-reverse
 
 Introduction to reverse engineering with Ghidra tool, you'll learn to:
 * How and Why Reverse Engineering
