@@ -1,6 +1,6 @@
 # security-workshops
 On this repository, you can find all the security workshops I organized at Epitech Paris.
-In each folder, you will find the exercices, a README explaining the purpose of the workshop and the slides used during the workshop.
+In each directory, you will find the exercices, a README explaining the purpose of the workshop and the slides used during the workshop.
 
 ## workshop-wireshark
 
