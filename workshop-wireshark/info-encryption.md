@@ -1,4 +1,4 @@
-How to recognize different encryptions
+Different type of encryptions
 
 sha1
 154e419298935c6d807abdc907a198cdfce28702
