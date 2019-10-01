@@ -3,7 +3,7 @@ Security workshops to introduce students to security with CTF-like exercices.
 
 In each directory, you will find the exercices, a README explaining the purpose of the workshop and the slides used during the workshop.
 
-## workshop-wireshark
+## :shark: workshop-wireshark
 
 An introduction to Wireshark and Network Packet Analysis.
 You will learn to:
@@ -15,7 +15,7 @@ You will learn to:
 * extract data from 
 * use wireshark in a real forensic scenario
 
-## workshop-steganography
+## :microscope: workshop-steganography
 
 Basics of steganography, you will be introduced to basics of files extraction, stegsolve, and learn to hide:
 * data in text
@@ -23,7 +23,7 @@ Basics of steganography, you will be introduced to basics of files extraction, s
 * data in sound
 * data in pdf files
 
-## workshop-cryptography
+## :lock: workshop-cryptography
 
 Introduction to cryptography
 You will learn to:
@@ -31,7 +31,7 @@ You will learn to:
 * learn what is a hash
 * recognize and uncipher substitution cryptography
 
-## workshop-reverse
+## :gear: workshop-reverse
 
 Introduction to reverse engineering with Ghidra tool, you'll learn to:
 * How and Why Reverse Engineering
