@@ -1,4 +1,4 @@
-Let's learn abou historical JWT exploits
+Let's learn about historical JWT exploits
 
 ## Intro
 
