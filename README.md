@@ -17,7 +17,7 @@ You will learn to:
 
 ## :microscope: workshop-steganography
 
-Basics of steganography, you will be introduced to basics of files extraction, stegsolve, and learn to hide:
+Basics of steganography, you will be introduced to basics of files extraction, stegsolve, and learn to hide and extract:
 * data in text
 * data in images
 * data in sound
