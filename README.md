@@ -39,3 +39,7 @@ Introduction to reverse engineering with Ghidra tool, you'll learn to:
 * Learn to use Ghidra GUI to be more efficient during your decompilation
 * Solve crackmes and basic CTF challenges
 * Learn to patch binary with Ghidra
+
+# Solutions
+
+The solutions of each workshop can be found in their corresponding solutions.zip, where the password is doureallywanttogiveup??
