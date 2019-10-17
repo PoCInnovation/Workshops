@@ -12,7 +12,6 @@ You will learn to:
 * extract data from gsm communications
 * extract data from tcp communications
 * use paquet analysis for usb communications
-* extract data from 
 * use wireshark in a real forensic scenario
 
 ## :microscope: workshop-steganography
