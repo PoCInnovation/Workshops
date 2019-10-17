@@ -42,4 +42,4 @@ Introduction to reverse engineering with Ghidra tool, you'll learn to:
 
 # Solutions
 
-The solutions of each workshop can be found in their corresponding solutions.zip, where the password is doureallywanttogiveup??
+The solutions of each workshop can be found in their corresponding solutions.zip, where the password is `doureallywanttogiveup??`
