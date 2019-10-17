@@ -12,6 +12,7 @@ You will learn to:
 * extract data from gsm communications
 * extract data from tcp communications
 * use paquet analysis for usb communications
+* extract data from 
 * use wireshark in a real forensic scenario
 
 ## :microscope: workshop-steganography
@@ -38,6 +39,13 @@ Introduction to reverse engineering with Ghidra tool, you'll learn to:
 * Learn to use Ghidra GUI to be more efficient during your decompilation
 * Solve crackmes and basic CTF challenges
 * Learn to patch binary with Ghidra
+
+## :angry: workshop-angr
+
+Following the reverse workshop, we continue exploring reverse engineering tools
+with Angr, a python framework for symbolic execution. We explore the concepts of:
+* Symbolic execution, along with find and avoid conditions.
+* Symbolic data, with stack, registers and static memory.
 
 # Solutions
 
