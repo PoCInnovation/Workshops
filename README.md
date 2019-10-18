@@ -30,6 +30,7 @@ You will learn to:
 * use base64 encoding
 * learn what is a hash
 * recognize and uncipher substitution cryptography
+* manipulate and exploit historical breaches in JWT
 
 ## :gear: workshop-reverse
 
