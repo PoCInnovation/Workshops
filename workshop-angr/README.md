@@ -10,7 +10,7 @@
 
 ## Usual issues
 
-*  If you cannot install Angr because it cannot find <Python.h> install either `python3-devel` on fedora or `python3-dev` 
+*  If you cannot install Angr because it cannot find <Python.h> install either `python3-devel` on fedora or `python3-dev` on ubuntu 
 *  If you get an error `File not found` when you execute the binaries, it's because you cannot execute 32bits binaries, therefore do install a 32b lib like `glibc.i686`
 *  If pycharm throws an error with a message containing something like "python 3.0 3.7 3.7 3.7", open the yaml configuration file and delete the ligne containing those info.
 
