@@ -3,6 +3,7 @@
 ## Launch the workshop
 
 *  You must download `Pycharm Edu` or install `edu-tools` on pycharm
+*  Then open the zip file directly in pycharm edu (do not unzip it)
 *  In Pycharm, open a terminal to be in the virtual env of the workshop and make a `pip3 install angr`
 *  Then launch the build.sh at the root of the workshop files to download the binarie
 *  The exercices order : Find, Avoid, Condition, Registers, Stack, Memory
