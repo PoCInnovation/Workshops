@@ -48,6 +48,14 @@ with Angr, a python framework for symbolic execution. We explore the concepts of
 * Symbolic execution, along with find and avoid conditions.
 * Symbolic data, with stack, registers and static memory.
 
+## :syringe: workshop-xss
+
+In this workshop, you will learn to detect and exploit a Cross-site scripting Injection (XSS).
+*  Exploit and detect basic XSS
+*  Use XSS in a real world scenario (cookie stealing)
+*  Craft your own XSS payloads to bypass custom filters
+*  Learn about mutation XSS and exploit a recent Google Search Breach
+
 # Solutions
 
 The solutions of each workshop can be found in their corresponding solutions.zip, where the password is `doureallywanttogiveup??`
