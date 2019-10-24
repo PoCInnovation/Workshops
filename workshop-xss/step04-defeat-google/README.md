@@ -4,7 +4,7 @@ In this step, you will have to make a XSS payload to bypass Dompurify sanitizer.
 
 :warning: The vulnerability to exploit targets chrome-based browser.
 
-GLHF => http://ctf.oursin.eu/workshops/01/
+GLHF => https://ctf.oursin.eu/workshops/01/
 
 
 
