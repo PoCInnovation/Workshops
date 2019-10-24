@@ -54,7 +54,7 @@ In this workshop, you will learn to detect and exploit a Cross-site scripting In
 *  Exploit and detect basic XSS
 *  Use XSS in a real world scenario (cookie stealing)
 *  Craft your own XSS payloads to bypass custom filters
-*  Learn about mutation XSS and exploit a recent Google Search Breach
+*  Learn about mutation XSS and exploit a recent Chromium Breach
 
 # Solutions
 
