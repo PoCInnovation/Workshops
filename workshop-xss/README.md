@@ -1,6 +1,6 @@
 # XSS Workshop
 
-The slides of the XSS introduction talk can be found here : {LINK}
+The slides of the XSS introduction talk can be found here : https://slides.com/loicphasme/cryptography-6-10/fullscreen
 
 This workshop is composed of 4 steps :
 
