@@ -66,4 +66,4 @@ GLHF => http://ctf.oursin.eu/workshops/01/
 
 
 
-~~ maybe you want to check out what a mutation xss is ~~
+~~maybe you want to check out what a mutation xss is~~
