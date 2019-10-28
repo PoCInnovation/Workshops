@@ -50,11 +50,19 @@ with Angr, a python framework for symbolic execution. We explore the concepts of
 
 ## :syringe: workshop-xss
 
-In this workshop, you will learn to detect and exploit a Cross-site scripting Injection (XSS).
+You will learn to detect and exploit a Cross-site scripting Injection (XSS).
 *  Exploit and detect basic XSS
 *  Use XSS in a real world scenario (cookie stealing)
 *  Craft your own XSS payloads to bypass custom filters
 *  Learn about mutation XSS and exploit a recent Chromium Breach
+
+# :bomb: workshop-sql-injection
+
+Introduction to SQL injection.
+*  Learn to detect and exploit vulnerable websites
+*  Learn to bypass weak security protections
+*  Realize a blind sql injection
+*  Exploit a CVE on Sequelize
 
 # Solutions
 
