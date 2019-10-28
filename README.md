@@ -56,7 +56,7 @@ You will learn to detect and exploit a Cross-site scripting Injection (XSS).
 *  Craft your own XSS payloads to bypass custom filters
 *  Learn about mutation XSS and exploit a recent Chromium Breach
 
-# :bomb: workshop-sql-injection
+## :bomb: workshop-sql-injection
 
 Introduction to SQL injection.
 *  Learn to detect and exploit vulnerable websites
