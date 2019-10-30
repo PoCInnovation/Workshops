@@ -1,0 +1,6 @@
+1- echo "What is a blind SQL attack ?" | man google > before_asking
+2- do some scripting (do not hesitate to ask for help on this step)
+3- flag
+
+Go [here](https://www.root-me.org/fr/Challenges/Web-Serveur/SQL-injection-en-aveugle)
+(50 pts)
