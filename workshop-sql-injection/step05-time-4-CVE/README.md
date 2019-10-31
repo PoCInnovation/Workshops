@@ -5,7 +5,7 @@ Well.
 
 Guess what.
 
-In this step we're gonna exploit a recent SQL injection in an ORM named sequelize ! (Hackeeerrr Maaaann)
+In this step we're gonna exploit a recent SQL injection in an ORM ! (Hackeeerrr Maaaann)
 
-Go [here]()
+Go [here](http://chall02.sql.oursin.eu)
 
