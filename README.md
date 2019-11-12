@@ -70,6 +70,11 @@ You will learn to detect and exploit bad configurations in Unix systems.
 Part of the exercices are also what we call pyjail (aka restricted python interpreters).
 Your goal in each step is to get a shell with higher rights than yours.
 
+## :repeat: workshop-forensic
+
+Forensic is all the techniques you can use to evaluate the consequences of an attack.
+In this workshop, we will use volatility tool to learn to analyze an infected memory dump.
+
 # Solutions
 
 The solutions of each workshop can be found in their corresponding solutions.zip, where the password is `doureallywanttogiveup??`
