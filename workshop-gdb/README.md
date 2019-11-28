@@ -4,6 +4,8 @@ Welcome to our 2nd Reverse Engineering workshop, this time focused on using GDB 
 
 ## Some important links
 
+* https://github.com/longld/peda - GDB PEDA
+
 * https://slides.com/loicphasme/forensic - The slides of the workshop
 
 * https://darkdust.net/files/GDB%20Cheat%20Sheet.pdf - A GDB cheat sheet
