@@ -2,6 +2,12 @@
 
 Welcome to our 2nd Reverse Engineering workshop, this time focused on using GDB to dynamically reverse engineer binaries.
 
+## Some important links
+
+* https://slides.com/loicphasme/forensic - The slides of the workshop
+
+* https://darkdust.net/files/GDB%20Cheat%20Sheet.pdf - A GDB cheat sheet
+
 ## Step 1 - translate
 
 The objective of this exercise is to read the `step1-translate` binary using GDB, and to guess the original C code that provided it.
