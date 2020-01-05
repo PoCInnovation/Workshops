@@ -6,6 +6,6 @@ This workshop starts with a simple png image file and is organized in steps: you
 
 Do not hesitate to look for hints: every titles and text on the images were not chosen randomly :)
 
-Slides of the workshop are here: https://slides.com/loicphasme/steganography/fullscreen
+Slides of the workshop are here: https://slides.com/pwnh4/stegnaography/fullscreen
 
 HF
