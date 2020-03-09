@@ -3,6 +3,9 @@ Security workshops to introduce students to security with CTF-like exercices.
 
 In each directory, you will find the exercices, a README explaining the purpose of the workshop and the slides used during the workshop.
 
+### To join our Discord
+http://bit.ly/DiscordPoCEvents
+
 ## :shark: workshop-wireshark
 
 An introduction to Wireshark and Network Packet Analysis.
@@ -12,7 +15,7 @@ You will learn to:
 * extract data from gsm communications
 * extract data from tcp communications
 * use paquet analysis for usb communications
-* extract data from 
+* extract data from ????
 * use wireshark in a real forensic scenario
 
 ## :microscope: workshop-steganography
