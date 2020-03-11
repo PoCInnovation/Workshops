@@ -1,4 +1,4 @@
-# security-workshops
+# Security Workshops
 Security workshops to introduce students to security with CTF-like exercices.
 
 In each directory, you will find the exercices, a README explaining the purpose of the workshop and the slides used during the workshop.

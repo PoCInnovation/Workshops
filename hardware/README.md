@@ -1,4 +1,4 @@
-# Hardware Whorkshop
+# Hardware Workshops
 
 ### Pour rejoindre notre Discord
 http://bit.ly/DiscordPoCEvents
