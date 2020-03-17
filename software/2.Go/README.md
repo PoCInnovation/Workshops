@@ -51,7 +51,7 @@ intro a
     - Définir le statut 400
     - Renvoyer `Bad Request`
 
-- Créer une route **POST** '/repeat-my-body'
+- Créer une route **POST** '/send_my_body'
   - Renvoit le message donné dans le corps de la requête
   - Si le corps est vide
     - Définir le statut 400
@@ -70,14 +70,14 @@ middleware classique
 check le mux -> pair passe / impair -> error
 
 ### part 2
+on peut faire un serveur avec une clee il font une request get avec le midle ware pour voir si il peuvent accerder au chemin
 
 ## step 4
 ### part 1
-postgre SQL "on leur donne les ligne pour qu'il build leur db selons leur style"
+
+intercation avec la db sur des method get
 
 ### part 2
-interaction requete et db (get/ post)
 
-### part 3
-trouver un moyen de jouer avec leur data (trié/classé ect ect)
+intercation avec la db sur des method post
 
