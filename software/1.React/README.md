@@ -1,4 +1,4 @@
-# Workshop 2 - Todo List React/Firebase
+# Workshop 1 - Todo List React/Firebase
 
 ## Pré-requis
 
@@ -92,5 +92,5 @@ Si vous êtes arrivé jusqu'a la fin, bien joué ! Vous pouvez si vous le souhai
   - [Ant Design](https://ant.design/)
 
 
-## Author
+## Authorter
 - [Paul Monnery](https://github.com/PaulMonnery/)

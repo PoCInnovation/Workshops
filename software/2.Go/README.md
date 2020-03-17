@@ -1,4 +1,4 @@
-# API GO
+# Workshop 2 - API GO
 
 ## step 0: initiation
 Toutes les inforatons requises pour installer les dépendances du workshop sont disponibles dans [SETUP.md](./SETUP.md)
