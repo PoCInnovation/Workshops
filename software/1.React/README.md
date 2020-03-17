@@ -42,30 +42,27 @@ Créez le fichier `.eslintrc` à la racine et inserez-y le texte ci-dessous:
 
 Votre projet est à présent initialisé et votre IDE est prêt à normer votre code.
 
-> Durant ce workshop, vous avez interdiction de coder des classes ! Vous devez impérativement faire des `Pure Function Component`.
-
 ## Todo List
 
 Les `components` sont l'essence de React. Ils reprensentent un élément de la page web. Leur imbrication permet de structurer une page et d'éviter de réécrir plusieurs fois un même code.  
 Vous allez dès à présent en créer !
+> Durant ce workshop, vous avez interdiction de coder des classes ! Vous devez impérativement faire des `Pure Function Component`.
 
 ### 1. `task` component
 
 Créez un component qui contient les valeures suivantes:
   - la description de la tâche
-  - son statut:
-    - todo
-    - done
+  - son statut (todo/done)
 
-Ajouez y une checkbox pour faire changer son état. Ce component représente une tache individuelle de votre liste
+Ajouez y une checkbox pour mettre à jour son état. Ce component représente une tâche individuelle de votre liste
 
-> renseignez vous sur les `hooks`
+> Renseignez vous sur les `hooks` en React
 
 ### 2. `list` component
 
 Créez un component qui contient une liste de `task`. Il doit être capable de:
 - créer une nouvelle tâche
-- supprimer une tâche exitante
+- supprimer une tâche existante
 
 
 ## Firebase
@@ -92,5 +89,5 @@ Si vous êtes arrivé jusqu'a la fin, bien joué ! Vous pouvez si vous le souhai
   - [Ant Design](https://ant.design/)
 
 
-## Authorter
+## Author
 - [Paul Monnery](https://github.com/PaulMonnery/)
