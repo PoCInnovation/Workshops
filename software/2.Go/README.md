@@ -1,6 +1,6 @@
 # Workshop 2 - API GO
 
-## step 0: initiation
+## step 0: initialisation
 Toutes les inforatons requises pour installer les dépendances du workshop sont disponibles dans [SETUP.md](./SETUP.md)
 
 
@@ -33,13 +33,13 @@ http.ListenAndServe(":" + PORT, handlers.CORS(
 			handlers.AllowedOrigins([]string{"*"}))(server.router))
 ```
 
-## step 1
+## step 1: Premiere route
 
 Pour commencer, implementez une route basique sur le path `"/hello"` capable d'écrire "Hello World" dans votre reponse.
 
-## step 2
+## step 2: Approfondissons
 
-intro a
+introduction au
 - `body`
 - `parameter`
 - `query`
@@ -57,29 +57,24 @@ intro a
     - Définir le statut 400
     - Renvoyer `Bad Request`
 
-catchez un message passé dans le body de la requete
-catchez un index passé dans l'url
-concatenez les deux input et printez le dans le terminal
+**vous pouvez testez via postman ou curl**
+- `postman` -> [intro_a_postman](``https://learning.postman.com/docs/postman/launching-postman/introduction/``)
 
-**testez avec postman / curl**
+- `curl` -> [intro_a_curl](`https://flaviocopes.com/http-curl/`)
 
-## step 3
-### part 1
+## step 3: Les Middlewares
 
-middleware classique
-check le mux -> pair passe / impair -> error
+middleware classique check le mux -> pair passe / impair -> error
 
-### part 2
-on peut faire un serveur avec une clee il font une request get avec le midle ware pour voir si il peuvent accerder au chemin
+## step 4: Les bases de données
+### part 1: methode **GET** sur une **DB**
 
-## step 4
-### part 1
+faite une methode **GET** pour recuperé les users de la **DB** donné dans le sujet
 
-intercation avec la db sur des method get
 
-### part 2
+### part 2: methode **POST** sur une **DB**
 
-intercation avec la db sur des method post
+faite une methode **POST** pour rajouter des users dans la **DB** donné dans le sujet
 
 
 ## Author
