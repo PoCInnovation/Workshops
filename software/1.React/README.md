@@ -44,13 +44,13 @@ Votre projet est à présent initialisé et votre IDE est prêt à normer votre 
 
 ## Todo List
 
-Les `components` sont l'essence de React. Ils reprensentent un élément de la page web. Leur imbrication permet de structurer une page et d'éviter de réécrir plusieurs fois un même code.  
+Les `components` sont l'essence de React. Ils représentent un élément de la page web. Leur imbrication permet de structurer une page et d'éviter de réécrir plusieurs fois un même code.  
 Vous allez dès à présent en créer !
 > Durant ce workshop, vous avez interdiction de coder des classes ! Vous devez impérativement faire des `Pure Function Component`.
 
 ### 1. `task` component
 
-Créez un component qui contient les valeures suivantes:
+Créez un component qui contient les valeurs suivantes:
   - la description de la tâche
   - son statut (todo/done)
 
@@ -67,7 +67,7 @@ Créez un component qui contient une liste de `task`. Il doit être capable de:
 
 ## Firebase
 
-Ça se complique, à présent, pour sauvegarder nos tâches, nous allons passer par la base de données NoSQLde Google, à savoir `Firebase`.
+Ça se complique, à présent, pour sauvegarder nos tâches, nous allons passer par la base de données NoSQL de Google, à savoir `Firebase`.
 
 ### 1. Créez un projet Firebase
 
@@ -78,7 +78,7 @@ npm install firebase
 
 ### 2. Droit d'édition
 
-Les bases des données fournit par firebase sont par défaut inéditable, vous pouvez simplement outre-passer cette contraintre en allant dans `database` > `realtime database` > `rule` et en remplacant les regles d'authentification actuelles par celle-ci
+Les bases des données fournit par firebase sont par défaut inéditable sans authentification, vous pouvez simplement outre-passer cette contraintre en allant dans `database` > `realtime database` > `rule` et en remplacant les rêgles actuelles par celle-ci
 ```json
 {
   "rules": {
@@ -89,10 +89,9 @@ Les bases des données fournit par firebase sont par défaut inéditable, vous p
 ```
 
 ## Bonus - Styling
-
-Si vous êtes arrivé jusqu'a la fin, bien joué !
+Si vous êtes arrivé jusqu'à la fin, bien joué !
 Vous pouvez si vous le souhaitez ajouter du style à vos components. Pour cela, vous avez deux options :
-- découvrir les joies du [css](https://malcoded.com/posts/react-component-style/) et voici l'un des meilleurs [tuto pour apprendre les bases](https://flexboxfroggy.com/#fr) ( fortement conseillé de commencer par ici, mais faites vous plaisir avant tout ! )
+- découvrir les joies du [css](https://malcoded.com/posts/react-component-style/), voici l'un des meilleurs [tuto pour apprendre les bases](https://flexboxfroggy.com/#fr). ( fortement conseillé de commencer par ici, mais faites vous plaisir avant tout ! )
 - passer par [Bootstrap](https://getbootstrap.com/)
 - installer des packages avec des components pré-faits comme
   - [Material UI](https://material-ui.com/)
