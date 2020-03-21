@@ -76,12 +76,23 @@ Pour se faire, rendez vous sur [ce tutoriel](https://firebase.google.com/docs/we
 npm install firebase
 ```
 
-### 2. TODO
+### 2. Droit d'édition
 
+Les bases des données fournit par firebase sont par défaut inéditable, vous pouvez simplement outre-passer cette contraintre en allant dans `database` > `realtime database` > `rule` et en remplacant les regles d'authentification actuelles par celle-ci
+```json
+{
+  "rules": {
+    ".read": true,
+    ".write": true
+  }
+}
+```
 
 ## Bonus - Styling
 
-Si vous êtes arrivé jusqu'a la fin, bien joué ! Vous pouvez si vous le souhaitez ajouter du style à vos component. Pour cela, vous pouvez:
+Si vous êtes arrivé jusqu'a la fin, bien joué !
+Vous pouvez si vous le souhaitez ajouter du style à vos components. Pour cela, vous avez deux options :
+- découvrir les joies du [css](https://malcoded.com/posts/react-component-style/) et voici l'un des meilleurs [tuto pour apprendre les bases](https://flexboxfroggy.com/#fr) ( fortement conseillé de commencer par ici, mais faites vous plaisir avant tout ! )
 - passer par [Bootstrap](https://getbootstrap.com/)
 - installer des packages avec des components pré-faits comme
   - [Material UI](https://material-ui.com/)
@@ -91,3 +102,4 @@ Si vous êtes arrivé jusqu'a la fin, bien joué ! Vous pouvez si vous le souhai
 
 ## Author
 - [Paul Monnery](https://github.com/PaulMonnery/)
+- [Théo Ardouin](https://github.com/CrystallizedYou)
