@@ -10,7 +10,9 @@ Pour ce workshop, nous vous demandons d'installer:
 
 Pour commencer, initialisez votre projet.
 ```
-npm init react-app my-app
+npx create-react-app my-app
+cd my-app
+npm start
 ```
 
 Créez le fichier `.eslintrc` à la racine et inserez-y le texte ci-dessous:
@@ -26,6 +28,9 @@ Créez le fichier `.eslintrc` à la racine et inserez-y le texte ci-dessous:
   },
   "parser": "babel-eslint",
   "rules": {
+    "react/prop-types": 0,
+    "react/destructuring-assignment": 0,
+    "jsx-a11y/label-has-associated-control": 0,
     "react/jsx-filename-extension": [
       1,
       {
@@ -37,6 +42,11 @@ Créez le fichier `.eslintrc` à la racine et inserez-y le texte ci-dessous:
     ]
   }
 }
+
+```
+Puis installez les packages eslint pour le projet:
+```
+npm install eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react --save-dev
 ```
 </Details>
 
@@ -65,11 +75,11 @@ Créez un component qui contient une liste de `task`. Il doit être capable de:
 - supprimer une tâche existante
 
 
-#### Pour l'instant, nos données sont éphémères, elles disparaissent à chaque reload, voyons voir comment rendre ca un peu plus intemporel.
+**Pour l'instant, les données ne sont pas souvegardées, nous allons maitenant les héberger en ligne.**
 
 ## Firebase
 
-Ça se complique, à présent, pour sauvegarder nos tâches, nous allons passer par la base de données NoSQL de Google, à savoir `Firebase`.
+Ça se complique, à présent, pour sauvegarder nos tâches, nous allons passer par la base de données NoSQL de Google, à savoir `Firebase`. (Realtime Database, pas Firestone)
 
 ### 1. Créez un projet Firebase
 
@@ -80,7 +90,7 @@ npm install firebase
 
 ### 2. Droit d'édition
 
-Les bases des données fournit par firebase sont par défaut inéditable sans authentification, vous pouvez simplement outre-passer cette contraintre en allant dans `database` > `realtime database` > `rule` et en remplacant les rêgles actuelles par celle-ci
+Les bases des données fournies par firebase sont par défaut non-éditable sans authentification, vous pouvez simplement outre-passer cette contraintre en allant dans `database` > `realtime database` > `rule` et en remplaçant les rêgles actuelles par celle-ci
 ```json
 {
   "rules": {
@@ -92,17 +102,15 @@ Les bases des données fournit par firebase sont par défaut inéditable sans au
 
 ### 3. Intéractions
 
-Maintenant que tout est setup, il est temps d'édit votre code :
-Firebase est incroyablement bien documenté pensez a faire a tour sur la [doc](https://firebase.google.com/docs/).
-
-Si vous commencez à être perdu, visitez cette [page](https://firebase.google.com/docs/reference/js/firebase.database.Reference#on), elle vous aidera certainement, sinon les encadrants sont toujours là !
+Firebase est incroyablement bien documenté, pensez a faire a tour sur la [documentation](https://firebase.google.com/docs/).  
+Si vous commencez à être perdu, visitez cette [page](https://firebase.google.com/docs/reference/js/firebase.database.Reference#on).
 
 ## Bonus - Styling
 Si vous êtes arrivé jusqu'à la fin, bien joué !
 Vous pouvez si vous le souhaitez ajouter du style à vos components. Pour cela, vous avez deux options :
-- découvrir les joies du [css](https://malcoded.com/posts/react-component-style/), voici l'un des meilleurs [tuto pour apprendre les bases](https://flexboxfroggy.com/#fr). ( fortement conseillé de commencer par ici, mais faites vous plaisir avant tout ! )
-- passer par [Bootstrap](https://getbootstrap.com/)
-- installer des packages avec des components pré-faits comme
+- Découvrir les joies du [css](https://malcoded.com/posts/react-component-style/), voici un bon tutotiel pour apprendre à manier les [flex-box](https://flexboxfroggy.com/#fr).
+- Passer par [Bootstrap](https://getbootstrap.com/)
+- Installer des packages avec des components pré-faits comme
   - [Material UI](https://material-ui.com/)
   - [Material Design](https://material.io/design/)
   - [Ant Design](https://ant.design/)
