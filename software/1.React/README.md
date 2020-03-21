@@ -65,6 +65,8 @@ Créez un component qui contient une liste de `task`. Il doit être capable de:
 - supprimer une tâche existante
 
 
+#### Pour l'instant, nos données sont éphémères, elles disparaissent à chaque reload, voyons voir comment rendre ca un peu plus intemporel.
+
 ## Firebase
 
 Ça se complique, à présent, pour sauvegarder nos tâches, nous allons passer par la base de données NoSQL de Google, à savoir `Firebase`.
@@ -87,6 +89,13 @@ Les bases des données fournit par firebase sont par défaut inéditable sans au
   }
 }
 ```
+
+### 3. Intéractions
+
+Maintenant que tout est setup, il est temps d'édit votre code :
+Firebase est incroyablement bien documenté pensez a faire a tour sur la [doc](https://firebase.google.com/docs/).
+
+Si vous commencez à être perdu, visitez cette [page](https://firebase.google.com/docs/reference/js/firebase.database.Reference#on), elle vous aidera certainement, sinon les encadrants sont toujours là !
 
 ## Bonus - Styling
 Si vous êtes arrivé jusqu'à la fin, bien joué !
