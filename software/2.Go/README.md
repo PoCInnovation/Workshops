@@ -81,3 +81,8 @@ intercation avec la db sur des method get
 
 intercation avec la db sur des method post
 
+
+## Author
+- [Théo Ardouin](https://github.com/CrystallizedYou/)
+- [Paul Monnery](https://github.com/PaulMonnery/)
+- [Grégoire Brasseur](https://github.com/lerimeur/)

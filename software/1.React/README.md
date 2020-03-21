@@ -90,7 +90,7 @@ npm install firebase
 
 ### 2. Droit d'édition
 
-Les bases des données fournies par firebase sont par défaut non-éditable sans authentification, vous pouvez simplement outre-passer cette contraintre en allant dans `database` > `realtime database` > `rule` et en remplaçant les rêgles actuelles par celle-ci
+Les bases des données fournies par Firebase sont par défaut non-éditable sans authentification, vous pouvez simplement outre-passer cette contraintre en allant dans `database` > `realtime database` > `rule` et en remplaçant les rêgles actuelles par celle-ci
 ```json
 {
   "rules": {
@@ -102,15 +102,15 @@ Les bases des données fournies par firebase sont par défaut non-éditable sans
 
 ### 3. Intéractions
 
-Firebase est incroyablement bien documenté, pensez a faire a tour sur la [documentation](https://firebase.google.com/docs/).  
+Firebase est très bien documenté, pensez à faire un tour sur la [documentation](https://firebase.google.com/docs/).  
 Si vous commencez à être perdu, visitez cette [page](https://firebase.google.com/docs/reference/js/firebase.database.Reference#on).
 
 ## Bonus - Styling
 Si vous êtes arrivé jusqu'à la fin, bien joué !
-Vous pouvez si vous le souhaitez ajouter du style à vos components. Pour cela, vous avez deux options :
+Vous pouvez si vous le souhaitez ajouter du style à vos components, pour cela, vous avez plusieures options :
 - Découvrir les joies du [css](https://malcoded.com/posts/react-component-style/), voici un bon tutotiel pour apprendre à manier les [flex-box](https://flexboxfroggy.com/#fr).
 - Passer par [Bootstrap](https://getbootstrap.com/)
-- Installer des packages avec des components pré-faits comme
+- Installer des packages avec des components pré-faits ey stylisés comme
   - [Material UI](https://material-ui.com/)
   - [Material Design](https://material.io/design/)
   - [Ant Design](https://ant.design/)
