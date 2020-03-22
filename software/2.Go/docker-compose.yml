@@ -1,4 +1,4 @@
-version: '3.7'
+version: '3.3'
 
 services:
   web:
@@ -20,7 +20,7 @@ services:
       - postgres_data:/var/lib/postgresql/data/
       - ./GoWorkshop/db.sql:/docker-entrypoint-initdb.d/init.sql
     environment:
-      - POSTGRES_USER=gloth
+      - POSTGRES_USER=poc
       - POSTGRES_PASSWORD=password
       - POSTGRES_DB=postgres
 

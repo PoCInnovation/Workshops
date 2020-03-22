@@ -21,7 +21,7 @@ func (c *Core) Init() {
 }
 
 func routeExemple(w http.ResponseWriter, r *http.Request) {
-    if json.NewEncoder(w).Encode("zohcazjkj") != nil {
+    if json.NewEncoder(w).Encode("Welcome to PoC's GO workshop") != nil {
         w.WriteHeader(http.StatusInternalServerError)
         return
     }

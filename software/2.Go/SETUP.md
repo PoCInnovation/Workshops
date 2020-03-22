@@ -14,7 +14,7 @@ Le dossier [GoWorkshop](./GoWorkshop) est monté dans votre container.
 - Pour intéragir avec votre base de donnée:
 ```sh
 # via Docker
-sudo docker exec -ti databasePSQL psql -U gloth postgres
+sudo docker exec -ti databasePSQL psql -U poc postgres
 
 # via Lazydocker (à installer indépendamment)
 sudo lazydocker
@@ -24,10 +24,10 @@ Ou utilisez une interface graphique de gestion de base de donnée pour éditer s
 
 ```python
 POSTGRES = {
-    'user': 'gloth',
-    'pw': 'password',
-    'db': 'postgres',
     'host': 'localhost',
+    'db': 'postgres',
+    'user': 'poc',
+    'pw': 'password',
     'port': '5432',
 }
 ```
