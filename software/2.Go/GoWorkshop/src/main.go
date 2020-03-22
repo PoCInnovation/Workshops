@@ -7,6 +7,7 @@ import (
 
     "github.com/gorilla/handlers"
     "github.com/gorilla/mux"
+    "github.com/jinzhu/gorm"
 )
 
 type Core struct {

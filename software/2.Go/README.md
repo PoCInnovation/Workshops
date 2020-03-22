@@ -1,7 +1,7 @@
 # Workshop 2 - API GO
 
 ## Step 0: initialisation
-Toutes les inforatons requises pour installer les dépendances du workshop sont disponibles dans [SETUP.md](./SETUP.md)
+Toutes les informaions requises pour installer les dépendances du workshop sont disponibles dans [SETUP.md](./SETUP.md)
 
 
 <!-- ### Comment marche un server asynchrone
@@ -21,9 +21,9 @@ import (
 ```
 
 Nous utiliserons pour ce workshop:
-- [mux](https://www.gorillatoolkit.org/pkg/mux), un router HTTP, il nous permet de créer des routes pour récuperer de la donnée.
-- [handlers](https://www.gorillatoolkit.org/pkg/handlers) pour ajouter des middlewares à noter server.
-- [gorm](https://gorm.io/docs/), un ORM pour Go. Il nous permet de récuperer de faire des query dans les bases de données sans avoir à écrire les requêtes à la main.
+- [mux](https://www.gorillatoolkit.org/pkg/mux), un router HTTP, il permet de créer des routes pour récuperer de la donnée.
+- [handlers](https://www.gorillatoolkit.org/pkg/handlers) pour ajouter des middlewares à notre server.
+- [gorm](https://gorm.io/docs/), un ORM pour Go. Il nous permet de faire des recherches dans les bases de données sans avoir à écrire les requêtes SQL à la main.
 
 
 
@@ -33,31 +33,28 @@ Nous utiliserons pour ce workshop:
 mux.NewRouter()
 //set up de route
 http.ListenAndServe(":" + PORT, handlers.CORS(
-			handlers.AllowedHeaders([]string{"X-Requested-With", "Content-Type", "Authorization"}),
-			handlers.AllowedMethods([]string{"GET", "POST", "PUT", "HEAD", "OPTIONS"}),
-			handlers.AllowedOrigins([]string{"*"}))(server.router))
+    handlers.AllowedHeaders([]string{"X-Requested-With", "Content-Type", "Authorization"}),
+    handlers.AllowedMethods([]string{"GET", "POST", "PUT", "HEAD", "OPTIONS"}),
+    handlers.AllowedOrigins([]string{"*"}))(server.router))
 ```
 
 ## Step 1: Première route
 
-Pour commencer, implementez une route basique `"/hello"` qui renvoie "World" quand vous allez sur http://localhost:8080/hello
+Pour commencer, implementez une route basique `"/hello"` qui renvoie `world` quand vous allez sur http://localhost:8080/hello
 
-## Step 2: Approfondissons
+## Step 2: Routes avec paramètres
 
 Vous allez devoir envoyer des paramètres au server via les routes. Pour cela, vous allez faire varier l'url de votre route.
 
 Créer une route **GET** `/blog/{user}`
 - Prend un paramètre `user`
-- Renvoit `"I am {user} !"`
-- Si aucun message est donné
+- Renvoit `I am {user} !`
+- Si aucun message n'est donné:
   - Définir le statut 400
   - Renvoyer `Bad Request`
 
 
-> vous pouvez testez via postman ou curl
-- [postman](`https://learning.postman.com/docs/postman/launching-postman/introduction/`)
-- [curl](`https://flaviocopes.com/http-curl/`)
-
+> vous pouvez tester vos routes via [postman](https://learning.postman.com/docs/postman/launching-postman/introduction/) ou [curl](https://flaviocopes.com/http-curl/)
 
 ## Step 3: Mise en place des Middlewares
 
