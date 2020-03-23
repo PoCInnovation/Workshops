@@ -56,7 +56,7 @@ Votre projet est à présent initialisé et votre IDE est prêt à normer votre 
 
 Les `components` sont l'essence de React. Ils représentent un élément de la page web. Leur imbrication permet de structurer une page et d'éviter de réécrir plusieurs fois un même code.  
 Vous allez dès à présent en créer !
-> Durant ce workshop, vous avez interdiction de coder des classes ! Vous devez impérativement faire des `Pure Function Component`.
+> Durant ce workshop, vous avez interdiction d'utiliser des classes ! Vous devez impérativement faire des `Functional Components`.
 
 ### 1. `task` component
 
