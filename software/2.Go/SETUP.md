@@ -8,7 +8,7 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 ```
 
-Puis lancez la commande:
+Puis lancez la commande dans le dossier où il y a le [docker-compose.yml](./docker-compose.yml) :
 ```sh
 sudo docker-compose up -d --build
 ```
@@ -17,9 +17,6 @@ Pour intéragir avec votre base de donnée:
 ```sh
 # via Docker
 sudo docker exec -ti workshop-databasePSQL psql -U poc postgres
-
-# via Lazydocker (à installer indépendamment)
-sudo lazydocker
 ```
 
 Ou utilisez une interface graphique de gestion de base de donnée pour éditer ses données (dbeaver par exemple)
@@ -36,12 +33,14 @@ POSTGRES = {
 
 ## Go
 
-Pour la partie code, nous utiliserons les modules Go pour simplifier au maximum les principes de PATH instauré par le Go.
-Vous aurez donc besoin d'une version de go superieur a la 1.12 minimum
+Pour la partie code, nous utiliserons les modules Go pour simplifier au maximum les principes de PATH instauré par le Go.  
+Vous aurez donc besoin d'une version de Go **superieur ou égale à la 1.12**
 
 ```sh
+# par exemple
+
 $ go version
-go version go1.12.1 linux/amd64
+go version go1.12.10 linux/amd64
 ```
 
 Vous pouvez lancer le server en allant dans le dossier `src`
