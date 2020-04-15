@@ -1,16 +1,6 @@
 version: '3.3'
 
 services:
-  web:
-    container_name: workshop-serverGO
-    build: ./GoWorkshop
-    command: go run ./src
-    volumes:
-      - ./GoWorkshop/:/usr/src/app/
-    ports:
-      - 8080:8080
-    depends_on:
-      - db
   db:
     image: postgres:12.0-alpine
     container_name: workshop-databasePSQL
@@ -18,7 +8,7 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data/
-      - ./GoWorkshop/db.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./db.sql:/docker-entrypoint-initdb.d/init.sql
     environment:
       - POSTGRES_USER=poc
       - POSTGRES_PASSWORD=password
