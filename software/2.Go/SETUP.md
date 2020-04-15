@@ -16,7 +16,7 @@ sudo docker-compose up -d --build
 Pour intéragir avec votre base de donnée:
 ```sh
 # via Docker
-sudo docker exec -ti databasePSQL psql -U poc postgres
+sudo docker exec -ti workshop-databasePSQL psql -U poc postgres
 
 # via Lazydocker (à installer indépendamment)
 sudo lazydocker
@@ -37,11 +37,11 @@ POSTGRES = {
 ## Go
 
 Pour la partie code, nous utiliserons les modules Go pour simplifier au maximum les principes de PATH instauré par le Go.
-Vous aurez donc besoin d'une version de go superieur a la 1.14
+Vous aurez donc besoin d'une version de go superieur a la 1.12 minimum
 
 ```sh
 $ go version
-go version go1.14.1 linux/amd64
+go version go1.12.1 linux/amd64
 ```
 
 Vous pouvez lancer le server en allant dans le dossier `src`
