@@ -1,17 +1,19 @@
 # Setup
 
-Pour generer les images Docker and lancer les containers:
+## Docker | Database
 
+Pour generer les images Docker and lancer les containers, installez `docker-compose`:
+```sh
+sudo curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
+Puis lancez la commande:
 ```sh
 sudo docker-compose up -d --build
 ```
 
-Vérifiez que votre server fonctionne bien à l'adresse [http://localhost:8080](http://localhost:8080).
-
-Le dossier [GoWorkshop](./GoWorkshop) est monté dans votre container.
-- Pour redemarrer le server: `sudo docker restart workshop-serverGO`
-- Pour voir les logs du server: `sudo docker logs workshop-serverGO`
-- Pour intéragir avec votre base de donnée:
+Pour intéragir avec votre base de donnée:
 ```sh
 # via Docker
 sudo docker exec -ti databasePSQL psql -U poc postgres
@@ -24,12 +26,29 @@ Ou utilisez une interface graphique de gestion de base de donnée pour éditer s
 
 ```python
 POSTGRES = {
-    'host': 'localhost',
-    'db': 'postgres',
-    'user': 'poc',
-    'pw': 'password',
-    'port': '5432',
+    'host':     'localhost',
+    'database': 'postgres',
+    'user':     'poc',
+    'password': 'password',
+    'port':     '5432',
 }
 ```
 
-les seuls fichiers que vous avez à editer sont dans le dossier `GoWorkshop`
+## Go
+
+Pour la partie code, nous utiliserons les modules Go pour simplifier au maximum les principes de PATH instauré par le Go.
+Vous aurez donc besoin d'une version de go superieur a la 1.14
+
+```sh
+$ go version
+go version go1.14.1 linux/amd64
+```
+
+Vous pouvez lancer le server en allant dans le dossier `src`
+```sh
+# pour simplement lancer le server
+$ go run ./
+
+# ou avec go build si vous voulez optenir un executable
+$ go build ./
+```
