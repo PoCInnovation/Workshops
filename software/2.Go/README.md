@@ -19,9 +19,6 @@ Vous allez devoir envoyer des paramètres au server via les routes. Pour cela, v
 Créez une route **GET** `/whoami/{user}`
 - Prend un paramètre `user`
 - Renvoie `I am {user} !`
-- Si aucun message n'est donné:
-  - Définie le statut 400
-  - Renvoie `Bad Request`
 
 
 > vous pouvez tester vos routes via [postman](https://learning.postman.com/docs/postman/launching-postman/introduction/) ou [curl](https://flaviocopes.com/http-curl/)
@@ -30,32 +27,28 @@ Créez une route **GET** `/whoami/{user}`
 
 À présent, vous allez mettre en place des middleware pour vos routes. Ils sont généralement utilisés pour verifier la donnée reçu avant de l'envoyer au reste du server. Par exemple, verifier que le compte qui essaie d'ccèder à une route `/admin` est bien un administrateur. Dans notre cas, pas le temps de mettre en place tout un système d'authentification, nous allons donc utiliser un middleware pour une tâche plus basique.
 
-Ajoutez le middleware `idIsCorrect`
+Ajoutez le middleware `IdIsCorrect`
 - Prend en paramètre l'`id` reçu
-- Vérifie si l'id est bien positif
+- Vérifie si l'`id` est bien positif
 
 ## Step 4: Connection à la base de données
 
 Nous rentrons enfin dans le vif du sujet. Le server va aller se connecter à une base de donnée et récuperer la data demandée par l'utilisateur.
-> le setup de GORM est disponible dans le fichier [init.go](./src/database/init_db.go).
+> le setup de GORM est disponible dans le fichier [init.go](./src/database/init.go).
 
 ### Part 1: Premières query
 
 Vous allez à présent utiliser votre orm pour récuperer dans la base de données toutes les informations relatives à l'utilisateur entré en paramètre et ses posts:
-- Créez la route `/get/{user_id}`
-- Renvoie toutes les informations de `user_id` présente dans la DB, sous la forme d'un JSON
-- Elle utilise le middleware qui vérifie l'id
-- Si aucun message n'est donné:
-  - Définie le statut 400
-  - Renvoie `Bad Request`
+- Créez la route `/get/{id}`
+- Elle utilise le middleware qui vérifie l'`id` fait précédement
+- Renvoie toutes les informations de l'`id` présente dans la DB, sous la forme d'un JSON
 
 ### Part 2: Insertion de donnée dans votre DB
 
 À présent, vous allez créer de nouveaux posts pour les utilisateurs, pour cela:
 - Créez une route **GET** `/add/{id}/{firstName}`
-  - Elle prend en paramètre `firstName`
-  - Elle utilise le middleware qui vérifie l'id
-  - S'il manque un paramètre, définisez le statut 400 et renvoyez `Bad Request`
+  - Elle prend en paramètre `firstName` et l'`id`
+  - Elle utilise le middleware qui vérifie l'`id`
   - Si tout est correct, elle insert les informations dans la DB, définit le statut 200 et renvoie `Success`
 
 ## Bonus
