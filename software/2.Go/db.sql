@@ -1,6 +1,7 @@
 CREATE TABLE Users (
 	ID SERIAL PRIMARY KEY,
-	first_name VARCHAR(50) NOT NULL
+	username VARCHAR(50) NOT NULL,
+	email VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE Posts (
@@ -11,16 +12,16 @@ CREATE TABLE Posts (
 );
 
 
-INSERT INTO Users (ID, first_name) VALUES (1, 'Taddeo');
-INSERT INTO Users (ID, first_name) VALUES (2, 'Dael');
-INSERT INTO Users (ID, first_name) VALUES (3, 'Damara');
-INSERT INTO Users (ID, first_name) VALUES (4, 'Even');
-INSERT INTO Users (ID, first_name) VALUES (5, 'Nady');
-INSERT INTO Users (ID, first_name) VALUES (6, 'Ezra');
-INSERT INTO Users (ID, first_name) VALUES (7, 'Tony');
-INSERT INTO Users (ID, first_name) VALUES (8, 'Nancee');
-INSERT INTO Users (ID, first_name) VALUES (9, 'Odessa');
-INSERT INTO Users (ID, first_name) VALUES (10, 'Ajay');
+INSERT INTO Users (ID, username, email) VALUES (1, 'Taddeo', 'Taddeo@epitech.eu');
+INSERT INTO Users (ID, username, email) VALUES (2, 'Dael', 'Dael@epitech.eu');
+INSERT INTO Users (ID, username, email) VALUES (3, 'Damara', 'Damara@epitech.eu');
+INSERT INTO Users (ID, username, email) VALUES (4, 'Even', 'Even@epitech.eu');
+INSERT INTO Users (ID, username, email) VALUES (5, 'Nady', 'Nady@epitech.eu');
+INSERT INTO Users (ID, username, email) VALUES (6, 'Ezra', 'Ezra@epitech.eu');
+INSERT INTO Users (ID, username, email) VALUES (7, 'Tony', 'Tony@epitech.eu');
+INSERT INTO Users (ID, username, email) VALUES (8, 'Nancee', 'Nancee@epitech.eu');
+INSERT INTO Users (ID, username, email) VALUES (9, 'Odessa', 'Odessa@epitech.eu');
+INSERT INTO Users (ID, username, email) VALUES (10, 'Ajay', 'Ajay@epitech.eu');
 
 
 INSERT INTO Posts (id, title, content, author) VALUES (1, 'platea dictumst etiam faucibus', 'eleifend donec ut fringilla rhoncus convallis tortor risus dapibus augue vel accumsan tellus', 1);

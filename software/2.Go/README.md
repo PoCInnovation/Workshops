@@ -46,8 +46,8 @@ Vous allez à présent utiliser votre orm pour récuperer dans la base de donné
 ### Part 2: Insertion de donnée dans votre DB
 
 À présent, vous allez créer de nouveaux posts pour les utilisateurs, pour cela:
-- Créez une route **GET** `/add/{id}/{firstName}`
-  - Elle prend en paramètre `firstName` et l'`id`
+- Créez une route **GET** `/add/{id}/{username}`
+  - Elle prend en paramètre `username` et l'`id`
   - Elle utilise le middleware qui vérifie l'`id`
   - Si tout est correct, elle insert les informations dans la DB, définit le statut 200 et renvoie `Success`
 

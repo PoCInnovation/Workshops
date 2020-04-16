@@ -1,6 +1,6 @@
 # Setup
 
-## Docker | Database
+## 1. Docker | Database
 
 Pour generer les images Docker and lancer les containers, installez `docker-compose`:
 ```sh
@@ -13,7 +13,7 @@ Puis lancez la commande dans le dossier où il y a le [docker-compose.yml](./doc
 sudo docker-compose up -d --build
 ```
 
-Pour intéragir avec votre base de donnée:
+Si vous voulez intéragir avec votre base de donnée (optionnel):
 ```sh
 # via Docker
 sudo docker exec -ti workshop-databasePSQL psql -U poc postgres
@@ -31,9 +31,9 @@ POSTGRES = {
 }
 ```
 
-## Go
+## 2. Go
 
-Pour la partie code, nous utiliserons les modules Go pour simplifier au maximum les principes de PATH instauré par le Go.  
+Une fois que vous avez lancé docker et que la base de donnée est setup, nous allons utiliser les modules Go.  
 Vous aurez donc besoin d'une version de Go **superieur ou égale à la 1.12**
 
 ```sh
@@ -43,7 +43,7 @@ $ go version
 go version go1.12.10 linux/amd64
 ```
 
-Vous pouvez lancer le server en allant dans le dossier `src`
+Vous pouvez lancer le server en allant dans le dossier [src](./src)
 ```sh
 # pour simplement lancer le server
 $ go run ./
@@ -51,3 +51,5 @@ $ go run ./
 # ou avec go build si vous voulez optenir un executable
 $ go build ./
 ```
+
+Si vous obtenez `SERVER RUN ON 8080`, vous avez fini le setup et vous pouvez passer aux exercices
