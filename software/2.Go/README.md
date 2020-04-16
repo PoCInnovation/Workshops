@@ -17,7 +17,7 @@ Pour commencer, implementez une route basique `"/hello"` qui renvoie `world` qua
 Vous allez devoir envoyer des paramètres au server via les routes. Pour cela, vous allez faire varier l'url de votre route.
 
 Créez une route **GET** `/whoami/{user}`
-- Prend un paramètre `user`
+- Prend en paramètre `user`
 - Renvoie `I am {user} !`
 
 
@@ -40,6 +40,7 @@ Nous rentrons enfin dans le vif du sujet. Le server va aller se connecter à une
 
 Vous allez à présent utiliser votre ORM pour récuperer dans la base de données toutes les informations relatives à l'utilisateur entré en paramètre:
 - Créez la route **GET** `/get/{id}`
+  - Elle prend en paramètre un`id`
   - Elle utilise le middleware qui vérifie l'`id` [(Step 3)](#step-3:-mise-en-place-des-middlewares)
   - Elle renvoie toutes les informations de l'`id` présentes dans la DB, sous la forme d'un JSON
 
