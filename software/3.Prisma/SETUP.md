@@ -1,0 +1,43 @@
+# Setup
+
+## 1. Prisma
+
+Vous aurez besoin de:
+- [node](https://github.com/nodejs/node)
+- [npm](https://www.npmjs.com/)
+- [npx](https://www.npmjs.com/package/npx)
+- [sqlite3](https://fr.wikipedia.org/wiki/SQLite)
+
+Pour cela:
+- sous fedora: `sudo dnf install nodejs sqlite`
+- sous ubuntu: `sudo apt install nodejs npm sqlite3`
+
+Pour commencer à utiliser prisma, rien de plus simple, exécutez la commande suivante:
+```sh
+curl https://codeload.github.com/prisma/prisma-examples/tar.gz/starter | tar -xz --strip=2 prisma-examples-starter/javascript/starter
+```
+
+Cela va vous télécharger un petit projet fournit par les developpeurs de Prisma pour appréhender les bases. Vous n'avez plus qu'à entrer dans votre dossier `starter` fraîchement crée et lancez:
+
+```sh
+npm install
+```
+
+> Ils y a 5 fichiers importants dans le dossier `stater`:
+>
+> `package.json`: liste les dépendances npm  
+> `prisma/schema.prisma`: le fichier des schémas Prisma qui définit les modèles de la base de données  
+> `prisma/.env`: Définit la connection à la base de données avec son URL comme variable d'environnement  
+> `prisma/dev.db`: Fichier de base de données SQLite  
+> `script.js`: Fichier dans lequel vous allez coder vos fonctions  
+
+Vous pouvez utiliser `sqlite3` pour inspecter `prisma/dev.db`. Depuis le dossier `starter`, exécutez:
+```sh
+$ sqlite3 ./prisma/dev.db
+
+sqlite> select * from user;
+sarah@prisma.io|1|Sarah
+maria@prisma.io|2|Maria
+```
+
+Si vous avez fini toutes ces étapes, vous pouvez dès à présent passer aux exercices
