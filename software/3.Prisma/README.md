@@ -6,56 +6,32 @@ Dnas ce workshop, nous allons voir comment créer des API GraphQL à l'aide de [
 
 Toutes les informations requises pour installer les dépendances du workshop sont disponibles dans [SETUP.md](./SETUP.md)
 
-## Step 1: Mettre en place prisma dans le code javascript
+## Step 1: Récupérer les utilisateurs
 
-Pour commencer, copiez ce début de code:
-```javascript
-const { PrismaClient } = require("@prisma/client")
+Créez à présent une fonction `getUsers`:
+- Elle ne prend pas de paramètres
+- Elle renvoie la liste de tous les utilisateurs de la base de données
 
-const prisma = new PrismaClient()
-
-async main()
-{
-
-}
-
-main()
-.catch(e => { throw e })
-.finally(async () => { await prisma.disconnect() })
-```
-
-nous allons voir ligne par ligne ce qu'il fait:
-```javascript
-const { PrismaClient } = require("@prisma/client")
-```
-Node va chercher la dépendance `@prisma/client` dans les `node_modules`
-> Attention: il s'agit d'une dépendance dite "intéligente", des informations seront stockées à l'interieur.
-
-```javascript
-const prisma = new PrismaClient()
-```
-Cette ligne crée une nouvelle instance d'un client prisma.
-
-```javascript
-async main()
-{
-
-}
-```
-Nous créons ici une fonction asyncrone. Elle nous permettera plus tard de gérer nos appels asyncrone plus facilement à l'interieur.  
-Le javascript ne demande pas de main pour s'executer, il est interprété de manière linéaire.  
-
-```javascript
-main()
-.catch(e => { throw e })
-.finally(async () => { await prisma.disconnect() })
-```
-Pour finir, ce bout de code apelle notre fonction `main`, affiche un message si jamais une erreur s'est produite et déconnecte le client prisma une fois toutes les actions terminées.
-
-## Step 2: Récupérer les utilisateurs
-Je vous invite maintenant à trouver par vous même comment récupérer votre liste d'utilisateur.  
+*À vous de trouver comment...*  
 > Indice #1: nodejs gère très bien l'affichage d'objets en console.  
-> Indice #2: `prisma` est un objet.  
+> Indice #2: la variable `prisma` est un objet.  
+
+## Step 2: Récupérer les posts des utilisateurs
+
+Créer la fonction `getPostByUsers`:
+- Elle prend en paramètres
+  - `userEmail`, l'email de l'utilisateur dont on veut  récuperer les posts
+- Elle renvoie la liste des posts de l'utilisateur demandé
+
+## Step 3: Créer un post
+
+Vous allez maintenant ajouter des posts à vos utilisateurs car cela manque un peu de contenu.  
+Créez la fonction `addPost`:
+- Elle prend en paramètres:
+  - `title`, le titre du post
+  - `email`, l'email de l'utilisateur qui sera l'auteur du post
+- Elle ajoute le post dans la base de données
+- Elle renvoie le post crée
 
 ## Authors
 - [Paul Monnery](https://github.com/PaulMonnery/)

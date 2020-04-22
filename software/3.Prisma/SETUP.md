@@ -1,5 +1,7 @@
 # Setup
 
+## Installation
+
 Vous aurez besoin de:
 - [node (version 10 minimum)](https://github.com/nodejs/node) : interpréteur de javascript
 - [npm](https://www.npmjs.com/) : gestionnaire de dépendance pour node
@@ -51,4 +53,47 @@ vous pouvez aussi afficher la base de données via une interface web:
 npx prisma studio --experimental
 ```
 
-Si vous avez fini toutes ces étapes, vous pouvez dès à présent passer aux exercices
+
+
+
+## Mise en prisma dans le code javascript
+
+Nous allons voir ligne par ligne ce qu'il y a dans le fichier `script.js`:
+```javascript
+const { PrismaClient } = require("@prisma/client")
+```
+Node va chercher la dépendance `@prisma/client` dans les `node_modules`
+> Attention: il s'agit d'une dépendance dite "intéligente", des informations seront stockées à l'interieur.
+
+<br>
+
+```javascript
+const prisma = new PrismaClient()
+```
+Cette ligne crée une nouvelle instance d'un client prisma.
+
+<br>
+
+```javascript
+async function main() {
+  // ... you will write your Prisma Client queries here
+}
+```
+Nous créons ici une fonction asyncrone. Elle nous permettera plus tard de gérer nos appels asyncrone plus facilement à l'interieur.  
+Le javascript ne demande pas de main pour s'executer, il est interprété de manière linéaire.  
+
+<br>
+
+```javascript
+main()
+  .catch(e => {
+    throw e
+  })
+  .finally(async () => {
+    await prisma.disconnect()
+  })
+
+```
+Pour finir, ce bout de code apelle notre fonction `main`, affiche un message si jamais une erreur s'est produite et déconnecte le client prisma une fois toutes les actions terminées.
+
+**Si vous avez fini toutes ces étapes, vous pouvez dès à présent passer aux exercices**
