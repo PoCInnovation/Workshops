@@ -3,9 +3,11 @@
 Dnas ce workshop, nous allons voir comment créer des API GraphQL à l'aide de [Prisma2](https://www.prisma.io/)
 
 ## Step 0: initialisation
+
 Toutes les informations requises pour installer les dépendances du workshop sont disponibles dans [SETUP.md](./SETUP.md)
 
 ## Step 1: Mettre en place prisma dans le code javascript
+
 Pour commencer, copiez ce début de code:
 ```javascript
 const { PrismaClient } = require("@prisma/client")
