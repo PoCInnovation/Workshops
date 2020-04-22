@@ -5,7 +5,7 @@ Dnas ce workshop, nous allons voir comment créer des API GraphQL à l'aide de [
 ## Step 0: initialisation
 Toutes les informations requises pour installer les dépendances du workshop sont disponibles dans [SETUP.md](./SETUP.md)
 
-## Step 1: Récuprer les utilisateurs
+## Step 1: Mettre en place prisma dans le code javascript
 Pour commencer, copiez ce début de code:
 ```javascript
 const { PrismaClient } = require("@prisma/client")
@@ -49,6 +49,11 @@ main()
 .finally(async () => { await prisma.disconnect() })
 ```
 Pour finir, ce bout de code apelle notre fonction `main`, affiche un message si jamais une erreur s'est produite et déconnecte le client prisma une fois toutes les actions terminées.
+
+## Step 2: Récupérer les utilisateurs
+Je vous invite maintenant à trouver par vous même comment récupérer votre liste d'utilisateur.  
+> Indice #1: nodejs gère très bien l'affichage d'objets en console.
+> Indice #2: `prisma` est un objet.
 
 ## Authors
 - [Paul Monnery](https://github.com/PaulMonnery/)
