@@ -52,8 +52,8 @@ Pour finir, ce bout de code apelle notre fonction `main`, affiche un message si 
 
 ## Step 2: Récupérer les utilisateurs
 Je vous invite maintenant à trouver par vous même comment récupérer votre liste d'utilisateur.  
-> Indice #1: nodejs gère très bien l'affichage d'objets en console.
-> Indice #2: `prisma` est un objet.
+> Indice #1: nodejs gère très bien l'affichage d'objets en console.  
+> Indice #2: `prisma` est un objet.  
 
 ## Authors
 - [Paul Monnery](https://github.com/PaulMonnery/)
