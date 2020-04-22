@@ -1,6 +1,6 @@
 # Workshop 3 - API Prisma2
 
-Dnas ce workshop, nous allons voir comment créer des API GraphQL à l'aide de [Prisma2](https://www.prisma.io/)
+Dans ce workshop, nous allons voir comment créer des API GraphQL à l'aide de [Prisma2](https://www.prisma.io/)
 
 ## Step 0: initialisation
 
@@ -32,6 +32,26 @@ Créez la fonction `addPost`:
   - `email`, l'email de l'utilisateur qui sera l'auteur du post
 - Elle ajoute le post dans la base de données
 - Elle renvoie le post crée
+
+## Step 4: Supprimer un post/utilisateur
+
+Créez deux fonctions:
+- `removeUser` qui prend en paramètres:
+  - `userEmail`, l'email de l'utilisateur qui sera supprimé
+- `removePost` qui prend en paramètres:
+  - `userEmail`, l'email de l'utilisateur auteur du post
+  - `postId`, l'id du post qui sera supprimé
+- Elles renvoient toutes les deux l'utilisateur/post supprimé
+
+## Step 5: Apollo Server
+
+Prisma nous permet de récuperer des données dans la base de données, mais il nous faut apr la suite permettre à un utilisateur de récuperer ces données. Nous utiliserons pour cela [Apollo server](https://www.apollographql.com/docs/apollo-server/) et [GraphQL Nexus](https://nexus.js.org/)
+
+Il faut installer de nouveaux modules pour faire cela:
+
+```sh
+npm install graphql nexus-prisma apollo-server @nexus/schema
+```
 
 ## Authors
 - [Paul Monnery](https://github.com/PaulMonnery/)
