@@ -3,10 +3,10 @@
 ## 1. Prisma
 
 Vous aurez besoin de:
-- [node](https://github.com/nodejs/node)
-- [npm](https://www.npmjs.com/)
-- [npx](https://www.npmjs.com/package/npx)
-- [sqlite3](https://fr.wikipedia.org/wiki/SQLite)
+- [node (version 10 minimum)](https://github.com/nodejs/node) : interpréteur de javascript
+- [npm](https://www.npmjs.com/) : gestionnaire de dépendance pour node
+- [npx](https://www.npmjs.com/package/npx) : executeur de commandes node
+- [sqlite3](https://fr.wikipedia.org/wiki/SQLite) : gestionnaire de base de données
 
 Pour cela:
 - sous fedora: `sudo dnf install nodejs sqlite`
