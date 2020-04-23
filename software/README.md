@@ -8,6 +8,6 @@ http://bit.ly/DiscordPoCEvents
 
 ### Workshop 1: [Todo List en React avec Firebase](./1.React)
 
-### Workshop 2: [API en GO](./2.Go)
+### Workshop 2: [API en Go](./2.Go)
 
-### Workshop 3: [API graphQL avec Prisma](./3.Prisma)
+### Workshop 3: [API GraphQL avec Prisma](./3.Prisma)

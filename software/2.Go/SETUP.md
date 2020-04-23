@@ -52,4 +52,4 @@ $ go run ./
 $ go build ./
 ```
 
-Si vous obtenez `SERVER RUN ON 8080`, vous avez fini le setup et vous pouvez passer aux exercices
+**Si vous obtenez `SERVER RUN ON 8080`, vous avez fini le setup et vous pouvez passer aux exercices**
