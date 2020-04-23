@@ -53,9 +53,6 @@ vous pouvez aussi afficher la base de données via une interface web:
 npx prisma studio --experimental
 ```
 
-
-
-
 ## Mise en prisma dans le code javascript
 
 Nous allons voir ligne par ligne ce qu'il y a dans le fichier `script.js`:
