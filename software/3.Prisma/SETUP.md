@@ -6,7 +6,7 @@ Vous aurez besoin de:
 - [node (version 10 minimum)](https://github.com/nodejs/node) : interpréteur de javascript
 - [npm](https://www.npmjs.com/) : gestionnaire de dépendance pour node
 - [npx](https://www.npmjs.com/package/npx) : executeur de commandes node
-- [sqlite3](https://fr.wikipedia.org/wiki/SQLite) : gestionnaire de base de données
+- [sqlite3](https://fr.wikipedia.org/wiki/SQLite) : moteur de base de données portables
 
 Pour cela:
 - sous fedora: `sudo dnf install nodejs sqlite`

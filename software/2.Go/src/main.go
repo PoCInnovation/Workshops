@@ -37,7 +37,7 @@ func main() {
 	server.init()
 
 	defer server.destroy()
-	println("SERVER RUN ON :", server.port)
+	println("Server runs on http://localhost:" + server.port)
 	log.Fatal(
 		http.ListenAndServe(":"+server.port, handlers.CORS(
 			handlers.AllowedHeaders([]string{"X-Requested-With", "Content-Type", "Authorization"}),

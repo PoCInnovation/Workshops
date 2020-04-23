@@ -1,46 +1,41 @@
 # Setup
 
-## 1. Docker | Database
+## 1. Sqlite3 | Database
 
-Pour generer les images Docker and lancer les containers, installez `docker-compose`:
+Vous aurez besoin de [sqlite3](https://fr.wikipedia.org/wiki/SQLite), un moteur de base de données portables. Pour cela:
+- sous fedora: `sudo dnf install sqlite`
+- sous ubuntu: `sudo apt install sqlite3`
+
+La base de données est contenue dans le fichier [dev.db](./dev.db)
+
+Si vous voulez intéragir avec votre base de donnée:
 ```sh
-sudo curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
+# ouvrir la base de donnéee et lancer un shell pour communiquer avec
+$ sqlite3 dev.db
+
+# afficher toutes les tables de la base de données
+sqlite> .table
+Posts  Users
+
+#afficher tous les champs de la table Users
+sqlite> select * from users;
+1|Taddeo|Taddeo@epitech.eu
+2|Dael|Dael@epitech.eu
+3|Damara|Damara@epitech.eu...
 ```
 
-Puis lancez la commande dans le dossier où il y a le [docker-compose.yml](./docker-compose.yml) :
-```sh
-sudo docker-compose up -d --build
-```
-
-Si vous voulez intéragir avec votre base de donnée (optionnel):
-```sh
-# via Docker
-sudo docker exec -ti workshop-databasePSQL psql -U poc postgres
-```
-
-Ou utilisez une interface graphique de gestion de base de donnée pour éditer ses données (dbeaver par exemple)
-
-```python
-POSTGRES = {
-    'host':     'localhost',
-    'database': 'postgres',
-    'user':     'poc',
-    'password': 'password',
-    'port':     '5432',
-}
-```
+Ou utilisez une interface graphique de gestion de base de donnée pour visualiser votre db ([dbeaver](https://dbeaver.io/) par exemple)
 
 ## 2. Go
 
-Une fois que vous avez lancé docker et que la base de donnée est setup, nous allons utiliser les modules Go.  
-Vous aurez donc besoin d'une version de Go **superieur ou égale à la 1.12**
+Dans ce workshop, nous allons utiliser les modules Go.  
+Vous aurez donc besoin de Go en version **1.12 minimum**
 
 ```sh
 # par exemple
 
 $ go version
-go version go1.12.10 linux/amd64
+go version go1.12.10 linux/amd64 # OK
 ```
 
 Vous pouvez lancer le server en allant dans le dossier [src](./src)
@@ -52,4 +47,4 @@ $ go run ./
 $ go build ./
 ```
 
-**Si vous obtenez `SERVER RUN ON 8080`, vous avez fini le setup et vous pouvez passer aux exercices**
+**Si vous obtenez `Server runs on http://localhost:8080`, vous avez fini le setup et vous pouvez passer aux exercices**
