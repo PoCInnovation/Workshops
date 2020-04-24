@@ -2,7 +2,7 @@
 
 ## Install pwntools - Different options
 
-You have multiple options to install pwntools. <ins>Choose one</ins>
+You have multiple options to install pwntools. **Choose one**.
 
 #### Installing globally
     pip3 install pwntools # --user
