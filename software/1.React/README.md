@@ -18,7 +18,7 @@ Créez un component dans lequel on seront affichés:
 
 Ce component représente une tâche individuelle de votre Todolist. La `description` et le `statut` doivent être recues depuis les [props](https://fr.reactjs.org/docs/components-and-props.html), par exemple:
 
-```js
+```jsx
 <Task description="Finir la step 1" statut={false}>
 ```
 
