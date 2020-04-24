@@ -1,4 +1,4 @@
-# Workshop 3 - API Prisma2
+# Workshop 3 - API GraphQL avec Prisma2
 
 Dans ce workshop, nous allons voir comment créer des API GraphQL à l'aide de [Prisma2](https://www.prisma.io/), Nexus-Prisma et Apollo
 

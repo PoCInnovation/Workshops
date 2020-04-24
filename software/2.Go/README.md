@@ -1,4 +1,4 @@
-# Workshop 2 - API GO
+# Workshop 2 - API REST en Go
 
 ## Step 0: initialisation
 
