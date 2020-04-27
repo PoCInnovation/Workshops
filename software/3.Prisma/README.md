@@ -46,14 +46,10 @@ Il faut installer de nouveaux modules pour faire cela:
 
 <Details><Summary><strong>Étapes d'installations de Apollo et Nexus</strong></Summary>
 
-```sh
-npm install graphql nexus-prisma apollo-server @nexus/schema
-sudo npm install -g nodemon
-```
-
-Ensuite:
-- copiez le dossier [src](./src) présent dans le repo dans votre dossier starter
-- Changer dans votre `package.json` la ligne `"dev": "node ./script.js"` en `"dev": "nodemon ./src/server.js"` pour changer le fichier exécuté par la commande `npm run dev`
+- copiez le dossier [src](./src) présent dans notre repo dans votre dossier starter
+- copiez le fichier [tsconfig.json](./tsconfig.json) présent dans notre repo dans votre dossier starter
+- remplacez le `package.json` de votre dossier starter par [celui sur notre repo](./package.json)
+- exécutez `npm install` dans votre dossier starter pour installer les nouvelles dépendances
 
 </Details>
 
@@ -83,8 +79,128 @@ Créez les mutations suivantes:
 - `publishDraft`: publie un post dont l'`id` est précisé
 - `deletePost`: supprime un post dont l'`id` est précisé
 
+Voici des exemples de query et mutations que vous pouvez exécutez dans le playground pour tester vos fonctions
+<Details><Summary><strong>Voir les Query et Mutations</strong></Summary>
 
-## Authors
+### getUsers
+
+```graphql
+query {
+  getUsers {
+    id
+    name
+    email
+    posts {
+      id
+      title
+    }
+  }
+}
+```
+
+### getPosts
+
+```graphql
+query {
+  getPosts {
+    id
+    title
+    content
+    published
+    author {
+      id
+      name
+      email
+    }
+  }
+}
+```
+
+### getPostsByUser
+
+```graphql
+query {
+  getPostsByUser(authorId: __AUTHOR_ID__) {
+    id
+    title
+    content
+  }
+}
+```
+> Note: vous devez remplacer **__AUTHOR_ID__** par l'id actuel d'un auteur.
+
+### getPublishedPosts
+
+```graphql
+query {
+  getPublishedPosts {
+    id
+    title
+    content
+    author {
+      id
+      name
+      email
+    }
+  }
+}
+```
+
+### signupUser
+
+```graphql
+mutation {
+  signupUser(
+    data: {
+      name: "Sarah"
+      email: "sarah@prisma.io"
+    }
+  ) {
+    id
+  }
+}
+```
+
+### writeDraft
+
+```graphql
+mutation {
+  writeDraft(
+    title: "Join the Prisma Slack"
+    content: "https://slack.prisma.io"
+    authorEmail: "alice@prisma.io"
+  ) {
+    id
+    published
+  }
+}
+```
+
+### publishDraft
+
+```graphql
+mutation {
+  publishDraft(id: __POST_ID__) {
+    id
+    published
+  }
+}
+```
+
+### deletePost
+
+```graphql
+mutation {
+  deletePost(id: __POST_ID__) {
+    id
+    title
+  }
+}
+```
+
+</Details>
+
+## Auteurs
 - [Paul Monnery](https://github.com/PaulMonnery/)
 - [Naoufesse Berrada](https://github.com/nowlow/)
 - [Cyril de Lajudie](https://github.com/Axoloot/)

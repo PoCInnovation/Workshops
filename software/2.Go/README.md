@@ -58,7 +58,7 @@ Vous allez à présent utiliser votre ORM pour récuperer dans la base de donné
 Si vous avez tout fait jusque là, vous êtes libre de créer les routes que vous voulez, comme par exemple supprimer un utilisateur ou intéragir avec les posts des users, afin d'en ajouter, en lire ou en supprimer.
 
 
-## Authors
+## Auteurs
 - [Théo Ardouin](https://github.com/CrystallizedYou/)
 - [Paul Monnery](https://github.com/PaulMonnery/)
 - [Grégoire Brasseur](https://github.com/lerimeur/)
