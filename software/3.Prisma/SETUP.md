@@ -43,7 +43,7 @@ sqlite> .tables
 Post  User
 
 #afficher tous les champs de la table User
-sqlite> select * from use
+sqlite> select * from user;
 sarah@prisma.io|1|Sarah
 maria@prisma.io|2|Maria
 ```
@@ -57,15 +57,15 @@ npx prisma studio --experimental
 
 Nous allons voir ligne par ligne ce qu'il y a dans le fichier `script.js`:
 ```javascript
-const { PrismaClient } = require("@prisma/client")
+const { PrismaClient } = require("@prisma/client");
 ```
 Node va chercher la dépendance `@prisma/client` dans les `node_modules`
-> Attention: il s'agit d'une dépendance dite "intéligente", des informations seront stockées à l'interieur.
+> Attention: il s'agit d'une dépendance dite "intelligente", des informations seront stockées à l'interieur.
 
 <br>
 
 ```javascript
-const prisma = new PrismaClient()
+const prisma = new PrismaClient();
 ```
 Cette ligne crée une nouvelle instance d'un client prisma.
 
@@ -85,10 +85,10 @@ Le javascript ne demande pas de main pour s'executer, il est interprété de man
 main()
   .catch(e => {
     throw e
-  })
+  });
   .finally(async () => {
     await prisma.disconnect()
-  })
+  });
 
 ```
 Pour finir, ce bout de code apelle notre fonction `main`, affiche un message si jamais une erreur s'est produite et déconnecte le client prisma une fois toutes les actions terminées.

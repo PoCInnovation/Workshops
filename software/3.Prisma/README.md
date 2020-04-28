@@ -51,6 +51,8 @@ Il faut installer de nouveaux modules pour faire cela:
 - remplacez le `package.json` de votre dossier starter par [celui sur notre repo](./package.json)
 - exécutez `npm install` dans votre dossier starter pour installer les nouvelles dépendances
 
+**/!\ Vous allez avoir une erreur apres votre `npm install` car il manque une variable pour fonctionner, vous le verrez à la step suivante /!\\**
+
 </Details>
 
 Si par la suite vous lancez `npm run dev`, vous aurez une erreur, ce qui est normal. Pour que le server se lance correctement, dans `schema.js`, vous devez ajouter un `objectType` qui défini la tabe `Post`.  
