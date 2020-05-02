@@ -1,5 +1,5 @@
 const { nexusPrismaPlugin } = require('nexus-prisma')
-const { idArg, makeSchema, objectType, stringArg } = require('@nexus/schema')
+const { idArg, stringArg, makeSchema, objectType } = require('@nexus/schema')
 
 const User = objectType({
   name: 'User',
@@ -38,7 +38,7 @@ const Mutation = objectType({
 })
 
 const schema = makeSchema({
-  types: [Query, Mutation, Post, User],
+  types: [Post, User],
   plugins: [nexusPrismaPlugin()],
   outputs: {
     schema: __dirname + '/../schema.graphql',
