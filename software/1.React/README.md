@@ -86,6 +86,6 @@ Vous pouvez si vous le souhaitez ajouter du style à vos components, pour cela, 
   - [Ant Design](https://ant.design/)
 
 
-## Authors
+## Auteurs
 - [Paul Monnery](https://github.com/PaulMonnery/)
 - [Théo Ardouin](https://github.com/CrystallizedYou)
