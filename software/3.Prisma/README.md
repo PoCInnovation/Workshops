@@ -84,6 +84,8 @@ Créez les mutations suivantes:
 Voici des exemples de query et mutations que vous pouvez exécutez dans le playground pour tester vos fonctions
 <Details><Summary><strong>Voir les Query et Mutations</strong></Summary>
 
+## Query
+
 ### getUsers
 
 ```graphql
@@ -148,6 +150,8 @@ query {
 }
 ```
 
+## Mutations
+
 ### signupUser
 
 ```graphql
@@ -162,6 +166,21 @@ mutation {
   }
 }
 ```
+
+ou bien
+
+```graphql
+mutation {
+  signupUser(
+    name: "Sarah"
+    email: "sarah@prisma.io"
+  ) {
+    id
+  }
+}
+```
+
+> Les deux seront valides en fonction de comment vous implementez la mutation
 
 ### writeDraft
 
