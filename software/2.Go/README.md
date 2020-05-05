@@ -59,6 +59,6 @@ Si vous avez tout fait jusque là, vous êtes libre de créer les routes que vou
 
 
 ## Auteurs
-- [Théo Ardouin](https://github.com/CrystallizedYou/)
+- [Théo Ardouin](https://github.com/Qwexta)
 - [Paul Monnery](https://github.com/PaulMonnery/)
 - [Grégoire Brasseur](https://github.com/lerimeur/)
