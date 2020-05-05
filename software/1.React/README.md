@@ -88,4 +88,4 @@ Vous pouvez si vous le souhaitez ajouter du style à vos components, pour cela, 
 
 ## Auteurs
 - [Paul Monnery](https://github.com/PaulMonnery/)
-- [Théo Ardouin](https://github.com/CrystallizedYou)
+- [Théo Ardouin](https://github.com/Qwexta)
