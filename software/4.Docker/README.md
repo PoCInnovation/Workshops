@@ -82,6 +82,6 @@ Si vous voulez en apprendre plus sur la mise en place d'architecture et la gesti
 - [docker swarm](https://docs.docker.com/get-started/swarm-deploy/).
 
 ## Auteurs:
-- [Tom chauveau](https://github.com/TomChv)
+- [Tom Chauveau](https://github.com/TomChv)
 - [Jérome Collet](https://github.com/JeromeCGithub)
 - [Paul Monnery](https://github.com/PaulMonnery/)
