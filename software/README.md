@@ -11,3 +11,5 @@ http://bit.ly/DiscordPoCEvents
 ### Workshop 2: [API REST en Go](./2.Go)
 
 ### Workshop 3: [API GraphQL avec Prisma2](./3.Prisma)
+
+### Workshop 4: [Docker pour les débutants](./4.Docker)
