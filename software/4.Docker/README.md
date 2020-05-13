@@ -62,7 +62,7 @@ La partie qui gèrera base de donnée aura les propriétés suivantes :
 - `name`: nom du container une fois créé
 - `image`: nom de l'image à utiliser pour le container
 - `ports`: ports à lier entre l'host et le container
-- `environnement`: les variables d'environnement necessaires à l'image
+- `environment`: les variables d'environnement necessaires à l'image
 - `volume`: pour sauvegarder votre database
 - `entrypoint`: vous devez trouver comment importer un schema sql à l'initialisation de votre container
 
