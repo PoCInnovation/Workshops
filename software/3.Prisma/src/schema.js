@@ -21,8 +21,15 @@ const Query = objectType({
   name: 'Query',
   definition(t) {
 
+    t.list.field('getUsers', {
+      type: 'User',
+      resolve: (parent, args, ctx) => {
+        return ctx.prisma.post.findMany()
+      },
+    })
+
     // todo
-    // create a query field
+    // create the others field
 
   },
 })
@@ -31,8 +38,24 @@ const Mutation = objectType({
   name: 'Mutation',
   definition(t) {
 
+    t.field('signupUser', {
+      type: 'User',
+      args: {
+        email: stringArg({ nullable: false }),
+        name: stringArg({ nullable: false }),
+      },
+      resolve: (parent, { email, name }, ctx, info) => {
+        return ctx.prisma.user.create({
+          data: {
+            name,
+            email,
+          }
+        })
+      }
+    })
+
     // todo
-    // create a Mutation field
+    // create the others field
 
   },
 })

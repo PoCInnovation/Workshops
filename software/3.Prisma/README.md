@@ -6,19 +6,19 @@ Dans ce workshop, nous allons voir comment créer des API GraphQL à l'aide de [
 
 Toutes les informations requises pour installer les dépendances du workshop sont disponibles dans [SETUP.md](./SETUP.md)
 
-## Step 1: Récupérer les utilisateurs
+## Step 1: Récupérer les posts
 
-Créez à présent une fonction `getUsers`:
+Vous avez vu dans le setup à quoi ressemble une query qui récupére tous les utilisateurs de la base de données. À présent, faites la même chose mais pour récupérer tous les posts
+
+Créez à présent la fonction `getPosts`:
 - Elle ne prend pas de paramètres
-- Elle renvoie la liste de tous les utilisateurs de la base de données
-
-*À vous de trouver comment...*  
-> Indice #1: nodejs gère très bien l'affichage d'objets en console.  
-> Indice #2: la variable `prisma` est un objet.  
+- Elle renvoie la liste de tous les posts de la base de données
 
 ## Step 2: Create - Read - Update - Delete
 
-Vous avez vu comment fonctionnait à peu près la récupération de données avec prisma, à présent, vous allez mettre en place des fonctions classique de CRUD.
+Vous avez vu comment fonctionnait à peu près la récupération de données avec prisma, à présent, vous allez mettre en place des fonctions classique de CRUD (cf: le titre de cette step).
+
+> Si besoin, reférez vous à cette [page](https://www.prisma.io/docs/getting-started/quickstart-typescript#write-data-into-the-database) pour voir les bases des opérations possibles avec prisma. Vous devriez pouvoir trouver comment faire toutes les fonctions de cette step. Vous aurez nottament besoin du mot clé `where`
 
 Créez la fonction `addUser`:
 - Elle prend en paramètres `name` et `email`, le nom et l'email de l'utilisateur qui sera crée
@@ -75,14 +75,15 @@ Vous allez contruire dans votre schéma un objet `Query` qui contiendra les mét
 
 Pour tester les query/mutations que vous allez mettre en place, vous pouvez vous rendre sur http://localhost:4000/ afin d'avoir un playground pour tester votre server
 
+Nous vous fournissons directement la query `getUsers` et la mutation `signupUser` pour que vous puissiez voir à quoi ressemble la syntaxe, et vous permettre de plus facilement créer les suivantes.  
+Plus bas, nous vous donnons également de quoi tester vos query et mutations.
+
 Créez les query suivantes:
-- `getUsers`: renvoie la liste de tous les utilisateurs
 - `getPosts`: renvoie la liste de tous les posts
 - `getPostsByUser`: renvoie la liste des posts d'un utilisateur grâce à son `authorId`
 - `getPublishedPosts`: renvoie la liste de tous les posts qui sont publiés
 
 Créez les mutations suivantes:
-- `signupUser`: crée un utilisateur en précisant son `email` et son `name`
 - `writeDraft`: crée un post avec un `title`, un `content` et l'`authorId` de son auteur. Par défaut il n'est pas publié.
 - `publishDraft`: publie un post dont l'`id` est précisé
 - `deletePost`: supprime un post dont l'`id` est précisé

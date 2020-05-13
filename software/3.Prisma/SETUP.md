@@ -6,11 +6,10 @@ Vous aurez besoin de:
 - [node (version 10 minimum)](https://github.com/nodejs/node) : interpréteur de javascript
 - [npm](https://www.npmjs.com/) : gestionnaire de dépendance pour node
 - [npx](https://www.npmjs.com/package/npx) : executeur de commandes node
-- [sqlite3](https://fr.wikipedia.org/wiki/SQLite) : moteur de base de données portables
 
 Pour cela:
-- sous fedora: `sudo dnf install nodejs sqlite`
-- sous ubuntu: `sudo apt install nodejs npm sqlite3`
+- sous fedora: `sudo dnf install nodejs`
+- sous ubuntu: `sudo apt install nodejs npm`
 
 Puis `sudo npm install -g npx`
 
@@ -32,21 +31,6 @@ Ils y a 5 fichiers importants dans le dossier `stater`:
 - `prisma/.env`: Définit la connection à la base de données avec son URL comme variable d'environnement  
 - `prisma/dev.db`: Fichier de base de données SQLite  
 - `script.js`: Fichier dans lequel vous allez coder vos fonctions  
-
-Vous pouvez utiliser `sqlite3` pour inspecter `prisma/dev.db`. Depuis le dossier `starter`, exécutez:
-```sh
-# ouvrir la base de donnéee et lancer un shell pour communiquer avec
-$ sqlite3 ./prisma/dev.db
-
-# afficher toutes les tables de la base de données
-sqlite> .tables
-Post  User
-
-#afficher tous les champs de la table User
-sqlite> select * from user;
-sarah@prisma.io|1|Sarah
-maria@prisma.io|2|Maria
-```
 
 vous pouvez aussi afficher la base de données via une interface web:
 ```sh
@@ -77,7 +61,6 @@ async function main() {
 }
 ```
 Nous créons ici une fonction asyncrone. Elle nous permettera plus tard de gérer nos appels asyncrone plus facilement à l'interieur.  
-Le javascript ne demande pas de main pour s'executer, il est interprété de manière linéaire.  
 
 <br>
 
@@ -91,6 +74,25 @@ main()
   });
 
 ```
-Pour finir, ce bout de code apelle notre fonction `main`, affiche un message si jamais une erreur s'est produite et déconnecte le client prisma une fois toutes les actions terminées.
+Pour finir, ce bout de code appelle notre fonction `main`, affiche un message si jamais une erreur s'est produite et déconnecte le client prisma une fois toutes les actions terminées.
+
+Actuellement, si vous faites `npm run dev`, rien ne devrait se produire. Nous allons préparer les bases des exercices suivants, pour cela, ajoutez dans votre fonction main la ligne suivante:
+```js
+console.log("getUsers:\n", await getUsers())
+```
+
+et ajoutez au dessus de votre fonction `main`:
+```js
+function getUsers() {
+  return prisma.user.findMany();
+}
+```
+
+Si vous relancez la commande `npm run dev`, vous deviez avoir cet output:
+```json
+getUsers:
+ [ { id: 1, email: 'sarah@prisma.io', name: 'Sarah' },
+  { id: 2, email: 'maria@prisma.io', name: 'Maria' } ]
+  ```
 
 **Si vous avez fini toutes ces étapes, vous pouvez dès à présent passer aux exercices**
