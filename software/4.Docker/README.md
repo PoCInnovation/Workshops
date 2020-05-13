@@ -52,18 +52,18 @@ Votre docker-compose aura 2 services :
 - un qui lance l'image de la base de données `mariadb`
 
 La partie qui gèrera votre api aura les propriétés suivantes :
-- `name`: nom du container une fois crée
+- `container_name`: nom du container une fois crée
 - `build`: precise quelle image build pour l'utiliser après
 - `ports`: ports à lier entre l'host et le container
-- `link`: lien vers le service de la base de données
-- `volume`: pour acceder à votre code depuis le container
+- `links`: lien vers le service de la base de données
+- `volumes`: pour acceder à votre code depuis le container
 
 La partie qui gèrera base de donnée aura les propriétés suivantes :
-- `name`: nom du container une fois créé
+- `container_name`: nom du container une fois créé
 - `image`: nom de l'image à utiliser pour le container
 - `ports`: ports à lier entre l'host et le container
 - `environment`: les variables d'environnement necessaires à l'image
-- `volume`: pour sauvegarder votre database
+- `volumes`: pour sauvegarder votre database
 - `entrypoint`: vous devez trouver comment importer un schema sql à l'initialisation de votre container
 
 Vous devrez modifier quelques variables dans les fichiers de config de epytodo pour correspondre à ce que vous mettrez dans votre docker-compose
