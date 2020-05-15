@@ -20,13 +20,14 @@ First of all let's see some challenges on how to create basic XSS payloads:
 These challenges will take you through de process of bypassing filters:
 * https://sandbox.pwnfunction.com/warmups/jefff.html
 * https://prompt.ml/3
-* https://prompt.ml/4
+
 
 ## Medium
 
 This challenges are close to the one you can get on CTF competition:
 * https://sandbox.pwnfunction.com/warmups/ok-boomer.html
 * https://sandbox.pwnfunction.com/challenges/me-and-the-bois.html
+* https://prompt.ml/4
 
 ## Hard
 
