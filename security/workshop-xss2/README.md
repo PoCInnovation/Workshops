@@ -5,7 +5,7 @@ There is no flag to find in the first challenges, you should only follow what ea
 
 Before we start, here are some usefull ressources:
 * the slides of this workshop https://slides.com/pwnh4/xss
-* a really (really) big collection of XSS payloads https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection
+* a really (really) big collection of [XSS payloads](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection)
 * the PortSwigger article about XSS https://portswigger.net/web-security/cross-site-scripting
 
 ## Basics
