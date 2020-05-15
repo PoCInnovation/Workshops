@@ -26,7 +26,7 @@ These challenges will take you through de process of bypassing filters:
 
 This challenges are close to the one you can get on CTF competition:
 * https://sandbox.pwnfunction.com/warmups/ok-boomer.html
-* https://xss.pwnfunction.com/challenges/me-and-the-bois/
+* https://sandbox.pwnfunction.com/challenges/me-and-the-bois.html
 
 ## Hard
 
