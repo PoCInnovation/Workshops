@@ -30,6 +30,6 @@ This challenges are close to the one you can get on CTF competition:
 
 ## Hard
 
-Let's discover mutation XSS. These payloads are remarquably difficult to craft but allow us to bypass really advanced security filters.
+Let's discover mutation XSS. These payloads are remarkably difficult to craft but allow us to bypass really advanced security filters.
 This challenge is a replica of a previous XSS vulnerability found on Google services:
 * http://ctf.oursin.eu/workshops/01/
