@@ -1,7 +1,7 @@
 # XSS
 
 Today we are going to learn what is Client Web Security and how we can identify and exploit different types of XSS vulnerabilities.
-There is no flag to find in the first challenges, you should only follow what each exercice is asking you to do (make a prompt(1) for example).
+There is no flag to find in the first challenges, you should only follow what each exercise is asking you to do (make a prompt(1) for example).
 
 Before we start, here are some usefull ressources:
 * the slides of this workshop https://slides.com/pwnh4/xss
