@@ -37,8 +37,7 @@ Vous aurez donc besoin de Go en version **1.12 minimum**
 $ go version
 go version go1.12.10 linux/amd64 # OK
 ```
-
-Vous pouvez lancer le server en allant dans le dossier [src](./src)
+Ensuite, téléchargez le code du workshop [ici](https://downgit.github.io/#/home?url=https://github.com/PoCFrance/Workshops/tree/master/software/2.Go), puis vous pouvez lancer le server en allant dans le dossier [src](./src)
 ```sh
 # pour simplement lancer le server
 $ go run ./
