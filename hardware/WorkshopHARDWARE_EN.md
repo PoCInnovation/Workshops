@@ -1,11 +1,4 @@
----
-title: "Workshop HARDWARE (EN)"
-date: 2019-10-09T15:52:25Z
-draft: false
----
-
-# Worshop HARDWARE
-
+# Workshop HARDWARE
 
 ## Introduction
 

@@ -1,10 +1,4 @@
----
-title: "Workshop HARDWARE"
-date: 2019-10-10T12:52:25Z
-draft: false
----
-
-# Worshop HARDWARE
+# Workshop HARDWARE
 
 ## Introduction
 Les exercices devront être réalisés dans l'ordre et présentés à un encadrant une fois terminé pour qu'il vérifie votre travail.
