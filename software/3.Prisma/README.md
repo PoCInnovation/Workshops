@@ -51,9 +51,9 @@ Il faut installer de nouveaux modules pour faire cela:
 
 <Details><Summary><strong>Étapes d'installations de Apollo et Nexus</strong></Summary>
 
-- copiez le dossier [src](./src) présent dans notre repo dans votre dossier starter
-- remplacez le `package.json` de votre dossier starter par [celui sur notre repo](./package.json)
-- exécutez `npm install` dans votre dossier starter pour installer les nouvelles dépendances
+- Téléchargez le dossier [src](./src) présent dans notre repo dans votre dossier starter : cliquez [ici](https://github.com/PoCFrance/Workshops/tree/master/software/3.Prisma/src)
+- Remplacez le `package.json` de votre dossier starter par [celui sur notre repo](./package.json)
+- Exécutez `npm install` dans votre dossier starter pour installer les nouvelles dépendances
 
 </Details>
 
@@ -181,7 +181,7 @@ mutation {
   writeDraft(
     title: "Join the Prisma Slack"
     content: "https://slack.prisma.io"
-    authorId: "alice@prisma.io"
+    authorId: "__AUTHOR_ID__"
   ) {
     id
     published
