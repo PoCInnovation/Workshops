@@ -2,6 +2,8 @@
 
 Ce workshop nécessite uniquement d'installer docker, ses dépendances ainsi que d'activer le service docker.
 
+:warning: Supprimez les versions précédentes de Docker si vous rencontrez un problème lors de l'installation.
+
 Vous aurez besoin de:
 - [docker-ce](https://docs.docker.com/engine/install/fedora/) : community edition de docker
 - [docker-compose](https://docs.docker.com/compose/install/) : outil complémentaire qui permet de simplifier la création d'images et containers
