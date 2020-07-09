@@ -7,7 +7,7 @@ const app = express();
 const port: number = get('PORT').required().asPortNumber();
 
 async function initServer() {
-  app.listen(port, 'localhost');
+  app.listen(port, '0.0.0.0');
   console.log("Server listen on http://localhost:" + port);
 }
 
