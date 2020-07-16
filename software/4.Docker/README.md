@@ -45,30 +45,30 @@ Vous avez à présent une image docker qui contient une api node et tout le nece
 
 Pour terminer : vous allez dockeriser votre projet `epytodo`, si vous n'en avez pas, il y en un fourni dans le dossier [src](./src/epytodo/)
 
-Pour cela, vous allez créer :
-- un `Dockerfile` afin de créer l'image de votre api (de la même manière qu'à la step 2 mais l'api est en python et n'a donc pas les mêmes dépendances)
+Pour cela, vous allez créer au même niveau que le dossier epytodo:
+- un `Dockerfile` afin de créer l'image de votre api (de la même manière qu'à la step 2 mais l'api est en python et n'a donc pas les mêmes dépendances).
 - un `docker-compose.yml` pour créer et lier la base de données à votre api.
 
 Votre docker-compose aura 2 services :
-- un qui lance l'image de votre `flask`
-- un qui lance l'image de la base de données `mariadb`
+- un qui lance l'image de votre api `flask` (créee avec le dockerfile).
+- un qui lance l'image de la base de données `mariadb` (toutes les infos sont [ici](https://hub.docker.com/_/mariadb)).
 
-La partie qui gèrera votre api aura les propriétés suivantes :
+La partie qui gèrera votre api aura les propriétés suivantes:
 - `container_name`: nom du container une fois crée
 - `build`: precise quelle image build pour l'utiliser après
 - `ports`: ports à lier entre l'host et le container
-- `links`: lien vers le service de la base de données
 - `volumes`: pour acceder à votre code depuis le container
+- `depends_on`: pour préciser l'autre service essentiel à l'api (la db)
+- `command`: la commande à exécuter pour lancer l'api
 
-La partie qui gèrera base de donnée aura les propriétés suivantes :
+La partie qui gèrera base de donnée aura les propriétés suivantes:
 - `container_name`: nom du container une fois créé
 - `image`: nom de l'image à utiliser pour le container
 - `ports`: ports à lier entre l'host et le container
-- `environment`: les variables d'environnement necessaires à l'image
-- `volumes`: pour sauvegarder votre database
-- `entrypoint`: vous devez trouver comment importer un schema sql à l'initialisation de votre container
+- `environment`: les variables d'environnement necessaires à l'image (à trouver [ici](https://hub.docker.com/_/mariadb))
+- `volumes`: pour sauvegarder votre database et importer un schema sql à l'initialisation de votre container
 
-Vous devrez modifier quelques variables dans les fichiers de config de epytodo pour correspondre à ce que vous mettrez dans votre docker-compose
+Vous devrez modifier quelques variables dans les fichiers de config de epytodo pour que ça corresponde à ce que vous mettrez dans votre docker-compose.
 
 > Si vous avez besoin de documentation sur le fonctionnement de [docker-compose](https://docs.docker.com/compose/).  
 > Quels sont les ports par défaut des éléments du container ? (flask / mysql)  
