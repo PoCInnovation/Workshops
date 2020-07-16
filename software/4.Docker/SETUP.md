@@ -2,27 +2,29 @@
 
 Ce workshop nécessite uniquement d'installer docker, ses dépendances ainsi que d'activer le service docker.
 
-:warning: Supprimez les versions précédentes de Docker si vous rencontrez un problème lors de l'installation.
-
-```
-sudo dnf remove docker \
-                docker-client \
-                docker-client-latest \
-                docker-common \
-                docker-latest \
-                docker-latest-logrotate \
-                docker-logrotate \
-                docker-selinux \
-                docker-engine-selinux \
-                docker-engine
-```
-
 Vous aurez besoin de:
 - [docker-ce](https://docs.docker.com/engine/install/fedora/) : community edition de docker
 - [docker-compose](https://docs.docker.com/compose/install/) : outil complémentaire qui permet de simplifier la création d'images et containers
 
+:warning: Supprimez les versions précédentes de Docker si vous rencontrez un problème lors de l'installation.
+
+## Installation
+
+```bash
+sudo dnf remove docker                   \
+                docker-client            \
+                docker-client-latest     \
+                docker-common            \
+                docker-latest            \
+                docker-latest-logrotate  \
+                docker-logrotate         \
+                docker-selinux           \
+                docker-engine-selinux    \
+                docker-engine
+```
+
 Etapes d'installation de `docker-ce` pour fedora:
-```sh
+```bash
 # Pour installer les dépendances de docker
 sudo dnf -y install dnf-plugins-core
 
@@ -45,5 +47,7 @@ Une fois l'installation terminée, lancez le service docker avec `sudo systemctl
 > Si vous souhaitez que docker se lance à chaque démarrage de votre ordinateur, exécutez: `sudo systemctl enable docker`
 
 Pour ce workshop, vous devez obligatoirement exécuter vos commandes docker avec `sudo`, si vous trouvez une commande sur internet sans, elle ne fonctionnera pas sans avoir ajouté votre utilisateur au groupe docker (ce qui necessite de log out de votre session, ce que nous ne ferons donc pas)
+
+Enfin, téléchargez l'image de la moulinette d'Epitech avec `sudo docker pull epitechcontent/epitest-docker`
 
 **Si vous avez fini toutes ces étapes, vous pouvez dès à présent passer aux exercices**

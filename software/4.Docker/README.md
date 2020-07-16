@@ -15,20 +15,22 @@ Pour commencer, nous allons apprendre à utiliser le docker de la moulinette pou
   - exécutez `cat /etc/os-release | grep PRETTY_NAME` et vérifiez le nom de la distro
 - À present, trouvez les commandes pour afficher les images, containers, volumes et networks.
 
-> Il y a un document présent sur l'intra qui pourrait vous aider.
+> [Il y a un document présent sur l'intra qui pourrait vous aider.](https://intra.epitech.eu/file/public/technical-documentations/doc_docker.pdf)
 
 ## Step 2: Dockerisation d'une API avec un dockerfile
 
 Maintenant, nous allons apprendre à construire notre propre image docker à l'aide d'un `dockerfile`.
 
 Dans le dossier [src](./src/node_api), vous trouverez une api en NodeJS.  
-Cette api est des plus basique, elle renvoie un message lorsqu'on fait une requete GET sur `/`.
+Cette api est des plus basique, elle renvoie un message lorsqu'on fait une requete GET sur `/`.  
+Dans un premier temps, téléchargez l'api [ici](https://downgit.github.io/#/home?url=https://github.com/PoCFrance/Workshops/tree/master/software/4.Docker/src/node_api).
 
-Le but est d'isoler votre votre api dans une image docker. Vous devrez dans vote `dockerfile`:
-- Créer une `image` basée sur l'image `node:12-alpine`
+Le but est d'isoler cette api dans une image docker. Vous devrez dans votre `dockerfile`:
+- Créer une `image` basée sur l'image `node:12-alpine`.
 - Copier le code de l'api dans l'image.
-- Installer les dépendances et lancez l'api
-- Rendre l'api accessible depuis l'extérieur de l'image sur le port 8080.
+- Définissez la variable d'environnement `PORT` qui indique le port utilisé par l'api.
+- Rendre l'api accessible depuis l'extérieur de l'image sur le même port que  `PORT`.
+- Installer les dépendances et lancer l'api.
 
 > Si vous avez besoin de [documentation](https://docs.docker.com/engine/reference/builder/) sur l'utilisation d'un dockerfile.
 
