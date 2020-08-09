@@ -1,49 +1,42 @@
 # Setup
 
-## 1. Sqlite3 | Database
+## 1. Go
 
-Vous aurez besoin de [sqlite3](https://fr.wikipedia.org/wiki/SQLite), un moteur de base de données portables. Pour cela:
-- sous fedora: `sudo dnf install sqlite`
-- sous ubuntu: `sudo apt install sqlite3`
+In this workshop, we will create an HTTP REST server using Go.  
+First of all, make suse you have **Go 1.11** or higher installed, allowing you to use the `go mod` feature. It makes the development easier.
 
-La base de données est contenue dans le fichier [dev.db](./dev.db)
-
-Si vous voulez intéragir avec votre base de donnée:
+If you have the right version installed, you should have something similar:
 ```sh
-# ouvrir la base de donnéee et lancer un shell pour communiquer avec
-$ sqlite3 dev.db
-
-# afficher toutes les tables de la base de données
-sqlite> .table
-Posts  Users
-
-#afficher tous les champs de la table Users
-sqlite> select * from users;
-1|Taddeo|Taddeo@epitech.eu
-2|Dael|Dael@epitech.eu
-3|Damara|Damara@epitech.eu...
+go version
+> go version go1.11.10 linux/amd64 # OK
 ```
 
-Ou utilisez une interface graphique de gestion de base de donnée pour visualiser votre db ([dbeaver](https://dbeaver.io/) par exemple)
+To create the server, we will use external dependencies:
+- [mux](https://www.gorillatoolkit.org/pkg/mux), an HTTP router that allows us to create routes to receive data.
+- [handlers](https://www.gorillatoolkit.org/pkg/handlers), working with mux, to add middlewares to our routes.
 
-## 2. Go
+> The language should NOT be an issue in this workshop, if you're struggeling with Go, do not hesitate to ask for help !
 
-Dans ce workshop, nous allons utiliser les modules Go.  
-Vous aurez donc besoin de Go en version **1.12 minimum**
+## 2. Postman, Postwoman, Curl
 
+We will be using `postman` to test out our routes, but you can also use `postwoman`, `curl`, or whatever other tool you want for your tests since they will be personal, but we recommend `postman` as we will go into an in depth explanation of how to use it.
+
+- [Postman](https://www.postman.com/downloads/)
+- [Postwoman](https://postwoman.io/fr/)
+- [Curl](https://curl.haxx.se/) (often already installed on your computer)
+
+## 3. Launching the server
+
+Once everything is installed, you have to download the workshop files [here](https://github.com/PoCFrance/Workshops/tree/master/software/2.Go).  
+Then, go in the [src](./src) folder and execute:
 ```sh
-# par exemple
-
-$ go version
-go version go1.12.10 linux/amd64 # OK
+go run ./
+# to simply launch the server
 ```
-Ensuite, téléchargez le code du workshop [ici](https://downgit.github.io/#/home?url=https://github.com/PoCFrance/Workshops/tree/master/software/2.Go), puis vous pouvez lancer le server en allant dans le dossier [src](./src)
+or
 ```sh
-# pour simplement lancer le server
-$ go run ./
-
-# ou avec go build si vous voulez optenir un executable
-$ go build ./
+go build ./ && ./poc-workshop-go
+# to compile a binary and run it
 ```
 
-**Si vous obtenez `Server runs on http://localhost:8080`, vous avez fini le setup et vous pouvez passer aux exercices**
+**If you have `Server runs on http://localhost:8080`, you've finished the setup and you can go for the exercices**
