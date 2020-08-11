@@ -1,4 +1,4 @@
-Different type of encryptions
+Different type of encryptions and encodings
 
 sha1
 154e419298935c6d807abdc907a198cdfce28702
