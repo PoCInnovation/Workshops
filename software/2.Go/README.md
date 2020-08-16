@@ -1,64 +1,131 @@
-# Workshop 2 - API REST en Go
+# Workshop 2 - API REST in Go
 
-## Step 0: initialisation
+In this workshop we will learn to use the main function of the http package in Go and how to create a REST server.  
 
-Toutes les informations requises pour installer les dépendances du workshop sont disponibles dans [SETUP.md](./SETUP.md)
+## Step 0: Initialization
 
-Nous utiliserons pour ce workshop:
-- [mux](https://www.gorillatoolkit.org/pkg/mux), un router HTTP, il permet de créer des routes pour récuperer des données.
-- [handlers](https://www.gorillatoolkit.org/pkg/handlers) pour ajouter des middlewares à nos routes.
-- [gorm](https://gorm.io/docs/), un ORM pour Go. Il nous permet de faire de manipuler la de données sans avoir à écrire les requêtes SQL à la main.
+All the required informations to install workshops's dependencies are explained in the [SETUP.md](./SETUP.md)
 
-## Step 1: Première route
+## Step 0.5: The codebase
 
-Pour commencer, implementez une route basique `"/hello"` qui renvoie `world` quand vous allez sur http://localhost:8080/hello
+We designed a boilerplate for this project, it will be useful for starting this project out, but also summarize all the needed part of a API
+We will have :
 
-## Step 2: Routes avec paramètres
+- `controllers`: this is where you will design your routes endpoint. it will often be wrapper that calls other API or the database itself
+- `middlewares`: those are gates that can be chained to log or check access rights before entering a controller
+- `routes`: the core of the router, setting up all the routes handler, with their middlewares and controller
+- `models`: wraps all the database calls
 
-Vous allez devoir envoyer des paramètres au server via les routes. Pour cela, vous allez faire varier l'url de votre route.
+There is plenty of other important package you may need in a real API, but those are the main one you can be sure of needing at one time or another. Now let's code.
 
-Créez une route **GET** `/whoami/{user}`
-- Prend en paramètre `user`
-- Renvoie `I am {user} !`
+Add a route on the endpoint `/hello`:
+- It uses the `GET` method
+- It responds `"hello world"`
+
+> You can test it with `http://localhost:8080/hello` in a browser or with `postman`
+
+## Step 1: Let's get started
+
+You are now fine with the creation of endpoint.
+Next step is to add log because our server doesn't log anything, yet we would like to know when a route a called to know if everything went well.
+
+Create a middleware that logs the traffic of the API:
+- Use the `log` native package
+- Apply this middleware to the `/hello` route
 
 
-> vous pouvez tester vos routes avec [postman](https://learning.postman.com/docs/postman/launching-postman/introduction/) ou [curl](https://flaviocopes.com/http-curl/)
+> This [tutorial](https://golang.io/fr/tutoriels/les-middlewares-avec-go/) may help you
 
-## Step 3: Mise en place des Middlewares
+> You can make this middleware global to all route rather than calling it manually on each and every route you create
 
-À présent, vous allez créer des middleware pour vos routes. Ils sont généralement utilisés pour vérifier les données reçues avant de les envoyer au reste du server. Par exemple, vérifier que le compte qui essaie d'accèder à une route `/admin` est bien un administrateur. Dans notre cas, pas le temps de mettre en place tout un système d'authentification, nous allons donc utiliser un middleware pour une tâche plus basique.
+<details>
+  <summary>See how to request with postman :satellite:</summary>
 
-Ajoutez le middleware `IdIsCorrect`
-- Prend en paramètre l'`id` reçu
-- Vérifie si l'`id` est bien positif
+  Enter your URL and the method you which to use in the titlebar and click `Send`.
 
-## Step 4: Connection à la base de données
+  ![Seek](../../.github/go-http/seek.png)
 
-Nous rentrons enfin dans le vif du sujet. Le server va aller se connecter à une base de donnée et récuperer les données demandées par l'utilisateur.
-> le setup de GORM est disponible dans le fichier [init.go](./src/database/init.go).
+  Then the result (if there is any) will be printed out at the bottom.
 
-### Part 1: Premières query
+  ![Result](../../.github/go-http/result.png)
 
-Vous allez à présent utiliser votre ORM pour récuperer dans la base de données toutes les informations relatives à l'utilisateur entré en paramètre:
-- Créez la route **GET** `/get/{id}`
-  - Elle prend en paramètre un`id`
-  - Elle utilise le middleware qui vérifie l'`id` [(Step 3)](#step-3:-mise-en-place-des-middlewares)
-  - Elle renvoie toutes les informations de l'`id` présentes dans la DB, sous la forme d'un JSON
+</details>
 
-### Part 2: Insertion de donnée dans votre DB
+## Step 2: Authentication and security
 
-À présent, vous allez créer de nouveaux utilisateurs, pour cela:
-- Créez une route **GET** `/add/{id}/{username}/{email}`
-  - Elle prend en paramètre un`id`, un `username` et un `email`
-  - Elle utilise le middleware qui vérifie l'`id` [(Step 3)](#step-3:-mise-en-place-des-middlewares)
-  - Si tout est correct, elle insert les informations dans la DB, définit le statut 200 et renvoie `Success`
+On a real API, there part of your routes you only want some people to use.  
+To protect some routes from unknown users, we'll have to add another middleware
+
+- Create a middleware that check if the request has a header called `Authorization` and if it contains the `allowed` string
+- Create a route on `/auth/hello` with the same controller as before wrapped with this new middleware to check if it works
+
+> In a real life scenario you will check if the field contain a token, and if this token is valid thanks to JWT or any sessions
+
+> `r.Header` is of type `map[string]string` you should give a look at how to check if a value exist within a map beforehand
+
+<details>
+
+  <summary>See how to send header :satellite:</summary>
+
+  Go into the 3rd panel, there you will be able to create the header you wish to send, toggle the checkbox to send them or not.
+
+  ![Header](../../.github/go-http/header.png)
+
+</details>
+
+## Step 3: Vars
+
+Creating routes is nice, but we cannot receive variables from them... To do so, we will use `"github.com/gorilla/mux"` to have modular routes
+
+Create a endpoint `/whoami/{user}`
+- It uses the `GET` method
+- It responds `I am $user` with `$user` being the text sent in the URL
+
+> See the `{``}` syntax those bracket will indicate which part of the URL will be contain in the vars
+
+> Check the [doc](https://github.com/gorilla/mux)
+
+## Step 4: Database and data transfers
+
+Finaly, we will use the API to manipulate informations in a database. We don't have the time to setup a real databse, so we created fonctions to fake the behavior of a simple database.
+
+> You must import the `model` package, it contains 3 functions to manipulate users.
+
+You will need to implement an endpoint for:
+
+- `/add`
+  - It uses the `POST` method
+  - It creates a user thanks to the information given in the `body`
+- `/get/{id}` 
+  - It uses the `GET` method
+  - It gets a user based on its `id`
+- `/del/{id}`
+  - It uses the `DELETE` method
+  - It deletes a user based on its `id`
+
+> The `body` will contain a json on the form of the structure designed in the model package as `model.Users`
+
+<details>
+
+  <summary>See how to send json in body :satellite:</summary>
+
+  Go into the 4rd panel and select the `raw` option, then you can write your json (you can also copy this one).
+
+  ![Body](../../.github/go-http/body.png)
+
+  </details>
 
 ## Bonus
 
-Si vous avez tout fait jusque là, vous êtes libre de créer les routes que vous voulez, comme par exemple supprimer un utilisateur ou intéragir avec les posts des users, afin d'en ajouter, en lire ou en supprimer.
+Theoretically, you should have all the basis needed for creating you own API, if you still wish to toy around with Go and all its usage, you can take a look at other go features like:
+- `go routines`
+- `interfaces`
 
+You can also use a real database with these ORM packages:
+- [GORM](https://github.com/go-gorm/gorm/)
+- [Ent](https://github.com/facebookincubator/ent)
 
-## Auteurs
+## Authors
 - [Théo Ardouin](https://github.com/Qwexta)
 - [Paul Monnery](https://github.com/PaulMonnery/)
 - [Grégoire Brasseur](https://github.com/lerimeur/)
