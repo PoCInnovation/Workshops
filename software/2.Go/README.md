@@ -39,15 +39,15 @@ Create a middleware that logs the traffic of the API:
 > You can make this middleware global to all route rather than calling it manually on each and every route you create
 
 <details>
-  <summary>See how to request with postman</summary>
+  <summary>See how to request with postman :satellite:</summary>
 
   Enter your URL and the method you which to use in the titlebar and click `Send`.
 
-  ![Seek](./res/seek.png)
+  ![Seek](../../.github/go-http/seek.png)
 
   Then the result (if there is any) will be printed out at the bottom.
 
-  ![Result](./res/result.png)
+  ![Result](../../.github/go-http/result.png)
 
 </details>
 
@@ -65,11 +65,11 @@ To protect some routes from unknown users, we'll have to add another middleware
 
 <details>
 
-  <summary>See how to send header</summary>
+  <summary>See how to send header :satellite:</summary>
 
   Go into the 3rd panel, there you will be able to create the header you wish to send, toggle the checkbox to send them or not.
 
-  ![Header](./res/header.png)
+  ![Header](../../.github/go-http/header.png)
 
 </details>
 
@@ -107,11 +107,11 @@ You will need to implement an endpoint for:
 
 <details>
 
-  <summary>See how to send json in body</summary>
+  <summary>See how to send json in body :satellite:</summary>
 
   Go into the 4rd panel and select the `raw` option, then you can write your json (you can also copy this one).
 
-  ![Body](./res/body.png)
+  ![Body](../../.github/go-http/body.png)
 
   </details>
 
