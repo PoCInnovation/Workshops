@@ -1,83 +1,114 @@
-# Workshop 1 - Todo List en React avec Firebase
+# Workshop 1 - Todo List in React
 
-## Step 0: initialisation
+## Step 0: initialization
 
-Toutes les informations requises pour installer les dépendances du workshop sont disponibles dans [SETUP.md](./SETUP.md)
+All the installation steps required to do the exercises are detailed in the [SETUP.md](./SETUP.md)
 
 ## Todo List
 
-Les `components` sont l'essence de React. Ils représentent un élément de la page web. Leur imbrication permet de structurer une page et d'éviter de réécrir plusieurs fois un même code.  
-Vous allez dès à présent en créer un !
-> Durant ce workshop, vous avez interdiction d'utiliser des classes ! Vous devez impérativement faire des `Functional Components`.
+`components` are the core of React. They represent a single element in a web page, like a `text` box, a `button`, a `div` etc. All combined together, they create a fully working web page. Those components are re-usable,  they avoid pasting the same line of code multiple times.  
+
+You will learn how to create one right now in the first step!
+
+> In this workshop, you are not allowed to use JavaScript classes, you must use `Functional Components`.
 
 ### Step 1: `Task` component
 
-Créez un component dans lequel on seront affichés:
-  - la description de la tâche
-  - une checkbox qui indique son statut (todo/done)
+In `src/App.tsx`, create a component that will display:
 
-Ce component représente une tâche individuelle de votre Todolist. La `description` et le `statut` doivent être recues depuis les [props](https://fr.reactjs.org/docs/components-and-props.html), par exemple:
+- The task description
+
+This component represents one single task in your todolist. The `description`  must be received as parameters from the [props](https://fr.reactjs.org/docs/components-and-props.html).  It will look like something like this, you just have to complete what the component returns.
 
 ```jsx
-<Task description="Finir la step 1" statut={false} />
-```
-
-
-### Step 2: `List` component
-
-Créez un component qui affiche une liste de `Task`. Pour cela, créez un Array d'objets:
-
-```js
-import React, { useState } from 'react';
-
-// Dans votre component List
-const [taskList, setTaskList] = useState([{description: "finish workshop", statut: false}]);
-```
-- `taskList` est une variable const qui ne peut être éditée que par la fonction `setTaskList` qui lui est associée
-- `taskList` contient un array d'object avec pour l'instant un seul index
-- les valeures d'un index representent les informations d'une `Task`
-- Ajouter ou supprimer un index de `taskList` revient à ajouter ou supprimer une `Task`
-- Pouvoir changer le statut de la tâche
-
-Votre component `List` doit:
-- Afficher une liste de `Task`
-- Afficher tout en haut une zone de texte et un bouton permettant d'ajouter une nouvelle `Task`
-- Afficher un bouton à côté de chaque `Task` permettant de la supprimer
-
-> Renseignez vous sur les `hooks` en React  
-> Pour manipuler l'array d'objets, `splice` et `concat` vous seront utiles
-
-## Firebase
-
-Ça se complique, à présent, pour sauvegarder nos tâches, nous allons passer par la base de données NoSQL de Google, à savoir `Firebase`. (Realtime Database, pas Firestone)
-
-### Step 1: Créez un projet Firebase
-
-Pour se faire, rendez vous sur [ce tutoriel](https://firebase.google.com/docs/web/setup) afin de préparer votre base de données et récuperer vous identifiants pour interagir avec elle depuis votre applicaton React. De plus, ajoutez le package `firebase` à votre `package.json`:
-```
-npm install firebase
-```
-
-### Step 2: Droit d'édition
-
-Les bases des données fournies par Firebase sont par défaut non-éditable sans authentification, vous pouvez simplement outre-passer cette contraintre en allant dans `database` > `realtime database` > `rule` et en remplaçant les rêgles actuelles par celle-ci
-```json
-{
-  "rules": {
-    ".read": true,
-    ".write": true
-  }
+function task(props) {
+    return (...)
 }
 ```
 
-### Step 3: Intéractions
+To display your `Task` component, paste this line in your `App` component:
 
-Firebase est très bien documenté, pensez à faire un tour sur la [documentation](https://firebase.google.com/docs/).  
-Si vous commencez à être perdu, visitez cette [page](https://firebase.google.com/docs/reference/js/firebase.database.Reference#on).
+```jsx
+<Task description="finish step 1" />
+```
+
+### Step 2: `List` component
+
+#### Display the tasks
+
+Create a component that will display a list of `Task` components. To do so, you will have an Array of object:
+
+```js
+function List(props) {
+	const [taskList, setTaskList] = React.useState(["finish step 2", "finish step 3"]);
+    return (...)
+}
+```
+Some precisions:
+
+- `taskList` is a const variable that can only be changed by the function  `setTaskList` associated with it
+- `taskList` is an array of object with currently only one index
+- Each index of the array represents the variables that will be sent to the `Task` component
+- Adding or removing an index to `taskList` is equivalent to add or remove a `Task`
+
+#### Adding features
+
+Your `List` component must also:
+
+- Display a `input` and a `button` allowing you to add a new Task (add an index to `taskList` variable)
+  - You will need another variable with `React.useState`to store it in your component
+  - You will probably have to create a function that updates `taskList` when the button is clicked
+- Display a `button` next to your `Task` component to delete it (remove an index to `taskList` variable)
+  - Same as before, you will probably have to create a function that updates `taskList` when the button is clicked
+
+> Find out more about the `hooks` in React  
+> To edit you array, the `splice` and `concat` methods will be very useful
+
+
+
+### Step 3: Adding the API
+
+We will now connect our todolist to a public API that stores tasks for us! It is very clear and simple to use. All the available routes can be found [here](https://documenter.getpostman.com/view/8858534/SW7dX7JG?version=latest#627465c4-0b9f-4306-8897-038268188093). First, let's create an account via curl in your terminal:
+
+```sh
+curl --location --request POST 'https://api-nodejs-todolist.herokuapp.com/user/register' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+	"name": "YOUR_FAKE_NAME",
+	"email": "YOUR_FAKE_EMAIL",
+	"password": "YOUR_LONG_PASSWORD",
+	"age": YOUR_FAKE_AGE
+}'
+```
+
+This will return you something like:
+
+```json
+{
+   "user":{
+      "age":YOUR_FAKE_AGE,
+      "_id":"5f61fb805ac0a50017bd8867",
+      "name":"YOUR_FAKE_NAME",
+      "email":"YOUR_FAKE_EMAIL",
+      "createdAt":"2020-09-16T11:48:16.439Z",
+      "updatedAt":"2020-09-16T11:48:16.789Z",
+      "__v":1
+   },
+   "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjYxZmI4MDVhYzBhNTAwMTdiZDg4NjciLCJpYXQiOjE2MDAyNTY4OTZ9.8skAVYPi4vS2bDd0dQN6Melu9aqNY-13EPzyqyQ9Q-4"
+}
+```
+
+The `token` field is what you will need to be identified, by adding it in your requests, the API will know who you are and which task you have!
+
+
+
+
 
 ## Bonus - Styling
+
 Si vous êtes arrivé jusqu'à la fin, bien joué !
 Vous pouvez si vous le souhaitez ajouter du style à vos components, pour cela, vous avez plusieures options :
+
 - Découvrir les joies du [css](https://malcoded.com/posts/react-component-style/), voici un bon tutotiel pour apprendre à manier les [flex-box](https://flexboxfroggy.com/#fr).
 - Passer par [Bootstrap](https://getbootstrap.com/)
 - Installer des packages avec des components pré-faits ey stylisés comme
