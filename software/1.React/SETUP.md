@@ -3,9 +3,9 @@
 ## Node & IDE
 
 In this workshop, you'll have to install:
-- [node (at least version 10)](https://github.com/nodejs/node) : JavaScript interpretor
-- [npm](https://www.npmjs.com/) :node package manager
-- [npx](https://www.npmjs.com/package/npx) : node_modules command executor
+- [node (at least version 10)](https://github.com/nodejs/node): JavaScript interpretor
+- [npm](https://www.npmjs.com/): node package manager
+- [npx](https://www.npmjs.com/package/npx): node_modules command executor
 - [ESlint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) VSCode extension
 - react devtools extension ([firefox](https://addons.mozilla.org/fr/firefox/addon/react-devtools/)/[chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi))
 
@@ -32,3 +32,5 @@ npm start
 ```
 
 **If it opens a tab in your browser with an atom logo spinning, then you can start the exercises!**
+
+[Go back to the exercices](./README.md)

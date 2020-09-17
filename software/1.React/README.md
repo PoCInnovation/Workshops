@@ -10,15 +10,13 @@ All the installation steps required to do the exercises are detailed in the [SET
 
 You will learn how to create one right now in the first step!
 
-> In this workshop, you are not allowed to use JavaScript classes, you must use `Functional Components`.
+> In this workshop, you are not allowed to use JavaScript classes, you must use `Functional Components`.  [Here](https://medium.com/@Zwenza/functional-vs-class-components-in-react-231e3fbd7108) is a little explanation of the differences
 
 ## Step 1: `Task` component
 
-In `src/App.tsx`, create a component that will display:
+In `src/App.tsx`, create a component that will display the task description, which is just a string.
 
-- The task description
-
-This component represents one single task in your todolist. The `description`  must be received as parameters from the [props](https://fr.reactjs.org/docs/components-and-props.html).  It will look like something like this, you just have to complete what the component returns.
+This component represents one single task in your todolist. The `description` must be received as parameter from the [props](https://fr.reactjs.org/docs/components-and-props.html).  It will look something like this, you just have to complete what the component returns.
 
 ```jsx
 function task(props) {
@@ -47,9 +45,11 @@ function List(props) {
 Some precisions:
 
 - `taskList` is a const variable that can only be changed by the function  `setTaskList` associated with it
-- `taskList` is an array of object with currently only one index
+- `taskList` is an array of object with currently only 2 index in the example
 - Each index of the array represents the variables that will be sent to the `Task` component
 - Adding or removing an index to `taskList` is equivalent to add or remove a `Task`
+
+> The [map](https://reactjs.org/docs/lists-and-keys.html) function will be very useful to iterate over our array
 
 ### Adding features
 
@@ -70,7 +70,7 @@ Your `List` component must also:
 
 ### Get hands on the API
 
-We will now connect our todolist to a public API that stores tasks for us! It is very clear and simple to use. All the available routes can be found [here](https://documenter.getpostman.com/view/8858534/SW7dX7JG?version=latest#627465c4-0b9f-4306-8897-038268188093). First, let's create an account via curl in your terminal:
+We will now connect our todolist to a public API that stores tasks for us! It is very clear and simple to use. All the available routes can be found **[here](https://documenter.getpostman.com/view/8858534/SW7dX7JG?version=latest#627465c4-0b9f-4306-8897-038268188093)**. First, let's create an account via curl in your terminal:
 
 ```sh
 curl --location --request POST 'https://api-nodejs-todolist.herokuapp.com/user/register' \
@@ -100,13 +100,13 @@ This will return you something like:
 }
 ```
 
-The `token` field is what you will need to be identified. By adding it in your requests, the API will know who you are and which task you have!
+The `token` field contains the string that you will use to be identified. By adding it in your requests, the API will know who you are and which task you have!
 
 If you want to add a new note, just do:
 
 ```sh
 curl --location --request POST 'https://api-nodejs-todolist.herokuapp.com/task' \
---header 'Authorization: Bearer YOUR_TOKEN' \
+--header 'Authorization: Bearer REPLACE_YOUR_TOKEN_HERE' \
 --header 'Content-Type: application/json' \
 --data-raw '{
 	"description": "finish workshop"
@@ -119,7 +119,7 @@ Finally, if you want to see all your notes, just do:
 
 ```sh
 curl --location --request GET 'https://api-nodejs-todolist.herokuapp.com/task' \
---header 'Authorization: Bearer YOUR_TOKEN' \
+--header 'Authorization: Bearer REPLACE_YOUR_TOKEN_HERE' \
 --header 'Content-Type: application/json'
 ```
 
@@ -127,9 +127,7 @@ Of course, there is a request to delete a note, but find it by yourself on the d
 
 ### Use the API in React
 
-You've probably saw it in the documentation, but we do the request with curl, but examples in other languages are available. The one we want is JavaScript Fetch because we will use it directly in our react code.
-
-What you will have to do now is to call theses functions to send the result in your `Task` component. First, create a `request.js` file in the `src` folder containing this code:
+You've probably saw it in the documentation, but examples in other languages are available. The one we want is JavaScript Fetch because we will use it directly in our react code. What you will have to do now is to call theses functions to send the result in your `Task` component. First, create a `request.js` file in the `src` folder containing this code:
 
 <Details><Summary><strong>request.js</strong></Summary>
 
@@ -137,7 +135,7 @@ What you will have to do now is to call theses functions to send the result in y
 /* eslint-disable */
 const fetch = require('node-fetch');
 
-const TOKEN = 'YOUR_TOKEN';
+const TOKEN = 'REPLACE_YOUR_TOKEN_HERE';
 
 // based on this public API
 // https://documenter.getpostman.com/view/8858534/SW7dX7JG?version=latest#intro
@@ -208,13 +206,15 @@ You now have to use theses functions to create, delete and list your tasks. Ther
 import { addTask, delTask, getAllTask } from './request'; 
 ```
 
-The easiest thing to do to have your todolist working smoothly is to keep the functions you created to edit the array, and add an extra step that update the online tasks with theses functions. So when you add a new task, you add it in your `taskList` array and then you call `addTask`
+The easiest thing to do to have your todolist working smoothly is to keep the functions you created to edit the array, and add an extra step that update the online tasks with the API functions. So when you add a new task, you add it in your `taskList` array and then you call `addTask`
+
+- In the objects you will receive in response, there are multiple fields, the one we are interested in is `data`, it contains the tasks informations
 
 - It's pretty easy to know when you will call `addTask` and  `delTask`, remember the buttons you previously used
 - `delTask` needs an id to find the task to delete, it means you'll probably have to store more data than just the description in `taskList`
 - `getAllTask` is a bit more complex because you want to call it at the beginning of the component to get all the task already existing in the server loaded in `taskList`. You will need to use the [useEffect](https://reactjs.org/docs/hooks-effect.html) function 
 
-> Don't forget that theses functions are async, you'll have to use the await keyword to have the final JSON result
+> Don't forget that theses functions are async, you'll need the await keyword to have the final JSON result
 
 
 ## Bonus
@@ -225,7 +225,7 @@ If you want to upgrade your online todolist, you can add more features, like:
 
 - Bad token detection: show an error when the token used is not good and makes requests fail
 
-- discover the joys of [css](https://malcoded.com/posts/react-component-style/), here is an nice tutorial to master the [flex-box](https://flexboxfroggy.com/#fr).
+- discover the joys of [css](https://malcoded.com/posts/react-component-style/), here is an nice tutorial to master [flex-box](https://flexboxfroggy.com/#fr).
 - Use [Bootstrap](https://getbootstrap.com/) to have simple style on your components
 - Install external packages with pre-built and styled components like
   - [Material UI](https://material-ui.com/)
