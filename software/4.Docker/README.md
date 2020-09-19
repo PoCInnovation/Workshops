@@ -43,7 +43,7 @@ Once your image is created, you must `run` a container based on it.
 
 You now have a docker image which contains a node API and everything necessary to run it without installing anything other else than Docker on your computer. Say farewell to installations that destroy your dump!
 
-## Step 3: Containerization of Epytodo with a docker-compose
+## Step 3: Containerization of Epytodo with a docker-compose
 
 To finish, you will containerize your `Epytodo` project. If you do not have one, we give you a downloadable tar file in the [src](./src/epytodo) directory, **but use yours if it works!**
 
