@@ -1,14 +1,13 @@
 # Setup
 
-Ce workshop nécessite uniquement d'installer docker, ses dépendances ainsi que d'activer le service docker.
+This workshop only requires you to install docker, its dependencies and to activate the docker service. You'll need:
 
-Vous aurez besoin de:
-- [docker-ce](https://docs.docker.com/engine/install/fedora/) : community edition de docker
-- [docker-compose](https://docs.docker.com/compose/install/) : outil complémentaire qui permet de simplifier la création d'images et containers
-
-:warning: Supprimez les versions précédentes de Docker si vous rencontrez un problème lors de l'installation.
+- [docker-ce](https://docs.docker.com/engine/install/fedora/) : docker community edition
+- [docker-compose](https://docs.docker.com/compose/install/) : complementary tool to simplify the creation of images and containers
 
 ## Installation
+
+First, remove these packages if installed on your dump:
 
 ```bash
 sudo dnf remove docker                   \
@@ -23,31 +22,48 @@ sudo dnf remove docker                   \
                 docker-engine
 ```
 
-Etapes d'installation de `docker-ce` pour fedora:
-```bash
-# Pour installer les dépendances de docker
-sudo dnf -y install dnf-plugins-core
+Then for fedora, install `docker-ce`:
 
-# Pour ajouter le repository de docker à dnf
+```bash
+# To add the docker repository to dnf
+sudo dnf -y install dnf-plugins-core
 sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
 
-# Pour installer la dernière version de docker:
+# To install docker's latest version:
 sudo dnf install docker-ce docker-ce-cli containerd.io
 ```
-> Si vous n'utilisez pas fedora, [un tutoriel pour d'autres distros est disponible](https://docs.docker.com/engine/install/fedora/)
 
-Pour installer `docker-compose`:
+> If you're not on fedora, [a tutorial for other distros is available](https://docs.docker.com/engine/install)
+
+To install `docker-compose`:
+
 ```sh
 sudo curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 ```
 
-Une fois l'installation terminée, lancez le service docker avec `sudo systemctl start docker`
+#### Enable docker
 
-> Si vous souhaitez que docker se lance à chaque démarrage de votre ordinateur, exécutez: `sudo systemctl enable docker`
+Once the installation is complete, start the docker service with `sudo systemctl start docker`
 
-Pour ce workshop, vous devez obligatoirement exécuter vos commandes docker avec `sudo`, si vous trouvez une commande sur internet sans, elle ne fonctionnera pas sans avoir ajouté votre utilisateur au groupe docker (ce qui necessite de log out de votre session, ce que nous ne ferons donc pas)
+> If you want Docker to run every time you start your computer, run `sudo systemctl enable docker`
 
-Enfin, téléchargez l'image de la moulinette d'Epitech avec `sudo docker pull epitechcontent/epitest-docker`
+For this workshop, you have to run your docker commands with `sudo`, if you find a command on the Internet without it, it will not work without adding your user to the docker group (which requires logging out of your session, which we will not do).
 
-**Si vous avez fini toutes ces étapes, vous pouvez dès à présent passer aux exercices**
+#### Fedora 31+
+
+:warning: If you are running fedora 31 or above, you'll probably have cgroups errors like:
+
+```
+docker: Error response from daemon: cgroups: cannot found cgroup mount destination: unknown.
+```
+
+To fix them, follow this [solution](https://github.com/docker/for-linux/issues/219#issuecomment-375160449) on docker's github. This solution requires to be executed each time you reboot 
+
+#### Moulinette
+
+Finally, download the EPITECH's "moulinette" 's image with `sudo docker pull epitechcontent/epitest-docker`. 
+
+**If you have finished all these steps, you can now move on to the exercises** 
+
+[Go back to the exercices](./README.md)

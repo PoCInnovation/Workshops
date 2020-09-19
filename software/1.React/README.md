@@ -14,7 +14,7 @@ You will learn how to create one right now in the first step!
 
 ## Step 1: `Task` component
 
-In `src/App.tsx`, create a component that will display the task description, which is just a string.
+In `src/App.js`, create a component that will display the task description, which is just a string.
 
 This component represents one single task in your todolist. The `description` must be received as parameter from the [props](https://fr.reactjs.org/docs/components-and-props.html).  It will look something like this, you just have to complete what the component returns.
 
@@ -38,7 +38,7 @@ Create a component that will display a list of `Task` components. To do so, you 
 
 ```js
 function List(props) {
-	const [taskList, setTaskList] = React.useState(["finish step 2", "finish step 3"]);
+    const [taskList, setTaskList] = React.useState(["finish step 2", "finish step 3"]);
     return (...)
 }
 ```
@@ -110,7 +110,7 @@ curl --location --request POST 'https://api-nodejs-todolist.herokuapp.com/task' 
 --header 'Content-Type: application/json' \
 --data-raw '{
 	"description": "finish workshop"
-}
+}'
 ```
 
 You should receive a JSON object saying `succes: true` with the note you just added.

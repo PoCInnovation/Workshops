@@ -1,89 +1,123 @@
-# Workshop 4 - Docker pour les débutants
+# Workshop 4 - Docker for beginners
 
-Dans ce workshop nous allons voir comment créer des images et des containers grâce aux dockerfiles et docker-compose.
+In this workshop, we will see how to create docker images and containers using Dockerfiles and docker-composes.
 
-## Step 0: Initialisation
+## Step 0: Initialization
 
-Toutes les informations requises pour installer les dépendances sont disponibles dans [SETUP.md](./SETUP.md).
+All the required information to install dependencies can be found in [SETUP.md](./SETUP.md).
 
-## Step 1: Les bases de docker
+## Step 1: The bases of Docker
 
-Pour commencer, nous allons apprendre à utiliser le docker de la moulinette pour tester vos projets.
-- Téléchargez et lancez [l'image de la moulinette](https://hub.docker.com/r/epitechcontent/epitest-docker/) pour tester un de vos projet Epitech
-  - vous devez monter votre dossier actuel `$PWD` dans votre container
-  - vous devez lancer un shell pour vous déplacer dans votre container
-  - exécutez `cat /etc/os-release | grep PRETTY_NAME` et vérifiez le nom de la distro
-- À present, trouvez les commandes pour afficher les images, containers, volumes et networks.
+To begin with, we will learn how to use the "moulinette" 's docker to test your EPITECH projects.
+- Download and run the ["moulinette"](https://hub.docker.com/r/epitechcontent/epitest-docker/) 's image to test one of your EPITECH projects
+  - mount your current directory `$PWD` in your container
+  - launch a shell to execute commands in your container
+  - execute `cat /etc/os-release | grep PRETTY_NAME` , you should get `Fedora 30 (Container Image)`
+- Now, find the command to display images, containers, volumes and networks.
 
-> [Il y a un document présent sur l'intra qui pourrait vous aider.](https://intra.epitech.eu/file/public/technical-documentations/doc_docker.pdf)
+> [There is a document in the intranet that can help you](https://intra.epitech.eu/file/public/technical-documentations/doc_docker.pdf) (but be careful when copying the commands, there are many extra spaces due to PDF's formating)
 
-## Step 2: Dockerisation d'une API avec un dockerfile
+## Step 2: Containerization of an API with a Dockerfile
 
-Maintenant, nous allons apprendre à construire notre propre image docker à l'aide d'un `dockerfile`.
+Now, we will learn how to build our custom docker image thanks to a `Dockerfile`.
 
-Dans le dossier [src](./src/node_api), vous trouverez une api en NodeJS.  
-Cette api est des plus basique, elle renvoie un message lorsqu'on fait une requete GET sur `/`.  
-Dans un premier temps, téléchargez l'api [ici](https://downgit.github.io/#/home?url=https://github.com/PoCFrance/Workshops/tree/master/software/4.Docker/src/node_api).
+In the [src](./src/node_api) folder, you'll find a NodeJS API. This API is very simple, it returns a message when you do a GET request on `/`.
+In a first time, download the API [here](https://downgit.github.io/#/home?url=https://github.com/PoCFrance/Workshops/tree/master/software/4.Docker/src/node_api).
 
-Le but est d'isoler cette api dans une image docker. Vous devrez dans votre `dockerfile`:
-- Créer une `image` basée sur l'image `node:12-alpine`.
-- Copier le code de l'api dans l'image.
-- Définissez la variable d'environnement `PORT` qui indique le port utilisé par l'api.
-- Rendre l'api accessible depuis l'extérieur de l'image sur le même port que  `PORT`.
-- Installer les dépendances et lancer l'api.
+The objective is to isolate this API in a docker image. You must:
 
-> Si vous avez besoin de [documentation](https://docs.docker.com/engine/reference/builder/) sur l'utilisation d'un dockerfile.
+- Create a `Dockerfile` in the `node_api` folder.
 
-Une fois l'image créée, il vous faut `run` un container en utilisant cette derniere
+- Build an `image` from `node:12-alpine`.
+- Copy the code from the API in the image.
+- Define the environment variable `PORT` that indicate on which port the API must listen.
+- Make the API accessible from outside the image on the same port as `PORT`.
+- Install dependencies (`npm install`) and launch the API (`npm start`).
 
-> Vous aurez besoin des commandes `docker build` et `docker run`  
-> `curl` peut être utile pour tester votre api sur http://localhost:8080  
+> If you need the [documentation](https://docs.docker.com/engine/reference/builder/) on how to create Dockerfiles.
 
-Vous avez à présent une image docker qui contient une api node et tout le necessaire pour la lancer sans avoir à installer sur votre machine aute chose que docker. Adieu les installations qui détruisent votre dump !
+Once your image is created, you must `run` a container based on it.
 
-## Step 3: Dockerisation de Epytodo avec un docker-compose
+> You will need to use the commands `docker build` and `docker run` (with some extra arguments of course)<br>
+> Curl can be useful to test your API on `http://localhost:8080` , or simply open the URL in your browser
 
-Pour terminer : vous allez dockeriser votre projet `epytodo`, si vous n'en avez pas, il y en un fourni dans le dossier [src](./src/epytodo/)
+You now have a docker image which contains a node API and everything necessary to run it without installing anything other else than Docker on your computer. Say farewell to installations that destroy your dump!
 
-Pour cela, vous allez créer au même niveau que le dossier epytodo:
-- un `Dockerfile` afin de créer l'image de votre api (de la même manière qu'à la step 2 mais l'api est en python et n'a donc pas les mêmes dépendances).
-- un `docker-compose.yml` pour créer et lier la base de données à votre api.
+## Step 3: Containerization of Epytodo with a docker-compose
 
-Votre docker-compose aura 2 services :
-- un qui lance l'image de votre api `flask` (créee avec le dockerfile).
-- un qui lance l'image de la base de données `mariadb` (toutes les infos sont [ici](https://hub.docker.com/_/mariadb)).
+To finish, you will containerize your `Epytodo` project. If you do not have one, we give you a downloadable tar file in the [src](./src/epytodo) directory, **but use yours if it works!**
 
-La partie qui gèrera votre api aura les propriétés suivantes:
-- `container_name`: nom du container une fois crée
-- `build`: precise quelle image build pour l'utiliser après
-- `ports`: ports à lier entre l'host et le container
-- `volumes`: pour acceder à votre code depuis le container
-- `depends_on`: pour préciser l'autre service essentiel à l'api (la db)
-- `command`: la commande à exécuter pour lancer l'api
+ To do that, you will create:
+- A `Dockerfile` to build the image of your API (like in Step 2, but the API is in python, so dependencies installation will be different)
+- A `docker-compose.yml` to create and link the database to your API
 
-La partie qui gèrera base de donnée aura les propriétés suivantes:
-- `container_name`: nom du container une fois créé
-- `image`: nom de l'image à utiliser pour le container
-- `ports`: ports à lier entre l'host et le container
-- `environment`: les variables d'environnement necessaires à l'image (à trouver [ici](https://hub.docker.com/_/mariadb))
-- `volumes`: pour sauvegarder votre database et importer un schema sql à l'initialisation de votre container
+Your folder structure should look like this:
 
-Vous devrez modifier quelques variables dans les fichiers de config de epytodo pour que ça corresponde à ce que vous mettrez dans votre docker-compose.
+```
+├── docker-compose.yml
+└── epytodo
+    └── Dockerfile
+```
 
-> Si vous avez besoin de documentation sur le fonctionnement de [docker-compose](https://docs.docker.com/compose/).  
-> Quels sont les ports par défaut des éléments du container ? (flask / mysql)  
+Your docker-compose will have 2 services:
+- `app`: Launchs your Flask API (created by your Dockerfile)
+- `db`: Launchs your `mariadb` database (more informations [here](https://hub.docker.com/_/mariadb))
 
-Si vous avez correctement fait cette étape, votre epytodo devrait être accessible de la même manière que quand vous le lancez depuis votre pc
+Here is a base to start off your `docker-compose.yml`
 
-## Pour aller plus loin
+<Details><Summary><strong>docker-compose.yml</strong></Summary>
 
-Si vous voulez en apprendre plus sur la mise en place d'architecture et la gestion de containers, vous pouvez vous renseigner sur:
+```yaml
+version: "3"
+
+services:
+  app:
+    container_name: api
+
+  db:
+    container_name: database
+
+volumes:
+  mysql-data:
+
+networks:
+  epytodo-network:
+```
+
+</Details>
+
+We want `app` and `db` to be able to communicate properly, so we are going to put them on the same network, `epytodo-network`. Moreover, if we want to keep our database data even when the container is stopped, we have to save it's data in a volume, `mysql-data`. 
+
+`app` properties:
+
+- `build`: define the image you'll build before running the service
+- `ports`: ports redirection between host and container
+- `environment`: environment variables required to run the image (check the database credentials used to connect to mysql in `config.py`)
+- `networks`: to be able to reach the database
+- `restart`: to specify what to do if the container stops
+
+`db` properties:
+
+- `image`: define which image you'll base the service on
+- `ports`: ports redirection between host and container
+- `environment`: environment variables required to run the image (find them [here](https://hub.docker.com/_/mariadb))
+- `networks`: to allow the app to reach the database
+- `volumes`: to specify which volume you'll use to save the data, and to load `epytodo.sql` on database initialization
+
+> Documentation on how [docker-compose](https://docs.docker.com/compose/) works.<br>
+> What is the default port of your flask/mysql services ?
+
+If you have done this step correctly, your Epytodo should be accessible in the same way as when you launch it manually with python.
+
+## To go further
+
+If you want to learn more on the architecture implementation and container's management, you can check those links:
 - [kubernetes](https://kubernetes.io/fr/docs/concepts/overview/what-is-kubernetes/)
 - [lazydocker](https://github.com/jesseduffield/lazydocker)
 - [docker hub](https://hub.docker.com/)
-- [docker swarm](https://docs.docker.com/get-started/swarm-deploy/).
+- [docker swarm](https://docs.docker.com/get-started/swarm-deploy/)
 
-## Auteurs:
+## Authors
 - [Tom Chauveau](https://github.com/TomChv)
 - [Jérome Collet](https://github.com/JeromeCGithub)
 - [Paul Monnery](https://github.com/PaulMonnery/)
