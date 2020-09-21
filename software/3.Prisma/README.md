@@ -14,6 +14,8 @@ Créez à présent la fonction `getPosts`:
 - Elle ne prend pas de paramètres
 - Elle renvoie la liste de tous les posts de la base de données
 
+Toutes les information necessaires concernant le schéma de base de donnée sont présentes dans le `schema.prisma`.
+
 ## Step 2: Create - Read - Update - Delete
 
 Vous avez vu comment fonctionnait à peu près la récupération de données avec prisma, à présent, vous allez mettre en place des fonctions classique de CRUD (cf: le titre de cette step).
@@ -26,7 +28,7 @@ Créez la fonction `addUser`:
 - Elle renvoie l'utilisateur crée
 
 Créez la fonction `addPost`:
-- Elle prend en paramètres `title` et `content`, le titre et le contenu du post ainsi que `email`, l'email de l'utilisateur qui sera l'auteur du post
+- Elle prend en paramètres `title` et `content`, le titre et le contenu du post ainsi que `authorId`, l'id de l'utilisateur qui sera l'auteur du post
 - Elle ajoute le post dans la base de données
 - Elle renvoie le post crée
 
@@ -51,8 +53,8 @@ Il faut installer de nouveaux modules pour faire cela:
 
 <Details><Summary><strong>Étapes d'installations de Apollo et Nexus</strong></Summary>
 
-- Téléchargez le dossier [src](./src) présent dans notre repo dans votre dossier starter : cliquez [ici](https://github.com/PoCFrance/Workshops/tree/master/software/3.Prisma/src)
-- Remplacez le `package.json` de votre dossier starter par [celui sur notre repo](./package.json)
+- Téléchargez le dossier [src](./src) présent dans notre repo dans votre dossier starter : cliquez [ici](https://downgit.github.io/#/home?url=https://github.com/PoCInnovation/Workshops/tree/master/software/3.Prisma)
+- Extractez le zip dans votre dossier `starter` et remplacant le `package.json`
 - Exécutez `npm install` dans votre dossier starter pour installer les nouvelles dépendances
 
 </Details>

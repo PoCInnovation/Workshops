@@ -22,7 +22,7 @@ To begin with, we will learn how to use the "moulinette" 's docker to test your 
 Now, we will learn how to build our custom docker image thanks to a `Dockerfile`.
 
 In the [src](./src/node_api) folder, you'll find a NodeJS API. This API is very simple, it returns a message when you do a GET request on `/`.
-In a first time, download the API [here](https://downgit.github.io/#/home?url=https://github.com/PoCFrance/Workshops/tree/master/software/4.Docker/src/node_api).
+In a first time, download the API [here](https://downgit.github.io/#/home?url=https://github.com/PoCInnovation/Workshops/tree/master/software/4.Docker/src/node_api).
 
 The objective is to isolate this API in a docker image. You must:
 

@@ -15,7 +15,7 @@ Puis `sudo npm install -g npx`
 
 Pour commencer à utiliser prisma, rien de plus simple, exécutez la commande suivante:
 ```sh
-curl https://codeload.github.com/prisma/prisma-examples/tar.gz/starter | tar -xz --strip=2 prisma-examples-starter/javascript/starter
+curl https://codeload.github.com/prisma/quickstart/tar.gz/master | tar -xz --strip=2 quickstart-master/javascript/starter
 ```
 
 Cela va vous télécharger un petit projet fournit par les developpeurs de Prisma pour appréhender les bases. Vous n'avez plus qu'à entrer dans votre dossier `starter` fraîchement crée et lancez:
@@ -93,6 +93,6 @@ Si vous relancez la commande `npm run dev`, vous deviez avoir cet output:
 getUsers:
  [ { id: 1, email: 'sarah@prisma.io', name: 'Sarah' },
   { id: 2, email: 'maria@prisma.io', name: 'Maria' } ]
-  ```
+```
 
 **Si vous avez fini toutes ces étapes, vous pouvez dès à présent passer aux exercices**
