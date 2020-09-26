@@ -1,6 +1,6 @@
 # Workshop 2 - API REST in Go
 
-In this workshop we will learn to use the main function of the http package in Go and how to create a REST API.  
+In this workshop we will learn how to use the main function of the http package in Go and how to create a REST API.  
 
 ## Step 0: Initialization
 
