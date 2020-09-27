@@ -1,14 +1,14 @@
 # Workshop 2 - API REST in Go
 
-In this workshop we will learn how to use the main function of the http package in Go and how to create a REST API.  
+In this workshop we will learn how to use the main functions of the http package in Go and how to create a REST API.
 
 ## Step 0: Initialization
 
-All the required informations to install the workshops's dependencies are explained in the [SETUP.md](./SETUP.md)
+All the required information to install the workshop's dependencies are given in the [SETUP.md](./SETUP.md)
 
 ## Step 0.5: The codebase
 
-We designed a boilerplate for this project, it will be useful for starting this project out, but also summarize all the needed part of a API  
+We designed a boilerplate for this project, it will be useful to start this project, but also to summarize all the required parts of an API
 We will have :
 
 - `controllers`: this is where you will design your routes endpoint. it will often be a wrapper that calls other API or the database itself
@@ -16,7 +16,7 @@ We will have :
 - `routes`: the core of the router, setting up all the routes handler, with their middlewares and controllers
 - `models`: wraps all the database calls
 
-There is plenty of other important package you may need in a real API, but those are the main one you can be sure you'll need one time or another. Now let's code.
+There are plenty of other important package you may need in a real API, but these are the main one you can be sure you'll need one time or another. Now let's code.
 
 Add a route on the endpoint `/hello`:
 - It uses the `GET` method
@@ -26,7 +26,7 @@ Add a route on the endpoint `/hello`:
 
 ## Step 1: Let's get started
 
-You are now fine with the creation of endpoint.  
+You are now fine with the creation of endpoint.
 Next step is to add messages logs because our server doesn't print anything, yet we would like to know when a route is called to know if everything went well.
 
 Create a middleware that logs the traffic of the API:
@@ -53,13 +53,13 @@ Create a middleware that logs the traffic of the API:
 
 ## Step 2: Authentication and security
 
-On a real API, there are parts of your routes you only want some people to use.  
+On a real API, there are parts of your routes you only want some people to use.
 To protect some routes from unknown users, we'll have to add another middleware.
 
-- Create a middleware that check if the request has a header called `Authorization` and if it contains the `allowed` string
-- Create a route on `/auth/hello` with the same controller as before (logs) and wrapped with this new middleware to check if it works
+- Create a middleware that checks if the request has a header called `Authorization` and if it contains the `allowed` string
+- Create a route `/auth/hello` with both the log and the new auth middleware to check if it works
 
-> In a real life scenario you will check if the field contain a token, and if this token is valid thanks to `JSON Web Token` or any sessions
+> In a real life scenario you will check if the field contains a token, and if this token is valid thanks to `JSON Web Token` or any sessions
 
 > `r.Header` is of type `map[string]string`, you should give a look at how to check if a value exist within a map beforehand
 
@@ -67,7 +67,7 @@ To protect some routes from unknown users, we'll have to add another middleware.
 
   <summary>See how to send a header :satellite:</summary>
 
-  Go into the 3rd panel, there you will be able to create the header you wish to send, toggle the checkbox to send them or not.
+  Go into the 3rd panel, there you will be able to create the headers that you want to send, toggle the checkbox to send them or not.
 
   ![Header](../../.github/go-http/header.png)
 
@@ -75,19 +75,19 @@ To protect some routes from unknown users, we'll have to add another middleware.
 
 ## Step 3: Vars
 
-Creating routes is nice, but we cannot receive variables from them...  To do so, we will use `"github.com/gorilla/mux"` to have modular routes
+Creating routes is nice, but we cannot receive variables from them... To do so, we will use `"github.com/gorilla/mux"` to have modular routes
 
-Create a endpoint `/whoami/{user}`
+Create an endpoint `/whoami/{user}`
 - It uses the `GET` method
 - It responds `I am $user` with `$user` being the text sent in the URL
 
-> See the `{``}` syntax, those bracket indicate which part of the URL will contain vars
+> Look at the `{``}` syntax, these brackets indicate which part of the URL will contain vars
 
-> Check the mux [doc](https://github.com/gorilla/mux) for more informations
+> Check the mux [doc](https://github.com/gorilla/mux) for more information
 
 ## Step 4: Database and data transfers
 
-Finaly, we will use the API to manipulate informations in a database. We don't have the time to setup a real database, so we created fonctions to fake the behavior of a simple database.
+Finally, we will use the API to manipulate data in a database. As we don't have the time to setup a real database, we've created functions to fake the behavior of a simple database.
 
 > You must import the `model` package, it contains 3 functions to manipulate users.
 
@@ -117,7 +117,7 @@ You will need to implement an endpoint for:
 
 ## Bonus
 
-Theoretically, you should have all the basis needed to create you own API, if you still wish to toy around with Go and all its usages, you can take a look at other go features like:
+Theoretically, you should have all the basis needed to create your own API, if you still want to toy around with Go and all its usages, you can take a look at other go features like:
 - `go routines`
 - `interfaces`
 

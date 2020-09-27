@@ -6,17 +6,17 @@ All the installation steps required to do the exercises are detailed in the [SET
 
 ### Todo List
 
-`components` are the core of React. They represent a single element in a web page, like a `text` box, a `button`, a `div` etc. All combined together, they create a fully working web page. Those components are re-usable,  they avoid pasting the same line of code multiple times.  
+`components` are the core of React. They represent a single element in a web page, like a `text` box, a `button`, a `div` etc. All combined together, they create a fully working web page. These components are re-usable, they prevent you from code duplication.
 
 You will learn how to create one right now in the first step!
 
-> In this workshop, you are not allowed to use JavaScript classes, you must use `Functional Components`.  [Here](https://medium.com/@Zwenza/functional-vs-class-components-in-react-231e3fbd7108) is a little explanation of the differences
+> In this workshop, you are not allowed to use JavaScript classes, you must use `Functional Components`. [Here](https://medium.com/@Zwenza/functional-vs-class-components-in-react-231e3fbd7108) is a little explanation of the differences.
 
 ## Step 1: `Task` component
 
 In `src/App.js`, create a component that will display the task description, which is just a string.
 
-This component represents one single task in your todolist. The `description` must be received as parameter from the [props](https://fr.reactjs.org/docs/components-and-props.html).  It will look something like this, you just have to complete what the component returns.
+This component represents one single task in your todolist. The `description` must be received as parameter from the [props](https://fr.reactjs.org/docs/components-and-props.html). It will look something like this, you just have to complete what the component returns.
 
 ```jsx
 function task(props) {
@@ -34,7 +34,7 @@ To display your `Task` component, paste this line in your `App` component:
 
 ### Display the tasks
 
-Create a component that will display a list of `Task` components. To do so, you will have an Array of object:
+Create a component that will display a list of `Task` components. To do so, you will have an Array of objects:
 
 ```js
 function List(props) {
@@ -44,9 +44,9 @@ function List(props) {
 ```
 Some precisions:
 
-- `taskList` is a const variable that can only be changed by the function  `setTaskList` associated with it
-- `taskList` is an array of object with currently only 2 index in the example
-- Each index of the array represents the variables that will be sent to the `Task` component
+- `taskList` is a const variable that can only be changed by the function `setTaskList` associated with it
+- `taskList` is an array of objects with currently only 2 index in the example
+- Each index of the array represents the variable that will be sent to the `Task` component
 - Adding or removing an index to `taskList` is equivalent to add or remove a `Task`
 
 > The [map](https://reactjs.org/docs/lists-and-keys.html) function will be very useful to iterate over our array
@@ -61,7 +61,7 @@ Your `List` component must also:
 - Display a `button` next to your `Task` component to delete it (remove an index to `taskList` variable)
   - Same as before, you will probably have to create a function that updates `taskList` when the button is clicked
 
-> Find out more about the `hooks` in React  
+> Find out more about the `hooks` in React
 > To edit you array, the `splice` and `concat` methods will be very useful
 
 
@@ -200,30 +200,30 @@ async function main() {
 
 </Details>
 
-You now have to use theses functions to create, delete and list your tasks. There is an example of how to call them at the end of the file, but to do so you will have to import them in your `App.js` file:
+You now have to use these functions to create, delete and list your tasks. There is an example of how to call them at the end of the file, but to do so you will have to import them in your `App.js` file:
 
 ```js
-import { addTask, delTask, getAllTask } from './request'; 
+import { addTask, delTask, getAllTask } from './request';
 ```
 
-The easiest thing to do to have your todolist working smoothly is to keep the functions you created to edit the array, and add an extra step that update the online tasks with the API functions. So when you add a new task, you add it in your `taskList` array and then you call `addTask`
+The easiest thing to do to have your todolist working smoothly is to keep the functions you've created to edit the array, and add an extra step that updates the online tasks with the API functions. So when you add a new task, you add it in your `taskList` array and then you call `addTask`
 
-- In the objects you will receive in response, there are multiple fields, the one we are interested in is `data`, it contains the tasks informations
+- In the objects you will receive in response, there are multiple fields, the one we are interested in is `data`, it contains the task information
 
 - It's pretty easy to know when you will call `addTask` and  `delTask`, remember the buttons you previously used
 - `delTask` needs an id to find the task to delete, it means you'll probably have to store more data than just the description in `taskList`
-- `getAllTask` is a bit more complex because you want to call it at the beginning of the component to get all the task already existing in the server loaded in `taskList`. You will need to use the [useEffect](https://reactjs.org/docs/hooks-effect.html) function 
+- `getAllTask` is a bit more complex because you want to call it at the beginning of the component to get all the tasks already existing in the server loaded in `taskList`. You will need to use the [useEffect](https://reactjs.org/docs/hooks-effect.html) function
 
-> Don't forget that theses functions are async, you'll need the await keyword to have the final JSON result
+> Don't forget that these functions are async, you'll need the await keyword to have the final JSON result
 
 
 ## Bonus
 
-If you've finished all steps, then well done, you reached the end of the workshop! :clap:
+If you've finished all the steps, then well done, you've reached the end of the workshop! :clap:
 
 If you want to upgrade your online todolist, you can add more features, like:
 
-- Bad token detection: show an error when the token used is not good and makes requests fail
+- Bad token detection: show an error when the token used is invalid and make the request fail
 
 - discover the joys of [css](https://malcoded.com/posts/react-component-style/), here is an nice tutorial to master [flex-box](https://flexboxfroggy.com/#fr).
 - Use [Bootstrap](https://getbootstrap.com/) to have simple style on your components

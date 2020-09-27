@@ -15,7 +15,7 @@ To begin with, we will learn how to use the "moulinette" 's docker to test your 
   - execute `cat /etc/os-release | grep PRETTY_NAME` , you should get `Fedora 30 (Container Image)`
 - Now, find the command to display images, containers, volumes and networks.
 
-> [There is a document in the intranet that can help you](https://intra.epitech.eu/file/public/technical-documentations/doc_docker.pdf) (but be careful when copying the commands, there are many extra spaces due to PDF's formating)
+> [There is a document in the intranet that can help you](https://intra.epitech.eu/file/public/technical-documentations/doc_docker.pdf) (but be careful when copying the commands, there are many extra spaces due to PDF formatting)
 
 ## Step 2: Containerization of an API with a Dockerfile
 
@@ -41,7 +41,7 @@ Once your image is created, you must `run` a container based on it.
 > You will need to use the commands `docker build` and `docker run` (with some extra arguments of course)<br>
 > Curl can be useful to test your API on `http://localhost:8080` , or simply open the URL in your browser
 
-You now have a docker image which contains a node API and everything necessary to run it without installing anything other else than Docker on your computer. Say farewell to installations that destroy your dump!
+You now have a docker image which contains a node API and everything necessary to run it, with only Docker installed on your computer. Say farewell to installations that destroy your dump!
 
 ## Step 3: Containerization of Epytodo with a docker-compose
 
@@ -61,7 +61,7 @@ Your folder structure should look like this:
 
 Your docker-compose will have 2 services:
 - `app`: Launchs your Flask API (created by your Dockerfile)
-- `db`: Launchs your `mariadb` database (more informations [here](https://hub.docker.com/_/mariadb))
+- `db`: Launchs your `mariadb` database (more information [here](https://hub.docker.com/_/mariadb))
 
 Here is a base to start off your `docker-compose.yml`
 
@@ -86,11 +86,11 @@ networks:
 
 </Details>
 
-We want `app` and `db` to be able to communicate properly, so we are going to put them on the same network, `epytodo-network`. Moreover, if we want to keep our database data even when the container is stopped, we have to save it's data in a volume, `mysql-data`. 
+We want `app` and `db` to be able to communicate properly, so we are going to put them on the same network, `epytodo-network`. Moreover, if we want to keep our database data even when the container is stopped, we have to save it's data in a volume, `mysql-data`.
 
 `app` properties:
 
-- `build`: define the image you'll build before running the service
+- `build`: defines the image you'll build before running the service
 - `ports`: ports redirection between host and container
 - `environment`: environment variables required to run the image (check the database credentials used to connect to mysql in `config.py`)
 - `networks`: to be able to reach the database
@@ -98,7 +98,7 @@ We want `app` and `db` to be able to communicate properly, so we are going to pu
 
 `db` properties:
 
-- `image`: define which image you'll base the service on
+- `image`: defines which image you'll base the service on
 - `ports`: ports redirection between host and container
 - `environment`: environment variables required to run the image (find them [here](https://hub.docker.com/_/mariadb))
 - `networks`: to allow the app to reach the database
@@ -107,7 +107,7 @@ We want `app` and `db` to be able to communicate properly, so we are going to pu
 > Documentation on how [docker-compose](https://docs.docker.com/compose/) works.<br>
 > What is the default port of your flask/mysql services ?
 
-If you have done this step correctly, your Epytodo should be accessible in the same way as when you launch it manually with python.
+If you did this step correctly, your Epytodo should be accessible as if it were manually launched with python.
 
 ## To go further
 

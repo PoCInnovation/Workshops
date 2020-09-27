@@ -33,4 +33,4 @@ npm start
 
 **If it opens a tab in your browser with an atom logo spinning, then you can start the exercises!**
 
-[Go back to the exercices](./README.md)
+[Go back to the exercises](./README.md)

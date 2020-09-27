@@ -58,12 +58,12 @@ For this workshop, you have to run your docker commands with `sudo`, if you find
 docker: Error response from daemon: cgroups: cannot found cgroup mount destination: unknown.
 ```
 
-To fix them, follow this [solution](https://github.com/docker/for-linux/issues/219#issuecomment-375160449) on docker's github. This solution requires to be executed each time you reboot 
+To fix them, follow this [solution](https://github.com/docker/for-linux/issues/219#issuecomment-375160449) on docker's github. This solution requires to be executed each time you reboot
 
 #### Moulinette
 
-Finally, download the EPITECH's "moulinette" 's image with `sudo docker pull epitechcontent/epitest-docker`. 
+Finally, download the EPITECH's "moulinette" 's image with `sudo docker pull epitechcontent/epitest-docker`.
 
-**If you have finished all these steps, you can now move on to the exercises** 
+**If you have finished all these steps, you can now move on to the exercises**
 
-[Go back to the exercices](./README.md)
+[Go back to the exercises](./README.md)
