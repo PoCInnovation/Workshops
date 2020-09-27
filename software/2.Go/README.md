@@ -56,8 +56,8 @@ Create a middleware that logs the traffic of the API:
 On a real API, there are parts of your routes you only want some people to use.
 To protect some routes from unknown users, we'll have to add another middleware.
 
-- Create a middleware that checks if the request has a header called `Authorization` and if it contains the `allowed` string
-- Create a route `/auth/hello` with both the log and the new auth middleware to check if it works
+- Create an middleware that checks if the request has a header called `Authorization` and if it contains the `allowed` string
+- Create a route `/auth/hello` with both middlewares (logs and the one we've just created) to check if it works
 
 > In a real life scenario you will check if the field contains a token, and if this token is valid thanks to `JSON Web Token` or any sessions
 
