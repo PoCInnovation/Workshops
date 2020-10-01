@@ -9,10 +9,11 @@ All the required information to install dependencies can be found in [SETUP.md](
 ## Step 1: The bases of Docker
 
 To begin with, we will learn how to use the "moulinette" 's docker to test your EPITECH projects.
-- Download and run the ["moulinette"](https://hub.docker.com/r/epitechcontent/epitest-docker/) 's image to test one of your EPITECH projects
+- Download and run the ["moulinette"](https://hub.docker.com/r/epitechcontent/epitest-docker/) 's image.
+- Using `docker run` command and some arguments:
   - mount your current directory `$PWD` in your container
   - launch a shell to execute commands in your container
-  - execute `cat /etc/os-release | grep PRETTY_NAME` , you should get `Fedora 30 (Container Image)`
+  - execute `cat /etc/os-release | grep PRETTY_NAME` , you should get `Fedora 32 (Container Image)`
 - Now, find the command to display images, containers, volumes and networks.
 
 > [There is a document in the intranet that can help you](https://intra.epitech.eu/file/public/technical-documentations/doc_docker.pdf) (but be careful when copying the commands, there are many extra spaces due to PDF formatting)
@@ -48,7 +49,7 @@ You now have a docker image which contains a node API and everything necessary t
 To finish, you will containerize your `Epytodo` project. If you do not have one, we give you a downloadable tar file in the [src](./src/epytodo) directory, **but use yours if it works!**
 
  To do that, you will create:
-- A `Dockerfile` to build the image of your API (like in Step 2, but the API is in python, so dependencies installation will be different)
+- A `Dockerfile` to build the image of your API (like in Step 2, but the API is in python, so dependencies installation will be different). You must use the `python:3.7.5-alpine` image
 - A `docker-compose.yml` to create and link the database to your API
 
 Your folder structure should look like this:
@@ -104,8 +105,11 @@ We want `app` and `db` to be able to communicate properly, so we are going to pu
 - `networks`: to allow the app to reach the database
 - `volumes`: to specify which volume you'll use to save the data, and to load `epytodo.sql` on database initialization
 
+:warning: The database inside the `db` container must be named `epytodo`, as written in the sql file.
+
 > Documentation on how [docker-compose](https://docs.docker.com/compose/) works.<br>
-> What is the default port of your flask/mysql services ?
+> What is the default port of your flask/mysql services ?<br>
+> Don't forget to use `alpine` images rather than default images, and avoid `latest` versions in general
 
 If you did this step correctly, your Epytodo should be accessible as if it were manually launched with python.
 
