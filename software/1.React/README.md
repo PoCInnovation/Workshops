@@ -19,7 +19,7 @@ In `src/App.js`, create a component that will display the task description, whic
 This component represents one single task in your todolist. The `description` must be received as parameter from the [props](https://fr.reactjs.org/docs/components-and-props.html). It will look something like this, you just have to complete what the component returns.
 
 ```jsx
-function task(props) {
+function Task(props) {
     return (...)
 }
 ```
