@@ -59,7 +59,7 @@ Il faut installer de nouveaux modules pour faire cela:
 
 </Details>
 
-Si par la suite vous lancez `npm run dev`, vous aurez une erreur, ce qui est normal. Pour que le server se lance correctement, dans `schema.js`, vous devez ajouter un `objectType` qui défini la tabe `Post`.  
+Si par la suite vous lancez `npm run dev`, vous aurez une erreur, ce qui est normal. Pour que le server se lance correctement, dans `schema.js`, vous devez ajouter un `objectType` qui défini la table `Post`.  
 Un exemple de la table `User` est présent dans le fichier, à vous de faire `Post` (en fonction de votre schéma prisma)
 
 > [lien vers la documentation Nexus concernant les modèles](https://nexusjs.org/docs/pluginss/prisma/api#tcrud)
