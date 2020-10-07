@@ -29,7 +29,7 @@ Créez la fonction `addUser`:
 
 Créez la fonction `addPost`:
 - Elle prend en paramètres `title` et `content`, le titre et le contenu du post ainsi que `authorId`, l'id de l'utilisateur qui sera l'auteur du post
-- Elle ajoute le post dans la base de données
+- Elle ajoute le post dans la base de données (ce post doit être connecté à l'`authorId` reçu en paramètre)
 - Elle renvoie le post crée
 
 Créez la fonction `getPostsByUsers`:
@@ -60,22 +60,22 @@ Il faut installer de nouveaux modules pour faire cela:
 </Details>
 
 Si par la suite vous lancez `npm run dev`, vous aurez une erreur, ce qui est normal. Pour que le server se lance correctement, dans `schema.js`, vous devez ajouter un `objectType` qui défini la tabe `Post`.  
-Un exemple de la table `User` est présent dans le fichier, à vous de faire `Post`
+Un exemple de la table `User` est présent dans le fichier, à vous de faire `Post` (en fonction de votre schéma prisma)
 
-> [lien vers la documentation Nexus concernant les modèles](https://www.nexusjs.org/#/plugins/prisma?id=tmodel)
+> [lien vers la documentation Nexus concernant les modèles](https://nexusjs.org/docs/pluginss/prisma/api#tcrud)
 
 ## Step 4: Mise en place du CRUD avec Nexus
 
 Maintenant que vos modèles sont bien définits, vous pouvez mettre en place les manipulations de données vues à la Step 2, mais cette fois ci avec Nexus.
 
-Vous allez contruire dans votre schéma un objet `Query` qui contiendra les méthodes pour lire des données et un objet `Mutation` qui contiendra les méthodes pour éditer des données (ajouter / update / supprimer).
+Vous allez construire dans votre schéma un objet `Query` qui contiendra les méthodes pour lire des données et un objet `Mutation` qui contiendra les méthodes pour éditer des données (ajouter / update / supprimer).
 
 - Pour qu'ils prennent effet, il faudra ajouter ces objets au champ `type` de votre `schema` définit à la fin de [schema.js](./src/schema.js)
 
-> [lien vers la documentation Nexus concernant le CRUD](https://www.nexusjs.org/#/plugins/prisma?id=tcrud)  
+> [lien vers la documentation Nexus concernant le CRUD](https://nexusjs.org/docs/pluginss/prisma/api#tcrud)  
 > Pour les différents champs requis, basez vous sur ce que vous voyez dans votre `schema.prisma`
 
-Pour tester les query/mutations que vous allez mettre en place, vous pouvez vous rendre sur http://localhost:4000/ afin d'avoir un playground pour tester votre server
+Pour tester les query/mutations que vous allez mettre en place, vous pouvez vous rendre sur http://localhost:4000/ afin d'avoir un playground pour tester votre server.
 
 Nous vous fournissons directement la query `getUsers` et la mutation `signupUser` pour que vous puissiez voir à quoi ressemble la syntaxe, et vous permettre de plus facilement créer les suivantes.  
 Plus bas, nous vous donnons également de quoi tester vos query et mutations.

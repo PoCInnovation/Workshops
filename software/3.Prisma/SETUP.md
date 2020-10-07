@@ -44,7 +44,6 @@ Nous allons voir ligne par ligne ce qu'il y a dans le fichier `script.js`:
 const { PrismaClient } = require("@prisma/client");
 ```
 Node va chercher la dépendance `@prisma/client` dans les `node_modules`
-> Attention: il s'agit d'une dépendance dite "intelligente", des informations seront stockées à l'interieur.
 
 <br>
 
@@ -70,7 +69,7 @@ main()
     throw e
   });
   .finally(async () => {
-    await prisma.disconnect()
+    await prisma.$disconnect()
   });
 
 ```
