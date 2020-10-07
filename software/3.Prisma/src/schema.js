@@ -24,7 +24,7 @@ const Query = objectType({
     t.list.field('getUsers', {
       type: 'User',
       resolve: (parent, args, ctx) => {
-        return ctx.prisma.post.findMany()
+        return ctx.prisma.user.findMany()
       },
     })
 
