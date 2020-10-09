@@ -1,4 +1,4 @@
-# Workshops 5 - Github Action
+# Workshops 5 - Github Actions
 
 This workshop is an introduction about devOps and continuous Integration (CI).
 

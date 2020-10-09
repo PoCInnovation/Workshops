@@ -1,15 +1,17 @@
 # Software Workshops
 
-### Pour rejoindre notre Discord
+### To join our Discord
 http://bit.ly/DiscordPoCEvents
 
 
-## Liste des différents workshops disponibles:
+## Our available workshops:
 
-### Workshop 1: [Todo List en React avec Firebase](./1.React)
+### Workshop 1 - [Todo List in React](./1.React)
 
-### Workshop 2: [API REST en Go](./2.Go)
+### Workshop 2 - [API REST in Go](./2.Go)
 
-### Workshop 3: [API GraphQL avec Prisma2](./3.Prisma)
+### Workshop 3 - [GraphQL API with Prisma2](./3.Prisma)
 
-### Workshop 4: [Docker pour les débutants](./4.Docker)
+### Workshop 4 - [Docker for beginners](./4.Docker)
+
+### Workshop 5 - [Github Actions](./5.Actions)
