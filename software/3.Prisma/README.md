@@ -61,7 +61,7 @@ You will have to install new packages to do this:
 If you subsequently run `npm run dev`, you will get an error, which is normal. For the server to run properly, you have to add an `objectType` that defines the `Post` table in `schema.js` .  
 An example of the `User` table is present in the file, it's up to you to do `Post`.
 
-> [Nexus model documentation](https://nexusjs.org/docs/pluginss/prisma/api#tcrud)
+> [Nexus model documentation](https://nexusjs.org/docs/pluginss/prisma/api#tmodel)
 
 ## Step 4: Setting up the CRUD with Nexus
 
