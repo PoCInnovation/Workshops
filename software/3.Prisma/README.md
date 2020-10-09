@@ -1,98 +1,96 @@
-# Workshop 3 - API GraphQL avec Prisma2
+# Workshop 3 - GraphQL API with Prisma2
 
-Dans ce workshop, nous allons voir comment créer des API GraphQL à l'aide de [Prisma2](https://www.prisma.io/), Nexus-Prisma et Apollo
+In this workshop, we will learn how to create GraphQL APIs using [Prisma2](https://www.prisma.io/), Nexus-Prisma and Apollo.
 
-## Step 0: initialisation
+## Step 0: initialization
 
-Toutes les informations requises pour installer les dépendances du workshop sont disponibles dans [SETUP.md](./SETUP.md)
+All the required informations to install the workshop dependencies are available in [SETUP.md](./SETUP.md).
 
-## Step 1: Récupérer les posts
+## Step 1: Retrieve posts
 
-Vous avez vu dans le setup à quoi ressemble une query qui récupére tous les utilisateurs de la base de données. À présent, faites la même chose mais pour récupérer tous les posts
+You saw in the setup a query that retrieves all users from the database. Now, do the same thing but to get all the posts.
 
-Créez à présent la fonction `getPosts`:
-- Elle ne prend pas de paramètres
-- Elle renvoie la liste de tous les posts de la base de données
+Create the `getPosts` function:
+- It doesn't take any parameters
+- It returns a list of all the posts in the database.
 
-Toutes les information necessaires concernant le schéma de base de donnée sont présentes dans le `schema.prisma`.
+All the necessary informations about the database schema are in the `schema.prisma`.
 
 ## Step 2: Create - Read - Update - Delete
 
-Vous avez vu comment fonctionnait à peu près la récupération de données avec prisma, à présent, vous allez mettre en place des fonctions classique de CRUD (cf: le titre de cette step).
+You've seen how data fetching with Prisma works, you'll now implement classic CRUD functions (see the title of this step).
 
-> Si besoin, reférez vous à cette [page](https://www.prisma.io/docs/getting-started/quickstart-typescript#write-data-into-the-database) pour voir les bases des opérations possibles avec prisma. Vous devriez pouvoir trouver comment faire toutes les fonctions de cette step. Vous aurez nottament besoin du mot clé `where`
+> If needed, refer to this [page](https://www.prisma.io/docs/getting-started/quickstart-typescript#write-data-into-the-database) to see basics operations with Prisma. You will need the keyword `where`.
 
-Créez la fonction `addUser`:
-- Elle prend en paramètres `name` et `email`, le nom et l'email de l'utilisateur qui sera crée
-- Elle ajoute l'utilisateur dans la base de données
-- Elle renvoie l'utilisateur crée
+Create the `addUser` function:
+- It takes in parameters `name` and `email`, the name and email of the user that will be created
+- It adds the user to the database
+- It returns the created user
 
-Créez la fonction `addPost`:
-- Elle prend en paramètres `title` et `content`, le titre et le contenu du post ainsi que `authorId`, l'id de l'utilisateur qui sera l'auteur du post
-- Elle ajoute le post dans la base de données (ce post doit être connecté à l'`authorId` reçu en paramètre)
-- Elle renvoie le post crée
+Create the `addPost` function:
+- It takes in parameters `title` and `content`, the title and content of the post, as well as `authorId`, the id of the user who will be the author of the post.
+- It adds the post to the database (this post must be connected to the `authorId` received in parameter)
+- It returns the created post
 
-Créez la fonction `getPostsByUsers`:
-- Elle prend en paramètres `authorId`, l'id de l'utilisateur dont on veut  récuperer les posts
-- Elle renvoie la liste des posts de l'utilisateur demandé
+Create the `getPostsByUsers` function:
+- It takes in parameter `authorId`, the id of the user whose posts we want to retrieve
+- It returns the list of posts of the requested user
 
-Créez la fonction `removeUser`:
-- Elle prend en paramètres `id`, l'id de l'utilisateur qui sera supprimé
-- Elle renvoie l'utilisateur qui a été supprimé
+Create the `removeUser` function:
+- It takes in parameter `id`, the id of the user that will be deleted
+- It returns the user who has been deleted
 
-Créez la fonction `removePost`:
-- Elle prend en paramètres `id`, l'id du post qui sera supprimé
-- Elle renvoie le post qui a été supprimé
+Create the `removePost` function:
+- It takes in  parameter `id`, the id of the post that will be deleted
+- It returns the post that has been deleted
 
-## Step 3: Apollo Server et Nexus
+## Step 3: Apollo Server and Nexus
 
-Prisma nous permet de récuperer des données dans la base de données, mais il nous faut par la suite permettre à un utilisateur de récuperer ces données. Nous utiliserons pour cela [GraphQL Nexus](https://nexus.js.org/) et [Apollo server](https://www.apollographql.com/docs/apollo-server/)
+Prisma allows us to retrieve data from the database, but we then have to allow the users to retrieve this data. We will use [GraphQL Nexus](https://nexus.js.org/) and [Apollo server](https://www.apollographql.com/docs/apollo-server/) for this purpose.
 
+You will have to install new packages to do this:
 
-Il faut installer de nouveaux modules pour faire cela:
+<Details><Summary><strong>Steps to install Apollo and Nexus</strong></Summary>
 
-<Details><Summary><strong>Étapes d'installations de Apollo et Nexus</strong></Summary>
-
-- Téléchargez le dossier [src](./src) présent dans notre repo dans votre dossier starter : cliquez [ici](https://downgit.github.io/#/home?url=https://github.com/PoCInnovation/Workshops/tree/master/software/3.Prisma)
-- Extractez le zip dans votre dossier `starter` et remplacant le `package.json`
-- Exécutez `npm install` dans votre dossier starter pour installer les nouvelles dépendances
+- Download the [src](./src) folder from our repo: click [here](https://downgit.github.io/#/home?url=https://github.com/PoCInnovation/Workshops/tree/master/software/3.Prisma)
+- Extract the zip into your `starter` folder and replace the `package.json`.
+- Run `npm install` in your `starter` folder to install the new dependencies.
 
 </Details>
 
-Si par la suite vous lancez `npm run dev`, vous aurez une erreur, ce qui est normal. Pour que le server se lance correctement, dans `schema.js`, vous devez ajouter un `objectType` qui défini la tabe `Post`.  
-Un exemple de la table `User` est présent dans le fichier, à vous de faire `Post` (en fonction de votre schéma prisma)
+If you subsequently run `npm run dev`, you will get an error, which is normal. For the server to run properly, you have to add an `objectType` that defines the `Post` table in `schema.js` .  
+An example of the `User` table is present in the file, it's up to you to do `Post`.
 
-> [lien vers la documentation Nexus concernant les modèles](https://nexusjs.org/docs/pluginss/prisma/api#tcrud)
+> [Nexus model documentation](https://nexusjs.org/docs/pluginss/prisma/api#tcrud)
 
-## Step 4: Mise en place du CRUD avec Nexus
+## Step 4: Setting up the CRUD with Nexus
 
-Maintenant que vos modèles sont bien définits, vous pouvez mettre en place les manipulations de données vues à la Step 2, mais cette fois ci avec Nexus.
+Now that your models are well defined, you can implement the data manipulations seen in Step 2, but this time with Nexus.
 
-Vous allez construire dans votre schéma un objet `Query` qui contiendra les méthodes pour lire des données et un objet `Mutation` qui contiendra les méthodes pour éditer des données (ajouter / update / supprimer).
+You will build in your schema a `Query` object that will contain the methods to read data and a `Mutation` object that will contain the methods to edit data (add / update / delete).
 
-- Pour qu'ils prennent effet, il faudra ajouter ces objets au champ `type` de votre `schema` définit à la fin de [schema.js](./src/schema.js)
+- For them to take effect, you will have to add these objects to the `type` field of your `schema` defined at the end of [schema.js](./src/schema.js).
 
-> [lien vers la documentation Nexus concernant le CRUD](https://nexusjs.org/docs/pluginss/prisma/api#tcrud)  
-> Pour les différents champs requis, basez vous sur ce que vous voyez dans votre `schema.prisma`
+> [Nexus documentation about CRUD](https://nexusjs.org/docs/pluginss/prisma/api#tcrud)  
+> For the different required fields, base yourself on what you see in your `schema.prisma`.
 
-Pour tester les query/mutations que vous allez mettre en place, vous pouvez vous rendre sur http://localhost:4000/ afin d'avoir un playground pour tester votre server.
+To test the queries/mutations you are going to set up, you can go to http://localhost:4000/ to use a playground that lets you to test your server.
 
-Nous vous fournissons directement la query `getUsers` et la mutation `signupUser` pour que vous puissiez voir à quoi ressemble la syntaxe, et vous permettre de plus facilement créer les suivantes.  
-Plus bas, nous vous donnons également de quoi tester vos query et mutations.
+We already gave the `getUsers` query and the `signupUser` mutation to let you see what the syntax looks like, and make it easier to create the next ones.  
+Below, we also give you examples to test your queries and mutations.
 
-Créez les query suivantes:
-- `getPosts`: renvoie la liste de tous les posts
-- `getPostsByUser`: renvoie la liste des posts d'un utilisateur grâce à son `authorId`
-- `getPublishedPosts`: renvoie la liste de tous les posts qui sont publiés
+Create the following queries:
+- `getPosts`: returns the list of all posts in the database
+- `getPostsByUser`: returns the list of all the posts of a user thanks to its `authorId`.
+- `getPublishedPosts`: returns a list of all posts that are published.
 
-Créez les mutations suivantes:
-- `writeDraft`: crée un post avec un `title`, un `content` et l'`authorId` de son auteur. Par défaut il n'est pas publié.
-- `publishDraft`: publie un post dont l'`id` est précisé
-- `deletePost`: supprime un post dont l'`id` est précisé
+Create the following mutations:
+- `writeDraft`: creates a post with a `title`, a `content` and the `authorId` of its author. By default it is not published.
+- `publishDraft`: publishes a post whose `id` is specified.
+- `deletePost`: deletes a post whose `id` is specified.
 
-Voici des exemples de query et mutations que vous pouvez exécutez dans le playground pour tester vos fonctions
-<Details><Summary><strong>Voir les Query et Mutations</strong></Summary>
-
+Here are some examples of queries and mutations you can execute in the playground to test your functions
+<Details><Summary><strong>See Query and Mutations</strong></Summary>
 ## Query
 
 ### getUsers
@@ -140,7 +138,7 @@ query {
   }
 }
 ```
-> Note: vous devez remplacer **__AUTHOR_ID__** par l'id actuel d'un auteur.
+> Note: you must replace **__AUTHOR_ID__** with the current id of an author.
 
 ### getPublishedPosts
 
@@ -159,7 +157,7 @@ query {
   }
 }
 ```
-> vous aurez un array vide si vous n'avez pas encore fait la mutation pour publier un post
+> NOTE: you will get an empty array if you have not called the mutation to publish a post yet.
 
 ## Mutations
 
@@ -215,7 +213,7 @@ mutation {
 
 </Details>
 
-## Auteurs
+## Authors
 - [Paul Monnery](https://github.com/PaulMonnery/)
 - [Naoufesse Berrada](https://github.com/nowlow/)
 - [Cyril de Lajudie](https://github.com/Axoloot/)

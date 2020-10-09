@@ -2,68 +2,70 @@
 
 ## Installation
 
-Vous aurez besoin de:
-- [node (version 10 minimum)](https://github.com/nodejs/node) : interpréteur de javascript
-- [npm](https://www.npmjs.com/) : gestionnaire de dépendance pour node
-- [npx](https://www.npmjs.com/package/npx) : executeur de commandes node
+You will need:
+- [node (version 10 minimum)](https://github.com/nodejs/node): javascript interpreter
+- [npm](https://www.npmjs.com/): node package manager
+- [npx](https://www.npmjs.com/package/npx) : node_modules command executor
 
-Pour cela:
-- sous fedora: `sudo dnf install nodejs`
-- sous ubuntu: `sudo apt install nodejs npm`
+To install node:
+- under fedora: `sudo dnf install nodejs`.
+- under ubuntu: `sudo apt install nodejs npm`.
 
-Puis `sudo npm install -g npx`
+Then `sudo npm install -g npx`.
 
-Pour commencer à utiliser prisma, rien de plus simple, exécutez la commande suivante:
-```sh
+To start using prisma, just run the following command:
+```bash
 curl https://codeload.github.com/prisma/quickstart/tar.gz/master | tar -xz --strip=2 quickstart-master/javascript/starter
 ```
 
-Cela va vous télécharger un petit projet fournit par les developpeurs de Prisma pour appréhender les bases. Vous n'avez plus qu'à entrer dans votre dossier `starter` fraîchement crée et lancez:
+This will download a small project provided by Prisma developers to help you understand the basics. Just enter your newly created `starter` folder and run:
 
 ```sh
 npm install
 ```
 
-Ils y a 5 fichiers importants dans le dossier `stater`:
+There are 5 important files in the `stater` folder:
 
-- `package.json`: liste les dépendances npm  
-- `prisma/schema.prisma`: le fichier des schémas Prisma qui définit les modèles de la base de données  
-- `prisma/.env`: Définit la connection à la base de données avec son URL comme variable d'environnement  
-- `prisma/dev.db`: Fichier de base de données SQLite  
-- `script.js`: Fichier dans lequel vous allez coder vos fonctions  
+- `package.json`: lists the npm dependencies.
+- `prisma/schema.prisma`: the Prisma schema file that defines the database models.
+- `prisma/.env`: Sets the database connection with its URL as environment variable.
+- `prisma/dev.db`: SQLite database file.
+- `script.js`: File in which you will code your functions.
 
-vous pouvez aussi afficher la base de données via une interface web:
+You can also display the database via a web interface:
 ```sh
 npx prisma studio --experimental
 ```
 
-## Mise en prisma dans le code javascript
+## Prisma in javascript code
 
-Nous allons voir ligne par ligne ce qu'il y a dans le fichier `script.js`:
-```javascript
+We will see line by line what is in the `script.js` file:
+```js
 const { PrismaClient } = require("@prisma/client");
 ```
-Node va chercher la dépendance `@prisma/client` dans les `node_modules`
+
+Node will look for the `@prisma/client` dependency in the `node_modules` folder (created with `npm install`).
 
 <br>
 
-```javascript
+```js
 const prisma = new PrismaClient();
 ```
-Cette ligne crée une nouvelle instance d'un client prisma.
+This line creates a new instance of a prisma client.
 
 <br>
 
-```javascript
+```js
 async function main() {
   // ... you will write your Prisma Client queries here
 }
 ```
-Nous créons ici une fonction asyncrone. Elle nous permettera plus tard de gérer nos appels asyncrone plus facilement à l'interieur.  
+Here we create an asyncronous function. We will code inside later.
+> if you need more informations on how async functions work, [read this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
 
 <br>
 
-```javascript
+```js
 main()
   .catch(e => {
     throw e
@@ -71,27 +73,29 @@ main()
   .finally(async () => {
     await prisma.$disconnect()
   });
-
 ```
-Pour finir, ce bout de code appelle notre fonction `main`, affiche un message si jamais une erreur s'est produite et déconnecte le client prisma une fois toutes les actions terminées.
 
-Actuellement, si vous faites `npm run dev`, rien ne devrait se produire. Nous allons préparer les bases des exercices suivants, pour cela, ajoutez dans votre fonction main la ligne suivante:
+Finally, this part of the code calls our `main` function, displays a message if an error has occurred and disconnects the prisma client once all actions have been completed.
+
+Currently, if you do `npm run dev`, nothing should happen. We will prepare the basics for the next exercises, so add the following line to your main function:
 ```js
 console.log("getUsers:\n", await getUsers())
 ```
 
-et ajoutez au dessus de votre fonction `main`:
+and add above your `main` function:
 ```js
 function getUsers() {
   return prisma.user.findMany();
 }
 ```
 
-Si vous relancez la commande `npm run dev`, vous deviez avoir cet output:
-```json
+If you run `npm run dev` again, you should have this output:
+```js
 getUsers:
  [ { id: 1, email: 'sarah@prisma.io', name: 'Sarah' },
   { id: 2, email: 'maria@prisma.io', name: 'Maria' } ]
 ```
 
-**Si vous avez fini toutes ces étapes, vous pouvez dès à présent passer aux exercices**
+**If you have finished all these steps, you can now move on to the exercises**.
+
+[Go back to the exercises](./README.md)
