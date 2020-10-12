@@ -4,7 +4,7 @@ This workshop is an introduction about devOps and continuous Integration (CI).
 
 You'll learn the base of the CI thanks to github actions, but also some good practices and coding method.
 
-### 0) Put the bases
+## Step 0: Put the bases
 
 We will create a CI for a simple Epitech project: do-op. We have unit-tests and functional tests. 
 
@@ -28,7 +28,7 @@ Now, run tests in the container
 
 Your CI will do the same things, but automatically in a [github runner](https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/introduction-to-github-actions)
 
-### 1) Your first action
+## Step 1: Your first action
 
 Now it's time ! To begin with, you'll do a simple action by following these steps
 
@@ -50,7 +50,7 @@ Congratulation, you've written your first action !
 
 > Check the help about workflow syntax [here](https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions)
 
-### 2) Run test
+## Step 2: Run test
 
 Now, we want to test our do-op, the objective is to run tests after push
 
@@ -67,7 +67,7 @@ Don't forget to define a name for each step, it's important to clarify your work
 
 > A [tip](https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions#jobsjob_idcontainer) that can help you to run a job in a container
 
-### 3) Artifact
+## Step 3: Artifact
 
 Your tests run it's cool, but it's better to save information from your workflow.
 
@@ -81,7 +81,7 @@ Your artifacts must be called `unit-test_outputs` and `coverage_outputs`.
 
 > Find help about condition [here](https://docs.github.com/en/free-pro-team@latest/actions/reference/context-and-expression-syntax-for-github-actions)
 
-### 4) Functional test
+## Step 4: Functional test
 
 The last step is about functional test (a good CI never lack of tests).
 
@@ -99,7 +99,7 @@ You must also protect your branch `master` from merge if the `pull request` isn'
  
 Congratulation, you have setup a clean workflow to do your Epitech project, us this to keep your project away from bad surprise.
  
-###  Bonus
+## To go further
 
 You've learned how make a continuous integration (CI). But remember, there is also continuous development !
 
@@ -112,7 +112,7 @@ You can also check these links
   - [Documentation](https://docs.github.com/en/free-pro-team@latest/actions)
   - [Write your own action](https://levelup.gitconnected.com/how-to-write-github-actions-30b54ddf6f52)
   
-### Authors
+## Authors
 
  - [Tom Chauveau](https://github.com/TomChv/)
  - [Paul Monnery](https://github.com/PaulMonnery/)
