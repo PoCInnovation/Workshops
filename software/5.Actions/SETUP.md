@@ -1,10 +1,10 @@
 # Setup
 
-### Requirement
+## Requirement
 
 This workshop requires you to use your github account. If you doesn't have one, you can create on [here](https://github.com/join).
 
-### Installation
+## Installation
 
 First, create a new github repository called `workshop-ga-${your pseudo}` and clone it on your computer thanks to the command `git clone ${your repository link}`.
 
