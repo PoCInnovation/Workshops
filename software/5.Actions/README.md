@@ -108,6 +108,11 @@ Try to create a CD of this project, for example you can:
   - Create an image of the program with a Dockerfile
   - Create a new workflow that wait test to be successful and then build and push the image on docker hub or github package
 
+If you like web development, you can:
+  - Create a little API
+  - Create a [Postman](https://www.postman.com/) collection to test your API
+  - Create a workflow that test your API thanks to [Newman Action](https://github.com/marketplace/actions/newman-action)
+
 You can also check these links
   - [Marketplace](https://github.com/marketplace?type=actions)
   - [Documentation](https://docs.github.com/en/free-pro-team@latest/actions)
