@@ -14,7 +14,7 @@ In order to setup your workflow, in your repository:
   - complete the [setup](https://github.com/PoCInnovation/Workshops/blob/master/software/5.Actions/SETUP.md)
   - create a branch `dev`
   - checkout in branch `dev`
-  - create a directory `.github/workflow`
+  - create a directory `.github/workflows`
 
 > Commonly, `.github` folder also contains an `assets` directory that stores your png used in README ect, another folder: `ISSUE_TEMPLATE` can be useful to setup template of bug_report or feature... 
 
