@@ -44,7 +44,7 @@ Write a github Action with the following properties:
     
 ##### First step
 
-Add a step called `Say hello world` which will execute the bash command "echo Welcome to the github Action workshop !".
+Add a step called `Say hello world` which will execute the bash command "echo Welcome to the Github Actions workshop !".
 Push your work and check on `https://github.com/<your-github-username>/<your-repository>/actions`.
 
 Congratulation, you've written your first action !
