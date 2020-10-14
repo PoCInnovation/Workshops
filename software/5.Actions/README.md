@@ -96,7 +96,7 @@ You should do **3** steps:
 You can use steps from the previous exercise to help you.
  
 In order to win time, your CI must now be triggered on `pull_request` on branches `dev` or `master`.
-You must also protect your branch `master` from merge if the `pull request` isn't approved by peer (really useful when you work in group)
+You must also protect your branch `master` from merge if the `pull request` isn't approved by peer (it's really useful when you work in group)
  
 Congratulation, you have setup a clean workflow to do your Epitech project, us this to keep your project away from bad surprise.
  
