@@ -181,7 +181,7 @@ Matériel requis:
 * Jumpers
 * Capteur distance ultrasons
 
-**Consigne**: En reprenant le circuit de l'exercice 6, afficher la distance donnée par le capteur, et envoyez là en cm via une connexion série à votre ordinateur.
+**Consigne**: En reprenant le circuit de l'exercice 9, afficher la distance donnée par le capteur, et envoyez là en cm via une connexion série à votre ordinateur.
 
 ## Exercice 11
 
