@@ -1,6 +1,6 @@
 # Workshops &nbsp;[![PoC Logo](./.github/favicon.png)](https://poc-innovation.com)
 
-Les sujets des workshops de l'association PoC
+All workshops subjects and materials for student developers. Made with :heart:.
 
 - 🧠 [AI](./ai/)
 - 👓 [AR/VR](./ar_vr/)
