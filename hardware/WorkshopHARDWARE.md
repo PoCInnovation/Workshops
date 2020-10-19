@@ -41,7 +41,7 @@ Matériel requis:
 
 **Consigne**: Faites un circuit reliant une LED à un Arduino et allumez cette LED. Appelez un encadrant avant d'alimenter votre Arduino.
 
-**Contraintes**: Vous ne devrez utiliser aucun code pour cet exercice. Vous n'avez pas le droit à au pin 3,3V de votre board.
+**Contraintes**: Vous ne devrez utiliser AUCUN CODE pour cet exercice. Vous n'avez pas le droit à au pin 3,3V de votre board.
 
 **Attention**: Est-ce que le voltage accepté par la LED est compatible avec le voltage produit par la board ?
 
@@ -54,10 +54,9 @@ Matériel requis:
 * Breadboard
 * Jumpers
 * LED
-* Bouton poussoir
 * ???
 
-**Consigne**: faite en sorte que le bouton change d'état (allumer/éteindre) la LED a chaque pression.
+**Consigne**: Faite en sorte que la LED clignote toutes les secondes.
 
 **Contraintes**: Aucune
 
@@ -70,9 +69,10 @@ Matériel requis:
 * Breadboard
 * Jumpers
 * LED
+* Potentiomètre
 * ???
 
-**Consigne**: Faite en sorte que la LED clignote toutes les secondes.
+**Consigne**: En reprenant le circuit de l'exercice 2, faite en sorte que le délai de clignotement de la LED soit dépendant du potentiomètre.
 
 **Contraintes**: Aucune
 
@@ -88,29 +88,13 @@ Matériel requis:
 * Potentiomètre
 * ???
 
-**Consigne**: En reprenant le circuit de l'exercice 3, faite en sorte que le délai de clignotement de la LED soit dépendant du potentiomètre.
-
-**Contraintes**: Aucune
-
-## Exercice 5
-
-Matériel requis:
-
-* Arduino / ESP32
-* Cable USB
-* Breadboard
-* Jumpers
-* LED
-* Potentiomètre
-* ???
-
-**Consigne**: En reprenant le circuit de l'exercice 4, faite en sorte que la LED ne clignote plus, et que l'intensité de son éclairage dépende de la valeur du potentiomètre.
+**Consigne**: En reprenant le circuit de l'exercice 3, faite en sorte que la LED ne clignote plus, et que l'intensité de son éclairage dépende de la valeur du potentiomètre.
 
 **Indice**: Renseignez-vous sur les pins "PWM"
 
 **Contraintes**: Aucune
 
-## Exercice 6
+## Exercice 5
 
 Matériel requis:
 
@@ -125,7 +109,7 @@ Matériel requis:
 
 **Contraintes**: Aucune
 
-## Exercice 7
+## Exercice 6
 
 Matériel requis:
 
@@ -140,7 +124,7 @@ Matériel requis:
 
 **Contraintes**: Aucune
 
-## Exercice 8
+## Exercice 7
 
 Matériel requis:
 
@@ -155,6 +139,22 @@ Matériel requis:
 **Consigne**: À l’aide d’un potentiomètre, contrôler le nombre LED allumé sur une rangée. Tourner le bouton du potentiomètre allumera ou éteindra plus de LED.
 
 **Contraintes**: Aucune
+
+## Exercice 8
+
+Matériel requis:
+
+* Arduino / ESP32
+* Cable USB
+* Breadboard
+* Jumpers
+* LED
+* Bouton poussoir
+* ???
+
+**Consigne**: faite en sorte que le bouton change d'état (allumer/éteindre) la LED a chaque pression.
+
+**Tips**: INPUT_PULLUP 
 
 ## Exercice 9
 
@@ -193,7 +193,7 @@ Matériel requis:
 * Jumpers
 * Capteur distance ultrasons
 
-**Consigne**: En reprenant le circuit de l'exercice 7, et le code Arduino de l'exercice 8, réaliser un programme dans le langage de votre choix qui va récupérer la sortie série de votre Arduino / ESP32 et l'afficher à l'écran dans un format de votre choix.
+**Consigne**: En reprenant le circuit de l'exercice 10, et le code Arduino de l'exercice 11, réaliser un programme dans le langage de votre choix qui va récupérer la sortie série de votre Arduino / ESP32 et l'afficher à l'écran dans un format de votre choix.
 
 **Contraintes**: aucune librairie spécifiquement créer pour Arduino / ESP32 n'est autorisé.
 
