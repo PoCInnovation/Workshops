@@ -50,6 +50,12 @@ Basics of Reinforcement Learning. You will:
 - use the value function
 - solve the *Antic* maze
 
+## 7 - Q-Learning 🚙
+Continuation of Reinforcement Learning. You will:
+- use Gym environment
+- use Q learning
+- solve Mountain-Car-V0
+
 
 Feel free to ask us any questions.
 
@@ -60,3 +66,4 @@ Feel free to ask us any questions.
 - [Workshop 3:](https://drive.google.com/file/d/1kj_TQVw2IN0jg9ud0gDGAZrn_7bE9FUo/view?usp=sharing)
 - [Workshop 4:](https://slides.com/thytu/tensorflow)
 - [Workshop 5:](https://slides.com/thytu/convolution)
+- [Workshop 6:](https://slides.com/thytu/convolution-4345ab)
