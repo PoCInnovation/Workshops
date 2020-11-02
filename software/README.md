@@ -15,3 +15,5 @@ http://bit.ly/DiscordPoCEvents
 ### Workshop 4 - [Docker for beginners](./4.Docker)
 
 ### Workshop 5 - [Github Actions](./5.Actions)
+
+### Workshop 6 - [API REST in Nestjs](./6.Nest)
