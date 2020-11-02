@@ -10,23 +10,26 @@ If you don't already know typescript, you can read [this file](/src/step-0/learn
 
 ### Step 1.1: first route
 
-- In the app.controller.ts file, create a @Get() route `/article` (the route `hello` should help you)
+- In the app.controller.ts file, create a @Get() route `/article` (the route `hello` should help you to do so)
 
-- Launch server
+Now, launch the server:
 ```
-$ npm run start
+$ npm run start:dev
 ```
 
-- Go to [created route](http://localhost:3000/article) via your browser (or Postman)
+Go to http://localhost:3000/article via your browser (or Postman) to see if you can get this route.
+
+As said, the command `start:dev` makes use of `file watchers`. Every time you save a file, nestjs will automatically rebuild the server with the updated file(s).
+That way you won't need to restart it manually after each modification.
 
 <br>
 
 ### Step 1.2: first provider
 
-First, read the first 2 sections of [modules](https://docs.nestjs.com/modules) and [providers]((https://docs.nestjs.com/providers))
+Read the first 2 sections of [modules](https://docs.nestjs.com/modules) and [providers]((https://docs.nestjs.com/providers)). It will teach you some basic concepts or architecture nestjs uses.
 
-As you can see, AppService is in AppModule Providers (in `app.module.ts`).
-And it is [inject](https://docs.nestjs.com/providers#dependency-injection) in the controller.
+As you can see, AppService is an AppModule Provider (in `app.module.ts`).
+And it is [injected](https://docs.nestjs.com/providers#dependency-injection) in the controller (in the constructor).
 
 In the AppService, create a method `getArticle`. For now just return a test value.
 
@@ -99,6 +102,8 @@ With [controller routing](https://docs.nestjs.com/controllers#routing) you can s
 
 You can find [here](/src/step-3/database.service.ts) a Provider DatabaseService. This provided is simulating a database by using an array as a storage. You will use it for this last step as setting up and using a real database is a bit out of scope.
 
+> Make sure the import statement of `article.dto` is correct in the `database.service.ts`. it may not be according to the file locations
+
 As for the AppService, you will have to add the DatabaseService in the Module Provider list and `inject` it (via the constructor) in AppService
 
 <br>
@@ -108,9 +113,9 @@ As for the AppService, you will have to add the DatabaseService in the Module Pr
 The new service exposes 4 functions: createArticle, updateArticle, findArticle, deleteArticle
 
 As these functions are [asynchronous](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function), you will have to use `Promise`s (i.e. `await` or `.then()`). <br>
-Feel free to ask questions or read about Promises before continuing if you don't feel at ease with it.
+Feel free to ask questions or read about Promises if you don't feel at ease with them.
 
-Now, update add functions in AppService that uses the database and call them in the controller.
+Now, update the functions in AppService to use the database and call them in the controller.
 
 If everything went well, you should be able to create, update and get articles !
 
@@ -118,7 +123,7 @@ If everything went well, you should be able to create, update and get articles !
 
 <br>
 
-### Step 3.3: Growing up
+### Step 3.3: Delete
 
 What about deletion !
 
@@ -128,7 +133,7 @@ Create a route to `@Delete()` an article on your own !
 
 ### Step 3.4: Bonus
 
-Nestjs [HttpException](https://docs.nestjs.com/exception-filters#built-in-http-exceptions)s are a way to elegantly send error response.<br>
+Nestjs [HttpException](https://docs.nestjs.com/exception-filters#built-in-http-exceptions)s are an elegant way to  send error response.<br>
 For example, the `findArticle` function may return `undefined` if no article matches the requested title.
 In that case you should send a `NotFoundException`
 

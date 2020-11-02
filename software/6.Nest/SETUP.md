@@ -51,6 +51,8 @@ npm run start:dev
 # this will watch for changes and automatically rebuild if needed
 ```
 
+> Press `CTRL + C` to close the server
+
 **If you have `Server runs on http://localhost:3000`, you've finished the setup and you can go for the exercises**
 
 [Go back to the exercises](./README.md)
