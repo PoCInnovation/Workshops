@@ -50,7 +50,7 @@ You can read more about decorators [here](https://www.sitepoint.com/javascript-d
 You will now use the [POST](https://en.wikipedia.org/wiki/POST_(HTTP)) http method. It will allow you to send data via a Body.
 
 The object containing data that will be transfered is named DTO ([Data Transfer Object](https://en.wikipedia.org/wiki/Data_transfer_object)).<br>
-A class `article.dto` is provided [here](/src/step-2/article.dto.ts). It is a simple class that describes an article.
+A class `article.dto` is provided [here](https://github.com/PoCInnovation/Workshops/blob/master/software/6.Nest/src/step-2/article.dto.ts). It is a simple class that describes an article.
 
 With the decorator [@Body()](https://docs.nestjs.com/controllers#request-payloads) (found in `@nestjs/common`), you will be able to get the body of the request.
 
@@ -100,7 +100,7 @@ With [controller routing](https://docs.nestjs.com/controllers#routing) you can s
 
 ### Step 3.1: Incorporate Database service in App' service
 
-You can find [here](/src/step-3/database.service.ts) a Provider DatabaseService. This provided is simulating a database by using an array as a storage. You will use it for this last step as setting up and using a real database is a bit out of scope.
+You can find [here](https://github.com/PoCInnovation/Workshops/blob/master/software/6.Nest/src/step-3/database.service.ts) a Provider DatabaseService. This provided is simulating a database by using an array as a storage. You will use it for this last step as setting up and using a real database is a bit out of scope.
 
 > Make sure the import statement of `article.dto` is correct in the `database.service.ts`. it may not be according to the file locations
 
