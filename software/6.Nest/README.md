@@ -2,7 +2,7 @@
 
 ## Step 0: Typescript
 
-If you don't already know typescript, you can read [this file](https://github.com/PoCInnovation/Workshops/blob/master/software/6.Nest/src/step-0/learn.ts) to learn the basics.
+If you don't already know typescript, you can read [this file](https://github.com/PoCInnovation/Workshops/blob/master/software/6.Nest/src/step-0/learn.md) to learn the basics.
 
 <br>
 
