@@ -52,6 +52,12 @@ You will now use the [POST](https://en.wikipedia.org/wiki/POST_(HTTP)) http meth
 The object containing data that will be transfered is named DTO ([Data Transfer Object](https://en.wikipedia.org/wiki/Data_transfer_object)).<br>
 A class `article.dto` is provided [here](https://github.com/PoCInnovation/Workshops/blob/master/software/6.Nest/src/step-2/article.dto.ts). It is a simple class that describes an article.
 
+Make sure you have installed ``class-validator`` and ``nestjs/swagger``  
+
+```
+$ npm install class-validator @nestjs/swagger
+```
+
 With the decorator [@Body()](https://docs.nestjs.com/controllers#request-payloads) (found in `@nestjs/common`), you will be able to get the body of the request.
 
 You should now be able to create a route `/article` using @Post(). The type of the object will be the provided dto class.

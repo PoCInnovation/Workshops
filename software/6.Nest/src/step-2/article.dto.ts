@@ -1,7 +1,16 @@
-export class ArticleModel {
-    title: string
+import { ApiProperty } from '@nestjs/swagger'
+import { IsString } from 'class-validator';
 
-    body: string
+export class ArticleDto {
+    @ApiProperty()
+    @IsString()
+    title: string;
 
-    author: string
+    @ApiProperty()
+    @IsString()
+    body: string;
+
+    @ApiProperty()
+    @IsString()
+    author: string;
 }
