@@ -2,7 +2,7 @@
 
 ## Step 0: Typescript
 
-If you don't already know typescript, you can read [this file](/src/step-0/learn.ts) to learn the basics.
+If you do not already know typescript, you can read [this file](/src/step-0/learn.ts) to learn the basics.
 
 <br>
 
@@ -19,14 +19,14 @@ $ npm run start:dev
 
 Go to http://localhost:3000/article via your browser (or Postman) to see if you can get this route.
 
-As said, the command `start:dev` makes use of `file watchers`. Every time you save a file, nestjs will automatically rebuild the server with the updated file(s).
-That way you won't need to restart it manually after each modification.
+As said before, the command `start:dev` makes use of `file watchers`. Every time you save a file, nestjs will automatically rebuild the server with the updated file(s).
+That way you will not need to restart it manually after each modification.
 
 <br>
 
 ### Step 1.2: first provider
 
-Read the first 2 sections of [modules](https://docs.nestjs.com/modules) and [providers]((https://docs.nestjs.com/providers)). It will teach you some basic concepts or architecture nestjs uses.
+Read the first 2 sections of [modules](https://docs.nestjs.com/modules) and [providers]((https://docs.nestjs.com/providers)). It will teach you some basic concepts and architecture of nestjs.
 
 As you can see, AppService is an AppModule Provider (in `app.module.ts`).
 And it is [injected](https://docs.nestjs.com/providers#dependency-injection) in the controller (in the constructor).
@@ -40,7 +40,7 @@ Launch the server and use your browser to check if everything went well.
 
 ## Step 2: Variable decorator
 
-> a @Decorator() is a Javascript feature that allows you to wrap one piece code with another.<br>
+> a @Decorator() is a Javascript feature that allows you to wrap one piece of code with another.<br>
 You can read more about decorators [here](https://www.sitepoint.com/javascript-decorators-what-they-are/)
 
 <br>
@@ -56,9 +56,9 @@ With the decorator [@Body()](https://docs.nestjs.com/controllers#request-payload
 
 You should now be able to create a route `/article` using @Post(). The type of the object will be the provided dto class.
 
-Now, add debug logs that prints the received body.
+Now, add debug logs that print the received body.
 
-> Use Postman to try the new route
+> Use Postman to test the new route
 
 Here is an example of a body:
 ```javascript
@@ -83,16 +83,16 @@ You can now update the previously created `getArticle` function to take a route 
 
 A Put request usually uses both `@Param()` (e.g. find the article to update) and `@Body()` (containing the updated article)
 
-Using the `@Put()` method and the previously acquired knowledge, write a route to get both the body and the url param.
+Using the `@Put()` method and what you have just learnt, write a route to get both the body and the url param.
 
-> As always, don't forget to test if everything works as intended before going to the next step !
+> As always, do not forget to test if everything works as intended before moving on to the next step !
 
 <br>
 
 ### Step 2.4: Bonus
 
 A controller usually contains routes with similar routes (e.g. `/user`, `/user/profile` ...).<br>
-With [controller routing](https://docs.nestjs.com/controllers#routing) you can specify a prefix to be applied to all routes of this controller (it would `user` here)
+With [controller routing](https://docs.nestjs.com/controllers#routing) you can specify a prefix to be applied to every routes of this controller (it would `user` here)
 
 <br>
 
@@ -100,11 +100,11 @@ With [controller routing](https://docs.nestjs.com/controllers#routing) you can s
 
 ### Step 3.1: Incorporate Database service in App' service
 
-You can find [here](/src/step-3/database.service.ts) a Provider DatabaseService. This provided is simulating a database by using an array as a storage. You will use it for this last step as setting up and using a real database is a bit out of scope.
+You can find [here](/src/step-3/database.service.ts) a Provider DatabaseService. This provider is simulating a database by using an array as a storage. You will use it for the last step; as setting up and using a real database is a bit out of scope.
 
 > Make sure the import statement of `article.dto` is correct in the `database.service.ts`. it may not be according to the file locations
 
-As for the AppService, you will have to add the DatabaseService in the Module Provider list and `inject` it (via the constructor) in AppService
+As for the AppService, you will have to add the DatabaseService in the Module Provider list and `inject` it (via the constructor) in AppService.
 
 <br>
 
@@ -113,7 +113,7 @@ As for the AppService, you will have to add the DatabaseService in the Module Pr
 The new service exposes 4 functions: createArticle, updateArticle, findArticle, deleteArticle
 
 As these functions are [asynchronous](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function), you will have to use `Promise`s (i.e. `await` or `.then()`). <br>
-Feel free to ask questions or read about Promises if you don't feel at ease with them.
+Feel free to ask questions or read about Promises if you do not feel at ease with them.
 
 Now, update the functions in AppService to use the database and call them in the controller.
 
@@ -133,7 +133,7 @@ Create a route to `@Delete()` an article on your own !
 
 ### Step 3.4: Bonus
 
-Nestjs [HttpException](https://docs.nestjs.com/exception-filters#built-in-http-exceptions)s are an elegant way to  send error response.<br>
+Nestjs [HttpException](https://docs.nestjs.com/exception-filters#built-in-http-exceptions)s are an elegant way to send error response.<br>
 For example, the `findArticle` function may return `undefined` if no article matches the requested title.
 In that case you should send a `NotFoundException`
 
@@ -142,7 +142,7 @@ In that case you should send a `NotFoundException`
 ## Bonus
 
 Congratz !<br>
-If you want to go further, here some ideas:
+If you want to go further, here are some ideas:
 <br>
 <details>
   <summary>Validate user input</summary>
