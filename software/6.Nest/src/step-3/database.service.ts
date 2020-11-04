@@ -1,11 +1,11 @@
 import { NotFoundException, ConflictException, Injectable } from '@nestjs/common';
-import { ArticleModel } from './article.dto'
+import { ArticleDto } from './article.dto'
 
 @Injectable()
 export class DatabaseService {
-  private readonly article: ArticleModel[] = [];
+  private readonly article: ArticleDto[] = [];
 
-  async createArticle(newArticle: ArticleModel): Promise<ArticleModel> {
+  async createArticle(newArticle: ArticleDto): Promise<ArticleDto> {
     const post = await this.findArticle(newArticle.title);
 
     if (post) {
@@ -17,11 +17,11 @@ export class DatabaseService {
     return newArticle;
   }
 
-  async findArticle(postTitle: string): Promise<ArticleModel | undefined> {
+  async findArticle(postTitle: string): Promise<ArticleDto | undefined> {
     return this.article.find(post => post.title === postTitle);
   }
 
-  async updateArticle(postTitle: string, postUpdate: ArticleModel): Promise<ArticleModel> {
+  async updateArticle(postTitle: string, postUpdate: ArticleDto): Promise<ArticleDto> {
     const post = await this.findArticle(postTitle);
 
     if (!post) {
@@ -35,7 +35,7 @@ export class DatabaseService {
     return post;
   }
 
-  async deleteArticle(postTitle: string): Promise<ArticleModel> {
+  async deleteArticle(postTitle: string): Promise<ArticleDto> {
     const post = await this.findArticle(postTitle);
 
     if (!post) {
