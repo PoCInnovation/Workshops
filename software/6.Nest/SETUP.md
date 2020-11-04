@@ -51,6 +51,6 @@ npm run start:dev
 
 > Press `CTRL + C` to stop the server
 
-**If `Server runs on http://localhost:3000` is displayed, the setup is completed and you can go on with the exercises**
+**If `Nest application successfully started` is displayed, the setup is completed and you can go on with the exercises**
 
 [Go back to the exercises](./README.md)
