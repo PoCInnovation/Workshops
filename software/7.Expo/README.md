@@ -121,7 +121,7 @@ First off, you'll have to install new packages:
 
 ```bash
 # Stop your server and run
-expo install expo-camera expo-barcode-scanner
+expo install expo-camera expo-barcode-scanner expo-media-library
 
 # Then restart your server
 npm start
@@ -147,10 +147,7 @@ Our camera works great, but we cannot even do basic stuff such as taking picture
 - A **flip** button that changes the camera type from front to back and vice versa
 - A **trigger** button that will take a picture and save it to the camera roll
 
-> You'll need to ask for authorizations to save pictures in the camera roll
-
-
-
+> You'll need to use React refs to take a picture
 
 ## Bonus
 
