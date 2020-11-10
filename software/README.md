@@ -17,3 +17,5 @@ http://bit.ly/DiscordPoCEvents
 ### Workshop 5 - [Github Actions](./5.Actions)
 
 ### Workshop 6 - [API REST in Nestjs](./6.Nest)
+
+### Workshop 7 - [Mobile app with Expo](./6.Rest)
