@@ -31,20 +31,20 @@ The architecture of the project looks like this:
 
 ```
 expo-workshop-poc
-├── app.json			<-- config file
-├── App.tsx				<-- app entrypoint, equivalent to a main
-├── assets				<-- assets folder (font, iamges...)
-├── babel.config.js		<-- config file
-├── components			<-- component folder (react notion)
-├── constants			<-- useful variables (color palet, phone dimensions...)
-├── hooks				<-- hooks folder (react notion)
-├── navigation			<-- pages organisation and configuration folder
-├── node_modules		<-- dependencies folder
-├── package.json		<-- node file that define dependencies, rules and commands
-├── package-lock.json	<-- dependencies specifications
-├── screens				<-- screen components folder
-├── tsconfig.json		<-- compilation options
-└── types.tsx			<-- typescript types
+├── app.json           <-- config file
+├── App.tsx            <-- app entrypoint, equivalent to a main
+├── assets             <-- assets folder (font, iamges...)
+├── babel.config.js    <-- config file
+├── components         <-- component folder (react notion)
+├── constants          <-- useful variables (color palet, phone dimensions...)
+├── hooks              <-- hooks folder (react notion)
+├── navigation         <-- pages organisation and configuration folder
+├── node_modules       <-- dependencies folder
+├── package.json       <-- node file that define dependencies, rules and commands
+├── package-lock.json  <-- dependencies specifications
+├── screens            <-- screen components folder
+├── tsconfig.json      <-- compilation options
+└── types.tsx          <-- typescript types
 ```
 
 All you have to do after that is opening the `expo-workshop-poc` folder in VSCode and run `npm start` inside.

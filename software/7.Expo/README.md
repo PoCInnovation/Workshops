@@ -1,6 +1,6 @@
 # Workshop 7 - Mobile app with Expo
 
-In this workshop, we will create a simple mobile in written in React Native with TypeScript. When working with mobile apps, you often need to build your app, have `xcode` or `android studio` launched, your device plugged, your ram almost full, struggling with permissions and compilations errors because of unsupported model or update, etc.
+In this workshop, we will create a simple mobile in written in React Native with TypeScript. When working with mobile apps, you often need to build your app, have `xcode` or `android studio` launched, your device plugged, your ram almost full, struggling with permissions and compilations errors because of unsupported model or update etc.
 
 Expo is here to simplify all this laborious work. No wire, no android studio, no version errors, just a QR code to scan and the app is locally built and sent to the expo client on your phone. Way easier!
 
@@ -28,21 +28,21 @@ Now that it's clear, time to work! The template repo is quite large, so let's di
 
 Now that you understand a bit more the architecture of the project, let's create something! First off, wipe everything inside the `tabOneScreen.tsx` file: we will create a simple todolist component.
 
-The goal of the workshop of not to learn how to code in React but rather to learn how to use React Native, so we won't waste time on creating basic components. Here is a  `Task` component, copy everything inside your empty file:
+The goal of the workshop of not to learn how to code in React but rather learn how to use React Native, so we won't waste time on creating basic components. Here is a `Task` component, copy everything inside your empty file:
 
-```jsx
+```tsx
 import * as React from 'react';
 import { StyleSheet, ScrollView } from 'react-native';
 import { Text, View } from '../components/Themed';
 
 function Task(props: {title: string, completed: boolean}) {
   return (
-    <View style={{width: "90%", flexDirection: "row", justifyContent: "space-around"}}>
-        <Text style={{fontSize: 16}}>
-          {props.title}
-        </Text>
-        <Text style={{fontSize: 16, color: "red"}}>
+    <View style={{ width: "90%", flexDirection: "row" }}>
+        <Text style={{ fontSize: 16, marginRight: 10, color: props.completed ? "green" : "red" }}>
           {props.completed ? "DONE" : "TODO"}
+        </Text>
+        <Text style={{ fontSize: 16 }}>
+          {props.title}
         </Text>
     </View>
   );
@@ -50,7 +50,7 @@ function Task(props: {title: string, completed: boolean}) {
 
 export default function TabOneScreen() {
   return (
-    <ScrollView style={{ flex: 1, marginTop: 30 }}>
+    <ScrollView style={{ flex: 1 }}>
       <Task title="Start workshop" completed={false} />
     </ScrollView>
   );
@@ -108,7 +108,6 @@ async function getTasks(): Promise<TodoDto[]> {
 and call `getTasks` on your list component (before the return), this should print in the terminal a JSON object representing a list of tasks. The goal of this step is to replace the hard-coded values in your `taskList` array with these fetched values.
 
 - Don't forget to use the `completed` variable
-- You'll have to update the type of `taskList`, search how to type `useState` value
 - The data fetching is asynchronous, you won't have data while it's loading, so `taskList` will be called with `React.useState<TodoDto[] | null>(null);`
 - You'll need the [useEffect](https://modern-javascript.fr/comment-utiliser-une-async-function-dans-un-hook-useeffect-avec-react/) to execute actions when the component is created (here, the action will be to load data)
 
@@ -137,7 +136,7 @@ npm start
 You can use this QR code as an example:
 
 <p align="center">
-    <img src='https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fgithub.com%2FPoCInnovation&chs=180x180&choe=UTF-8&chld=L|2' alt='' width="25%">
+    <img src='https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fgithub.com%2FPoCInnovation&chs=200x200&choe=UTF-8&chld=L|2' alt='' width="25%">
 </p>
 
 
