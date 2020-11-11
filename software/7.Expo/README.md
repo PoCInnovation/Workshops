@@ -57,7 +57,7 @@ export default function TabOneScreen() {
 }
 ```
 
-Your goal in this task will be to edit this code to add a new `List` component. To do so, you will have an Array of objects:
+Your goal in this task will be to edit this code to display a new `List` component. To do so, you will have an Array of objects:
 
 ```jsx
 function List() {
@@ -68,6 +68,8 @@ function List() {
 
 Some precisions:
 
+- React Native uses different components of React, here is the [documentation](https://reactnative.dev/docs/components-and-apis)
+
 - By default, all task `completed` props will be `false`
 
 - `taskList` is a const variable that can only be changed by the function `setTaskList` associated with it
@@ -75,8 +77,6 @@ Some precisions:
 - `taskList` is an array of objects with currently only 2 indexes in the example
 
 - Each index of the array represents the variable that will be sent to the `Task` component
-
-- Adding or removing an index to `taskList` is equivalent to add or remove a `Task`
 
 > The [map](https://reactjs.org/docs/lists-and-keys.html) function will be very useful to iterate over our array
 
