@@ -12,7 +12,7 @@ All the required information to install dependencies can be found in [SETUP.md](
 
 As written in the name, react native is based on React, a very popular front-end framework to create websites. `components` are the core of React. They represent a single element in a web page, like a `text` box, a `button`, a `div`, etc. All combined, they create a fully working web page. These components are reusable, they prevent you from code duplication. This also works in React Native, component won't be web elements but will create native mobile components.
 
-> In this workshop, you are not allowed to use TypeScript classes, you must use `Functional Components`. [Here](https://medium.com/@Zwenza/functional-vs-class-components-in-react-231e3fbd7108) is a little explanation of the differences.
+> In this workshop, you are not allowed to use TypeScript classes, you must use `Functional Components`. [Here](https://www.twilio.com/blog/react-choose-functional-components) is a little explanation of the differences.
 
 Now that it's clear, time to work! The template repo is quite large, so let's discover it. There are files that we won't use but also useful stuff. Please find:
 
