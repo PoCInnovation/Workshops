@@ -1,4 +1,4 @@
-# Workshop 8 - Ethereum Smart Contract with Solidity
+# Workshop 1 - Ethereum Smart Contract with Solidity
 
 During this workshop, we will create a smart contract that can run onto the Ethereum Virutal Machine.
 We'll achieve this in 3 steps : write, compile and finally test & deploy it on a local network.
