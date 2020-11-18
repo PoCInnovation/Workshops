@@ -7,7 +7,7 @@ You'll test the deployment so this is why it is done in one step only.
 A smart contract is an application that can run on a blockchain.
 The most popular blockchain that supports smart contract is Ethereum, that's the reason we are using this one.
 
-### Step 0 : Initialization
+## Step 0 : Initialization
 
 First, clone the repository from <TEMPLATE_PROJECT_LINK>.
 It contains all necessary files, but for the moment they're empty :wink:
@@ -32,7 +32,7 @@ The project structure should be the following :
 
 Then, run `npm install` at the root of the cloned repository.
 
-### Step 1 : Solidity & the contract
+## Step 1 : Solidity & the contract
 
 As said before, the programming langage you'll use to write the smart contract is Solidity.
 It has a similar syntax as JavaScript, but it is strongly-typed.
@@ -49,7 +49,7 @@ So your `Inbox` contract must respect the following rules :
 
 - There must be a private counter of the number of times the message has been updated.
 
-### Step 2 : Compiling the contract
+## Step 2 : Compiling the contract
 
 No that you've wrote the contract, you need to compile it !
 The compiler used is `solc`, and has already been included to your `package.json` dependencies file.
@@ -67,7 +67,7 @@ You need to do the following steps to get a bytecode & an ABI (Application Binar
 As you've probably guessed, the bytecode contains a compiled version of your contract that will be executed by the EVM.
 The ABI will be usefull later by Web3 on to interact with the contract.
 
-### Step 3 : Tests using mocha & chai
+## Step 3 : Tests using mocha & chai
 
 Time to test !
 The tests are very important while writing a smart contract, because once they're deployed on a real blockchain, you can not update or delete it.
@@ -96,11 +96,13 @@ Okay, time to test !
     Note that when you declare a `public` variable in Solidity, it automatically creates an accessor for this variable (a `call`).
     But whenever you call a function that modifies the contract state (i.e. stored variables), you must send a transaction to the targetted function from an account.
 
-### Bonus
+## Bonus
 
 Please consider using the online Remix Editor available [here](https://remix.ethereum.org/) to make the first bonus.
 
 - Do you remember the private counter you've created before ?
     Make your contract inherit from the [OpenZeppelin](https://openzeppelin.com/) Owner contract you can find in the `bonus` folder.
 
-### Authors
+## Authors
+
+[Luca](https://github.com/PtitLuca)
