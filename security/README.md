@@ -1,3 +1,4 @@
+
 # Security Workshops
 Security workshops to introduce students to security with CTF-like exercices.
 
@@ -6,7 +7,7 @@ In each directory, you will find the exercices, a README explaining the purpose 
 ### To join our Discord
 http://bit.ly/DiscordPoCEvents
 
-## :shark: workshop-wireshark
+## :shark: wireshark
 
 An introduction to Wireshark and Network Packet Analysis.
 You will learn to:
@@ -18,7 +19,7 @@ You will learn to:
 * extract data from ????
 * use wireshark in a real forensic scenario
 
-## :microscope: workshop-steganography
+## :microscope: steganography
 
 Basics of steganography, you will be introduced to basics of files extraction, stegsolve, and learn to hide and extract:
 * data in text
@@ -26,7 +27,7 @@ Basics of steganography, you will be introduced to basics of files extraction, s
 * data in sound
 * data in pdf files
 
-## :lock: workshop-cryptography
+## :lock: cryptography
 
 Introduction to cryptography
 You will learn to:
@@ -35,7 +36,7 @@ You will learn to:
 * recognize and uncipher substitution cryptography
 * manipulate and exploit historical breaches in JWT
 
-## :gear: workshop-reverse
+## :gear: reverse
 
 Introduction to reverse engineering with Ghidra tool, you'll learn to:
 * How and Why Reverse Engineering
@@ -44,14 +45,14 @@ Introduction to reverse engineering with Ghidra tool, you'll learn to:
 * Solve crackmes and basic CTF challenges
 * Learn to patch binary with Ghidra
 
-## :angry: workshop-angr
+## :angry: angr
 
 Following the reverse workshop, we continue exploring reverse engineering tools
 with Angr, a python framework for symbolic execution. We explore the concepts of:
 * Symbolic execution, along with find and avoid conditions.
 * Symbolic data, with stack, registers and static memory.
 
-## :syringe: workshop-xss
+## :syringe: xss
 
 You will learn to detect and exploit a Cross-site scripting Injection (XSS).
 *  Exploit and detect basic XSS
@@ -59,13 +60,26 @@ You will learn to detect and exploit a Cross-site scripting Injection (XSS).
 *  Craft your own XSS payloads to bypass custom filters
 *  Learn about mutation XSS and exploit a recent Chromium Breach
 
-## :bomb: workshop-sql-injection
+## :bomb: sql-injection
 
 Introduction to SQL injection.
 *  Learn to detect and exploit vulnerable websites
 *  Learn to bypass weak security protections
 *  Realize a blind sql injection
 *  Exploit a CVE on Sequelize
+
+## :computer: pwntools
+
+Introduction to pwntools.
+* Learn the basics of ROP
+*  Learn to write exploits script in python
+
+## :floppy_disk: GDB
+
+Introduction to GDB.
+* Learn to use GDB to run a binary
+* Understanding of stack and heap concepts 
+* Learn to see and modify variables during the binary execution
 
 # Solutions
 
