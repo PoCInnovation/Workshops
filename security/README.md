@@ -45,13 +45,6 @@ Introduction to reverse engineering with Ghidra tool, you'll learn to:
 * Solve crackmes and basic CTF challenges
 * Learn to patch binary with Ghidra
 
-## :angry: angr
-
-Following the reverse workshop, we continue exploring reverse engineering tools
-with Angr, a python framework for symbolic execution. We explore the concepts of:
-* Symbolic execution, along with find and avoid conditions.
-* Symbolic data, with stack, registers and static memory.
-
 ## :syringe: xss
 
 You will learn to detect and exploit a Cross-site scripting Injection (XSS).
