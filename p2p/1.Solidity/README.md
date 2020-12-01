@@ -102,7 +102,27 @@ Okay, time to test !
     - Every account can set a new message
    
   
-### Step 4 : Time to deploy
+## Step 4 : Time to deploy
+
+Until now, you've only worked on your local ethereum network.
+Your smart contract is fully tested and ready to be deployed on the real blockchain !
+
+But deploying a smart contract is done by sending a transaction, and you probably don't want to pay real money to accomplish this step wright ?
+
+This is why testnet are useful :wink:, they behave the same way as the mainnet does, but their ether value is null. 
+
+So first, you need to install Metamask extension on your browser.
+Follow the steps required and don't forget to set the network to be the Ropsten Test Network.
+Then, go to [this faucet](https://faucet.dimensions.network/) and paste your wallet account address to get 5 ether.
+
+You also need a new provider, since ganache only works locally. You will use the `HDWalletProvider` one provided in the `deploy.js` file.
+Because you are sending a transaction to the real network, you have to know the endpoint of an ethereum node.
+
+Infura can provide this information. As we support decentralisation of the Ethereum blockchain here is an endpoint you can use :
+
+https://ropsten.infura.io/v3/510289ba8f254e46891aaa84a718ddd9
+
+Feel free to use the code you've written during tests to deploy and interact with the contract on the Ropsten Network.
 
 ### Authors
 
