@@ -74,11 +74,11 @@ Your tests run it's cool, but it's better to save information from your workflow
 
 A basic way to do that is an [artifact](https://github.com/marketplace/actions/upload-a-build-artifact).
 
-Modify your previous job to redirect test and coverage output into file then add a new step which uploads a file from unit-test and another that upload coverage file.
+Modify your previous job to redirect test and coverage output into file then add a new step which uploads a file from coverage file.
 
-Your artifacts must be called `unit-test_outputs` and `coverage_outputs`.
+Your artifact must be called `coverage_outputs`.
 
-**Those two steps must run even if previous steps fail**.
+**The step must run even if previous steps fail**.
 
 > Find help about condition [here](https://docs.github.com/en/free-pro-team@latest/actions/reference/context-and-expression-syntax-for-github-actions)
 
