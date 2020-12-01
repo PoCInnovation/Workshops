@@ -48,13 +48,7 @@ So your `Inbox` contract must respect the following rules :
 
 - Everyone must be able to update the message stored in the contract.
 
-<<<<<<< HEAD
-### Step 2 : Compiling the contract
-=======
-- There must be a private counter of the number of times the message has been updated.
-
 ## Step 2 : Compiling the contract
->>>>>>> f40e6e039e157e62a98a0ac95c856f5bbd31a315
 
 Now that you've written the contract, you need to compile it !
 The compiler used is `solc`, and has already been included to your `package.json` dependencies file.
