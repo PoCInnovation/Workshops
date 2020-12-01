@@ -92,8 +92,8 @@ Okay, time to test !
     A contract must be deployed by an account. Hopefully, Ganache creates a list of 10 accounts whenever it is loaded.
 
 - Then, test all of your functions.
-    Note that when you declare a `public` variable in Solidity, it automatically creates an accessor for this variable (a `call`).
-    Instead, whenever you call a function that modifies the contract state (i.e. stored variables), you must send a transaction to the targeted function.
+    Note that when you declare a `public` variable in Solidity, the EVM automatically creates an accessor for this variable (a `call`).
+    Whenever you call a function that modifies the contract state (i.e. stored variables), you must send a transaction to the targeted function.
     You must test the following features :
   
     - The contract has been deployed properly
