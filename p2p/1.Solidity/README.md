@@ -1,7 +1,7 @@
 # Workshop 1 - Ethereum Smart Contract with Solidity
 
-During this workshop, we will create a smart contract that can run onto the Ethereum Virtual Machine.
-We'll achieve this in 4 steps : write, compile, test & deploy the contract.
+During this workshop, you will create a smart contract that can run onto the Ethereum Virtual Machine.
+You'll achieve this in 4 steps : write, compile, test & deploy the contract.
 
 A smart contract is an application that can run on a blockchain.
 Once you've written a smart contract on a blockchain, the same behaviour as with the transactions applies :
