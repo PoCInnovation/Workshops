@@ -8,10 +8,13 @@ including the ability to :
 
 - Submit a product for sale
 - Pay for a product
+- Retrieve all products available
 
 ## Step 0 : Initialization
 
 Download and extract the `source.zip` file available [here]().
+
+Install the [metamask](https://metamask.io/) extension.
 
 You can use the code editor of your choice, but we highly recommend using the online Remix Editor available [here](https://remix.ethereum.org).
 
@@ -55,3 +58,21 @@ So when buying a product, you must make sure that :
 - Delete the product in the global list
 
 ## Step 3 : Frontend
+
+Now that you've done the smart contract, its time to let the user actually use it.
+
+The `source.zip` file you've extracted contains a boilerplate for this step.
+You can start the app by running the following command in the `src` folder :
+```shell
+npm install && npm run start
+```
+
+As you can see, there are some basic features already implemented.
+You must implement the following ones :
+- Update the `smartshopcontract.js` file with the correct information
+- Load the accounts provided by metamask in your browser. The [web3](https://web3js.readthedocs.io/en/v1.3.0/web3-eth.html) documentation should help you :wink:
+- Implement the function body used to interact with the smart contract. Once again, the [web3]() documentation should help you.
+
+## Authors
+
+[Luca Georges Francois](https://github.com/PtitLuca)
