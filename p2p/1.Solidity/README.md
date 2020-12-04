@@ -10,7 +10,7 @@ The most popular blockchain that supports smart contract is Ethereum, this is th
 
 ## Step 0 : Initialization
 
-First, download the `source.zip` file [here]().
+First, download the `source.zip` file [here](https://github.com/PoCInnovation/Workshops/blob/master/p2p/1.Solidity/src/source.zip).
 It contains all necessary files, but for the moment they're empty :wink:
 
 The project structure should be the following :
