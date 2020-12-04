@@ -1,4 +1,4 @@
-# Workshop 1 - Ethereum Smart Contract with Solidity
+# Workshop 1 - Solidity & Smart Contract
 
 During this workshop, you will create a smart contract that can run onto the Ethereum Virtual Machine.
 You'll achieve this in 4 steps : write, compile, test & deploy the contract.
@@ -10,7 +10,7 @@ The most popular blockchain that supports smart contract is Ethereum, this is th
 
 ## Step 0 : Initialization
 
-First, clone the repository from <TEMPLATE_PROJECT_LINK>.
+First, download the `source.zip` file [here]().
 It contains all necessary files, but for the moment they're empty :wink:
 
 The project structure should be the following :
