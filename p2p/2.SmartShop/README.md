@@ -11,6 +11,8 @@ including the ability to :
 
 ## Step 0 : Initialization
 
+Download and extract the `source.zip` file available [here]().
+
 You can use the code editor of your choice, but we highly recommend using the online Remix Editor available [here](https://remix.ethereum.org).
 
 It has all required features for smart contract development :
@@ -27,7 +29,7 @@ It must contain basic fields such as :
 - An optional description (with a maximum of 500 char)
 - An id
 
-The contract must contain a global list of all the products submitted by the users.
+The contract must contain a global list of all the products submitted by the users name `products`.
 It has to be accessible to anyone.
 
 ## Step 2 : Submit for sale & buy
