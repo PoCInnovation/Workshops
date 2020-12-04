@@ -25,13 +25,31 @@ It must contain basic fields such as :
 - The product price
 - The product owner's account address
 - An optional description (with a maximum of 500 char)
+- An id
 
 The contract must contain a global list of all the products submitted by the users.
 It has to be accessible to anyone.
 
-## Step 2 : Submit for sale
+## Step 2 : Submit for sale & buy
 
+Now that you've represented a product on your smart contract,
+users should be able to add a product for sale so that other can buy those products.
 
-## Step 3 : Pay
+These two features must be implemented trough functions, that can be called by anyone.
 
+Submitting a product for sale is achieved by calling the `submitProduct` function,
+which creates a product item based on the parameters of the function (refer to the product fields).
 
+Buying a product is achieved by calling the `buyProduct` function,
+which take only one parameter : the product id.
+Because buying involves sending money, an amount of ether here,
+don't forget to check how many ether where given in the `value` field of the message of the function call.
+
+The message is a global variable accessible everywhere in your contract. You can learn more about it [here](https://docs.soliditylang.org/en/v0.7.5/units-and-global-variables.html).
+
+So when buying a product, you must make sure that :
+- The amount of ether sent is the same as the one specified in the product price field.
+- Transfer the amount of ether received to the product owner
+- Delete the product in the global list
+
+## Step 3 : Frontend
