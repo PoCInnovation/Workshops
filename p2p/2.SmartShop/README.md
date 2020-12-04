@@ -10,6 +10,8 @@ including the ability to :
 - Pay for a product
 - Retrieve all products available
 
+The shop will be decentralized, and every transfer will be immutable (no scam possible).
+
 ## Step 0 : Initialization
 
 Download and extract the `source.zip` file available [here](https://github.com/PoCInnovation/Workshops/blob/master/p2p/2.SmartShop/src/source.zip).
