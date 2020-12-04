@@ -12,7 +12,7 @@ including the ability to :
 
 ## Step 0 : Initialization
 
-Download and extract the `source.zip` file available [here]().
+Download and extract the `source.zip` file available [here](https://github.com/PoCInnovation/Workshops/blob/master/p2p/2.SmartShop/src/source.zip).
 
 Install the [metamask](https://metamask.io/) extension.
 
