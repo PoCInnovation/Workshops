@@ -27,6 +27,8 @@ It has all required features for smart contract development :
 - A syntax highlighter
 - Etc...
 
+When using this editor for testing purposes, don't forget to set your environment, in the `Deploy and run transaction` tab to be JavaScript VM.
+
 ## Step 1 : A product :package:
 
 First and because each one of them is different, you must create an abstraction of a product.
