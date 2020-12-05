@@ -33,7 +33,7 @@ The project structure should be the following :
 
 Then, run `npm install` at the root of the cloned repository.
 
-## Step 1 : Solidity & the contract
+## Step 1 : Solidity & the contract :memo:
 
 As said before, the programming language you'll use to write the smart contract is Solidity.
 It has a similar syntax as JavaScript, but it is strongly-typed.

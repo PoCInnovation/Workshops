@@ -1,4 +1,4 @@
-# Workshop 2 - Smart Shop :shopping_cart:.
+# Workshop 2 - Smart Shop :shopping_cart:
 
 During this workshop, you will create a decentralized online shop.
 You probably have heard about "Le bon coin", a purchasing site for individuals to individuals.
