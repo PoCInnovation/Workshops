@@ -47,7 +47,7 @@ users should be able to add a product for sale so that other can buy those produ
 These two features must be implemented trough functions, that can be called by anyone.
 
 Submitting a product for sale is achieved by calling the `submitProduct` function,
-which creates a product item based on the parameters of the function (refer to the product fields).
+which creates a product item based on the parameters of the function (refer to the product fields if you need to).
 
 Buying a product is achieved by calling the `buyProduct` function,
 which take only one parameter : the product id.
@@ -63,7 +63,7 @@ So when buying a product, you must make sure that :
 
 ## Step 3 : Frontend
 
-Now that you've done the smart contract, it's time to let the user actually use it.
+Now that you've done the smart contract, it's time to let the user actually interact with it.
 
 The `source.zip` file you've extracted contains a boilerplate for this step.
 You can start the app by running the following command in the `src` folder :
