@@ -24,6 +24,8 @@ You can use the code editor of your choice, but we highly recommend using the on
 It has all required features for smart contract development :
 - A builtin Solidity compiler
 - A local ethereum network with 10 accounts already funded with 100 Ether
+- A syntax highlighter
+- Etc...
 
 ## Step 1 : A product
 
