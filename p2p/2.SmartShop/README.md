@@ -16,7 +16,8 @@ The shop will be decentralized, and every transfer will be immutable (no scam po
 
 Download and extract the `source.zip` file available [here](https://github.com/PoCInnovation/Workshops/blob/master/p2p/2.SmartShop/src/source.zip).
 
-Install the [metamask](https://metamask.io/) extension.
+Install the [metamask](https://metamask.io/) extension. Switch to the Ropsten test network and go to [this faucet](https://faucet.dimensions.network/).
+Paste your wallet account address to get 5 ether.
 
 You can use the code editor of your choice, but we highly recommend using the online Remix Editor available [here](https://remix.ethereum.org).
 
