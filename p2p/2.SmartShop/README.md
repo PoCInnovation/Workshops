@@ -51,7 +51,7 @@ which creates a product item based on the parameters of the function (refer to t
 Buying a product is achieved by calling the `buyProduct` function,
 which take only one parameter : the product id.
 Because buying involves sending money, an amount of ether here,
-don't forget to check how many ether where given in the `value` field of the message of the function call.
+don't forget to check how much ether where given in the `value` field of the message of the function call.
 
 The message is a global variable accessible everywhere in your contract. You can learn more about it [here](https://docs.soliditylang.org/en/v0.7.5/units-and-global-variables.html).
 
@@ -62,7 +62,7 @@ So when buying a product, you must make sure that :
 
 ## Step 3 : Frontend
 
-Now that you've done the smart contract, its time to let the user actually use it.
+Now that you've done the smart contract, it's time to let the user actually use it.
 
 The `source.zip` file you've extracted contains a boilerplate for this step.
 You can start the app by running the following command in the `src` folder :
