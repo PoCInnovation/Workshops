@@ -37,8 +37,7 @@ It must contain basic fields such as :
 - An optional description (with a maximum of 500 char)
 - An id
 
-The contract must contain a global list of all the products submitted by the users name `products`.
-It has to be accessible to anyone.
+The contract must contain a global list of all the products submitted by the users, named `products` which has to be accessible to anyone.
 
 ## Step 2 : Submit for sale & buy
 
