@@ -1,4 +1,4 @@
-# Workshop 1 - Solidity & Smart Contract
+# Workshop 1 - Solidity & Smart Contract :open_book:
 
 During this workshop, you will create a smart contract that can run onto the Ethereum Virtual Machine.
 You'll achieve this in 4 steps : write, compile, test & deploy the contract.
@@ -8,7 +8,7 @@ Once you've written a smart contract on a blockchain, the same behaviour as with
 you can not update it.
 The most popular blockchain that supports smart contract is Ethereum, this is the main reason we are using this particular one.
 
-## Step 0 : Initialization
+## Step 0 : Initialization :rocket:
 
 First, download and extract the `source.zip` file [here](https://github.com/PoCInnovation/Workshops/blob/master/p2p/1.Solidity/src/source.zip).
 It contains all necessary files, but for the moment they're empty :wink:
@@ -48,7 +48,7 @@ So your `Inbox` contract must respect the following rules :
 
 - Everyone must be able to update the message stored in the contract.
 
-## Step 2 : Compiling the contract
+## Step 2 : Compiling the contract :gear:
 
 Now that you've written the contract, you need to compile it !
 The compiler used is `solc`, and has already been included to your `package.json` dependencies file.
@@ -66,7 +66,7 @@ You need to do the following steps to get a bytecode & an ABI (Application Binar
 As you've probably guessed, the bytecode contains a compiled version of your contract that will be executed by the EVM.
 You will use the ABI to interact with the contract.
 
-## Step 3 : Tests using mocha & chai
+## Step 3 : Tests using mocha & chai :test_tube:
 
 Time to test !
 The tests are very important while writing a smart contract, because once they're deployed on a real blockchain, you can not update or delete it.
@@ -102,7 +102,7 @@ Okay, time to test !
     - Every account can set a new message
    
   
-## Step 4 : Time to deploy
+## Step 4 : Time to deploy :outbox_tray:
 
 Until now, you've only worked on your local ethereum network.
 Your smart contract is fully tested and ready to be deployed on the real blockchain !

@@ -1,4 +1,4 @@
-# Workshop 2 - Smart Shop.
+# Workshop 2 - Smart Shop :shopping_cart:.
 
 During this workshop, you will create a decentralized online shop.
 You probably have heard about "Le bon coin", a purchasing site for individuals to individuals.
@@ -12,7 +12,7 @@ including the ability to :
 
 The shop will be decentralized, and every transfer will be immutable (no scam possible).
 
-## Step 0 : Initialization
+## Step 0 : Initialization :rocket:
 
 Download and extract the `source.zip` file available [here](https://github.com/PoCInnovation/Workshops/raw/master/p2p/2.SmartShop/src/source.zip).
 
@@ -27,7 +27,7 @@ It has all required features for smart contract development :
 - A syntax highlighter
 - Etc...
 
-## Step 1 : A product
+## Step 1 : A product :package:
 
 First and because each one of them is different, you must create an abstraction of a product.
 It must contain basic fields such as :
@@ -39,7 +39,7 @@ It must contain basic fields such as :
 
 The contract must contain a global list of all the products submitted by the users, named `products` which has to be accessible to anyone.
 
-## Step 2 : Submit for sale & buy
+## Step 2 : Submit for sale & buy :credit_card:
 
 Now that you've represented a product on your smart contract,
 users should be able to add a product for sale so that other can buy those products.
@@ -61,7 +61,7 @@ So when buying a product, you must make sure that :
 - Transfer the amount of ether received to the product owner
 - Delete the product in the global list
 
-## Step 3 : Frontend
+## Step 3 : Frontend :framed_picture:
 
 Now that you've done the smart contract, it's time to let the user actually interact with it.
 
