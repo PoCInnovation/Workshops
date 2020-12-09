@@ -53,9 +53,9 @@ So your `Inbox` contract must respect the following rules :
 Now that you've written the contract, you need to compile it !
 The compiler used is `solc`, and has already been included to your `package.json` dependencies file.
 
-You need to do the following steps to get a bytecode & an ABI (Application Binary Interface) of the contract :
+You need to do the following steps to get the bytecode & ABI (Application Binary Interface) of the contract :
 
-- Retrieve the file content.
+- Retrieve the file content. The solc compiler obviously needs the contract's code to compile it, but instead of juste copy/paste the code for the next step you may wan't to automate this process by reading the file dynamically. 
 
 - Give the content to the compiler. Note that the `compile.js` file already contains a variable, but the `sources['Inbox.sol']` field is empty.
 
