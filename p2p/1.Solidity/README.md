@@ -31,7 +31,7 @@ The project structure should be the following :
 
 ```
 
-Then, run `npm install` at the root of the cloned repository.
+Then, run `npm install` at the root of the downloaded folder.
 
 ## Step 1 : Solidity & the contract :memo:
 
