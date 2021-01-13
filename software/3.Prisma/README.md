@@ -25,7 +25,7 @@ You've seen how data fetching with Prisma works, you'll now implement classic CR
 Create the `addUser` function:
 - It takes in parameters `name` and `email`, the name and email of the user that will be created
 - It adds the user to the database
-- It returns the created user
+- It returns the created userQuery
 
 Create the `addPost` function:
 - It takes in parameters `title` and `content`, the title and content of the post, as well as `authorId`, the id of the user who will be the author of the post.
@@ -91,6 +91,7 @@ Create the following mutations:
 
 Here are some examples of queries and mutations you can execute in the playground to test your functions
 <Details><Summary><strong>See Query and Mutations</strong></Summary>
+
 ## Query
 
 ### getUsers
