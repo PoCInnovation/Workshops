@@ -214,6 +214,13 @@ mutation {
 
 </Details>
 
+## Bonus
+
+If you finished the workshop and don't know what to do until the end, you can try to:
+- Use the prisma studio to manipulate your db with a web interface. Run `npx prisma studio --experimental --port 3000`
+- Use the Nexus CRUD functions to drastically reduce your code, see the [documentation](https://nexusjs.org/docs/pluginss/prisma/api#tcrud)
+- Update the database model to add new columns and tables, and your API with it.
+
 ## Authors
 - [Paul Monnery](https://github.com/PaulMonnery/)
 - [Naoufesse Berrada](https://github.com/nowlow/)
