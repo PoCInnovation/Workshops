@@ -71,8 +71,8 @@ You will build in your schema a `Query` object that will contain the methods to 
 
 - For them to take effect, you will have to add these objects to the `type` field of your `schema` defined at the end of [schema.js](./src/schema.js).
 
-> [Nexus documentation about CRUD](https://nexusjs.org/docs/pluginss/prisma/api#tcrud)  
-> For the different required fields, base yourself on what you see in your `schema.prisma`.
+> Nexus documentation about [Queries](https://nexusjs.org/docs/api/query-field) and [Mutations](https://nexusjs.org/docs/api/mutation-field)  
+> The `resolve` field is where you will call prisma to query data inside the database
 
 To test the queries/mutations you are going to set up, you can go to http://localhost:4000/ to use a playground that lets you to test your server.
 
