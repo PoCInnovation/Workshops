@@ -50,13 +50,10 @@ Prisma allows us to retrieve data from the database, but we then have to allow t
 
 You will have to install new packages to do this:
 
-<Details><Summary><strong>Steps to install Apollo and Nexus</strong></Summary>
-
+<strong>Steps to install Apollo and Nexus</strong>
 - Download the [src](./src) folder from our repo: click [here](https://downgit.github.io/#/home?url=https://github.com/PoCInnovation/Workshops/tree/master/software/3.Prisma)
 - Extract the zip into your `starter` folder and replace the `package.json`.
 - Run `npm install` in your `starter` folder to install the new dependencies.
-
-</Details>
 
 If you subsequently run `npm run dev`, you will get an error, which is normal. For the server to run properly, you have to add an `objectType` that defines the `Post` table in `schema.js` .  
 An example of the `User` table is present in the file, it's up to you to do `Post`.
@@ -90,7 +87,7 @@ Create the following mutations:
 - `deletePost`: deletes a post whose `id` is specified.
 
 Here are some examples of queries and mutations you can execute in the playground to test your functions
-<Details><Summary><strong>See Query and Mutations</strong></Summary>
+<Details><Summary><strong>See Query and Mutations (Click me!)</strong></Summary>
 
 ## Query
 
