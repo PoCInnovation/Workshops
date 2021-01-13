@@ -25,7 +25,7 @@ You've seen how data fetching with Prisma works, you'll now implement classic CR
 Create the `addUser` function:
 - It takes in parameters `name` and `email`, the name and email of the user that will be created
 - It adds the user to the database
-- It returns the created user
+- It returns the created userQuery
 
 Create the `addPost` function:
 - It takes in parameters `title` and `content`, the title and content of the post, as well as `authorId`, the id of the user who will be the author of the post.
@@ -71,8 +71,8 @@ You will build in your schema a `Query` object that will contain the methods to 
 
 - For them to take effect, you will have to add these objects to the `type` field of your `schema` defined at the end of [schema.js](./src/schema.js).
 
-> [Nexus documentation about CRUD](https://nexusjs.org/docs/pluginss/prisma/api#tcrud)  
-> For the different required fields, base yourself on what you see in your `schema.prisma`.
+> Nexus documentation about [Queries](https://nexusjs.org/docs/api/query-field) and [Mutations](https://nexusjs.org/docs/api/mutation-field)  
+> The `resolve` field is where you will call prisma to query data inside the database
 
 To test the queries/mutations you are going to set up, you can go to http://localhost:4000/ to use a playground that lets you to test your server.
 
@@ -91,6 +91,7 @@ Create the following mutations:
 
 Here are some examples of queries and mutations you can execute in the playground to test your functions
 <Details><Summary><strong>See Query and Mutations</strong></Summary>
+
 ## Query
 
 ### getUsers
