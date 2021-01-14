@@ -48,13 +48,13 @@
         </script>
 
         <script>
-            let email = (new URL(location).searchParams.get('email'));
+            const email = new URL(location).searchParams.get('email');
 
-            const regex = RegExp('.+\..+@.+\.(com)|(fr)');
+            const regex_email = RegExp('.+\..+@.+\.(com|fr)');
 
             document.getElementById('debug').innerText = email;
 
-            if (regex.test(email)) {
+            if (regex_email.test(email)) {
                 document.getElementById('challenge').innerHTML = "Welcome " + email;
             } else {
                 document.getElementById('challenge').innerHTML = "Welcome Guest";

@@ -48,9 +48,9 @@
         </script>
 
         <script>
-            let email = (new URL(location).searchParams.get('email'));
+            const email = new URL(location).searchParams.get('email');
 
-            const regex_email = RegExp('.+\..+@.+\.(com)|(fr)');
+            const regex_email = RegExp('.+\..+@.+\.(com|fr)');
             const regex_flag = RegExp('.*flag.*');
 
             document.getElementById('debug').innerText = email;
