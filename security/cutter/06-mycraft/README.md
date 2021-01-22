@@ -2,7 +2,7 @@ I can't play a game of MyCraft, it keeps telling me "Wrong Licence" .... :'(
 
 HELP MEEEEEEEEEEEEEEEEEEEEEEEEE
 
-Download the files here : https://pwnh4.com/poc-workshop-craft.zip Do a cmake . in the folder If you look at the sources, it is cheating)
+Download the files here : https://pwnh4.com/poc-workshop-craft.zip 
 
 When you have unzip this folder, you have to :
 
