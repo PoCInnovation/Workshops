@@ -13,5 +13,5 @@ Discover and install Cutter [here](https://cutter.re).
 
 Feel free to contribute to this workshop by submitting a PR !
 
-This workshops is made by [PoC](https://github.com/PoCInnovation) with :heart:
+This workshop is made by [PoC](https://github.com/PoCInnovation) with :heart:
 
