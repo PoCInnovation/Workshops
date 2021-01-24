@@ -7,4 +7,5 @@ All workshop subjects and materials for developers. Made with :heart:.
 - 🛠️ [Hardware](./hardware/)
 - 🔑 [Security](./security/)
 - 💻 [Software](./software/)
+- :spider_web: [Peer-to-Peer](./p2p/)
 
