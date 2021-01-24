@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap(4.4.1) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- DOMPurify(2.0.7) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.0.7/purify.min.js"
+        integrity="sha256-iO9yO1Iy0P2hJNUeAvUQR2ielSsGJ4rOvK+EQUXxb6E=" crossorigin="anonymous"></script>
+    <title>Jason Bourne | XSS Challenge</title>
+</head>
+
+<body>
+    <br><br>
+    <div class="container">
+        <h2>Jason Bourne</h2>
+        <hr>
+        <u><b>Rules</b></u>
+        <ul>
+            <li>You must call the <code>flag function</code> with the proper parameters</li>
+            <li>No user interaction.</li>
+            <li>Tested on <b>Chrome</b>.</li>
+        </ul>
+        <script>
+            /* Helpers */
+            const bootstrapAlert = (msg, type) => {
+                return (`<div class="alert alert-${type}" role="alert">${DOMPurify.sanitize(msg)}</div>`)
+            }
+
+            document.getAlert = () => document.getElementById('alerts');
+        </script>
+
+        <script>
+            /* Welcome */
+            let name = (new URL(location).searchParams.get('name')) || "Pamela Landy";
+            document.write(
+                bootstrapAlert(`<b>Operation Treadstone</b>: Welcome <u>${name}</u>.`, 'info')
+            )
+        </script>
+
+        <!-- alerts -->
+        <div id="alerts"></div>
+    </div>
+
+    <!-- Jquery(3.4.1), Popper(1.16.0), Bootstrap(4.4.1) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script>
+        // you must call this function to flag the challenge
+        function flag(a) {
+            if (a === 0x007) {
+                alert("You solved this challenge, Congratz ! Send a screen with your payload to an organizer to get the flag !");
+            }
+        }
+    </script>
+    <script>
+        /* Handle to `#alert` */
+        let alerts = document.getAlert();
+
+        /* Treadstone Credentials */
+        let identification = Math.random().toString(36).slice(2);
+        let code = Math.floor(Math.random() * 89999 + 10000);
+
+        /* Default Credentials */
+        DEFAULTS = {};
+        DEFAULTS[identification] = code;
+    </script>
+
+    <script>
+        /* Optional Comment */
+        if (location.hash) {
+            let comment = document.createComment(decodeURI(location.hash).slice(1));
+            document.querySelector('#alerts').appendChild(comment);
+        }
+    </script>
+
+    <script>
+        /* Use `DEFAULTS` to init `SECRETS` */
+        SECRETS = DEFAULTS
+
+        /* Increment the `code` before the check */
+        let secretKey = new URL(location).searchParams.get('key') || "TREADSTONE_WEBB";
+        SECRETS[secretKey] += 1;
+
+        /* Authorization Check */
+        if (SECRETS[secretKey] === SECRETS[identification]) {
+            confirm(`Jesus Christ, it's Jason Bourne!`)
+        } else {
+           confirm(`You ain't David Webb!`)
+        }
+    </script>
+</body>
+
+</html>

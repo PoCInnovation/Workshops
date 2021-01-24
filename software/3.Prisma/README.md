@@ -25,7 +25,7 @@ You've seen how data fetching with Prisma works, you'll now implement classic CR
 Create the `addUser` function:
 - It takes in parameters `name` and `email`, the name and email of the user that will be created
 - It adds the user to the database
-- It returns the created user
+- It returns the created userQuery
 
 Create the `addPost` function:
 - It takes in parameters `title` and `content`, the title and content of the post, as well as `authorId`, the id of the user who will be the author of the post.
@@ -50,13 +50,10 @@ Prisma allows us to retrieve data from the database, but we then have to allow t
 
 You will have to install new packages to do this:
 
-<Details><Summary><strong>Steps to install Apollo and Nexus</strong></Summary>
-
+<strong>Steps to install Apollo and Nexus</strong>
 - Download the [src](./src) folder from our repo: click [here](https://downgit.github.io/#/home?url=https://github.com/PoCInnovation/Workshops/tree/master/software/3.Prisma)
 - Extract the zip into your `starter` folder and replace the `package.json`.
 - Run `npm install` in your `starter` folder to install the new dependencies.
-
-</Details>
 
 If you subsequently run `npm run dev`, you will get an error, which is normal. For the server to run properly, you have to add an `objectType` that defines the `Post` table in `schema.js` .  
 An example of the `User` table is present in the file, it's up to you to do `Post`.
@@ -71,8 +68,8 @@ You will build in your schema a `Query` object that will contain the methods to 
 
 - For them to take effect, you will have to add these objects to the `type` field of your `schema` defined at the end of [schema.js](./src/schema.js).
 
-> [Nexus documentation about CRUD](https://nexusjs.org/docs/pluginss/prisma/api#tcrud)  
-> For the different required fields, base yourself on what you see in your `schema.prisma`.
+> Nexus documentation about [Queries](https://nexusjs.org/docs/api/query-field) and [Mutations](https://nexusjs.org/docs/api/mutation-field)  
+> The `resolve` field is where you will call prisma to query data inside the database
 
 To test the queries/mutations you are going to set up, you can go to http://localhost:4000/ to use a playground that lets you to test your server.
 
@@ -90,7 +87,8 @@ Create the following mutations:
 - `deletePost`: deletes a post whose `id` is specified.
 
 Here are some examples of queries and mutations you can execute in the playground to test your functions
-<Details><Summary><strong>See Query and Mutations</strong></Summary>
+<Details><Summary><strong>See Query and Mutations (Click me!)</strong></Summary>
+
 ## Query
 
 ### getUsers
@@ -212,6 +210,13 @@ mutation {
 ```
 
 </Details>
+
+## Bonus
+
+If you finished the workshop and don't know what to do until the end, you can try to:
+- Use the prisma studio to manipulate your db with a web interface. Run `npx prisma studio --experimental --port 3000`
+- Use the Nexus CRUD functions to drastically reduce your code, see the [documentation](https://nexusjs.org/docs/pluginss/prisma/api#tcrud)
+- Update the database model to add new columns and tables, and your API with it.
 
 ## Authors
 - [Paul Monnery](https://github.com/PaulMonnery/)
