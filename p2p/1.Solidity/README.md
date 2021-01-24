@@ -8,6 +8,10 @@ Once you've written a smart contract on a blockchain, the same behaviour as with
 you can not update it.
 The most popular blockchain that supports smart contract is Ethereum, this is the main reason we are using this particular one.
 
+Please make sure to read each step carefully, as very useful links are given with the instructions.
+
+Every JavaScript files contains TODO instructions. Take a look at them to get more details and context about the task.
+
 ## Step 0 : Initialization :rocket:
 
 First, download and extract the `source.zip` file [here](https://github.com/PoCInnovation/Workshops/blob/master/p2p/1.Solidity/src/source.zip).
@@ -59,14 +63,14 @@ You need to do the following steps to get the bytecode & ABI (Application Binary
 
 - Give the content to the compiler. Note that the `compile.js` file already contains a variable, but the `sources['Inbox.sol']` field is empty.
 
-- Compile and extract the bytecode & ABI from the result.
+- Compile and extract the bytecode & ABI from the result (check [this](https://github.com/ethereum/solc-js) out :wink:).
 
 - Write the bytecode & ABI to the corresponding file in the `out` folder.
 
 As you've probably guessed, the bytecode contains a compiled version of your contract that will be executed by the EVM.
 You will use the ABI to interact with the contract.
 
-## Step 3 : Tests using mocha & chai :test_tube:
+## Step 3 : Tests using mocha & assert :test_tube:
 
 Time to test !
 The tests are very important while writing a smart contract, because once they're deployed on a real blockchain, you can not update or delete it.
@@ -100,8 +104,28 @@ Okay, time to test !
     - The initial message has been set to "PoC"
     - Every account can access the message
     - Every account can set a new message
-   
+    
+- Here is an example on how you can use mocha : 
+    ```javascript
+    const assert = require('assert');
+    
+    function add(a, b) {
+        return a + b;
+    }
   
+    describe('Add', () => {
+        it('should add two numbers', () => {
+            let a = 20;
+            let b = 22;
+  
+            assert.equal(add(a, b), 42);
+        });
+    });
+    ```
+    If you run `npm run tests`, you should see the test passing.
+    
+    Check [this](https://web3js.readthedocs.io/en/v1.3.0/web3-eth-contract.html#methods-mymethod-call) link for more information about how you can call your contract functions.
+
 ## Step 4 : Time to deploy :outbox_tray:
 
 Until now, you've only worked on your local ethereum network.
