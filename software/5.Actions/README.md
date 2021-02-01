@@ -35,11 +35,11 @@ Now it's time ! To begin with, you'll do a simple action by following these step
 
 ##### Setup workflow
 
-Create a file named `test.yaml` in the folder `.github/workflow`
+Create a file named `test.yaml` in the folder `.github/workflows`
 
 Write a github Action with the following properties:
   - name: Tests
-  - trigger event: `push` on branches `dev` and `master`
+  - trigger event: `push` on branches `dev` and `main`
   - one job called `hello-world` which run on `ubuntu-20.04`
     
 ##### First step
