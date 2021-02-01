@@ -73,8 +73,8 @@ Almost all the main file formats have some structural similarities :
 
 For example this is the format for JPEG:  [![](https://camo.githubusercontent.com/0e2fb017568710b28938c8749ded781b9163029c9e484720ea115e02f5c2ac55/68747470733a2f2f6968302e726564627562626c652e6e65742f696d6167652e313838393934303737352e363937332f666c61742c3130303078313030302c3037352c662e75312e6a7067)](https://camo.githubusercontent.com/0e2fb017568710b28938c8749ded781b9163029c9e484720ea115e02f5c2ac55/68747470733a2f2f6968302e726564627562626c652e6e65742f696d6167652e313838393934303737352e363937332f666c61742c3130303078313030302c3037352c662e75312e6a7067)
 
-## exorcism
-The pictures in  `eXORcism.zip`  has been inadvertently encrypted. We are counting on you to decrypt them.
+## Couple goal
+The pictures in  `goal.zip`  has been inadvertently encrypted. We are counting on you to decrypt them.
 
 # Asymmetric encryption
 The Advanced Encryption Standard (AES) is the first and only publicly accessible cipher approved by the US National Security Agency (NSA) for protecting top secret information. AES was first called Rijndael after its two developers, Belgian cryptographers Vincent Rijmen and Joan Daemen.
