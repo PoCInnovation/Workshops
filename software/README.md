@@ -56,4 +56,10 @@ Discover NetsJS back end Framework. You will :
 Win time as mobile developer with Expo. You will :
  - learn basics to React Native
  - create your own QR code scanner
+ 
+## 8 - [Learn Typescript](./8.Typescript)
+
+Learn Typescript by creating a complete Express API. You will :
+ - learn basics of Typescript
+ - understand API
 
