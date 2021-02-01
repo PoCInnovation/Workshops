@@ -61,6 +61,11 @@ Can you find what format this string is and break it ?
 
 `5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8`
 
+## Sha-ral
+Well, this time I think you should look the man before typing "Hash sha decrypt" on google.
+
+`96719db60d8e3f498c98d94155e1296aac105ck4923290c89eeeb3ba26d3eef92`
+
 # XOR
 
 Every documents, images, sounds … can be stored in a file. A file contains data which must be used to render its content. The data organisation in a file is defined by its file format specifications (pdf, jpg, png, wav, zip …).
