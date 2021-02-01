@@ -81,7 +81,7 @@ For example this is the format for JPEG:  [![](https://camo.githubusercontent.co
 ## Couple goal
 The pictures in  `goal.zip`  has been inadvertently encrypted. We are counting on you to decrypt them.
 
-# Asymmetric encryption
+# Symmetric encryption
 The Advanced Encryption Standard (AES) is the first and only publicly accessible cipher approved by the US National Security Agency (NSA) for protecting top secret information. AES was first called Rijndael after its two developers, Belgian cryptographers Vincent Rijmen and Joan Daemen.
 
 The following illustration shows how symmetric key encryption works:
@@ -110,7 +110,7 @@ The piece of software is in the `jacques.zip`
 
 PS: This excellent challenge was made by [Mathis Hammel](https://twitter.com/MathisHammel?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor), don't hesitate and follow hip on twitter !
 
-# Symmetric encryption
+# Asymmetric encryption
 RSA was first publicly described in 1977 by Ron Rivest, Adi Shamir and Leonard Adleman of the Massachusetts Institute of Technology.
 
 Asymmetric cryptography uses two different but mathematically linked keys, one public and one private. The public key can be shared with everyone, whereas the private key must be kept secret.
