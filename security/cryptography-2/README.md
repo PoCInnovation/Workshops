@@ -113,7 +113,7 @@ One of our VIP clients, who wishes to remain anonymous, has apparently been hack
 
 The piece of software is in the `jacques.zip`
 
-PS: This excellent challenge was made by [Mathis Hammel](https://twitter.com/MathisHammel?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor), don't hesitate and follow hip on twitter !
+PS: This excellent challenge was made by [Mathis Hammel](https://twitter.com/MathisHammel?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor), don't hesitate and follow him on twitter !
 
 # Asymmetric encryption
 RSA was first publicly described in 1977 by Ron Rivest, Adi Shamir and Leonard Adleman of the Massachusetts Institute of Technology.
