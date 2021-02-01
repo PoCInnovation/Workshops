@@ -102,6 +102,11 @@ AES-256, which has a key length of 256 bits, supports the largest bit size and i
 192 bits|6.2 x 10^57
 256 bits |1.1 x 10^77
 
+## Lock your screen
+OK GUYS !! EMERGENCY A TEK2 JUST PRANKED ME WHEN I LEFT MY COMPUTER UNLOCKED AND HE ENCRYPTED MY ENTIRE COMPUTER, HELP ME GET THIS VERY IMPORTANT FILE BACK !
+
+The file is `ultra_important_file.gif.enc`
+
 ## Jacques au secours !
 
 One of our VIP clients, who wishes to remain anonymous, has apparently been hacked and all their important documents are now corrupted. Can you help us recover the files? We found a strange piece of software that might have caused all of this.
