@@ -24,13 +24,12 @@ npm install express @types/express
 
 Le but de cet exercice est de mettre en place un serveur qui expose une route `/hello` qui retourne `world` lorsque vous l'appelez avec la méthode **GET**.
 
+Dans le fichier `src/server.ts` :
 - Créer une variable `server` qui vas instancier votre serveur express.
 - Lancer le serveur en écoutant sur le port `8080`.
 - Définir une route **GET** `/hello` qui renvoie `ẁorld`
 
 > Une pratique basique lorsque vous lancer un serveur est d'afficher un message avec l'adresse du serveur afin de pouvoir y accéder facilement.
-
-**Rendu :** `src/server.ts`.
 
 #### Ressources :
 - [Express](https://github.com/expressjs/express)
@@ -89,8 +88,6 @@ Votre application express devra par la suite utiliser (`use()`) sur ces 2 parser
 
 > [Postman](https://www.postman.com/) peut être utile pour tester vos routes HTTP.
 
-**Rendu :** `src/server.ts`.
-
 #### Ressources :
 - [Les cookies dans Express](https://github.com/expressjs/cookie-parser)
 - [Les headers dans Express](https://flaviocopes.com/express-headers/)
@@ -133,8 +130,6 @@ La bonne pratique est de créer un fichier `envrc.example` contenant les différ
 >
 > :warning: Il n'est pas rare de stocker des informations confidentielles dans l'environnement, veillez donc à ne jamais push votre environnement. Optez plutôt pour un fichier `env.example` qui spécifie les variables à rentrer par le développeur.
 
-**Rendu :** `src/serverConfig.ts` et `src/server.ts`.
-
 #### Ressources :
 - [Env-var](https://github.com/evanshortiss/env-var)
 - [Direnv](https://direnv.net/)
@@ -157,8 +152,6 @@ npm i http-status-codes
 ```
 
 Remplacez vos status-codes écrits en dur par ceux proposés dans le package.
-
-**Rendu :** `src/server.ts`.
 
 #### Ressources :
 - [Les principaux codes HTTP](https://medium.com/@sahelasumi/http-status-codes-31644d99fb1)
@@ -200,8 +193,6 @@ Vous pouvez renvoyer des informations sous diverses formes. La plus commune éta
 
 > Les paramètres de la requête sont un objet, n'oubliez pas ce détail.
 
-**Rendu :** `src/server.ts`.
-
 #### Ressources :
 - [Travailler avec un objet](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object)
 
@@ -231,8 +222,6 @@ Formatter les données c'est bien. Travailler avec, c'est mieux !
     ]
     ```
 
-**Rendu :** `src/server.ts`.
- 
 #### Ressources :
 - [Méthode applicable sur une string](https://www.tutorialspoint.com/typescript/typescript_strings.htm)
 
@@ -292,8 +281,6 @@ route.get('/my-route', myMiddleware, (req: Request, res: Response) => {...});
 
 > `server.use(myMiddleware())` permet d'appliquer votre middleware à toutes vos routes.
 
-**Rendu :** `src/serverSchema.ts`, `src/serverMiddlewares` et `src/server.ts`.
-
 #### Ressources :
 - [Zod](https://github.com/vriad/zod)
 - [Middleware](https://expressjs.com/en/guide/using-middleware.html)
@@ -329,8 +316,6 @@ const validate = (schema: any, location: string): void => (req: Request, res: Re
 >
 > Il est important de penser à créer des middlewares quand une même action se répète souvent dans vos routes, cela rend le code plus agréable à lire et assure une maintenabilité.
 
-**Rendu :** `src/serverMiddlewares.ts` et `src/server.ts`
-
 #### Ressources :
 - [Middleware express](https://expressjs.com/en/guide/using-middleware.html)
 - [Arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
@@ -353,8 +338,6 @@ Il s'agirait d'organiser ces routes dans différents fichiers et de les importer
 > Protip : `Express.Router()` sera très utile.
 
 > Lorsque vos middlewares ou vos routes se multiplient, il peut être utile de d'abord les grouper dans un fichier `serverRoutes.ts` et `serverMiddleware.ts` avant de les utiliser dans `server.ts`. Vous conservez ainsi une architecture simple et solide.
-
-**Rendu :** `src/routes/repeat.ts`, `src/routes/palindromes.ts` et `src/server.ts`.
 
 #### Ressources :
 - [Router express](https://expressjs.com/fr/guide/routing.html)
@@ -400,8 +383,6 @@ Dans le fichier `src/serverMiddlewares.ts`, créer un middleware `logMiddleware`
 > Logger la réponse nécessite un petit tour de passe-passe rendu possible grâce aux [events](https://nodejs.org/api/http.html).
 
 Appliquez le middleware à votre API et vérifiez que tout fonctionne en envoyant des requêtes.
-
-**Rendu :** `src/server.ts`, `src/serverLogger.ts`, `src/serverMiddlewares.ts`.
 
 #### Ressources
 - [Winston](https://github.com/winstonjs/winston)
