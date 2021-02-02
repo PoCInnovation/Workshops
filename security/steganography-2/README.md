@@ -13,6 +13,17 @@ The presence of cryptography reveals that something is hidden, and in many cases
 During this subject, we will introduce you to the concept of steganography and some of it's techniques. 
 You'll learn to detect those techniques but also to counter them in order to get the data they are trying to hide from you.
 
+## What you'll do
+
+ - Extract data from various types of files
+-  Hide data in various type of files
+
+## What you'll learn
+
+- LSB
+- Some ways to detect steganography in files
+- The use of various tools that will help you practice steganography
+
 # [](https://github.com/PoCInnovation/Pool2021/blob/master/Security/Steganography/student.md#useful-tools) Ressources
  - [Stegsolve](https://www.wechall.net/de/forum/show/thread/527/Stegsolve_1.3/) is an old but very useful tool that allows you to analyse an image with some filters.
  - [Steghide](https://github.com/StefanoDeVuono/steghide) is a steganography program that hides data in various kinds of image and audio files , only supports these file formats : `JPEG, BMP, WAV and AU`. but it’s also useful for extracting embedded and encrypted data from other files.
