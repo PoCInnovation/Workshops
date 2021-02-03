@@ -31,7 +31,7 @@ You can also create types for object, it's an interface :
 
 ```typescript
 interface Person {
-    name: string,
+    name: string;
     age: number;
 }
 
