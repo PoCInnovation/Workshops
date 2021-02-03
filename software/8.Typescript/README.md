@@ -129,8 +129,6 @@ Si votre `.envrc` contient des variables privées, il est impératif de ne pas l
 La bonne pratique est de créer un fichier `envrc.example` contenant les différentes variables mais sans leurs valeurs, afin d'indiquer ce qui sera par la suite nécessaire, puis de le remplir et de le renommer en `.envrc`.
 
 > Il est important de penser depuis le début de l'application à l'intégration de votre serveur dans une architecture Web en plaçant le maximum de variables susceptibles de changer dans l'environnement.
->
-> :warning: Il n'est pas rare de stocker des informations confidentielles dans l'environnement, veillez donc à ne jamais push votre environnement. Optez plutôt pour un fichier `env.example` qui spécifie les variables à rentrer par le développeur.
 
 #### Ressources :
 - [Env-var](https://github.com/evanshortiss/env-var)
