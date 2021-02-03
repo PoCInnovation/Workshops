@@ -94,7 +94,7 @@ Votre application express devra par la suite utiliser (`use()`) sur ces 2 parser
 - [Les cookies dans Express](https://github.com/expressjs/cookie-parser)
 - [Les headers dans Express](https://flaviocopes.com/express-headers/)
 
-## Step 04 : Toujours penser au scaling
+## Step 03 : Toujours penser au scaling
 
 Les variables d'environnement sont des variables utilisées par votre système d'exploitation dans de nombreux domaines. Elles sont visibles en tapant `env` dans votre terminal. 
 
@@ -136,7 +136,7 @@ La bonne pratique est de créer un fichier `envrc.example` contenant les différ
 - [Env-var](https://github.com/evanshortiss/env-var)
 - [Direnv](https://direnv.net/)
 
-## Step 03 : Les statuts HTTP
+## Step 04 : Les statuts HTTP
 
 Une API REST renvoie de la donnée en fonction de ce qu'un client demande, mais si jamais ce dernier tentait d'accéder à des données qui ne lui appartiennent pas, ou qui n'existent pas, notre api ne pourra pas lui envoyer ce qu'il demande.
 
