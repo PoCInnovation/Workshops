@@ -16,12 +16,13 @@ The shop will be decentralized, and every transfer will be immutable (no scam po
 
 Download and extract the `source.zip` file available [here](https://github.com/PoCInnovation/Workshops/raw/master/p2p/2.SmartShop/src/source.zip).
 
-Install the [metamask](https://metamask.io/) extension. Switch to the Ropsten test network and go to [this faucet](https://faucet.dimensions.network/).
-Paste your wallet account address to get 5 ether.
+Install the [metamask](https://metamask.io/) extension. Switch to the Goerli test network and go to [this faucet](https://goerli-faucet.slock.it/).
+Paste your wallet account address to get 0.05 ether.
 
 You can use the code editor of your choice, but we highly recommend using the online Remix Editor available [here](https://remix.ethereum.org).
 
 It has all required features for smart contract development :
+
 - A builtin Solidity compiler
 - A local ethereum network with 10 accounts already funded with 100 Ether
 - A syntax highlighter
@@ -33,6 +34,7 @@ When using this editor for testing purposes, don't forget to set your environmen
 
 First and because each one of them is different, you must create an abstraction of a product.
 It must contain basic fields such as :
+
 - The product name
 - The product price
 - The product owner's account address
@@ -59,6 +61,7 @@ don't forget to check how much ether where given in the `value` field of the mes
 The message is a global variable accessible everywhere in your contract. You can learn more about it [here](https://docs.soliditylang.org/en/v0.7.5/units-and-global-variables.html).
 
 So when buying a product, you must make sure that :
+
 - The amount of ether sent is the same as the one specified in the product price field.
 - Transfer the amount of ether received to the product owner
 - Delete the product in the global list
@@ -69,12 +72,14 @@ Now that you've done the smart contract, it's time to let the user actually inte
 
 The `source.zip` file you've extracted contains a boilerplate for this step.
 You can start the app by running the following command in the `src` folder :
+
 ```shell
 npm install && npm run start
 ```
 
 As you can see, there are some basic features already implemented.
 You must implement the following ones :
+
 - Update the `smartshopcontract.js` file with the correct information
 - Load the accounts provided by metamask in your browser. The [web3](https://web3js.readthedocs.io/en/v1.3.0/web3-eth.html) documentation should help you :wink:
 - Implement the function body used to interact with the smart contract in the `interact.js` file.
