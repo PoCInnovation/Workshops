@@ -14,6 +14,8 @@ Toutes les infos relatives à la préparation du workshop sont disponibles dans 
 
 Veillez à avoir terminé ses étapes avant de passer à la suite.
 
+Une cheatsheet sur les bases du Typescript est également disponible [ici](https://github.com/PoCInnovation/Workshops/blob/master/software/8.Typescript/HELP.md)
+
 ## Step 01 : Le Hello World du serveur web
 
 Pour créer un serveur web en TS, vous allez avoir besoin du package [express](https://github.com/expressjs/express).
