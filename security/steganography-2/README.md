@@ -51,16 +51,18 @@ You will find the tweet at [this](https://twitter.com/etarc0s/status/13566884350
 This challenge is here to introduce you to a reflex that you should have in every steganography challenge when you have an image or even an audio, analyzing the metadata. When a picture is taken/create metadata will be given with the file. For example some phones will put in the metadata the GPS coordinates where the photo was taken. In this challenge your job is to analyse the picture and find the flag.
 
  As always the challenge files are in `french_touch.zip`
+ 
+## Aviator
+My friend sent me this audio with absolutely no context. Help me to find what he is trying to say to me and of course I will give you some points. I am sure he is trying to make a joke or something but I can't be sure without the data hidden in the audio.
+
+You will find the .wav in `aviator.zip`
+
 
 ## [](https://github.com/PoCInnovation/Pool2021/blob/master/Security/Steganography/student.md#filter-pictures) Mystery box
 A friend sent you this photo saying it was very important,it's now time for you to challenge the mystery box !
 
  As always the challenge files are in `mysterybox.png`
  
-## Aviator
-My friend sent me this audio with absolutely no context. Help me to find what he is trying to say to me and of course I will give you some points. I am sure he is trying to make a joke or something but I can't be sure without the data hidden in the audio.
-
-You will find the .wav in `aviator.zip`
 ## [](https://github.com/PoCInnovation/Pool2021/blob/master/Security/Steganography/student.md#lsb) LSB
 
 One of the most popular techniques is 'least significant bit (LSB) steganography. In this type of steganography, the information hider embeds the secret information in the least significant bits of a media file.
