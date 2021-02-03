@@ -94,7 +94,7 @@ Votre application express devra par la suite utiliser (`use()`) sur ces 2 parser
 - [Les cookies dans Express](https://github.com/expressjs/cookie-parser)
 - [Les headers dans Express](https://flaviocopes.com/express-headers/)
 
-## Step 03 : Toujours penser au scaling
+## Step 04 : Toujours penser au scaling
 
 Les variables d'environnement sont des variables utilisées par votre système d'exploitation dans de nombreux domaines. Elles sont visibles en tapant `env` dans votre terminal. 
 
