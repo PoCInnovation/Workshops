@@ -60,7 +60,7 @@ You will find the .wav in `aviator.zip`
 
 
 ## [](https://github.com/PoCInnovation/Pool2021/blob/master/Security/Steganography/student.md#filter-pictures) Magic
-A friend sent you this photo saying it was very important,it's now time for you to challenge the mystery box !
+A friend sent you this photo saying it was very important,it's now time for you to challenge the Magic box !
 
  As always the challenge files are in `magic.png`
  
