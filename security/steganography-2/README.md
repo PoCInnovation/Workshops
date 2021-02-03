@@ -47,11 +47,16 @@ In `booh.zip` there is an audio that I made myself to have fun but I forgot what
 Well for this challenge there will be no `.zip` just the link to a tweet and from this tweet you will have to find the hidden flag.
 You will find the tweet at [this](https://twitter.com/etarc0s/status/1356688435042545671) link and now I guess it's your turn to find how to retrieve data from this tweet.
 
-## [](https://github.com/PoCInnovation/Pool2021/blob/master/Security/Steganography/student.md#filter-pictures) 101 Darmanins
+## [](https://github.com/PoCInnovation/Pool2021/blob/master/Security/Steganography/student.md#filter-pictures) French Touch
 This challenge is here to introduce you to a reflex that you should have in every steganography challenge when you have an image or even an audio, analyzing the metadata. When a picture is taken/create metadata will be given with the file. For example some phones will put in the metadata the GPS coordinates where the photo was taken. In this challenge your job is to analyse the picture and find the flag.
 
- As always the challenge files are in `101_darmanins.zip`
+ As always the challenge files are in `french_touch.zip`
 
+## [](https://github.com/PoCInnovation/Pool2021/blob/master/Security/Steganography/student.md#filter-pictures) Mystery box
+A friend sent you this photo saying it was very important,it's now time for you to challenge the mystery box !
+
+ As always the challenge files are in `mysterybox.png`
+ 
 ## Aviator
 My friend sent me this audio with absolutely no context. Help me to find what he is trying to say to me and of course I will give you some points. I am sure he is trying to make a joke or something but I can't be sure without the data hidden in the audio.
 
