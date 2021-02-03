@@ -30,6 +30,7 @@ You'll learn to detect those techniques but also to counter them in order to get
  - Strings is a basic linux command that displays the displayable strings in a file of any type. This should be one of the reflex that you should have when you see a file that you think contains hidden data.
  - [Sonic visualizer](https://www.sonicvisualiser.org) is a tool for viewing and analyzing the contents of audio files, however it can be helpful when dealing with audio steganography. You can reveal hidden shapes in audio files.
  - [exiftool](https://exiftool.org) is a great tool for working with metadata in image, audio, and video files. exiftool enables you to read, write, copy, and edit the metadata. It is interesting to note that exiftool can write to read-only files if the user has write permission in the directory.
+ - [binwalk](https://github.com/ReFirmLabs/binwalk)  is a tool for searching a given binary image for embedded files and executable code. Specifically, it is designed for identifying files and code embedded inside of firmware images.
 
 # [](https://github.com/PoCInnovation/Pool2021/blob/master/Security/Steganography/student.md#challenges)Challenges
 
