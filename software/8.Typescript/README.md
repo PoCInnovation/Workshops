@@ -14,6 +14,8 @@ Toutes les infos relatives à la préparation du workshop sont disponibles dans 
 
 Veillez à avoir terminé ses étapes avant de passer à la suite.
 
+Une cheatsheet sur les bases du Typescript est également disponible [ici](https://github.com/PoCInnovation/Workshops/blob/master/software/8.Typescript/HELP.md)
+
 ## Step 01 : Le Hello World du serveur web
 
 Pour créer un serveur web en TS, vous allez avoir besoin du package [express](https://github.com/expressjs/express).
@@ -123,18 +125,16 @@ Enfin, adaptez le code de la route **GET** `/hello` pour utiliser la variable `H
       - Définir le statut 404
       - Renvoyer `No Message Defined`
 
-Si votre `.envrc` contient des variables privées, il est impératif de ne pas le push sur un repo en temps normal.
-La bonne pratique est de créer un fichier `envrc.example` contenant les différentes variables mais sans leurs valeurs, afin d'indiquer ce qui sera par la suite nécessaire, puis de le remplir et de le renommer en `.env`.
+Si votre `.envrc` contient des variables privées, il est impératif de ne pas le push sur le repo.
+La bonne pratique est de créer un fichier `envrc.example` contenant les différentes variables mais sans leurs valeurs, afin d'indiquer ce qui sera par la suite nécessaire, puis de le remplir et de le renommer en `.envrc`.
 
 > Il est important de penser depuis le début de l'application à l'intégration de votre serveur dans une architecture Web en plaçant le maximum de variables susceptibles de changer dans l'environnement.
->
-> :warning: Il n'est pas rare de stocker des informations confidentielles dans l'environnement, veillez donc à ne jamais push votre environnement. Optez plutôt pour un fichier `env.example` qui spécifie les variables à rentrer par le développeur.
 
 #### Ressources :
 - [Env-var](https://github.com/evanshortiss/env-var)
 - [Direnv](https://direnv.net/)
 
-## Step 03 : Les statuts HTTP
+## Step 04 : Les statuts HTTP
 
 Une API REST renvoie de la donnée en fonction de ce qu'un client demande, mais si jamais ce dernier tentait d'accéder à des données qui ne lui appartiennent pas, ou qui n'existent pas, notre api ne pourra pas lui envoyer ce qu'il demande.
 

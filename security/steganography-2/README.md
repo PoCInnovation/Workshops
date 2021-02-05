@@ -59,10 +59,10 @@ My friend sent me this audio with absolutely no context. Help me to find what he
 You will find the .wav in `aviator.zip`
 
 
-## [](https://github.com/PoCInnovation/Pool2021/blob/master/Security/Steganography/student.md#filter-pictures) Mystery box
-A friend sent you this photo saying it was very important,it's now time for you to challenge the mystery box !
+## [](https://github.com/PoCInnovation/Pool2021/blob/master/Security/Steganography/student.md#filter-pictures) Magic
+A friend sent you this photo saying it was very important,it's now time for you to challenge the Magic box !
 
- As always the challenge files are in `mysterybox.png`
+ As always the challenge files are in `magic.png`
  
 ## [](https://github.com/PoCInnovation/Pool2021/blob/master/Security/Steganography/student.md#lsb) LSB
 
