@@ -65,15 +65,7 @@ Here are the most useful commands during a dynamic analysis in GDB :
 * `b*addr` where addr is the address of an instruction. This sets a breakpoint to this address.
 * `run` to go to the next breakpoint or to the end of the program if no breakpoint set.
 
-# 3 - The arena
-
-*Challenge name: arena*
-
-It's time to use your knowledge in a typical CTF exercice. The *arena* binary will take you through various way to check an input.
-Each step has its own logic : you have to find ways to go and to validate the final step.
-Try to strictly apply all the techniques you have learnt before !
-
-# 4 - First contact with protection
+# 3 - First contact with protection
 
 *Challenge name: Basic protection*
 
@@ -84,6 +76,14 @@ There various way of protecting a binary from Reverse Engineering, for example :
 * stripped binaries : remove the useful debugging information, which are basically metadata about variables and functions addresses and names.
 
 Try to identify which protection(s) is/are used on *im-protected*. Find a way to bypass it and solve the challenge !
+
+# 4 - The arena
+
+*Challenge name: arena*
+
+It's time to use your knowledge in a typical CTF exercice. The *arena* binary will take you through various way to check an input.
+Each step has its own logic : you have to find ways to go and to validate the final step.
+Try to strictly apply all the techniques you have learnt before !
 
 # 5 - Alien
 
