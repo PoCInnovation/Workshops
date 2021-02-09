@@ -1,56 +1,56 @@
 # AI Pool 2021 - Reinforcement Learning - AIO
 
-Ingenieur, nous devons reflechir à un plan B si nous ne réussissons pas à sauver la Terre.
+Ingénieur, nous devons réfléchir à un plan B si nous ne réussissons pas à sauver la Terre.
 
-La solution à l'étude est une migration de masse vers une nouvelle planette, nous pensons à Io le satellite naturel de Jupiter.
-Pour cela nous commençons par faire un retour sur notre bon vieux satellite, la Lune.
+La solution à l'étude est une migration de masse vers une nouvelle planète. Le candidat le plus prometteur est Io, un satellite naturel de Jupiter.
+Pour nous préparer, nous réaliserons d'abord un retour sur notre bon vieux satellite, la Lune.
 
-L'equipe scientifique à ainsi besoins d'une IA capable d'asssiter les astonautes à l'alunissage.
-Nous vous avons develloper un simulateur dernier cri qui vous aidera dans cette tage.
+L'équipe scientifique a ainsi besoin d'une IA capable d'assister les astronautes lors de la procédure d'alunissage.
+Nous avons développé un simulateur dernier cri qui vous aidera dans cette tâche.
 
-L'equipe scientifique à retrouver dans ses manuels un algorithmequi pourra vous aider, le Deep Q-learning.
+L'équipe scientifique a de plus retrouvé dans ses manuels un algorithme qui pourra vous aider, le Deep Q-learning.
 
 # Manuel Deep Q Learning
 
-Le souci majeurs avec le Q learning, c'est la Q table.
-Plus l'environement est complexe, plus la table sera grande et plus elle demandera de ressources pour être stockée et gèrée.
+Le problème majeur du Q learning, c'est la Q table.
+Plus l'environnement est complexe, plus la table sera grande, et plus elle demandera de mémoire et de puissance de calcul pour être stockée et manipulée.
 
-De plus dans un environement si complexe qu'un alunissage, il est impossible de prevoir tout les cas possible.
-Il faut donc estimer une fonction qui pour un state et une action donné return l'esperance de cette état.
+De plus dans un environement aussi complexe qu'un alunissage, il est impossible de prévoir tous les cas possibles.
+Il nous faut donc remplacer la Q table par une fonction qui pour un état et une action donnée, estime au mieux l'espérance de cet état.
 
-Vous savez ce qui est tres efficace pour estimer une fonction ? Les reseaux de neurones.
+Vous savez ce qui est très efficace pour estimer une fonction ? Les réseaux de neurones !
 
-Au lieu de stocker chacunes des valeurs possibles, vous allez entrainer une model de Deep learning à predire l'esperance pour un state et une action donnée.
-Ce model est appelé le polissy network.
+Au lieu de stocker chacune des valeurs possibles, vous allez entrainer un modèle de Deep Learning qui servira à prédire l'espérance d'un état et d'une action donnée.
+Ce modèle est appelé le **Policy Network**.
 
-Quelles sont donc les étapes à suivre ?
+Quelles sont les étapes à suivre ?
 
-- On store regulierement notre tuple (state, action, reward, next_state)
-- Au bout de X action, on commence l'entrainement de notre modele sur notre Replay memory
-- Pour un état $S$ que l'on donne à notre network $f$, $f$ estimera la Q-value pour chacunes des actions possibles ($Q(S,a_x)$).
-- On fait une prediction de $S'$ avec $f$ qui donnera notre max Q-value.
-- On calcule notre target Q-value en uttilisant l'equation de Bellman
-- On calcule la loss en comparant l'output de $f$ avec notre Target Q-value en calculant la MSE.
+- On stocke régulièrement notre tuple `(state, action, reward, next_state)` dans la mémoire.
+- Au bout de *N* actions, on commence l'entrainement de notre modèle sur notre mémoire.
+- Pour un état *S* que l'on donne à notre network *f*, *f* estimera la Q-value pour chacunes des actions possibles (*Q(S,a_x)*).
+- On réalise une prédiction de *S'* avec *f* pour obtenir notre Q-value maximum estimée.
+- On calcule notre Q-value réelle en utilisant l'équation de Bellman.
+- On calcule une loss MSE en comparant la sortie de *f*, la Q-value estimée, avec notre Q-value réelle.
 
 <img src="./.img/Deep_Q-Network_raining.png" width=600px />
 
-On entrainera alors notre model à minimiser cette loss comme pour n'importe quel autre modele de deep learning.
+On entrainera alors notre modèle à minimiser cette loss comme pour n'importe quel autre modèle de Deep Learning.
 
-On repetera ces étapes sur chacun des états rencontrés dans l'environement jusqu'a avoir minimiser suffisament la loss pour avoir une q-fonction précise.
+On répétera ces étapes sur chacuns des états rencontrés dans l'environement, jusqu'à avoir suffisament minimisé la loss, et ainsi avoir une Q-fonction précise.
 
-# Consigne
-- Créez un modele de Deep Learning apte à recevoir un state
-- Créez une memory (Replay memory) pour facilité l'apprentissage de votre agent
-- Créez une class agent qui aura un atribute network et differentes methodes pour apprendre
-- Solvez l'environement (CartPole-v1)[https://gym.openai.com/envs/CartPole-v1/] pour vous assurer du bon fonctionnement de votre agent
-- Soumettez un code capable de résoudre l'environeemnt l'environement (LunarLander-v2)[https://gym.openai.com/envs/LunarLander-v2/]
+# Consignes
+- Créez un modèle de Deep Learning capable de recevoir un state.
+- Créez une classe `Memory` (Replay memory) pour stocker les actions et les états.
+- Créez une classe `Agent` qui contiendra le modèle, ainsi que les différentes méthodes pour le faire apprendre.
+- Résolvez l'environement (CartPole-v1)[https://gym.openai.com/envs/CartPole-v1/] pour vous assurer du bon fonctionnement de votre agent
+- Soumettez un code capable de résoudre l'environnement (LunarLander-v2)[https://gym.openai.com/envs/LunarLander-v2/]
 
 **few tips**
-- On souhaite avoir autant d'output que d'action possible dans notre environement.
-- On ne souhaite pas avoir de fonction d'activation pour le dernier layer puisque que l'on souhaite avoir l'estimation brut de l'esperance.
-- On peut souhaiter de faire du preprocessing sur notre state si necessaire.
-- On souhaite mélanger notre memory regulierement pour eviter toutes corélations entre les données.
-- Pensez à l'integration GPU pour l'entrainement de votre modele
+- On souhaite avoir autant d'output dans notre modèle que d'actions possibles dans notre environement.
+- On ne souhaite pas avoir de fonction d'activation pour le dernier layer puisque que l'on souhaite avoir l'estimation brute de l'espérance.
+- On peut souhaiter de faire du préprocessing sur notre state si nécessaire.
+- On souhaite mélanger notre mémoire régulièrement pour éviter toute corrélations inattendue entre les données.
+- Pensez à l'intégration GPU pour l'entrainement de votre modèle.
 
 
 **Useful links:**
