@@ -21,7 +21,7 @@ In order to setup your workflow, in your repository:
 Thanks to the `Makefile`, your objective is to run unit-tests and functional tests in the `epitest docker image`. 
 We will create the same behavior in your CI so it's cool to understand steps first.
 
-You can create a container thanks to the command: `docker run --rm -it -v $PWD:/home/ -w /home epitechcontent/epitest-docker /bin/zsh`. It will setup a shell in the container.
+You can create a container thanks to the command: `sudo docker run --rm -it -v $PWD:/home/ -w /home epitechcontent/epitest-docker /bin/zsh`. It will setup a shell in the container.
 
 Now, run tests in the container
 
