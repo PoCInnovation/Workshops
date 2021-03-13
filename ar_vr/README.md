@@ -12,10 +12,13 @@ http://bit.ly/DiscordPoCEvents
 ### Workshop 2: [CardBoard VR - Video 360° VR](./Workshop2/Workshop2.pdf)
 - Compatibility : Andoid phone with at least version 4.4 (Kitkat)
 
-### Workshop 3: [AR Foundation - Tap Mole AR](./Workshop3/Workshop3.pdf)
+### Workshop 3: [CardBoard VR - Arizona Like](./Workshop3)
+- Compatibility : Andoid phone with at least version 4.4 (Kitkat)
+
+### Workshop 4: [AR Foundation - Tap Mole AR](./Workshop4/Workshop4.pdf)
 - Compatibility : [these phones](https://developers.google.com/ar/discover/supported-devices)
 - [Correction](./Workshop3/Workshop3-prof.pdf)
 
-### Workshop 4: [AR Foundation - Face AR](./Workshop4/Workshop4.pdf)
+### Workshop 5: [AR Foundation - Face AR](./Workshop5/Workshop5.pdf)
 - Compatibility : [these phones](https://developers.google.com/ar/discover/supported-devices)
 - [Correction](./Workshop4/Workshop4-prof.pdf)
