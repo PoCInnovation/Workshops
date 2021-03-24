@@ -2,6 +2,8 @@
 
 In this workshop we will learn how to use the main functions of the http package in Go and how to create a REST API.
 
+> :bulb: A quick [documentation](https://searchapparchitecture.techtarget.com/definition/RESTful-API) about REST API.
+
 ## Step 0: Initialization
 
 All the required information to install the workshop's dependencies are given in the [SETUP.md](./SETUP.md)
