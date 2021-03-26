@@ -1,17 +1,13 @@
-## Arizona VR
-
-Ce workshop est une initiation au developpement VR pour mobile.
-
-Le but est de recrée un mini shooter en VR en utilisant les éléments XR d'unity. Tout ce que vous apprendrez durant ce workshop est susceptible de vous servir pour réaliser des applications avec d'autres casques comme ceux d'oculus 
-par exemple.
-
-
 ## Prérequis
+---
 
 Avoir la LTS (2020.3.0f1) d'unity instalé sur votre ordinateur sous windows.
 N'oubliez pas d'ajouter le module `Android build support` lors de l'installation d'Unity.
 
 ## Préparation de Unity
+---
+
+Installation par google: https://developers.google.com/cardboard/develop/unity/quickstart
 
 Une première partie de setup est nécessaire pour vous permettre de faire tourner votre jeu en VR. Suivez attentivement chaque étape de cette partie et appelez un de vos encadrant au moindre doute.
 
@@ -22,8 +18,6 @@ Dans Unity, ouvrez \[Window\]->\[Package Manager\].
 Cliquez sur le \[+\] puis sur \[Add Package From git Url\] et collez cet url :
 
 [https://github.com/googlevr/cardboard-xr-plugin.git](https://github.com/googlevr/cardboard-xr-plugin.git)
-
-Importez le dossier Arizona Empty dans votre projet Unity.
 
 Dans \[File\]->\[Build settings\], choisissez comme plateforme de build Android. Confirmez votre choix en appuyant sur Switch Platform. Cliquez sur Open Scenes et sélectionnez HomeLand.
 
@@ -60,6 +54,7 @@ Cliquez sur \[XR Plugin Management\] et cochez \[CardBoard XR Plugin\].
 Puis dans \[File\]->\[Build Settings\], assurez-vous d'avoir branché votre appareil en mode débogage USB et développeur (disponible dans les paramètres de ce dernier).
 
 ## Arizona
+---
 
 ### La scène
 
