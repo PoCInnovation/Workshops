@@ -51,14 +51,19 @@ Prisma allows us to retrieve data from the database, but we then have to allow t
 You will have to install new packages to do this:
 
 <strong>Steps to install Apollo and Nexus</strong>
-- Download the [src](./src) folder from our repo: click [here](https://downgit.github.io/#/home?url=https://github.com/PoCInnovation/Workshops/tree/master/software/3.Prisma)
-- Extract the zip into your `starter` folder and replace the `package.json`.
-- Run `npm install` in your `starter` folder to install the new dependencies.
+- Create a new folder named `prisma-nexus-gql`.
+- Download the [zip](./src/3.prisma.zip) from our repo.
+- Extract the zip into your `prisma-nexus-gql`.
+- Run `npm install` in your `prisma-nexus-gql` folder to install the new dependencies.
+- Run `npm run migration` to migrate the prisma schema in the database.
+- Run `npm run generate` to generate prisma client and graphql queries.
 
-If you subsequently run `npm run dev`, you will get an error, which is normal. For the server to run properly, you have to add an `objectType` that defines the `Post` table in `schema.js` .  
-An example of the `User` table is present in the file, it's up to you to do `Post`.
+> You should see a warning message when you generate the schema.
 
-> [Nexus model documentation](https://nexusjs.org/docs/pluginss/prisma/api#tmodel)
+If you subsequently run `npm start`, you will get a warning, which is normal. For the server to run properly, you have to add an `objectType` that defines the `Post` table in the `entities` folder.  
+An example of the `User` table is present in the folder, it's up to you to do `Post`.
+
+> [Nexus model documentation](https://nexusjs.org/docs/plugins/prisma/overview)
 
 ## Step 4: Setting up the CRUD with Nexus
 
@@ -66,7 +71,7 @@ Now that your models are well defined, you can implement the data manipulations 
 
 You will build in your schema a `Query` object that will contain the methods to read data and a `Mutation` object that will contain the methods to edit data (add / update / delete).
 
-- For them to take effect, you will have to add these objects to the `type` field of your `schema` defined at the end of [schema.js](./src/schema.js).
+- For them to take effect, you will have to add these objects to the `type` field of your `schema` defined in `schema.ts`.
 
 > Nexus documentation about [Queries](https://nexusjs.org/docs/api/query-field) and [Mutations](https://nexusjs.org/docs/api/mutation-field)  
 > The `resolve` field is where you will call prisma to query data inside the database
