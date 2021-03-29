@@ -225,5 +225,5 @@ If you finished the workshop and don't know what to do until the end, you can tr
 
 ## Authors
 - [Paul Monnery](https://github.com/PaulMonnery/)
-- [Naoufesse Berrada](https://github.com/nowlow/)
+- [Naoufel Berrada](https://github.com/nowlow/)
 - [Cyril de Lajudie](https://github.com/Axoloot/)
