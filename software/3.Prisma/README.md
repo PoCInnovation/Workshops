@@ -76,7 +76,7 @@ You will build in your schema a `Query` object that will contain the methods to 
 > Nexus documentation about [Queries](https://nexusjs.org/docs/api/query-field) and [Mutations](https://nexusjs.org/docs/api/mutation-field)  
 > The `resolve` field is where you will call prisma to query data inside the database
 
-To test the queries/mutations you are going to set up, you can go to http://localhost:4000/ to use a playground that lets you to test your server.
+To test the queries/mutations you are going to set up, you can go to http://localhost:3000/ to use a playground that lets you to test your server.
 
 We already gave the `getUsers` query and the `signupUser` mutation to let you see what the syntax looks like, and make it easier to create the next ones.  
 Below, we also give you examples to test your queries and mutations.
@@ -220,10 +220,11 @@ mutation {
 
 If you finished the workshop and don't know what to do until the end, you can try to:
 - Use the prisma studio to manipulate your db with a web interface. Run `npx prisma studio --experimental --port 3000`
-- Use the Nexus CRUD functions to drastically reduce your code, see the [documentation](https://nexusjs.org/docs/pluginss/prisma/api#tcrud)
+- Use the Nexus CRUD functions to drastically reduce your code, see the [documentation](https://nexusjs.org/docs/plugins/prisma/overview#example)
 - Update the database model to add new columns and tables, and your API with it.
 
 ## Authors
 - [Paul Monnery](https://github.com/PaulMonnery/)
 - [Naoufel Berrada](https://github.com/nowlow/)
 - [Cyril de Lajudie](https://github.com/Axoloot/)
+- [Tom Chauveau](https://github.com/TomChv/)
