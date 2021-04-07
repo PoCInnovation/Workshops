@@ -35,7 +35,7 @@ Display your component's props with a cool [style](https://developer.mozilla.org
 
 Create two events in your `App.svelte` and display it well.
 
-##### :bulb: Resources
+##### Resources
 
 - [Import component in Svelte](https://svelte.dev/tutorial/nested-components)
 - [Properties with Svelte](https://svelte.dev/tutorial/declaring-props)
