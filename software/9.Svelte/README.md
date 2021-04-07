@@ -44,7 +44,7 @@ Create two events in your `App.svelte` and display it well.
 
 ## Step 2 - Beach umbrella
 
-You got events, that's cool but isn't sad ? Your application has no top bar !
+You got events, that's cool ! But your application has no top bar, isn't sad ? 😢
 
 Create a new component named `TopBar` that has a `title`.
 
