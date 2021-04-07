@@ -21,11 +21,11 @@ To begin with, we will learn how create a simple component and display it in our
 Create a directory `components` which will contain a file named `Event.svelte`.
 
 This component must be a simple `div` which contains the following props :
-  - an `id`
-  - a `title`
-  - a `description`
-  - a `starting date`
-  - an `end Date`
+  - `id`
+  - `title`
+  - `description`
+  - `starting date`
+  - `end Date`
 
 > :bulb: You can export these variables as type with a [script module](https://stackoverflow.com/questions/64064506/export-typescript-type-in-svelte-file) to define your properties.
 
@@ -71,10 +71,10 @@ You must display another `Button` to close the page when she's open.
 Add fields to your `Form` component to add new events.
 
 You must add the following fields :
-  - event name
-  - description
-  - start date
-  - end date
+  - `event name`
+  - `description`
+  - `start date`
+  - `end date`
 
 > :bulb: [input](https://developer.mozilla.org/fr/docs/Web/HTML/Element/Input) tag will be useful.
 
