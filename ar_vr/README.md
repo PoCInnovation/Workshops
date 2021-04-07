@@ -22,3 +22,6 @@ http://bit.ly/DiscordPoCEvents
 ### Workshop 5: [AR Foundation - Face AR](./Workshop5/Workshop5.pdf)
 - Compatibility : [these phones](https://developers.google.com/ar/discover/supported-devices)
 - [Correction](./Workshop4/Workshop4-prof.pdf)
+
+### Workshop 6: [Mock HMD - Minimalist VR](./Workshop6)
+- Need Unity 2020.3.0f1 at least
