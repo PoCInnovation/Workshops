@@ -63,3 +63,12 @@ Learn Typescript by creating a complete Express API. You will :
  - learn basics of Typescript
  - understand API
 
+## 9 - [Create an Event Calendar with Svelte](./9.Svelte)
+
+Learn the basic of Svelte by creating a simple application to manage your events.
+You will :
+  - start  a simple Svelte project
+  - learn Svelte basics functionalities
+  - understand Svelte advantages
+  - deploy a Svelte app through Dockerfile
+  
