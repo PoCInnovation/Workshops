@@ -18,9 +18,9 @@ All the required information to install dependencies can be found in [SETUP.md](
 
 To begin with, we will learn how create a simple component and display it in our page.
 
-Create a directory `components` which will contain a file named `Event.svelte`.
+Create a `components` directory which will contain a file named `Event.svelte`.
 
-This component must be a simple `div` which contains the following props :
+This component must be a simple `div` which contain the following props :
   - `id`
   - `title`
   - `description`
@@ -31,9 +31,9 @@ This component must be a simple `div` which contains the following props :
 
 Display your component's props with a cool [style](https://developer.mozilla.org/en-US/docs/Web/CSS).
 
-> :bulb: Maybe you can create an array with all months and use it to display month properly, you can also do it for days.
+> :bulb: You may want to create an array with every months of the year displayed properly. The same applies for days in a week
 
-Create two events in your `App.svelte` and display it well.
+Create two events in your `App.svelte` and display them well.
 
 ##### Resources
 
@@ -52,7 +52,7 @@ Your topBar must be `fixed` at the top of your page and display the title of you
 
 > :bulb: Fixed property can help you to fix your bar 
 
-> Don't forget to stylized your component.
+> Don't forget to apply style on your component.
 
 ## Step 3 - Pop forms
 
@@ -108,8 +108,8 @@ docker run -p 5000:5000 workshop-poc/svelte:v1
 
 Check these bonuses to go further
 
-- Upgrade the style of your project with an [ui library](https://madewithsvelte.com/ui-library).
-- Add a login pages to handle multiple users in your application.
+- Upgrade the style of your project using an [ui library](https://madewithsvelte.com/ui-library).
+- Add a login page to handle multiple users in your application.
 - Create a dark theme for your application.
 
 ## Go further
