@@ -108,19 +108,9 @@ docker run -p 5000:5000 workshop-poc/svelte:v1
 
 Check these bonuses to go further
 
-##### UI Libraries
-
-Upgrade the style of your project with an [ui library](https://madewithsvelte.com/ui-library).
-
-Play with pre-made components.
-
-##### User management
-
-Add a login pages to handle multiple users in your application.
-
-#### Dark theme
-
-Create a dark theme for your application.
+- Upgrade the style of your project with an [ui library](https://madewithsvelte.com/ui-library).
+- Add a login pages to handle multiple users in your application.
+- Create a dark theme for your application.
 
 ## Go further
 
