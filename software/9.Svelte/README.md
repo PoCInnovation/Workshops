@@ -122,4 +122,4 @@ Check these bonuses to go further
 
 ## Authors
 
-- [Tom Chauveau](https://github.com/TomChv).
+- [Tom Chauveau](https://github.com/TomChv)
