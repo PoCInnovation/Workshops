@@ -24,8 +24,8 @@ This component must be a simple `div` which contains the following props:
   - `id`
   - `title`
   - `description`
-  - `starting date`
-  - `end date`
+  - `startingDate`
+  - `endDate`
 
 > :bulb: You can export these variables as types with a [script module](https://stackoverflow.com/questions/64064506/export-typescript-type-in-svelte-file) to define your properties.
 
