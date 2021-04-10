@@ -18,7 +18,7 @@ All the required information to install dependencies can be found in [SETUP.md](
 
 To begin with, we will learn how to create a simple component and display it in our page.
 
-Create a `components` directory which will contain a file named `Event.svelte`.
+Create a `components` directory in `src/` which will contain a file named `Event.svelte`.
 
 This component must be a simple `div` which contains the following props:
   - `id`
