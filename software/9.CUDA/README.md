@@ -43,6 +43,8 @@ Celle-ci devra afficher la chaîne de caractères "Hello CUDA World idx", ou idx
 
 - [Les index sur CUDA](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#threadidx).
 
+- [Portée des fonctions executés sur CUDA](https://stackoverflow.com/questions/12373940/difference-between-global-and-device-functions).
+
 ## **Step 2 - Summing up two arrays :twisted_rightwards_arrows:**
 
 > :triangular_flag_on_post: **Première tâche : additionner 2 listes qui contiennent chacune 1 000 000 d'éléments.**
