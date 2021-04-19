@@ -41,7 +41,7 @@ Votre tâche est donc d'exploiter la puissance de votre GPU pour additionner plu
 - 1024 thread différents sur 1 seul block.
   À votre avis, combien d'éléments chaque thread doit-il additionner :roll_eyes: ?
 
-- La copie de la liste contenant le résultat de l'addition du GPU vers le Host.
+- La copie de la liste contenant le résultat de l'addition du Device vers le Host.
 
 - La synchronisation des threads. On ne veut pas de *race condition*.
 
