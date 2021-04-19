@@ -10,6 +10,8 @@ Puis vous vous pencherez sur un problème plus conséquent : l'application d'un 
 
 >:checkered_flag:  **Avant de débuter, il est nécessaire que vous compreniez quelques termes.**
 
+La syntaxe de CUDA est très similaire à celle du C / C++.
+
 :warning: **Vous trouverez une explication détaillée [ici](https://dev.to/zenulabidin/an-overview-of-cuda-part-2-host-and-device-code-69d) des deux premiers points** :warning:.
 
 1. Lorsqu'il est question du GPU, y compris de sa mémoire VRAM, le terme utilisé est **Device**.
