@@ -24,7 +24,7 @@ Avant de débuter, il est nécessaire que vous compreniez quelques termes.
 Voici un schéma descriptif, car *une image vaut mieux que mille mots*.
 
 <div align="center">
-    <img src="../../.github/assets/grid-of-thread-blocks.png" width=50%"/>
+    <img src="../../.github/assets/threads.png" width=50%"/>
 </div>
 
 ## **Step 1 - Summing up arrays :twisted_rightwards_arrows:**
