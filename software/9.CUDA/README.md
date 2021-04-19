@@ -47,7 +47,7 @@ Votre tâche est donc d'exploiter la puissance de votre GPU pour additionner plu
 
 Pour finir, vous afficherez la liste resultante de l'addition des 2 autres.
 
-Voici les ressources dont vous aurez besoin :
+:warning: ***Voici les ressources dont vous aurez besoin*** :warning: :
 
 - [Les fonctions permettant de gérer la mémoire (CRTL + F -> MEM... ou MAL... :wink:)](https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__MEMORY.html).
 
