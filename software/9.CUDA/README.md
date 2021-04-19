@@ -8,11 +8,15 @@ Puis vous vous pencherez sur un problème plus conséquent : l'application d'un 
 
 ## **Step 0 - Initialization :rocket:**
 
-Avant de débuter, il est nécessaire que vous compreniez quelques termes.
+>:checkered_flag:  **Avant de débuter, il est nécessaire que vous compreniez quelques termes.**
+
+:warning: **Vous trouverez une explication détaillée [ici](https://dev.to/zenulabidin/an-overview-of-cuda-part-2-host-and-device-code-69d) des deux premiers points** :warning:.
 
 1. Lorsqu'il est question du GPU, y compris de sa mémoire VRAM, le terme utilisé est **Device**.
 
 2. À l'inverse, lorsqu'il est question du CPU et de la mémoire RAM classique, le terme utilisé est **Host**.
+
+:warning: **Vous trouverez une explication détaillée [ici](https://en.wikipedia.org/wiki/Thread_block_(CUDA_programming)) des deux derniers points** :warning:.
 
 3. Les coeurs CUDA peuvent être représentés sur un repère à 3 dimensions.
    Dans un souci de simplicité, nous nous contenterons d'une seule dimension.
