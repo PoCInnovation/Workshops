@@ -29,7 +29,7 @@ Voici un schéma descriptif, car *une image vaut mieux que mille mots*.
 
 ## **Step 1 - Summing up two arrays :twisted_rightwards_arrows:**
 
-> **Première tâche : additioner 2 listes qui contiennent chacune 1 000 000 d'éléments.**
+> **Première tâche : additionner 2 listes qui contiennent chacune 1 000 000 d'éléments.**
 
 Voici la situation : on vous donne 2 très grandes listes de nombre que vous devez additioner.
 
