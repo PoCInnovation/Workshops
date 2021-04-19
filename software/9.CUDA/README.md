@@ -2,7 +2,7 @@
 
 Durant ce workshop vous apprendrez à utiliser CUDA, l'API developpé par Nvidia permettant de réaliser des programmes qui utilisent les coeurs des cartes graphiques du même constructeur.
 
-Dans un premier temps, vous développerez une application capable d'additioner 2 listes de très grande tailles.
+Dans un premier temps, vous développerez une application capable d'additionner 2 listes de très grande tailles.
 
 Puis vous vous pencherez sur un problème plus conséquent : l'application d'un filtre sur une image.
 
@@ -31,7 +31,7 @@ Voici un schéma descriptif, car *une image vaut mieux que mille mots*.
 
 > **Première tâche : additionner 2 listes qui contiennent chacune 1 000 000 d'éléments.**
 
-Voici la situation : on vous donne 2 très grandes listes de nombre que vous devez additioner.
+Voici la situation : on vous donne 2 très grandes listes de nombre que vous devez additionner.
 
 Votre CPU va vite, très vite, mais son nombre de coeurs est limité (pas plus de 128 pour les meilleurs).
 L'addition est une tâche plutôt rapide à exectuer et les coeurs de votre GPU, qui sont eux moins puissants que ceux de votre CPU, sont présents par milliers sur votre appareil.
