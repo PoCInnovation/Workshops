@@ -29,9 +29,7 @@ Voici un schéma descriptif, car *une image vaut mieux que mille mots*.
 
 ## **Step 1 - Summing up two arrays :twisted_rightwards_arrows:**
 
-> **Première tâche : additionner 2 listes qui contiennent chacune 1 000 000 d'éléments.**
-
-Voici la situation : on vous donne 2 très grandes listes de nombre que vous devez additionner.
+> :triangular_flag_on_post: **Première tâche : additionner 2 listes qui contiennent chacune 1 000 000 d'éléments.**
 
 Votre CPU va vite, très vite, mais son nombre de coeurs est limité (pas plus de 128 pour les meilleurs).
 L'addition est une tâche plutôt rapide à exectuer et les coeurs de votre GPU, qui sont eux moins puissants que ceux de votre CPU, sont présents par milliers sur votre appareil.
@@ -63,7 +61,7 @@ Voici les ressources dont vous aurez besoin :
 
 Bravo, vous êtes desormais à l'aise avec CUDA ! Maintenant, voyons un exemple plus... compliqué :dizzy_face:.
 
-> **Seconde tâche : parcourir une image en couleur et déterminer la valeur de gris de chaque pixel pour transformer l'image en noir et blanc.**
+> :triangular_flag_on_post: **Seconde tâche : parcourir une image en couleur et déterminer la valeur de gris de chaque pixel pour transformer l'image en noir et blanc.**
 
 ## Authors
 
