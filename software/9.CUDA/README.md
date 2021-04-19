@@ -26,6 +26,7 @@ Voici un schéma descriptif, car *une image vaut mieux que mille mots*.
 <div align="center">
     <img src="../../.github/assets/grid-of-thread-blocks.png" width=50%"/>
 </div>
+
 ## **Step 1 - Summing up arrays :twisted_rightwards_arrows:**
 
 > **Première tâche : additioner 2 listes qui contiennent chacune 1 000 000 d'éléments.**
