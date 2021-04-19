@@ -27,7 +27,7 @@ Voici un schéma descriptif, car *une image vaut mieux que mille mots*.
     <img src="../../.github/assets/threads.png" width=50%"/>
 </div>
 
-## **Step 1 - Summing up arrays :twisted_rightwards_arrows:**
+## **Step 1 - Summing up two arrays :twisted_rightwards_arrows:**
 
 > **Première tâche : additioner 2 listes qui contiennent chacune 1 000 000 d'éléments.**
 
