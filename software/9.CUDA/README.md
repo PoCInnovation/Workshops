@@ -32,11 +32,11 @@ Voici un schéma descriptif, car *une image vaut mieux que mille mots*.
 > :triangular_flag_on_post: **Première tâche : additionner 2 listes qui contiennent chacune 1 000 000 d'éléments.**
 
 Votre CPU va vite, très vite, mais son nombre de coeurs est limité (pas plus de 128 pour les meilleurs).
-L'addition est une tâche plutôt rapide à exectuer et les coeurs de votre GPU, qui sont eux moins puissants que ceux de votre CPU, sont présents par milliers sur votre appareil.
+L'addition est une tâche plutôt rapide à executer et les coeurs de votre GPU sont eux  présents par milliers sur votre appareil.
 
 Votre tâche est donc d'exploiter la puissance de votre GPU pour additionner plus rapidement les 2 listes en utilisant :
 
-- L'allocation mémoire de votre GPU, puisque vous devrez copier les 2 listes sur la VRAM du GPU afin que ses coeurs puissent y avoir accès.
+- L'allocation mémoire de votre GPU, puisque vous devrez copier les 2 listes sur la [VRAM](https://en.wikipedia.org/wiki/Video_RAM_(dual-ported_DRAM)) du GPU afin que ses coeurs puissent y avoir accès.
 
 - 1024 thread différents sur 1 seul block.
   À votre avis, combien d'éléments chaque thread doit-il additionner :roll_eyes: ?
