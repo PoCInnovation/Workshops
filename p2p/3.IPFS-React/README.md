@@ -7,7 +7,7 @@ Vous serez amenés à instancier un noeud IPFS dans votre navigateur en utilisan
 
 ## Step 0 - Initialization :rocket:
 
-Please follow the instructions given [here](./README.md) :wink:.
+Please follow the instructions given [here](./SETUP.md) :wink:.
 
 ## Step 1 - Start an IPFS instance :computer:
 
