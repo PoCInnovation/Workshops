@@ -47,6 +47,8 @@ Celle-ci devra afficher la chaîne de caractères "Hello CUDA World idx", ou idx
 
 - [Portée des fonctions executés sur CUDA](https://stackoverflow.com/questions/12373940/difference-between-global-and-device-functions).
 
+- [Lancement d'un kernel sur x blocks contenants y threads](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#kernels).
+
 ## **Step 2 - :twisted_rightwards_arrows: Summing up two arrays**
 
 > :triangular_flag_on_post: **Première tâche : additionner 2 listes qui contiennent chacune 1 000 000 d'éléments.**
@@ -70,10 +72,6 @@ Pour finir, vous afficherez la liste resultante de l'addition des 2 autres.
 :warning: ***Voici les ressources dont vous aurez besoin*** :warning: :
 
 - [Les fonctions permettant de gérer la mémoire (CRTL + F -> MEM... ou MAL... :wink:)](https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__MEMORY.html).
-
-- [Lancement d'un kernel sur x blocks contenants y threads](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#kernels).
-
-- [Portée des fonctions executés sur CUDA](https://stackoverflow.com/questions/12373940/difference-between-global-and-device-functions).
 
 - [Synchronisation des threads](https://www.google.com/).
 
