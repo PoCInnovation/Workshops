@@ -6,7 +6,7 @@ Dans un premier temps, vous développerez une application capable d'additionner 
 
 Puis vous vous pencherez sur un problème plus conséquent : l'application d'un filtre sur une image.
 
-## **Step 0 - Initialization :rocket:**
+## **Step 0 - :rocket: Initialization**
 
 >:checkered_flag:  **Avant de débuter, il est nécessaire que vous compreniez quelques termes.**
 
@@ -31,7 +31,7 @@ Voici un schéma descriptif, car *une image vaut mieux que mille mots*.
     <img src="../../.github/assets/threads.png" width=50%"/>
 </div>
 
-## **Step 1 - Hello CUDA World** :wave:
+## **Step 1 - :wave: Hello CUDA World**
 
 > :triangular_flag_on_post: **Première tâche : classique, mais efficace. Hello CUDA World.**
 
@@ -45,7 +45,7 @@ Celle-ci devra afficher la chaîne de caractères "Hello CUDA World idx", ou idx
 
 - [Portée des fonctions executés sur CUDA](https://stackoverflow.com/questions/12373940/difference-between-global-and-device-functions).
 
-## **Step 2 - Summing up two arrays :twisted_rightwards_arrows:**
+## **Step 2 - :twisted_rightwards_arrows: Summing up two arrays**
 
 > :triangular_flag_on_post: **Première tâche : additionner 2 listes qui contiennent chacune 1 000 000 d'éléments.**
 
@@ -75,7 +75,7 @@ Pour finir, vous afficherez la liste resultante de l'addition des 2 autres.
 
 - [Synchronisation des threads](https://www.google.com/).
 
-## **Step 3 - Image filter :framed_picture:**
+## **Step 3 - :framed_picture: Image filter**
 
 Bravo, vous êtes desormais à l'aise avec CUDA ! Maintenant, voyons un exemple plus... compliqué :dizzy_face:.
 
