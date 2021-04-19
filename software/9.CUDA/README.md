@@ -37,7 +37,7 @@ Voici un schéma descriptif, car *une image vaut mieux que mille mots*.
 
 Pour vous familiariser avec CUDA, vous allez commencer par lancer une fonction sur 2 threads.
 
-Celle-ci devra afficher la chaîne de caractères "Hello CUDA World idx", ou idx correspond à l'index du thread.
+Celle-ci devra afficher la chaîne de caractères "Hello CUDA World idx", ou idx correspond à l'index du thread sur la dimension x.
 
 :warning: ***Voici les ressources dont vous aurez besoin*** :warning: :
 
