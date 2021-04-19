@@ -63,7 +63,7 @@ Voici les ressources dont vous aurez besoin :
 
 Bravo, vous êtes desormais à l'aise avec CUDA ! Maintenant, voyons un exemple plus... compliqué :dizzy_face:.
 
-> **Seconde tâche : parcourir une image en couleur et déterminer la valeur de gris de chaque pixel.**
+> **Seconde tâche : parcourir une image en couleur et déterminer la valeur de gris de chaque pixel pour transformer l'image en noir et blanc.**
 
 ## Authors
 
