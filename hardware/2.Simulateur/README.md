@@ -1,6 +1,4 @@
 # Simulateur
-<style>H2{color:#fcb400;}</style>
-
 ## Step 0: Go to the simulator
 
 Go to ![TinkerCad](https://www.tinkercad.com/)  
