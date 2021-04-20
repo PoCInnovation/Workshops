@@ -1,4 +1,4 @@
-# **CUDA**
+# **CUDA et accélération matérielle**
 
 Durant ce workshop vous apprendrez à utiliser CUDA, l'API developpé par Nvidia permettant de réaliser des programmes qui utilisent les coeurs des cartes graphiques à la place de ceux de votre processeur.
 
