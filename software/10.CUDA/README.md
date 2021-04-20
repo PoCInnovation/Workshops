@@ -10,7 +10,7 @@ Enfin vous vous pencherez sur un problème plus conséquent : transformer une im
 
 ## **Step 0 - :rocket: Initialization**
 
-You must download and extract the [following resources](https://github.com/PoCInnovation/Workshops/tree/cuda/software/10.CUDA).
+:ghost: **You must download and extract the [following resources](https://github.com/PoCInnovation/Workshops/raw/cuda/software/10.CUDA/CUDA_steps.zip).**
 
 >:checkered_flag:  **Avant de débuter, il est nécessaire que vous compreniez quelques termes.**
 
