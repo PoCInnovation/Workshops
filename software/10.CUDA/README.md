@@ -1,12 +1,12 @@
 # **CUDA et accélération matérielle**
 
-Durant ce workshop vous apprendrez à utiliser CUDA, l'API developpé par Nvidia permettant de réaliser des programmes qui utilisent les coeurs des cartes graphiques à la place de ceux de votre processeur.
+Durant ce workshop vous apprendrez à utiliser CUDA, l'API développé par Nvidia permettant de réaliser des programmes qui utilisent les cœurs des cartes graphiques à la place de ceux de votre processeur.
 
-Dans une premier temps, vous ferez en sorte d'executer un Hello World sur plusieurs coeurs d'un GPU en parallèle.
+Dans un premier temps, vous ferez en sorte d'exécuter un Hello World sur plusieurs cœurs d'un GPU en parallèle.
 
-Puis, vous développerez une application capable d'accelerer l'addition de 2 listes de très grande tailles.
+Puis, vous développerez une application capable d'accélérer l'addition de 2 listes de très grandes tailles.
 
-Enfin vous vous pencherez sur un problème plus conséquent : transformer une image en couleur en une image en noir et blanc.
+Enfin, vous vous pencherez sur un problème plus conséquent : transformer une image en couleur en une image en noir et blanc.
 
 ## **Step 0 - :rocket: Initialization**
 
@@ -26,15 +26,15 @@ La syntaxe de CUDA est très similaire à celle du C / C++.
 
 1. Dans les ressources et durant vos recherches, le terme utilisé pour designer le processeur (CPU) ainsi que la mémoire classique (RAM) est **Host**.
 
-2. Lorsqu'il est question de la carte graphique (GPU) ainsi que de la mémoire de cell-ci (VRAM), le terme utilisé est **Device**.
+2. Lorsqu'il est question de la carte graphique (GPU) ainsi que de la mémoire de celle-ci (VRAM), le terme utilisé est **Device**.
 
 > :warning: **Vous trouverez une explication détaillée [ici](https://en.wikipedia.org/wiki/Thread_block_(CUDA_programming)) des deux derniers points**.
 
-3. Afin de mieux organiser l'execution en parallele des coeurs du GPU, appelé un thread, ils sont représentés sur un repère à 3 dimensions.
+3. Afin de mieux organiser l'exécution en parallele des cœurs du GPU, appelé un thread, ils sont représentés sur un repère à 3 dimensions.
 
-4. Les threads sont regroupés en blocks, eux aussi représentés sur un repère à 3 dimensions : la GRID.
+4. Les threads sont regroupés en blocs, eux aussi représentés sur un repère à 3 dimensions : la GRID.
 
-Voici un schéma descriptif, car *une image vaut mieux que mille mots*, de l'organisation des threads en blocks dans une grille en 2 dimensions.
+Voici un schéma descriptif, car *une image vaut mieux que mille mots*, de l'organisation des threads en blocs dans une grille en 2 dimensions.
 
 <div align="center">
     <img src="../../.github/assets/CUDAthreads.png" width=50%"/>
@@ -44,7 +44,7 @@ Voici un schéma descriptif, car *une image vaut mieux que mille mots*, de l'org
 
 > :triangular_flag_on_post: **Première tâche : classique, mais efficace. Hello CUDA World.**
 
-:heavy_check_mark: Executer du code avec CUDA
+:heavy_check_mark: Exécuter du code avec CUDA
 
 :heavy_check_mark: Indexer des threads
 
@@ -58,13 +58,14 @@ Celle-ci devra afficher la chaîne de caractères `"Hello CUDA World {idx}"`, ou
 
 - [L'indexation sur CUDA](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#threadidx).
 
-- [Portée des fonctions executés sur CUDA](https://stackoverflow.com/questions/12373940/difference-between-global-and-device-functions).
+- [Portée des fonctions exécutés sur CUDA](https://stackoverflow.com/questions/12373940/difference-between-global-and-device-functions).
 
-- [Lancement d'un kernel sur x blocks contenants y threads](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#kernels).
+- [Lancement d'un kernel sur x blocs contenants y threads](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#kernels).
 
 ## **Step 2 - :twisted_rightwards_arrows: Summing up two arrays**
 
-> :triangular_flag_on_post: **Seconde tâche : additionner 2 listes qui contiennent chacune 1 048 576 d'éléments. Le résultat de l'addition doit être contenue dans la seconde liste.**
+> :triangular_flag_on_post: **Seconde tâche : additionner 2 listes qui contiennent chacune 1 048 576 d'éléments.
+> Le résultat de l'addition doit être contenu dans la seconde liste.**
 
 :heavy_check_mark: Allouer dynamiquement de la mémoire sur un GPU
 
@@ -74,10 +75,10 @@ Celle-ci devra afficher la chaîne de caractères `"Hello CUDA World {idx}"`, ou
 
 :heavy_check_mark: Copier des données depuis le Device vers le Host
 
-:heavy_check_mark: Synchroniser l'execution des threads
+:heavy_check_mark: Synchroniser l'exécution des threads
 
-*Votre CPU va vite, très vite, mais son nombre de coeurs est limité (pas plus de 128 pour les meilleurs).
-Vous allez donc utiliser le très grand nombre de coeurs présents sur un GPU pour accélerer l'execution d'un programme.*
+*Votre CPU va vite, très vite, mais son nombre de cœurs est limité (pas plus de 128 pour les meilleurs).
+Vous allez donc utiliser le très grand nombre de cœurs présents sur un GPU pour accélérer l'exécution d'un programme.*
 
 Votre tâche est donc d'exploiter la puissance de votre GPU pour additionner plus rapidement les 2 listes, en plusieurs étapes.
 
@@ -91,7 +92,7 @@ Votre tâche est donc d'exploiter la puissance de votre GPU pour additionner plu
 
 ## **Step 3 - :framed_picture: Image filter**
 
-Bravo, vous êtes desormais à l'aise avec CUDA ! Maintenant, voyons un exemple plus... compliqué :dizzy_face:.
+Bravo, vous êtes désormais à l'aise avec CUDA ! Maintenant, voyons un exemple plus... compliqué :dizzy_face:.
 
 > :triangular_flag_on_post: **Troisième tâche : parcourir une image en couleur et déterminer la valeur de gris de chaque pixel pour transformer l'image en noir et blanc.**
 
