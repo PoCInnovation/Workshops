@@ -1,186 +1,296 @@
 # Workshop HARDWARE
 
 ## Introduction
+Les exercices devront être réalisés dans l'ordre et présentés à un encadrant une fois terminé pour qu'il vérifie votre travail.
 
-Those exercices have to be done in order and shown to a teacher when finished so they can verify your work.
+Même si l'accès à des tutoriels sur internet est autorisé, nous vous conseillons de réfléchir par vous-même aux exercices.
 
-Even though you may use online tutorials, we advise you first think by yourselves.
-
-Please start by downloading these tools:
+Merci de télécharger :
 
 * [Arduino IDE](https://www.arduino.cc)
-* Arduino IDE configuration for [ESP32](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/)
 
-If you are ever interested in checking out electronics/hardware youtubers, here's a quick list:
+Si vous utilisez un carte de type ESP 32 (généralement non):
+
+* Configurer IDE Arduino pour les boards [ESP32](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/)
+
+Si vous êtes intéressé par des vidéastes traitant de l'électronique/hardware en voici une liste :
 
 * AvE
 * Great Scott
 * This old Tony
 * NYC CNC
 * Electroboom
+  
+     
+## Préambule
 
-***Important***: During this workshop, we will use an Arduino board.
+Merci de lire/regarder
 
-## Foreword
+* [Amps vs Volts](https://www.youtube.com/watch?v=XDf2nhfxVzg)
+* [Une résistance ?](https://openclassrooms.com/forum/sujet/pourquoi-et-quand-placer-une-resistance)
 
-Please read this first:
+## Exercice 1
 
-https://en.wikipedia.org/wiki/Resistor
-
-## Exercise 1
-
-Required hardware:
-
-* Board
-* USB cable
-* Breadboard
+<details>
+    <summary> 🛠️ Matériel requis:</summary>
+ 
+* Arduino / ESP32
+* BreadBoard
+* Cable USB
 * Jumpers
-* Leds
-* ???
+* LED
+* Résistance
 
-**Instructions**: Make a circuit linking a board with a led so that the led can be turned on. Call a teacher before powering up the board.
+</details>  
+  
+**Consigne**: Faites un circuit reliant une LED à un Arduino et allumez cette LED. Appelez un encadrant avant d'alimenter votre Arduino.
 
-**Constraints**: You don't have to produce any code for this execise. You may not use the 3.3V pin of your board.
+>**Contraintes**: Vous ne devrez utiliser AUCUN CODE pour cet exercice. Vous n'avez pas le droit à au pin 3,3V de votre board.
 
-**Hint**: Can the led take the voltage sent by the board ?
+>:warning: Est-ce que le voltage accepté par la LED est compatible avec le voltage produit par la board ?
 
-## Exercise 2
+## Exercice 2
 
-Required hardware:
-
-* Board
-* USB Cable
-* Breadboard
+<details>
+    <summary> 🛠️ Matériel requis:</summary>
+ 
+* Arduino / ESP32
+* BreadBoard
+* Cable USB
 * Jumpers
-* Led
-* Push button
-* ???
+* LED
+* Résistance
 
-**Instructions**: Make sure that the button changes the led state (on/off) each time you press it.
+</details>  
 
-**Constraints**: Null
+**Consigne**: Faite en sorte que la LED clignote toutes les secondes.
 
-## Exercise 3
+>**Contraintes**: Aucune
 
-Required hardware:
+## Exercice 3
 
-* Board
-* USB Cable
-* Breadboard
+<details>
+    <summary> 🛠️ Matériel requis:</summary>
+ 
+* Arduino / ESP32
+* BreadBoard
+* Cable USB
 * Jumpers
-* Led
-* ???
+* LED
+* Résistance
+* Potentiomètre
 
-**Instructions: Make sure that the led blinks every second.
+</details> 
 
-**Contraintes**: Null
+**Consigne**: En reprenant le circuit de l'exercice 2, faite en sorte que le délai de clignotement de la LED soit dépendant du potentiomètre.
 
-## Exercise 4
+>**Contraintes**: Aucune
 
-Required hardware:
+## Exercice 4
 
-* Board
-* USB Cable
-* Breadboard
+<details>
+    <summary> 🛠️ Matériel requis:</summary>
+ 
+* Arduino / ESP32
+* BreadBoard
+* Cable USB
 * Jumpers
-* Led
-* Potentiometer
-* ???
+* LED
+* Résistance
+* Potentiomètre
 
-**Instructions**: Starting with the 3rd exercise's circuit, make sure that the blink delay depends on the potentiometer.
+</details> 
 
-**Constraints**: Null
+**Consigne**: En reprenant le circuit de l'exercice 3, faite en sorte que la LED ne clignote plus, et que l'intensité de son éclairage dépende de la valeur du potentiomètre.
 
-## Exercise 5
+>**Contraintes**: Aucune
 
-Required hardware:
+>:warning: Renseignez-vous sur les pins "PWM"
 
-* Board
-* USB Cable
-* Breadboard
+
+## Exercice 5
+
+<details>
+    <summary> 🛠️ Matériel requis:</summary>
+ 
+* Arduino / ESP32
+* BreadBoard
+* Cable USB
 * Jumpers
-* Led
-* Potentiometer
-* ???
+* LED RGB
+* 3x Résistances
+* Potentiomètre
 
-**Instruction**: Starting with the 4th exercise's circuit, make sure that the led stops blinking, and that it's light's intensity depends on the potentiometer instead.
+</details> 
 
-**Contraintes**: Null
+**Consigne**: A l'aide d'un potentiomètre, faire varier la couleur de la LED RGB de rouge à bleu
 
-## Exercise 6
+>**Contraintes**: Aucune
 
-Required hardware:
+## Exercice 6
 
-* Board
-* USB Cable
-* Breadboard
+<details>
+    <summary> 🛠️ Matériel requis:</summary>
+ 
+* Arduino / ESP32
+* BreadBoard
+* Cable USB
 * Jumpers
-* Ultrasonic sensor
-* led
+* 6x LED
+* 6x Résistances
 
-**Instruction**: Make a new circuit that gets the distance given by the sensor, and lights up the led if the distance is inferior to 30cm.
+</details> 
 
-**Contraintes**: Null
+**Consigne**: Faire clignoter 6 LED, une à la fois, dans un mouvement de va-et-vient.
 
-## Exercise 7
+>**Contraintes**: Aucune
 
-Required hardware:
+## Exercice 7
 
-* Board
-* USB Cable
-* Breadboard
+<details>
+    <summary> 🛠️ Matériel requis:</summary>
+ 
+* Arduino / ESP32
+* BreadBoard
+* Cable USB
 * Jumpers
-* Ultrasonic sensor
+* Nx LED
+* Nx Résistances
 
-**Instruction**: Starting with the 6th exercise's circuit, display the distance given by the sensor via a serial line to your computer.
+</details>
 
-## Exercise 8
+**Consigne**: À l’aide d’un potentiomètre, contrôler le nombre LED allumé sur une rangée. Tourner le bouton du potentiomètre allumera ou éteindra plus de LED.
 
-Required hardware:
+>**Contraintes**: Aucune
 
-* Board
-* USB Cable
-* Breadboard
+## Exercice 8
+
+<details>
+    <summary> 🛠️ Matériel requis:</summary>
+ 
+* Arduino / ESP32
+* BreadBoard
+* Cable USB
 * Jumpers
-* Ultrasonic sensor
+* LED
+* Résistance
+* Bouton poussoir
 
-**Instructions**: Starting with the 7th exercise's circuit and Arduino code, create a program in your language of choice that gets the serial line of your board and displays it on screen.
+</details>
 
-**Constraings**: You are not allowed to use any library specialized for your board.
+**Consigne**: faite en sorte que le bouton change d'état (allumer/éteindre) la LED a chaque pression.
 
-**Bonus**: You may display the distance as a graph.
+>:warning: INPUT_PULLUP 
 
-## Exercise 9
+## Exercice 9
 
-Required hardware:
-
-* Board
-* USB Cable
-* Breadboard
+<details>
+    <summary> 🛠️ Matériel requis:</summary>
+ 
+* Arduino / ESP32
+* BreadBoard
+* Cable USB
 * Jumpers
-* Potentiometer
-* Servo motor
+* LED
+* Résistance
+* Capteur distance ultrasons
 
-**Instructions**: Make a new circuit that controls the potition of the servo motor with the potentiometer. Please call a teacher before powering up your circuit.
+</details>
 
-## Exercise 10
+**Consigne**: Créer un nouveau circuit qui va récupérer la distance donne par le capteur ultrasons et qui si elle est inférieure à 30cm, allume la LED.
 
-Required hardware:
+>**Contraintes**: Aucune
 
-* ESP32
-* jumpers
-* led
+## Exercice 10
 
-**Instructions**: Create a webui or gui that lets you control a few leds (for example, it lets you turn on or off a led, or choose the color of an RGB led)
+<details>
+    <summary> 🛠️ Matériel requis:</summary>
+ 
+* Arduino / ESP32
+* BreadBoard
+* Cable USB
+* Jumpers
+* LED
+* Résistance
+* Capteur distance ultrasons
 
-## Exercise 11
+</details>
 
-Required hardware:
+**Consigne**: En reprenant le circuit de l'exercice 9, afficher la distance donnée par le capteur, et envoyez là en cm via une connexion série à votre ordinateur.
 
-* ESP32
-* jumpers
-* Ultrasonic sensor
+## Exercice 11
 
-**Instructions**: Connect your board to your phone or computer via bluetooth and display to distance given by the sensor.
+<details>
+    <summary> 🛠️ Matériel requis:</summary>
+ 
+* Arduino / ESP32
+* BreadBoard
+* Cable USB
+* Jumpers
+* LED
+* Résistance
+* Capteur distance ultrasons
 
-**Bonus**: Display the distance as a graph
+</details>
+
+**Consigne**: En reprenant le circuit de l'exercice 10, et le code Arduino de l'exercice 11, réaliser un programme dans le langage de votre choix qui va récupérer la sortie série de votre Arduino / ESP32 et l'afficher à l'écran dans un format de votre choix.
+
+>**Contraintes**: aucune librairie spécifiquement créer pour Arduino / ESP32 n'est autorisé.
+
+>:green_square: **Bonus**: afficher la distance sous forme de graph
+
+## Exercice 12
+
+<details>
+    <summary> 🛠️ Matériel requis:</summary>
+ 
+* Arduino / ESP32
+* BreadBoard
+* Cable USB
+* Jumpers
+* Potentiomètre
+* Servo moteur
+
+</details>
+
+**Consigne**: Créer un nouveau circuit qui piloter la position du servo moteur en fonction de de du potentiomètre. Appelez un encadrant avant d'alimenter votre circuit.
+
+## Exercice 13
+
+<details>
+    <summary> 🛠️ Matériel requis:</summary>
+ 
+* Arduino / ESP32
+* BreadBoard
+* Cable USB
+* Jumpers
+* LED
+
+</details>
+
+**Consigne**: Realiser une webui ou gui avec un LEDpicker qui pilote plusieurs LED.
+
+>:warning: Appelez un encadrant avant de faire vos branchements.
+
+## Exercice 14
+
+<details>
+    <summary> 🛠️ Matériel requis:</summary>
+ 
+* Arduino / ESP32
+* BreadBoard
+* Cable USB
+* Jumpers
+* Capteur ultrason
+
+</details>
+
+**Consigne**: Votre Arduino / ESP32 devra se connecte à votre téléphone ou ordinateur en bluetooth et afficher la distance en cm donnée par le capteur ultrasson
+
+>:warning: Appelez un encadrant avant de faire vos branchements
+
+>:green_square: **Bonus**: afficher la distance sous forme de graphe
+
+# :tada: Bravo
+Vous connaissez désormais les bases de l'arduino.
+Libre à vous d'utiliser votre imagination pour créer des circuits. Ou de combiner les exercices précedents pour de nouveau résultats.

@@ -1,9 +1,8 @@
 # Simulateur
-<style>H2{color:#fcb400;}</style>
 
 ## Step 0: Go to the simulator
 
-Go to ![TinkerCad](https://www.tinkercad.com/)  
+Go to [TinkerCad](https://www.tinkercad.com/)  
   
 Log-In and create new Circuit.  
 
@@ -15,11 +14,11 @@ Log-In and create new Circuit.
 ![](../.simulateur-tinkercad/Arduino.png) ![](../.simulateur-tinkercad/Breadboard.png) ![](../.simulateur-tinkercad/LED.png) ![](../.simulateur-tinkercad/resistor.png)
 </details>  
   
-> **Instruction**: Make a circuit linking a board with a led so that the led can be turned on.  
+**Instruction**: Make a circuit linking a board with a led so that the led can be turned on.  
   
 >**Constraints**: You don't have to produce any code for this execise. You may not use the 3.3V pin of your board.  
   
->**Hint**: Can the led take the voltage sent by the board ? 
+>:warning: Can the led take the voltage sent by the board ? 
 
 ## Exercise 2
 
@@ -30,7 +29,7 @@ Log-In and create new Circuit.
 
 </details>  
   
-> **Instruction**: Make the LED flash every second.
+**Instruction**: Make the LED flash every second.
   
 >**Constraints**: Null.
 
@@ -44,7 +43,7 @@ Log-In and create new Circuit.
 
 </details>  
   
-> **Instruction**: Using the circuit from exercise 2, make the LED blink delay dependent on the potentiometer.
+**Instruction**: Using the circuit from exercise 2, make the LED blink delay dependent on the potentiometer.
   
 >**Constraints**: Null.
 
@@ -58,11 +57,11 @@ Log-In and create new Circuit.
 
 </details>  
   
-> **Instruction**: Using the circuit from exercise 3, make sure that the LED does not blink anymore, and that the intensity of its lighting depends on the value of the potentiometer.
+**Instruction**: Using the circuit from exercise 3, make sure that the LED does not blink anymore, and that the intensity of its lighting depends on the value of the potentiometer.
   
 >**Constraints**: Null.
 
->**Hint**: Learn more about the `PWM` pins
+>:warning: Learn more about the `PWM` pins
 
 ## Exercise 5
 
@@ -73,7 +72,7 @@ Log-In and create new Circuit.
 
 </details>  
   
-> **Instruction**: Using a potentiometer, vary the color of the RGB LED from red to blue
+**Instruction**: Using a potentiometer, vary the color of the RGB LED from red to blue
   
 >**Constraints**: Null.
 
@@ -86,7 +85,7 @@ Log-In and create new Circuit.
 
 </details>  
   
-> **Instruction**: Flash 6 LEDs, one at a time, back and forth.
+**Instruction**: Flash 6 LEDs, one at a time, back and forth.
   
 >**Constraints**: Null.
 
@@ -99,7 +98,7 @@ Log-In and create new Circuit.
 
 </details>  
   
-> **Instruction**: Using a potentiometer, control the number of LEDs lit on a row. Turning the potentiometer knob will turn more LEDs on or off.
+**Instruction**: Using a potentiometer, control the number of LEDs lit on a row. Turning the potentiometer knob will turn more LEDs on or off.
   
 >**Constraints**: Null.
 
@@ -112,11 +111,11 @@ Log-In and create new Circuit.
 
 </details>  
   
-> **Instruction**: Make the button change the state (on/off) of the LED with each press.
+**Instruction**: Make the button change the state (on/off) of the LED with each press.
   
 >**Constraints**: Null.
 
->**Hint**: INPUT_PULLUP
+>:warning: INPUT_PULLUP
 
 ## Exercise 9
 
@@ -127,7 +126,7 @@ Log-In and create new Circuit.
 
 </details>  
   
-> **Instruction**: Create a new circuit that will retrieve the distance given by the ultrasonic sensor and if it is less than 30cm, turn on the LED.
+**Instruction**: Create a new circuit that will retrieve the distance given by the ultrasonic sensor and if it is less than 30cm, turn on the LED.
   
 >**Constraints**: Null.
 
@@ -140,7 +139,7 @@ Log-In and create new Circuit.
 
 </details>  
   
-> **Instruction**: Using the circuit from exercise 9, display the distance given by the sensor, and send it in cm via a serial connection to your computer.
+**Instruction**: Using the circuit from exercise 9, display the distance given by the sensor, and send it in cm via a serial connection to your computer.
   
 >**Constraints**: Null.
 
@@ -153,7 +152,7 @@ Log-In and create new Circuit.
 
 </details>   
 
->**Instruction**: Create a new circuit that drives the servo motor position according to the potentiometer. 
+**Instruction**: Create a new circuit that drives the servo motor position according to the potentiometer. 
   
 >**Constraints**: Null.
 
