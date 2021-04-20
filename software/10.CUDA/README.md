@@ -81,7 +81,7 @@ Vous allez donc utiliser le très grand nombre de coeurs présents sur un GPU po
 
 Votre tâche est donc d'exploiter la puissance de votre GPU pour additionner plus rapidement les 2 listes, en plusieurs étapes.
 
-> **Toutes les étapes sont décrites dans le code dans des TODO.**
+> **Toutes ces étapes sont décrites dans le code issu des [ressources](https://github.com/PoCInnovation/Workshops/raw/cuda/software/10.CUDA/CUDA_steps.zip) sous la forme de TODOs.**
 
 > :warning: ***Voici les ressources dont vous aurez besoin*** :
 
