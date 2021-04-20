@@ -1,8 +1,5 @@
 # Simulateur
-<<<<<<< HEAD
 
-=======
->>>>>>> 42e454617684ecc401b1dda7eaaf817bcada0516
 ## Step 0: Go to the simulator
 
 Go to [TinkerCad](https://www.tinkercad.com/)  
