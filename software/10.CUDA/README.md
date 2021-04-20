@@ -56,7 +56,7 @@ Celle-ci devra afficher la chaîne de caractères `"Hello CUDA World {idx}"`, ou
 
 > :warning: ***Voici les ressources dont vous aurez besoin*** :
 
-- [Les index sur CUDA](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#threadidx).
+- [L'indexation sur CUDA](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#threadidx).
 
 - [Portée des fonctions executés sur CUDA](https://stackoverflow.com/questions/12373940/difference-between-global-and-device-functions).
 
