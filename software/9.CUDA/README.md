@@ -1,33 +1,38 @@
 # **CUDA**
 
-Durant ce workshop vous apprendrez à utiliser CUDA, l'API developpé par Nvidia permettant de réaliser des programmes qui utilisent les coeurs des cartes graphiques du même constructeur.
+Durant ce workshop vous apprendrez à utiliser CUDA, l'API developpé par Nvidia permettant de réaliser des programmes qui utilisent les coeurs des cartes graphiques à la place de ceux de votre processeur.
 
-Dans un premier temps, vous développerez une application capable d'additionner 2 listes de très grande tailles.
+Dans une premier temps, vous ferez en sorte d'executer un Hello World sur plusieurs coeurs d'un GPU.
 
-Puis vous vous pencherez sur un problème plus conséquent : l'application d'un filtre sur une image.
+Puis, vous développerez une application capable d'additionner 2 listes de très grande tailles.
+
+Enfin vous vous pencherez sur un problème plus conséquent : transformer une image en couleur en une image en noir et blanc.
 
 ## **Step 0 - :rocket: Initialization**
 
 >:checkered_flag:  **Avant de débuter, il est nécessaire que vous compreniez quelques termes.**
 
+:ballot_box_with_check: Comprendre l'execution sur CUDA
+
+:ballot_box_with_check: Comprendre la répartition de la mémoire entre Host et Device
+
+:ballot_box_with_check: Comprendre la nomenclature sur CUDA
+
 La syntaxe de CUDA est très similaire à celle du C / C++.
 
 :warning: **Vous trouverez une explication détaillée [ici](https://dev.to/zenulabidin/an-overview-of-cuda-part-2-host-and-device-code-69d) des deux premiers points** :warning:.
 
-1. Lorsqu'il est question du GPU, y compris de sa mémoire VRAM, le terme utilisé est **Device**.
+1. Dans les ressources et durant vos recherches, le terme utilisé pour designer le processeur (CPU) ainsi que la mémoire classique (RAM) est **Host**.
 
-2. À l'inverse, lorsqu'il est question du CPU et de la mémoire RAM classique, le terme utilisé est **Host**.
+2. Lorsqu'il est question de la carte graphique (GPU) ainsi que de la mémoire de cell-ci (VRAM), le terme utilisé est **Device**.
 
 :warning: **Vous trouverez une explication détaillée [ici](https://en.wikipedia.org/wiki/Thread_block_(CUDA_programming)) des deux derniers points** :warning:.
 
-3. Les coeurs CUDA peuvent être représentés sur un repère à 3 dimensions.
-   Dans un souci de simplicité, nous nous contenterons d'une seule dimension.
-   Le coeur 0 est donc situé sur ce repère à l'index 0.
+3. Afin de mieux organiser l'execution en parallele des coeurs du GPU, appelé un thread, ils sont représentés sur un repère à 3 dimensions.
 
-4. Les coeurs, appelés thread, sont rassemblés en blocks.
-   Ainsi, le premier thread du block 0 et le premier thread du block 1 ont tout deux l'index 0.
+4. Les threads sont regroupés en blocks, eux aussi représentés sur un repère à 3 dimensions : la GRID.
 
-Voici un schéma descriptif, car *une image vaut mieux que mille mots*.
+Voici un schéma descriptif, car *une image vaut mieux que mille mots*, de l'organisation des threads en blocks dans une grille en 2 dimensions.
 
 <div align="center">
     <img src="../../.github/assets/threads.png" width=50%"/>
@@ -37,9 +42,15 @@ Voici un schéma descriptif, car *une image vaut mieux que mille mots*.
 
 > :triangular_flag_on_post: **Première tâche : classique, mais efficace. Hello CUDA World.**
 
+:ballot_box_with_check: Executer du code avec CUDA
+
+:ballot_box_with_check: Indexer des threads
+
+:ballot_box_with_check: Comprendre l'execution d'un [kernel](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/)
+
 Pour vous familiariser avec CUDA, vous allez commencer par lancer une fonction sur 2 threads.
 
-Celle-ci devra afficher la chaîne de caractères "Hello CUDA World idx", ou idx correspond à l'index du thread sur la dimension x.
+Celle-ci devra afficher la chaîne de caractères `"Hello CUDA World {idx}"`, ou idx correspond à l'index du thread.
 
 :warning: ***Voici les ressources dont vous aurez besoin*** :warning: :
 
@@ -51,23 +62,34 @@ Celle-ci devra afficher la chaîne de caractères "Hello CUDA World idx", ou idx
 
 ## **Step 2 - :twisted_rightwards_arrows: Summing up two arrays**
 
-> :triangular_flag_on_post: **Première tâche : additionner 2 listes qui contiennent chacune 1 000 000 d'éléments.**
+> :triangular_flag_on_post: **Seconde tâche : additionner 2 listes qui contiennent chacune 1 000 000 d'éléments. Le résultat de l'addition doit être contenue dans la seconde liste.**
+
+:ballot_box_with_check: Allouer dynamiquement de la mémoire sur un GPU
+
+:ballot_box_with_check: Utiliser l'indexation des threads dans la logique d'un programme
+
+:ballot_box_with_check: Copier des données depuis le Host vers le Device
+
+:ballot_box_with_check: Copier des données depuis le Device vers le Host
+
+:ballot_box_with_check: Synchroniser l'execution des threads
 
 *Votre CPU va vite, très vite, mais son nombre de coeurs est limité (pas plus de 128 pour les meilleurs).
-L'addition est une tâche plutôt rapide à executer et les coeurs de votre GPU sont eux  présents par milliers sur votre appareil.*
+Vous allez donc utiliser le très grand nombre de coeurs présents sur un GPU pour accélerer l'execution d'un programme.*
 
-Votre tâche est donc d'exploiter la puissance de votre GPU pour additionner plus rapidement les 2 listes en utilisant :
+Votre tâche est donc d'exploiter la puissance de votre GPU pour additionner plus rapidement les 2 listes, en plusieurs étapes :
 
-- L'allocation mémoire de votre GPU, puisque vous devrez copier les 2 listes sur la [VRAM](https://en.wikipedia.org/wiki/Video_RAM_(dual-ported_DRAM)) du GPU afin que ses coeurs puissent y avoir accès.
+- Allouer dynamiquement la mémoire nécessaire pour copier les listes du Host sur le Device
 
-- 1024 thread différents sur 1 seul block.
-  À votre avis, combien d'éléments chaque thread doit-il additionner :roll_eyes: ?
+- Copier les listes du Host sur le Device en utilisant la mémoire allouée précédemment
 
-- La copie de la liste contenant le résultat de l'addition du Device vers le Host.
+- Lancer un kernel sur 1024 threads différents. Chacun d'entre eux additionne un certain nombre de cases des listes, à votre avis combien :thinking: ? L'indexation des threads peut être utile...
 
-- La synchronisation des threads. On ne veut pas de *race condition*.
+- Attendre la fin de l'execution de tous les threads
 
-Pour finir, vous afficherez la liste resultante de l'addition des 2 autres.
+- Copier la liste contenant le résultat de l'addition du Device sur le Host
+
+- Afficher la liste
 
 :warning: ***Voici les ressources dont vous aurez besoin*** :warning: :
 
@@ -79,7 +101,7 @@ Pour finir, vous afficherez la liste resultante de l'addition des 2 autres.
 
 Bravo, vous êtes desormais à l'aise avec CUDA ! Maintenant, voyons un exemple plus... compliqué :dizzy_face:.
 
-> :triangular_flag_on_post: **Seconde tâche : parcourir une image en couleur et déterminer la valeur de gris de chaque pixel pour transformer l'image en noir et blanc.**
+> :triangular_flag_on_post: **Troisième tâche : parcourir une image en couleur et déterminer la valeur de gris de chaque pixel pour transformer l'image en noir et blanc.**
 
 ## Authors
 
