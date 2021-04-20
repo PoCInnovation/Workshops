@@ -14,11 +14,11 @@ Enfin vous vous pencherez sur un problème plus conséquent : transformer une im
 
 >:checkered_flag:  **Avant de débuter, il est nécessaire que vous compreniez quelques termes.**
 
-:ballot_box_with_check: Comprendre l'execution sur CUDA
+:heavy_check_mark: Comprendre l'execution sur CUDA
 
-:ballot_box_with_check: Comprendre la répartition de la mémoire entre Host et Device
+:heavy_check_mark: Comprendre la répartition de la mémoire entre Host et Device
 
-:ballot_box_with_check: Comprendre la nomenclature sur CUDA
+:heavy_check_mark: Comprendre la nomenclature sur CUDA
 
 La syntaxe de CUDA est très similaire à celle du C / C++.
 
@@ -44,11 +44,11 @@ Voici un schéma descriptif, car *une image vaut mieux que mille mots*, de l'org
 
 > :triangular_flag_on_post: **Première tâche : classique, mais efficace. Hello CUDA World.**
 
-:ballot_box_with_check: Executer du code avec CUDA
+:heavy_check_mark: Executer du code avec CUDA
 
-:ballot_box_with_check: Indexer des threads
+:heavy_check_mark: Indexer des threads
 
-:ballot_box_with_check: Comprendre l'execution d'un [kernel](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/)
+:heavy_check_mark: Comprendre l'execution d'un [kernel](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/)
 
 Pour vous familiariser avec CUDA, vous allez commencer par lancer une fonction sur 2 threads.
 
@@ -66,15 +66,15 @@ Celle-ci devra afficher la chaîne de caractères `"Hello CUDA World {idx}"`, ou
 
 > :triangular_flag_on_post: **Seconde tâche : additionner 2 listes qui contiennent chacune 1 048 576 d'éléments. Le résultat de l'addition doit être contenue dans la seconde liste.**
 
-:ballot_box_with_check: Allouer dynamiquement de la mémoire sur un GPU
+:heavy_check_mark: Allouer dynamiquement de la mémoire sur un GPU
 
-:ballot_box_with_check: Utiliser l'indexation des threads dans la logique d'un programme
+:heavy_check_mark: Utiliser l'indexation des threads dans la logique d'un programme
 
-:ballot_box_with_check: Copier des données depuis le Host vers le Device
+:heavy_check_mark: Copier des données depuis le Host vers le Device
 
-:ballot_box_with_check: Copier des données depuis le Device vers le Host
+:heavy_check_mark: Copier des données depuis le Device vers le Host
 
-:ballot_box_with_check: Synchroniser l'execution des threads
+:heavy_check_mark: Synchroniser l'execution des threads
 
 *Votre CPU va vite, très vite, mais son nombre de coeurs est limité (pas plus de 128 pour les meilleurs).
 Vous allez donc utiliser le très grand nombre de coeurs présents sur un GPU pour accélerer l'execution d'un programme.*
