@@ -22,13 +22,13 @@ Enfin vous vous pencherez sur un problème plus conséquent : transformer une im
 
 La syntaxe de CUDA est très similaire à celle du C / C++.
 
-:warning: **Vous trouverez une explication détaillée [ici](https://dev.to/zenulabidin/an-overview-of-cuda-part-2-host-and-device-code-69d) des deux premiers points** :warning:.
+> :warning: **Vous trouverez une explication détaillée [ici](https://dev.to/zenulabidin/an-overview-of-cuda-part-2-host-and-device-code-69d) des deux premiers points**.
 
 1. Dans les ressources et durant vos recherches, le terme utilisé pour designer le processeur (CPU) ainsi que la mémoire classique (RAM) est **Host**.
 
 2. Lorsqu'il est question de la carte graphique (GPU) ainsi que de la mémoire de cell-ci (VRAM), le terme utilisé est **Device**.
 
-:warning: **Vous trouverez une explication détaillée [ici](https://en.wikipedia.org/wiki/Thread_block_(CUDA_programming)) des deux derniers points** :warning:.
+> :warning: **Vous trouverez une explication détaillée [ici](https://en.wikipedia.org/wiki/Thread_block_(CUDA_programming)) des deux derniers points**.
 
 3. Afin de mieux organiser l'execution en parallele des coeurs du GPU, appelé un thread, ils sont représentés sur un repère à 3 dimensions.
 
@@ -54,7 +54,7 @@ Pour vous familiariser avec CUDA, vous allez commencer par lancer une fonction s
 
 Celle-ci devra afficher la chaîne de caractères `"Hello CUDA World {idx}"`, ou idx correspond à l'index du thread.
 
-:warning: ***Voici les ressources dont vous aurez besoin*** :warning: :
+> :warning: ***Voici les ressources dont vous aurez besoin*** :
 
 - [Les index sur CUDA](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#threadidx).
 
@@ -79,9 +79,11 @@ Celle-ci devra afficher la chaîne de caractères `"Hello CUDA World {idx}"`, ou
 *Votre CPU va vite, très vite, mais son nombre de coeurs est limité (pas plus de 128 pour les meilleurs).
 Vous allez donc utiliser le très grand nombre de coeurs présents sur un GPU pour accélerer l'execution d'un programme.*
 
-Votre tâche est donc d'exploiter la puissance de votre GPU pour additionner plus rapidement les 2 listes, en plusieurs étapes. Celles-ci sont contenues dans le code sous la forme de TODO.
+Votre tâche est donc d'exploiter la puissance de votre GPU pour additionner plus rapidement les 2 listes, en plusieurs étapes.
 
-:warning: ***Voici les ressources dont vous aurez besoin*** :warning: :
+> **Toutes les étapes sont décrites dans le code dans des TODO.**
+
+> :warning: ***Voici les ressources dont vous aurez besoin*** :
 
 - [Les fonctions permettant de gérer la mémoire (CRTL + F -> MEM... ou MAL... :wink:)](https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__MEMORY.html).
 
