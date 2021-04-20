@@ -10,6 +10,8 @@ Enfin vous vous pencherez sur un problème plus conséquent : transformer une im
 
 ## **Step 0 - :rocket: Initialization**
 
+You must download and extract the [following resources](https://github.com/PoCInnovation/Workshops/tree/cuda/software/10.CUDA).
+
 >:checkered_flag:  **Avant de débuter, il est nécessaire que vous compreniez quelques termes.**
 
 :ballot_box_with_check: Comprendre l'execution sur CUDA
@@ -35,7 +37,7 @@ La syntaxe de CUDA est très similaire à celle du C / C++.
 Voici un schéma descriptif, car *une image vaut mieux que mille mots*, de l'organisation des threads en blocks dans une grille en 2 dimensions.
 
 <div align="center">
-    <img src="../../.github/assets/threads.png" width=50%"/>
+    <img src="../../.github/assets/CUDAthreads.png" width=50%"/>
 </div>
 
 ## **Step 1 - :wave: Hello CUDA World**
@@ -62,7 +64,7 @@ Celle-ci devra afficher la chaîne de caractères `"Hello CUDA World {idx}"`, ou
 
 ## **Step 2 - :twisted_rightwards_arrows: Summing up two arrays**
 
-> :triangular_flag_on_post: **Seconde tâche : additionner 2 listes qui contiennent chacune 1 000 000 d'éléments. Le résultat de l'addition doit être contenue dans la seconde liste.**
+> :triangular_flag_on_post: **Seconde tâche : additionner 2 listes qui contiennent chacune 1 048 576 d'éléments. Le résultat de l'addition doit être contenue dans la seconde liste.**
 
 :ballot_box_with_check: Allouer dynamiquement de la mémoire sur un GPU
 
@@ -77,19 +79,7 @@ Celle-ci devra afficher la chaîne de caractères `"Hello CUDA World {idx}"`, ou
 *Votre CPU va vite, très vite, mais son nombre de coeurs est limité (pas plus de 128 pour les meilleurs).
 Vous allez donc utiliser le très grand nombre de coeurs présents sur un GPU pour accélerer l'execution d'un programme.*
 
-Votre tâche est donc d'exploiter la puissance de votre GPU pour additionner plus rapidement les 2 listes, en plusieurs étapes :
-
-- Allouer dynamiquement la mémoire nécessaire pour copier les listes du Host sur le Device
-
-- Copier les listes du Host sur le Device en utilisant la mémoire allouée précédemment
-
-- Lancer un kernel sur 1024 threads différents. Chacun d'entre eux additionne un certain nombre de cases des listes, à votre avis combien :thinking: ? L'indexation des threads peut être utile...
-
-- Attendre la fin de l'execution de tous les threads
-
-- Copier la liste contenant le résultat de l'addition du Device sur le Host
-
-- Afficher la liste
+Votre tâche est donc d'exploiter la puissance de votre GPU pour additionner plus rapidement les 2 listes, en plusieurs étapes. Celles-ci sont contenues dans le code sous la forme de TODO.
 
 :warning: ***Voici les ressources dont vous aurez besoin*** :warning: :
 
