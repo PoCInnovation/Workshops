@@ -2,9 +2,9 @@
 
 Durant ce workshop vous apprendrez à utiliser CUDA, l'API developpé par Nvidia permettant de réaliser des programmes qui utilisent les coeurs des cartes graphiques à la place de ceux de votre processeur.
 
-Dans une premier temps, vous ferez en sorte d'executer un Hello World sur plusieurs coeurs d'un GPU.
+Dans une premier temps, vous ferez en sorte d'executer un Hello World sur plusieurs coeurs d'un GPU en parallèle.
 
-Puis, vous développerez une application capable d'additionner 2 listes de très grande tailles.
+Puis, vous développerez une application capable d'accelerer l'addition de 2 listes de très grande tailles.
 
 Enfin vous vous pencherez sur un problème plus conséquent : transformer une image en couleur en une image en noir et blanc.
 
