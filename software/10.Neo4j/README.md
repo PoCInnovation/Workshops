@@ -6,7 +6,11 @@
 
 :heavy_check_mark: Use an OGM to simplify your development
 
-:heavy_check_mark: Test your typescript code easily
+:heavy_check_mark: Understand Cypher syntax
+
+:heavy_check_mark: Build basics query through a query builder
+
+:heavy_check_mark: Test your Typescript code with Jest framework
 
 ## Step 0 - Initialization
 
