@@ -11,7 +11,7 @@ We will create a CI for a simple Epitech project: do-op. We have unit-tests and 
 The finality is to execute those tests on `pull_request` from `dev` to `master`. It's an easy way to verify the code evaluated by "Marvin".
 
 In order to setup your workflow, in your repository:
-  - complete the [setup](https://github.com/PoCInnovation/Workshops/blob/master/software/5.Actions/SETUP.md)
+  - complete the [setup](https://github.com/PoCInnovation/Workshops/blob/master/software/05.Actions/SETUP.md)
   - create a branch `dev`
   - checkout in branch `dev`
   - create a directory `.github/workflows`
