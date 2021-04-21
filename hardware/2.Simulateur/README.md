@@ -11,7 +11,8 @@ Log-In and create new Circuit.
 <details>
     <summary> 🛠️ Required Hardware:</summary>
 
-![](../.simulateur-tinkercad/Arduino.png) ![](../.simulateur-tinkercad/Breadboard.png) ![](../.simulateur-tinkercad/LED.png) ![](../.simulateur-tinkercad/resistor.png)
+![](../.simulateur-tinkercad/Arduino.png) ![](../.simulateur-tinkercad/Breadboard.png)  
+![](../.simulateur-tinkercad/LED.png) ![](../.simulateur-tinkercad/resistor.png)
 </details>  
   
 **Instruction**: Make a circuit linking a board with a led so that the led can be turned on.  
@@ -25,7 +26,8 @@ Log-In and create new Circuit.
 <details>
     <summary> 🛠️ Required Hardware:</summary>
 
-![](../.simulateur-tinkercad/Arduino.png) ![](../.simulateur-tinkercad/Breadboard.png) ![](../.simulateur-tinkercad/LED.png) ![](../.simulateur-tinkercad/resistor.png) 
+![](../.simulateur-tinkercad/Arduino.png) ![](../.simulateur-tinkercad/Breadboard.png)  
+![](../.simulateur-tinkercad/LED.png) ![](../.simulateur-tinkercad/resistor.png) 
 
 </details>  
   
@@ -38,7 +40,9 @@ Log-In and create new Circuit.
 <details>
     <summary> 🛠️ Required Hardware:</summary>
 
-![](../.simulateur-tinkercad/Arduino.png) ![](../.simulateur-tinkercad/Breadboard.png) ![](../.simulateur-tinkercad/LED.png) ![](../.simulateur-tinkercad/resistor.png) ![](../.simulateur-tinkercad/potentiometer.png)
+![](../.simulateur-tinkercad/Arduino.png) ![](../.simulateur-tinkercad/Breadboard.png)  
+![](../.simulateur-tinkercad/LED.png) ![](../.simulateur-tinkercad/resistor.png)  
+![](../.simulateur-tinkercad/potentiometer.png)
 
 
 </details>  
@@ -52,7 +56,9 @@ Log-In and create new Circuit.
 <details>
     <summary> 🛠️ Required Hardware:</summary>
 
-![](../.simulateur-tinkercad/Arduino.png) ![](../.simulateur-tinkercad/Breadboard.png) ![](../.simulateur-tinkercad/LED.png) ![](../.simulateur-tinkercad/resistor.png) ![](../.simulateur-tinkercad/potentiometer.png)
+![](../.simulateur-tinkercad/Arduino.png) ![](../.simulateur-tinkercad/Breadboard.png)  
+![](../.simulateur-tinkercad/LED.png) ![](../.simulateur-tinkercad/resistor.png)  
+![](../.simulateur-tinkercad/potentiometer.png)
 
 
 </details>  
@@ -68,7 +74,9 @@ Log-In and create new Circuit.
 <details>
     <summary> 🛠️ Required Hardware:</summary>
 
-![](../.simulateur-tinkercad/Arduino.png) ![](../.simulateur-tinkercad/Breadboard.png) ![](../.simulateur-tinkercad/LED_RGB.png) **3x**![](../.simulateur-tinkercad/resistor.png) ![](../.simulateur-tinkercad/potentiometer.png) 
+![](../.simulateur-tinkercad/Arduino.png) ![](../.simulateur-tinkercad/Breadboard.png)  
+![](../.simulateur-tinkercad/LED_RGB.png) ![](../.simulateur-tinkercad/resistor.png)**x3**  
+![](../.simulateur-tinkercad/potentiometer.png) 
 
 </details>  
   
@@ -81,7 +89,8 @@ Log-In and create new Circuit.
 <details>
     <summary> 🛠️ Required Hardware:</summary>
 
-![](../.simulateur-tinkercad/Arduino.png) ![](../.simulateur-tinkercad/Breadboard.png) **6x**![](../.simulateur-tinkercad/LED.png) **6x**![](../.simulateur-tinkercad/resistor.png)
+![](../.simulateur-tinkercad/Arduino.png) ![](../.simulateur-tinkercad/Breadboard.png)  
+![](../.simulateur-tinkercad/LED.png)**x6**![](../.simulateur-tinkercad/resistor.png)**x6**
 
 </details>  
   
@@ -94,7 +103,9 @@ Log-In and create new Circuit.
 <details>
     <summary> 🛠️ Required Hardware:</summary>
 
-![](../.simulateur-tinkercad/Arduino.png) ![](../.simulateur-tinkercad/Breadboard.png) **6x**![](../.simulateur-tinkercad/LED.png) **6x**![](../.simulateur-tinkercad/resistor.png) ![](../.simulateur-tinkercad/potentiometer.png)
+![](../.simulateur-tinkercad/Arduino.png) ![](../.simulateur-tinkercad/Breadboard.png)  
+![](../.simulateur-tinkercad/LED.png)**x6** ![](../.simulateur-tinkercad/resistor.png)**x6** 
+![](../.simulateur-tinkercad/potentiometer.png)
 
 </details>  
   
@@ -107,7 +118,9 @@ Log-In and create new Circuit.
 <details>
     <summary> 🛠️ Required Hardware:</summary>
 
-![](../.simulateur-tinkercad/Arduino.png) ![](../.simulateur-tinkercad/Breadboard.png) ![](../.simulateur-tinkercad/LED.png) ![](../.simulateur-tinkercad/resistor.png) ![](../.simulateur-tinkercad/pushbutton.png)
+![](../.simulateur-tinkercad/Arduino.png) ![](../.simulateur-tinkercad/Breadboard.png)  
+![](../.simulateur-tinkercad/LED.png) ![](../.simulateur-tinkercad/resistor.png)  
+![](../.simulateur-tinkercad/pushbutton.png)
 
 </details>  
   
@@ -122,7 +135,9 @@ Log-In and create new Circuit.
 <details>
     <summary> 🛠️ Required Hardware:</summary>
 
-![](../.simulateur-tinkercad/Arduino.png) ![](../.simulateur-tinkercad/Breadboard.png) ![](../.simulateur-tinkercad/LED.png) ![](../.simulateur-tinkercad/resistor.png) ![](../.simulateur-tinkercad/Distancesensor.png)
+![](../.simulateur-tinkercad/Arduino.png) ![](../.simulateur-tinkercad/Breadboard.png)  
+![](../.simulateur-tinkercad/LED.png) ![](../.simulateur-tinkercad/resistor.png)  
+![](../.simulateur-tinkercad/Distancesensor.png)
 
 </details>  
   
@@ -135,7 +150,9 @@ Log-In and create new Circuit.
 <details>
     <summary> 🛠️ Required Hardware:</summary>
 
-![](../.simulateur-tinkercad/Arduino.png) ![](../.simulateur-tinkercad/Breadboard.png) ![](../.simulateur-tinkercad/LED.png) ![](../.simulateur-tinkercad/resistor.png) ![](../.simulateur-tinkercad/Distancesensor.png)
+![](../.simulateur-tinkercad/Arduino.png) ![](../.simulateur-tinkercad/Breadboard.png)  
+![](../.simulateur-tinkercad/LED.png) ![](../.simulateur-tinkercad/resistor.png)  
+![](../.simulateur-tinkercad/Distancesensor.png)
 
 </details>  
   
@@ -148,7 +165,8 @@ Log-In and create new Circuit.
 <details>
     <summary> 🛠️ Required Hardware:</summary>
 
-![](../.simulateur-tinkercad/Arduino.png) ![](../.simulateur-tinkercad/Breadboard.png) ![](../.simulateur-tinkercad/potentiometer.png) ![](../.simulateur-tinkercad/microServo.png)
+![](../.simulateur-tinkercad/Arduino.png) ![](../.simulateur-tinkercad/Breadboard.png)  
+![](../.simulateur-tinkercad/potentiometer.png) ![](../.simulateur-tinkercad/microServo.png)
 
 </details>   
 
@@ -156,6 +174,60 @@ Log-In and create new Circuit.
   
 >**Constraints**: Null.
 
+## Exercise 12
+
+<details>
+    <summary> 🛠️ Required Hardware:</summary>
+
+![](../.simulateur-tinkercad/Arduino.png) ![](../.simulateur-tinkercad/Breadboard.png)  
+![](../.simulateur-tinkercad/sevenSegment.png) ![](../.simulateur-tinkercad/resistor.png)**x2**
+
+</details>   
+
+**Instruction**: Create a new circuit that display the numbers from 0 to 9 on the 7 segment display with a time of one second between each digit
+  
+>**Constraints**: Null.  
+
+>:warning: How to make your code clean in order to light each segment properly? and get a correct display !
+
+## Exercise 13
+
+<details>
+    <summary> 🛠️ Required Hardware:</summary>
+
+![](../.simulateur-tinkercad/Arduino.png) ![](../.simulateur-tinkercad/Breadboard.png)  
+![](../.simulateur-tinkercad/sevenSegment.png)  ![](../.simulateur-tinkercad/resistor.png)**x2**
+![](../.simulateur-tinkercad/Keypad4x4.png)
+
+</details>   
+
+**Instruction**: take the circuit from the previous exercise and add a 4x4 keypad. The number selected on the Keypad must be displayed on the seven segment display.
+  
+>**Constraints**: Null.  
+
+>:warning: check Keypad.h
+
+## Exercise 14
+
+<details>
+    <summary> 🛠️ Required Hardware:</summary>
+
+![](../.simulateur-tinkercad/Arduino.png) ![](../.simulateur-tinkercad/Breadboard.png) ![](../.simulateur-tinkercad/resistor.png) ![](../.simulateur-tinkercad/potentiometer.png) ![](../.simulateur-tinkercad/Keypad4x4.png) ![](../.simulateur-tinkercad/LCD16x2.png)
+
+</details>   
+
+**Instruction**: Create a new circuit that will get the keypad inputs and display them on the lcd screen.
+  
+>**Constraints**: Null.  
+
+>:warning: check LiquidCrystal.h and what is the purpose of the potentiometer ?
+
 ## :tada: Congratulation !
 
 You now know the basics of the arduino. Feel free to use your imagination to create circuits. Or combine the previous exercises for new results.
+
+#
+
+## Authors
+
+- 
