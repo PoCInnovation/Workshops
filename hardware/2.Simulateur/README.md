@@ -118,7 +118,7 @@ Log-In and create new Circuit.
     <summary> 🛠️ Required Hardware:</summary>
 
 ![](../.simulateur-tinkercad/Arduino.png) ![](../.simulateur-tinkercad/Breadboard.png)  
-![](../.simulateur-tinkercad/LED.png)**x6** ![](../.simulateur-tinkercad/resistor.png)**x6** 
+![](../.simulateur-tinkercad/LED.png)**x6** ![](../.simulateur-tinkercad/resistor.png)**x6**  
 ![](../.simulateur-tinkercad/potentiometer.png)
 
 </details>  
@@ -222,7 +222,7 @@ Log-In and create new Circuit.
     <summary> 🛠️ Required Hardware:</summary>
 
 ![](../.simulateur-tinkercad/Arduino.png) ![](../.simulateur-tinkercad/Breadboard.png)  
-![](../.simulateur-tinkercad/sevenSegment.png)  ![](../.simulateur-tinkercad/resistor.png)**x2**
+![](../.simulateur-tinkercad/sevenSegment.png)  ![](../.simulateur-tinkercad/resistor.png)**x2**  
 ![](../.simulateur-tinkercad/Keypad4x4.png)
 
 </details>   
