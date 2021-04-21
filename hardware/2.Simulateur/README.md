@@ -6,6 +6,8 @@ Go to [TinkerCad](https://www.tinkercad.com/)
   
 Log-In and create new Circuit.  
 
+#
+
 ## Exercise 1
 
 <details>
@@ -21,6 +23,8 @@ Log-In and create new Circuit.
   
 >:warning: Can the led take the voltage sent by the board ? 
 
+#
+
 ## Exercise 2
 
 <details>
@@ -34,6 +38,8 @@ Log-In and create new Circuit.
 **Instruction**: Make the LED flash every second.
   
 >**Constraints**: Null.
+
+#
 
 ## Exercise 3
 
@@ -50,6 +56,8 @@ Log-In and create new Circuit.
 **Instruction**: Using the circuit from exercise 2, make the LED blink delay dependent on the potentiometer.
   
 >**Constraints**: Null.
+
+#
 
 ## Exercise 4
 
@@ -69,6 +77,8 @@ Log-In and create new Circuit.
 
 >:warning: Learn more about the `PWM` pins
 
+#
+
 ## Exercise 5
 
 <details>
@@ -84,6 +94,8 @@ Log-In and create new Circuit.
   
 >**Constraints**: Null.
 
+#
+
 ## Exercise 6
 
 <details>
@@ -97,6 +109,8 @@ Log-In and create new Circuit.
 **Instruction**: Flash 6 LEDs, one at a time, back and forth.
   
 >**Constraints**: Null.
+
+#
 
 ## Exercise 7
 
@@ -112,6 +126,8 @@ Log-In and create new Circuit.
 **Instruction**: Using a potentiometer, control the number of LEDs lit on a row. Turning the potentiometer knob will turn more LEDs on or off.
   
 >**Constraints**: Null.
+
+#
 
 ## Exercise 8
 
@@ -130,6 +146,8 @@ Log-In and create new Circuit.
 
 >:warning: INPUT_PULLUP
 
+#
+
 ## Exercise 9
 
 <details>
@@ -144,6 +162,8 @@ Log-In and create new Circuit.
 **Instruction**: Create a new circuit that will retrieve the distance given by the ultrasonic sensor and if it is less than 30cm, turn on the LED.
   
 >**Constraints**: Null.
+
+#
 
 ## Exercise 10
 
@@ -160,6 +180,8 @@ Log-In and create new Circuit.
   
 >**Constraints**: Null.
 
+#
+
 ## Exercise 11
 
 <details>
@@ -173,6 +195,8 @@ Log-In and create new Circuit.
 **Instruction**: Create a new circuit that drives the servo motor position according to the potentiometer. 
   
 >**Constraints**: Null.
+
+#
 
 ## Exercise 12
 
@@ -189,6 +213,8 @@ Log-In and create new Circuit.
 >**Constraints**: Null.  
 
 >:warning: How to make your code clean in order to light each segment properly? and get a correct display !
+
+#
 
 ## Exercise 13
 
@@ -207,12 +233,16 @@ Log-In and create new Circuit.
 
 >:warning: check Keypad.h
 
+#
+
 ## Exercise 14
 
 <details>
     <summary> 🛠️ Required Hardware:</summary>
 
-![](../.simulateur-tinkercad/Arduino.png) ![](../.simulateur-tinkercad/Breadboard.png) ![](../.simulateur-tinkercad/resistor.png) ![](../.simulateur-tinkercad/potentiometer.png) ![](../.simulateur-tinkercad/Keypad4x4.png) ![](../.simulateur-tinkercad/LCD16x2.png)
+![](../.simulateur-tinkercad/Arduino.png) ![](../.simulateur-tinkercad/Breadboard.png)  
+![](../.simulateur-tinkercad/resistor.png) ![](../.simulateur-tinkercad/potentiometer.png)  
+![](../.simulateur-tinkercad/Keypad4x4.png) ![](../.simulateur-tinkercad/LCD16x2.png)
 
 </details>   
 
@@ -222,6 +252,29 @@ Log-In and create new Circuit.
 
 >:warning: check LiquidCrystal.h and what is the purpose of the potentiometer ?
 
+>:green_square: **Bonus**: Create game with Keypad and lcd display (ENJOY :))
+
+#
+
+## Exercise 15
+
+<details>
+    <summary> 🛠️ Required Hardware:</summary>
+
+![](../.simulateur-tinkercad/Arduino.png) ![](../.simulateur-tinkercad/Breadboard.png)  
+![](../.simulateur-tinkercad/LED.png)**x10** ![](../.simulateur-tinkercad/resistor.png)**x10**  
+![](../.simulateur-tinkercad/IRsensor.png)  ![](../.simulateur-tinkercad/IRremote.png)
+</details>   
+
+**Instruction**: Create a new circuit that will get the digital inputs from the remote and turn on or off its associated LED.  
+When I click on 0, the first LED of my row turns on and when I press 0 again, the LED turns off
+  
+>**Constraints**: Null.  
+
+>:warning: check IRremote.h and [IR (infrared)](https://learn.sparkfun.com/tutorials/ir-communication/all)
+
+#
+
 ## :tada: Congratulation !
 
 You now know the basics of the arduino. Feel free to use your imagination to create circuits. Or combine the previous exercises for new results.
@@ -230,4 +283,4 @@ You now know the basics of the arduino. Feel free to use your imagination to cre
 
 ## Authors
 
-- 
+- [Coline SEGURET](https://github.com/Cleopha)
