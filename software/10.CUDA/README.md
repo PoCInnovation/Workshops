@@ -1,6 +1,6 @@
 # **CUDA et accélération matérielle**
 
-Durant ce workshop vous apprendrez à utiliser CUDA, l'API développé par Nvidia permettant de réaliser des programmes qui utilisent les cœurs des cartes graphiques à la place de ceux de votre processeur.
+Durant ce workshop vous apprendrez à utiliser CUDA, l'API développé par Nvidia permettant de réaliser des programmes qui utilisent les cœurs des cartes graphiques.
 
 Dans un premier temps, vous ferez en sorte d'exécuter un Hello World sur plusieurs cœurs d'un GPU en parallèle.
 
@@ -32,7 +32,7 @@ La syntaxe de CUDA est très similaire à celle du C / C++.
 
 3. Afin de mieux organiser l'exécution en parallele des cœurs du GPU, appelé un thread, ils sont représentés sur un repère à 3 dimensions.
 
-4. Les threads sont regroupés en blocs, eux aussi représentés sur un repère à 3 dimensions : la GRID.
+4. Les threads sont regroupés en blocs, eux aussi représentés sur un repère à 3 dimensions : la Grille.
 
 Voici un schéma descriptif, car *une image vaut mieux que mille mots*, de l'organisation des threads en blocs dans une grille en 2 dimensions.
 
@@ -80,9 +80,7 @@ Celle-ci devra afficher la chaîne de caractères `"Hello CUDA World {idx}"`, ou
 *Votre CPU va vite, très vite, mais son nombre de cœurs est limité (pas plus de 128 pour les meilleurs).
 Vous allez donc utiliser le très grand nombre de cœurs présents sur un GPU pour accélérer l'exécution d'un programme.*
 
-Votre tâche est donc d'exploiter la puissance de votre GPU pour additionner plus rapidement les 2 listes, en plusieurs étapes.
-
-> **Toutes ces étapes sont décrites dans le code issu des [ressources](https://github.com/PoCInnovation/Workshops/raw/cuda/software/10.CUDA/CUDA_steps.zip) sous la forme de TODOs.**
+> **Toutes les étapes sont décrites dans le code issu des [ressources](https://github.com/PoCInnovation/Workshops/raw/cuda/software/10.CUDA/CUDA_steps.zip) sous la forme de TODOs.**
 
 > :warning: ***Voici les ressources dont vous aurez besoin*** :
 
@@ -95,6 +93,25 @@ Votre tâche est donc d'exploiter la puissance de votre GPU pour additionner plu
 Bravo, vous êtes désormais à l'aise avec CUDA ! Maintenant, voyons un exemple plus... compliqué :dizzy_face:.
 
 > :triangular_flag_on_post: **Troisième tâche : parcourir une image en couleur et déterminer la valeur de gris de chaque pixel pour transformer l'image en noir et blanc.**
+
+Pour cette dernière étape de ce workshop, une grande partie du code vous est volontairement donné.
+De plus, vous n'aurez pas à vous soucier de la mémoire !
+
+Vous devrez écrire le corps de la fonction **`deviceKernel`** présente dans le fichier **`Image.cu`**.
+
+Cette fonction est responsable de la transformation d'un pixel en couleur en un pixel en noir et blanc. Elle prends pour cela trois paramètres :
+
+- **`m_devicePixels`**, la liste de pixels.
+- **`w`**, la taille en ordonée de l'image.
+- **`h`**, la taille en abscisse de l'image.
+
+Vous devez :
+
+- Déterminer le nombre de threads lancés.
+- Déterminer l'ID du thread actuel.
+- Déterminer le nombre de pixels dans l'image.
+- Pour un certain nombre de pixels, générer des valeurs aléatoires pour les champs r, g et b contenues entre 0 et 255. Petite note, la fonction rand n'existe pas sur CUDA.
+- Calculer la valeur de gris du pixel.
 
 ## Authors
 
