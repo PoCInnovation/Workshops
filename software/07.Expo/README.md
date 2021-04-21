@@ -173,3 +173,8 @@ Here is a list of possible features you could add to your project
   - On the landing screen, add a button that will fake our login, when press, we will consider that we are logged in
   - Setup a context to save if the user is logged in. Everything is explained [here](https://reactnavigation.org/docs/auth-flow)
   - Set the `userToken` state of the context to *poc* when the button is pressed, this should switch to another screen
+
+
+## Authors 
+
+- [Paul Monnery](https://github.com/PaulMonnery)
