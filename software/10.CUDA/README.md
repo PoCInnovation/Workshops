@@ -99,7 +99,7 @@ De plus, vous n'aurez pas à vous soucier de la mémoire !
 
 Vous devrez écrire le corps de la fonction **`deviceKernel`** présente dans le fichier **`Image.cu`**.
 
-Cette fonction est responsable de la transformation d'un pixel en couleur en un pixel en noir et blanc. Elle prends pour cela trois paramètres :
+Cette fonction est responsable de la transformation d'un pixel en couleur en un pixel en noir et blanc. Elle prend pour cela trois paramètres :
 
 - **`m_devicePixels`**, la liste de pixels.
 - **`w`**, la taille en ordonée de l'image.
