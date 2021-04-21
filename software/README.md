@@ -7,7 +7,7 @@ In each directory the SETUP and a README explaining the purpose of the workshop.
 ### To join our Discord
 http://bit.ly/DiscordPoCEvents
 
-## 1 - [Todo List in React](./1.React)
+## 1 - [Todo List in React](01.React)
 
 Create your own todo list. You will :
  - learn the basics of React
@@ -15,7 +15,7 @@ Create your own todo list. You will :
  - use an external API to manage your tasks
  - have an overview of front end development
 
-## 2 - [REST API in Go](./2.Go)
+## 2 - [REST API in Go](02.Go)
 
 Discover REST API and Go language. You will :
  - learn MVC architecture
@@ -23,47 +23,47 @@ Discover REST API and Go language. You will :
  - assimilate Go concept
  - use a mocked database
 
-## 3 - [GraphQL API with Prisma2](./3.Prisma)
+## 3 - [GraphQL API with Prisma2](03.Prisma)
 
 Discover GraphQL API with Prisma2. You will :
  - learn GraphQL concept and the difference with REST
  - work with a modern typescript ORM
  - use gql apollo playground
 
-## 4 - [Docker for beginners](./4.Docker)
+## 4 - [Docker for beginners](04.Docker)
 
 Discover basics of Docker. You will :
  - use the docker CLI
  - containerize a simple API
  - manage multiple containers though docker-compose
 
-## 5 - [Github Actions](./5.Actions)
+## 5 - [Github Actions](05.Actions)
 
 Create your CI/CD for Epitech project. You will :
  - trigger your test automatically
  - save your result though artifact
  - have a first approach about devops
 
-## 6 - [REST API in NestJs](./6.Nest)
+## 6 - [REST API in NestJs](06.Nest)
 
 Discover NetsJS back end Framework. You will :
  - learn decorator's concept
  - use a mocked database
  - assimilate new API architecture
 
-## 7 - [Mobile app with Expo](./7.Expo)
+## 7 - [Mobile app with Expo](07.Expo)
 
 Win time as mobile developer with Expo. You will :
  - learn basics to React Native
  - create your own QR code scanner
  
-## 8 - [Learn Typescript](./8.Typescript)
+## 8 - [Learn Typescript](08.Typescript)
 
 Learn Typescript by creating a complete Express API. You will :
  - learn basics of Typescript
  - understand API
 
-## 9 - [Create an Event Calendar with Svelte](./9.Svelte)
+## 9 - [Create an Event Calendar with Svelte](09.Svelte)
 
 Learn the basic of Svelte by creating a simple application to manage your events.
 You will :
@@ -71,4 +71,15 @@ You will :
   - learn Svelte basics functionalities
   - understand Svelte advantages
   - deploy a Svelte app through Dockerfile
+
+## 10 - [Discover graph database with Neo4j](10.Neo4j)
+
+Learn a new way to store your data, concept of graph database and work with neo4J
+You will :
+ - Learn graph database concept
+ - Interact with a graph database
+ - Use an OGM to simplify your development
+ - Understand Cypher syntax
+ - Build basics query through a query builder  
+ - Test your Typescript code with Jest framework
   

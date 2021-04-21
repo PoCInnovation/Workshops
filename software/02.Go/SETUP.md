@@ -27,7 +27,7 @@ We will be using `postman` to test out our routes, but you can also use `Hoppsco
 
 ## 3. Launching the server
 
-Once everything is installed, you have to download the workshop files **[here](https://downgit.github.io/#/home?url=https://github.com/PoCInnovation/Workshops/tree/master/software/2.Go/src)**.
+Once everything is installed, you have to download the workshop files **[here](https://downgit.github.io/#/home?url=https://github.com/PoCInnovation/Workshops/tree/master/software/02.Go/src)**.
 Then, go in the [src](./src) folder and execute:
 ```sh
 go run ./
