@@ -173,7 +173,7 @@ Let's add a new entity named `Authors` in the `entities` folder.
 
 Repeat the same process from step 1 to interact with this new entity.
 
-> :bulb: You can do it very fast because the only things that changes are properties of the entity, the management functions should be the same ;)
+> :bulb: You can do it very fast because the only things that changes are properties of the entity, the management functions should be the same
 
 #### Tests
 
