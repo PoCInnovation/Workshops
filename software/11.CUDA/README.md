@@ -108,10 +108,14 @@ Cette fonction est responsable de la transformation d'un pixel en couleur en un 
 Vous devez :
 
 - Déterminer le nombre de threads lancés.
-- Déterminer l'ID du thread actuel.
+- Déterminer l'[ID](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#built-in-variables) du thread actuel.
 - Déterminer le nombre de pixels dans l'image.
 - Pour un certain nombre de pixels, générer des valeurs aléatoires pour les champs r, g et b contenues entre 0 et 255. Petite note, la fonction rand n'existe pas sur CUDA.
 - Calculer la valeur de gris du pixel.
+
+> :warning: ***Voici les ressources dont vous aurez besoin*** :
+
+- [Vous avez dit aléatoire ?](https://docs.nvidia.com/cuda/curand/index.html)
 
 ## Authors
 
