@@ -18,7 +18,7 @@ You are a software engineer in a high potential startup.
 
 Your first version is ready to be deployed, however your manager wants the deployment to be simple, fast and does not require a manual configuration of the server on which you will deploy.
 
-For this, you quickly search the internet and come across a great containerization tool called Docker.
+For this, you quickly search on google and come across a great containerization tool called Docker.
 
 Docker is a tool capable of encapsulating an application in a container which allows you to run it in an isolated and controlled environment. This makes deployment much easier since you only need to have Docker installed on your machine and you're done.
 No more need for a big script to manage dependencies, no more need to adapt to the machine, the container is isolated and is self sufficient.
