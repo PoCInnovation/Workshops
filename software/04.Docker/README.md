@@ -1,6 +1,12 @@
 # Workshop 4 - Docker for beginners
 
-In this workshop, we will see how to create docker images and containers using Dockerfiles and docker-composes.
+✔️ Learn docker CLI
+
+✔️ Use docker container
+
+✔️ Create your own image
+
+✔️ Manage many containers through docker-compose
 
 ## Step 0: Initialization
 
