@@ -12,9 +12,9 @@
 
 All the required information to install dependencies can be found in [SETUP.md](./SETUP.md).
 
-## Story 
+## Story
 
-You are a software engineer in a high potential start up.
+You are a software engineer in a high potential startup.
 
 Your first version is ready to be deployed, however your manager wants the deployment to be simple, fast and does not require a manual configuration of the server on which you will deploy.
 
