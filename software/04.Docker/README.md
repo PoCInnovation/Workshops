@@ -122,10 +122,10 @@ If you did this step correctly, your Epytodo should be accessible as if it were 
 ## To go further
 
 If you want to learn more on the architecture implementation and container's management, you can check those links:
-- [kubernetes](https://kubernetes.io/fr/docs/concepts/overview/what-is-kubernetes/)
-- [lazydocker](https://github.com/jesseduffield/lazydocker)
-- [docker hub](https://hub.docker.com/)
-- [docker swarm](https://docs.docker.com/get-started/swarm-deploy/)
+- [Kubernetes](https://kubernetes.io/fr/docs/concepts/overview/what-is-kubernetes/)
+- [Lazydocker](https://github.com/jesseduffield/lazydocker)
+- [Docker hub](https://hub.docker.com/)
+- [Docker swarm](https://docs.docker.com/get-started/swarm-deploy/)
 
 ## Authors
 - [Tom Chauveau](https://github.com/TomChv)
