@@ -10,7 +10,7 @@ Enfin, vous vous pencherez sur un problème plus conséquent : transformer une i
 
 ## **Step 0 - :rocket: Initialization**
 
-:ghost: **You must download and extract the [following resources](https://github.com/PoCInnovation/Workshops/raw/cuda/software/10.CUDA/CUDA_steps.zip).**
+Un repository a été créé pour vous grâce au lien d'invitation qui vous a été communiqué par mail. Lorsque vous *pushez* sur celui-ci des tests seront lancés et vous permettrons de valider les prochaines étapes.
 
 >:checkered_flag:  **Avant de débuter, il est nécessaire que vous compreniez quelques termes.**
 
