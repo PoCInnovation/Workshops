@@ -12,9 +12,21 @@
 
 All the required information to install dependencies can be found in [SETUP.md](./SETUP.md).
 
+## Story
+
+You are a software engineer in a high potential startup.
+
+Your first version is ready to be deployed, however your manager wants the deployment to be simple, fast and does not require a manual configuration of the server on which you will deploy.
+
+For this, you quickly search on google and come across a great containerization tool called Docker.
+
+Docker is a tool capable of encapsulating an application in a container which allows you to run it in an isolated and controlled environment. This makes deployment much easier since you only need to have Docker installed on your machine and you're done.
+No more need for a big script to manage dependencies, no more need to adapt to the machine, the container is isolated and is self sufficient.
+
 ## Step 1: The bases of Docker
 
-To begin with, we will learn how to use the "moulinette" 's docker to test your EPITECH projects.
+Having no knowledge of docker, you first decide to take over the CLI based on your experience at Epitech.
+Let's learn how to use the "moulinette"'s docker to test your EPITECH projects.
 - Download and run the ["moulinette"](https://hub.docker.com/r/epitechcontent/epitest-docker/) 's image.
 - Using `docker run` command and some arguments:
   - mount your current directory `$PWD` in your container
@@ -26,12 +38,12 @@ To begin with, we will learn how to use the "moulinette" 's docker to test your 
 
 ## Step 2: Containerization of an API with a Dockerfile
 
-Now, we will learn how to build our custom docker image thanks to a `Dockerfile`.
+Now, we will learn how to build a custom docker image thanks to a `Dockerfile`.
 
 In the [src](./src/node_api) folder, you'll find a NodeJS API. This API is very simple, it returns a message when you do a GET request on `/`.
-In a first time, download the API [here](https://downgit.github.io/#/home?url=https://github.com/PoCInnovation/Workshops/tree/master/software/4.Docker/src/node_api).
+In a first time, download the API [here](https://downgit.github.io/#/home?url=https://github.com/PoCInnovation/Workshops/tree/master/software/04.Docker/src/node_api).
 
-The objective is to isolate this API in a docker image. You must:
+The objective is to create a docker image of that API. You must:
 
 - Create a `Dockerfile` in the `node_api` folder.
 
@@ -41,7 +53,7 @@ The objective is to isolate this API in a docker image. You must:
 - Make the API accessible from outside the image on the same port as `PORT`.
 - Install dependencies (`npm install`) and launch the API (`npm start`).
 
-> If you need the [documentation](https://docs.docker.com/engine/reference/builder/) on how to create Dockerfiles.
+> Take a look at the [documentation](https://docs.docker.com/engine/reference/builder/) about Dockerfiles.
 
 Once your image is created, you must `run` a container based on it.
 
@@ -119,13 +131,15 @@ We want `app` and `db` to be able to communicate properly, so we are going to pu
 
 If you did this step correctly, your Epytodo should be accessible as if it were manually launched with python.
 
+Congratulation, you are now ready to create a docker image of your product !
+
 ## To go further
 
 If you want to learn more on the architecture implementation and container's management, you can check those links:
-- [kubernetes](https://kubernetes.io/fr/docs/concepts/overview/what-is-kubernetes/)
-- [lazydocker](https://github.com/jesseduffield/lazydocker)
-- [docker hub](https://hub.docker.com/)
-- [docker swarm](https://docs.docker.com/get-started/swarm-deploy/)
+- [Kubernetes](https://kubernetes.io/fr/docs/concepts/overview/what-is-kubernetes/)
+- [Lazydocker](https://github.com/jesseduffield/lazydocker)
+- [Docker hub](https://hub.docker.com/)
+- [Docker swarm](https://docs.docker.com/get-started/swarm-deploy/)
 
 ## Authors
 - [Tom Chauveau](https://github.com/TomChv)
