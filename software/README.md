@@ -83,3 +83,13 @@ You will :
  - Build basics query through a query builder  
  - Test your Typescript code with Jest framework
   
+
+## 11 - [Accelerate applications on your GPU with CUDA](11.CUDA)
+
+Learn to create different programs that use the power of GPUs with the API developed by Nvidia: CUDA.
+You will :
+
+- Learn CUDA architecture
+- Launch programs on a GPU
+- Accelerate the copy of data
+- Speed up the application of a filter on an image
