@@ -1,40 +1,41 @@
-# **Workshop 10 - CUDA et accélération matérielle**
+# **Workshop 10 - CUDA and hardware acceleration**
 
-Durant ce workshop vous apprendrez à utiliser CUDA, l'API développé par Nvidia permettant de réaliser des programmes qui utilisent les cœurs des cartes graphiques.
+During this workshop you will learn how to use CUDA, the API developed by Nvidia to create programs that use the cores of graphics cards.
 
-Dans un premier temps, vous ferez en sorte d'exécuter un Hello World sur plusieurs cœurs d'un GPU en parallèle.
+First, you will execute a Hello World on several cores of a GPU in parallel.
 
-Puis, vous développerez une application capable d'accélérer l'addition de 2 listes de très grandes tailles.
+Then, you will develop an application able of accelerating the addition of 2 very large lists.
 
-Enfin, vous vous pencherez sur un problème plus conséquent : transformer une image en couleur en une image en noir et blanc.
+Finally, you will look at a bigger problem: transforming a colored image into a black and white one.
 
 ## **Step 0 - :rocket: Initialization**
 
-:ghost: **You must download and extract the [following resources](https://github.com/PoCInnovation/Workshops/raw/cuda/software/10.CUDA/CUDA_steps.zip).**
+A repository has been created for you when you accepted the invitation link that was sent to you by email.
+Whenever you push, tests will be launched and will allow you to validate the next steps.
 
->:checkered_flag:  **Avant de débuter, il est nécessaire que vous compreniez quelques termes.**
+>:checkered_flag:  **Before you begin, it is necessary that you understand a few terms.**
 
-:heavy_check_mark: Comprendre l'execution sur CUDA
+:heavy_check_mark: Understand the execution model on CUDA
 
-:heavy_check_mark: Comprendre la répartition de la mémoire entre Host et Device
+:heavy_check_mark: Understand the memory distribution between Host and Device
 
-:heavy_check_mark: Comprendre la nomenclature sur CUDA
+:heavy_check_mark: Understand naming conventions on CUDA
 
-La syntaxe de CUDA est très similaire à celle du C / C++.
+The syntax of CUDA is very similar to C / C++.
 
-> :warning: **Vous trouverez une explication détaillée [ici](https://dev.to/zenulabidin/an-overview-of-cuda-part-2-host-and-device-code-69d) des deux premiers points**.
+> :warning: **You will find a detailed explanation [here](https://dev.to/zenulabidin/an-overview-of-cuda-part-2-host-and-device-code-69d) of the first two points**.
 
-1. Dans les ressources et durant vos recherches, le terme utilisé pour designer le processeur (CPU) ainsi que la mémoire classique (RAM) est **Host**.
+1. In the resources and during your research, the term used to designate the processor (CPU) as well as the classic memory (RAM) is **Host**.
 
-2. Lorsqu'il est question de la carte graphique (GPU) ainsi que de la mémoire de celle-ci (VRAM), le terme utilisé est **Device**.
+2. When referring to the graphics card (GPU) as well as its memory (VRAM), the term used is **Device**.
 
-> :warning: **Vous trouverez une explication détaillée [ici](https://en.wikipedia.org/wiki/Thread_block_(CUDA_programming)) des deux derniers points**.
+> :warning: **You will find a detailed explanation [here](https://en.wikipedia.org/wiki/Thread_block_(CUDA_programming)) of the last two points**.
 
-3. Afin de mieux organiser l'exécution en parallele des cœurs du GPU, appelé un thread, ils sont représentés sur un repère à 3 dimensions.
+3. In order to better organize the parallel execution of the GPU cores, called a thread, they are represented on a 3 dimensional frame.
 
-4. Les threads sont regroupés en blocs, eux aussi représentés sur un repère à 3 dimensions : la Grille.
+4. Threads are grouped in blocks, which are also represented on a 3-dimensional reference frame: the Grid.
 
-Voici un schéma descriptif, car *une image vaut mieux que mille mots*, de l'organisation des threads en blocs dans une grille en 2 dimensions.
+Here is a descriptive diagram, because *a picture is worth a thousand words*, of the organization of threads in blocks in a 2 dimensional grid.
 
 <div align="center">
     <img src="../../.github/assets/CUDAthreads.png" width=50%"/>
@@ -42,80 +43,80 @@ Voici un schéma descriptif, car *une image vaut mieux que mille mots*, de l'org
 
 ## **Step 1 - :wave: Hello CUDA World**
 
-> :triangular_flag_on_post: **Première tâche : classique, mais efficace. Hello CUDA World.**
+> :triangular_flag_on_post: **First task: classic, but effective. Hello CUDA World.**
 
-:heavy_check_mark: Exécuter du code avec CUDA
+:heavy_check_mark: Running code using CUDA
 
-:heavy_check_mark: Indexer des threads
+:heavy_check_mark: Indexing threads
 
-:heavy_check_mark: Comprendre l'execution d'un [kernel](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/)
+:heavy_check_mark: Understand the execution of a [kernel](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/)
 
-Pour vous familiariser avec CUDA, vous allez commencer par lancer une fonction sur 2 threads.
+To familiarize yourself with CUDA, you will start by running a function on two threads.
 
-Celle-ci devra afficher la chaîne de caractères `"Hello CUDA World {idx}"`, ou idx correspond à l'index du thread.
+It should display the string `"Hello CUDA World {idx}"`, where idx is the index of the thread.
 
-> :warning: ***Voici les ressources dont vous aurez besoin*** :
+> :warning: ***Here are the resources you will need*** :
 
-- [L'indexation sur CUDA](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#built-in-variables).
+- [Indexing on CUDA](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#built-in-variables).
 
-- [Portée des fonctions exécutés sur CUDA](https://stackoverflow.com/questions/12373940/difference-between-global-and-device-functions).
+- [Scope of functions on CUDA](https://stackoverflow.com/questions/12373940/difference-between-global-and-device-functions).
 
-- [Lancement d'un kernel sur x blocs contenants y threads](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#kernels).
+- [Launching a kernel on x blocks containing y threads](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#kernels).
 
 ## **Step 2 - :twisted_rightwards_arrows: Summing up two arrays**
 
-> :triangular_flag_on_post: **Seconde tâche : additionner 2 listes qui contiennent chacune 1 048 576 d'éléments.
-> Le résultat de l'addition doit être contenu dans la seconde liste.**
+> :triangular_flag_on_post: **Second task: add two lists, each containing 1,048,576 elements.
+> The result of the addition must be contained in the second list.**
 
-:heavy_check_mark: Allouer dynamiquement de la mémoire sur un GPU
+:heavy_check_mark: Dynamically allocate memory on a GPU
 
-:heavy_check_mark: Utiliser l'indexation des threads dans la logique d'un programme
+:heavy_check_mark: Use thread indexing in the logic of a program
 
-:heavy_check_mark: Copier des données depuis le Host vers le Device
+:heavy_check_mark: Copy data from Host to Device
 
-:heavy_check_mark: Copier des données depuis le Device vers le Host
+:heavy_check_mark: Copy data from Device to Host
 
-:heavy_check_mark: Synchroniser l'exécution des threads
+:heavy_check_mark: Synchronize the execution of threads
 
-*Votre CPU va vite, très vite, mais son nombre de cœurs est limité (pas plus de 128 pour les meilleurs).
-Vous allez donc utiliser le très grand nombre de cœurs présents sur un GPU pour accélérer l'exécution d'un programme.*
+*Your CPU goes fast, very fast, but its number of cores is limited (no more than 128 for the best).
+So you will use the very large number of cores available on a GPU to speed up the execution of a program.*
 
-> **Toutes les étapes sont décrites dans le code issu des [ressources](https://github.com/PoCInnovation/Workshops/raw/cuda/software/10.CUDA/CUDA_steps.zip) sous la forme de TODOs.**
+> **All the steps are described in the code from the [resources](https://github.com/PoCInnovation/Workshops/raw/cuda/software/10.CUDA/CUDA_steps.zip) in the form of TODOs.**
 
-> :warning: ***Voici les ressources dont vous aurez besoin*** :
+> :warning: ***Here are the resources you will need*** :
 
-- [Les fonctions permettant de gérer la mémoire (CRTL + F -> memc.. ou mall.. :wink:)](https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__MEMORY.html).
+- [The functions used to manage the memory (CRTL + F -> memc.. or mall.. :wink:)](https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__MEMORY.html).
 
-- [Synchronisation des threads](https://www.google.com/).
+- [Thread synchronization](https://www.google.com/).
 
 ## **Step 3 - :framed_picture: Image filter**
 
-Bravo, vous êtes désormais à l'aise avec CUDA ! Maintenant, voyons un exemple plus... compliqué :dizzy_face:.
+Congratulations, you are now comfortable with CUDA! Now, let's see a more... complicated example :dizzy_face:.
 
-> :triangular_flag_on_post: **Troisième tâche : parcourir une image en couleur et déterminer la valeur de gris de chaque pixel pour transformer l'image en noir et blanc.**
+> :triangular_flag_on_post: **Task 3: Scan a color image and determine the gray value of each pixel to transform the image to black and white.**
 
-Pour cette dernière étape de ce workshop, une grande partie du code vous est volontairement donné.
-De plus, vous n'aurez pas à vous soucier de la mémoire !
+For this last step of the workshop, a large part of the code is voluntarily given to you.
+Moreover, you won't have to worry about memory!
 
-Vous devrez écrire le corps de la fonction **`deviceKernel`** présente dans le fichier **`Image.cu`**.
+You will have to write the body of the **`deviceKernel`** function present in the **`Image.cu`** file.
 
-Cette fonction est responsable de la transformation d'un pixel en couleur en un pixel en noir et blanc. Elle prend pour cela trois paramètres :
+This function is responsible for the transformation of a color pixel into a black and white pixel. It takes three parameters for this:
 
-- **`m_devicePixels`**, la liste de pixels.
-- **`w`**, la taille en ordonée de l'image.
-- **`h`**, la taille en abscisse de l'image.
+- **`m_devicePixels`**, the list of pixels.
+- **`w`**, the size on the y-axis of the image.
+- **`h`**, the size on the x-axis of the image.
 
-Vous devez :
+You must:
 
-- Déterminer le nombre de threads lancés.
-- Déterminer l'[ID](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#built-in-variables) du thread actuel.
-- Déterminer le nombre de pixels dans l'image.
-- Pour un certain nombre de pixels, générer des valeurs aléatoires pour les champs r, g et b contenues entre 0 et 255. Petite note, la fonction rand n'existe pas sur CUDA.
-- Calculer la valeur de gris du pixel.
+- Determine the number of launched threads.
+- Determine the [ID](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#built-in-variables) of the current thread.
+- Determine the number of pixels in the image.
+- For a certain number of pixels, generate random values for the fields r, g and b contained between 0 and 255. Small note, the rand function does not exist on CUDA.
+- Calculate the gray value of the pixel.
 
-> :warning: ***Voici les ressources dont vous aurez besoin*** :
+> :warning: ***Here are the resources you will need*** :
 
-- [Vous avez dit aléatoire ?](https://docs.nvidia.com/cuda/curand/index.html)
+- [Did you say random?](https://docs.nvidia.com/cuda/curand/index.html)
 
 ## Authors
 
