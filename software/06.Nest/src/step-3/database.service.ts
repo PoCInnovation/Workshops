@@ -3,7 +3,7 @@ import { ArticleDto } from './article.dto'
 
 @Injectable()
 export class DatabaseService {
-  private readonly article: ArticleDto[] = [];
+  private article: ArticleDto[] = [];
 
   async createArticle(newArticle: ArticleDto): Promise<ArticleDto> {
     const post = await this.findArticle(newArticle.title);
@@ -42,7 +42,7 @@ export class DatabaseService {
       throw new NotFoundException("Article not found");
     }
 
-    this.article.filter(p => p.title !== postTitle);
+    this.article = this.article.filter(p => p.title !== postTitle);
 
     return post;
   }
