@@ -233,7 +233,7 @@ If you are not familiar to react, take a loot at this [documentation](https://re
 You know how to create a GraphQL and interact with it from frontend through the `apolloClient`.
 
 You should now implement more functionalities like :
-  - User management's
+  - User management
   - Button and forms to add products
   - Page Routing
   - A button to delete and update products
