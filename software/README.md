@@ -93,3 +93,13 @@ You will :
 - Launch programs on a GPU
 - Accelerate the copy of data
 - Speed up the application of a filter on an image
+
+## 12 - [Create a web application with GraphQL and Apollo](./12.GraphQL-Apollo)
+
+Discover GraphQL API through a little project of shop. 
+You will :
+ - Learn graphql API concept
+ - Interact with a graphQL API
+ - Define your own graphql schema
+ - Build a basic graphQL API
+ - Use graphql in a React application
