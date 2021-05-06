@@ -31,3 +31,5 @@ http://bit.ly/DiscordPoCEvents
 ## Modélisation :
 
 ### Workshop 1: [Modélisation 3D : My first Asset](./Workshop_MD_1/Workshop_MD_1.pdf)
+
+### Workshop 2: [Modélisation 3D : My House](./Workshop_MD_2/Workshop_MD_2.pdf)
