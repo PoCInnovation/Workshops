@@ -84,6 +84,12 @@ direnv: loading ~/poc-workshop-neo4j/.envrc
 direnv: export +NEO4J_HOST +NEO4J_PASSWORD +NEO4J_PORT +NEO4J_USER
 ```
 
+#### Install dependencies
+
+```
+npm install
+```
+
 #### Start the program
 
 ```shell
