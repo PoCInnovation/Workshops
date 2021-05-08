@@ -40,6 +40,7 @@ $ tree -a
 ├── package-lock.json    # Node dependencies manager
 ├── .prettierrc.js       # Style config file
 ├── src                  # Source directory
+│   ├── appDatabase.ts   # Database client
 │   ├── config.ts        # Program configuration
 │   └── index.ts         # Entrypoint
 ├── tests                # Tests directory
