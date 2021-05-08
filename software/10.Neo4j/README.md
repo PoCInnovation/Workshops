@@ -99,7 +99,7 @@ Now, inside this directory, let's create another directory named `Books`.
 
 ### Entity
 
-Create a file named `BooksEntity` and define your entity properties in.
+Create a file named `BooksEntity.ts` and define your entity properties in.
 
 To do that :
 - Create a [type](https://www.typescriptlang.org/docs/handbook/2/objects.html) `BooksPropertiesI` which define all your fields and their type according to the previous schema. 
@@ -107,7 +107,7 @@ To do that :
 > :bulb: You must add a property `id` of type `string` to recognize books that has common values.
 
 - Create an empty interface named `BooksRelationNodesI` to store all your relation, we will fill it later.
-- Create a [type]([type](https://www.typescriptlang.org/docs/handbook/2/objects.html)) `BooksInstance` which will define a `NeogmaInstance` fill with types previously defined.
+- Create a [type]([type](https://www.typescriptlang.org/docs/handbook/2/objects.html)) `BooksInstance` which will define a `NeogmaInstance` and fill it with types previously defined.
 
 Your types are defined, let's create the node :
   
