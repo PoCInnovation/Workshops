@@ -108,6 +108,7 @@ Actual configuration:
 #### Run test
 
 ```shell
+$ npm run test
 > typescript-project-template@1.0.0 test
 > jest --coverage tests
 
