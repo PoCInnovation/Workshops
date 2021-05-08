@@ -113,9 +113,9 @@ Your types are defined, let's create the node :
   
 [Export](https://riptutorial.com/typescript/example/28118/exporting-importing-declarations) a `const` variable named `Books`. It is equal to the result of the function `ModelFactory`, which create a new model using the types we previously defined, and some additional information we give in the parameters.
 The `ModelFactory` function takes an object which must contain the following fields :
-- `label`: type name in neo4j database.
-- `primaryKeyField`: primary key to use to recognize entity.
-- `schema`: data definition, apply some constraint to enforce safety of your model. 
+- `label`: the name we choose for the Model, here it's `Book`.
+- `primaryKeyField`: primary key use to recognize entity, here it's `id`.
+- `schema`: defines the data of the model, and applies some constraints to enforce some data safety. 
 
 > :warning: Don't forget to pass the `neogma` client as the second argument !
 
@@ -136,7 +136,7 @@ You must write those function in a file named `BooksModels` in the `entities/Boo
 
 > :bulb: You should generate a unique id with the [uuid](https://www.npmjs.com/package/uuid) npm package.
 >
-> The create function return a `BookInstance`, you should create a utility function to convert it to `BookPropertiesI`.
+> The create function return a `BooksInstance`, you should create a utility function to convert it to `BooksPropertiesI`.
 
 #### Read
 
