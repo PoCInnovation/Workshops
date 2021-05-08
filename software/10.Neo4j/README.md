@@ -74,7 +74,7 @@ Take a look at the [documentation](https://themetalfleece.github.io/neogma-docs/
 
 ### Check models
 
-To verify that your connection is working, modify the file `index.ts` to print models define in the database.
+To verify that your connection is working, modify the file `index.ts` to print models defined in the database.
 
 It should print an empty object like this :
 
@@ -128,7 +128,7 @@ Let's develop some functions to interact with our entity. It's common to add ele
 :bulb: Be careful, those operations are asynchronous ! Don't forget to use `async` and `await` keywords.
 You can check this [documentation](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/async_function) for more information.
 
-You must write those function in a file named `BooksModels.ts` in the `src/entities/Books` folder.
+You must write those function in a file named `BooksModels` in the `entities/Books` folder.
 
 #### Create
 
@@ -169,7 +169,7 @@ We can store books, it's cool ! But authors should be awarded for their work no 
 
 ### Models
 
-Let's add a new entity named `Authors` in the `src/entities` folder.
+Let's add a new entity named `Authors` in the `entities` folder.
 
 Repeat the same process from step 1 to interact with this new entity.
 
