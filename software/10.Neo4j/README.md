@@ -111,13 +111,13 @@ To do that :
 
 Your types are defined, let's create the node :
   
-[Export](https://riptutorial.com/typescript/example/28118/exporting-importing-declarations) a `const` variable named `Books` which define a `ModelFactory` with previous properties and fill it with needed information.
-The factory must contain the following fields :
+[Export](https://riptutorial.com/typescript/example/28118/exporting-importing-declarations) a `const` variable named `Books`. It is equal to the result of the function `ModelFactory`, which create a new model using the types we previously defined, and some additional information we give in the parameters.
+The `ModelFactory` function takes an object which must contain the following fields :
 - `label`: type name in neo4j database.
 - `primaryKeyField`: primary key to use to recognize entity.
 - `schema`: data definition, apply some constraint to enforce safety of your model. 
 
-> :warning: Don't forget to add the `neogma` client to create the label in the database !
+> :warning: Don't forget to pass the `neogma` client as the second argument !
 
 :bulb: You should take a look at this [link](https://medium.com/neo4j/using-neogma-to-build-a-type-safe-node-js-app-with-a-neo4j-graph-database-f289d79dbc52) to get some examples of entity definition.
 
