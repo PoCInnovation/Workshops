@@ -93,7 +93,7 @@ Good job, the database is ready to store some data !
 
 Let's store the main entity of our schema : books.
 
-First, create a directory `entities` to store all our entities management functions.
+First, create a directory `entities` in the directory `src` to store all our entities management functions.
 
 Now, inside this directory, let's create another directory named `Books`.
 
@@ -107,7 +107,7 @@ To do that :
 > :bulb: You must add a property `id` of type `string` to recognize books that has common values.
 
 - Create an empty interface named `BooksRelationNodesI` to store all your relation, we will fill it later.
-- Create a [type]([type](https://www.typescriptlang.org/docs/handbook/2/objects.html)) `BooksInstance` which will define a `NeogmaInstance` and fill it with types previously defined.
+- Create a [type]([type](https://www.typescriptlang.org/docs/handbook/2/objects.html)) `BooksInstance`, which will be equal to the generic type `NeogmaInstance`,  filled with the types we previously defined.
 
 Your types are defined, let's create the node :
   
