@@ -237,7 +237,7 @@ You should now implement more functionalities like :
   - Button and forms to add products
   - Page Routing
   - A button to delete and update products
-  - A button to sell products
+  - A button to sell and add products
 
 ## To go further
 
