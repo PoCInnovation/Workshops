@@ -100,7 +100,6 @@ $ yarn dev # Start server in developer mode
 
 With npm
 
-To start the project, execute the following commands :
 ```shell
 $ npm install # Install dependencies
 $ npm run migrate # Init database and prisma client
