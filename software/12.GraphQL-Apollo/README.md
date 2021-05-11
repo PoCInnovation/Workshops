@@ -90,11 +90,23 @@ Your directory should have the following structure :
 ```
 
 To start the project, execute the following commands :
+
+With yarn
 ```shell
 $ yarn # Install dependencies
 $ yarn migrate # Init database and prisma client
 $ yarn dev # Start server in developer mode
 ```
+
+With npm
+
+To start the project, execute the following commands :
+```shell
+$ npm install # Install dependencies
+$ npm run migrate # Init database and prisma client
+$ npm run dev # Start server in developer mode
+```
+
 
 Go to http://localhost:5000 to reach the local playground of your API.
 
