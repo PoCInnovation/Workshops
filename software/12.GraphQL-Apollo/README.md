@@ -46,7 +46,7 @@ Now let's play with funny queries :
 
 ## Step 2 - Hello Apollo
 
-It's time to try graphql, simplest and most popular library is [Apollo server](https://github.com/apollographql/apollo-server).
+It's time to try graphql, the simplest and most popular library is [Apollo server](https://github.com/apollographql/apollo-server).
 
 ### Setup backend
 
