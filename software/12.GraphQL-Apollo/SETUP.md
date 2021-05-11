@@ -6,6 +6,7 @@ Please make sure you have the following programs installed:
 - [node (version 14 or higher)](https://github.com/nodejs/node): javascript interpreter
 - [npm](https://www.npmjs.com/): node package manager
 - [yarn](https://yarnpkg.com/): a better npm
+- [prisma](https://www.prisma.io/): an ORM to manage database
 
 To install node:
 - under fedora: `sudo dnf install nodejs`.
@@ -13,6 +14,11 @@ To install node:
 
 To install yarn:
 `npm install --global yarn`
+
+To install prisma:
+```
+npm install --global prisma
+```
 
 ## 2. Project
 
