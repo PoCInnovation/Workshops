@@ -2,7 +2,6 @@ version: "3"
 
 services:
     server:
-        build: './back'
         image: amozpay/todoapi:latest
         ports:
             - "8080:8080"
@@ -11,14 +10,14 @@ services:
         depends_on:
             - database
         environment:
-            - MYSQL_DATABASE=epytodo
-            - MYSQL_HOST=database
-            - MYSQL_USER=user
-            - MYSQL_PASSWORD=password
-            - MYSQL_ROOT_PASSWORD=password
-            - SECRET=ea15929fac66ce574f44aabdde18dd67d30900bd6ee08e0c40df1de4cca1170e2fa5008fbdcaa4f868d45e4d18777276764536102a64fd808f98ad113193688e
-            - SERVER_PORT=8080
-            - SERVER_HOST=0.0.0.0
+            MYSQL_DATABASE: $MYSQL_DATABASE
+            MYSQL_HOST: $MYSQL_HOST
+            MYSQL_USER: $MYSQL_USER
+            MYSQL_PASSWORD: $MYSQL_PASSWORD
+            MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD
+            SECRET: $SECRET
+            SERVER_PORT: $SERVER_PORT
+            SERVER_HOST: $SERVER_HOST
         restart: always
 
     database:
@@ -28,12 +27,12 @@ services:
         ports:
             - "3306:3306"
         environment:
-            - MYSQL_DATABASE=epytodo
-            - MYSQL_HOST=localhost
-            - MYSQL_USER=user
-            - MYSQL_PASSWORD=password
-            - MYSQL_ROOT_PASSWORD=password
-            - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+            MYSQL_DATABASE:
+            MYSQL_HOST:
+            MYSQL_USER:
+            MYSQL_PASSWORD:
+            MYSQL_ROOT_PASSWORD:
+            MYSQL_ALLOW_EMPTY_PASSWORD:
         networks:
             - back-end
         volumes:
