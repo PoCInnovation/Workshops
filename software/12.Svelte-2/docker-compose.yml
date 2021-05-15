@@ -21,7 +21,7 @@ services:
         restart: always
 
     database:
-        image: mysql
+        image: mysql:latest
         command: mysqld
         restart: always
         ports:
