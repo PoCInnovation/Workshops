@@ -21,7 +21,7 @@ To begin with, we will learn how to create a simple component and display it in 
 Create a `components` directory in `src/` which will contain a file named `Event.svelte`.
 
 This component must be a simple `div` which contains the following props:
-  - `id` as a `int`
+  - `id` as a `number`
   - `title` as a `string`
   - `description` as a `string`
   - `startingDate` as a `Date`

@@ -83,3 +83,23 @@ You will :
  - Build basics query through a query builder  
  - Test your Typescript code with Jest framework
   
+
+## 11 - [Accelerate applications on your GPU with CUDA](11.CUDA)
+
+Learn to create different programs that use the power of GPUs with the API developed by Nvidia: CUDA.
+You will :
+
+- Learn CUDA architecture
+- Launch programs on a GPU
+- Accelerate the copy of data
+- Speed up the application of a filter on an image
+
+## 12 - [Create a web application with GraphQL and Apollo](./12.GraphQL-Apollo)
+
+Discover GraphQL API through a little project of shop. 
+You will :
+ - Learn graphql API concept
+ - Interact with a graphQL API
+ - Define your own graphql schema
+ - Build a basic graphQL API
+ - Use graphql in a React application
