@@ -12,21 +12,19 @@ Please make sure you have the following programs installed:
 ```shell
 $ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
-> :bulb: We recommend you to download the vscode extension [Rust](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust) for Rust
-
-#
+> :bulb: We recommend you to download the vscode extension [Rust](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust) for Rust.
 
 ## 2. Project
 
-Create a working folder and get the resources provided with the workshop.
+Create a working folder.
 
-### To initialize your project:
+### To Init your project:
 
 ```shell
 $ cargo init
 ```
 
-### To launch your project you can do:
+### To Run your project you can do:
 
 ```shell
 $ cargo run
@@ -34,6 +32,6 @@ $ cargo run
 
 ## 3. Start
 
-> :bulb: We recommend you to follow the [Tour of Rust](https://tourofrust.com/00_en.html) for this workshop
+> :bulb: We recommend you to follow the [Tour of Rust](https://tourofrust.com/00_en.html) for this workshop.
 
 [Go back to the exercise](./README.md)
