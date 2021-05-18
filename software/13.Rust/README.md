@@ -158,10 +158,9 @@ Here are some bonus ideas if you want to venture further into the Rust adventure
 
 ## Organization
 
-- [📒 PoC's Linkedin](https://www.linkedin.com/company/pocinnovation/mycompany/)
-- [📷 PoC's Instagram](https://www.instagram.com/pocinnovation/)
-- [🖱️ PoC's Website](https://www.poc-innovation.fr/)
-- [:computer: PoC's Github](https://github.com/orgs/PoCInnovation/)
-- [🌐 PoC's Discord](https://discord.gg/G4Aygn6p)
+- [📒 Linkedin](https://www.linkedin.com/company/pocinnovation/mycompany/)
+- [📷 Instagram](https://www.instagram.com/pocinnovation/)
+- [🖱️ Website](https://www.poc-innovation.fr/)
+- [🌐 Discord](https://discord.gg/G4Aygn6p)
 
 > :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
