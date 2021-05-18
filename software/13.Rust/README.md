@@ -45,7 +45,7 @@ This function must return true if the word given in parameter is a palindrome an
 
 > :bulb: To easily test your functions during this workshop, we advise you to look at this tool. [`assert_eq`](https://doc.rust-lang.org/std/macro.assert_eq.html)
 
-### Step 1.3 - Fibonacci number
+### Step 1.3 - Fibonacci sequence
 
 > :exclamation: We strongly advise you to use the resources given for this exercise.
 
