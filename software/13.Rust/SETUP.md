@@ -1,4 +1,4 @@
-# Workshop 13 - Setup
+# Workshop 13 - SETUP - Introduction to Rust
 
 ## 1. Installation
 
@@ -12,7 +12,7 @@ Please make sure you have the following programs installed:
 ```shell
 $ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
-> :bulb: We recommend you to download the vscode extension [Rust](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust) for Rust.
+> :bulb: We recommend you to download the vscode extension [Rust](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust) for Rust or JETBRAINS extension [IntelliJ Rust](https://www.jetbrains.com/fr-fr/rust/).
 
 ## 2. Project
 

@@ -36,6 +36,8 @@ To do this, create a file `main.rs` in a folder called `src`.
 
 For the second exercise, you have to create a function that takes as parameter a string `word`.
 
+Create a file `palindrome.rs` for this new function.
+
 This function must return true if the word given in parameter is a palindrome and false in the opposite case.
 
 ##### Resources
@@ -48,6 +50,8 @@ This function must return true if the word given in parameter is a palindrome an
 ### Step 1.3 - Fibonacci sequence
 
 > :exclamation: We strongly advise you to use the resources given for this exercise.
+
+Create a file `fibonacci.rs` for this new function.
 
 For the third exercise, try to create a function that takes two parameters:
 - A number of starts with type `usize`.
@@ -73,6 +77,8 @@ Let's go further now!
 
 The objective of this fourth exercise is to create a simplifying calculator.
 
+Create a file `calculator.rs` for this new function.
+
 To do this, you have to make a calculator that can do :
 - `Addition`
 - `Multiplication`
@@ -97,17 +103,15 @@ Display the result of the calculation in your terminal.
 
 The serious stuff begins!
 
-
 This exercise is inspired by the `Pig Latin` concept, so feel free to look at the [original version](https://www.wikiwand.com/en/Pig_Latin) to help you.
 
+Create a file `pig_latin.rs` for this new function.
 
 Get a string as parameter, from this word you have to apply or not the following rules:
-
 
 - If the word starts with a vowel, it doesn't matter. You just need to add a suffix `-hay` to your word.
 
 - If the word starts with a consonant, you must take the first letter of the word and place it in the first position of the suffix.
-
 
 > :bulb: To help you visualize the exercise, here are some examples :
 
@@ -123,6 +127,8 @@ Get a string as parameter, from this word you have to apply or not the following
 Now that you can apply this to words, why not apply it to sentences?
 
 As you can see, try to do the same thing, but for whole sentences.
+
+To do this reuse the same function, but create a loop in your function.
 
 > :bulb: Here are some examples too:
 
@@ -144,13 +150,10 @@ As you can see, try to do the same thing, but for whole sentences.
 ## Bonus
 Here are some bonus ideas if you want to venture further into the Rust adventure! 💪
  - Why not remake your Bistro-matic in Rust?
- - ...
- - ...
 
 ## Further reading
  - [The Rust website](https://www.rust-lang.org/fr)
- - ...
- - ...
+ - [Tour of Rust](https://tourofrust.com/00_en.html)
 
 ## Authors
 - [Yoel EDERY](https://www.linkedin.com/in/yoel-edery-957117210/)
