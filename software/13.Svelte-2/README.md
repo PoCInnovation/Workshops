@@ -13,8 +13,7 @@ All the required information to install dependencies can be found in [SETUP.md](
 
 
 At any time, if you feel lost with Svelte, you can man https://svelte.dev/tutorial
-<br/>
-<br/>
+<br/><br/>
 
 
 ## Step 1- User information
@@ -39,7 +38,7 @@ You must also create a register button. Don't worry for it's behavior, we'll tak
 
 
 
-Of course, you could create all from scratch, but we are here to use library components. Time for a little bit of shopping!<br>
+Of course, you could create all from scratch, but we are here to use library components. Time for a little bit of shopping! (Would you like to try a modal component?)<br>
 &darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;
 <br>
 https://madewithsvelte.com/ui-library
@@ -69,9 +68,51 @@ You should get a token as a response. Store in in the `token` variable, you'll b
 
 **/!\ ** axios works in an asynchronous way, so the key words async / await will become very handy
 
+https://github.com/axios/axios
+
 
 
 > If you want to go further, you could apply some [jwt good practices](https://blog.logrocket.com/jwt-authentication-best-practices/), this way to store the token is actually not really safe...
 
-Credits: Amoz Pay & Baptiste Barbotin
+While you're there, create a another component `src/components/login.svelte` that will basically have the same behavior as `register`, but it will only need to send 2 fields:
+```
+{
+    "email": email,
+    "password": password
+}
+```
 
+## Step 3 - Routing
+
+Create a component `src/components/connection.svelte` that will serve as the connection page for our website.
+
+It should have 2 buttons: register, and login, that will namely allow us to input registration and login information.<br/>
+
+Also create a empty component named `src/components/todolist.svelte`
+
+Now let's create some routing:
+In your `App.svelte`, add the following line:<br/>
+```
+import { Router, Route } from 'svelte-routing';
+```
+Create a router with 2 routes:<br/>
+1st one  with `"/"` as path and will use your `<Connection>` component
+2st one  with `"/home"` as path and will us your `<todolist>` component
+
+
+Now let's modify your Login and Register
+Add the following import:
+```
+import { navigate } from 'svelte-routing';
+```
+Upon receiving the token, Login and Register should navigate to `/home`
+
+## Step 4 - Todo list
+
+Show us what you can do! Use what you have learned to fetch and send new tasks to and from the api.
+
+```
+
+```
+
+Credits: Amoz Pay & Baptiste Barbotin
