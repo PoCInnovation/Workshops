@@ -72,9 +72,9 @@ Here is a small example of the beginning of the Fibonacci sequence :
  - [Match](https://doc.rust-lang.org/rust-by-example/flow_control/match.html)
  - [Vector](https://doc.rust-lang.org/std/vec/struct.Vec.html#indexing)
 
-### Step 1.4 - Where his my vectors ?
+### Step 1.4 - Where is my vectos ?
 
-In this exercise, you will have to transform vectors into a linked list.
+In this exercise, you will transform vectors into a linked list.
 
 To do this, you will create a file `to_list.rs`.
 
