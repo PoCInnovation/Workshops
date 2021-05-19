@@ -30,6 +30,6 @@ $ cargo run
 
 ## 3. Start workshop
 
-> :bulb: We recommend you to follow the [Tour of Rust](https://tourofrust.com/00_en.html) for this workshop.
+> :bulb: We recommend you to follow the [Tour of Rust](https://tourofrust.com/index.html) for this workshop.
 
 [Go back to the exercise](./README.md)
