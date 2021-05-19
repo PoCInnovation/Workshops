@@ -10,7 +10,7 @@
 
 All the required information to install dependencies can be found in [SETUP.md](./SETUP.md).
 
-> :bulb: We recommend you to follow the [Tour of Rust](https://tourofrust.com/00_en.html) for this workshop.
+> :bulb: We recommend you to follow the [Tour of Rust](https://tourofrust.com/index.html) for this workshop.
 
 ## Introduction to Rust
 
