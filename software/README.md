@@ -103,3 +103,11 @@ You will :
  - Define your own graphql schema
  - Build a basic graphQL API
  - Use graphql in a React application
+
+## 13 - [Introduction to Rust](./13.Rust)
+
+Discover Rust, a language that gives everyone the power to build reliable and efficient software.
+In this workshop, you will learn:
+ - The fundamentals of Rust
+ - The standard Rust libraries
+ - Data structures with Rust
