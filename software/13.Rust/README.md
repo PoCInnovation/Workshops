@@ -14,7 +14,7 @@ All the required information to install dependencies can be found in [SETUP.md](
 
 ## Introduction to Rust
 
-### Step 1.1 - Hello World! in Rust
+### Step 1 - Hello World! in Rust
 
 > :exclamation: We strongly advise you to use the resources given for this exercise.
 
@@ -32,7 +32,7 @@ To do this, create a file `main.rs` in a folder called `src`.
  - [Doc.Rust](https://doc.rust-lang.org/rust-by-example/hello.html)
  - [Build Commands](https://doc.rust-lang.org/cargo/commands/build-commands.html)
 
-### Step 1.2 - Palindrome ?
+### Step 2 - Palindrome ?
 
 > :exclamation: We strongly advise you to use the resources given for this exercise.
 
@@ -49,7 +49,7 @@ This function must return true if the word given in parameter is a palindrome an
 
 > :bulb: To easily test your functions during this workshop, we advise you to look at this tool. [`assert_eq`](https://doc.rust-lang.org/std/macro.assert_eq.html)
 
-### Step 1.3 - Fibonacci sequence
+### Step 3 - Fibonacci sequence
 
 > :exclamation: We strongly advise you to use the resources given for this exercise.
 
@@ -72,7 +72,7 @@ Here is a small example of the beginning of the Fibonacci sequence :
  - [Match](https://doc.rust-lang.org/rust-by-example/flow_control/match.html)
  - [Vector](https://doc.rust-lang.org/std/vec/struct.Vec.html#indexing)
 
-### Step 1.4 - Where is my vectos ?
+### Step 4 - Where is my vectors ?
 
 In this exercise, you will transform vectors into a linked list.
 
@@ -94,7 +94,7 @@ To do this, create a function `to_list` which takes `vector` as parameter and re
  - [List](https://rust-unofficial.github.io/too-many-lists/)
  - [Vector](https://doc.rust-lang.org/std/vec/struct.Vec.html#indexing)
 
-### Step 1.5 - A simple and useful `Calculator` !
+### Step 5 - A simple and useful `Calculator` !
 
 > :exclamation: We strongly advise you to use the resources given for this exercise.
 
@@ -122,7 +122,7 @@ Display the result of the calculation in your terminal.
  - [Option & unwrap](https://doc.rust-lang.org/rust-by-example/error/option_unwrap.html)
  - [Match](https://doc.rust-lang.org/rust-by-example/flow_control/match.html)
 
-### Step 1.6 - Pig Latin
+### Step 6 - Pig Latin
 
 > :exclamation: We strongly advise you to use the resources given for this exercise.
 
