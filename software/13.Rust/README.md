@@ -55,9 +55,8 @@ This function must return true if the word given in parameter is a palindrome an
 
 Create a file `fibonacci.rs` for this new function.
 
-For the third exercise, try to create a function that takes two parameters:
-- A number of starts with type `usize`.
-- A maximum value of type `Vec<i64>`. 
+For the third exercise, create a function that takes one parameter:
+- A number `max` with type `usize` that represent the number of element to compute.
 
 You must now display the sequence of Fibbonaci from the number of starts to the maximum value.
 
