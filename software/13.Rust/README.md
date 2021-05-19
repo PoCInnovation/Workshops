@@ -25,6 +25,8 @@ To do this, create a file `main.rs` in a folder called `src`.
 
 > :bulb: Rust file has `rs` extension.
 
+> :bulb: Now, that you have created a file `main.rs`, you can use other files. To use them in your `main.rs` you have to integrate the modulude with the keyword `mod` ([read more](https://stackoverflow.com/questions/26388861/how-to-include-a-module-from-another-file-from-the-same-project))
+
 ##### Resources
 
  - [Doc.Rust](https://doc.rust-lang.org/rust-by-example/hello.html)
@@ -68,14 +70,37 @@ Here is a small example of the beginning of the Fibonacci sequence :
 ##### Resources
  - [Fibonacci number](https://www.wikiwand.com/en/Fibonacci_number)
  - [Match](https://doc.rust-lang.org/rust-by-example/flow_control/match.html)
+ - [Vector](https://doc.rust-lang.org/std/vec/struct.Vec.html#indexing)
 
-### Step 1.4 - A simple and useful `Calculator` !
+### Step 1.4 - Where his my vectors ?
+
+In this exercise, you will have to transform vectors into a linked list.
+
+To do this, you will create a file `to_list.rs`.
+
+First, create a `linked_list` structure of the form :
+- `value: i32`
+- `next` which has the structure type.
+
+> :bulb: It's up to you to figure out how to initialize the structure to make a linked list.
+
+In a second step, create a vector `vector` which will be transformed into a linked list.
+
+As you will have understood, the objective of the exercise is to transform a vector into a linked list.
+
+To do this, create a function `to_list` which takes `vector` as parameter and returns the list.
+
+##### Resources
+ - [List](https://rust-unofficial.github.io/too-many-lists/)
+ - [Vector](https://doc.rust-lang.org/std/vec/struct.Vec.html#indexing)
+
+### Step 1.5 - A simple and useful `Calculator` !
 
 > :exclamation: We strongly advise you to use the resources given for this exercise.
 
 Let's go further now!
 
-The objective of this fourth exercise is to create a simplifying calculator.
+The objective of this fifth exercise is to create a simplifying calculator.
 
 Create a file `calculator.rs` for this new function.
 
@@ -97,7 +122,7 @@ Display the result of the calculation in your terminal.
  - [Option & unwrap](https://doc.rust-lang.org/rust-by-example/error/option_unwrap.html)
  - [Match](https://doc.rust-lang.org/rust-by-example/flow_control/match.html)
 
-### Step 1.5 - Pig Latin
+### Step 1.6 - Pig Latin
 
 > :exclamation: We strongly advise you to use the resources given for this exercise.
 
