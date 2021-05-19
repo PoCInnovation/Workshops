@@ -77,7 +77,7 @@ In this exercise, you will transform vectors into a linked list.
 
 To do this, you will create a file `to_list.rs`.
 
-First, create a `linked_list` structure of the form :
+First, create a `linked_list` structure with the following attributes :
 - `value: i32`
 - `next` which has the structure type.
 
