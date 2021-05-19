@@ -54,17 +54,20 @@ https://svelte.dev/tutorial/text-inputs
 ## Step 2 - Registration
 
 Now that we have a basic component, let's add some interaction.
-The register button should activate a function that will use axios to send a POST request on "localhost:8080/register", with the user information:<br/><br/>
-{<br/>
-&ensp;"firstname": firstname,<br/>
-&ensp;"name": name,<br/>
-&ensp;"email": email,<br/>
-&ensp;"password": password<br/>
+The register button should activate a function that will use axios to send a POST request on "localhost:8080/register", with the user information:<br/>
+
+```
+{
+    "firstname": firstname,
+    "name": name,
+    "email": email,
+    "password": password
 }
+```
 
 You should get a token as a response. Store in in the `token` variable, you'll be able to use it to authentify.
 
-<strong>/!\ </strong> axios works in an asynchronous way, so the key words async / await will become very handy
+**/!\ ** axios works in an asynchronous way, so the key words async / await will become very handy
 
 
 

@@ -37,7 +37,7 @@ services:
             - back-end
         volumes:
             - db-data:/var/lib/mysql
-            - ./back/epytodo.sql:/docker-entrypoint-initdb.d/init.sql
+            - ./epytodo.sql:/docker-entrypoint-initdb.d/init.sql
 
 
 volumes:
