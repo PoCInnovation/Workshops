@@ -22,7 +22,7 @@ The first step is to create your own website but you want to do it fast because 
 Your idea is simple, create a blog to show what you can do to everyone. You want to share your skill in front, backend and operational.<br>
 But you got a problem, it will be boring and long to deploy all your stacks, set the ssl certificate and DNS to secure your blog etc...
 
-Don't worry, you like challenge, you go on internet and search some tools to easily set an environment and deploy your application.
+Don't worry, you like challenge, you go to internet and search some tools to easily set an environment and deploy your application.
 You see that [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/) can be really cool to achieve your objective.
 
 In this workshop, we will explore the power of CD as services. Here is a schema of the functioning of those services
@@ -213,6 +213,8 @@ To do it, you know the recipe, just create a new component named `Posts` and a `
 You will also need to fetch your data from your API. This [documentation](https://nextjs.org/docs/basic-features/data-fetching) can help you to do it.
 
 > :bulb: To fetch your **properties**, you should use [axios](https://www.npmjs.com/package/axios) and that [example](https://github.com/vercel/next.js/blob/canary/examples/with-custom-reverse-proxy/pages/index.js#L5).
+
+> :bulb: Thanks NextJS integration, you don't need to care about [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing).
 
 Now you can publish your beautiful blog online and share it with your friends !
 
