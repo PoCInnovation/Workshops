@@ -111,3 +111,15 @@ In this workshop, you will learn:
  - The fundamentals of Rust
  - The standard Rust libraries
  - Data structures with Rust
+
+## 14 - [Discover the deployment in one click with Vercel and Netlify](./14.Vercel)
+
+This workshop is a quick introduction to fast deployment with hosted website like [Netlify](https://www.netlify.com/) or [Vercel](https://vercel.com/).<br>
+You will :
+- Learn how you can deploy website without cost
+- Explore Vercel x NextJS potential
+- Use professional tool to deploy your application
+- Build a basic REST API
+- Automate your continuous deployment
+
+
