@@ -146,7 +146,7 @@ Your post must be represented like the following object :
 Originally, you should store your data in a [database](https://en.wikipedia.org/wiki/Database) but it would be long so we will just store it.<br>
 Create a file named `resources.js` that export a variable that store data in an array named `posts`.
 
-Create a file `post.js` in `api` that will be our [REST endpoint](https://www.sitepoint.com/rest-api/) to manage posts.
+Create a file `posts.js` in `api` that will be our [REST endpoint](https://www.sitepoint.com/rest-api/) to manage posts.
 
 It must :
 - On **GET** : Retrieve all posts stored in the API
@@ -155,7 +155,7 @@ It must :
     
 > You can retrieve the body with `req.body`.
 
-:rocket: As bonus, you can create a folder `post` that get an `id` as `url parameter` to do :
+:rocket: Now, you can create a folder `posts` that get an `id` as `url parameter` to do :
 - On **GET** : Retrieve the post identified by its `id`
 - On **PUT** : Update post data
 - On **DELETE** : Delete the post
