@@ -6,7 +6,7 @@
 
 :heavy_check_mark: Use professional tool to deploy your application
 
-:heavy_check_mark: Build a basic graphQL API
+:heavy_check_mark: Build a basic REST API
 
 :heavy_check_mark: Automate your continuous deployment
 
