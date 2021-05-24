@@ -19,7 +19,7 @@ All the required information to start this workshop can be found in [SETUP.md](.
 You are a young developer with many ideas to change the world !
 The first step is to create your own website but you want to do it fast because you are young and hurry.
 
-Your idea is simple, create a blog to show what you can do to everyone. You want to show your skill in front, backend and operational.<br>
+Your idea is simple, create a blog to show what you can do to everyone. You want to share your skill in front, backend and operational.<br>
 But you got a problem, it will be boring and long to deploy all your stacks, set the ssl certificate and DNS to secure your blog etc...
 
 Don't worry, you like challenge, you go on internet and search some tools to easily set an environment and deploy your application.
