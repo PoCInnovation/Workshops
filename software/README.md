@@ -4,7 +4,7 @@ Software workshops to introduce the students to software technologies.
 
 In each directory the SETUP and a README explaining the purpose of the workshop.
 
-## [🌐 Click to join our Discord](https://discord.gg/Yqq2ADGDS7)
+### [🌐 Click to join our Discord](https://discord.gg/Yqq2ADGDS7)
 
 ## 1 - [Todo List in React](01.React)
 
