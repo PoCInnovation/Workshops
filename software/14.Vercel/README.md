@@ -1,4 +1,4 @@
-# Workshop 14 - Discover the deployment as service with Vercel and Netlify
+# Workshop 14 - Discover the deployment as a service with Vercel and Netlify
 
 :heavy_check_mark: Learn how you can deploy website without cost 
 
