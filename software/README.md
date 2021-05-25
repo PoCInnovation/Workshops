@@ -4,9 +4,6 @@ Software workshops to introduce the students to software technologies.
 
 In each directory the SETUP and a README explaining the purpose of the workshop.
 
-### To join our Discord
-http://bit.ly/DiscordPoCEvents
-
 ## 1 - [Todo List in React](01.React)
 
 Create your own todo list. You will :
@@ -121,5 +118,14 @@ You will :
 - Use professional tool to deploy your application
 - Build a basic REST API
 - Automate your continuous deployment
+
+## Organization
+
+- [📒 Linkedin](https://www.linkedin.com/company/pocinnovation/mycompany/)
+- [📷 Instagram](https://www.instagram.com/pocinnovation/)
+- [🖱️ Website](https://www.poc-innovation.fr/)
+- [🌐 Discord](https://discord.gg/G4Aygn6p)
+
+> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
 
 
