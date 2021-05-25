@@ -200,7 +200,7 @@ Here we go, first :
 
 - Create a stylesheet named `TopBar.module.css` that will apply some style to our component (e.g: position, size, colors, font-size...).
 
-- Now you add display it to your website, go to `index.js` and remove all the code in the `return`, replace it with your component, you can use it like a html tag (e.g: `<TopBar/>`). 
+- Now you must display it to your website, go to `index.js` and remove all the code in the `return`, replace it with your component, you can use it like a html tag (e.g: `<TopBar/>`). 
 
 Push your work and share your `website url` to your friends, so they can be impressed by your skills :rocket:
 
