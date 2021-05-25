@@ -228,3 +228,12 @@ If you finished the workshop and don't know what to do until the end, you can tr
 - [Naoufel Berrada](https://github.com/nowlow/)
 - [Cyril de Lajudie](https://github.com/Axoloot/)
 - [Tom Chauveau](https://github.com/TomChv/)
+
+## Organization
+
+- [📒 Linkedin](https://www.linkedin.com/company/pocinnovation/mycompany/)
+- [📷 Instagram](https://www.instagram.com/pocinnovation/)
+- [🖱️ Website](https://www.poc-innovation.fr/)
+- [🌐 Discord](https://discord.gg/Yqq2ADGDS7)
+
+> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

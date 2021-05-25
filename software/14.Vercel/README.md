@@ -257,6 +257,6 @@ Here's steps to deploy on Netlify :
 - [📒 Linkedin](https://www.linkedin.com/company/pocinnovation/mycompany/)
 - [📷 Instagram](https://www.instagram.com/pocinnovation/)
 - [🖱️ Website](https://www.poc-innovation.fr/)
-- [🌐 Discord](https://discord.gg/G4Aygn6p)
+- [🌐 Discord](https://discord.gg/Yqq2ADGDS7)
 
 > :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

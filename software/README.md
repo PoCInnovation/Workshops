@@ -4,6 +4,8 @@ Software workshops to introduce the students to software technologies.
 
 In each directory the SETUP and a README explaining the purpose of the workshop.
 
+## [🌐 Click to join our Discord](https://discord.gg/Yqq2ADGDS7)
+
 ## 1 - [Todo List in React](01.React)
 
 Create your own todo list. You will :
@@ -124,7 +126,7 @@ You will :
 - [📒 Linkedin](https://www.linkedin.com/company/pocinnovation/mycompany/)
 - [📷 Instagram](https://www.instagram.com/pocinnovation/)
 - [🖱️ Website](https://www.poc-innovation.fr/)
-- [🌐 Discord](https://discord.gg/G4Aygn6p)
+- [🌐 Discord](https://discord.gg/Yqq2ADGDS7)
 
 > :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
 

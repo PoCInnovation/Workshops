@@ -398,3 +398,12 @@ Voici une liste de lien si vous souhaitez en apprendre plus sur les API en Types
 - [Insomnia, un Postman épuré](https://insomnia.rest/)
 - [Les frameworks NodeJS](https://nodesource.com/blog/Express-Koa-Hapi)
 - [Une gestion d'erreur centralisé](https://dev.to/nedsoft/central-error-handling-in-express-3aej)
+
+## Organization
+
+- [📒 Linkedin](https://www.linkedin.com/company/pocinnovation/mycompany/)
+- [📷 Instagram](https://www.instagram.com/pocinnovation/)
+- [🖱️ Website](https://www.poc-innovation.fr/)
+- [🌐 Discord](https://discord.gg/Yqq2ADGDS7)
+
+> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
