@@ -20,6 +20,9 @@ http://bit.ly/DiscordPoCEvents
 ### Workshop 4: [Mock HMD - Minimalist VR](./Workshop_VR_4)
 - Need Unity 2020.3.0f1 at least
 
+### Workshop 5: [Multiplayer - Play Together](./Workshop_VR_5)
+- Need Unity 2020.3.0f1 at least
+
 ## AR :
 
 ### Workshop 1: [AR Foundation - Tap Mole AR](./Workshop_AR_1/Workshop_AR_1.pdf)
