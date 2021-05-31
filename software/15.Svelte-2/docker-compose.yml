@@ -1,0 +1,47 @@
+version: "3"
+
+services:
+    server:
+        image: amozpay/todoapi:latest
+        ports:
+            - "8080:8080"
+        networks:
+            - back-end
+        depends_on:
+            - database
+        environment:
+            MYSQL_DATABASE: $MYSQL_DATABASE
+            MYSQL_HOST: $MYSQL_HOST
+            MYSQL_USER: $MYSQL_USER
+            MYSQL_PASSWORD: $MYSQL_PASSWORD
+            MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD
+            SECRET: $SECRET
+            SERVER_PORT: $SERVER_PORT
+            SERVER_HOST: $SERVER_HOST
+        restart: always
+
+    database:
+        image: mysql:latest
+        command: mysqld
+        restart: always
+        ports:
+            - "3306:3306"
+        environment:
+            MYSQL_DATABASE:
+            MYSQL_HOST:
+            MYSQL_USER:
+            MYSQL_PASSWORD:
+            MYSQL_ROOT_PASSWORD:
+            MYSQL_ALLOW_EMPTY_PASSWORD:
+        networks:
+            - back-end
+        volumes:
+            - db-data:/var/lib/mysql
+            - ./epytodo.sql:/docker-entrypoint-initdb.d/init.sql
+
+
+volumes:
+    db-data:
+
+networks:
+    back-end:
