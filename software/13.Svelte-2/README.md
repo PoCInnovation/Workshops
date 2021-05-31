@@ -109,10 +109,23 @@ Upon receiving the token, Login and Register should navigate to `/home`
 
 ## Step 4 - Todo list
 
-Show us what you can do! Use what you have learned to fetch and send new tasks to and from the api.
+Show us what you can do! Use what you have learned to fetch and send new tasks to and from the api. You can be creative and try to come up with some innovative design ideas.
 
-```
+Use the api documentation <br/>
+https://documenter.getpostman.com/view/14600925/TzY1gbb4
 
-```
 
-Credits: Amoz Pay & Baptiste Barbotin
+If you don't know what you could do, try the following:
+
+- Create a todo element component, with the required fields
+- Create a list element, that will update it's size and display all the todo elements
+- Create an add button, and a delete button
+
+And so on...
+
+
+
+
+Credits:
+- [Amoz Pay](https://github.com/amozpay)
+- [Baptiste Barbotin](https://github.com/barbo69)
