@@ -6,7 +6,7 @@
 
 ✔ Learn to send requests and use responses with axios
 
-✔ Understand how front-end and back-end interact with each other
+✔ Understand how frontend and backend interact together
 
 ## Step 0 - Setup
 
