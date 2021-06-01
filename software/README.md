@@ -121,6 +121,15 @@ You will :
 - Build a basic REST API
 - Automate your continuous deployment
 
+## 15 - [Epytodo with Svelte](./15.Svelte-Epytodo)
+
+Learn advanced features of Svelte by creating a frontend for your todo API.
+You will :
+  - Learn to use Svelte components
+  - Lear how do routing on frontend Svelte application
+  - Communicate with an API in Svelte with axios
+  - Understand how frontend and backend interact together
+
 ## Organization
 
 - [📒 Linkedin](https://www.linkedin.com/company/pocinnovation/mycompany/)
