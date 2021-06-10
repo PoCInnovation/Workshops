@@ -26,41 +26,10 @@ static int check_parameters(const char *path, const char *password)
     return EXIT_SUCCESS;
 }
 
-
-bool debugger_is_attached(void)
-{
-    char buf[4096];
-
-    const int status_fd = open("/proc/self/status", O_RDONLY);
-    if (status_fd == -1)
-        return false;
-
-    const ssize_t num_read = read(status_fd, buf, sizeof(buf) - 1);
-    if (num_read <= 0)
-        return false;
-
-    buf[num_read] = '\0';
-    const char tracer_pid[] = "TracerPid:";
-    const char *tracer_pid_ptr = strstr(buf, tracer_pid);
-    if (!tracer_pid_ptr)
-        return false;
-
-    for (const char* char_ptr = tracer_pid_ptr + sizeof(tracer_pid) - 1; char_ptr <= buf + num_read; ++char_ptr)
-    {
-        if (isspace(*char_ptr))
-            continue;
-        else return isdigit(*char_ptr) != 0 && *char_ptr != '0';
-    }
-
-    return false;
-}
-
 int main(int ac, char **av)
 {
     cryptalgo_t algo;
 
-    if (debugger_is_attached())
-        exit(EXIT_FAILURE);
     if (!strcmp(av[1], "-h"))
         return help(EXIT_SUCCESS, STDOUT_FILENO);
     if (ac != 4)
