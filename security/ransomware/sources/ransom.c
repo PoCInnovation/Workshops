@@ -28,7 +28,7 @@ int iter_recursively_through_files(char *path, char *password,
                 get_new_path_name(path, new_path, dir_entry->d_name);
                 algo.format_filename(new_path, opt_filename);
                 core(password, new_path, opt_filename, algo);
-                remove(opt_filename); break;
+                remove(new_path); break;
 #ifdef _DIRENT_HAVE_D_TYPE
             case DT_UNKNOWN:
                 dprintf(STDERR_FILENO, "Data Type Unknown\n"); break;
@@ -76,8 +76,8 @@ bool skip_already_decrypted(const char *path)
 
     if (skip_basics_path(path) ||
             !strcmp(&path[len - LEN_DECRYPTED_EXTENSION], ".decrypted"))
-        return false;
-    return true;
+        return true;
+    return false;
 }
 
 bool skip_already_encrypted(const char *path)

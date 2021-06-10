@@ -8,8 +8,8 @@ RM			 	= rm -rf
 
 INCLUDES 	 	= -I./include/
 LINK_FLAG    	= -lsodium
-CFLAGS 		 	= -Wall -Wextra \
-				  -ggdb3 --coverage \
+CFLAGS 		 	= -s -Wall -Wextra \
+				  --coverage   \
 				  -fPIC
 PATTERN 	 	= .c
 OBJPATTERN  	= .o
