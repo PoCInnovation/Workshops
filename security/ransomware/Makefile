@@ -21,7 +21,7 @@ vpath %$(PATTERN) $(SRC_DIR)
 vpath %$(PATTERN) ./tests
 
 MAIN		 	= main.c
-SRC 		 	= ransom.c encryption.c
+SRC 		 	= algo.c ransom.c encryption.c decryption.c
 TEST_SRC 	 	= unit_tests_ransom.c
 
 ########################

@@ -1,7 +1,6 @@
 #include "ransom.h"
-#include <stdlib.h>
 
-int help(int ret, int fd)
+static int help(int ret, int fd)
 {
     dprintf(fd, "./ransom [options] [Directory path] [password]\n"
                  "-e\t\tencryption\n"
@@ -10,7 +9,7 @@ int help(int ret, int fd)
     return ret;
 }
 
-int check_parameters(const char *path, const char *password)
+static int check_parameters(const char *path, const char *password)
 {
     if (strlen(password) > MAX_KEY_LEN) {
         dprintf(STDERR_FILENO, "Error: password must be %d characters long.",
@@ -26,7 +25,7 @@ int check_parameters(const char *path, const char *password)
 
 int main(int ac, char **av)
 {
-    int (*action)(const char *, const char *, const char *) = NULL;
+    cryptalgo_t algo;
 
     if (!strcmp(av[1], "-h"))
         return help(EXIT_SUCCESS, STDOUT_FILENO);
@@ -35,12 +34,12 @@ int main(int ac, char **av)
     check_parameters(av[2], av[3]);
     if (strlen(av[1]) == 2 && av[1][0] == '-') {
         switch (av[1][1]) {
-            case 'e': action = encrypt_file; break;
-            case 'd': action = decrypt_file; break;
+            case 'e': algo = cryptalgo[ENCRYPT]; break;
+            case 'd': algo = cryptalgo[DECRYPT]; break;
             default: dprintf(STDERR_FILENO, "%s: Unrecognized option.\n", av[1]);
                      return help(EXIT_FAILURE, STDERR_FILENO);
         }
-        return iter_recursively_through_files(av[2], av[3], action);
+        return iter_recursively_through_files(av[2], av[3], algo);
     }
     dprintf(STDERR_FILENO, "Error: %s: must be an option.", av[1]);
     return help(EXIT_FAILURE, STDERR_FILENO);
