@@ -31,7 +31,7 @@ Create a working folder and get the resources provided with the workshop.
 ### Init your project:
 
 ```shell
-$ cargo initv
+$ cargo init
 $ cargo add tetra
 ```
 
