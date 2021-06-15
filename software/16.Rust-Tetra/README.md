@@ -47,7 +47,7 @@ To display text, you need to follow three steps:
 
 1. Add the font to your program.
 
-2. Create a variable (a vector) called `vector_text` with the value `Hello world!` and the font of your assets.
+2. Create a variable `vector_text` with the value `Hello world!` and the font of your assets. `vector_text` uses the Text module.
 
 3. Display `vector_text` in your window.
 
@@ -66,11 +66,11 @@ To display text, you need to follow three steps:
 First, you need an image. Make sure you have a `PoC.png` file in the `assets/images` folder.
 
 Your program must display an image with the parameter :
-- The scale.
+- The scale of type `Vec2`.
 
-- The postition.
+- The postition of type `Vec2`.
 
-- The origin of the image.
+- The origin of the image of type `Vec2`.
 
 You now have all the necessary information to display an image in your window. 
 
@@ -147,7 +147,7 @@ Here are some bonus ideas if you want to venture further into the Rust adventure
 
 ## Organization
 
-- [📒 Linkedin](https://www.linkedin.com/company/pocinnovation/mycompany/)
+- [📒 Linkedin](https://www.linkedin.com/company/pocinnovation/)
 - [📷 Instagram](https://www.instagram.com/pocinnovation/)
 - [🖱️ Website](https://www.poc-innovation.fr/)
 - [🌐 Discord](https://discord.gg/G4Aygn6p)
