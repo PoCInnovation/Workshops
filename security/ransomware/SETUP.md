@@ -14,3 +14,5 @@ sudo apt-get install -y libsodium-dev
 ```sh
 sudo dnf install -y libsodium-devel
 ```
+
+Go back to the [exercise](./README.md)

@@ -4,7 +4,7 @@ With this Workshop, you'll learn:
 * how to use libsodium for encryption
 * some basic obfuscation skills
 
-# Disclaimer
+## Disclaimer
 
 :warning: This Workshop is for educational purposes only. Poc Innovation isn't responsable
 for what you will do with this knowledge.
@@ -13,12 +13,14 @@ We provided you a `Documents/` directory to infect. Be careful not to infect you
 If you are afraid to do so, please do this workshop on a virtual machine.
 
 
-# Encryption
+## Encryption
 
 As you can see, in sources/decryption.c, all the functions are already written.
 You must write an encryption program compliant with the decryption already provided,
 otherwise, we won't be able to help you.
 
+### Step 0 - Setup
+All the required informations can be found in the [SETUP.md](./SETUP.md)
 
 ### Step 1
 
@@ -44,7 +46,7 @@ make ; ./ransom -d [folder_name] [password]
 Some functions of the libsodium may afraid you with their long and weird names.
 Read [this](https://github.com/jedisct1/libsodium-doc/blob/master/secret-key_cryptography/secretstream.md) to more informations.
 
-# Obfuscation
+## Obfuscation
 
 ### [What is obfusation ?](https://en.wikipedia.org/wiki/Obfuscation_(software))
 
@@ -92,17 +94,17 @@ You can:
 
 Congratulations !
 
-# Go further
+## Go further
 
 You can :
 * not only encrypt files, but also dump the whole computer that you infects, and get some user informations.
 * implement a web server on your code, that will send the data files.
 * on this web server, you can develop some stats about how many people did (fakely) pay, how many files did you infects, etc.
 
-# Some usefuls links
+## More ressources
 [Great GUI interface](https://github.com/leonv024/RAASNet)
 
-# Authors
+## Authors
 
 [Adina Cazalens](https://github.com/NaadiQmmr)
 I really want to mention the work of [Bogdan](https://github.com/bogdzn) related to the obfuscation.
