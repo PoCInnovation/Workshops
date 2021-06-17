@@ -14,7 +14,7 @@ Test(get_new_path_name, test_get_new_path_name)
 {
     char *parentPath = "/home";
     char *currentPath = "naadi/";
-    char test[13];
+    char test[MAX_FILEPATH];
 
     get_new_path_name(parentPath, test, currentPath);
     cr_assert_str_eq(test, "/home/naadi/");
@@ -23,7 +23,7 @@ Test(get_new_path_name, test_get_new_path_name)
 Test(add_file_extension, test_add_file_extension)
 {
     char *fileName = "file.odt";
-    char test[strlen(fileName) + strlen(".ransom")];
+    char test[MAX_FILEPATH];
 
     add_file_extension(fileName, test);
     cr_assert_str_eq(test, "file.odt.ransom");
