@@ -130,6 +130,14 @@ You will :
   - Communicate with an API in Svelte with axios
   - Understand how frontend and backend interact together
 
+## 16 - [Rust-Tetra](./Rust-Tetra)
+
+Discover the Tetra framework and create your own game in Rust.
+You will :
+  - Discovering the Tetra framework.
+  - Creation of your video game.
+  - Improve your Rust skills.
+
 ## Organization
 
 - [📒 Linkedin](https://www.linkedin.com/company/pocinnovation/mycompany/)
