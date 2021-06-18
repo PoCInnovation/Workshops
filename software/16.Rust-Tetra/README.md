@@ -4,6 +4,8 @@
 
 ✔ Creation of your video game.
 
+✔ Improve your Rust skills.
+
 ### Step 0 - SETUP
 
 All the required information to install dependencies can be found in [SETUP.md](./SETUP.md).
