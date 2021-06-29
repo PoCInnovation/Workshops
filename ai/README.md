@@ -56,6 +56,12 @@ Continuation of Reinforcement Learning. You will:
 - use Q learning
 - solve Mountain-Car-V0
 
+## 8 - Decision Tree
+Discover one of the most popular supervised learning methods for classification problems. You will:
+- Use Scikit-learn
+- Create a Decision Tree
+- Create a Decision Tree Forest
+
 
 Feel free to ask us any questions.
 
@@ -67,3 +73,4 @@ Feel free to ask us any questions.
 - [Workshop 4:](https://slides.com/thytu/tensorflow)
 - [Workshop 5:](https://slides.com/thytu/convolution)
 - [Workshop 6:](https://slides.com/thytu/convolution-4345ab)
+- [Workshop 7:](https://docs.google.com/presentation/d/e/2PACX-1vSqnpJk__EsN3RMD9h7FSnQ_34ptWKz8dm7kaO706iKP9QRGKUUxRS5wA9cSyAVn_6hJeFC9B-QB73j/pub?start=false&loop=false&delayms=3000&slide=id.gb0f3ace1ca_0_29)
