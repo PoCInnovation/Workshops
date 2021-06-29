@@ -1,8 +1,11 @@
-## 8 - Decision Tree :evergreen_tree:
-Discover one of the most popular supervised learning methods for classification problems. You will:
-- Use Scikit-learn
-- Create a Decision Tree
-- Create a Decision Tree Forest
+# Tensorflow :orange_book:
+
+Usage of Tensorflow. You will:
+- create a Sequential model
+- use Dense layers
+- predict house pricing
+- classify fashion_mnist
+- classify mnist
 
 ## What is Jupyter Notebook :book:
 

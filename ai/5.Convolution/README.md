@@ -1,8 +1,9 @@
-## 8 - Decision Tree :evergreen_tree:
-Discover one of the most popular supervised learning methods for classification problems. You will:
-- Use Scikit-learn
-- Create a Decision Tree
-- Create a Decision Tree Forest
+# Convolution :black_square_button:
+
+Discover the effect and usage of convolution. You will:
+- understand the point to use convolutional neural network
+- use Conv2D
+- use Maxpooling2D
 
 ## What is Jupyter Notebook :book:
 

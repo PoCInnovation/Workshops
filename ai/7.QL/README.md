@@ -1,8 +1,8 @@
-## 8 - Decision Tree :evergreen_tree:
-Discover one of the most popular supervised learning methods for classification problems. You will:
-- Use Scikit-learn
-- Create a Decision Tree
-- Create a Decision Tree Forest
+## Q-Learning 🚙
+Continuation of Reinforcement Learning. You will:
+- use Gym environment
+- use Q learning
+- solve Mountain-Car-V0
 
 ## What is Jupyter Notebook :book:
 
