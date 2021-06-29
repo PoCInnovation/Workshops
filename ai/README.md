@@ -8,7 +8,7 @@ We recommend you also use [Anaconda](https://www.anaconda.com/distribution/) to 
 In each directory, you will find the exercises, a README explaining the purpose of the workshop and the slides used during the workshop.
 
 ### To join our Discord
-http://bit.ly/DiscordPoCEvents
+https://discord.com/invite/mpkjJtJp2B
 
 ## 1 - Python & Numpy basics :snake:
 Basics of python and usage of Numpy. You will:
