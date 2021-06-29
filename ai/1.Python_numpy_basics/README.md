@@ -6,15 +6,16 @@ Basics of python and usage of Numpy. You will:
 - understand broadcasting concept
 - vectorize code
 
-## Qu'est ce Jupyter Notebook  :book:
+## What is Jupyter Notebook :book:
 
-Jupyter Notebook permet de travailler par cellules. Modifiez les cellules pour réussir les exercices.  
-Puis executez les cellules en cliquant sur le bouton play ou bien avec le raccourci : ```shift + entrée```  
-On reconnait les fichiers notebook avec l'extension :  ```.ipynb```.
+Jupyter Notebook allows you to work by cells. Modify the cells to pass the exercises.  
+Then execute the cells by clicking on the play button or with the shortcut: ``shift + enter``.  
+Notebook files are recognized by the extension: ``.ipynb``.
 
 
-## Comment utiliser Jupyter Notebook ?
-- Clonez le repo workshop à la racine.
-- effectuer la commande : ```pip3 install jupyter notebook```
-- vous pouvez installer l'extension VSCode : Jupyter (facultatif)
-- lancez un serveur local avec la commande : ```jupyter notebook```
+## How to use Jupyter Notebook?
+
+- Clone the workshop repository.
+- run the command: ``pip3 install jupyter notebook``
+- you can install the VSCode extension: Jupyter (optional)
+- start a local server with the command: ``jupyter notebook``.
