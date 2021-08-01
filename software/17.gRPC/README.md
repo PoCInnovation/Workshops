@@ -81,7 +81,7 @@ So here is what you'll have to do:
 
 - Then, you must bind the address `localhost:3000` to the server. Tips: use `bindAsync` to add a `console.log` in the callback.
 
-- Finally, start the server.
+- Finally, start the server (still in the constructor).
 
 ## Step 5 - The client
 
