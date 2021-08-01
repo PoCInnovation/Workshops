@@ -1,6 +1,6 @@
 # Workshop 17 - gRPC and Protocol Buffers with TypeScript
 
-## Step 0 - Setup
+## :gear: Step 0 - Setup
 
 You have to install node and npm to follow this workshop.
 
@@ -16,14 +16,14 @@ yarn install
 
 A `node_modules` folder and a `yarn.lock` file should now have appeared in your workspace.
 
-## Step 1 - The basics
+## :closed_book: Step 1 - The basics
 
 gRPC stands for **g**oogle **R**emote **P**rocedure **C**all.
 It is a framework developed by Google on top of the [RPC protocol](https://en.wikipedia.org/wiki/Remote_procedure_call).
 
 If you want to learn more about the differences between gRPC and REST, you can read [this great blogpost](https://www.imaginarycloud.com/blog/grpc-vs-rest/#comparison).
 
-## Step 2 - Writing protobuf file
+## :pencil2: Step 2 - Writing protobuf file
 
 When dealing with gRPC, the data sent between the client and the server is packed in a specific format : protobuffers.
 
@@ -36,7 +36,7 @@ Meanwhile, protobuf serialize data in a binary format, which makes the communica
 
 So we need to define the data we will send into a .proto file. Let's do it !
 
-### Unary gRPC call
+### :outbox_tray: Unary gRPC call
 
 Starting with the unary call. You can think as this as the standard Request/Response model.
 
@@ -52,7 +52,7 @@ In this step, you must create:
     - And will return a `HelloResponse` message as the response containing a string named `content`.
 
 
-## Step 3 - Generating TypeScript definitions
+## :repeat: Step 3 - Generating TypeScript definitions
 
 So now that your protobuf file is ready, you can generate the TypeScript definition using the following command:
 ```shell
@@ -61,7 +61,7 @@ yarn protogen
 
 Some files should have appeared in the `proto` folder.
 
-## Step 4 - The server
+## :floppy_disk: Step 4 - The server
 
 Let's get to the fun part : implementing the client.
 
@@ -83,7 +83,7 @@ So here is what you'll have to do:
 
 - Finally, use the start method to start the server, still in the constructor.
 
-## Step 5 - The client
+## :computer: Step 5 - The client
 
 Let's now implement the client !
 
@@ -95,7 +95,7 @@ Let's now implement the client !
 
 - Then, create a method named `hello`. It will wrap the `this.client.hello(...)` method. Look closely at the parameters required here !
 
-## Step 6 - Adding some tests
+## :microscope: Step 6 - Adding some tests
 
 Well writing code is nice, but without adding some tests ? Hell no.
 
@@ -114,10 +114,10 @@ Add the following tests to the suite:
 
 - The server can respond `hello from server` to any incoming `hello` gRPC call. Tips: modify the implementation of the service in the server and use the second argument.
 
-## Authors
+## :wave: Authors
 
 - [PtitLuca](https://github.com/PtitLuca)
 
-Made with heart by PoC.
+Made with :heart: by PoC.
 
-If you want to support our work, please add a star to this repository !
+If you want to support our work, please add a :star: to this repository !
