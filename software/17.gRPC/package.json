@@ -22,6 +22,11 @@
   "scripts": {
     "build": "tsc",
     "lint": "eslint '*/**/*.{js,ts,tsx}'",
-    "lint:fix": "eslint '*/**/*.{js,ts,tsx}' --fix"
+    "lint:fix": "eslint '*/**/*.{js,ts,tsx}' --fix",
+    "protogen": "./gen-proto.sh"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.3.6",
+    "@grpc/proto-loader": "^0.6.4"
   }
 }

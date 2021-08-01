@@ -40,6 +40,14 @@ So we need to define the data we will send into a .proto file. Let's do it !
 
 Starting with the unary call. You can think as this as the standard Request/Response model.
 
+In this step, you must create:
+
+- A gRPC service named `Chat`
+  
+- With one rpc call, named `Hello`.
+
+    - The `Hello` call will take a `HelloRequest` message as the argument.
+    - And will return a `HelloResponse` message as the response.
 
 ### Client stream
 ### Server stream
