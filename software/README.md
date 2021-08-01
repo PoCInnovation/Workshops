@@ -138,6 +138,13 @@ You will :
   - Creation of your video game.
   - Improve your Rust skills.
 
+## 18 - [Quantum Programming](./19.Quantum-Programming)
+
+Ever heard about quantum computer ?
+You will :
+- Learn computing programming with qiskit library
+- Compile your code with remote quantum machines
+
 ## Organization
 
 - [📒 Linkedin](https://www.linkedin.com/company/pocinnovation/mycompany/)
