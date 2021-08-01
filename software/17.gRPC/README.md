@@ -27,7 +27,7 @@ If you want to learn more about the differences between gRPC and REST, you can r
 
 When dealing with gRPC, the data sent between the client and the server is packed in a specific format : protobuffers.
 
-> Okay, but why do we use protobuf and not JSON ? JSON are nice : they are human-readable, easy to build and to extract.
+> :bulb: Okay, but why do we use protobuf and not JSON ? JSON are nice : they are human-readable, easy to build and to extract.
 In fact, it is the data serialization method used in a lot of REST APIs.
 
 The main issue with JSON is the following : it is really heavy, because the data sent is formatted into a string.
@@ -38,7 +38,7 @@ So we need to define the data we will send into a .proto file. Let's do it !
 
 ### :outbox_tray: Unary gRPC call
 
-> Starting with the unary call. You can think as this as the standard Request/Response model.
+> :bulb: Starting with the unary call. You can think as this as the standard Request/Response model.
 
 In this step, you must create:
 
@@ -63,7 +63,7 @@ Some files should have appeared in the `proto` folder.
 
 ## :floppy_disk: Step 4 - The server
 
-> Let's get to the fun part : implementing the server.
+> :bulb: Let's get to the fun part : implementing the server.
 
 What's nice about gRPC is that is does a lot of the work for you. Because you and I are lazy, that's the dream.
 
@@ -85,7 +85,7 @@ So here is what you'll have to do:
 
 ## :computer: Step 5 - The client
 
-> Let's now implement the client !
+> :bulb: Let's now implement the client !
 
 - In the `src/client.ts` file, same as before, do not modify the code already there.
 
@@ -97,7 +97,7 @@ So here is what you'll have to do:
 
 ## :microscope: Step 6 - Adding some tests
 
-> Well writing code is nice, but without adding some tests ? Hell no.
+> :bulb: Well writing code is nice, but without adding some tests ? Hell no.
 
 In the `tests/chat.test.ts`, you'll write a test to ensure that the communication between the client and the server works properly.
 
