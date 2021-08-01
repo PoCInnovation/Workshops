@@ -63,7 +63,7 @@ Some files should have appeared in the `proto` folder.
 
 ## :floppy_disk: Step 4 - The server
 
-Let's get to the fun part : implementing the client.
+Let's get to the fun part : implementing the server.
 
 What's nice about gRPC is that is does a lot of the work for you. Because you and I are lazy, that's the dream.
 
