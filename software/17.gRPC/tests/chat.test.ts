@@ -1,0 +1,3 @@
+describe('Chat test', () => {
+	it('', () => {});
+});

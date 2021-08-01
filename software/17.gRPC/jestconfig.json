@@ -1,0 +1,16 @@
+{
+  "roots": [
+    "<rootDir>"
+  ],
+  "transform": {
+    "^.+\\.tsx?$": "ts-jest"
+  },
+  "testMatch": [
+    "**/tests/**/*.ts?()"
+  ],
+  "moduleFileExtensions": [
+    "ts", "js"
+  ],
+  "testPathIgnorePatterns": ["/node_modules/"],
+  "coveragePathIgnorePatterns": ["/node_modules/", "/src/proto/"]
+}
