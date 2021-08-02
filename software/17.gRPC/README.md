@@ -26,11 +26,11 @@ When dealing with gRPC, the data sent between the client and the server is packe
 > :bulb: Okay, but why do we use protobuf and not JSON ? [JSON are nice](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON#json_structure) : they are human-readable, easy to build and to extract.
 In fact, it is the data serialization method used in a lot of REST APIs.
 
-The main issue with JSON is the following : it is really heavy, because the data sent is formatted into a string.
+- The main issue with JSON is the following : it is really heavy, because the data sent is formatted into a string.
 
-Meanwhile, protobuf serialize data in a binary format, which makes the communication really fast !
+- Meanwhile, protobuf serialize data in a binary format, which makes the communication really fast !
 
-So we need to define the data we will send into a .proto file. Let's do it !
+- So we need to define the data we will send into a .proto file. Let's do it !
 
 ### :outbox_tray: Unary gRPC call
 
