@@ -74,12 +74,20 @@ So here is what you'll have to do:
 - It's constructor must initialize it's `server` member using the `@grpc/grpc-js` package.
 
 - After the initialization, it must add the pochat.Chat service. For the moment, just print the request data.
-  
-  The implementation of the service must be cast to a `ChatHandlers` object.
 
-- Then, you must bind the address `localhost:3000` to the server. Tips: use `bindAsync` to add a `console.log` in the callback.
+- Then, you must bind the address `localhost:3000` to the server.
 
 - Finally, use the start method to start the server, still in the constructor.
+
+Here is some documentation for you about TypeScript:
+
+- [TypeScript class](https://www.typescriptlang.org/docs/handbook/classes.html)
+
+- [TypeScript cast](https://www.typescripttutorial.net/typescript-tutorial/type-casting/)
+
+> :bulb: The implementation of the service must be cast to a `ChatHandlers` object.
+
+> :bulb: Use `bindAsync` to add a `console.log` in the callback.
 
 ## :computer: Step 4 - The client
 
