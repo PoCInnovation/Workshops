@@ -138,6 +138,13 @@ You can add more services to the protobuf file, passing other type of parameters
 
 - [PtitLuca](https://github.com/PtitLuca)
 
+## Organization
+
+- [📒 Linkedin](https://www.linkedin.com/company/pocinnovation/mycompany/)
+- [📷 Instagram](https://www.instagram.com/pocinnovation/)
+- [🖱️ Website](https://www.poc-innovation.fr/)
+- [🌐 Discord](https://discord.gg/Yqq2ADGDS7)
+
 Made with :heart: by PoC.
 
 If you want to support our work, please add a :star: to this repository !
