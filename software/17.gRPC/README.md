@@ -9,6 +9,8 @@ You have to install yarn globally using the following command:
 npm install --global yarn
 ```
 
+Clone this repository and open the current folder in your IDE.
+
 In order to install the required dependencies listed in the `package.json` file, you must run the following command:
 ```shell
 yarn install
