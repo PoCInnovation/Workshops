@@ -75,18 +75,17 @@ So here is what you'll have to do:
 
 - Then, you must bind the address `localhost:3000` to the server.
 
-- Finally, use the start method to start the server, still in the constructor.
+- Finally, use the `start` method to start the server, still in the constructor.
 
 > :bulb: The implementation of the service must be cast to a `ChatHandlers` object.
 
 > :bulb: Use `bindAsync` to add a `console.log` in the callback.
 
-Here is some documentation for you about TypeScript:
+##### Resources
 
 - [TypeScript class](https://www.typescriptlang.org/docs/handbook/classes.html)
-
 - [TypeScript cast](https://www.typescripttutorial.net/typescript-tutorial/type-casting/)
-
+- [Typescript callback](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function)
 
 ## :computer: Step 4 - The client
 
@@ -100,7 +99,7 @@ Here is some documentation for you about TypeScript:
 
 - Then, create a method named `hello`. It will wrap the `this.client.hello(...)` method. Look closely at the parameters required here !
 
-Here is some documentation for you about gRPC in Node:
+#### Resources
 
 - [gRPC and Node](https://grpc.io/docs/languages/node/)
 
@@ -126,7 +125,9 @@ Add the following tests to the suite using [jest](https://jestjs.io/):
 
 > :bulb: You'll have to modify the implementation of the service in the server and use the second argument.
 
-You can learn more about jest tests [here](https://jestjs.io/docs/api).
+##### Resources
+
+- [Test suite with Jest](https://jestjs.io/docs/api)
 
 ## :rocket: To go further
 
