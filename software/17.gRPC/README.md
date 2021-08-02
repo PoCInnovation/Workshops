@@ -109,20 +109,22 @@ Here is some documentation for you about gRPC in Node:
 
 > :bulb: Well writing code is nice, but without adding some tests ? Hell no.
 
-In the `tests/chat.test.ts`, you'll write a test to ensure that the communication between the client and the server works properly.
+In the `tests/chat.test.ts`, you'll write tests to ensure that the communication between the client and the server works properly.
 
 Remember to start the server with the following command whenever you run the client tests:
 ```shell
 yarn start:server
 ```
 
-Add the following tests to the suite:
+Add the following tests to the suite using [jest](https://jestjs.io/):
 
 - It can create the client
 
 - It can send the hello message
 
 - The server can respond `hello from server` to any incoming `hello` gRPC call. Tips: modify the implementation of the service in the server and use the second argument.
+
+You can learn more about jest tests [here](https://jestjs.io/docs/api).
 
 ## :wave: Authors
 
