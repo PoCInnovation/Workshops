@@ -122,7 +122,9 @@ Add the following tests to the suite using [jest](https://jestjs.io/):
 
 - It can send the hello message
 
-- The server can respond `hello from server` to any incoming `hello` gRPC call. Tips: modify the implementation of the service in the server and use the second argument.
+- The server can respond `hello from server` to any incoming `hello` gRPC call.
+
+> :bulb: You'll have to modify the implementation of the service in the server and use the second argument.
 
 You can learn more about jest tests [here](https://jestjs.io/docs/api).
 
