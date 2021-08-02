@@ -16,14 +16,12 @@
 
 All the required information to install dependencies can be found in [SETUP.md](./SETUP.md).
 
-## :closed_book: Step 1 - The basics
+## :pencil2: Step 1 - Writing protobuf file
 
-gRPC stands for **g**oogle **R**emote **P**rocedure **C**all.
+> gRPC stands for **g**oogle **R**emote **P**rocedure **C**all.
 It is a framework developed by Google on top of the [RPC protocol](https://en.wikipedia.org/wiki/Remote_procedure_call).
 
-If you want to learn more about the differences between gRPC and REST, you can read [this great blogpost](https://www.imaginarycloud.com/blog/grpc-vs-rest/#comparison).
-
-## :pencil2: Step 2 - Writing protobuf file
+>If you want to learn more about the differences between gRPC and REST, you can read [this great blogpost](https://www.imaginarycloud.com/blog/grpc-vs-rest/#comparison).
 
 When dealing with gRPC, the data sent between the client and the server is packed in a specific format : protobuffers.
 
@@ -52,7 +50,7 @@ In this step, you must create:
     - And will return a `HelloResponse` message as the response containing a string named `content`.
 
 
-## :repeat: Step 3 - Generating TypeScript definitions
+## :repeat: Step 2 - Generating TypeScript definitions
 
 So now that your protobuf file is ready, you can generate the TypeScript definition using the following command:
 ```shell
@@ -61,7 +59,7 @@ yarn protogen
 
 Some files should have appeared in the `proto` folder.
 
-## :floppy_disk: Step 4 - The server
+## :floppy_disk: Step 3 - The server
 
 > :bulb: Let's get to the fun part : implementing the server.
 
@@ -83,7 +81,7 @@ So here is what you'll have to do:
 
 - Finally, use the start method to start the server, still in the constructor.
 
-## :computer: Step 5 - The client
+## :computer: Step 4 - The client
 
 > :bulb: Let's now implement the client !
 
@@ -95,7 +93,7 @@ So here is what you'll have to do:
 
 - Then, create a method named `hello`. It will wrap the `this.client.hello(...)` method. Look closely at the parameters required here !
 
-## :microscope: Step 6 - Adding some tests
+## :microscope: Step 5 - Adding some tests
 
 > :bulb: Well writing code is nice, but without adding some tests ? Hell no.
 
