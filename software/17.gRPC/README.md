@@ -14,21 +14,7 @@
 
 ## :gear: Step 0 - Setup
 
-You have to install node and npm to follow this workshop.
-
-You have to install yarn globally using the following command:
-```shell
-npm install --global yarn
-```
-
-Clone this repository and open the current folder in your IDE.
-
-In order to install the required dependencies listed in the `package.json` file, you must run the following command:
-```shell
-yarn install
-```
-
-A `node_modules` folder and a `yarn.lock` file should now have appeared in your workspace.
+All the required information to install dependencies can be found in [SETUP.md](./SETUP.md).
 
 ## :closed_book: Step 1 - The basics
 

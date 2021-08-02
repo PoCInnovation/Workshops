@@ -1,3 +1,0 @@
-describe('Chat test', () => {
-	it('', () => {});
-});
