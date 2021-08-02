@@ -1,5 +1,17 @@
 # Workshop 17 - gRPC and Protocol Buffers with TypeScript
 
+:heavy_check_mark: Write protobuf files
+
+:heavy_check_mark: Write your gRPC service
+
+:heavy_check_mark: Write your gRPC messages
+
+:heavy_check_mark: Implement a TypeScript gRPC client
+
+:heavy_check_mark: Implement a TypeScript gRPC server
+
+:heavy_check_mark: Test your implementations
+
 ## :gear: Step 0 - Setup
 
 You have to install node and npm to follow this workshop.
