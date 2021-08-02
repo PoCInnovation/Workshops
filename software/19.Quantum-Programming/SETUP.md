@@ -9,8 +9,8 @@ Please make sure you have every thing installed to start he Workshop !
 ## Jupyter Notebook
 ### What is Jupyter Notebook :book:
 
-Jupyter Notebook allows you to work by cells. Modify the cells to pass the exercises.  
-Then execute the cells by clicking on the play button or with the shortcut: ``shift + enter``.  
+Jupyter Notebook allows you to work by cells. Modify the cells to pass the exercises.
+Then execute the cells by clicking on the play button or with the shortcut: ``shift + enter``.
 Notebook files are recognized by the extension: ``.ipynb``.
 
 
@@ -19,13 +19,12 @@ Notebook files are recognized by the extension: ``.ipynb``.
 - Clone the workshop repository.
 - run the command: ``pip3 install jupyter notebook``
 - you can install the VSCode extension: Jupyter (optional)
-- start a local server with the command: ``jupyter notebook``.
 
 ## Qiskit library
 
-Once you jave jupyter-notebook open on your browser, Click on `New > Python3 `, and it
-will open a new window with an input. Now, install the qiskit package.
+- run in the current folder:
 ```bash
-!pip install qiskit
+jupyter-notebook ./setup_dependencies.ipynb
 ```
-The ```!``` is to precise that the command is a bash directive and not some python code.
+- Then, for each cell, execute them by typing Ctrl + Shift + Enter.
+- you will notice that each command begins with a ``!``. That is for notify jupyter that this is a ``bash`` command and not a ``python`` one !
