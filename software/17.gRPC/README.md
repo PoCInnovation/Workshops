@@ -79,15 +79,16 @@ So here is what you'll have to do:
 
 - Finally, use the start method to start the server, still in the constructor.
 
+> :bulb: The implementation of the service must be cast to a `ChatHandlers` object.
+
+> :bulb: Use `bindAsync` to add a `console.log` in the callback.
+
 Here is some documentation for you about TypeScript:
 
 - [TypeScript class](https://www.typescriptlang.org/docs/handbook/classes.html)
 
 - [TypeScript cast](https://www.typescripttutorial.net/typescript-tutorial/type-casting/)
 
-> :bulb: The implementation of the service must be cast to a `ChatHandlers` object.
-
-> :bulb: Use `bindAsync` to add a `console.log` in the callback.
 
 ## :computer: Step 4 - The client
 
