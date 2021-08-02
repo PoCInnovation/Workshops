@@ -28,7 +28,7 @@ In fact, it is the data serialization method used in a lot of REST APIs.
 
 - The main issue with JSON is the following : it is really heavy, because the data sent is formatted into a string.
 
-- Meanwhile, protobuf serialize data in a binary format, which makes the communication really fast !
+- Meanwhile, protobuf serialize data in a binary format, which makes the communication really fast 🤯 !
 
 - So we need to define the data we will send into a .proto file. Let's do it !
 
