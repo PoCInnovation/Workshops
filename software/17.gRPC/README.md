@@ -25,7 +25,7 @@ It is a framework developed by Google on top of the [RPC protocol](https://en.wi
 
 When dealing with gRPC, the data sent between the client and the server is packed in a specific format : protobuffers.
 
-> :bulb: Okay, but why do we use protobuf and not JSON ? JSON are nice : they are human-readable, easy to build and to extract.
+> :bulb: Okay, but why do we use protobuf and not JSON ? [JSON are nice](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON#json_structure) : they are human-readable, easy to build and to extract.
 In fact, it is the data serialization method used in a lot of REST APIs.
 
 The main issue with JSON is the following : it is really heavy, because the data sent is formatted into a string.
@@ -46,8 +46,8 @@ In this step, you must create:
   
 - With one rpc call, named `Hello`.
 
-    - The `Hello` call will take a `HelloRequest` message as the argument containing a string named `content`.
-    - And will return a `HelloResponse` message as the response containing a string named `content`.
+  - The `Hello` call will take a `HelloRequest` message as the argument containing a string named `name`.
+  - And will return a `HelloResponse` message as the response containing a string named `greetings`.
 
 
 ## :repeat: Step 2 - Generating TypeScript definitions
