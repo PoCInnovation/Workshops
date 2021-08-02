@@ -130,13 +130,25 @@ You will :
   - Communicate with an API in Svelte with axios
   - Understand how frontend and backend interact together
 
-## 16 - [Rust-Tetra](./Rust-Tetra)
+## 16 - [Rust-Tetra](./16.Rust-Tetra)
 
 Discover the Tetra framework and create your own game in Rust.
 You will :
   - Discovering the Tetra framework.
   - Creation of your video game.
   - Improve your Rust skills.
+
+##  17 - [gRPC and Protocol Buffers with TypeScript](./17.gRPC)
+
+Learn gRPC by creating a client and server with TypeScript
+You will :
+- Write protobuf files
+- Write your gRPC service
+- Write your gRPC messages
+- Implement a TypeScript gRPC client
+- Implement a TypeScript gRPC server
+- Test your implementations
+
 
 ## Organization
 
