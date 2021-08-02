@@ -69,7 +69,7 @@ So here is what you'll have to do:
 
 - Create a `PoChatServer` class and export it as the default export.
   
-- It's constructor must initialize it's `server` member using the `@grpc/grpc-js` package.
+- Its constructor must initialize its `server` member using the `@grpc/grpc-js` package.
 
 - After the initialization, it must add the pochat.Chat service. For the moment, just print the request data.
 
