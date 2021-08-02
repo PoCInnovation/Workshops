@@ -138,6 +138,7 @@ You can add more services to the protobuf file, passing other type of parameters
 ## :wave: Authors
 
 - [PtitLuca](https://github.com/PtitLuca)
+- [Tom Chauveau](https://github.com/TomChv)
 
 ## Organization
 
