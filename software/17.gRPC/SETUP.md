@@ -24,13 +24,9 @@ The extracted folder should look like this:
 ```shell
 ➜  sources ✗ tree -a
 .
-├── .eslintignore
-├── .eslintrc.js
-├── gen-proto.sh
-├── .gitignore
-├── jestconfig.json
+├── gen-proto.sh      # Protobuff generator script
+├── jestconfig.json   # Test configuration
 ├── package.json      # Package manager
-├── .prettierrc.js
 ├── proto
 │   └── pochat.proto  # Protobuf file
 ├── src
@@ -39,8 +35,8 @@ The extracted folder should look like this:
 │   └── server.ts     # Server
 ├── tests
 │   └── chat.test.ts  # Test file
-├── tsconfig.json
-└── yarn.lock
+├── tsconfig.json     # Typescript configuration
+└── yarn.lock         # Dependencies lock files
 
 ```
 
@@ -64,5 +60,6 @@ warning "eslint-config-airbnb-typescript > eslint-config-airbnb@18.2.1" has unme
 warning "eslint-config-airbnb-typescript > eslint-config-airbnb@18.2.1" has unmet peer dependency "eslint-plugin-react-hooks@^4 || ^3 || ^2.3.0 || ^1.7.0".
 [4/4] Building fresh packages...
 Done in 1.66s.
-
 ```
+
+[Go back to the exercise](./README.md)
