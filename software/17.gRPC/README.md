@@ -128,6 +128,12 @@ Add the following tests to the suite using [jest](https://jestjs.io/):
 
 You can learn more about jest tests [here](https://jestjs.io/docs/api).
 
+## :rocket: To go further
+
+If you want to learn more about gRPC project out there, check out [this](https://github.com/grpc-ecosystem/awesome-grpc) list of amazing project that uses it.
+
+You can add more services to the protobuf file, passing other type of parameters instead of a string, or even combining several data types.
+
 ## :wave: Authors
 
 - [PtitLuca](https://github.com/PtitLuca)
