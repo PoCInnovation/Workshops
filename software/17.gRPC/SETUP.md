@@ -22,22 +22,25 @@ Download and extract the sources available [here](https://github.com/PoCInnovati
 
 The extracted folder should look like this:
 ```shell
-➜  sources ✗ ls -la
-total 220
-drwxrwxr-x 5 username username   4096 Aug  2 15:29 .
-drwxrwxr-x 4 username username   4096 Aug  2 15:29 ..
--rw-rw-r-- 1 username username     18 Aug  2 00:17 .eslintignore
--rw-rw-r-- 1 username username    800 Aug  2 00:17 .eslintrc.js
--rwxrwxr-x 1 username username     94 Aug  2 00:36 gen-proto.sh
--rw-rw-r-- 1 username username   1897 Aug  2 00:37 .gitignore
--rw-rw-r-- 1 username username    299 Aug  2 01:43 jestconfig.json
--rw-rw-r-- 1 username username   1061 Aug  2 01:43 package.json
--rw-rw-r-- 1 username username    570 Aug  2 00:17 .prettierrc.js
-drwxrwxr-x 2 username username   4096 Aug  2 15:29 proto
-drwxrwxr-x 2 username username   4096 Aug  2 01:39 src
-drwxrwxr-x 2 username username   4096 Aug  2 01:48 tests
--rw-rw-r-- 1 username username    349 Aug  2 01:15 tsconfig.json
--rw-rw-r-- 1 username username 171033 Aug  2 01:43 yarn.lock
+➜  sources ✗ tree -a
+.
+├── .eslintignore
+├── .eslintrc.js
+├── gen-proto.sh
+├── .gitignore
+├── jestconfig.json
+├── package.json      # Package manager
+├── .prettierrc.js
+├── proto
+│   └── pochat.proto  # Protobuf file
+├── src
+│   ├── client.ts     # Client
+│   ├── index.ts
+│   └── server.ts     # Server
+├── tests
+│   └── chat.test.ts  # Test file
+├── tsconfig.json
+└── yarn.lock
 
 ```
 
