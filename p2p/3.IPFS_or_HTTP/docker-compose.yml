@@ -1,0 +1,32 @@
+version: "3.3"
+
+services:
+  db:
+    image: 'postgres:latest'
+    expose:
+        - "5432"
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+      - ./schema.sql:/docker-entrypoint-initdb.d/1-init.sql
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    networks:
+      - backend
+
+  web:
+    build: .
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    networks:
+      - backend
+    restart: always
+
+networks:
+  backend:
+    driver: bridge
