@@ -2,14 +2,18 @@ import os
 
 from django.http import HttpResponseRedirect, HttpResponse, Http404
 from django.shortcuts import render
+from django.core.paginator import Paginator
 
 from musicshare.forms import SongUploadForm
 from musicshare.models import Song
 
 
 def index(request):
-    songs = Song.objects.all()
-    return render(request, 'musicshare/index.html', {"songs": songs})
+    songs = Song.objects.all().order_by("date_upload")
+    paginator = Paginator(songs, 8)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    return render(request, 'musicshare/index.html', {"page_obj": page_obj})
 
 
 def upload(request):
