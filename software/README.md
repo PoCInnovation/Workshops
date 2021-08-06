@@ -140,15 +140,13 @@ You will :
 
 ##  17 - [gRPC and Protocol Buffers with TypeScript](./17.gRPC)
 
-Learn gRPC by creating a client and server with TypeScript
+Learn gRPC by creating a client and server with go
 You will :
 - Write protobuf files
 - Write your gRPC service
 - Write your gRPC messages
-- Implement a TypeScript gRPC client
-- Implement a TypeScript gRPC server
-- Test your implementations
-
+- Implement a gRPC client with go
+- Implement a gRPC server with go
 
 ## Organization
 
