@@ -23,7 +23,7 @@ You'll build an application composed of:
 
 > But what is Kakfa anyway ? Why do I need it for this use case ?
 
-Kafka is a message broker, meaning that someone is responsible for sending message to Kafka - the **producer** - and 
+Kafka is a message broker, meaning that someone is responsible for sending messages to Kafka - the **producer** - and 
 someone else will receive these messages - the **consumer**. Other message brokers exists, like RabbitMQ, but Kafka 
 is much more resilient, because it is designed to support stream interruptions.
 
