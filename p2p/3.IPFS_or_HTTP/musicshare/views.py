@@ -9,7 +9,7 @@ from musicshare.models import Song
 
 
 def index(request):
-    songs = Song.objects.all().order_by("date_upload")
+    songs = Song.objects.all().order_by("id")
     paginator = Paginator(songs, 8)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
@@ -17,13 +17,19 @@ def index(request):
 
 
 def upload(request):
-    """
-        response = requests.post('https://ipfs.infura.io:5001/api/v0/add', files=upload_file)
-    """
     if request.method == 'POST':
         form = SongUploadForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            '''
+            Step 2.0:
+                Here, you can connect / send a request to ipfs.infura API with "/add" method.
+                The API will respond with the corresponding hash of the file uploaded.
+                Don't forget to create a new Song object and store the hash !
+            '''
+            Song.objects.create(title=form.cleaned_data['title'],
+                                by=form.cleaned_data['by'],
+                                category=form.cleaned_data['category'],
+                                file=form.cleaned_data['file'])
             return HttpResponseRedirect('/success/')
     else:
         form = SongUploadForm()
@@ -36,6 +42,11 @@ def success(request):
 
 def download(request, song_id):
     song = Song.objects.get(pk=song_id)
+    '''
+    Step 2.1:
+        As in the previous step, you have to connect again to ipfs.infura, and request your file with the cat method.
+        Give the hash of the song ; that way, the API will know which file you are talking about.
+    '''
     file_path = song.file.path
     if os.path.exists(file_path):
         with song.file.open('rb') as fh:
