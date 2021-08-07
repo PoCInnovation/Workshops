@@ -19,6 +19,18 @@ You've probably heard of the REST model, one of the way that you can implement w
 During this workshop, you will implement a communication channel between a client and a server using gRPC, which is 
 one of the other ways to communicate - like REST does.
 
+**But what *is* gRPC ?**
+
+- gRPC stands for **g**oogle **R**emote **P**rocedure **C**all.
+- It is a framework developed by Google on top of the [RPC protocol](https://en.wikipedia.
+  org/wiki/Remote_procedure_call).
+- If you want to learn more about the differences between gRPC and REST, you can read [this great blogpost]
+  (https://www.imaginarycloud.com/blog/grpc-vs-rest/#comparison).
+- When dealing with gRPC, the data sent between the client and the server is packed in a specific format : protobuffers.
+
+> :bulb: Okay, but why do we use protobuf and not JSON ? [JSON are nice](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON#json_structure) : they are human-readable, easy to build and to extract.
+In fact, it is the data serialization method used in a lot of REST APIs.
+
 **But why gRPC instead of REST ?**
 
 - gRPC's communication speed is faster than REST one
