@@ -171,7 +171,7 @@ You should see your song play, even if the server has been shut down !
 ### :inbox_tray: 2.2 Retrieve
 Last step : if anyone wants to download from our website some mp3 songs, we need to get it from IPFS.
 Since you did the previous step, this one would seem easy : in your [musicshare/views.py](./sources/musicshare/views.py)
-on the `download` view, do the same thing as previously but instead of adding a file, call the `cat` method.
+on the `download` view, do the same thing as previously but instead of adding a file, call the `cat` (or `get`) method.
 
 ## :rocket: Going further
 A very cool feature with IPFS is that if someone is having an IPFS node running on its machine and download your mp3 audio
