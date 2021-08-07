@@ -91,7 +91,7 @@ Before implementing both the server and the client, you will implement the main 
 
 ### :pushpin: **Tasks**:
 - Create a `main.go` file at the root of your working folder
-- Create a main function
+- Create a `main` function
 - Check the first argument provided to the program
 
   - If it is "-c", it will start the client. For the moment, just print `Starting the client`
