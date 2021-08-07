@@ -37,7 +37,7 @@ In fact, it is the data serialization method used in a lot of REST APIs.
 - gRPC is *kinda* easier to implement, but not faster
 - gRPC uses HTTP/2, which is better than HTTP 1.1, the one that REST uses
 
-You can learn more about the main differences between these two models [here](https://www.imaginarycloud.com/blog/grpc-vs-rest/).
+You can learn more about the main differences between these two models [on this great blogpost](https://www.imaginarycloud.com/blog/grpc-vs-rest/).
 I highly recommend that you take a look at the article, it is easy to understand, and you will learn a lot of stuff !
 
 ## Step 0 - Setup
