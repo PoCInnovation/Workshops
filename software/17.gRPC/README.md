@@ -47,7 +47,7 @@ Please follow the instructions available [here](./SETUP.md).
 ## Step 1 - Designing the gRPC service
 
 ### :bookmark_tabs: **Description**:
-When dealing with gRPC, you need to define two things in a very specific file : the protobuf file.
+When dealing with gRPC, you need to define two things in a very specific file : the [protobuf](https://developers.google.com/protocol-buffers) file.
 These two things are :
 
 - Service - This is the global communication between two entities
