@@ -78,7 +78,7 @@ These two things are :
 ### :heavy_check_mark: **Validation**:
 Run the following command and nothing should have appeared on your screen:
 ```shell
-$ protoc --go_out=plugins=grpc:messenger messenger/messenger.proto
+protoc --go_out=plugins=grpc:messenger messenger/messenger.proto
 ```
 
 ## Step 2 - Implement the main logic
