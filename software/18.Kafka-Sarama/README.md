@@ -1,7 +1,5 @@
 # Workshop 18 - Setup Kafka in a microservice architecture
 
-**What you will learn:**
-
 :heavy_check_mark: Setting up Apache Kafka using Docker containers
 
 :heavy_check_mark: Write a Kafka Producer using Sarama
