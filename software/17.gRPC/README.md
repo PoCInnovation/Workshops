@@ -50,8 +50,8 @@ Please follow the instructions available [here](./SETUP.md).
 When dealing with gRPC, you need to define two things in a very specific file : the [protobuf](https://developers.google.com/protocol-buffers) file.
 These two things are :
 
-- Service - This is the global communication between two entities
-- Message - It defines the messages sent and received during the communication
+- `Service` - This is the global communication between two entities
+- `Message` - It defines the messages sent and received during the communication
 
 ### :pushpin: **Tasks**:
 - Create a folder and name it `messenger`
