@@ -113,7 +113,6 @@ Should print respectively:
 $ go run main.go "-c"
 Starting the client
 
-&&
 
 $ go run main.go "-s"
 Starting the server
