@@ -245,6 +245,12 @@ triggers whenever you hit `CTRL + C`.
 ### :heavy_check_mark: **Validation**:
 Try to hit `CTRL + C` while running the server, and it should shut down.
 
+## To go further
+
+Take a look at the gRPC streams and try to implement a stream RPC in the current project.
+
+Or you can try to write the client in another programming language ! Here comes the power of protobuf :)
+
 ## Authors
 - [PtitLuca](https://github.com/PtitLuca)
 
