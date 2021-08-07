@@ -1,7 +1,5 @@
 # Workshop 17 - Discover gRPC with go
 
-**What you will learn:**
-
 :heavy_check_mark: Design a gRPC service
 
 :heavy_check_mark: Write protocol buffer file
@@ -16,11 +14,10 @@
 
 **What you will do and why:**
 
-- Let's say that you need to implement a way of communicating between a client and a server
-- You've probably heard of the REST model, one of the way that you can implement which is very common in web 
-  development
-- During this workshop, you will implement a communication channel between a client and a server using gRPC, 
-  which is one of the other ways to communicate - like REST does
+Let's say that you need to implement a way of communicating between a client and a server.
+You've probably heard of the REST model, one of the way that you can implement which is very common in web development.
+During this workshop, you will implement a communication channel between a client and a server using gRPC, which is 
+one of the other ways to communicate - like REST does.
 
 **But why gRPC instead of REST ?**
 
