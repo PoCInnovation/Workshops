@@ -105,8 +105,8 @@ Before implementing both the server and the client, you will implement the main 
 ### :heavy_check_mark: **Validation**:
 Run the following commands:
 ```shell
-$ go run main.go "-c"
-$ go run main.go "-s"
+go run main.go "-c"
+go run main.go "-s"
 ```
 Should print respectively:
 ```shell
@@ -121,7 +121,7 @@ Starting the server
 
 And running the following command:
 ```shell
-$ go run main.go "-h" 
+go run main.go "-h" 
 ```
 Should print:
 ```shell
@@ -173,7 +173,7 @@ In the `main.go` file:
 ### :heavy_check_mark: **Validation**:
 Run the following command:
 ```shell
-$ go run main.go "-s"
+go run main.go "-s"
 ```
 
 Should make the program run indefinitely !
@@ -210,11 +210,11 @@ In the `main.go` file:
 ### :heavy_check_mark: **Validation**:
 - Run the server
 ```shell
-$ go run main.go "-s"
+go run main.go "-s"
 ```
 - Open a new terminal, and run
 ```shell
-$ go run main.go "-c"
+go run main.go "-c"
 ```
 
 The server should print:
