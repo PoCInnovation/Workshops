@@ -22,13 +22,14 @@ In this Workshop, you will learn :
 :heavy_check_mark: How the change your centralized storage into a distributed one via IPFS with Infura !
 
 ## :wrench: Step 0 - Setup
-Please follow each instruction on the `SETUP.md`file.
+Please follow each instruction on the [SETUP.md](./SETUP.md) file.
 
 ## Step 1 - HTTP
 ### :pencil2: 1.0 Discover the basics
 Wanna launch the platform? Alright, make sure you are on the [sources](./sources) directory where the `Dockerfile` and
 `docker-compose.yml` are.
 
+Build the multi service container :
 ```bash
 sudo docker-compose build
 ```
@@ -106,6 +107,9 @@ The first part of the message is obviously the datetime. The second one is the m
 get the page ; we are asking the server to give us the `/` route which is the home page.
 Then, the `HTTP` protocol and finally two numbers. The `200` is the most interesting : it is a status, preview code. `200` means
 that the server is ok to give us that page from the `/` route, and it has been delivered correctly.
+
+![](./http_request_flowchart.png)
+*Scheme of a HTTP request*
 
 >:bulb: What does `POST` means ?
 
