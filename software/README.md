@@ -138,7 +138,7 @@ You will :
   - Creation of your video game.
   - Improve your Rust skills.
 
-##  17 - [gRPC and Protocol Buffers with TypeScript](./17.gRPC)
+##  17 - [gRPC and Protocol Buffers with Go](./17.gRPC)
 
 Learn gRPC by creating a client and server with go
 You will :
