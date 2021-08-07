@@ -54,7 +54,7 @@ These two things are :
 - `Message` - It defines the messages sent and received during the communication
 
 ### :pushpin: **Tasks**:
-- Create a folder and name it `messenger`
+- Create a folder `messenger`
 - In this folder, create a file named `messenger.proto`
 - Create a `MessengerService` in the `messenger.proto` file
 - This service has a `Send` rpc, which:
