@@ -11,8 +11,11 @@ You can install both of them using the following commands respectively:
 
 ### **go**
 ```shell
-$ wget https://golang.org/dl/go1.16.6.linux-amd64.tar.gz
-$ rm -rf /usr/local/go && tar -C /usr/local -xzf go1.16.6.linux-amd64.tar.gz
+# Will download go binaries
+wget https://golang.org/dl/go1.16.6.linux-amd64.tar.gz
+
+# Will extract and move binaries into GOPATH
+rm -rf /usr/local/go && tar -C /usr/local -xzf go1.16.6.linux-amd64.tar.gz
 ```
 
 Then, open your .zshrc or .bashrc file and append the following line at the end:
