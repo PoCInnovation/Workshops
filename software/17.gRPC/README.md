@@ -240,6 +240,7 @@ triggers whenever you hit `CTRL + C`.
 - Use the `Disconnect` method for the client when it has sent its message
 
 ### :books: **Documentation**:
+- [Signals in go](https://pkg.go.dev/os/signal)
 
 ### :heavy_check_mark: **Validation**:
 Try to hit `CTRL + C` while running the server, and it should shut down.
