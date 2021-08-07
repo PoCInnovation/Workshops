@@ -5,4 +5,4 @@ which contains the code of our web application.
 * [Docker](https://github.com/PoCInnovation/Workshops/blob/master/software/04.Docker/SETUP.md)
 * `unzip sources.zip ; cd sources`
 
-[Go back to the exercise]((./README.md#step-1---http))
+[Go back to the exercise](./README.md#step-1---http)
