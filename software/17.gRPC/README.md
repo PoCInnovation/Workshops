@@ -256,6 +256,11 @@ RPC in the current project.
 
 Or you can try to write the client in [another programming language](https://developers.google.com/protocol-buffers/docs/pythontutorial) ! Here comes the power of protobuf :)
 
+You can add more services to the protobuf file, passing other type of parameters instead of a string, or even combining more data types.
+
+If you want to learn more about gRPC project out there, check out [this](https://github.com/grpc-ecosystem/awesome-grpc) list of amazing projects that uses it.
+
+
 ## Authors
 - [PtitLuca](https://github.com/PtitLuca)
 
