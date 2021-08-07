@@ -73,7 +73,7 @@ These two things are :
 
 ### :books: **Documentation**:
 
--
+- [Protobuf language guide](https://developers.google.com/protocol-buffers/docs/proto)
 
 ### :heavy_check_mark: **Validation**:
 Run the following command and nothing should have appeared on your screen:
@@ -100,7 +100,7 @@ Before implementing both the server and the client, you will implement the main 
 
 ### :books: **Documentation**:
 
--
+- [Command line args in go](https://gobyexample.com/command-line-arguments)
 
 ### :heavy_check_mark: **Validation**:
 Run the following commands:
@@ -169,6 +169,8 @@ In the `main.go` file:
 
 ### :books: **Documentation**:
 
+- Look at the generated protobuf file :)
+
 ### :heavy_check_mark: **Validation**:
 Run the following command:
 ```shell
@@ -205,6 +207,8 @@ In the `main.go` file:
 - Below the print of `Starting the client`, create a new client and send a message
 
 ### :books: **Documentation**:
+
+- Look at the protobuf generated file :)
 
 ### :heavy_check_mark: **Validation**:
 - Run the server
