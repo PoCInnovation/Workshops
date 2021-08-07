@@ -251,9 +251,10 @@ Try to hit `CTRL + C` while running the server, and it should shut down.
 For the moment, you are using an int to represent the date, but there is the [Timestamp](https://stackoverflow.
 com/questions/3574716/date-and-time-type-for-use-with-protobuf) type available in protobuf.
 
-Take a look at the gRPC streams and try to implement a stream RPC in the current project.
+Take a look at the [gRPC streams](https://grpc.io/docs/what-is-grpc/core-concepts/) and try to implement a stream 
+RPC in the current project.
 
-Or you can try to write the client in another programming language ! Here comes the power of protobuf :)
+Or you can try to write the client in [another programming language](https://developers.google.com/protocol-buffers/docs/pythontutorial) ! Here comes the power of protobuf :)
 
 ## Authors
 - [PtitLuca](https://github.com/PtitLuca)
