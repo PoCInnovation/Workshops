@@ -4,8 +4,8 @@
 
 For this workshop, you will need the following tools:
 
-- go
-- protoc
+- [go](https://golang.org/) - The programming language you'll use during the workshop
+- [protoc](https://developers.google.com/protocol-buffers) - The protobuf compiler
 
 You can install both of them using the following commands respectively:
 
