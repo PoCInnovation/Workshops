@@ -147,7 +147,7 @@ During this step, you will implement this interface and its method, `Send`.
   `MessengerServiceServer` structure
   
   - Print the content received with the following format: "[SERVER]: received {body} at {date}"
-  - Return the following message to the client: "hello from server !" with the current date as a UNIX timestamp
+  - Return the following message to the client: `hello from server !` with the current date as a UNIX timestamp
 
 Now that your `Server` structure implements all the `MessengerServiceServer` methods, you can start the server.
 
