@@ -19,7 +19,7 @@ In this Workshop, you will learn :
 
 :heavy_check_mark: The basics of IPFS, and why in some cases it is better than HTTP
 
-:heavy_check_mark: How the change your centralized storage into a distributed one via IPFS with Infura !
+:heavy_check_mark: How to change a centralized storage into a distributed one via IPFS with Infura !
 
 ## :wrench: Step 0 - Setup
 Please follow each instruction on the [SETUP.md](./SETUP.md) file.
@@ -125,7 +125,7 @@ get, joined by a `/`. That format does not ring a bell to you ? It is like a pat
 
 ## Step 2 - IPFS
 
->HTTP is cool but has its limits : if the server is down, you won't be able to retrieve the data stored. Furthermore,
+> :bulb: HTTP is cool but has its limits : if the server is down, you won't be able to retrieve the data stored. Furthermore,
 your government can easily block access to certain servers by their IPs that host particular website for censure purposes.
 Let's see how IPFS answers this issues.
 
@@ -183,7 +183,7 @@ then you deleted it, you will be able to retrieve it from its node !
 ## Author
 * [Adina Cazalens](https://www.github.com/NaadiQmmr)
 
-
+## Organisation
 - [📒 Linkedin](https://www.linkedin.com/company/pocinnovation/mycompany/)
 - [📷 Instagram](https://www.instagram.com/pocinnovation/)
 - [🖱️ Website](https://www.poc-innovation.fr/)
