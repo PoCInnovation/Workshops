@@ -22,3 +22,9 @@ In this Workshop, you will learn:
 * How to write your own smart contract
 * How to integrate your smart contract onto a front end
 
+### Workshop 3 - [IPFS or HTTP](./3.IPFS_or_HTTP)
+Here, we are going to learn:
+
+* The limits of HTTP access and storage
+* The basics of IPFS storage
+
