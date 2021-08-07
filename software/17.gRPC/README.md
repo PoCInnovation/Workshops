@@ -55,7 +55,7 @@ These two things are :
 
 ### :pushpin: **Tasks**:
 - Create a folder `messenger`
-- In this folder, create a file named `messenger.proto`
+- In this folder, create a `messenger.proto` file
 - Create a `MessengerService` in the `messenger.proto` file
 - This service has a `Send` rpc, which:
 
