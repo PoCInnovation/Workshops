@@ -109,6 +109,7 @@ You'll use the go programming language, and a package - [sarama](https://github.
   type - and an int - the table that ordered the pizza
 - It must be published on the `pizza-order` topic
 - You'll then call the two last functions in the `main` one
+- Once the message has been published, print the partition and the offset it has been published to 
 
 ### :books: **Documentation**:
 - [How to send message from any type ? Use bytes](https://pkg.go.dev/github.com/sclasen/sarama#ByteEncoder)
