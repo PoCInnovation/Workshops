@@ -176,7 +176,7 @@ Received an order for a pizza margherita at table 17 !
 This service act as a storage / monitoring for the incoming orders.
 It will save the incoming orders in a file.
 
-We split the kitchen and manager service to improve the single-responsibility feature of each project.
+We split the kitchen and manager service to improve the single-responsibility feature of each service.
 
 ### :pushpin: **Tasks**:
 - You already did one consumer right ? Now just save the result in a file :)
