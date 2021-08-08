@@ -57,8 +57,8 @@ In this file, create a `zookeeper` service:
 Then, create a second service, named `kafka`:
 - It uses the following docker image: `confluentinc/cp-kafka:latest`
 - It binds the following container ports to your local ports:
-  - 29092 to 29092, the internal listener
-  - 9092 to 9092, the external listener
+  - 19092 to 19092, the internal listener
+  - 19091 to 19091, the external listener
 - Initialize the required environment variables you can find [here](https://docs.confluent.io/platform/current/installation/docker/config-reference.html#confluent-ak-configuration)
 - It depends on the `zookeeper` service
 
