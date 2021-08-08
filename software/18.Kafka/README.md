@@ -35,3 +35,9 @@ Well it is still a good way to learn its behaviour and how to interact with Kafk
 
 At the end of the workshop, you'll be able to scale up even further this application with more producers / consumers.
 
+## Step 0 - Setup
+
+Please follow the instructions available [here](./SETUP.md).
+
+## Step 1 - Start Kafka and ZooKeeper
+
