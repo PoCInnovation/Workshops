@@ -6,7 +6,7 @@
 
 :heavy_check_mark: Create two consumer services
 
-:heavy_check_mark: Publish messages into Kafka topic
+:heavy_check_mark: Publish messages into Kafka
 
 ## Introduction
 
