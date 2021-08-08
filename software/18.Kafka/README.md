@@ -136,6 +136,40 @@ message published on partition 0 with offset 1
 
 ## Step 3 - Creating the first consumer - the cook
 
+### :bookmark_tabs: **Description**:
+
+It's now time for you to create the first consumer : the cooks in your kitchen !
+
+First, you will create the actual consumer and then consume messages.
+
+### :pushpin: **Tasks**:
+- Create a `kitchen` folder and jump in it
+- Once again, initialize the go module using `go mo init kitchen`
+- Install sarama using `go get github.com/Shopify/sarama`
+- Create a `main.go` file and open it
+- Create 3 functions:
+  - The `main` one
+  - `createConsumer` which creates the consumer using sarama
+  - `consumeMessages` which retrieves the partitions, and then read for the incoming messages as they arrive and 
+    print their content after decoding them
+
+### :books: **Documentation**:
+- [Consumer with Sarama](https://pkg.go.dev/github.com/Shopify/sarama#ConsumerGroup)
+- [How to consume partitions ?](https://pkg.go.dev/github.com/Shopify/sarama#Consumer)
+
+### :heavy_check_mark: **Validation**:
+Start your Kafka cluster using `docker-compose up --build`.
+
+Then, start the consumer in a new terminal using `go run main.go` in the `kitchen` folder.
+
+Finally, start the producer in a new terminal using `go run main.go` in the `client` folder.
+
+You should see the following in the consumer's terminal:
+```shell
+$ go run main.go
+Received an order for a pizza margherita at table 17 !
+```
+
 ## Step 4 - Creating the second consumer - the manager
 
 ## To go further
