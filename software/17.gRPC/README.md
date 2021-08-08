@@ -108,11 +108,11 @@ go run main.go "-s"
 ```
 Should print respectively:
 ```shell
-$ go run main.go "-c"
+go run main.go "-c"
 Starting the client
 
 
-$ go run main.go "-s"
+go run main.go "-s"
 Starting the server
 ```
 
@@ -122,7 +122,7 @@ go run main.go "-h"
 ```
 Should print:
 ```shell
-$ go run main.go "-h"
+go run main.go "-h"
 exit status 1
 ```
 
