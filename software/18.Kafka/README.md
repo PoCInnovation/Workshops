@@ -89,3 +89,56 @@ kafka_1      | [2021-08-08 14:10:13,100] INFO [SocketServer listenerType=ZK_BROK
 kafka_1      | [2021-08-08 14:10:13,104] INFO [KafkaServer id=1002] started (kafka.server.KafkaServer)
 ```
 
+## Step 2 - Creating the producer
+
+### :bookmark_tabs: **Description**:
+In this step, you will create a service responsible for publishing messages into Kafka.
+
+You'll use the go programming language, and a package - [sarama](https://github.com/Shopify/sarama) - to create the producer.
+
+### :pushpin: **Tasks**:
+- Create a `client` folder and jump into it
+- Initialize the go module with the following command : `go mod init waiter`
+- Install sarama with `go get github.com/Shopify/sarama`
+- Create a `main.go` file
+- Create 3 functions:
+  - The `main` one
+  - `createProducer` which will create the producer and connect to the Kafka broker
+  - `publishOrder` which will publish a pizza order
+- The message that the producer will publish must be of the type `Order`, a structure containing a string - the pizza 
+  type - and an int - the table that ordered the pizza
+- It must be published on the `pizza-order` topic
+- You'll then call the two last functions in the `main` one
+
+### :books: **Documentation**:
+- [How to send message from any type ? Use bytes](https://pkg.go.dev/github.com/sclasen/sarama#ByteEncoder)
+- [Sarama documentation](https://pkg.go.dev/github.com/sclasen/sarama#section-documentation)
+
+### :heavy_check_mark: **Validation**:
+
+Run the following command while your Kafka cluster is running:
+```shell
+go run main.go
+```
+
+It should print the following:
+```shell
+$ go run main.go
+message published on partition 0 with offset 0
+```
+
+And if you run it a second time:
+```shell
+$ go run main.go
+message published on partition 0 with offset 1
+```
+
+## Step 3 - Creating the first consumer - the cook
+
+## Step 4 - Creating the second consumer - the manager
+
+## Step 5 - Starting the microservices
+
+## To go further
+
+## Authors

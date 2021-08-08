@@ -2,11 +2,13 @@
 
 In this workshop, you'll need:
 
-- [docker-ce](https://docs.docker.com/engine/install/fedora/) : docker community edition
-- [docker-compose](https://docs.docker.com/compose/install/) : complementary tool to simplify the creation of images and containers
-- [go](https://golang.org/doc/install) : golang language and compiler
+- [docker-ce](https://docs.docker.com/engine/install/fedora/): docker community edition
+- [docker-compose](https://docs.docker.com/compose/install/): complementary tool to simplify the creation of images and containers
+- [go](https://golang.org/doc/install): golang language and compiler
 
 ## 1. Installation
+
+### Install Docker related content
 
 First, remove these packages if installed on your dump:
 
@@ -60,6 +62,8 @@ docker: Error response from daemon: cgroups: cannot found cgroup mount destinati
 ```
 
 To fix them, follow this [solution](https://github.com/docker/for-linux/issues/219#issuecomment-375160449) on docker's github. This solution requires to be executed each time you reboot
+
+### Install the go programming language
 
 To install go, run the following commands:
 ```shell
