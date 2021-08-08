@@ -148,6 +148,15 @@ You will :
 - Implement a gRPC client with go
 - Implement a gRPC server with go
 
+##  18 - [Setup Kafka in a microservice architecture](./18.Kafka)
+
+Learn Kafka by implementing a producer and two consumers as services with Kafka
+You will :
+- Start Kafka and ZooKeeper using docker compose
+- Create a producer service
+- Create two consumer services
+- Publish messages into Kafka
+
 ## Organization
 
 - [📒 Linkedin](https://www.linkedin.com/company/pocinnovation/mycompany/)
