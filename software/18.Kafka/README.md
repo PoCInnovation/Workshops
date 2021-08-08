@@ -138,14 +138,14 @@ message published on partition 0 with offset 1
 
 ## Step 4 - Creating the second consumer - the manager
 
-## Step 5 - Starting the microservices
-
 ## To go further
+- Improve the services: dockerize your producer and consumers !
 
 - Improve the producer
   - Split functions into separate folders
   - Take the pizza type, and the table as command line arguments
   - Take a configuration file as pizza orders
+
 
 ## Authors
 - [PtitLuca](https://github.com/PtitLuca)
