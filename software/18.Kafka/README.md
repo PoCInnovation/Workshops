@@ -142,4 +142,21 @@ message published on partition 0 with offset 1
 
 ## To go further
 
+- Improve the producer
+  - Split functions into separate folders
+  - Take the pizza type, and the table as command line arguments
+  - Take a configuration file as pizza orders
+
 ## Authors
+- [PtitLuca](https://github.com/PtitLuca)
+
+Made with :heart: by PoC.
+
+## Organization
+
+- [📒 Linkedin](https://www.linkedin.com/company/pocinnovation/mycompany/)
+- [📷 Instagram](https://www.instagram.com/pocinnovation/)
+- [🖱️ Website](https://www.poc-innovation.fr/)
+- [🌐 Discord](https://discord.gg/Yqq2ADGDS7)
+
+> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
