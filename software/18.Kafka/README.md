@@ -172,6 +172,24 @@ Received an order for a pizza margherita at table 17 !
 
 ## Step 4 - Creating the second consumer - the manager
 
+### :bookmark_tabs: **Description**:
+This service act as a storage / monitoring for the incoming orders.
+It will save the incoming orders in a file.
+
+We split the kitchen and manager service to improve the single-responsibility feature of each project.
+
+### :pushpin: **Tasks**:
+- You already did one consumer right ? Now just save the result in a file :)
+- Create it in the `manager` folder
+
+### :books: **Documentation**:
+- [Working with files](https://gobyexample.com/writing-files)
+
+### :heavy_check_mark: **Validation**:
+Use the same commands as in the previous step, and start the new consumer in the `manager` folder using `go run main.go`.
+
+It should have created a file with the following sentence inside: `Received an order for a pizza margherita at table 17 !`.
+
 ## To go further
 - Improve the services: dockerize your producer and consumers !
 
