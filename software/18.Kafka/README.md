@@ -70,7 +70,7 @@ Then, create a second service, named `kafka`:
 
 ### :heavy_check_mark: **Validation**:
 
-Run `docker-compose up --build`, wait 30 seconds and in a new terminal run `docker-compose logs kafka | grep -i 
+Run `docker-compose up --build -d`, wait 30 seconds and in a new terminal run `docker-compose logs kafka | grep -i 
 started`. 
 It should print:
 ```shell
