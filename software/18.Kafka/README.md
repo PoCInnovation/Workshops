@@ -188,7 +188,7 @@ We split the kitchen and manager service to improve the single-responsibility fe
 ### :heavy_check_mark: **Validation**:
 Use the same commands as in the previous step, and start the new consumer in the `manager` folder using `go run main.go`.
 
-It should have created a file with the following sentence inside: `Received an order for a pizza margherita at table 17 !`.
+It should have created a file named `log.txt` with the following sentence inside: `Received an order for a pizza margherita at table 17 !`.
 
 ## To go further
 - Improve the services: dockerize your producer and consumers !
