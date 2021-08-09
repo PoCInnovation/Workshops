@@ -124,7 +124,7 @@ go run main.go
 
 It should print the following:
 ```shell
-$ go run main.go
+go run main.go
 message published on partition 0 with offset 0
 ```
 
