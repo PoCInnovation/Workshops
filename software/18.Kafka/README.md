@@ -166,7 +166,7 @@ Finally, start the producer in a new terminal using `go run main.go` in the `cli
 
 You should see the following in the consumer's terminal:
 ```shell
-$ go run main.go
+go run main.go
 Received an order for a pizza margherita at table 17 !
 ```
 
