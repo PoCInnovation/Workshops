@@ -59,7 +59,7 @@ Then, create a second service, named `kafka`:
 - It binds the following container ports to your local ports:
   - 19092 to 19092, the internal listener
   - 19091 to 19091, the external listener
-- Initialize the required environment variables you can find [here](https://docs.confluent.io/platform/current/installation/docker/config-reference.html#confluent-ak-configuration)
+- [Initialize the required environment variables](https://docs.confluent.io/platform/current/installation/docker/config-reference.html#confluent-ak-configuration)
 - It depends on the `zookeeper` service
 
 ### :books: **Documentation**:
