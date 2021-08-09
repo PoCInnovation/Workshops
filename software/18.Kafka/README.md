@@ -94,7 +94,7 @@ kafka_1      | [2021-08-08 14:10:13,104] INFO [KafkaServer id=1002] started (kaf
 ### :bookmark_tabs: **Description**:
 In this step, you will create a service responsible for publishing messages into Kafka.
 
-You'll use the go programming language, and a package - [sarama](https://github.com/Shopify/sarama) - to create the producer.
+You'll use the [Go programming language](https://golang.org/), and the package [sarama](https://github.com/Shopify/sarama) to create the producer.
 
 ### :pushpin: **Tasks**:
 - Create a `client` folder and jump into it
