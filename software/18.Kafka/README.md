@@ -12,7 +12,7 @@
 
 > What am I going to do during this workshop ?
 
-You will create a microservice architecture enhanced by Kafka.
+You will create a microservice architecture enhanced by [Kafka](https://kafka.apache.org/).
 
 Take a look at the schema below:
 
@@ -42,7 +42,7 @@ Please follow the instructions available [here](./SETUP.md).
 ## Step 1 - Start Kafka and ZooKeeper
 
 ### :bookmark_tabs: **Description**:
-You'll need to start Kafka in a docker container, but Kafka actually relies on ZooKeeper, which you can learn more about [here](http://cloudurable.com/blog/kafka-architecture/index.html).
+You'll need to start Kafka in a docker container, but Kafka actually relies on [ZooKeeper](http://cloudurable.com/blog/kafka-architecture/index.html).
 
 Those services will start into docker containers.
 
@@ -52,14 +52,14 @@ Those services will start into docker containers.
 In this file, create a `zookeeper` service:
 - It uses the following docker image: [`confluentinc/cp-zookeeper:latest`](https://hub.docker.com/r/confluentinc/cp-zookeeper)
 - It binds the container port `22181` to your local `22181` port
-- Initialize the required environment variables you can find [here](https://docs.confluent.io/platform/current/installation/docker/config-reference.html#zk-configuration)
+- [Initialize the required environment variables](https://docs.confluent.io/platform/current/installation/docker/config-reference.html#zk-configuration)
 
 Then, create a second service, named `kafka`:
 - It uses the following docker image: [`confluentinc/cp-kafka:latest`](https://hub.docker.com/r/confluentinc/cp-kafka/)
 - It binds the following container ports to your local ports:
   - 19092 to 19092, the internal listener
   - 19091 to 19091, the external listener
-- Initialize the required environment variables you can find [here](https://docs.confluent.io/platform/current/installation/docker/config-reference.html#confluent-ak-configuration)
+- [Initialize the required environment variables](https://docs.confluent.io/platform/current/installation/docker/config-reference.html#confluent-ak-configuration)
 - It depends on the `zookeeper` service
 
 ### :books: **Documentation**:
@@ -94,7 +94,7 @@ kafka_1      | [2021-08-08 14:10:13,104] INFO [KafkaServer id=1002] started (kaf
 ### :bookmark_tabs: **Description**:
 In this step, you will create a service responsible for publishing messages into Kafka.
 
-You'll use the go programming language, and a package - [sarama](https://github.com/Shopify/sarama) - to create the producer.
+You'll use the [Go programming language](https://golang.org/), and the package [sarama](https://github.com/Shopify/sarama) to create the producer.
 
 ### :pushpin: **Tasks**:
 - Create a `client` folder and jump into it
@@ -105,7 +105,7 @@ You'll use the go programming language, and a package - [sarama](https://github.
   - The `main` one
   - `createProducer` which will create the producer and connect to the Kafka broker
   - `publishOrder` which will publish a pizza order
-- The message that the producer will publish must be of the type `Order`, a structure containing a string - the pizza 
+- The message that the producer will publish must be of the type `Order`, a structure containing a `string` - the pizza 
   type - and an int - the table that ordered the pizza
 - It must be published on the `pizza-order` topic
 - You'll then call the two last functions in the `main` one
@@ -124,14 +124,14 @@ go run main.go
 
 It should print the following:
 ```shell
-$ go run main.go
+go run main.go
 message published on partition 0 with offset 0
 ```
 
 And if you run it a second time:
 ```shell
-$ go run main.go
-message published on partition 0 with offset 1
+go run main.go
+message published on partition `0` with offset `1`
 ```
 
 ## Step 3 - Creating the first consumer - the cook
@@ -166,7 +166,7 @@ Finally, start the producer in a new terminal using `go run main.go` in the `cli
 
 You should see the following in the consumer's terminal:
 ```shell
-$ go run main.go
+go run main.go
 Received an order for a pizza margherita at table 17 !
 ```
 
@@ -179,7 +179,7 @@ It will save the incoming orders in a file.
 We split the kitchen and manager service to improve the single-responsibility feature of each service.
 
 ### :pushpin: **Tasks**:
-- You already did one consumer right ? Now just save the result in a file :)
+- You already did one consumer right ? Now just save the result in a file named `log.txt` :)
 - Create it in the `manager` folder
 
 ### :books: **Documentation**:
@@ -188,7 +188,7 @@ We split the kitchen and manager service to improve the single-responsibility fe
 ### :heavy_check_mark: **Validation**:
 Use the same commands as in the previous step, and start the new consumer in the `manager` folder using `go run main.go`.
 
-It should have created a file with the following sentence inside: `Received an order for a pizza margherita at table 17 !`.
+It should have created a file named `log.txt` with the following sentence inside: `Received an order for a pizza margherita at table 17 !`.
 
 ## To go further
 - Improve the services: dockerize your producer and consumers !
