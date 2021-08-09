@@ -12,7 +12,7 @@
 
 > What am I going to do during this workshop ?
 
-You will create a microservice architecture enhanced by Kafka.
+You will create a microservice architecture enhanced by [Kafka](https://kafka.apache.org/).
 
 Take a look at the schema below:
 
