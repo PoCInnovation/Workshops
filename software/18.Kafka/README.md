@@ -42,7 +42,7 @@ Please follow the instructions available [here](./SETUP.md).
 ## Step 1 - Start Kafka and ZooKeeper
 
 ### :bookmark_tabs: **Description**:
-You'll need to start Kafka in a docker container, but Kafka actually relies on ZooKeeper, which you can learn more about [here](http://cloudurable.com/blog/kafka-architecture/index.html).
+You'll need to start Kafka in a docker container, but Kafka actually relies on [ZooKeeper](http://cloudurable.com/blog/kafka-architecture/index.html).
 
 Those services will start into docker containers.
 
