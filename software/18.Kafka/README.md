@@ -105,7 +105,7 @@ You'll use the go programming language, and a package - [sarama](https://github.
   - The `main` one
   - `createProducer` which will create the producer and connect to the Kafka broker
   - `publishOrder` which will publish a pizza order
-- The message that the producer will publish must be of the type `Order`, a structure containing a string - the pizza 
+- The message that the producer will publish must be of the type `Order`, a structure containing a `string` - the pizza 
   type - and an int - the table that ordered the pizza
 - It must be published on the `pizza-order` topic
 - You'll then call the two last functions in the `main` one
