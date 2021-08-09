@@ -50,12 +50,12 @@ Those services will start into docker containers.
 - Create a `docker-compose.yaml` file
 
 In this file, create a `zookeeper` service:
-- It uses the following docker image: `confluentinc/cp-zookeeper:latest`
+- It uses the following docker image: [`confluentinc/cp-zookeeper:latest`](https://hub.docker.com/r/confluentinc/cp-zookeeper)
 - It binds the container port `22181` to your local `22181` port
 - Initialize the required environment variables you can find [here](https://docs.confluent.io/platform/current/installation/docker/config-reference.html#zk-configuration)
 
 Then, create a second service, named `kafka`:
-- It uses the following docker image: `confluentinc/cp-kafka:latest`
+- It uses the following docker image: [`confluentinc/cp-kafka:latest`](https://hub.docker.com/r/confluentinc/cp-kafka/)
 - It binds the following container ports to your local ports:
   - 19092 to 19092, the internal listener
   - 19091 to 19091, the external listener
