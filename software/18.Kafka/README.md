@@ -130,7 +130,7 @@ message published on partition 0 with offset 0
 
 And if you run it a second time:
 ```shell
-$ go run main.go
+go run main.go
 message published on partition `0` with offset `1`
 ```
 
