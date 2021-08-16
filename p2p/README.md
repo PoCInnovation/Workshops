@@ -1,4 +1,4 @@
-# P2P Workshops
+# :spider_web: P2P Workshops
 
 Peer to peer workshops to introduce students to peer-to-peer technologies and notions.
 
@@ -27,4 +27,11 @@ Here, we are going to learn:
 
 * The limits of HTTP access and storage
 * The basics of IPFS storage
+
+### Workshop 4 - [Security Challenges Ethereum](./4.SecuChallengesEth)
+Through almost ten security challenges, you will learn:
+
+* The concepts of blockchain deployments (gas, withdraws, fallback functions...)
+* The exploits of weak smart contracts
+* Using the RemixIDE and/or your JavaScript Console !
 
