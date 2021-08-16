@@ -1,43 +1,44 @@
-# Workshop 19 - Chat avec Socket.IO
+# Workshop 19 - Chat with Socket.IO
 
-✔ Comprendre les sockets
+✔ Understand the sockets
 
 ## Step 0 : Setup
 
-Toutes les infos relatives à la préparation du workshop sont disponibles dans le [SETUP.md](./SETUP.md).
+Any information about the setting of this workshop are available in [SETUP.md](./SETUP.md).
 
-Veillez à avoir terminé ses étapes avant de passer à la suite.
+Be careful to finish every step before moving one to the next thing.
 
-Une cheatsheet sur les bases du Typescript est également disponible [ici](https://github.com/PoCInnovation/Workshops/blob/master/software/8.Typescript/HELP.md)
+A cheatsheet based on Typescript is available [here](https://github.com/PoCInnovation/Workshops/blob/master/software/8.Typescript/HELP.md).
 
-[Qu'est-ce qu'un socket ?](https://socket.io/docs/v4/index.html)
+[What's a socket ?](https://socket.io/docs/v4/index.html)
 
-## Step 01 :  Première étape Hello World !
+## Step 01 :  First step, Hello World !
 
-Si l'installation c'est bien passé, vous pouvez lancer votre serveur avec
+If the installation has been managed correctly, you can run your server with
 ```bash
  npm run dev
 ```
 
-Si vous allez dans votre navigateur à http://localhost:8080/
-vous devriez voir afficher:
+If you go on your browser at http://localhost:8080/
+you should see this on the screen :
 
 ```
 Hello World !
 ```
-Le serveur ce lance et n'a pas besoin d'être relancer avec nodemon.
-Le script dans votre package.json permet de prendre en compte les modifications
-de votre code pour relancer le serveur tout seul.
+The server launch and don't need to be launch again with nodemon.
+The script in your package.json allow to take account of modifications
+of your code to launch the server by itself.
 
 ## Step 02 :
 
-Maintenant que votre server fonctionne avec express, il est temps de modifier tout
-ça pour ajouter le coté server de Socket.IO pour émettre et reçevoir des données.
+Your server work with express, you can find it in
+src/index.ts.
+You need to change this file to allow express and socket.io to use it at the same time.
+That will allow you to issue and receive data on your server.
 
-Une fois le server configurer, nous allons établir une écoute sur notre page HTML
-par le biais de socket.
-A chaque connexion ou connection d'un utilisateur nous allons envoyé un message dans
-notre terminale à l'aide de console.log().
+Once the server is set, we will determine the path of our html page on our route '/' that you can find in router/router.ts.
+
+To every connection or disconnection of a user, we will send a message to our shell with the help of console.log().
 
 #### Ressources :
 - [Server Socket.IO](https://socket.io/get-started/chat)
@@ -47,9 +48,8 @@ notre terminale à l'aide de console.log().
 
 ## Step 03 :
 
-Créer un classe dans le fichier Front/chat.ts qui nous permettra de
-recevoir et envoyer des messages sous formes de socket à votre serveur.
-Commencer par le fameux 'Hello World' que vous afficherai dans votre terminale.
+Creat a class in the file Front/chat.ts that will allow us to receive and send messages in the form of socket to your server.
+Star with the famous 'Hello World' that you will display in your shell.
 
 #### Ressources :
 - [Class](https://www.typescriptlang.org/docs/handbook/2/classes.html)
@@ -57,46 +57,35 @@ Commencer par le fameux 'Hello World' que vous afficherai dans votre terminale.
 
 ## Step 04 :
 
-Il est maintenant temps de récupérer les informations de votre champs de texte.
+It is time to get information on your input.
 
-Pour ça, il vous faut créer une fonction qui effectue une query sur l'id de votre "input"
-unbe fois que celui ci est submit.
+For that you need to create a function that achieve a query on the id of your "input" once this one is submit. 
 
-Une fois le message récupérer, récupérer le message sur votre serveur pour l'afficher dans
-votre terminal.
+Once you get the message, you need to get the message of your server to print it on your shell.
 
 #### Ressources :
 - [Socket listener](https://socket.io/docs/v4/index.html)
 
 ## Step 05 :
 
-Avoir nos messages dans le terminal c'est bien mais reçevoir ses messages
-dans la console du navigateur c'est mieux.
+Having our message on your shell is great but receive your message in your browser console is better.
 
-Nos messages de champs texte sont pour le moments envoyé à notre serveur.
-Nous allons lui demander de nous les retransmettre afin de l'afficher dans
-la console de notre navigateur.
+Our message from input are, for now, send to our server; We need to aks it to retransmit it with the aim of print it in the browser console.
 
-Créer une fonction qui récupère le message auprès du serveur pour l'afficher
-dans la console de votre navigateur.
-
+Creat a function who get back the message nearby the server to print it in the browser console.
 #### Ressources :
 - [Socket Client](https://socket.io/docs/v4/client-socket-instance/)
 
 ## Step 06 :
 
-Cette étape va consister à envoyer un message à tout les utilisateur sur la page
-HTML à chaque connection ou déconnection.
+With this step, you will send a message to all the user on the page HTML each time there is a connection or disconnection.
 
-Pour cela nous allons créer une fonction qui ajoute du contenu à l'aide
-d'une query sur notre <div> dans notre page HTML.
-Vous devez prendre en compte les messages de votre serveur pour l'envoyer à
-votre front.
+For this end, we will creat a function that add contents with the help of a query on our HTML page.
+You have to take in consideration the message that your server display to sent it to your front.
 
-Pour tester votre code nous allons ouvrir deux pages de votre navigateur
-avec l'url : http://localhost:8080/
-Lors de la connection vous devriez afficher "Connection" et "Deconnexion" lorsque vous
-quitter la page.
+To test your code, we will open two pages of your browser with the url : http://localhost:8080/
+
+Throughout the connection, you have to print "Connection" and "Disconnexion" when you leave the page.
 
 #### Ressources :
 
@@ -105,41 +94,36 @@ quitter la page.
 
 ## Step 07 :
 
-Créer une fonction qui envoie le contenu de notre champs de texte
-sur notre page html.
+Creat a function that sent the content of our input on our HTML page.
 
-Pour cela, nous allons créer une fonction qui effectue une query sur notre <div>
-pour lui ajouter le message du champs de texte.
+
+For this, we will create a function that achieve a query on our HTML page to add it the message of the input.
 
 #### Ressources :
 
-- [Emettre une socket] (https://socket.io/docs/v3/emit-cheatsheet/index.html)
-- [Requête HTML] (https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector)
+- [Release a socket] (https://socket.io/docs/v3/emit-cheatsheet/index.html)
+- [Request HTML] (https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector)
 - [Socket Client](https://socket.io/docs/v4/client-socket-instance/)
 ## Step 08 :
 
-Il est maintenant temps d'identifier les messages plus clairement.
-Créer un id pour chaque utilisateur pour permettre de reçevoir les 
-messages des utilisateurs avec leur nom ou un déterminant.
+It is time to identify the message more clearly. 
+Creat an id for every user to allow in order to receive messages of users with their name or a determinant.
 
 Exemple:
 
-You: "message_envoyé"
-Tony: "message_reçu"
+You: "message_sent"
+Tony: "message_receive"
 
 ## Step 09 :
 
-Pour cette dernière étape nous allons ajouter la date et l'heure de l'envoie
-de chaques messages.
+For this last step we need tro add the date and the hour of when the message was sent.
 
 ## Bonus
 
-* Créer des rooms permettant d'envoyer un message aux utilisateurs dans
-la même chambre que vous.
-* Amélioration de votre Front avec React.
-* Authentification de l'utilisateur avec socket.
-* Ajouter une base de données pour stocker les messages et les rafraichir lors
-  de la connexion.
+* Creat rooms that allow you to send a message to every user that are in the same room as you.
+* Amelioration of your Front with React.
+* Authentification of the user with socket.
+* Add a data base to stock the message et refresh when there is a connexion.
 
 #### Ressources:
 - [React](https://reactjs.org/)
