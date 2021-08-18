@@ -9,29 +9,58 @@ FOr this workshop, you need to install these tools :
 
 ## Preparation
 
-Download the  [sources](./source.zip) to have base to start from.
+Download the  [sources](./source.zip) to have a base to start from.
 
 Sources are composed with the following files:
-- `package.json` : Dependency manager of NPM
-- `package-lock.json` : A file containing the versions of each dependency used on the project.
-- `tsconfig.json` : A configuration file for the Typescript.
-- `src/index.ts` : Server express and draw "Hello World" on your localhost.
-- `src/server/server.ts` : Class server allowing to listen according to the given port.
-- `src/router/router.ts` : Defines the listening routes for our server.
-- `src/Front/chat.ts` :Empty file which will accommodate our configuration to front page.
-- `src/Front/index.html` : HTML page for our Online Chat.
+
+```shell
+$ tree -a
+
+├── package.json # Dependency manager of NPM
+├── package-lock.json # A file containing the versions of each dependency used on the project.
+├── README.md
+├── SETUP.md
+├── src
+│   ├── Front
+│   │   ├── chat.ts # Empty file which will accommodate our configuration to front page.
+│   │   └── index.html # HTML page for our Online Chat.
+│   ├── index.ts # Server express and draw "Hello World" on your localhost.
+│   ├── router
+│   │   └── router.ts # Defines the listening routes for our server.
+│   └── server
+│       └── server.ts # Class server allowing to listen according to the given port.
+└── tsconfig.json # A configuration file for the Typescript.
+
+```
 
 You just have to follow these steps:
-- Create folder `workshop-learn-socket`
-- Copy file `source.zip` in the folder
-- Launch command `unzip source.zip`
-- Install dependencies with the command `npm install`
-- Check that everything works with the command `npm run dev`
+```shell 
+$ mkdir -p poc-workshop-Socket-Io # Create a new directory
+$ cd poc-workshop-Socket-Io # Go in
+
+# Installation
+$ mv -t . ~/Downloads/source.zip # Move source in the directory
+$ unzip source.zip # Extract source
+$ rm source.zip # Remove zip
+$ npm install # Install dependencies with the command
+$ run npm dev # Check that everything works with the command
+```
 
 You should get the following output:
 ```sh
 [1] [nodemon] restarting due to changes...
 [1] [nodemon] starting `node dist/index.js`
+Hello World !
 ```
 
-You can go to the [workshop](./README.md).
+If you go on your browser at http://localhost:8080/
+you should see this on the screen :
+
+```
+Hello World !
+```
+The server launch and don't need to be launch again with nodemon.
+The script in your package.json allow to take account of modifications
+of your code to launch the server by itself.
+
+[Go back to exercises](./README.md).
