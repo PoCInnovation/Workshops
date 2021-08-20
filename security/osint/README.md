@@ -43,7 +43,7 @@ Find EXACTLY where this picture has been taken : https://i.ibb.co/qggQKH9/hard.j
 
 ### Step 5 - Find the GPS coordinates - Final BOSS
 
-Find EXACTLY where this picture has been taken : 
+Find EXACTLY where this picture has been taken : https://i.ibb.co/frYDNhz/FINALBOSS.png
 
 
 
