@@ -29,7 +29,9 @@ To install `yarn`: `npm install --global yarn`
    ![Netlify Setup Files](.github/assets/setupFiles.png)
 
   </details>
+
 > Now we gonna verify that the app is working 👍
+
 - Run `yarn install` to install the dependencies
 - Run `yarn start` to start the server
 - In your favorite browser, go to `http://localhost:3000`
