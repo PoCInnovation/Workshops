@@ -1,7 +1,7 @@
 # Workshop 20 - Serverless ✨
-✔️ Learn the basics of Serverless, an architecture helping you saving time and money.
-✔️ Serverless App using [Netlify](https://www.netlify.com/), [React](https://fr.reactjs.org/) TS and [Chakra UI](https://chakra-ui.com/)
-✔️ Serverless API using [Serverless Framework](https://www.serverless.com/)
+✔️ Learn the basics of Serverless, an architecture helping you saving time and money.  
+✔️ Serverless App using [Netlify](https://www.netlify.com/), [React](https://fr.reactjs.org/) TS and [Chakra UI](https://chakra-ui.com/)  
+✔️ Serverless API using [Serverless Framework](https://www.serverless.com/)  
 
 ## Introduction 🔰
 **What you will do and why:**  
