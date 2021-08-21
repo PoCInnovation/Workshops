@@ -1,9 +1,13 @@
 # Workshop 19 - Chat with Socket.IO
 
-✔ Understand the sockets
-✔ Learn Typescript Languages
-✔ Understand how transmission data works
-✔ Learn how to create a HTTP server with express and Socket Io
+### Learn Socket.IO by implementing your own online chat.
+You will :
+- Learn Typescript fundamental
+- Work with socket and http servers
+- Understand sockets
+- Understand how transmits data
+
+- [What's a socket ?](https://socket.io/docs/v4/index.html)
 
 ## Step 0 - Setup
 
@@ -13,14 +17,19 @@ Be careful to finish every step before moving one to the next thing.
 
 If you are new to Typescript, you should check our [Typescript cheatsheet](https://github.com/PoCInnovation/Workshops/blob/master/software/8.Typescript/HELP.md).
 
-[What's a socket ?](https://socket.io/docs/v4/index.html)
+## Step 01 - Link your HTML page
 
-## Step 01 - Link your page HTML
+Your first step is to modify the content of your '/' routes
+in order to have your html page on your route.
 
-In the file src/router/router.ts import `path` and replace `Hello World`
-by the path of your HTML page `src/Front/index.html`.
+In the file `src/router/router.ts`
+- import [path](https://nodejs.org/docs/latest/api/path.html)
+- replace `Hello World` by your HTML page's path define in `src/Front/index.html`.
 
 If your reload your browser page, you must see input and button `Send`.
+
+#### Resources :
+- [Set path](https://www.codegrepper.com/code-examples/html/express+sendFile)
 
 ## Step 02 - Create Socket Server
 
@@ -33,16 +42,13 @@ For your first step create many variables:
 * http exposed by require("http").
 * path exposed by require("path").
 
-After that, create two variable below your variable `server_express`.
-The first variable name server use http to create server with like argument application
-of you express_server.
-The second variable is`io` that listens to your http server.
+Then, we will add the `socket server` to our `express`:
+- Create a new server using `http` package with your old express `app` as arguments
+- Create a new `io` server that listens to your HTTP server.
+- Replace the `start` method of your server with `listen`
+> :bulb: Your server must listen to port `8080`
 
-Now you can remove print("Hello World !") and server.start and replace by server.listen with
-your port like parameter.
-
-If you don't have error in your terminal, and you have your browser on your HTML page, let's go to the next step !
-
+If you don't have any errors in your terminal, and you have your browser on your HTML page, let's go to the next step!
 #### Resources :
 - [Variable Typescript](https://www.typescriptlang.org/docs/handbook/variable-declarations.html)
 - [Server Socket.IO](https://socket.io/get-started/chat)
@@ -53,9 +59,9 @@ If you don't have error in your terminal, and you have your browser on your HTML
 
 To every connection of a user, we will send a message to our shell with the help of console.log().
 
-Create an event `connection` with socket like parameters. Inside you must print `New User`.
-
-uncomment this line `express_server.app.use(express.static(path.join(__dirname, 'front'));`
+* Create an event `connection` with socket like parameters.
+* Inside you must print `New User`.
+* Uncomment this line `express_server.app.use(express.static(path.join(__dirname, 'front'));`
 to listen the file chat.ts and connect front and backend.
 Like that you can emit and receive socket between them.
 
@@ -67,15 +73,19 @@ If you open and close your browser page you must have the message on your termin
 
 ## Step 04 - Transmission Data
 
-Now, you have established connection !
+You have established connection !
 
-Now, go to the file `src/front/chat.ts` and complete the Class `Chat`.
-For that, you must create a function emit_data with for parameter a string.
-Inside you must emit socket with parameter `data` and your message.
-Now, in your index.ts you must get information with your event `data' and the message.
+It's time to implement a function to send messages from your frontend
+that will be received on your server.
+
+Now, go to the file `src/front/chat.ts` and complete the Class `Chat`:
+* Create a function `emit_data` with for parameter a string.
+* Emit socket with parameter `data` and your message.
+* In your index.ts you must get information with your event `data' and the message.
 * Tips: read the resource `Server Socket` and how receive your socket after emit it.
+* Call your function in the `chat.ts` set `Hello World !` in the parameter.
 
-Start with the famous 'Hello World' that you will display in your shell.
+In your terminal you should have to display your `Hello World !`.
 
 #### Resources :
 - [Class](https://www.typescriptlang.org/docs/handbook/2/classes.html)
@@ -86,19 +96,21 @@ Start with the famous 'Hello World' that you will display in your shell.
 
 Now that we will get the data, we will send it from our server in index.ts.
 
-The objective of this step is to know when a message is sent from the web page
-and to add its messages to our div.
+The objective of this step is to know when the user presses the button on your html page.
+At this point you will add the content of the input into your terminal.
 
 It is time to get information on your input.
 
-First step: create three const variable:
-
+First step: create two const variable:
 * form_data: get element form by id on your html page.
 * input_data: get element input by id on your html page.
 
-Now you must listen event submit on your input.
-if the button is submitted you must get data of your data_input add
-call your function emit_data to send your message to your server.
+Second step:
+* Listen to the event submit button.
+* Create a `message` variable that gets the data from your input.
+* Print content message with console.log().
+* Call emit_data to sent `message`.
+* Established input in Null.
 * Tips: to get value of your data_input cast your variable with `HTMLInputElement`.
 
 Go to your console on your shell and watch if you receive the message when you
@@ -112,38 +124,23 @@ click on the button `Send`.
 
 Having our message on your shell is great but receive your message in your browser console is better.
 
-Now add a print to console in your last event in chat.ts and change your socket.emit
-of your file index.ts for send socket to all clients in the current namespace except the sender.
+In your server `index.ts` changed the sending of sockets.
+Make sure that everyone can receive the message.
+
+* Change your socket.emit of your file `index.ts`for send socket to all clients in the current namespace except the sender.
 
 Now, if you submit message and look your console browser you must see your message.
+
 #### Resources :
 - [Socket Client](https://socket.io/docs/v4/client-socket-instance/)
 - [Type of emit Socket](https://socket.io/docs/v3/emit-cheatsheet/index.html)
 
+## Step 07 - Print Data in your Browser Html Page
 
-## Step 07 - Set Connection Of Your Client
-
-With this step, you will send a message to all the user on the page HTML each time there is a connection or disconnection.
-
-For this end, we will create a function that add contents with the help of a query on our HTML page.
-You have to take in consideration the message that your server display to sent it to your front.
-
-To test your code, we will open two pages of your browser with the url : http://localhost:8080/
-
-Throughout the connection, you have to print "Connection" and "Disconnexion" when you leave the page.
-
-#### Resources :
-
-- [Emit socket](https://socket.io/docs/v3/emit-cheatsheet/index.html)
-- [Request HTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector)
-
-## Step 08 - Print Data in your Browser Html Page
-
-Create a function that sent the content of our input on our HTML page.
-
+Now we will create a function in our `Chat` class to add the content of our input to our div.
+This will allow us to see the messages directly in our HTML page.
 
 For this, we will create a function `append_data` on your class Chat.
-
 First step, create const variable:
 * html_page: get element by id of your `div`, the name of this id is `messages'.
 
@@ -163,30 +160,52 @@ Congratulation !
 - [Request HTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector)
 - [Socket Client](https://socket.io/docs/v4/client-socket-instance/)
 
-## Step 09 - Set username
+## Step 08 - Set username
 
-Create a variable `my_name` that retrieves the names of users through a prompt.
+We will now retrieve the name of each user when they connect.
 
-After that, print `New user + name` with username, when a user connects to the page.
+we will:
+* Create a `my_name` variable that retrieves a user's name through a prompt that says `What is your name?`.
+* Just bellow, print `New user + name` with username, when a user connects to the page.
 
 #### Resources :
 [Set Name Variable](https://www.dummies.com/web-design-development/javascript/how-to-prompt-the-user-for-input-in-javascript/)
 
-## Step 10 - Message Management
+## Step 09 - Set Username
 
-Emit event `new-user` with `my_name` like parameter in chat.ts to prevent the arrival
+We are going to emit a socket that defines when a user connects with as parameter his name.
+This event will be sent to our server which in turn will send a socket to our frontend to ask
+it to display a connection message.
+
+In chat.ts, we will:
+* Create event `new_user` with `my_name` like parameter in chat.ts to prevent the arrival
 of a new user to the server.
-Receive message in your server add name in array variable `username` and
-print in your console `new user` with her name.
+* Create listen socket `user_connect` with string like parameter.
+* Inside, call `emit_data` with string `Connect + name`.
+
+In the index.ts we will:`
+* Create listen socket `new_user` with string like parameter.
+* Inside, print in your terminal `New user + name`.
+* emit socket to all user with `user-connect` as event and name as parameter.
 
 In your chat.ts add the name of your client before the message.
 You must change the print value of when you add your div.
 
-When you log in, you have `New User` + my_name and` name: message` with each message sent.
-
-Congratulation you have a chat online !
+When you log in, you have `New User` + my_name.
 
 #### Resources :
+
+## Step - Manage Message
+
+The final touch is to add the name of each user before the message sent.
+
+In your chat.ts add the name of your client before the message.
+* Change the value of your display when you add the content of your input to your div.
+Example: `name: message`.
+
+If you send messages on your HTML page you must have the user's name before the message.
+
+Congratulation you have a chat online !
 
 ## Bonus
 
@@ -200,3 +219,17 @@ Congratulation you have a chat online !
 - [React](https://reactjs.org/)
 - [Room Socket](https://socket.io/docs/v3/rooms/index.html)
 - [Authentication Socket](https://socket.io/docs/v3/middlewares/)
+
+## Authors
+- [Albert VALENTIN](https://github.com/OnsagerHe)
+
+Made with :heart: by PoC.
+
+## Organization
+
+- [📒 Linkedin](https://www.linkedin.com/company/pocinnovation/mycompany/)
+- [📷 Instagram](https://www.instagram.com/pocinnovation/)
+- [🖱️ Website](https://www.poc-innovation.fr/)
+- [🌐 Discord](https://discord.gg/Yqq2ADGDS7)
+
+> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

@@ -9,7 +9,7 @@ FOr this workshop, you need to install these tools :
 
 ## Preparation
 
-Download the  [sources](./source.zip) to have a base to start from.
+Download the  [sources](./source.zip) in the root of the repository to have a base to start from.
 
 Sources are composed with the following files:
 
@@ -35,16 +35,20 @@ $ tree -a
 
 You just have to follow these steps:
 ```shell 
-$ mkdir -p poc-workshop-Socket-Io # Create a new directory
-$ cd poc-workshop-Socket-Io # Go in
-
-# Installation
-$ mv -t . ~/Downloads/source.zip # Move source in the directory
-$ unzip source.zip # Extract source
-$ rm source.zip # Remove zip
-$ npm install # Install dependencies with the command
-$ run npm dev # Check that everything works with the command
-```
+# Create a new directory
+mkdir -p poc-workshop-Socket-Io
+# Move to that directory
+cd poc-workshop-Socket-Io 
+# Move source zip in the directory
+mv -t . ~/Downloads/source.zip
+# Extract source
+unzip source.zip
+# Remove old zip
+rm source.zip
+# Install dependencies
+npm install
+# Launch project
+run npm dev
 
 You should get the following output:
 ```sh
