@@ -26,7 +26,7 @@ To install `yarn`: `npm install --global yarn`
   <details>
     <summary>You should have this :</summary>
   
-   ![Netlify Setup Files](Netlify-App/public/setupFiles.png)
+   ![Netlify Setup Files](.github/assets/setupFiles.png)
 
   </details>
 > Now we gonna verify that the app is working 👍
@@ -36,7 +36,7 @@ To install `yarn`: `npm install --global yarn`
   <details>
     <summary>You should see :</summary>
   
-   ![Netlify Setup Page](Netlify-App/public/setupPage.png)
+   ![Netlify Setup Page](.github/assets/setupPage.png)
 
   </details>
 - Shut down the server (Ctrl + C)

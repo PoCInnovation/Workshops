@@ -13,12 +13,12 @@ But during low traffic, you will pay for these ressources too. That's not a good
 However this second solution is something very long to implement. And you just want to stay focus on your code. You don't want to care about the server managment.  
 Well you have a third option.   You can adopt a **serverless architecture**.  
 
-**But what is a serverless architecture ?**   
+**But what is a serverless architecture ?**  
 When you build an API to link you frontend with your database for instance, you useally run it on a server. This means that a server il allocated and listen to the queries to this API.  
   
 Well using a serverless archtitecture, it's different.  
   
-You don't allocate a specific server listening on the queries to your API. You just choose a cloud provider ([aws](https://aws.amazon.com/fr/), [scaleway](https://www.scaleway.com/en/), ...), and you give it your API's functions, one by one. They will be called **serverless functions**.   
+You don't allocate a specific server listening on the queries to your API. You just choose a cloud provider ([aws](https://aws.amazon.com/fr/), [scaleway](https://www.scaleway.com/en/), ...), and you give it your API's functions, one by one. They will be called **serverless functions**.  
 You don't give the whole API to a server ! You just give to the cloud provider your functions one by one.  
   
 As a concequence, when a query is make to call the API, it will create a container on a server of the cloud provider, and run the funciton inside.  
@@ -45,8 +45,8 @@ Please follow the steps in the [SETUP.md](./SETUP.md)
 
 ## Step 1 - Build your app
 (Code inside your Serverless Gifs App repository)  
-[Click to see an example of what you can do](https://eager-albattani-482adb.netlify.app/) 👀   
-**For now, you will call the giphy API inside the project** 
+[Click to see an example of what you can do](https://eager-albattani-482adb.netlify.app/) 👀  
+**For now, you will call the giphy API inside the project**
 #### Usefull links:
 - [React State Hook](https://fr.reactjs.org/docs/hooks-state.html)
 - [React Effect Hook](https://fr.reactjs.org/docs/hooks-effect.html)
@@ -64,26 +64,26 @@ Please follow the steps in the [SETUP.md](./SETUP.md)
   <details>
     <summary>See the button</summary>
   
-   ![Netlify Overview](Netlify-App/public/netlifyOverview.png)
+   ![Netlify Overview](.github/assets/netlifyOverview.png)
 
   </details>
 - Select Github for Continious Deployment
   <details>
     <summary>See the button</summary>
   
-   ![Netlify Continious Deployment](Netlify-App/public/netlifyCD.png)
+   ![Netlify Continious Deployment](.github/assets/netlifyCD.png)
 
   </details>
 - Choose your Serverless Gifs App repository
-- Deploy your application with the default settings   
+- Deploy your application with the default settings  
   **Warning: be aware to the branch to deploy: select your default repository branch**
   <details>
     <summary>See the default settings</summary>
   
-   ![Netlify Defaut Settings](Netlify-App/public/netlifyDeploy.png)
+   ![Netlify Defaut Settings](.github/assets/netlifyDeploy.png)
 
   </details>
-> Good ! Your application is now deployed ! But if you try to use it, we can see that it doesn't work, you get a full blanck page 🤔   
+> Good ! Your application is now deployed ! But if you try to use it, we can see that it doesn't work, you get a full blanck page 🤔  
 > Can you guess what the problem is ?  
 > Well, you didn't setup your environment variables !  
 > Lets do it ⤵️
@@ -92,7 +92,7 @@ Please follow the steps in the [SETUP.md](./SETUP.md)
   <details>
     <summary>See the button</summary>
   
-   ![Netlify Env](Netlify-App/public/netlifyEnv.png)
+   ![Netlify Env](.github/assets/netlifyEnv.png)
 
   </details>
 - Add your `REACT_APP_GIPHY_API_KEY` environment variable and SAVE
@@ -100,7 +100,7 @@ Please follow the steps in the [SETUP.md](./SETUP.md)
   <details>
     <summary>See the button</summary>
   
-   ![Netlify Trigger Deploy](Netlify-App/public/netlifyTriggerDeploy.png)
+   ![Netlify Trigger Deploy](.github/assets/netlifyTriggerDeploy.png)
 
   </details>
 - If you refresh your application page, you should now not see a blanck page, but what you've coded.
@@ -118,7 +118,7 @@ Once you're done, just push your work on your default branch. Netlify will autom
 #### Follow these steps:
 - TODO
 
-## Bonus: 
+## Bonus:
 - Create a frontend project using your serverless API.
 - Deploy your API with [scaleway](https://www.scaleway.com/en/docs/scaleway-elements-serverless-getting-started/)
   Why scaleway ? Because they are 🇫🇷 !
