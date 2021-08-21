@@ -8,7 +8,7 @@
 Let's say you want to build an application. One of the things you need to think about is **servers**. Sometimes there is a high traffic, sometimes a low traffic. You want to handle it, so you have for now two options:  
 - The first is pay for a lot of server ressources, so that even in high traffic your server can handle it.
 But during low traffic, you will pay for these ressources too. That's not a good thing because you don't **pay for what you use**.  
-- The second option is to have **scalable** servers. It means that you the right ressources depending on your traffic. To create this process, you can use [kubernetes](https://kubernetes.io/fr/docs/concepts/overview/what-is-kubernetes/).  
+- The second option is to have **scalable** servers. It means that you allocate the right ressources depending on your traffic. To create this process, you can use [kubernetes](https://kubernetes.io/fr/docs/concepts/overview/what-is-kubernetes/).  
   
 However this second solution is something very long to implement. And you just want to stay focus on your code. You don't want to care about the server managment.  
 Well you have a third option.   You can adopt a **serverless architecture**.  
@@ -21,7 +21,7 @@ Well using a serverless archtitecture, it's different.
 You don't allocate a specific server listening on the queries to your API. You just choose a cloud provider ([aws](https://aws.amazon.com/fr/), [scaleway](https://www.scaleway.com/en/), ...), and you give it your API's functions, one by one. They will be called **serverless functions**.  
 You don't give the whole API to a server ! You just give to the cloud provider your functions one by one.  
   
-As a concequence, when a query is make to call the API, it will create a container on a server of the cloud provider, and run the funciton inside.  
+As a concequence, when a query is made to call the API, it will create a container on a server of the cloud provider, and run the funciton inside.  
 The benefits are the following: 
 - The cloud provider create as much containers as queries, so you have a scalable API.
 - You pay for what you use. You pay for the numbers of containers created.
