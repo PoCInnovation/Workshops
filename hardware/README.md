@@ -20,3 +20,9 @@ Creation of your first circuits:
 - Learn the basics of voltage
 - Interact with microcontrollers
 - Have an overwiew of electronics
+
+## 3 - Initiation WI-FI ESP32
+Creation of your own local network:
+- Learn how works WI-FI and local network
+- Interact with microcontrollers
+- Have an overwiew of electronics
