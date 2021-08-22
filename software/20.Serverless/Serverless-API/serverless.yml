@@ -15,9 +15,8 @@ provider:
 
 plugins:
   - serverless-bundle # Package our functions with Webpack
-  - serverless-offline
+  - serverless-offline # Emulate AWS lamda and API Gateway on local machine
   - serverless-dotenv-plugin # Load .env as environment variables
-  - serverless-plugin-typescript
 
 useDotenv: true
 
