@@ -10,7 +10,7 @@ To get started, please follow the installation steps listed in [this guide](./SE
 
 > :warning: It's essential that you complete the setup guide before attempting any of the steps.
 
-## Step 1: Hello Pods
+## Step 1 - Hello Pods
 
 Your web application is going to have to run somewhere. [Pods](https://kubernetes.io/fr/docs/concepts/workloads/pods/) are the perfect place!
 
