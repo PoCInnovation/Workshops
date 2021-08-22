@@ -53,10 +53,10 @@ To install `yarn`: `npm install --global yarn`
 - Go to [Giphy website](https://developers.giphy.com/docs/sdk/)
 - Click the `Create an App` button
 - Create an account
-- You should get a private key
+- You should get a private key on your dashboard
 - Take care of it, you will need it sooner !
 
 ## Serverless Framework
-- `yarn add --dev serverless-plugin-typescript typescript`
+- Install serverless framework with `npm install -g serverless`
 
 [Go back to the exercise](./README.md)
