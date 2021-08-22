@@ -31,9 +31,3 @@ functions:
       - http:
           path: setup
           method: get
-  fetchGiphy:
-    handler: fetchGiphy.main
-    events:
-      - http:
-          path: fetchGiphy
-          method: get
