@@ -1,4 +1,4 @@
-# Workshop 20 - Serverless ✨
+# Workshop 22 - Serverless ✨
 ✔️ Learn the basics of Serverless, an architecture helping you saving time and money.  
 ✔️ Serverless App using [Netlify](https://www.netlify.com/), [React](https://fr.reactjs.org/) TS and [Chakra UI](https://chakra-ui.com/)  
 ✔️ Serverless API using [Serverless Framework](https://www.serverless.com/)  
@@ -8,7 +8,7 @@
 Let's say you want to build an application. One of the things you need to think about is **servers**. Sometimes there is a high traffic, sometimes a low traffic. You want to handle it, so you have for now two options:  
 - The first is pay for a lot of server ressources, so that even in high traffic your server can handle it.
 But during low traffic, you will pay for these ressources too. That's not a good thing because you don't **pay for what you use**.  
-- The second option is to have **scalable** servers. It means that you allocate the right ressources depending on your traffic. To create this process, you can use [kubernetes](https://kubernetes.io/fr/docs/concepts/overview/what-is-kubernetes/).  
+- The second option is to have **scalable** servers. It means that you allocate the right ressources depending on your traffic. To create this process, you can use [kubernetes](https://kubernetes.io/fr/docs/concepts/overview/what-is-kubernetes/). **METTRE LE LIEN DU WS KUBERNETES**  
   
 However this second solution is something very long to implement. And you just want to stay focus on your code. You don't want to care about the server managment.  
 Well you have a third option.   You can adopt a **serverless architecture**.  
@@ -44,14 +44,17 @@ Please follow the steps in the [SETUP.md](./SETUP.md)
 **Done ? You are now ready to go ! 🔥**
 
 ## Step 1 - Build your app
-(Code inside your Serverless Gifs App repository)  
+- Go to your Serverless Gifs App repository  
+- Build the app.
+  > You will need a [form](https://fr.reactjs.org/docs/forms.html), an [input](https://chakra-ui.com/docs/form/input), a [button](https://chakra-ui.com/docs/form/button) and some [iframe](https://developer.mozilla.org/fr/docs/Web/HTML/Element/iframe)
+
 [Click to see an example of what you can do](https://eager-albattani-482adb.netlify.app/) 👀  
-**For now, you will call the giphy API inside the project**
-#### Usefull links:
+**For now, you will call the giphy API inside the frontend of project**  
+  
+**Usefull links:**
 - [React State Hook](https://fr.reactjs.org/docs/hooks-state.html)
 - [React Effect Hook](https://fr.reactjs.org/docs/hooks-effect.html)
 - [Chakra UI](https://chakra-ui.com/)
-- [iframe](https://developer.mozilla.org/fr/docs/Web/HTML/Element/iframe)
 
 **If you've never learn react, live coding ! 🎥**
 
@@ -109,20 +112,20 @@ Please follow the steps in the [SETUP.md](./SETUP.md)
 
 ## Step 3 - Create your first serverless function
 #### Usefull link:
-- [Netlify Serverless Functions](https://docs.netlify.com/functions/overview/)
+- [Netlify Serverless Functions Configuration](https://docs.netlify.com/functions/configure-and-deploy/)
+- [Netlify Serverless Functions in Typescript](https://docs.netlify.com/functions/build-with-typescript/)
+- [How to run Netlify functions](https://www.netlify.com/products/dev/#how-it-works)
 
 Once you're done, just push your work on your default branch. Netlify will automatically detect changes and will deploy your application.
 **Amazing 🎆, isn't it ?**
 
 ## Step 4 - Create your first serverless API
-#### Follow these steps:
-- `serverless create -t aws-nodejs`
+**Follow these steps:**
+- 
 
 ## Bonus:
-- Create a frontend project using your serverless API.
-- Deploy your API with [scaleway](https://www.scaleway.com/en/docs/scaleway-elements-serverless-getting-started/)
-  Why scaleway ? Because they are 🇫🇷 !
-- Restart steps 1/2/3, with another API than Giphy.
+- Deploy your API with [aws](https://aws.amazon.com/fr/lambda/) (or better: with the [scaleway](https://www.scaleway.com/en/docs/scaleway-elements-serverless-getting-started/) 🇫🇷), and call it inside your serverless app !
+- Discover [Vercel], a Netlify competitor with our [workshop](https://github.com/PoCInnovation/Workshops/tree/feat/software-ws-serverless/software/14.Vercel)
 
 ## Author
 - [Adrien Fort](https://github.com/adrienfort)
