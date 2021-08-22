@@ -144,7 +144,7 @@ You never know what can happen with your application. Crashes happen all the tim
 
 Kubernetes already shields you against your app going offline. It will identify crashes and restart your app so it's always available. However, it's your job to make sure your data persists!
 
-In this final step, your job is to create a persistent storage for your database in case it crashes.
+In this final step, your job is to create a [persistent storage](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) for your database in case it crashes.
 
 You must:
 
