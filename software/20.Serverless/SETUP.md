@@ -57,6 +57,6 @@ To install `yarn`: `npm install --global yarn`
 - Take care of it, you will need it sooner !
 
 ## Serverless Framework
-- TODO
+- `yarn add --dev serverless-plugin-typescript typescript`
 
 [Go back to the exercise](./README.md)

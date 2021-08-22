@@ -116,7 +116,7 @@ Once you're done, just push your work on your default branch. Netlify will autom
 
 ## Step 4 - Create your first serverless API
 #### Follow these steps:
-- TODO
+- `serverless create -t aws-nodejs`
 
 ## Bonus:
 - Create a frontend project using your serverless API.
