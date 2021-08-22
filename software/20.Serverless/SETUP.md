@@ -44,6 +44,7 @@ To install `yarn`: `npm install --global yarn`
 - Take care of it, you will need it sooner !
 
 ## Serverless Framework
+**Not inside your github repository created above**
 - Install [serverless framework](https://www.serverless.com) with `npm install -g serverless`
 - Download the [files](./Serverless-API.zip)
 - Run `unzip Serverless-API.zip`
