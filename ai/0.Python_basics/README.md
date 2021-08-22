@@ -11,3 +11,5 @@ You can do the workshop with [Jupyter Notebook Online](https://jupyter.org/try) 
 ## Exercices
 
 The exercises can be found in the file [Workshop](./LearnPython.ipynb)
+
+Made by [Albert Valentin](https://github.com/OnsagerHe) and [David Gozlan](https://github.com/Davphla)
