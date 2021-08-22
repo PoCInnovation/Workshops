@@ -4,7 +4,7 @@ Welcome to this workshop about [Kubernetes](https://kubernetes.io/), the leading
 
 Most of this workshop will consist in putting together **YAML files** that define your Kubernetes resources. You can find many examples of those on the web.
 
-## Step 0: Setup
+## Step 0 - Setup
 
 To get started, please follow the installation steps listed in [this guide](./SETUP.md).
 
