@@ -19,6 +19,12 @@ plugins:
   - serverless-dotenv-plugin # Load .env as environment variables
   - serverless-plugin-typescript
 
+useDotenv: true
+
+custom:
+  bundle:
+    linting: true
+
 functions:
   hello:
     handler: handler.hello
