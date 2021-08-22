@@ -28,4 +28,3 @@ You can install `kubectl` using the following command.
 
 ```shell
 minikube kubectl -- get po -A
-```
