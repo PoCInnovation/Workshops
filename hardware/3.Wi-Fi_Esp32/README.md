@@ -22,9 +22,12 @@ Also configure your Arduino IDE for [ESP32](https://randomnerdtutorials.com/inst
 <details>
     <summary> 🛠️ Required Hardware:</summary>
 
-* ESP32 - USB cable - BreadBoard - Jumpers
-* LED
-* Resistor
+- ESP32
+- USB cable
+- BreadBoard
+- Jumpers
+- LED
+- Resistor
 
 </details>  
 
