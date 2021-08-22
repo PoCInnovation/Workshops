@@ -15,7 +15,7 @@ To install `yarn`: `npm install --global yarn`
 ## Github
 > You will need a github repository in order to use Netlify 📂
 - Create a Github repositoty (named: `Serverless-Gifs-App` for example) and clone it with `git clone [YOUR REPO SSH KEY]`
-- Download the [files](./Netlify-App)
+- Download the [files](./Netlify-App.zip)
 - Run `mv Netlify-App/* Netlify-App/.* [YOUR REPO NAME]`
 - Run `cd [YOUR REPO NAME]`
 - Run `yarn install` to install the dependencies
