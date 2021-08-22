@@ -39,10 +39,13 @@ Also configure your Arduino IDE for [ESP32](https://randomnerdtutorials.com/inst
 <details>
     <summary> 🛠️ Required Hardware:</summary>
 
-* ESP32 - USB cable - BreadBoard - Jumpers
-* LED
-* Button
-* Resistor
+- ESP32
+- USB cable 
+- BreadBoard
+- Jumpers
+- LED
+- Button
+- Resistor
 
 </details>
 
@@ -56,7 +59,8 @@ To do this, implement some code in your ESP32.
 <details>
     <summary> 🛠️ Required Hardware:</summary>
 
-* ESP32 - USB cable
+- ESP32
+- USB cable
 
 </details>
 
@@ -72,7 +76,8 @@ If you manage to connect to yours, go to the next step!
 <details>
     <summary> 🛠️ Required Hardware:</summary>
 
-* ESP32 - USB cable
+- ESP32
+- USB cable
 
 </details>
 
@@ -88,7 +93,8 @@ You should get `Hello World !`.
 <details>
     <summary> 🛠️ Required Hardware:</summary>
 
-* ESP32 - USB cable
+- ESP32 
+- USB cable
 
 </details>
 
@@ -103,7 +109,8 @@ If you see Connection and Disconnection in your monitor, you can go to the next 
 <details>
     <summary> 🛠️ Required Hardware:</summary>
 
-* ESP32 - USB cable
+- ESP32
+- USB cable
 
 </details>
 
@@ -121,10 +128,13 @@ Let's continue to the next step!
 <details>
     <summary> 🛠️ Required Hardware:</summary>
 
-* ESP32 - USB cable - BreadBoard - Jumpers
-* LED RGB
-* 3x Resistor
-* 3x Button
+- ESP32 
+- USB cable
+- BreadBoard
+- Jumpers
+- LED RGB
+- 3x Resistor
+- 3x Button
 
 </details>
 
@@ -141,9 +151,12 @@ Each button will define a color on your RGB LED:
 <details>
     <summary> 🛠️ Required Hardware:</summary>
 
-* ESP32 - USB cable - BreadBoard - Jumpers
-* LED RGB
-* 3x Resistor
+- ESP32
+- USB cable
+- BreadBoard
+- Jumpers
+- LED RGB
+- 3x Resistor
 
 </details>
 
