@@ -1,5 +1,11 @@
 # Workshop 17 - Introduction to Kubernetes
 
+:heavy_check_mark: Discover the DevOps universe
+
+:heavy_check_mark: Learn about basic Kubernetes concepts
+
+:heavy_check_mark: Deploy a web application
+
 Welcome to this workshop about [Kubernetes](https://kubernetes.io/), the leading container orchestration system! In 3 hours time you will learn to deploy a web application on Kubernetes and grow familiar with multiple Kubernetes concepts.
 
 Most of this workshop will consist in putting together **YAML files** that define your Kubernetes resources. You can find many examples of those on the web.
@@ -116,7 +122,7 @@ Weird! The server application is telling us it cannot connect to the Mongo datab
 
 That's because, for now, the `mongo-deployment` and the `server-deployment` are isolated from one another. They cannot comunicate.
 
-This is where [Kubernetes services](https://kubernetes.io/docs/concepts/services-networking/service/) come into play. A service allows Kubernetes object to expose themselves to other objects.
+This is where [Kubernetes services](https://kubernetes.io/docs/concepts/services-networking/service/) come into play. A service allows a Kubernetes object to expose itself to other objects.
 
 Your job is to create a service for the `mongo-deployment` so it's accessible by other objects.
 
@@ -138,7 +144,7 @@ You can inspect the `server-deployment`'s logs to make sure everything is okay.
 - [Connecting applications using services](https://kubernetes.io/docs/concepts/services-networking/connect-applications-service/)
 - [Kubernetes services](https://www.bmc.com/blogs/kubernetes-services/)
 
-## Step 4: Make it robust
+## Step 4 - Make it robust
 
 You never know what can happen with your application. Crashes happen all the time and as a developper you can't afford **downtime** or **data loss**.
 
@@ -154,8 +160,14 @@ You must:
 - Link the `PersistentVolumeClaim` to your `mongo-deployment`.
   - The mount path must be set to `/data/db`. *(This is where MongoDB stores its data)*.
 
+## Going further
+
+There's still a lot you can look into with Kubernetes. Feel free to experiment with other Kubernetes objects like [StatefulSets](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/).
+
+You can also play around with tools like [helm](https://helm.sh/), [rancher](https://rancher.com/), [kustomize](https://kustomize.io/) which will speed up your Kubernetes hacking.
 
 ## Authors
+
 - [Diego Rojas](https://github.com/rojasdiegopro/)
 
 ## Organization

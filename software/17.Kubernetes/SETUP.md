@@ -28,3 +28,7 @@ You can install `kubectl` using the following command.
 
 ```shell
 minikube kubectl -- get po -A
+```
+
+Or through this [guide](https://kubernetes.io/docs/tasks/tools/#kubectl)
+
