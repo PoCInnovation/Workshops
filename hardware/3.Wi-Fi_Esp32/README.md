@@ -17,7 +17,7 @@ You can follow steps to install [Arduino IDE](https://www.arduino.cc/en/guide/li
 
 Also configure your Arduino IDE for [ESP32](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/)
 
-## **Step 01** - Turn on an LED
+## **`Step 01`** - Turn on an LED
 
 <details>
     <summary> 🛠️ Required Hardware:</summary>
@@ -31,7 +31,7 @@ Also configure your Arduino IDE for [ESP32](https://randomnerdtutorials.com/inst
 **Instruction**: Your first objective is to light an LED with your ESP32 without code.
 >**Constraints**: You don't have to produce any code for this execise. You may not use the 3.3V pin of your board.
 
-## **Step 02** -  LED flash
+## **`Step 02`** -  LED flash
 
 <details>
     <summary> 🛠️ Required Hardware:</summary>
@@ -48,7 +48,7 @@ To do this, implement some code in your ESP32.
 
 **Instruction**: When you press the button, your LED will turn off or on.
 
-## **Step 03** - Connect to WI-FI
+## **`Step 03`** - Connect to WI-FI
 
 <details>
     <summary> 🛠️ Required Hardware:</summary>
@@ -64,7 +64,7 @@ Connecting to Wi-Fi is good but creating your own local network is better.
 To verify that your network is created, take your phone and look at the Wi-FI networks.
 If you manage to connect to yours, go to the next step!
 
-## **Step 04** - Create an HTML page
+## **`Step 04`** - Create an HTML page
 
 <details>
     <summary> 🛠️ Required Hardware:</summary>
@@ -80,7 +80,7 @@ Now that you have your local network, you will add some style to your page.
 If you open your web browser on your phone and write the IP address of your ESP32 followed by the port.
 You should get `Hello World !`.
 
-## **Step 05** - Define a client
+## **`Step 05`** - Define a client
 
 <details>
     <summary> 🛠️ Required Hardware:</summary>
@@ -95,7 +95,7 @@ Now it's time to know when a user joins your HTML page.
 
 If you see Connection and Disconnection in your monitor, you can go to the next step!
 
-## **Step 06** - Create Button
+## **`Step 06`** - Create Button
 
 <details>
     <summary> 🛠️ Required Hardware:</summary>
@@ -113,7 +113,7 @@ If the messages appear in your monitor when you click on the buttons you have su
 
 Let's continue to the next step!
 
-## **Step 07** - Set the colors of your LED RGB
+## **`Step 07`** - Set the colors of your LED RGB
 
 <details>
     <summary> 🛠️ Required Hardware:</summary>
@@ -133,7 +133,7 @@ Each button will define a color on your RGB LED:
 * Blue color :blue_square:
 * Purple color :purple_square:
 
-## **Step 08** - Change colors using your local server
+## **`Step 08`** - Change colors using your local server
 
 <details>
     <summary> 🛠️ Required Hardware:</summary>
