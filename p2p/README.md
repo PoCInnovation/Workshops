@@ -35,3 +35,9 @@ Through almost ten security challenges, you will learn:
 * The exploits of weak smart contracts
 * Using the RemixIDE and/or your JavaScript Console !
 
+### Workshop 5 - [Zero Knowledge Proof](./5.ZeroKnowledgeProof)
+Learn how to prove you have an information, without giving the information itself !
+
+* The basics of Zero Knowledge Proof
+* an application with zokrates library
+
