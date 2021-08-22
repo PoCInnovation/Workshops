@@ -59,7 +59,7 @@ docker run hello-world
 
 Congratulations on completing the first step!
 
-It's now time to define **deployments** for your web application. Deployments are like Pods but better! Deployments represent a group of one or multiple pods. When your app grows, deployments allow you to quickly **scale the number of pods**.
+It's now time to define [deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) for your web application. Deployments are like Pods but better! Deployments represent a group of one or multiple pods. When your app grows, deployments allow you to quickly **scale the number of pods**.
 
 The application you ought to deploy is split into two main parts: the **web server** (written in Golang) and the **database** (MongoDB). In this step you will have to create two deployments, one for each.
 
