@@ -157,3 +157,12 @@ You must:
 
 ## Authors
 - [Diego Rojas](https://github.com/rojasdiegopro/)
+
+## Organization
+
+- [📒 Linkedin](https://www.linkedin.com/company/pocinnovation/mycompany/)
+- [📷 Instagram](https://www.instagram.com/pocinnovation/)
+- [🖱️ Website](https://www.poc-innovation.fr/)
+- [🌐 Discord](https://discord.gg/Yqq2ADGDS7)
+
+Made with :heart: by PoC.
