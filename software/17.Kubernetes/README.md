@@ -1,6 +1,6 @@
 # Workshop 17 - Introduction to Kubernetes
 
-Welcome to this workshop about Kubernetes, the leading container orchestration system! In 3 hours time you will learn to deploy a web application on Kubernetes and grow familiar with multiple Kubernetes concepts.
+Welcome to this workshop about [Kubernetes](https://kubernetes.io/), the leading container orchestration system! In 3 hours time you will learn to deploy a web application on Kubernetes and grow familiar with multiple Kubernetes concepts.
 
 Most of this workshop will consist in putting together **YAML files** that define your Kubernetes resources. You can find many examples of those on the web.
 
