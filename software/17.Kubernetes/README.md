@@ -116,7 +116,7 @@ Weird! The server application is telling us it cannot connect to the Mongo datab
 
 That's because, for now, the `mongo-deployment` and the `server-deployment` are isolated from one another. They cannot comunicate.
 
-This is where **Kubernetes services** come into play. A service allows Kubernetes object to expose themselves to other objects.
+This is where [Kubernetes services](https://kubernetes.io/docs/concepts/services-networking/service/) come into play. A service allows Kubernetes object to expose themselves to other objects.
 
 Your job is to create a service for the `mongo-deployment` so it's accessible by other objects.
 
