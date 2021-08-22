@@ -1,4 +1,4 @@
-# Workshop 20 - SETUP
+# Workshop 22 - SETUP
 
 ## Dependencies
 Please make sure you have the following programs installed:
@@ -13,26 +13,13 @@ To install `node` and `npm`:
 To install `yarn`: `npm install --global yarn`
 
 ## Github
-> Lets create your app repository and get the base 🤲
-- Create a Github repositoty (named: `Serverless-Gifs-App` for example) and clone it  
-> `git clone [YOUR REPO SSH KEY]`
-
--- cette section va changer (.zip du code source)  
-- Download the [source code](https://downgit.github.io/#/home?url=https://github.com/adrienfort/Workshop-Serverless/tree/master/Netlify-App) À CHANGER
-- Unzip the file and move what's inside into your repository (don't forget the files starting by a `.`)
-> `unzip À REMPLIR`
-
--- fin section  
-  <details>
-    <summary>You should have this :</summary>
-  
-   ![Netlify Setup Files](.github/assets/setupFiles.png)
-
-  </details>
-
-> Now we gonna verify that the app is working 👍
-
+> You will need a github repository in order to use Netlify 📂
+- Create a Github repositoty (named: `Serverless-Gifs-App` for example) and clone it with `git clone [YOUR REPO SSH KEY]`
+- Download the [files](./Netlify-App)
+- Run `mv Netlify-App/* Netlify-App/.* [YOUR REPO NAME]`
+- Run `cd [YOUR REPO NAME]`
 - Run `yarn install` to install the dependencies
+> Now we gonna verify that the app is working 👍
 - Run `yarn start` to start the server
 - In your favorite browser, go to `http://localhost:3000`
   <details>
@@ -57,6 +44,13 @@ To install `yarn`: `npm install --global yarn`
 - Take care of it, you will need it sooner !
 
 ## Serverless Framework
-- Install serverless framework with `npm install -g serverless`
+- Install [serverless framework](https://www.serverless.com) with `npm install -g serverless`
+- Download the [files](./Serverless-API.zip)
+- Run `unzip Serverless-API.zip`
+- Run `cd Serverless-API`
+- Run `run yarn install` to install the dependencies
+> Now we gonna verify that the api is working 👍
+- Run `yarn test` to verify that everythin works
+- You should the get all the tests successfull (in green)
 
 [Go back to the exercise](./README.md)
