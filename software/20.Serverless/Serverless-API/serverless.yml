@@ -25,9 +25,15 @@ custom:
     linting: true
 
 functions:
-  hello:
-    handler: handler.hello
+  setup:
+    handler: setup.status
     events:
       - http:
-          path: hello
+          path: setup
+          method: get
+  fetchGiphy:
+    handler: fetchGiphy.main
+    events:
+      - http:
+          path: fetchGiphy
           method: get

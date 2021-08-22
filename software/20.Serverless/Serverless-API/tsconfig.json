@@ -19,7 +19,6 @@
     "noEmit": true,
   },
   "include": [
-    "handler.ts",
-    "tests",
+    ".",
   ]
 }
