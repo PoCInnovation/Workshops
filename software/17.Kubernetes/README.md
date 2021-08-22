@@ -91,7 +91,7 @@ kubectl get all
 - `kubectl explain deployment.*`
 - [Deployment documentation](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
 
-## Step 3: At your service
+## Step 3 - At your service
 
 You might have noticed, that when you run `kubectl get all`, the pod associated to the `server-deployment` is in a state of `CrashLoopBackOff` and is said to have restarted multiple times.
 
