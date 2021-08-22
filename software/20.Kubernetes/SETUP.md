@@ -1,4 +1,4 @@
-# Workshop 17 - Introduction to Kubernetes Setup Guide
+# Workshop 20 - Introduction to Kubernetes Setup Guide
 
 This guide contains all the necessary steps to install **Kubernetes** on your machine.
 
@@ -14,7 +14,7 @@ docker run hello-world
 
 ## Installing `Minikube`
 
-You can install `Minikube` using the [official guide](https://minikube.sigs.k8s.io/docs/start/) through binary download. 
+You can install `Minikube` using the [official guide](https://minikube.sigs.k8s.io/docs/start/) through binary download.
 
 If your installation was successful, you should be able to start a cluster using the following command.
 

@@ -1,4 +1,4 @@
-# Workshop 17 - Introduction to Kubernetes
+# Workshop 20 - Introduction to Kubernetes
 
 :heavy_check_mark: Discover the DevOps universe
 
