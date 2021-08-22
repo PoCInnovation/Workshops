@@ -133,7 +133,7 @@ Once you're done, just push your work on your default branch. Netlify will autom
 - `yarn test` to run tests
 
 ## Bonus:
-- Deploy your API with [aws](https://aws.amazon.com/fr/lambda/) (or better: with the [scaleway](https://www.scaleway.com/en/docs/scaleway-elements-serverless-getting-started/) 🇫🇷), and call it inside your serverless app !
+- Deploy your API with [aws](https://aws.amazon.com/fr/lambda/) (or better: with [scaleway](https://www.scaleway.com/en/docs/scaleway-elements-serverless-getting-started/) 🇫🇷), and call it inside your serverless app !
 - Discover [Vercel](https://vercel.com), a Netlify competitor with our [workshop](https://github.com/PoCInnovation/Workshops/tree/feat/software-ws-serverless/software/14.Vercel)
 
 ## Author
