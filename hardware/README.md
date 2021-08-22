@@ -21,7 +21,7 @@ Creation of your first circuits:
 - Interact with microcontrollers
 - Have an overwiew of electronics
 
-## 3 - Initiation WI-FI ESP32
+## 3 - [Initiation WI-FI ESP32](./3.Wi-Fi_Esp32/README.md)
 Creation of your own local network:
 - Learn how works WI-FI and local network
 - Interact with microcontrollers
