@@ -55,11 +55,13 @@ Please follow the steps in the [SETUP.md](./SETUP.md)
 - [React State Hook](https://fr.reactjs.org/docs/hooks-state.html)
 - [React Effect Hook](https://fr.reactjs.org/docs/hooks-effect.html)
 - [Chakra UI](https://chakra-ui.com/)
+- [Giphy API documentation](https://developers.giphy.com/explorer#explorer)
+  > We advise you to search with a limit of 9 records to return
 
 **If you've never learn react, live coding ! 🎥**
 
 ## Step 2 - Deploy your app
-#### Follow these steps:
+**Follow these steps:**
 - Commit and push your work
 
 > Then you will deploy your application on Netlify
@@ -111,7 +113,7 @@ Please follow the steps in the [SETUP.md](./SETUP.md)
 **Your application is now working on production !! 🔥🔥 You can share it 😎**  
 
 ## Step 3 - Create your first serverless function
-#### Usefull link:
+**Usefull link:**
 - [Netlify Serverless Functions Configuration](https://docs.netlify.com/functions/configure-and-deploy/)
 - [Netlify Serverless Functions in Typescript](https://docs.netlify.com/functions/build-with-typescript/)
 - [How to run Netlify functions](https://www.netlify.com/products/dev/#how-it-works)
@@ -120,12 +122,19 @@ Once you're done, just push your work on your default branch. Netlify will autom
 **Amazing 🎆, isn't it ?**
 
 ## Step 4 - Create your first serverless API
-**Follow these steps:**
-- 
+- Go to your Serverless API folder
+- Create a file named `fetchGiphy.ts` in wich you will implement the function to fetch the Giphy API. You can have a look to the file `setup.ts` to learn how to do it
+- Update the file `serverless.yml` in order to call your new function. See the [documentation](https://www.serverless.com/framework/docs/providers/aws/guide/events/)
+- Create a file `fetchGiphy.test.ts` inside `tests` folder and implement some code to test your new function. You can have a look to the file `tests/setup.test.ts`, or read the [jest documentation](https://jestjs.io/docs/using-matchers) to learn how to do it
+
+**Usefull commands**
+- `serverless invoke local -f [YOUR FUNCTION NAME - example: setup]` to call a serverless function
+- `serverless invoke local -f [YOUR FUNCTION NAME] --data '{ "queryStringParameters": {"input":"kaamelott"}}'` to call a serverless function with query parameters
+- `yarn test` to run tests
 
 ## Bonus:
 - Deploy your API with [aws](https://aws.amazon.com/fr/lambda/) (or better: with the [scaleway](https://www.scaleway.com/en/docs/scaleway-elements-serverless-getting-started/) 🇫🇷), and call it inside your serverless app !
-- Discover [Vercel], a Netlify competitor with our [workshop](https://github.com/PoCInnovation/Workshops/tree/feat/software-ws-serverless/software/14.Vercel)
+- Discover [Vercel](https://vercel.com), a Netlify competitor with our [workshop](https://github.com/PoCInnovation/Workshops/tree/feat/software-ws-serverless/software/14.Vercel)
 
 ## Author
 - [Adrien Fort](https://github.com/adrienfort)
