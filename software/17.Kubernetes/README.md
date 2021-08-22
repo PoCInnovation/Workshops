@@ -55,7 +55,7 @@ docker run hello-world
 - [Pod documentation](https://kubernetes.io/docs/concepts/workloads/pods/)
 - [Managing resources](https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/)
 
-## Step 2: Deployments?
+## Step 2 - Deployments?
 
 Congratulations on completing the first step!
 
