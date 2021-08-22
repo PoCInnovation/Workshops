@@ -12,7 +12,7 @@ To get started, please follow the installation steps listed in [this guide](./SE
 
 ## Step 1: Hello Pods
 
-Your web application is going to have to run somewhere. Pods are the perfect place!
+Your web application is going to have to run somewhere. [Pods](https://kubernetes.io/fr/docs/concepts/workloads/pods/) are the perfect place!
 
 A Pod is a type of Kubernetes resource which runs multiple containers *(Yes, like Docker containers!)*.
 
