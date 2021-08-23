@@ -75,8 +75,7 @@ If you open and close your browser page you must have the message on your termin
 
 You have established connection !
 
-It's time to implement a function to send messages from your frontend
-that will be received on your server.
+It's time to implement a function to send messages from your frontend to your backend.
 
 Now, go to the file `src/front/chat.ts` and complete the Class `Chat`:
 * Create a function `emit_data` with for parameter a string.
