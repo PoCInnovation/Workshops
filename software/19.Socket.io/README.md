@@ -9,7 +9,14 @@ You will : <br/>
 
 ## Story
 
-![Data scheme](../../.github/assets/software/Socket.IO/Untitled-2021-08-23-0042.png)
+The schem bellow shows an online chat:<br/>
+![Data scheme](../../.github/assets/software/Socket.IO/Untitled-2021-08-23-0042.png) <br/>
+**Explanation**
+Each client represents an HTML page.<br/>
+As soon as a client sends a message, it is transmitted as a socket to the backend.<br/>
+The backend sends retrieves the socket and sends it to all clients as a socket.<br/>
+The content of the message is then transferred to the HTML page of all clients.<br/>
+Nous afficherons ensuite le message sur notre frontend.<br/>
 
 - [What's a socket ?](https://socket.io/docs/v4/index.html)
 
