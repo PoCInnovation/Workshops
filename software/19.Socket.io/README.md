@@ -39,7 +39,7 @@ In the file `src/router/router.ts`
 
 If your reload your browser page, you must see input and button `Send`.
 
-#### Resources :
+#### Resources
 - [Set path](https://www.codegrepper.com/code-examples/html/express+sendFile)
 
 ## Step 02 - Create Socket Server
