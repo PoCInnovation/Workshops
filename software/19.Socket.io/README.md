@@ -45,7 +45,7 @@ If your reload your browser page, you must see input and button `Send`.
 ## Step 02 - Create Socket Server
 
 First, you can find an  [express](https://expressjs.com/fr/) server in `src/index.ts`.
-You need to change this file to allow express and socket.io to use it at the same time.
+You need to change this file to both use express and socket.io.
 That will allow you to issue and receive data on your server.
 
 For your first step create many variables:
