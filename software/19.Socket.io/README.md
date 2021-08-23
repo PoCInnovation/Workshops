@@ -138,25 +138,24 @@ Now, if you submit message and look your console browser you must see your messa
 
 ## Step 07 - Print Data in your Browser Html Page
 
-Now we will create a function in our `Chat` class to add the content of our input to our div.
+Now we will create a new method in our `Chat` class to add the content of our input into our div.
 This will allow us to see the messages directly in our HTML page.
 
-For this, we will create a function `append_data` on your class Chat.
-First step, create const variable:
-* html_page: get element by id of your `div`, the name of this id is `messages'.
+To do this, we will create a method `append_data` in our class `Chat`.
+First, create a constant variable:
+- `html_page`: get element by his id of you `div`, his id should be is `messages'.
 
-Your second step is in your function `append_data`:
-* Create variable `add_element` like element  `div`.
-* The attribute the value of this variable to the message of your parameter.
-* Append this variable on your variable `html_page`.
+Second, in your method `append_data`:
+- Create a variable `add_element` that should create an element `div`.
+- Display the message gave as parameter in this new div.
+- Append the `div` to your variable `html_page`.
 
-Finally, call this function in the function `emit_data`.
+Finally, call this method in the `emit_data`.
 
-If you send a message, you must see in your HTML page !!!!!
+If you send a message, you should see it in your HTML page !!!
 Congratulation !
 
-#### Resources :
-
+#### Resources
 - [Release a socket](https://socket.io/docs/v3/emit-cheatsheet/index.html)
 - [Request HTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector)
 - [Socket Client](https://socket.io/docs/v4/client-socket-instance/)
