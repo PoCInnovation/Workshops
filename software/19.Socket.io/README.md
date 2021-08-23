@@ -75,13 +75,13 @@ If you open and close your browser page you must have the message on your termin
 
 You have established connection !
 
-It's time to implement a function to send messages from your frontend to your backend.
+It's time to implement a method to send messages from your frontend to your backend.
 
 Now, complete the Class `Chat` in `src/front/chat.ts`  :
-- Create a function `emit_data` with a `message` of type `string` as parameter.
+- Create a method `emit_data` with a `message` of type `string` as parameter.
 - Emit socket with your event named `data` and your `message`.
 - In `index.ts` you must receive the information from the `data` event log the `message`.
-- Call your `emit function` in `chat.ts` with `Hello World !` as message.
+- Call your `emit method` in `chat.ts` with `Hello World !` as message.
 
 > :bulb: Take your time to read the documentation.
 
