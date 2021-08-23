@@ -9,7 +9,7 @@ You will : <br/>
 
 ## Story
 
-![Data scheme](../../.github/assets/software/Socket.IO/)
+![Data scheme](../../.github/assets/software/Socket.IO/Untitled-2021-08-23-0042.png)
 
 - [What's a socket ?](https://socket.io/docs/v4/index.html)
 
