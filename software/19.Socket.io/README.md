@@ -7,6 +7,10 @@ You will : <br/>
 :heavy_check_mark: Understand sockets<br/>
 :heavy_check_mark: Understand how transmits data<br/>
 
+## Story
+
+![Data scheme](../../.github/assets/software/Socket.IO/)
+
 - [What's a socket ?](https://socket.io/docs/v4/index.html)
 
 ## Step 0 - Setup
