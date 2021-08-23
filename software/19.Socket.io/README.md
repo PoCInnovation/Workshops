@@ -2,10 +2,10 @@
 
 ### Learn Socket.IO by implementing your own online chat.
 You will :
-- Learn Typescript fundamental
-- Work with socket and http servers
-- Understand sockets
-- Understand how transmits data
+:heavy_check_mark: Learn Typescript fundamental
+:heavy_check_mark: Work with socket and http servers
+:heavy_check_mark: Understand sockets
+:heavy_check_mark: Understand how transmits data
 
 - [What's a socket ?](https://socket.io/docs/v4/index.html)
 
