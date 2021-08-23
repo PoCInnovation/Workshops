@@ -77,12 +77,13 @@ You have established connection !
 
 It's time to implement a function to send messages from your frontend to your backend.
 
-Now, go to the file `src/front/chat.ts` and complete the Class `Chat`:
-* Create a function `emit_data` with for parameter a string.
-* Emit socket with parameter `data` and your message.
-* In your index.ts you must get information with your event `data' and the message.
-* Tips: read the resource `Server Socket` and how receive your socket after emit it.
-* Call your function in the `chat.ts` set `Hello World !` in the parameter.
+Now, complete the Class `Chat` in `src/front/chat.ts`  :
+- Create a function `emit_data` with a `message` of type `string` as parameter.
+- Emit socket with your event named `data` and your `message`.
+- In `index.ts` you must receive the information from the `data` event log the `message`.
+- Call your `emit function` in `chat.ts` with `Hello World !` as message.
+
+> :bulb: Take your time to read the documentation.
 
 In your terminal you should have to display your `Hello World !`.
 
