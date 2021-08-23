@@ -1,7 +1,5 @@
 # Workshop 19 - Chat with Socket.IO
 
-### Learn Socket.IO by implementing your own online chat.
-You will : <br/>
 :heavy_check_mark: Learn Typescript fundamental<br/>
 :heavy_check_mark: Work with socket and http servers<br/>
 :heavy_check_mark: Understand sockets<br/>
@@ -16,7 +14,7 @@ Each client represents an HTML page.<br/>
 As soon as a client sends a message, it is transmitted as a socket to the backend.<br/>
 The backend retrieves the socket and sends it to all clients as a socket.<br/>
 The content of the message is then displayed on the HTML page of all clients.<br/>
-Nous afficherons ensuite le message sur notre frontend.<br/>
+We will then display the message on our frontend.<br/>
 
 - [What's a socket ?](https://socket.io/docs/v4/index.html)
 
