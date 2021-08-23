@@ -2,16 +2,16 @@
 
 ## Tools
 
-FOr this workshop, you need to install these tools : 
+For this workshop, you need to install these tools : 
 - [VSCode](https://code.visualstudio.com/) or [WebStorm](https://www.jetbrains.com/fr-fr/webstorm/) on your computer
 - [NodeJS](https://nodejs.org/en/) >= 10 ([installation](https://lmgtfy.com/?q=how+to+install+nodejs))
 - [npm](https://www.npmjs.com/) (Generally installed with NodeJS)
 
 ## Preparation
 
-Download the  [sources](./source.zip) in the root of the repository to have a base to start from.
+Download the [sources](./source.zip) in the root of the repository to have a base to start from.
 
-Sources are composed with the following files:
+Sources are composed of the following files:
 
 ```shell
 $ tree -a
@@ -37,19 +37,24 @@ You just have to follow these steps:
 ```shell 
 # Create a new directory
 mkdir -p poc-workshop-Socket-Io
+
 # Move to that directory
 cd poc-workshop-Socket-Io 
+
 # Move source zip in the directory
 mv -t . ~/Downloads/source.zip
+
 # Extract source
 unzip source.zip
+
 # Remove old zip
 rm source.zip
+
 # Install dependencies
 npm install
+
 # Launch project
 run npm dev
-
 You should get the following output:
 ```sh
 [1] [nodemon] restarting due to changes...
@@ -63,8 +68,6 @@ you should see this on the screen :
 ```
 Hello World !
 ```
-The server launch and don't need to be launch again with nodemon.
-The script in your package.json allow to take account of modifications
-of your code to launch the server by itself.
-
+The server runs and doesn't need to be run again with `nodemon`.
+The script in your `package.json` reload it for you after each modification.
 [Go back to exercises](./README.md).

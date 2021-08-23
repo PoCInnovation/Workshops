@@ -60,7 +60,7 @@ Then, we will add the `socket server` to our `express`:
 > :bulb: Your server must listen to port `8080`
 
 If you don't have any errors in your terminal, and you have your browser on your HTML page, let's go to the next step!
-#### Resources :
+#### Resources
 - [Variable Typescript](https://www.typescriptlang.org/docs/handbook/variable-declarations.html)
 - [Server Socket.IO](https://socket.io/get-started/chat)
 - [Link HTML](https://www.techiediaries.com/express-sendfile-serve-static-files/)
@@ -68,17 +68,17 @@ If you don't have any errors in your terminal, and you have your browser on your
 
 ## Step 03 - Set Connection
 
-To every connection of a user, we will send a message to our shell with the help of console.log().
+On every user's connection, we will [log a message in our shell](https://developer.mozilla.org/fr/docs/Web/API/Console/log).
 
-* Create an event `connection` with socket like parameters.
-* Inside you must print `New User`.
-* Uncomment this line `express_server.app.use(express.static(path.join(__dirname, 'front'));`
-to listen the file chat.ts and connect front and backend.
-Like that you can emit and receive socket between them.
+- Create an event `connection` with `socket` as parameter.
+- Inside you must log `[INFO] New user connected`.
+- Uncomment the line `express_server.app.use(express.static(path.join(__dirname, 'front'));`
+to connect frontend to backend.<br/>
+This way you can emit and receive sockets between them.
 
-If you open and close your browser page you must have the message on your terminal.
+[If you open and close your browser page](http://localhost:8080/) you should see logs on your terminal.
 
-#### Resources :
+#### Resources
 - [Introduction Socket.IO](https://socket.io/docs/v4/index.html)
 - [Socket.IO](https://socket.io/)
 
@@ -96,12 +96,13 @@ Now, complete the Class `Chat` in `src/front/chat.ts`  :
 
 > :bulb: Take your time to read the documentation.
 
-In your terminal you should have to display your `Hello World !`.
+In your terminal you should see `Hello World !` logged.
 
-#### Resources :
-- [Class](https://www.typescriptlang.org/docs/handbook/2/classes.html)
-- [Base Print](https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html)
+#### Resources
+- [Typescript Class](https://www.typescriptlang.org/docs/handbook/2/classes.html)
+- [Log message](https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html)
 - [Emit Socket](https://socket.io/docs/v3/emit-cheatsheet/index.html)
+- [Socket Server](https://k6.io/docs/javascript-api/k6-ws/socket/socket-on-event-callback/)
 
 ## Step 05 - Get Browser Data
 
@@ -115,36 +116,37 @@ It's time to get information from your input.
 ##### Retrieve html input components
 
 In `chat.ts`, you will create two constants variables:
-* form_data: get element form by id on your html page.
-* input_data: get element input by id on your html page.
+- `form_data`: get element `form` by his id on your html page.
+- `input_data`: get element `input` by his id on your html page.
 
-Second step:
-* Listen to the event submit button.
-* Create a `message` variable that gets the data from your input.
-* Print content message with console.log().
-* Call emit_data to sent `message`.
-* Established input in Null.
-* Tips: to get value of your data_input cast your variable with `HTMLInputElement`.
+##### Send message
+- Make your button listen to the event `submit` .
+- Create a `message` variable to store the data from your input.
+- Log the content.
+- Call `emit_data` to send the `message`.
+- Update input's value to an empty string.
 
-Go to your console on your shell and watch if you receive the message when you
-click on the button `Send`.
+> :bulb: To get value from `data_input`, cast your variable to `HTMLInputElement`.
+>
+> :warning: It's necessary to always update the input value with an empty string to doesn't keep the previous value. 
 
-#### Resources :
+You should see the message logged in your terminal after you have clicked the button `Send`
+
+#### Resources
 - [Socket listener](https://socket.io/docs/v4/index.html)
 - [Cast Variable](https://www.typescripttutorial.net/typescript-tutorial/type-casting/)
 
 ## Step 06 - Print Data in Your Browser Console
 
-Having our message on your shell is great but receive your message in your browser console is better.
+See our message on our shell is cool but see our message in our browser's console is better.
 
-In your server `index.ts` changed the sending of sockets.
-Make sure that everyone can receive the message.
+In your backend, change the way of sockets' sending to send the received message to **everyone**.
 
-* Change your socket.emit of your file `index.ts`for send socket to all clients in the current namespace except the sender.
+- Change your `socket.emit` in `index.ts` to send `socket` to all clients in the current namespace __except to the sender__.
 
-Now, if you submit message and look your console browser you must see your message.
+Now, if you submit a message and look to the browser's console: you should see your message.
 
-#### Resources :
+#### Resources
 - [Socket Client](https://socket.io/docs/v4/client-socket-instance/)
 - [Type of emit Socket](https://socket.io/docs/v3/emit-cheatsheet/index.html)
 
@@ -172,15 +174,15 @@ Congratulation !
 - [Request HTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector)
 - [Socket Client](https://socket.io/docs/v4/client-socket-instance/)
 
-## Step 08 - Set username
+## Step 08 - Get username
 
 We will now retrieve the name of each user when they connect.
 
-we will:
-* Create a `my_name` variable that retrieves a user's name through a prompt that says `What is your name?`.
-* Just bellow, print `New user + name` with username, when a user connects to the page.
+You will need to:
+- Create a variable `my_name` that retrieves the username through a [prompt](https://wprock.fr/blog/javascript-boites-dialogue-alert-confirm-prompt/) that says `What is your name?`.
+- Just bellow, display `New user + name` with the username, when a user connects to the page.
 
-#### Resources :
+#### Resources
 [Set Name Variable](https://www.dummies.com/web-design-development/javascript/how-to-prompt-the-user-for-input-in-javascript/)
 
 ## Step 09 - Set Username
@@ -219,12 +221,12 @@ Congratulation you have an online chat !
 ## Bonus
 
 * Set connection and disconnect.
-* Create rooms that allow you to send a message to every user that are in the same room as you.
-* Amelioration of your Front with React.
+* Create rooms that allow you to send a message to every user that is in the same room.
+* Improve your fronted with React.
 * Authentication of the user with socket.
-* Add a database to stock the message et refresh when there is a connexion.
+* Add a database to store messages and refresh when there is a connection.
 
-#### Resources :
+#### Resources
 - [React](https://reactjs.org/)
 - [Room Socket](https://socket.io/docs/v3/rooms/index.html)
 - [Authentication Socket](https://socket.io/docs/v3/middlewares/)

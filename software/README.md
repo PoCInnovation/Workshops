@@ -159,12 +159,12 @@ You will :
 
 ##  19 - [Create Chat multi-client with Socket.IO](./1.Socket.io)
 
-Learn Socket.IO with implementation of your own chat online.
+Learn Socket.IO by implementing your own online chat.
 You will :
-- learn basics of Typescript
-- understand API
-- Understand the sockets
-- Understand how transmission data works
+- Learn Typescript fundamental
+- Work with socket and http servers
+- Understand sockets
+- Understand how transmits data
 
 
 ## Organization
