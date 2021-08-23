@@ -1,6 +1,7 @@
 # Workshop 22 - SETUP
 
 ## Dependencies
+
 Please make sure you have the following programs installed:
 - [node (version 14 or higher)](https://github.com/nodejs/node): javascript interpreter
 - [npm](https://www.npmjs.com/): node package manager
@@ -13,15 +14,22 @@ To install `node` and `npm`:
 To install `yarn`: `npm install --global yarn`
 
 ## Github
-> You will need a github repository in order to use Netlify 📂
-- Create a Github repositoty (named: `Serverless-Gifs-App` for example) and clone it with `git clone [YOUR REPO SSH KEY]`
+
+> You will need a Github repository to use Netlify 📂
+- Create a Github repository (named: `Serverless-Gifs-App` for example) and clone it with `git clone`
 - Download the [files](./Netlify-App.zip)
-- Run `mv Netlify-App/* Netlify-App/.* [YOUR REPO NAME]`
-- Run `cd [YOUR REPO NAME]`
-- Run `yarn install` to install the dependencies
-> Now we gonna verify that the app is working 👍
-- Run `yarn start` to start the server
-- In your favorite browser, go to `http://localhost:3000`
+- Run the following commands :
+```shell
+mv Netlify-App/* Netlify-App/.* [YOUR REPO NAME]
+cd [YOUR REPO NAME]
+
+# Install the dependencies
+yarn install
+
+# To start a server
+yarn start
+```
+- To check if everything is good, go to [http://localhost:3000](http://localhost:3000)
   <details>
     <summary>You should see :</summary>
   
@@ -34,9 +42,11 @@ To install `yarn`: `npm install --global yarn`
 - Commit and push
 
 ## Netlify
+
 - Go to [Netlify website](https://www.netlify.com/) and create an account (signup using github) if you haven't already one
 
 ## Giphy
+
 - Go to [Giphy website](https://developers.giphy.com/docs/sdk/)
 - Click the `Create an App` button
 - Create an account
@@ -44,14 +54,21 @@ To install `yarn`: `npm install --global yarn`
 - Take care of it, you will need it sooner !
 
 ## Serverless Framework
+
 **Not inside your github repository created above**
 - Install [serverless framework](https://www.serverless.com) with `npm install -g serverless`
 - Download the [files](./Serverless-API.zip)
-- Run `unzip Serverless-API.zip`
-- Run `cd Serverless-API`
-- Run `run yarn install` to install the dependencies
-> Now we gonna verify that the api is working 👍
-- Run `yarn test` to verify that everythin works
-- You should the get all the tests successfull (in green)
+- Run the following commands :
+```shell
+unzip Serverless-API.zip
+cd Serverless-API
+
+# Install the dependencies
+yarn install
+
+# Now we gonna verify that the api is working
+yarn test
+# You should the get all the tests successfull (in green)
+```
 
 [Go back to the exercise](./README.md)
