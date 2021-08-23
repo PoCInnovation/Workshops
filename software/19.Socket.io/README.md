@@ -157,7 +157,7 @@ This will allow us to see the messages directly in our HTML page.
 
 To do this, we will create a method `append_data` in our class `Chat`.
 First, create a constant variable:
-- `html_page`: get element by his id of you `div`, his id should be is `messages'.
+- `html_page`: get element by his id of you `div`, his id should be is `messages`.
 
 Second, in your method `append_data`:
 - Create a variable `add_element` that should create an element `div`.
