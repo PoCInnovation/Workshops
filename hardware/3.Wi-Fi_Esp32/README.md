@@ -66,7 +66,7 @@ To do this, implement some code in your ESP32.
 
 Connecting to Wi-Fi is good but creating your own local network is better.
 
-> * Create your local network and set `Wi-Fi ESP32 - [Initial]` as the network name.
+> * Create your local network and set `Wi-Fi ESP32 - [YourName]` as the network name.
 
 To verify that your network is created, take your phone and look at the Wi-FI networks.
 If you manage to connect to yours, go to the next step!
