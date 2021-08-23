@@ -195,17 +195,18 @@ When you log in, you have `New User` + my_name.
 
 #### Resources :
 
-## Step - Manage Message
+## Step 10 - Manage Message
 
-The final touch is to add the name of each user before the message sent.
+The final touch is to add the name of each user before the message is sent.
 
-In your chat.ts add the name of your client before the message.
-* Change the value of your display when you add the content of your input to your div.
-Example: `name: message`.
+In `chat.ts`, add the name of the client before the message.
+- Change the value of the display when you add the content of the input into your div.
 
-If you send messages on your HTML page you must have the user's name before the message.
+:bulb: **Example**: `name: message`.
 
-Congratulation you have a chat online !
+If you send messages on your HTML page you should see the username before the message.
+
+Congratulation you have an online chat !
 
 ## Bonus
 
