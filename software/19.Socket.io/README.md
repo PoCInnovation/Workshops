@@ -174,27 +174,23 @@ we will:
 
 ## Step 09 - Set Username
 
-We are going to emit a socket that defines when a user connects with as parameter his name.
-This event will be sent to our server which in turn will send a socket to our frontend to ask
-it to display a connection message.
+We are going to emit a socket triggered when a user connects with his name as parameter.<br>
+This event will be sent to our server which will send back a socket to our frontend to display a connection message.
 
-In chat.ts, we will:
-* Create event `new_user` with `my_name` like parameter in chat.ts to prevent the arrival
-of a new user to the server.
-* Create listen socket `user_connect` with string like parameter.
-* Inside, call `emit_data` with string `Connect + name`.
+In `chat.ts`, we will:
+- Create an event `new_user` with `my_name` as parameter.
+- Create a listening socket named `user_connect` with a `string` as a parameter.
+- Inside the socket, call `emit_data` with the string `Connect + name` where `name` is the parameter.
 
-In the index.ts we will:`
-* Create listen socket `new_user` with string like parameter.
-* Inside, print in your terminal `New user + name`.
-* emit socket to all user with `user-connect` as event and name as parameter.
+In the `index.ts` we will:
+- Create a listening socket named `new_user` with a `string` as a parameter.
+- Inside it, display in your terminal `New user + name` where `name` is the parameter.
+- emit socket to all users with an `user-connect` event and `name` as parameters.
 
-In your chat.ts add the name of your client before the message.
-You must change the print value of when you add your div.
+In `chat.ts`, add the name of your client before the message.
+You must change the value of the print when you add a div.
 
-When you log in, you have `New User` + my_name.
-
-#### Resources :
+When you log in, you should see `New User + your_name`.
 
 ## Step 10 - Manage Message
 
