@@ -1,11 +1,11 @@
 # Workshop 19 - Chat with Socket.IO
 
 ### Learn Socket.IO by implementing your own online chat.
-You will :
-:heavy_check_mark: Learn Typescript fundamental
-:heavy_check_mark: Work with socket and http servers
-:heavy_check_mark: Understand sockets
-:heavy_check_mark: Understand how transmits data
+You will : <br/>
+:heavy_check_mark: Learn Typescript fundamental<br/>
+:heavy_check_mark: Work with socket and http servers<br/>
+:heavy_check_mark: Understand sockets<br/>
+:heavy_check_mark: Understand how transmits data<br/>
 
 - [What's a socket ?](https://socket.io/docs/v4/index.html)
 
