@@ -93,14 +93,16 @@ In your terminal you should have to display your `Hello World !`.
 
 ## Step 05 - Get Browser Data
 
-Now that we will get the data, we will send it from our server in index.ts.
+Now that we retrieved the data, we will send it from our server to our fronted.
 
-The objective of this step is to know when the user presses the button on your html page.
-At this point you will add the content of the input into your terminal.
+The objective of this step is to know when the user presses the button on the html page.
+At this point you will log the content of the input into your terminal.
 
-It is time to get information on your input.
+It's time to get information from your input.
 
-First step: create two const variable:
+##### Retrieve html input components
+
+In `chat.ts`, you will create two constants variables:
 * form_data: get element form by id on your html page.
 * input_data: get element input by id on your html page.
 
