@@ -57,6 +57,7 @@ docker run hello-world
 **Resources**
 
 - `kubectl explain pod.*`
+- [Kubernetes cheat sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 - [Understanding Kubernetes objects](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/)
 - [Pod documentation](https://kubernetes.io/docs/concepts/workloads/pods/)
 - [Managing resources](https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/)
