@@ -1,6 +1,6 @@
 # Workshop 20 - Introduction to Kubernetes
 
-:heavy_check_mark: Discover the DevOps universe
+:heavy_check_mark: Discover the Dev Ops universe
 
 :heavy_check_mark: Learn about basic Kubernetes concepts
 
@@ -36,7 +36,7 @@ For example, `kubectl explain pod` will help you figure out the syntax for defin
 
 > :bulb: Check out the links in the **Resources** section for guidance.
 
-If you have completed this step successfuly, you should be able to see your Pod when running the following command.
+If you have completed this step successfully, you should be able to see your Pod when running the following command.
 
 ```
 kubectl get pods
@@ -135,6 +135,8 @@ The service for the `mongo-deployment` must:
 
 Once it's done, apply all your changes and run `kubectl get all`. Your deployments should be running without any errors.
 
+> :bulb: Make sure to restart any deployment or resource that might be affected by the changes you made.
+
 You can inspect the `server-deployment`'s logs to make sure everything is okay.
 
 **Resources**
@@ -159,6 +161,62 @@ You must:
   - Have a storage limit of `256Mi`.
 - Link the `PersistentVolumeClaim` to your `mongo-deployment`.
   - The mount path must be set to `/data/db`. *(This is where MongoDB stores its data)*.
+
+> :bulb: Make sure to restart any deployment or resource that might be affected by the changes you made.
+
+To make sure your `PersistentVolumeClaim` works, we can create a document in our database through the web app.
+
+To do so we have to send an HTTP request to the pod contained inside our `server-deployment`.
+
+Once you've grabbed the full name of your pod, you need to forward the port so you can have access to it. The following command will link the port `3000` of your localhost to the port `3000` of the pod.
+
+```
+kubectl port-forward pod/hub-deployment-5ddbdc478-68tw7 3000:3000
+```
+
+You can then send a request to create a new post in the database using the following command.
+
+```
+curl --data '{"title":"A simple post","body":"Lorem ipsum dolor sit amet"}' -i localhost:3000/posts
+```
+
+You should receive an `OK` response from the server like so:
+
+```
+HTTP/1.1 201 Created
+Content-Type: application/json; charset=utf-8
+Date: Wed, 25 Aug 2021 09:49:13 GMT
+Content-Length: 105
+
+{"created":{"id":"61261219c3db3a060d691ddb","title":"A simple post","body":"Lorem ipsum dolor sit amet"}}
+```
+
+Now make a request to see all the posts.
+
+```
+curl -i localhost:3000/posts
+```
+
+You should see your post appear in the output.
+
+```
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Date: Wed, 25 Aug 2021 09:55:30 GMT
+Content-Length: 105
+
+{"posts":[{"id":"61261219c3db3a060d691ddb","title":"A simple post","body":"Lorem ipsum dolor sit amet"}]}
+```
+
+Now delete the `mongo-deployment` and `server-deployment` using `kubectl`. Once that's done, your database should be gone. Now you must recreate your `mongo-deployment` and `server-deployment` using `kubectl apply`.
+
+We simulated a crash of your application. If your `PersistentVolumeClaim` works, you should still be able to see your post when running the following command.
+
+```
+curl -i localhost:3000/posts
+```
+
+Good job!
 
 ## Going further
 
