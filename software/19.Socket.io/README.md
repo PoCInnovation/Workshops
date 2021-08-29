@@ -36,7 +36,7 @@ In the file `src/router/router.ts`
 - import [path](https://nodejs.org/docs/latest/api/path.html)
 - replace `Hello World` by your HTML page's path define in `src/Front/index.html`.
 
-If your reload your browser page, you must see input and button `Send`.
+If your reload your browser page, you should see the input and button `Send`.
 
 #### Resources
 - [Set path](https://www.codegrepper.com/code-examples/html/express+sendFile)
