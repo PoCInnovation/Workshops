@@ -7,8 +7,9 @@
 
 ## Story
 
-The schem below shows an online chat:<br/>
-![Data scheme](../../.github/assets/software/Socket.IO/Untitled-2021-08-23-0042.png) <br/>
+The schema below shows the architecture of the online chat:
+![Data scheme](../../.github/assets/software/Socket.IO/Untitled-2021-08-23-0042.png)
+
 **Explanation**
 Each client represents an HTML page.<br/>
 As soon as a client sends a message, it is transmitted as a socket to the backend.<br/>
