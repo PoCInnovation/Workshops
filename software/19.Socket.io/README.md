@@ -46,10 +46,10 @@ First, you can find an  [express](https://expressjs.com/fr/) server in `src/inde
 You need to change this file to both use express and socket.io.
 That will allow you to issue and receive data on your server.
 
-For your first step create many variables:
-* socket exposed by require("socket.io").
-* http exposed by require("http").
-* path exposed by require("path").
+First, import all packages required to do the step:
+- [socket.io](https://www.npmjs.com/package/socket.io).
+- [http](https://nodejs.dev/learn/the-nodejs-http-module).
+- [path](https://nodejs.dev/learn/the-nodejs-path-module).
 
 Then, we will add the `socket server` to our `express`:
 - Create a new server using `http` package with your old express `app` as arguments
