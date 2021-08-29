@@ -107,7 +107,7 @@ In your terminal you should see `Hello World !` logged.
 
 Now that we retrieved the data, we will send it from our server to our fronted.
 
-The objective of this step is to know when the user presses the button on the html page.
+The objective of this step is to know when the user presses the button on the html page.<br/>
 At this point you will log the content of the input into your terminal.
 
 It's time to get information from your input.
