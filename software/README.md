@@ -157,6 +157,16 @@ You will :
 - Create two consumer services
 - Publish messages into Kafka
 
+##  19 - [Create Chat multi-client with Socket.IO](./1.Socket.io)
+
+Learn Socket.IO by implementing your own online chat.
+You will :
+- Learn Typescript fundamental
+- Work with socket and http servers
+- Understand sockets
+- Understand how transmits data
+
+
 ## Organization
 
 - [📒 Linkedin](https://www.linkedin.com/company/pocinnovation/mycompany/)
