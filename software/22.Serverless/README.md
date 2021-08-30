@@ -10,7 +10,7 @@
 Let's say you want to build an application. One of the things you need to think about is **servers**. Sometimes there is high traffic, sometimes low traffic. You want to handle it, so you have for now two options:  
 - The first is to pay for a lot of server resources so that even in high traffic your server can handle it.
 But during low traffic, you will pay for these resources too. That's not a good thing because you don't **pay for what you use**.  
-- The second option is to have **scalable** servers. It means that you allocate the right resources depending on your traffic. To create this process, you can use [kubernetes](https://kubernetes.io/fr/docs/concepts/overview/what-is-kubernetes/). **METTRE LE LIEN DU WS KUBERNETES**  
+- The second option is to have **scalable** servers. It means that you allocate the right resources depending on your traffic. To create this process, you can use [kubernetes](https://kubernetes.io/fr/docs/concepts/overview/what-is-kubernetes/). If you want to learn it, [here is our workshop](https://github.com/PoCInnovation/Workshops/tree/master/software/20.Kubernetes)  
   
 However, this second solution is something very long to implement. And you just want to stay focus on your code. You don't want to care about server management.  
 Well, you have a third option. You can adopt a **serverless architecture**.  
@@ -32,7 +32,7 @@ The benefits are the following:
 **It's very useful ... but not always !**  
 It depends on what you want to do !  
 In fact, there are some drawbacks to use a serverless architecture.  
-First, a serverless function has a limit of 15 minutes of running. So you can't build a game using a serverless architecture.  
+First, a serverless function has a limit of [15 minutes of running](https://aws.amazon.com/about-aws/whats-new/2018/10/aws-lambda-supports-functions-that-can-run-up-to-15-minutes/). So you can't build a game using a serverless architecture.  
 Then, a serverless function needs sometimes a cold start before running. Depending on the cloud provider you will use, you can lose up to 4 seconds !
 > A cold start happens when the serverless function hasn't been running for a defined period (depending on the cloud provider). As a consequence, a container (in which the function will be executed) needs to be created.
 
