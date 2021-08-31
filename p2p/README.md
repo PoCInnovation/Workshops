@@ -4,7 +4,7 @@ Peer to peer workshops to introduce students to peer-to-peer technologies and no
 
 In each directory you will find a `README` explaining the purpose of the Workshop, and a `SETUP` if needed.
 
-### [Click to join our Discord](http://bit.ly/DiscordPoCEvents)
+### [🌐 Click to join our Discord](https://discord.gg/Yqq2ADGDS7)
 
 ## Our available workshops:
 
