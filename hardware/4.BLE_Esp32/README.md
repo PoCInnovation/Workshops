@@ -6,7 +6,7 @@
 - [**Step 02** - LED flash](#step-02----led-flash)
 - [**Step 03** - Set BLE server](#step-03---Set-BLE-server)
 - [**Step 04** - Set Client with your phone](#step-04---Set-Client-with-your-phone)
-- [**Step 05** - Chat Client/Server](#step-05---Chat-Client/Server)
+- [**Step 05** - Chat Client/Server](#step-05---chat-clientserver)
 - [**Step 06** - Waiting for a message](#step-06---Waiting-for-a-message)
 - [**Step 07** - Scan BLE](#step-07---Scan-BLE)
 
