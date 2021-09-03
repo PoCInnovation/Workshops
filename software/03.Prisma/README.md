@@ -224,16 +224,32 @@ If you finished the workshop and don't know what to do until the end, you can tr
 - Update the database model to add new columns and tables, and your API with it.
 
 ## Authors
-- [Paul Monnery](https://github.com/PaulMonnery/)
-- [Naoufel Berrada](https://github.com/nowlow/)
-- [Cyril de Lajudie](https://github.com/Axoloot/)
-- [Tom Chauveau](https://github.com/TomChv/)
 
-## Organization
-
-- [📒 Linkedin](https://www.linkedin.com/company/pocinnovation/mycompany/)
-- [📷 Instagram](https://www.instagram.com/pocinnovation/)
-- [🖱️ Website](https://www.poc-innovation.fr/)
-- [🌐 Discord](https://discord.gg/Yqq2ADGDS7)
+| [<img src="https://github.com/PaulMonnery.png?size=85" width=85><br><sub>Paul Monnery</sub>](https://github.com/PaulMonnery) | [<img src="https://github.com/nowlow.png?size=85" width=85><br><sub>Naoufel Berrada</sub>](https://github.com/nowlow) | [<img src="https://github.com/Axoloot.png?size=85" width=85><br><sub>Cyril de Lajudie</sub>](https://github.com/Axoloot) | [<img src="https://github.com/TomChv.png?size=85" width=85><br><sub>Tom Chauveau</sub>](https://github.com/TomChv)
+| :---: | :---: | :---: | :---: |
+<h2 align=center>
+Organization
+</h2>
+<br/>
+<p align='center'>
+    <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+    </a>
+    <a href="https://www.instagram.com/pocinnovation/">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+    </a>
+    <a href="https://twitter.com/PoCInnovation">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+    </a>
+    <a href="https://discord.com/invite/Yqq2ADGDS7">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+    </a>
+</p>
+<p align=center>
+    <a href="https://www.poc-innovation.fr/">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+    </a>
+</p>
 
 > :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+
