@@ -1,15 +1,14 @@
-# WORKSHOP_WIFI_ESP32
+# WORKSHOP_BLE_ESP32
 
 ## Summary
 - [Setup](#setup)
 - [**Step 01** - Turn on an LED](#step-01---turn-on-an-led)
-- [**Step 02** -  LED flash](#step-02----led-flash)
-- [**Step 03** - Connect to WI-FI](#step-03---connect-to-wi-fi)
-- [**Step 04** - Create an HTML page](#step-04---create-an-html-page)
-- [**Step 05** - Define a client](#step-05---define-a-client)
-- [**Step 06** - Create Button](#step-06---create-button)
-- [**Step 07** - Set the colors of your LED RGB](#step-07---set-the-colors-of-your-led-rgb)
-- [**Step 08** - Change colors using your local server](#step-08---change-colors-using-your-local-server)
+- [**Step 02** - LED flash](#step-02----led-flash)
+- [**Step 03** - Set BLE server](#step-03---Set-BLE-server)
+- [**Step 04** - Set Client with your phone](#step-04---Set-Client-with-your-phone)
+- [**Step 05** - Chat Client/Server](#step-05---Chat-Client/Server)
+- [**Step 06** - Waiting for a message](#step-06---Waiting-for-a-message)
+- [**Step 07** - Scan BLE](#step-07---Scan-BLE)
 
 
 ## Setup:
