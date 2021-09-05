@@ -248,8 +248,7 @@ Try to hit `CTRL + C` while running the server, and it should shut down.
 
 ## To go further
 
-For the moment, you are using an int to represent the date, but there is the [Timestamp](https://stackoverflow.
-com/questions/3574716/date-and-time-type-for-use-with-protobuf) type available in protobuf.
+For the moment, you are using an int to represent the date, but there is the [Timestamp](https://stackoverflow.com/questions/3574716/date-and-time-type-for-use-with-protobuf) type available in protobuf.
 
 Take a look at the [gRPC streams](https://grpc.io/docs/what-is-grpc/core-concepts/) and try to implement a stream 
 RPC in the current project.
