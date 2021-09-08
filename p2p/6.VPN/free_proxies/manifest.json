@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+    "icons": {
+    "16": "images/icon.png",
+    "48": "images/icon.png",
+    "128": "images/icon.png"
+  },
+  "name": "POC Proxy",
+  "version": "28",
+    "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs",
+    "proxy",
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "webNavigation",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "scripts":
+    [
+      "js/background.js"
+    ]
+  }
+}
