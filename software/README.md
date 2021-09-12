@@ -8,7 +8,8 @@ In each directory the SETUP and a README explaining the purpose of the workshop.
 
 ## 1 - [Todo List in React](01.React)
 
-Create your own todo list. You will :
+Create your own todo list.  
+You will :
  - learn the basics of React
  - understand the concept of component
  - use an external API to manage your tasks
@@ -16,7 +17,8 @@ Create your own todo list. You will :
 
 ## 2 - [REST API in Go](02.Go)
 
-Discover REST API and Go language. You will :
+Discover REST API and Go language.  
+You will :
  - learn MVC architecture
  - code basic API features
  - assimilate Go concept
@@ -24,47 +26,53 @@ Discover REST API and Go language. You will :
 
 ## 3 - [GraphQL API with Prisma2](03.Prisma)
 
-Discover GraphQL API with Prisma2. You will :
+Discover GraphQL API with Prisma2.  
+You will :
  - learn GraphQL concept and the difference with REST
  - work with a modern typescript ORM
  - use gql apollo playground
 
 ## 4 - [Docker for beginners](04.Docker)
 
-Discover basics of Docker. You will :
+Discover basics of Docker.  
+You will :
  - use the docker CLI
  - containerize a simple API
  - manage multiple containers though docker-compose
 
 ## 5 - [Github Actions](05.Actions)
 
-Create your CI/CD for Epitech project. You will :
+Create your CI/CD for Epitech project.  
+You will :
  - trigger your test automatically
  - save your result though artifact
  - have a first approach about devops
 
 ## 6 - [REST API in NestJs](06.Nest)
 
-Discover NetsJS back end Framework. You will :
+Discover NetsJS back end Framework.  
+You will :
  - learn decorator's concept
  - use a mocked database
  - assimilate new API architecture
 
 ## 7 - [Mobile app with Expo](07.Expo)
 
-Win time as mobile developer with Expo. You will :
+Win time as mobile developer with Expo.  
+You will :
  - learn basics to React Native
  - create your own QR code scanner
  
 ## 8 - [Learn Typescript](08.Typescript)
 
-Learn Typescript by creating a complete Express API. You will :
+Learn Typescript by creating a complete Express API.  
+You will :
  - learn basics of Typescript
  - understand API
 
 ## 9 - [Create an Event Calendar with Svelte](09.Svelte)
 
-Learn the basic of Svelte by creating a simple application to manage your events.
+Learn the basic of Svelte by creating a simple application to manage your events.  
 You will :
   - start  a simple Svelte project
   - learn Svelte basics functionalities
@@ -73,7 +81,7 @@ You will :
 
 ## 10 - [Discover graph database with Neo4j](10.Neo4j)
 
-Learn a new way to store your data, concept of graph database and work with neo4J
+Learn a new way to store your data, concept of graph database and work with neo4J.  
 You will :
  - Learn graph database concept
  - Interact with a graph database
@@ -85,9 +93,8 @@ You will :
 
 ## 11 - [Accelerate applications on your GPU with CUDA](11.CUDA)
 
-Learn to create different programs that use the power of GPUs with the API developed by Nvidia: CUDA.
+Learn to create different programs that use the power of GPUs with the API developed by Nvidia: CUDA.  
 You will :
-
 - Learn CUDA architecture
 - Launch programs on a GPU
 - Accelerate the copy of data
@@ -95,7 +102,7 @@ You will :
 
 ## 12 - [Create a web application with GraphQL and Apollo](./12.GraphQL-Apollo)
 
-Discover GraphQL API through a little project of shop. 
+Discover GraphQL API through a little project of shop.  
 You will :
  - Learn graphql API concept
  - Interact with a graphQL API
@@ -105,15 +112,15 @@ You will :
 
 ## 13 - [Introduction to Rust](./13.Rust)
 
-Discover Rust, a language that gives everyone the power to build reliable and efficient software.
-In this workshop, you will learn:
+Discover Rust, a language that gives everyone the power to build reliable and efficient software.  
+You will learn :
  - The fundamentals of Rust
  - The standard Rust libraries
  - Data structures with Rust
 
 ## 14 - [Vercel, NextJS and Netlify](./14.Vercel)
 
-This workshop is a quick introduction to fast deployment with hosted website like [Netlify](https://www.netlify.com/) or [Vercel](https://vercel.com/).<br>
+This workshop is a quick introduction to fast deployment with hosted website like [Netlify](https://www.netlify.com/) or [Vercel](https://vercel.com/).  
 You will :
 - Learn how you can deploy website without cost
 - Explore Vercel x NextJS potential
@@ -123,7 +130,7 @@ You will :
 
 ## 15 - [Epytodo with Svelte](./15.Svelte-Epytodo)
 
-Learn advanced features of Svelte by creating a frontend for your todo API.
+Learn advanced features of Svelte by creating a frontend for your todo API.  
 You will :
   - Learn to use Svelte components
   - Lear how do routing on frontend Svelte application
@@ -132,7 +139,7 @@ You will :
 
 ## 16 - [Rust-Tetra](./16.Rust-Tetra)
 
-Discover the Tetra framework and create your own game in Rust.
+Discover the Tetra framework and create your own game in Rust.  
 You will :
   - Discovering the Tetra framework.
   - Creation of your video game.
@@ -140,7 +147,7 @@ You will :
 
 ##  17 - [gRPC and Protocol Buffers with Go](./17.gRPC)
 
-Learn gRPC by creating a client and server with go
+Learn gRPC by creating a client and server with go.  
 You will :
 - Write protobuf files
 - Write your gRPC service
@@ -150,7 +157,7 @@ You will :
 
 ##  18 - [Setup Kafka in a microservice architecture](./18.Kafka)
 
-Learn Kafka by implementing a producer and two consumers as services with Kafka
+Learn Kafka by implementing a producer and two consumers as services with Kafka.  
 You will :
 - Start Kafka and ZooKeeper using docker compose
 - Create a producer service
@@ -159,14 +166,30 @@ You will :
 
 ##  19 - [Create Chat multi-client with Socket.IO](./1.Socket.io)
 
-Learn Socket.IO by implementing your own online chat.
+Learn Socket.IO by implementing your own online chat.  
 You will :
 - Learn Typescript fundamental
 - Work with socket and http servers
 - Understand sockets
 - Understand how transmits data
 
+##  20 - [Introduction to Kubernetes](./20.Kubernetes)
 
+Learn Kubernetes basics by deploying a web application.  
+You will :
+- Discover the Dev Ops universe
+- Learn about basic Kubernetes concepts
+- Deploy a web application
+
+##  21 - [Serverless](./21.Serverless)
+
+Learn Serverless principles by creating a serverless application in two different ways.  
+You will :
+- Learn the basics of Serverless, an architecture helping you saving time and money
+- Create a serverless App using Netlify, React TS and Chakra UI
+- Create a serverless API using Serverless Framework
+
+<br />
 <h2 align=center>
 Organization
 </h2>
