@@ -1,15 +1,21 @@
-# Learn_Python
+# Python3 & Jupyter Notebook 🧑‍🔬
 
-## Introduction
-The objective of this workshop is to learn the basics of python.
+Basics of python and usage of Jupyter Notebook. You will:
+- Learn to use iPython notebooks
+- Learn Python Syntax
+- Solve complex algorithm exercises
+- Master the different programming paradigms of Python
 
-## Installation
-To perform this Workshop you are going to need to install [Jupyter notebook](https://jupyter.org/install) and [Python](https://docs.python-guide.org/starting/install3/linux/).
+## What is Jupyter Notebook :book:
 
-You can do the workshop with [Jupyter Notebook Online](https://jupyter.org/try) in your browser.
+Jupyter Notebook allows you to work by cells. Modify the cells to pass the exercises.  
+Then execute the cells by clicking on the play button or with the shortcut: ``shift + enter``.  
+Notebook files are recognized by the extension: ``.ipynb``.
 
-## Exercices
 
-The exercises can be found in the file [Workshop](./LearnPython.ipynb)
+## How to use Jupyter Notebook?
 
-Made by [Albert Valentin](https://github.com/OnsagerHe) and [David Gozlan](https://github.com/Davphla)
+- Clone the workshop repository.
+- run the command: ``pip3 install jupyter notebook``
+- you can install the VSCode extension: Jupyter (optional)
+- start a local server with the command: ``jupyter notebook``.
