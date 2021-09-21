@@ -22,8 +22,9 @@ Notebook files are recognized by the extension: ``.ipynb``.
 
 ## Authors
 
-| [<img src="https://github.com/OnsagerHe.png?size=85" width=85><br><sub>Albert VALENTIN</sub>](https://github.com/OnsagerHe) [<img src="https://github.com/Davphla.png?size=85" width=85><br><sub>Adrien Fort</sub>](https://github.com/Davphla) 
+| [<img src="https://github.com/OnsagerHe.png?size=85" width=85><br><sub>Albert VALENTIN</sub>](https://github.com/OnsagerHe) | [<img src="https://github.com/Davphla.png?size=85" width=85><br><sub>David GOZLAN</sub>](https://github.com/Davphla) 
 | :---: | :---: |
+<h2 align=center>
 <h2 align=center>
 Organization
 </h2>
