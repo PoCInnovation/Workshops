@@ -20,7 +20,7 @@ Predicting Boston Home Prices. You will:
 ## Authors
 
 | [<img src="https://github.com/Mikatech.png?size=85" width=85><br><sub>Mikaël VALLENET</sub>](https://github.com/Mikatech)
-| :---: | :---: |
+| :---: |
 <h2 align=center>
 <h2 align=center>
 Organization
