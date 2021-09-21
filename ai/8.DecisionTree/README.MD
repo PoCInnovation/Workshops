@@ -18,7 +18,7 @@ Notebook files are recognized by the extension: ``.ipynb``.
 - you can install the VSCode extension: Jupyter (optional)
 - start a local server with the command: ``jupyter notebook``.
 
-| [<img src="https://github.com/jeanbaptistedebize.png?size=85" width=85><br><sub>Albert VALENTIN</sub>](https://github.com/jeanbaptistedebize) | [<img src="https://github.com/ThisisYoYoDev.png?size=85" width=85><br><sub>David GOZLAN</sub>](https://github.com/ThisisYoYoDev) 
+| [<img src="https://github.com/jeanbaptistedebize.png?size=85" width=85><br><sub>Jean Baptiste Debize</sub>](https://github.com/jeanbaptistedebize) | [<img src="https://github.com/ThisisYoYoDev.png?size=85" width=85><br><sub>Yoël Edery</sub>](https://github.com/ThisisYoYoDev) 
 | :---: | :---: |
 <h2 align=center>
 <h2 align=center>
