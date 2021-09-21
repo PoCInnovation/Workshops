@@ -76,6 +76,7 @@ Feel free to ask us any questions.
 #### Link to every slides:
 
 - [Bases Python:](https://drive.google.com/file/d/125KpOeQkCcQDvz07naxenn_eEN0FUwfi/view?usp=sharing)
+- [Data Analysis & Data Visualization:](https://docs.google.com/presentation/d/1Ib0v-utClIE7NmevnEupjWspj17OjX0qYI338D1cUZw/edit?usp=sharing)
 - [Bases IA:](https://drive.google.com/file/d/125KpOeQkCcQDvz07naxenn_eEN0FUwfi/view?usp=sharing)
 - [Regression Logistique:](https://docs.google.com/presentation/d/1NMEmuURgo5cJTmHlS5T6E25yqqirFsrbhn8T0p1EODM/edit?usp=sharing)
 - [Réseaux de neurones:](https://drive.google.com/file/d/1X44I3y7ZUlvbXAr0-3PbTiwAxCkId4dL/view?usp=sharing)
