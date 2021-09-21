@@ -75,13 +75,16 @@ Feel free to ask us any questions.
 
 #### Link to every slides:
 
-- [Workshop 1:](https://drive.google.com/file/d/125KpOeQkCcQDvz07naxenn_eEN0FUwfi/view?usp=sharing)
-- [Workshop 2:](https://drive.google.com/file/d/1X44I3y7ZUlvbXAr0-3PbTiwAxCkId4dL/view?usp=sharing)
-- [Workshop 3:](https://drive.google.com/file/d/1kj_TQVw2IN0jg9ud0gDGAZrn_7bE9FUo/view?usp=sharing)
-- [Workshop 4:](https://slides.com/thytu/tensorflow)
-- [Workshop 5:](https://slides.com/thytu/convolution)
-- [Workshop 6:](https://slides.com/thytu/convolution-4345ab)
-- [Workshop 7:](https://docs.google.com/presentation/d/e/2PACX-1vSqnpJk__EsN3RMD9h7FSnQ_34ptWKz8dm7kaO706iKP9QRGKUUxRS5wA9cSyAVn_6hJeFC9B-QB73j/pub?start=false&loop=false&delayms=3000&slide=id.gb0f3ace1ca_0_29)
+- [Bases Python:](https://drive.google.com/file/d/125KpOeQkCcQDvz07naxenn_eEN0FUwfi/view?usp=sharing)
+- [Bases IA:](https://drive.google.com/file/d/125KpOeQkCcQDvz07naxenn_eEN0FUwfi/view?usp=sharing)
+- [Regression Logistique:](https://docs.google.com/presentation/d/1NMEmuURgo5cJTmHlS5T6E25yqqirFsrbhn8T0p1EODM/edit?usp=sharing)
+- [Réseaux de neurones:](https://drive.google.com/file/d/1X44I3y7ZUlvbXAr0-3PbTiwAxCkId4dL/view?usp=sharing)
+- [Hidden Layers:](https://docs.google.com/presentation/d/1su1fRQnxV8pCCseJcuMlo_MugO-XjeuUthj1QkLEmuc/edit?usp=sharing)
+- [Données non linéaires:](https://drive.google.com/file/d/1kj_TQVw2IN0jg9ud0gDGAZrn_7bE9FUo/view?usp=sharing)
+- [Tensorflow:](https://slides.com/thytu/tensorflow)
+- [Convolution:](https://slides.com/thytu/convolution)
+- [Value Fonction:](https://slides.com/thytu/convolution-4345ab)
+- [Q-Learning:](https://docs.google.com/presentation/d/e/2PACX-1vSqnpJk__EsN3RMD9h7FSnQ_34ptWKz8dm7kaO706iKP9QRGKUUxRS5wA9cSyAVn_6hJeFC9B-QB73j/pub?start=false&loop=false&delayms=3000&slide=id.gb0f3ace1ca_0_29)
 
 <h2 align=center>
 Organization
