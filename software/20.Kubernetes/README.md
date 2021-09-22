@@ -83,7 +83,7 @@ The Deployment resource for the web server must:
 - Be of kind `Deployment`.
 - Have the name `server-deployment`.
 - Have one replica.
-- Feature one container based on the `poc-workshops/k8s-server` image.
+- Feature one container based on the `rojasdiego/poc-innovation:kubernetes-workshop` image.
 
 Once your deployments YAML are valid, **apply** them with the `kubectl` command.
 
