@@ -53,12 +53,6 @@ If you failed to install minikube, you can use [kind](https://kind.sigs.k8s.io/d
 
 You can install `kubectl` using the [official guide](https://kubernetes.io/docs/tasks/tools/#kubectl) through binary download.
 
-Alternatively, you can install `kubectl` using the following command.
-
-```shell
-minikube kubectl -- get po -A
-```
-
 Make sure you setup [kubectl autocompletion](https://kubernetes.io/docs/tasks/tools/included/optional-kubectl-configs-bash-linux/) too!
 
 Once that's done, you can go back to the [exercises page](./README.md)!
