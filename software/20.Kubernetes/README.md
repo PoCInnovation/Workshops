@@ -6,7 +6,7 @@
 
 :heavy_check_mark: Deploy a web application
 
-Welcome to this workshop about [Kubernetes](https://kubernetes.io/), the leading container orchestration system! In 3 hours time you will learn to deploy a web application on Kubernetes and grow familiar with multiple Kubernetes concepts.
+Welcome to this workshop about [Kubernetes](https://kubernetes.io/), the leading container orchestration system! In 3 hours time you will learn how to deploy a web application on Kubernetes and grow familiar with multiple Kubernetes concepts.
 
 Most of this workshop will consist in putting together [YAML files](https://fr.wikipedia.org/wiki/YAML) that define your Kubernetes resources. You can find many examples of those on the web.
 
@@ -18,7 +18,9 @@ To get started, please follow the installation steps listed in [this guide](./SE
 
 ## Step 1 - Hello Pods
 
-Your web application is going to have to run somewhere. [Pods](https://kubernetes.io/fr/docs/concepts/workloads/pods/) are the perfect place!
+Let's start deploying on Kubernetes!
+
+First, your web application is going to have to run somewhere. [Pods](https://kubernetes.io/fr/docs/concepts/workloads/pods/) are the perfect place.
 
 A Pod is a type of Kubernetes resource which runs multiple containers *(Yes, like Docker containers!)*.
 
@@ -167,15 +169,15 @@ You must:
 
 To make sure your `PersistentVolumeClaim` works, we can create a document in our database through the web app.
 
-To do so we have to send an HTTP request to the pod contained inside our `server-deployment`.
+To do so we have to send an HTTP request to the web server.
 
-Once you've grabbed the full name of your pod, you need to forward the port so you can have access to it. The following command will link the port `3000` of your localhost to the port `3000` of the pod.
+To access the web server, you need to forward the API port. The following command will link the port `3000` of your localhost to the port `3000` of the `server-deployment`.
 
 ```
-kubectl port-forward pod/hub-deployment-5ddbdc478-68tw7 3000:3000
+kubectl port-forward deployments.apps/server-deployment 3000:3000
 ```
 
-You can then send a request to create a new post in the database using the following command.
+In another terminal, you can then send a request to create a new post in the database using the following command.
 
 ```
 curl --data '{"title":"A simple post","body":"Lorem ipsum dolor sit amet"}' -i localhost:3000/posts
@@ -209,15 +211,15 @@ Content-Length: 105
 {"posts":[{"id":"61261219c3db3a060d691ddb","title":"A simple post","body":"Lorem ipsum dolor sit amet"}]}
 ```
 
-Now delete the `mongo-deployment` and `server-deployment` using `kubectl`. Once that's done, your database should be gone. Now you must recreate your `mongo-deployment` and `server-deployment` using `kubectl apply`.
+Now delete the `mongo-deployment` and `server-deployment` using `kubectl`. Once that's done, your database should be gone. Now you must recreate your `mongo-deployment` and `server-deployment` using `kubectl apply`. Don't forget to re-forward the port of the `server-deployment`!
 
-We simulated a crash of your application. If your `PersistentVolumeClaim` works, you should still be able to see your post when running the following command.
+We simulated a crash of your application.  If your `PersistentVolumeClaim` works, you should still be able to see your post when running the following command.
 
 ```
 curl -i localhost:3000/posts
 ```
 
-Good job!
+Good job! You can now stop your cluster with `minikube stop`, you've nailed this workshop!
 
 ## Going further
 
