@@ -62,6 +62,8 @@ Then, create a second service, named `kafka`:
 - [Initialize the required environment variables](https://docs.confluent.io/platform/current/installation/docker/config-reference.html#confluent-ak-configuration)
 - It depends on the `zookeeper` service
 
+> You'll have to setup non-required environment variables, look for the listeners related ones !
+
 ### :books: **Documentation**:
 
 - [Control startup and shutdown order in docker compose](https://docs.docker.com/compose/startup-order/)
