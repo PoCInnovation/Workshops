@@ -1,10 +1,10 @@
-# Python3 & Jupyter Notebook 🧑‍🔬
+# Data Science & Pandas basics 👨‍🔬
 
-Basics of python and usage of Jupyter Notebook. You will:
-- Learn to use iPython notebooks
-- Learn Python Syntax
-- Solve complex algorithm exercises
-- Master the different programming paradigms of Python
+Basics of Data Science and introduce Pandas. You will:
+- learn to use Pandas
+- analyse huge datasets
+- clean datasets
+- visualize data analyse
 
 ## What is Jupyter Notebook :book:
 
@@ -22,7 +22,8 @@ Notebook files are recognized by the extension: ``.ipynb``.
 
 ## Authors
 
-| [<img src="https://github.com/Mikatech.png?size=85" width=85><br><sub>Mikaël VALLENET</sub>](https://github.com/Mikatech) | :---: |
+| [<img src="https://github.com/Mikatech.png?size=85" width=85><br><sub>Mikaël VALLENET</sub>](https://github.com/Mikatech)
+| :---: |
 <h2 align=center>
 <h2 align=center>
 Organization
