@@ -1,8 +1,12 @@
-## Q-Learning 🚙
-Continuation of Reinforcement Learning. You will:
-- use Gym environment
-- use Q learning
-- solve Mountain-Car-V0
+# Data Science & Pandas basics 👨‍🔬
+
+Basics of Data Science and introduce Pandas. You will:
+- learn to use Pandas
+- analyse huge datasets
+- clean datasets
+- visualize data analyse
+
+⚠️ Don't forget to extract the datasets from the file compress datasets.zip
 
 ## What is Jupyter Notebook :book:
 
@@ -18,7 +22,13 @@ Notebook files are recognized by the extension: ``.ipynb``.
 - you can install the VSCode extension: Jupyter (optional)
 - start a local server with the command: ``jupyter notebook``.
 
-## Organization
+## Authors
+
+| [<img src="https://github.com/Mikatech.png?size=85" width=85><br><sub>Mikaël VALLENET</sub>](https://github.com/Mikatech)
+| :---: |
+<h2 align=center>
+<h2 align=center>
+Organization
 </h2>
 <br/>
 <p align='center'>

@@ -9,7 +9,7 @@ In each directory, you will find the exercises, a README explaining the purpose 
 
 ### [🌐 Click to join our Discord](https://discord.gg/Yqq2ADGDS7)
 
-## 0 - Python3 & Jupyter Notebook 🧑‍🔬
+## 0 - Python3 & Jupyter Notebook 🐍
 
 Basics of python and usage of Jupyter Notebook. You will:
 - Learn to use iPython notebooks
@@ -17,12 +17,12 @@ Basics of python and usage of Jupyter Notebook. You will:
 - Solve complex algorithm exercises
 - Master the different programming paradigms of Python
 
-## 1 - Python & Numpy basics :snake:
-Basics of python and usage of Numpy. You will:
-- learn to use iPython notebooks
-- use numpy functions and vector and matrix operations
-- understand broadcasting concept
-- vectorize code
+## 1 - Data Science & Pandas basics 👨‍🔬
+Basics of Data Science and introduce Pandas. You will:
+- learn to use Pandas
+- analyse huge datasets
+- clean datasets
+- visualize data analyse
 
 ## 2 - Logistic Regression :computer:
 Creation of your first classification method. You will:
