@@ -19,7 +19,7 @@ Notebook files are recognized by the extension: ``.ipynb``.
 - you can install the VSCode extension: Jupyter (optional)
 - start a local server with the command: ``jupyter notebook``.
 
-Organization
+## Organization
 </h2>
 <br/>
 <p align='center'>
