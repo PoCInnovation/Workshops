@@ -6,6 +6,8 @@ Basics of Data Science and introduce Pandas. You will:
 - clean datasets
 - visualize data analyse
 
+⚠️ Don't forget to extract the datasets from the file compress datasets.zip
+
 ## What is Jupyter Notebook :book:
 
 Jupyter Notebook allows you to work by cells. Modify the cells to pass the exercises.  
