@@ -1,8 +1,10 @@
 # REST API with Nestjs
 
-## Step 0: Typescript
+## Typescript
 
 If you do not already know typescript, you can read [this file](https://github.com/PoCInnovation/Workshops/blob/master/software/06.Nest/src/step-0/learn.md) to learn the basics.
+
+## Step 0: Setup
 
 All the required information to start this workshop can be found in [SETUP.md](./SETUP.md)
 
