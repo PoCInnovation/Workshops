@@ -1,14 +1,14 @@
 # 3. Learn the differences between HTTP and IPFS !
 
 ##  :dizzy: Table of contents
-* [Step 0 - Setup](./README.md#wrench-step-0---setup)
-* [Step 1 - HTTP](./README.md#step-1---http)
-    * [Discover the basics](./README.md#pencil2-10-discover-the-basics)
-    * [Storage](./README.md#floppy_disk-11-storage)
-* [Step 2 - IPFS](./README.md#step-2---ipfs)
-    * [Improve the storage](./README.md#spider_web-20-improve-the-storage)
-    * [Retrieve](./README.md#inbox_tray-22-retrieve)
-* [Going further](./README.md#rocket-going-further)
+* [Step 0 - Setup](README.md#wrench-step-0---setup)
+* [Step 1 - HTTP](README.md#step-1---http)
+    * [Discover the basics](README.md#pencil2-10-discover-the-basics)
+    * [Storage](README.md#floppy_disk-11-storage)
+* [Step 2 - IPFS](README.md#step-2---ipfs)
+    * [Improve the storage](README.md#spider_web-20-improve-the-storage)
+    * [Retrieve](README.md#inbox_tray-22-retrieve)
+* [Going further](README.md#rocket-going-further)
   
 
 In this Workshop, you will learn :
@@ -22,7 +22,7 @@ In this Workshop, you will learn :
 :heavy_check_mark: How to change a centralized storage into a distributed one via IPFS with Infura !
 
 ## :wrench: Step 0 - Setup
-Please follow each instruction on the [SETUP.md](./SETUP.md) file.
+Please follow each instruction on the [SETUP.md](SETUP.md) file.
 
 ## Step 1 - HTTP
 ### :pencil2: 1.0 Discover the basics
@@ -108,7 +108,7 @@ get the page ; we are asking the server to give us the `/` route which is the ho
 Then, the `HTTP` protocol and finally two numbers. The `200` is the most interesting : it is a status, preview code. `200` means
 that the server is ok to give us that page from the `/` route, and it has been delivered correctly.
 
-![](./http_request_flowchart.png)
+![](http_request_flowchart.png)
 *Scheme of a HTTP request*
 
 >:bulb: What does `POST` means ?

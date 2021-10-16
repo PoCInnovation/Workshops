@@ -8,30 +8,13 @@ In each directory you will find a `README` explaining the purpose of the Worksho
 
 ## Our available workshops:
 
-### Workshop 1 - [Discover the Solidity language](./1.Solidity)
-In this Workshop, you will learn:
+### Workshop 1 - libp2p and golang
 
-* How to deploy smart contracts already written
-* How to test it using mocha and assert
+Create your own p2p network using libp2p and the golang language.
 
+You will :
 
-### Workshop 2 - [Build a decentralized shop](./2.SmartShop)
-In this Workshop, you will learn:
-
-* The basic typed variables of Solidity syntax
-* How to write your own smart contract
-* How to integrate your smart contract onto a front end
-
-### Workshop 3 - [IPFS or HTTP](./3.IPFS_or_HTTP)
-Here, we are going to learn:
-
-* The limits of HTTP access and storage
-* The basics of IPFS storage
-
-### Workshop 4 - [Security Challenges Ethereum](./4.SecuChallengesEth)
-Through almost ten security challenges, you will learn:
-
-* The concepts of blockchain deployments (gas, withdraws, fallback functions...)
-* The exploits of weak smart contracts
-* Using the RemixIDE and/or your JavaScript Console !
-
+- Use libp2p to create a host.
+- Use multiaddresses to connect two nodes.
+- Connect more nodes using discovery.
+- Exchange data between nodes.

@@ -16,4 +16,4 @@ In the `Deploy & run transactions` :
   JavaScript VM means that the code will execute on a local network
   Injected Web3 will use metamask to connect to the real Ethereum network.
   
-[Go back to the exercise.](./README.md)
+[Go back to the exercise.](README.md)
