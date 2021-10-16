@@ -11,24 +11,24 @@ In this Workshop, you will learn :
 :heavy_check_mark: ... and how to exploit them !!
 
 ## :dizzy: Table of contents
-* [Setup](./README.md#wrench-setup)
-* [Step 1 - Easy level](./README.md#hand_over_mouth-step-1---easy-level)
-    * [Hello Ethernaut](./README.md#hello-ethernaut)
-    * [Fallback](./README.md#fallback)
-    * [Coin Flip](./README.md#coin-flip)
-* [Step 2 - Medium Level](./README.md#cry-step-2---medium-level)
-    * [Gatekeeper One](./README.md#gatekeeper-one)
-    * [Force](./README.md#force)
-    * [Vault](./README.md#vault)
-* [Step 3 - Hard level](./README.md#skull_and_crossbones-step-3---hard-level)
-    * [The rewarder](./README.md#the-rewarder)
-    * [Compromised](./README.md#compromised)
-    * [Selfie](./README.md#selfie)
-* [Organisation](./README.md#star2-organisation)
+* [Setup](README.md#wrench-setup)
+* [Step 1 - Easy level](README.md#hand_over_mouth-step-1---easy-level)
+    * [Hello Ethernaut](README.md#hello-ethernaut)
+    * [Fallback](README.md#fallback)
+    * [Coin Flip](README.md#coin-flip)
+* [Step 2 - Medium Level](README.md#cry-step-2---medium-level)
+    * [Gatekeeper One](README.md#gatekeeper-one)
+    * [Force](README.md#force)
+    * [Vault](README.md#vault)
+* [Step 3 - Hard level](README.md#skull_and_crossbones-step-3---hard-level)
+    * [The rewarder](README.md#the-rewarder)
+    * [Compromised](README.md#compromised)
+    * [Selfie](README.md#selfie)
+* [Organisation](README.md#star2-organisation)
   
 ## :wrench: Setup
 
-Please follow the instructions on your [SETUP.md](./SETUP.md) file.
+Please follow the instructions on your [SETUP.md](SETUP.md) file.
 
 ## :hand_over_mouth: Step 1 - Easy level
 > :bulb: Those challenges are here to introduce to you the [Solidity](https://docs.soliditylang.org/en/v0.4.21/) language and the
