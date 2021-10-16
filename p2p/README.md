@@ -8,7 +8,7 @@ In each directory you will find a `README` explaining the purpose of the Worksho
 
 ## Our available workshops:
 
-### Workshop 1 - libp2p and golang
+### Workshop 1 - [libp2p and golang](./1.libp2p)
 
 Create your own p2p network using libp2p and the golang language.
 
