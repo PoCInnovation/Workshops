@@ -101,7 +101,7 @@ docker build -t workshop-poc/svelte:v1 .
 docker run -p 5000:5000 workshop-poc/svelte:v1
 ```
 
-> :bulb: [Install](https://github.com/PoCInnovation/Workshops/blob/master/software/4.Docker/SETUP.md) docker.
+> :bulb: [Install](https://github.com/PoCInnovation/Workshops/blob/master/software/04.Docker/SETUP.md) docker.
 
 ## Bonus
 
