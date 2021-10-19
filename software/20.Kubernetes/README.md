@@ -78,7 +78,7 @@ The Deployment resource for the database must:
 - Have the name `mongo-deployment`.
 - Have one replica.
 - Feature one container based on the `mongo` image.
-- Have the `spec.selector.matchLabels.app` field set to `mongo`. This will be important for later.
+- Have the `spec.template.matchLabels.app` field and the `spec.template.metadata.labels.app` set to `mongo`. This will be important for later.
 - Expose the port `27017`
 
 The Deployment resource for the web server must:
