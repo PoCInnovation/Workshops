@@ -79,6 +79,7 @@ The Deployment resource for the database must:
 - Have one replica.
 - Feature one container based on the `mongo` image.
 - Have the `spec.selector.matchLabels.app` field set to `mongo`. This will be important for later.
+- Expose the port `27017`
 
 The Deployment resource for the web server must:
 
@@ -86,6 +87,7 @@ The Deployment resource for the web server must:
 - Have the name `server-deployment`.
 - Have one replica.
 - Feature one container based on the `rojasdiego/poc-innovation:kubernetes-workshop` image.
+- Expose the port `3000`
 
 Once your deployments YAML are valid, **apply** them with the `kubectl` command.
 
