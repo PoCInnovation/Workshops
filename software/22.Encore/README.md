@@ -276,7 +276,7 @@ So now, create the file `add.go` in that new service.
 
 In this one, write a function `Add` that will take a `CreateDTO` as parameter that contains the deliveryman's `name`.
 Then, add it to your database and return a message of confirmation.<br>
-You endpoint must be reachable with a request `POST` on path `/deliveryman`
+Your endpoint must be reachable with a request `POST` on path `/deliveryman`
 
 #### What's the passphrase sir ?
 
