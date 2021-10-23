@@ -105,7 +105,7 @@ The client will be forward to our other services:
 - `delivery`: manage delivery
 - `deliveryman`: manage deliverymen
 
-This way, we got independant service that share the same database to simplify data management, specialy when we will need to handle relation between our tables.
+This way, we got independant services that share the same database to simplify data management, specialy when we will need to handle relation between our tables.
 
 > deliverymen will be protected with an authentication process explained further.
 
@@ -114,7 +114,6 @@ This way, we got independant service that share the same database to simplify da
 First, create a new folder named `delivery`, this is where we will code our `develiry-api`.
 
 Before coding our API, we must define models and create our database.
-
 We are lucky, [encore](https://encore.dev/docs/develop/databases) manage the boring stuff for you, you only have to create a `migrations` directory in a `service` that will store your `sql` files and everything will work automatically.
 
 Let's create our database :
@@ -219,8 +218,7 @@ Great, we read data, but isn't better if we can add some to test our endpoints ?
 Let's create the file `add.go` that will handle the creation of packet.
 
 Create the function `Add` that will take as parameter a `CreateDTO` which contains an `owner`, a `receiver` and a `destination`.
-You will create a new packet in your database from this information and return a message of confirmation if everything went well.
-
+You will create a new packet in your database from this information and return a message of confirmation if everything went well.<br>
 Your endpoint must be public and reachable with a request `POST` on `/packet`
 
 Perfect, now verify your endpoint with the [awesome encore dashboard](https://encore.dev/docs/observability/dev-dash) created when you run `encore run`.
@@ -277,16 +275,13 @@ As you see, the only required property is `name`.
 So now, create the file `add.go` in that new service.
 
 In this one, write a function `Add` that will take a `CreateDTO` as parameter that contains the deliveryman's `name`.
-Then, add it to your database and return a message of confirmation.
-
+Then, add it to your database and return a message of confirmation.<br>
 You endpoint must be reachable with a request `POST` on path `/deliveryman`
 
 #### What's the passphrase sir ?
 
-If you don't notice, there was no instruction about the kind of endpoint your `Add` function must be, is it public, private or auth ?
-
-We don't really want to allow anyone adding an employee so we should be able to authenticate the one that trying to create a resource on our service.
-
+If you don't notice, there was no instruction about the kind of endpoint your `Add` function must be, is it public, private or auth ?<br>
+We don't really want to allow anyone adding an employee so we should be able to authenticate the one that trying to create a resource on our service.<br>
 Storing the caller identity will be too long for a workshop and involve to design `login` and `logout` endpoint, instead we will just use a simple `passphrase` as proof of our identity.
 
 > :warning: I **DON'T** recommend that method in production API, it's just to win time.
@@ -295,8 +290,7 @@ Encore framework provide an [elegant way](https://encore.dev/docs/develop/auth) 
 
 Create a new service named `auth` in the `delivery` folder.
 
-Use the [secrets integration](https://encore.dev/docs/develop/secrets) of encore to create a secret variable named `Token` that will store your passphrase.
-
+Use the [secrets integration](https://encore.dev/docs/develop/secrets) of encore to create a secret variable named `Token` that will store your passphrase.<br>
 Then create a function named `AuthHandler` that will check that the `Authorization` header contains the same value of our `token`.
 In case of error, return a [custom error](https://encore.dev/docs/develop/auth#handling-auth-errors) with error code `401` and a an error message.
 
