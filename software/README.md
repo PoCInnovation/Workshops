@@ -189,6 +189,14 @@ You will :
 - Create a serverless App using Netlify, React TS and Chakra UI
 - Create a serverless API using Serverless Framework
 
+## 22 - [Encore](./22.Encore)
+
+Discover a powerful go framework that's speed up your development of backend & micro-services
+You will :
+- Discover [Encore](https://encore.dev/) a powerful go framework to develop APIs.  
+- Learn services logics
+- Improve your Go and architecture design skills
+
 <br />
 <h2 align=center>
 Organization
