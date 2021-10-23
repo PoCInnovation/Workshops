@@ -1,4 +1,4 @@
-# Workshop Software
+# Workshop 22 - Encore :rocket:
 
 :heavy_check_mark: Discover [Encore](https://encore.dev/) a powerful go framework to develop APIs.  
 
