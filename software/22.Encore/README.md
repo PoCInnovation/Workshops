@@ -21,7 +21,7 @@ Before starting the workshop, make sure you've completed all steps of the [setup
 
 ## Step 1 - Discover Encore
 
-We are not going to develop an API with a real use-case now, to begin we will write some endpoints to understand how `Encore` handles requests and responses.
+We are not going to develop an API with a real use-case now, to begin we will write some endpoints to understand how `Encore` handle requests and responses.
 
 First, create a new folder named `discovery` and create the file `discovery.go` in it.
 
@@ -409,6 +409,7 @@ Congratz ! You finished that workshop and build your own delivery API with [Enco
 ## To go further
 
 - [Discover Encore community](https://encore.dev/docs/community)
+- [Encore git repository](https://github.com/encoredev/encore)
 - [Deploy in production](https://encore.dev/docs/deploy/platform)
 - [Monitor your application](https://encore.dev/docs/observability/monitoring) 
 
