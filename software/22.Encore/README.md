@@ -190,7 +190,7 @@ Here we are exporting a client from [sqlx](https://pkg.go.dev/github.com/jmoiron
 
 > :bulb: Note that `encore` provide his own version of the [sql](https://pkg.go.dev/database/sql) package named `sqldb`.
 
-:bulb: **In this workshop, you will need to write raw SQL queries to interfact with the database. To help you, we wrote a [little sheatcheet](./help/request.sql) with all queries involved.**
+:bulb: **In this workshop, you will need to write raw SQL queries to interfact with the database. To help you, we wrote a [little sheatcheet](./help/requests.sql) with all queries involved.**
 
 #### Packet's time
 
