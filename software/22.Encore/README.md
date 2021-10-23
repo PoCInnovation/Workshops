@@ -396,7 +396,7 @@ That would be awesome to get something like this when we reach `/deliveryman`
 
 Find a way to get that result.
 
-:bulb: They are views created when initialized the database, maybe that could help you.
+:bulb: They are views created when initialized the database, maybe that could help you. You can find the `sql` file in `database/migrations/`.
 
 Congratz ! You finished that workshop and build your own delivery API with [Encore framework](https://encore.dev/).
 
