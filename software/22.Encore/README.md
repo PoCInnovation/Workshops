@@ -105,6 +105,8 @@ The client will be forward to our other services:
 - `delivery`: manage delivery
 - `deliveryman`: manage deliverymen
 
+This way, we got independant service that share the same database to simplify data management, specialy when we will need to handle relation between our tables.
+
 > deliverymen will be protected with an authentication process explained further.
 
 #### Database
