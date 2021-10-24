@@ -56,6 +56,14 @@ docker: Error response from daemon: cgroups: cannot found cgroup mount destinati
 
 To fix them, follow this [solution](https://github.com/docker/for-linux/issues/219#issuecomment-375160449) on docker's github. This solution requires to be executed each time you reboot
 
+#### Podman alternative
+
+If you're unable to install Docker, you can alternatively use [podman](https://podman.io/getting-started/installation) which works just like Docker. To use podman, simply replace `docker` by `podman` in every command that you run as shown below. 
+
+```
+podman run hello-world
+```
+
 ### Golang
 
 To install Go, run the following commands:
