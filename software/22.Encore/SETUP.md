@@ -1,4 +1,4 @@
-# Setup
+# Workshop 22 - Setup
 
 In this workshop, you'll need:
 
