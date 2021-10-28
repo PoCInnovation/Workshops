@@ -113,7 +113,7 @@ This way, we got independant services that share the same database to simplify d
 
 First, create a new folder named `delivery`, this is where we will code our `develiry-api`.
 
-Before coding our API, we must define models and create our database.
+Before coding our API, we must define models and create our database.<br>
 We are lucky, [encore](https://encore.dev/docs/develop/databases) manage the boring stuff for you, you only have to create a `migrations` directory in a `service` that will store your `sql` files and everything will work automatically.
 
 Let's create our database :
@@ -176,11 +176,13 @@ var (
  db    = sqlx.NewDb(rawDb, "postgresql")  
 )  
   
-// Client give access to the database clientfunc Client() *sqlx.DB {  
+// Client give access to the database client
+func Client() *sqlx.DB {  
  return db  
 }  
   
-// Placeholder used to create the SQL database//encore:api private  
+// Placeholder used to create the SQL database
+//encore:api private  
 func Placeholder(_ context.Context) error {  
  return nil  
 }
@@ -190,7 +192,7 @@ Here we are exporting a client from [sqlx](https://pkg.go.dev/github.com/jmoiron
 
 > :bulb: Note that `encore` provide his own version of the [sql](https://pkg.go.dev/database/sql) package named `sqldb`.
 
-:bulb: **In this workshop, you will need to write raw SQL queries to interfact with the database. To help you, we wrote a [little sheatcheet](./help/requests.sql) with all queries involved.**
+:bulb: **In this workshop, you will need to write raw SQL queries to interfact with the database. To help you, look at that [little sheatcheet](./help/requests.sql) with all queries involved.**
 
 #### Packet's time
 
@@ -206,11 +208,11 @@ Next, let's expose endpoints to read our packets.
 
 Create the file `get.go` that will contain two functions :
 
-- `GetAll` that will retrieve **all** packets stored in the database.
-  You must return an object with the list of all packets and the number of package.
+- `GetAll` that will retrieve **all** packets stored in the database.<br>
+  You must return an object with the list of all packets and the number of package.<br>
   Your endpoint must be public and reachable with a request `GET` on `/packet`
 
-- `Get` that will retrieve **one** packet selected by his unique identifier.
+- `Get` that will retrieve **one** packet selected by his unique identifier.<br>
   Your endpoint must be public and reachable with a request `GET` on `/packet/:id` where `:id` is your identifier
 
 > Do you remember how works url parameters ?
@@ -219,7 +221,7 @@ Great, we read data, but isn't better if we can add some to test our endpoints ?
 
 Let's create the file `add.go` that will handle the creation of packet.
 
-Create the function `Add` that will take as parameter a `CreateDTO` which contains an `owner`, a `receiver` and a `destination`.
+Create the function `Add` that will take as parameter a `CreateDTO` which contains an `owner`, a `receiver` and a `destination`.<br>
 You will create a new packet in your database from this information and return a message of confirmation if everything went well.<br>
 Your endpoint must be public and reachable with a request `POST` on `/packet`
 
@@ -236,7 +238,7 @@ Fun begin, we can receive and manage packet but no one can send it to their dest
 How about creating a new service to handle `deliveryman` ?
 
 First, we must improve your `database` service to handle the relation between `packets` & `deliveryman`.
-Since encore doesn't currently support powerful ORM like [ent](https://entgo.io/) or [goORM](https://gorm.io/index.html), we will need to query our data with raw SQL.
+Since encore doesn't currently support powerful ORM like [ent](https://entgo.io/) or [goORM](https://gorm.io/index.html), we will need to query our data with raw SQL.<br>
 It's not really easy for a beginner so to keep concentrate on encore, you will replace your `database` service with the [one provide in the workshop](./source/step2/database-service.zip).
 
 Your `database` service should now have the following architecture.
@@ -276,7 +278,7 @@ As you see, the only required property is `name`.
 
 So now, create the file `add.go` in that new service.
 
-In this one, write a function `Add` that will take a `CreateDTO` as parameter that contains the deliveryman's `name`.
+In this one, write a function `Add` that will take a `CreateDTO` as parameter that contains the deliveryman's `name`.<br>
 Then, add it to your database and return a message of confirmation.<br>
 Your endpoint must be reachable with a request `POST` on path `/deliveryman`
 
@@ -327,7 +329,7 @@ As usual, retrieve your database client in a file named `delivery.go`.
 
 Now let's expose your functions.
 
-- Create a function `SendPacket` that will take as argument `SendPacketDTO` which contains the `packetID` and the `deliverymanID`.
+- Create a function `SendPacket` that will take as argument `SendPacketDTO` which contains the `packetID` and the `deliverymanID`.<br>
   You function must update the target packet status and assign that one to the deliveryman. You also need to update your deliveryman's status.
   Return a message of confirmation if everything went well.
 
