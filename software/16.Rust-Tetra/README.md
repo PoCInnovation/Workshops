@@ -53,7 +53,7 @@ To display text, you need to follow three steps:
 
 3. Display `vector_text` in your window.
 
-> :bulb : This step like the others is important for the rest of the workshop, don't hesitate to look at the resources.
+> :bulb: This step like the others is important for the rest of the workshop, don't hesitate to look at the resources.
 
 ##### Resources
  - [Fonts with Tetra](https://docs.rs/tetra/0.2.18/tetra/graphics/text/struct.Font.html)
