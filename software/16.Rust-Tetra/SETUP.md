@@ -9,17 +9,17 @@ Please make sure you have the following programs installed:
 ### Install Rust:
  - Under all systems: 
 ```shell
-$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
 ### To install Tetra:
 ```shell
-$ sudo yum install SDL2-devel
-$ sudo yum install alsa-lib-devel
+sudo yum install SDL2-devel
+sudo yum install alsa-lib-devel
 
-$ git clone git@github.com:17cupsofcoffee/tetra.git
-$ cd tetra
-$ cargo run --example hello_world
+git clone git@github.com:17cupsofcoffee/tetra.git
+cd tetra
+cargo run --example hello_world
 ```
 
 To ensure that the installation works properly after these commands, a blue page should open.
@@ -31,9 +31,10 @@ Create a working folder and get the resources provided with the workshop.
 ### Init your project:
 
 ```shell
-$ cargo init
-$ cargo add tetra
+cargo init
+cargo add tetra
 ```
+> If you get an error when running `cargo add tetra`, then run `cargo install cargo-edit` and re-run `cargo add tetra`
 
 ## 3. Start workshop
 
