@@ -86,6 +86,7 @@ Feel free to ask us any questions.
 - [Convolution:](https://slides.com/thytu/convolution)
 - [Value Fonction:](https://slides.com/thytu/convolution-4345ab)
 - [Q-Learning:](https://docs.google.com/presentation/d/e/2PACX-1vSqnpJk__EsN3RMD9h7FSnQ_34ptWKz8dm7kaO706iKP9QRGKUUxRS5wA9cSyAVn_6hJeFC9B-QB73j/pub?start=false&loop=false&delayms=3000&slide=id.gb0f3ace1ca_0_29)
+- [Decision Tree:](https://docs.google.com/presentation/d/1q0IINebjrKyc1Nk3GkyL3OjLaXTn_vJ4/present?rtpof=true&sd=true&slide=id.p1)
 
 <h2 align=center>
 Organization
