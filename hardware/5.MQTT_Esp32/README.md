@@ -12,14 +12,22 @@
 - [**Step 08** - Create your Broker](#step-08---create-your-broker)
 
 
+## Story
+
+The schema below shows the architecture of broker MQTT:
+![Data scheme](../../.github/assets/hardware/Mqtt/mqtt.png)
+
+**Explanation** <br/>
+Each device can publish on a broker local or global.<br/>
+The Broker is an intermediary between devices and subscribers. <br/>
+It allows to store, process and share the data to other entities. <br/>
+Whether it is another broker or his phone to be aware of an alert according to the data.<br/>
+
 ## Setup:
-You can follow steps to install [Arduino IDE](https://www.arduino.cc/en/guide/linux).
-
-You can use PlatformIO like [extension of VsCode](https://platformio.org/install/ide?install=vscode). :rocket:
-
-[Tutorial](https://www.youtube.com/watch?v=JmvMvIphMnY) for vscode and platformIO.
-
-Also configure your Arduino IDE for [ESP32](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/).
+You can use PlatformIO like [extension of VsCode](https://platformio.org/install/ide?install=vscode). :rocket: <br/>
+[Tutorial](https://www.youtube.com/watch?v=JmvMvIphMnY) for vscode and platformIO. :point_left: <br/>
+You can follow steps to install [Arduino IDE](https://www.arduino.cc/en/guide/linux). <br/>
+Also configure your Arduino IDE for [ESP32](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/). <br/>
 
 ## **`Step 01`** - Turn on an LED
 
@@ -31,7 +39,7 @@ Also configure your Arduino IDE for [ESP32](https://randomnerdtutorials.com/inst
 
 </details>  
 
-**Instruction**: Your first objective is to light an LED on your ESP32 with code.
+**Instruction**: Your first objective is to light an LED on your ESP32 with code. <br/>
 
 #### Resources
 - [Tutorial PlatformIO and ESP32](https://www.youtube.com/watch?v=JmvMvIphMnY)
@@ -47,8 +55,8 @@ Also configure your Arduino IDE for [ESP32](https://randomnerdtutorials.com/inst
 
 </details>
 
-Now it's time to make your LED blink.  
-To do this, implement some code in your ESP32.
+Now it's time to make your LED blink.  <br/>
+To do this, implement some code in your ESP32. <br/>
 
 **Instruction**: your LED must blink with 500 ms.
 
@@ -66,9 +74,8 @@ To do this, implement some code in your ESP32.
 
 </details>
 
-For this step, you will set ssid and password for connect your board to the WI-Fi.
-
-Integred conditional state for print Wi-fi and Ip Address of your device.
+For this step, you will set ssid and password for connect your board to the WI-Fi. <br/>
+Integred conditional state for print Wi-fi and Ip Address of your device. <br/>
 
 * For print data you must use serial connection.
 * The fist purpose of the MQTT IOT is a Wi-Fi.
@@ -90,15 +97,14 @@ If this step is ending you can go out to the next step. :tada:
 
 </details>
 
-Now that you have an network to your esp32.
-This is the first step.
-Now you must understand and work MQTT IoT.
+Now that you have an network to your esp32. <br/>
+This is the first step. <br/>
+Now you must understand and work MQTT IoT. <br/>
 
-Take your computer and [download Mosquitto](https://everythingsmarthome.co.uk/howto/how-to-install-an-mqtt-broker-mosquitto-install-config-on-debian-ubuntu-mint-fedora-raspbian/).
+Take your computer and [download Mosquitto](https://everythingsmarthome.co.uk/howto/how-to-install-an-mqtt-broker-mosquitto-install-config-on-debian-ubuntu-mint-fedora-raspbian/). <br/>
+On this piece you have a [Broker MQTT](https://www.journaldunet.fr/web-tech/dictionnaire-de-l-iot/1440686-mqtt-comment-fonctionne-ce-protocole/) with a raspberry. <br/>
 
-On this piece you have a [Broker MQTT](https://www.journaldunet.fr/web-tech/dictionnaire-de-l-iot/1440686-mqtt-comment-fonctionne-ce-protocole/) with a raspberry.
-
-* Call a manager to explain how a broker works. :blush:
+* Call a manager to explain how a broker works. :wave:
 
 #### Resources
 - [Download Mosquitto](https://everythingsmarthome.co.uk/howto/how-to-install-an-mqtt-broker-mosquitto-install-config-on-debian-ubuntu-mint-fedora-raspbian/)
@@ -141,13 +147,11 @@ If your received message, you can jump to the task 06 :tada:
 - Your Computer
 </details>
 
-You will now publish your epitech :e-mail: to the topic **/Workshop/Hardware/**.
+You will now publish your epitech :e-mail: to the topic **/Workshop/Hardware/**. <br/>
+You can find all information in the step 05 to send me your email. <br/>
+If the messages appear in my log you have successfully completed this step! <br/>
 
-You can find all information in the step 05 to send me your email.
-
-If the messages appear in my log you have successfully completed this step!
-
-Let's continue to the next step! :moon:
+Let's continue to the next step! :clap:
 
 #### Resources
 - [Publish Mosquitto](https://mosquitto.org/man/mosquitto_pub-1.html)
@@ -164,7 +168,7 @@ Let's continue to the next step! :moon:
 
 </details>
 
-We will set up network on your esp32 and understand how use MQTT.
+We will set up network on your esp32 and understand how use MQTT. <br/>
 Now you must publish and subcribe to topic with your esp32.
 
 - Create client
@@ -173,7 +177,7 @@ Now you must publish and subcribe to topic with your esp32.
 
 > :point_right: Don't forget information for the communication with the broker local.
 
-Surprise The Broker respond to you :sunglasses:
+Surprise The Broker respond to you :sunglasses: <br/>
 
 You can pass to the last step of this Workshop !
 
