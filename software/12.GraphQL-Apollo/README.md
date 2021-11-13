@@ -17,27 +17,18 @@ All the required information to start this workshop can be found in [SETUP.md](.
 ## Story
 
 Last week, your best friend told you about a great technology that allows you to create an API in just a few lines without going through the traditional architecture: GraphQL APIs.<br>
-Thanks to this technology, he had fun on the public API of Star Wars to make a small site about the different episodes and actors.<br>
+Thanks to this technology, he had fun on the public API of the World Map to make a small site about the different continents and countries.<br>
 Curious by nature and looking for something new, you decide to set up your little online store project with this new technology.
 
 ## Step 1 - Welcome to GraphQl Playground
 
-Your first reflex is to try the Star Wars API to play with Graphql and understand concepts.
+Your first reflex is to try the World Map API to play with Graphql and understand concepts.
 
-  - Go to [Star Wars API](https://hc-starwars.azurewebsites.net/playground/)
+  - Go to [World Map API](https://countries.trevorblades.com)
 
-Let's do some queries to retrieve data : 
-  - Retrieve all characters' name, height and the episodes they appear in.
-  - Retrieve the total count of reviews and all reviews' commentary and the stars
-  - Retrieve the name and id of the hero of the `JEDI` episode with all his friends' name and id
-
-It's time to discover mutation ! Let's create a new review for your favorite episode.
-  - Create a review and retrieve the episode with the review
-  - Verify that your review is presented with a simple query that you made previously
-
-Now let's play with funny queries :
-  - Retrieve the hero's id, name and height of the `EMPIRE` episode with all his friends' id, name and height. The height must be in `FOOT` unit.
-  - Create a query combination that retrieves all characters' id, name and height sort by their height in descending order `AND` also retrieve hero and friends from the `EMPIRE` episode
+Let's do some queries to retrieve data :
+  - Retrieve all continents' code, name and all their countries' code, name and capital.
+  - Retrieve the code, name, currency and its states' code and name of the country with `FR` code.
 
 ##### Resources
 
