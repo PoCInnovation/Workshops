@@ -13,9 +13,7 @@
 
 
 ## Setup:
-You can follow steps to install [Arduino IDE](https://www.arduino.cc/en/guide/linux)
-
-Also configure your Arduino IDE for [ESP32](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/)
+- [SETUP](../SETUP.md)
 
 ## **`Step 01`** - Turn on an LED
 
@@ -34,7 +32,7 @@ Also configure your Arduino IDE for [ESP32](https://randomnerdtutorials.com/inst
 **Instruction**: Your first objective is to light an LED with your ESP32 without code.
 >**Constraints**: You don't have to produce any code for this execise. You may not use the 3.3V pin of your board.
 
-#### Resources
+### 📚 Documentation:
 - [Basics Electronics](https://www.physicsclassroom.com/class/circuits/Lesson-2/Electric-Current)
 - [What is resistor ?](https://learn.sparkfun.com/tutorials/resistors/all)
 - [How Work Breadboard ?](https://www.sciencebuddies.org/science-fair-projects/references/how-to-use-a-breadboard)

@@ -5,13 +5,9 @@ Les exercices devront être réalisés dans l'ordre et présentés à un encadra
 
 Même si l'accès à des tutoriels sur internet est autorisé, nous vous conseillons de réfléchir par vous-même aux exercices.
 
-Merci de télécharger :
+Merci de suivre:
 
-* [Arduino IDE](https://www.arduino.cc)
-
-Si vous utilisez un carte de type ESP 32 (généralement non):
-
-* Configurer IDE Arduino pour les boards [ESP32](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/)
+* [SETUP](../SETUP.md)
 
 Si vous êtes intéressé par des vidéastes traitant de l'électronique/hardware en voici une liste :
 
@@ -20,8 +16,7 @@ Si vous êtes intéressé par des vidéastes traitant de l'électronique/hardwar
 * This old Tony
 * NYC CNC
 * Electroboom
-  
-     
+       
 ## Préambule
 
 Merci de lire/regarder

@@ -1,20 +1,25 @@
 # WORKSHOP_BLE_ESP32
 
 ## Summary
-- [Setup](#setup)
-- [**Step 01** - Turn on an LED](#step-01---turn-on-an-led)
-- [**Step 02** - LED flash](#step-02----led-flash)
-- [**Step 03** - Set BLE server](#step-03---Set-BLE-server)
-- [**Step 04** - Set Client with your phone](#step-04---Set-Client-with-your-phone)
-- [**Step 05** - Chat Client/Server](#step-05---chat-clientserver)
-- [**Step 06** - Waiting for a message](#step-06---Waiting-for-a-message)
-- [**Step 07** - Scan BLE](#step-07---Scan-BLE)
+- [WORKSHOP_BLE_ESP32](#workshop_ble_esp32)
+  - [Summary](#summary)
+  - [Setup:](#setup)
+  - [**`Step 01`** - Turn on an LED](#step-01---turn-on-an-led)
+    - [📚 Documentation:](#-documentation)
+  - [**`Step 02`** -  LED flash](#step-02----led-flash)
+  - [**`Step 03`** - Set BLE server](#step-03---set-ble-server)
+    - [📚 Documentation:](#-documentation-1)
+  - [**`Step 04`** - Set Client with your phone](#step-04---set-client-with-your-phone)
+  - [**`Step 05`** - Chat Client/Server](#step-05---chat-clientserver)
+  - [**`Step 06`** - Waiting for a message](#step-06---waiting-for-a-message)
+  - [**`Step 07`** - Scan BLE](#step-07---scan-ble)
+    - [📚 Documentation:](#-documentation-2)
+  - [:tada: Congratulation !](#tada-congratulation-)
+  - [Authors](#authors)
 
 
 ## Setup:
-You can follow steps to install [Arduino IDE](https://www.arduino.cc/en/guide/linux)
-
-Also configure your Arduino IDE for [ESP32](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/)
+- [SETUP](../SETUP.md)
 
 ## **`Step 01`** - Turn on an LED
 
@@ -33,7 +38,7 @@ Also configure your Arduino IDE for [ESP32](https://randomnerdtutorials.com/inst
 **Instruction**: Your first objective is to light an LED with your ESP32 without code.
 >**Constraints**: You don't have to produce any code for this exercise. You may not use the 3.3V pin of your board.
 
-#### Resources
+### 📚 Documentation:
 - [Basics Electronics](https://www.physicsclassroom.com/class/circuits/Lesson-2/Electric-Current)
 - [What is resistor ?](https://learn.sparkfun.com/tutorials/resistors/all)
 - [How Work Breadboard ?](https://www.sciencebuddies.org/science-fair-projects/references/how-to-use-a-breadboard)
@@ -74,7 +79,7 @@ We will create a Bluetooth server with our ESP32.
 To verify that your server is created, take your phone and look at the Bluetooth networks.
 If you manage to connect to yours, go to the next step!
 
-#### Resources
+### 📚 Documentation:
 - [BLE Server](http://www.neilkolban.com/esp32/docs/cpp_utils/html/class_b_l_e_server.html)
 ## **`Step 04`** - Set Client with your phone
 
@@ -161,7 +166,7 @@ We will now create a bluetooth scanner with a second ESP32.
 
 If you find the name of your BLE server in the monitor of your scanner, you have succeeded!
 
-#### Resources
+### 📚 Documentation:
 - [Scan BLE](http://www.neilkolban.com/esp32/docs/cpp_utils/html/class_b_l_e_scan.html)
 
 ## :tada: Congratulation !
