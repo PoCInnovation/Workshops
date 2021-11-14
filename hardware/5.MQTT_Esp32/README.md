@@ -91,8 +91,6 @@ Integred conditional state for print Wi-fi and Ip Address of your device. <br/>
 
 ### 📌 Tasks:
 
-- Create an Access Point named: `MQTT_{yourName}`
-  - with a `password` only you know
 - Print `ip` of your board in `serial monitor`
 
 ### 📚 Documentation:

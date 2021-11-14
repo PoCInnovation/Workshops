@@ -31,13 +31,19 @@ Creation of your own Server local and Scanner:
 - Interact with microcontrollers
 - have an overview of electronics
 
-## 5: [Initiation MQTT_ESP32](./5.MQTT_Esp32/README.md)
+## 5. [Initiation MQTT_ESP32](./5.MQTT_Esp32/README.md)
 Creation of your own Broker Local:
 - SetUp Wi-fi with Esp32
 - Subcribe and publish data on topics
 - Interact with Broker
 - Redirection topic and data
 - Configuration of Esp32 and Raspberry pi
+
+## 6. [IFTTT MQTT_ESP32](./6.MQTT_with_IFTTT_Esp32/README.md)
+- SetUp Wi-fi with Esp32
+- Subcribe and publish data on topics
+- Use Adafruit
+- Use IFTTT
 
 <h2 align=center>
 Organization
