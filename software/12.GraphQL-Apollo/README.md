@@ -84,17 +84,17 @@ To start the project, execute the following commands :
 
 With yarn
 ```shell
-$ yarn # Install dependencies
-$ yarn migrate # Init database and prisma client
-$ yarn dev # Start server in developer mode
+yarn # Install dependencies
+yarn migrate # Init database and prisma client
+yarn dev # Start server in developer mode
 ```
 
 With npm
 
 ```shell
-$ npm install # Install dependencies
-$ npm run migrate # Init database and prisma client
-$ npm run dev # Start server in developer mode
+npm install # Install dependencies
+npm run migrate # Init database and prisma client
+npm run dev # Start server in developer mode
 ```
 
 
@@ -210,8 +210,8 @@ Your directory should have the following structure :
 
 To start the project, execute the following commands :
 ```shell
-$ yarn # Install dependencies
-$ yarn start # Start server in developer mode
+yarn # Install dependencies
+yarn start # Start server in developer mode
 ```
 
 The objective is to have a simple front with a menu that shows the list of all products.
