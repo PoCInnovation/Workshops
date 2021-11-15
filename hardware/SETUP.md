@@ -26,6 +26,17 @@ sudo ./install.sh
 
 ## To be able to communicate with the USB
 
+You will need to add your user to a group in order to have the rights to communicate with the device (ESP32 or Arduino Uno).
+After adding yourself to the group, you need to reboot.
+
+### On Fedora
+
 ```shell
-sudo usermod -a -G dialout $USER
+sudo usermod -aG dialout $(whoami)
+```
+
+### On Other Distros
+
+```shell
+sudo usermod -aG uucp $(whoami)
 ```
