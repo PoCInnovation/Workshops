@@ -47,11 +47,8 @@ Download the [source](./sources/backend.zip) and extract it in the `backend` fol
 Your directory should have the following structure :
 
 ```shell
-.
-├── package.json # Package manager
 ├── prisma
 │   └── schema.prisma # Database
-├── source-backend.zip # Remove this
 ├── src
 │   ├── context.ts # Integrate database to API Context
 │   ├── feeds
@@ -76,6 +73,10 @@ Your directory should have the following structure :
 │   │   └── schema.graphql # GraphQL schema
 │   ├── schema.ts # Compute schema and resolver
 │   └── server.ts # Apollo Server
+├── .eslintrc.js # Code-quality rules
+├── .gitignore # Tells git which files (or patterns) it should ignored
+├── .prettierrc.js # Code formatting rules
+├── package.json # Package manager
 ├── tsconfig.json # Typescript configuration
 └── yarn.lock # Dependencies file
 ```
@@ -187,25 +188,24 @@ Download the [source](./sources/frontend.zip) and extract it in the `frontend` f
 Your directory should have the following structure :
 
 ```shell
-├── package.json # Package manager
 ├── public # Public directory with not important stuff
-├── source-front.zip
 ├── src 
-│   ├── Api # API connection and types definition
+│   ├── api # API connection and types definition
 │   │   ├── client.ts
 │   │   └── Entities.ts
-│   ├── AppBar # Top bar
-│   │   └── AppBar.tsx
-│   ├── App.css 
-│   ├── App.test.tsx
-│   ├── App.tsx # App root
+|   ├── app
+│   │   ├── App.css
+│   │   └── App.tsx # App root
+|   ├── components
+│   │   └── AppBar.tsx # Top Bar
 │   ├── index.css
 │   ├── index.tsx # Index
-│   ├── react-app-env.d.ts
-│   ├── reportWebVitals.ts
-│   └── setupTests.ts
+│   └── react-app-env.d.ts
+├── .gitignore # Tells git which files (or patterns) it should ignored
+├── package.json # Package manager
+├── README.md # Default README.md when creating a React App
 ├── tsconfig.json # Typescript config
-└── yarn.lock # Dependencies lock
+└── yarn.lock # Dependencies lock 
 ```
 
 To start the project, execute the following commands :
