@@ -29,13 +29,13 @@ sudo ./install.sh
 You will need to add your user to a group in order to have the rights to communicate with the device (ESP32 or Arduino Uno).
 After adding yourself to the group, you need to reboot.
 
-### On Fedora
+### On Fedora, Ubuntu and most Distros
 
 ```shell
 sudo usermod -aG dialout $(whoami)
 ```
 
-### On Other Distros
+### On Archlinux and Arch-Based Distros (Manjaro, EndeavourOs, etc...)
 
 ```shell
 sudo usermod -aG uucp $(whoami)
