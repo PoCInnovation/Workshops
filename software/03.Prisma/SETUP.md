@@ -34,7 +34,7 @@ There are 5 important files in the `stater` folder:
 
 You can also display the database via a web interface:
 ```sh
-npx prisma studio --experimental
+npx prisma studio
 ```
 
 ## Prisma in javascript code
