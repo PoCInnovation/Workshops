@@ -69,7 +69,11 @@ Discover one of the most popular supervised learning methods for classification 
 - Create a Decision Tree
 - Create a Decision Tree Forest
 
-
+## 9 - Predict house price 🗺️
+Use different machine learning techniques to predict house prices. You will:
+- Use Scikit-learn
+- Create neural networks with PyTorch
+- Evaluate your algorithms
 
 Feel free to ask us any questions.
 
