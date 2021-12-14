@@ -56,20 +56,23 @@ It should have the following architecture :
 
 ```shell
 .
-├── package.json  # Package manager
-├── pages         # Javascript source code
+├── pages              # Javascript source code
 │  ├── api
-│  │ └── hello.js # Simple backend route
-│  ├── _app.js    # Component
-│  └── index.js   # Index
-├── public        # Assets
+│  │ └── hello.js      # Simple backend route
+│  ├── _app.js         # Component
+│  └── index.js        # Index
+├── public             # Assets
 │  ├── favicon.ico 
 │  └── vercel.svg
-├── README.md     # Starter help
-├── styles        # Styles
+├── styles             # Styles
 │  ├── globals.css
 │  └── Home.module.css
-└── yarn.lock     # Dependencies manager
+├── .eslintrc.json     # Code-quality rules
+├── .gitignore         # Tells git which files (or patterns) it should ignored
+├── next.config.js     # Next JS config
+├── package-lock.json  # Dependencies manager
+├── package.json       # Package manager
+└── README.md          # Starter help          
 ```
 
 Thanks [NextJS](https://nextjs.org/) we can both develop the frontend and the backend of our application.
@@ -98,7 +101,7 @@ In `api` folder, create a file `ping.js` that will just respond `pong` when you 
 If you've done everything good, you should reach your endpoint through `http://localhost:3000/api/ping`. The command below should print `Success`.
 
 ```shell
-$ curl -s http://localhost:3000/api/ping | grep "pong" > /dev/null && echo "Success" || echo "Fail"
+curl -s http://localhost:3000/api/ping | grep "pong" > /dev/null && echo "Success" || echo "Fail"
 ```
 
 #### Hello dude !
@@ -208,7 +211,7 @@ Push your work and share your `website url` to your friends, so they can be impr
 
 It's time to retrieve your posts and share it with the rest of the world.
 
-To do it, you know the recipe, just create a new component named `Posts` and a `stylesheet` named `posts.module.css`.
+To do it, you know the recipe, just create a new component named `Posts` and a `stylesheet` named `Posts.module.css`.
 
 You will also need to fetch your data from your API. This [documentation](https://nextjs.org/docs/basic-features/data-fetching) can help you to do it.
 
