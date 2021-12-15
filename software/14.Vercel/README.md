@@ -147,7 +147,7 @@ Your post must be represented like the following object :
 ```
 
 Originally, you should store your data in a [database](https://en.wikipedia.org/wiki/Database) but it would be long so we will just store it.<br>
-Create a file named `resources.js` that export a variable that store data in an array named `posts`.
+Create a file named `resources.js` that export a variable that stores data in an array named `posts`.
 
 Create a file `posts.js` in `api` that will be our [REST endpoint](https://www.sitepoint.com/rest-api/) to manage posts.
 
