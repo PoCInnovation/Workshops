@@ -165,7 +165,7 @@ It must :
 
 > :bulb: You can use [Postman](https://www.postman.com/) to test your API.
 >
-> :bulb: You should create some `fake datas` to easily feed your frontend during next steps
+> :bulb: You should create some `fake data` to easily feed your frontend for the next step
 
 #### Deploy
 
