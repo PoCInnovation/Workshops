@@ -138,6 +138,7 @@ IFTTT is shorthand for If This Then That; it's an automation tool for connecting
 - The eternal choice between IOS and Android ! 
   - If you have an **Android** this step will be much easier in the `"If this"` add `"Google assistant"` and fill in the fields.
   - If you have an **iPhone** follow this [link](https://help.ifttt.com/hc/en-us/articles/360053753113-Use-Siri-to-Run-IFTTT-Applets) to use `siri`.
+    - [Here your private key for webhooks](https://ifttt.com/maker_webhooks)
 - In the `"Then That"` add `Adafruit` and fill in the fields as follows:
   - **Feed Name**: on_off
   - **Data to save**: on
