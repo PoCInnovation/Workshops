@@ -122,7 +122,7 @@ go run main.go "-h"
 ```
 Should print:
 ```shell
-go run main.go "-h"
+# Display help
 exit status 1
 ```
 
