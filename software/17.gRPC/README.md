@@ -141,7 +141,7 @@ During this step, you will implement this interface and its method, `Send`.
 - Create a `server.go` in the `server` folder
 - In the `server/server.go` file, create a `Server` structure which contains nothing for the moment
 - Create a `Send` method for the `Server` structure which takes the same arguments as the `Send` method of the 
-  `MessengerServiceServer` structure
+  `MessengerServiceServer` interface
   
   - Print the content received with the following format: `[SERVER]: received {body} at {date}`
   - Return the following message to the client: `hello from server !` with the current date as a UNIX timestamp
