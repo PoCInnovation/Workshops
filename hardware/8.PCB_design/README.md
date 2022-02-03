@@ -42,14 +42,14 @@ Most electrical components are available under different formats :
 - [Through-hole](https://en.wikipedia.org/wiki/Through-hole_technology)
   Every component you might have used until now is part of this category, for
   exemple, a reistor.
-  ![](img/resistors-on-green-pcb-through-hole.png "Through hole resistor shema")
+  ![](../.3d_model/resistors-on-green-pcb-through-hole.png "Through hole resistor shema")
   In order to use them the board you are using must be perforated.
 
 - [SMD/SMT](https://en.wikipedia.org/wiki/Surface-mount_technology):
   This component category is surface-mounted : no need to drill the boards, which
   makes it possible de reduce manufacturing costs.
   Another advantage of this category is the size of the components, way smaller
-  than the others. For exemple a resistor. ![](img/SMT_sizes.png)
+  than the others. For exemple a resistor. ![](../.3d_model/SMT_sizes.png)
 
 ## Easyeda
 
