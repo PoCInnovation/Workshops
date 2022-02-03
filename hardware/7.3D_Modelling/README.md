@@ -102,10 +102,6 @@ Or combine the previous exercises for new results.
 
 ## Authors
 
-| [<img src="https://github.com/OnsagerHe.png?size=85" width=85><br><sub>Albert VALENTIN</sub>](https://github.com/OnsagerHe) | 
-| :---: |
-<h2 align=center>
-
 | [<img src="https://github.com/Azzzen.png?size=85" width=85><br><sub>Axel ZENINE</sub>](https://github.com/Azzzen) | 
 | :---: |
 <h2 align=center>
