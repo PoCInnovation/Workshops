@@ -75,8 +75,7 @@ It's time to stay focused. :eyeglasses:
 
 ### 📌 Tasks:
 First create your empty box.
-Then adjust it to allow for a sliding
-a sliding top.
+Then adjust it to allow for a sliding top.
 
 In fact, make a box with a sliding top
 
@@ -96,7 +95,7 @@ Make a servomotor. Nothing too fancy, but try to get as close as you can to the 
 
 ## :tada: Congratulation !
 
-You now know the basics of 3D modelling. Feel free to use your imagination to implement many other forms.
+You now know the basics of 3D modelling. Feel free to use your imagination to implement many other shapes.
 Or combine the previous exercises for new results.
 
 
