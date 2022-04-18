@@ -4,7 +4,7 @@ Please make sure to read this until the end, before running any command !
 
 ## Installing necessary dependencies
 
-To run elixir, you will need to install the following versions of
+To run elixir, you will need to install the following tools:
     - [npm](https://www.npmjs.com/)
     - [node](https://github.com/nodejs/node)
     - [erlang](https://www.erlang.org/downloads)
@@ -41,6 +41,12 @@ asdf local nodejs latest
 ```
 
 ### Erlang
+
+> You will also need to install openssl-dev and ncurses-dev.
+> These are packages you can get with your Linux package manager.
+>
+> For instance on Fedora: sudo dnf install -y openssl-devel ncurses-devel
+> Or on Ubuntu: sudo apt install -y openssl-dev ncurses-dev
 
 ```bash
 asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git

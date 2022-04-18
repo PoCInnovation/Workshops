@@ -9,7 +9,7 @@ In this Workshop, you will learn:
 
 All the required information to start this workshop can be found in [SETUP.md](./SETUP.md)
 
-## Step 1 - Once upon a time...
+## Step 1 - Introduction: Once upon a time...
 
 there was a little developper (let's call him Little Timmy) who wanted to communicate with his friends.
 Rather than using Discord, or some social media, or even IRC, this developper wanted to build his chat app himself...
@@ -31,13 +31,22 @@ Thankfully using Elixir's [Live View's](https://hexdocs.pm/phoenix_live_view/Pho
 ## Step 2 -- Building your app
 
 Once everything is installed, we can build our first application.
-To bootstrap your project, you can type the following command: 
+[Mix](https://elixirschool.com/fr/lessons/basics/mix) is the Elixir's package manager.
+If you have already used `npm`, `yarn` for javascript, this should be familiar to you.
+
+Here, we will use `Mix` to bootstrap your project, you can type the following command:
 
 ```bash
+# this command will install the necessary package for Phoenix (our web framework) to work
 mix archive.install hex phx_new # Type 'Y' twice
 
+# this command creates the project structure, we specify the project's name, and
+# then we say with no-ecto that we don't need database handling,
+# with -no-gettext that we dont need automatic transltation of our front-end's output
+# and with no-mailer that we don't need a built-in email service
 mix phx.new irc_chat --module IrcChat --no-ecto --no-gettext --no-mailer --verbose # type 'Y' once
 ```
+
 
 You should get the following output:
 ```bash
@@ -59,11 +68,14 @@ You can also run your app inside IEx (Interactive Elixir) as:
 
 Try running the app, and test if everything works. You should have a welcome page on `http://localhost:4000` if everything is ok.
 
-Once we know all is working, we will need models to handle messages, and users, go to the `ird_chat` directory and type the following commands:
+Once we know all is working, we will need models to handle messages, and users.
+To to that we will need to create what's called a `channel` that will handle our `Room`, go to the `irc_chat` directory and type the following commands:
 ```bash
 mix phx.gen.channel Room # Type 'Y' once
 ```
 
+Channels are objects responsible for real-time interactions in Elixir, you can read about them [here](https://hexdocs.pm/phoenix/channels.html).
+For now, you don't need to read the whole overview, we will build a simple channel, and then you should get a feel for it.
 You should have the following output:
 ```bash
 * creating lib/irc_chat_web/channels/room_channel.ex
@@ -87,7 +99,7 @@ in your `assets/js/app.js` file:
     import "./user_socket.js"
 ```
 
-The `room_channel.ex` file handles receiving/sending messages and the `room_channel_test.exs` tests basic interaction with the channel. 
+The `room_channel.ex` file handles receiving/sending messages and the `room_channel_test.exs` tests basic interaction with the channel.
 The last two lines prompt us to import `user_socket.js` in our `app.js` file, let's do it:
 
 ```diff
@@ -101,12 +113,12 @@ import "../css/app.css"
 + import "./user_socket.js"
 ```
 
-We are also prompted to update `endpoint.ex`, to implement our channel. 
+We are also prompted to update `endpoint.ex`, to implement our channel.
 The file is stored in `lib/irc_chat_web/endpoint.ex`.
 
 A `socket /live` statemtent should at line 13, you can put your socket justunder this one.
 
-```elixir
+```diff
 defmodule IrcChatWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :irc_chat
 
@@ -120,24 +132,28 @@ defmodule IrcChatWeb.Endpoint do
   ]
 
   socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
-  socket "/socket", IrcChatWeb.UserSocket, websocket: true, longpoll: false
++  socket "/socket", IrcChatWeb.UserSocket, websocket: true, longpoll: false
 
 ...
 ```
 
 ## Step 3 -- Build the Socket Handler
 
-Next, we will need to create the piece of code to handle our socket. You can create a new file in `/lib/irc_chat_web`. It will define the `UserSocket` module, so I would advise you to name it `user_socket.ex`.
+Now that we have a fancy new socket, we need to do something with it. Let's write a piece of code for that.
+You can create a new file in `/lib/irc_chat_web`. It will define the `UserSocket` module, so I would advise you to name it `user_socket.ex`.
 
-Socket params are passed from the client and can be used to verify and authenticate a user. 
+Socket parameters are passed from the client and can be used to verify and authenticate a user.
 You can find some apt documentation [here](https://hexdocs.pm/phoenix/Phoenix.Socket.html).
 
-> Dont forget to add a `channel` for your chat room ! 
-> (Google is your friend if you don't know what that means)
+> Dont forget to add a `channel` for your chat room !
+> If you don't know what that means, or what to do, read step 2 again !
 
 ## Step 4 -- Add a chat form to the front-end
-Phoenix bundles [Miligram CSS](https://milligram.io/grids.html) by default, so you can use this to build your form ! 
-To handle front-end developpement, Phoenix (Elixir's Web Framework) uses a [Templating engine](https://www.educative.io/edpresso/what-are-template-engines). 
+Phoenix bundles [Miligram CSS](https://milligram.io/grids.html) by default, so you can use this to build your form !
+To handle front-end developpement, Phoenix (Elixir's Web Framework) uses a [Templating engine](https://www.educative.io/edpresso/what-are-template-engines), same as `Django`, `Flask`, `Next.js`, or `Laravel`.
+
+You can google those to get a feel for what a templating engine looks like. In essence, a templating engine is a way to define your front-end with dynamic elements, a programmatically set up _templates_ and _views_.
+These terms are important, you might have heard of the [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) design pattern, this is a well known standard for web developpement.
 
 Here is what I added to my template file to have a functionnal form:
 ```html
@@ -155,7 +171,7 @@ Here is what I added to my template file to have a functionnal form:
 ```
 
 This should be added in a file finishing by `.eex`.
-To know what it represents, this should be added in a specific flle: `/lib/irc_chat_web/templates/page/index.html.eex`
+To know what it does, you can add it in this file: `/lib/irc_chat_web/templates/page/index.html.eex`
 
 Try adding your own form to your template file, and make it prettier if you feel like it...
 After that, you will need to update your `lib/irc_chat_web/templates/layout/app.html.eex` and update the `<header>` tags to handle the newly added code.
