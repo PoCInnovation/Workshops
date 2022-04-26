@@ -1,0 +1,15 @@
+{
+  "short_name": "PoC : 23-Workshop Starton",
+  "name": "PoC : 23-Workshop Starton",
+  "icons": [
+    {
+      "src": "PoC.png",
+      "type": "image/png",
+      "sizes": "1000x1000"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
