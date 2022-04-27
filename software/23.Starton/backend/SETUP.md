@@ -13,6 +13,8 @@ Got to the Wallet section, create a Starton Wallet and claim faucet on Matic Pol
 You need to install Docker and Docker-Compose on your system to lunch the database. Here is a documentation for it : [Install Docker Engine](https://docs.docker.com/engine/install/), [Install Docker Compose
 ](https://docs.docker.com/compose/install/).
 
+Be carfull, after installing docker you will also need to follow this steps: [Manage Docker as a non-root user](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user), [Configure Docker to start on boot](https://docs.docker.com/engine/install/linux-postinstall/#configure-docker-to-start-on-boot)
+
 ## Install Node and Npm
 
 To start the project, you need npm and a node version >= 17.9.0. Here is documentation about it: [How To Install Node.JS On Linux](https://upstack.co/knowledge/how-to-install-node-js-on-linux), [Install npm on Linux](https://linuxconfig.org/install-npm-on-linux)

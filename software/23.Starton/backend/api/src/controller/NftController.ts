@@ -25,35 +25,35 @@ class NftController {
 
     async getUserNft(req: express.Request, res: express.Response): Promise<express.Response>
     {
-        /// Need to implement this method
+        // need to implement this method
 
-        return null
+        return null;
     }
 
     async uploadImage(nftUpload: NftUpload) : Promise<string | null>
     {
-        /// Need to implement this method
+        // need to implement this method
 
-        return null
+        return null;
     }
 
     async uploadMetadata(nftUpload: NftUpload, imgCid: string) : Promise<string | null>
     {
-        /// Need to implement this method
+        // need to implement this method
 
-        return null
+        return null;
     }
 
     async mintNft(nftUpload: NftUpload, metadataCid: string) : Promise<JSON | null>
     {
-        /// Need to implement this method
+        // need to implement this method
 
-        return null
+        return null;
     }
 
     async uploadNft(req: express.Request, res: express.Response) : Promise<express.Response>
     {
-        /// need to implement this method
+        // need to implement this method
 
         return null;
     }
