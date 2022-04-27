@@ -56,14 +56,14 @@ Your route must call the `Connection` component with the path `/login`.
 
 Congratulations, you have just finished your first step !
 
-Now, we are going to attack the heart of the project, the first step will be to implement a connection page and that can be either a `login` page or a `sign-up` page depending on the URL.
+Now, we are going to attack the heart of the project, the first step will be to implement a connection page and that can be either a `login` page or a `register` page depending on the URL.
 
-Your two components must be called from your `Connection` component, for the latter we have chosen to provide you with a good part of the code, so you will only have to modify the children of the `FormContainer` tag.
+Your two components must be called from your `Connection` component, for the latter we have chosen to provide you with a good part of the code, so you will only have to modify the children of the `ConnectionForm` tag.
 
 Your role is to make it call either the :
 - `Login` component if `pageType === 'login'` 
 or
-- `SignUp` if `pageType === 'signup'`.
+- `SignUp` if `pageType === 'register'`.
 
 **This also means that you have to link this with your router.**
 
@@ -75,7 +75,7 @@ This one is quite simple, you just need to implement a form containing an input 
 
 > Be careful with each styled component that you will implement, it is important to keep in mind a responsiveness dimension. A good way to test this is to open your web console.
 
-When a user presses the login button, you must call the function to connect with your backend.
+When a user presses the login button, you must call the function `useLogin` to connect with your backend.
 
 You will have to implement a form without using the classic HTML tag, in our case we will use simple HTML `<input>` tags with the following `props`:
 - value
@@ -110,9 +110,9 @@ Add to the Login component a form allowing to connect by filling it with your em
 - [Input docs](https://developer.mozilla.org/fr/docs/Web/HTML/Element/Input)
 - [Responsive Design](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
 
-### The `SignUp` component
+### The `Register` component
 
-_**Now go to the `SignUp` component.**_
+_**Now go to the `Register` component.**_
 
 This one is similar to the previous component, you are asked almost the same thing.
 But this time you will have to add some **extra fields**.
@@ -125,8 +125,10 @@ You must implement the **four fields** below:
 
 You will still need to implement your form, using States.
 
-The only difference is that when you click on the sign-up button, you will have to
+The only difference is that when you click on the register button, you will have to
 register the user, but also create a `Smart Contract` for them.
+
+To do this you need to look at and call the functions `useRegister` and `useSmartContract`.
 
 > Let's do a quick recap of what we have at this point. For now, your users can log in from the `/login` URL with their email address and password. But also create an account if needed and directly connect it to their wallet via the URL `signup`.
 
@@ -134,7 +136,7 @@ register the user, but also create a `Smart Contract` for them.
 
 _**Take a look at the `Dashboard` component.**_
 
-We land in your users' space. In fact, this is your first step. You need to get your users to this page once they've logged in.
+We land in your users space. In fact, this is your first step. You need to get your users to this page once they've logged in.
 
 > We also remind you that at the bottom of each step documentation is available.
 
@@ -142,25 +144,53 @@ The idea is to create a space where each user will be able to visualize all his 
 
 In order to do this, add a button allowing you to `Log out` in the `TopBar`.
 
-You will now retrieve all the user's NFTs and display them in a grid.
+Parfait ! Il est l'heure de créer votre bouton pour ajouter un nouveau NFT. Ce bouton doit ressembler à cela (IMAGE).
+
+Vous devez créer ce bouton dans le composant `ViewNft` dans le `NftManager`. 
+
+Au moment où un utilisateur clique sur ce bouton vous devez set le status de la page à `create`.
+
+Une fois que cela est implémenté, à ce stade vous devriez avoir une page blanche avec votre top bar.
+Cela signifie bien que vous êtes sur votre page de création.
+
+Cette page doit vous permettre d'upload un nouveau NFT. 
+
+Pour cela, elle doit proposer un formulaire à l'utilisateur, contenant les informations suivantes :
+
+- name
+- nftName
+- description
+- receiverAddress
+- image (vous devez trouver un moyen d'import une image et de la transformer en buffer de base64)
+
+D'ailleurs après que l'utilisateur ait remplie toutes ses données, vous devez appeler la fonction `useNftUpload`.
+
+Vous remarquerez également que cette denière prend exactement les mêmes paramètres que ceux demandé précédemment.
+
+Une fois que l'utilisateur à créer un nft, vous devez set le status de la page à `view`;
+
+#### A little help with documentation :
+- 
+
+## Step 3: Afficher tout vos NFT
+
+Maintenant que vous savez créer des NFT. Il serait très pratique de pouvoir tous les visualisers.
+
+Pour cela rendez-vous de nouveau dans le composant `ViewNft` dans le `NftManager`.
+
+Après votre bouton de création, vous allez devoirs ajouter l'ensemble des NFT de l'utilisateur.
+
+Vous devez utiliser la fonction `useNft`, elle permet justement de récupérer les nft de l'utilisateur.
+
+Regardez son type de retour, et afficher chaque élément du tableau dans votre composant. l'idée serait de faire une grille d'image.
+
+L'idéal est que cela devrait être positionné comme cela (IMAGE).
 
 To do this you will have to use the `map` method of an array.
+
+Pour les récupérer votre image renseigner vous sur la façon de transformer un buffer base64 en `HtmlImageElement`.
 
 #### A little help with documentation :
 - [Router navigation](https://v5.reactrouter.com/web/api/history)
 - [Mapping over an array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 - [CSS grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout)
-
-## Step 3: Interaction with your NFTs
-
-You will have to add a button with the same shape as an NFT, this one will allow your users to create a new NFT.
-
-Implement a new page that will be opened when the user wants to create a new NFT.
-
-We will develop this page later in this workshop.
-
-You also need to implement a new page to be opened when you click on an NFT.
-This page allows you to better visualize the NFT in question, but also to delete it.
-
-
-Good job ! We can now send a message with our Nft to be rescued ! Youhou, I'm not going to get thrown away ! 

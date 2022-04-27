@@ -4,10 +4,10 @@ interface LoginProps {
 
 }
 
-const Login = ({   }: LoginProps): JSX.Element => {
+const Login = ({  }: LoginProps): JSX.Element => {
   return (
     null
-  );
+  )
 };
 
 export default Login;
