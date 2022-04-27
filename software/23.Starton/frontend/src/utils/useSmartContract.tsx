@@ -18,13 +18,10 @@ const useSmartContract = async ({ dashboardName, name, metadataName, description
       metadataName,
       description,
     });
-    if (response && response.status === 200) {
-      console.log(response);
-      return true;
-    }
-    return false;
+    return response.status === 200;
   } catch (error) {
-    console.warn(error)
+    console.error(error);
+    return false;
   }
 };
 

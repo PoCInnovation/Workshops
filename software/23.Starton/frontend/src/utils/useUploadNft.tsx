@@ -20,13 +20,10 @@ const useUploadNft = async ({ name, nftName, description, receiverAddress, image
       description,
       receiverAddress
     });
-    if (response && response.status === 200) {
-      console.log(response);
-      return true;
-    }
-    return false;
+    return response.status === 200
   } catch (error) {
-    console.warn(error)
+    console.error(error);
+    return false;
   }
 };
 

@@ -2,35 +2,35 @@
 
 ## 1. Install
 
-Rendez-vous dans le dossier `frontend`
+Go to the `frontend` folder
 
 ```shell
     cd frontend
     npm install
 ```
 
-## 2. Lancement du projet
+## 2. Start your project
 
-Pour lancer votre projet vous pouvez faire un :
+To start your project you can do:
 
 ```shell
     npm start
 ```
 
-Pour vérifier que tout fonctionne correctement, ouvrer `http://localhost:3000/hello`.
+To check that everything is working properly, open `http://localhost:3000/hello`.
 
-Vous devez avoir cette page qui s'affiche :
+You should have this page displayed:
 (IMAGE)
 
 ## 3. Start workshop
 
 [Go back to the exercise](./README.md)
 
-## En cas d'erreur
+## In case of an error
 
-Si jamais, même après avoir redémarré votre IDE et actualiser votre page web, vous avez une erreur par rapport à vos packages.
+If even after restarting your IDE and updating your web page, you have an error with your packages.
 
-Vous pouvez essayer de les installés manuellement (Attention cette étape n'est normalement pas nésésaire) :
+You can try to install them manually (there is usually no need to do this):
 
 ```shell
   npm i styled-components
@@ -43,10 +43,10 @@ Vous pouvez essayer de les installés manuellement (Attention cette étape n'est
   npm i
 ```
 
-Maintenant vous pouvez essayer de relancer votre projet.
+You can try to restart your project with:
 
 ```shell
    npm start 
 ```
 
-En cas de problème, contacter un encadrant PoC.
+If you have any problems, you can contact a PoC supervisor.
