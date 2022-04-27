@@ -11,7 +11,7 @@ The React library is one of the most used and popular, having a very important p
 Using TypeScript against JavaScript is the best thing that could happen to you.
 
 TypeScript is :
-* 💪 More reliable 
+* 💪 More reliable
 * 🎯 More explicit thanks to its types
 * ↔️ TypeScript and JavaScript are practically interchangeable
 
@@ -144,51 +144,50 @@ The idea is to create a space where each user will be able to visualize all his 
 
 In order to do this, add a button allowing you to `Log out` in the `TopBar`.
 
-Parfait ! Il est l'heure de créer votre bouton pour ajouter un nouveau NFT. Ce bouton doit ressembler à cela (IMAGE).
+Perfect ! It is now time to create your button to add a new NFT. This button must look like this (IMAGE).
 
-Vous devez créer ce bouton dans le composant `ViewNft` dans le `NftManager`. 
+You must create this button in the component `ViewNft` in the `NftManager`.
 
-Au moment où un utilisateur clique sur ce bouton vous devez set le status de la page à `create`.
+When a user clicks on this button, you must set the page status to `create`.
 
-Une fois que cela est implémenté, à ce stade vous devriez avoir une page blanche avec votre top bar.
-Cela signifie bien que vous êtes sur votre page de création.
+When this is implemented, you should have a white page with your topbar. This means that you are on your creation page.
 
-Cette page doit vous permettre d'upload un nouveau NFT. 
+This page must allow you to upload a new NFT.
 
-Pour cela, elle doit proposer un formulaire à l'utilisateur, contenant les informations suivantes :
+In order to do this, it must propose a form to the user, containing the following informations :
 
 - name
 - nftName
 - description
 - receiverAddress
-- image (vous devez trouver un moyen d'import une image et de la transformer en buffer de base64)
+- image (you have to find a way to import an image and to transform it into a base64 buffer)
 
-D'ailleurs après que l'utilisateur ait remplie toutes ses données, vous devez appeler la fonction `useNftUpload`.
+By the way, after the user has fill all his datas, you need to call the function `useNftUpload`.
 
-Vous remarquerez également que cette denière prend exactement les mêmes paramètres que ceux demandé précédemment.
+You will also notice that this function take the exact same parameters that the ones asked previously.
 
-Une fois que l'utilisateur à créer un nft, vous devez set le status de la page à `view`;
+Once the user created his NFT, you must set the page status to `view`;
 
 #### A little help with documentation :
 - 
 
-## Step 3: Afficher tout vos NFT
+## Step 3: Display all your NFTs
 
-Maintenant que vous savez créer des NFT. Il serait très pratique de pouvoir tous les visualisers.
+Now that you know how to create NFTs. It would be very useful to display them all.
 
-Pour cela rendez-vous de nouveau dans le composant `ViewNft` dans le `NftManager`.
+To do this go back to the `ViewNft` component in the `NftManager`.
 
-Après votre bouton de création, vous allez devoirs ajouter l'ensemble des NFT de l'utilisateur.
+After your create button, you will have to add all the user's NFTs.
 
-Vous devez utiliser la fonction `useNft`, elle permet justement de récupérer les nft de l'utilisateur.
+You need to use the `useNft` function, it allows you to retrieve the user's nft.
 
-Regardez son type de retour, et afficher chaque élément du tableau dans votre composant. l'idée serait de faire une grille d'image.
+Look at its return type, and display each element of the array in your component. The idea would be to make an grid of images.
 
-L'idéal est que cela devrait être positionné comme cela (IMAGE).
+Ideally it should be positioned like this (IMAGE).
 
-To do this you will have to use the `map` method of an array.
+In order to do this you will have to use the `map` method of an array.
 
-Pour les récupérer votre image renseigner vous sur la façon de transformer un buffer base64 en `HtmlImageElement`.
+To retrieve your image find out how to turn a base64 buffer into a `HtmlImageElement`.
 
 #### A little help with documentation :
 - [Router navigation](https://v5.reactrouter.com/web/api/history)
