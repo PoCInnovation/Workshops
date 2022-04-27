@@ -77,6 +77,9 @@ Here is an article about router in express: [How to Build a REST API With Expres
 
 Here is an article about middleware in express: [Express middleware: A complete guide](https://blog.logrocket.com/express-middleware-a-complete-guide/)
 
+Here is documentation about using Postman for testing routes. Here it is : [API Testing with Postman
+](https://cubettech.com/resources/blog/api-testing-with-postman/) 
+
 ### 2 - Comunicate with the starton api
 
 The first step of the creation of our Nft's is to create a Smart Contract capable of saving Nfts.
@@ -189,4 +192,4 @@ Your Jobs:
 
     - Test if your implementation is working
 
-Bip boop bip boop boop. Congratulations ! The backend part is now functional but the job is not finished: go back to the first README.md to see the next !
+Bip boop bip boop boop. Congratulations ! The backend part is now functional but the job is not finished: go back to the first README.md to see the next !  
