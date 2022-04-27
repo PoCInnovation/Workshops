@@ -1,16 +1,6 @@
-# Workshop 23 - Starton 🚀
-
-✔ Learn how to create a website in Typescript with React.
-️
-
-✔ Create a real Frontend with styled-component in css.️
-
-
-✔ Create a modern and responsive website.
-
-
 ## Introduction
-To date, there are many technologies available in order to create a website.
+
+*Rob the robot* 🤖: Bip boop bip boop boop... To date, there are many technologies available in order to create a website.
 The React library is one of the most used and popular, having a very important place in the world and being carried by Facebook.
 
 Using TypeScript against JavaScript is the best thing that could happen to you.

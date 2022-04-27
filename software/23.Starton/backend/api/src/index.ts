@@ -1,7 +1,7 @@
 import express from 'express'
-import smartContracts from "./router/smartContractRouter";
-import nft from "./router/nftRouter"
-import user from "./router/userRouter"
+import smartContracts from "./routes/smartContractRouter";
+import nft from "./routes/nftRouter"
+import user from "./routes/userRouter"
 import initClientDbConnection from './services/mongo';
 import auth from './middleware/auth'
 

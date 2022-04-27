@@ -1,15 +1,12 @@
-# Introduction
-
-*Rob the robot* 🤖: Bip boop bip boop boop, mayday ! mayday ! Wake up, engineer of the Black Raven starship ! We just hit an asteroid, the kernel of the backend and frontend system is totally damaged ! We need it to navigate and communicate with Nfts in the entire galaxy. We need you to fix that !
-
 # Part 1 : repair the backend
 
 ## Step 0 : Damage Recognition
 
-Humm... I see you’ve lost your memory. I will help you to fix the system.
+*Rob the robot* 🤖: Bip boop bip boop boop... Humm... I see you’ve lost your memory. I will help you to fix the system. Before starting, we need to config our engineer tools, go to the config.md file and folow steps to setup your engineer system. 
 
-First of all, we will begin with the backend.
-Let's check the extend of the dammage !
+I will slee... huum... I mean meditate while you do this.
+
+Zzzzzzz... (sighing) Ooh you finshed. It's time to work, let's check the extend of the damage !
 
 ### 1 - The backend's root
 
@@ -35,138 +32,56 @@ These folders contain files that each have a specific role :
 
     - The models folder concerns each models that we use for creating documents in our database
 
-    - The router folder concerns the implementation of all api's endpoints
+    - The routes folder concerns the implementation of all api's endpoints
 
     - The services folder concerns all the services used by the application.
 
 The index.ts file is the entrypoint of our application
 
-## Step 1 : User handling and authentification
+## Step 1: Creating a smart contract
 
-To be able to interact with other users of the blockchain with our Nft messages, we need them to be able to identify themselves.
+The authentication as not been damaged, so we can directly start the process of our Nft publication.
 
-### 1 - Interaction with the database
+### 1 - Creates routes for Smarts contracts
 
-First of all, go to the file `src/controller/UserData.ts`. This file has for role to interact with our Mongo database, and to be able to insert, modify, delete
-users. Inside, you will find the UserData class and the following methods:
+Go to the `src/routes/smartContractRouter.ts`
 
-    - getById
-    - register
-    - login
-    - update
-    - delete
+oh what a disaster ! all routes has been destroyed ! We need to fix that !
 
-Each method designates an action that we want to do with our database. These methods require the model UserShemma.ts present in the Models folder. You also need the UserDataDto interface as the return type of your methods.
+To allow the frontend app to indicate to our backend to do an action, we need to create an endpoint for it.
 
-Your Job :
+An endpoint is composed by the type of the request and a path which indicates informations about the action in question. An endpoint can also receive additionals informations in its body or header.
 
-    - Implement missing methods
+For example, if we want to create an endpoint about getting informations on a user with his id, we will probably create the endpoint:
+    
+    GET /user/id
 
-Pro tips: 
 
-MongoDb is a database which we interact with in an asynchronous way. Here is an article about the subject: [Learn await/async](https://www.freecodecamp.org/news/javascript-async-await-tutorial-learn-callbacks-promises-async-await-by-making-icecream/)
-
-The mongo [findById](https://mongoosejs.com/docs/api/model.html#model_Model.findById), [findOne](https://mongoosejs.com/docs/api/model.html#model_Model.findOne), [create](https://mongoosejs.com/docs/api/model.html#model_Model.create), [save](https://mongoosejs.com/docs/api/model.html#model_Model-save), [deleteOne](https://mongoosejs.com/docs/api/model.html#model_Model.deleteOne) methods provided by the mongoose library in the UserShemma.ts will be very helpfull.
-
-### 2 - Retrieving queries and sending new responses.
-
-You have finished implementing interactions with the database. Now, it will be necessary to recover the different requests received by the api.
-
-Open the file "src/controller/UserController.ts".
-
-Oh, lucky you ! Just part of the file has been damaged !
+When an endpoint is requested, its mission is to give a response with informations or error codes.
 
 Your Job:
 
-    - Implement missing methods.
+    - Recreates routes who calls methods corresponding of the SmartContractController.ts
+
+    - Check the middleware inside the auth.ts file in the middleware section of our api. Its role is to check if the token of the user who calling the route is valid or not.
+
+    - Call your router in the index.ts file in the app.use. Don't forget to use the auth middleware in between the path and your router in this method. We don't want any unauthorized persson to access on it.
+
+    - Use postman to test your routes.
 
 Pro tips:
 
-It is important to send the correct response code with your api. I strongly advise you to take a look at this article: [HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+For more informations about Http responses and requests check this documentation: [HTTP request methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods), [HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
 
-Here is a documentation about how to receive requests and send responses. [ExpressJS Request & Response
-](https://www.pabbly.com/tutorials/express-js-request-response/)
+Here is an article about router in express: [How to Build a REST API With Express JS and Typescript - Part II (Organising Routes)](https://medium.com/geekculture/how-to-build-a-rest-api-with-express-js-and-typescript-part-ii-organising-routes-ee293eeb16eb)
 
-### 3 - Implementation of new endpoints
+Here is an article about middleware in express: [Express middleware: A complete guide](https://blog.logrocket.com/express-middleware-a-complete-guide/)
 
-You’re ready for it! Now that you have implemented the controller part we need to expose new endpoints to let the interface interact with our backend.
+### 2 - Comunicate with the starton api
 
-Navigate to the "src/Router/userRoute.ts" file
+The first step of the creation of our Nft's is to create a Smart Contract capable of saving Nfts.
 
-Your Job :
-
-    - Create the following endpoints and apply the corresponding controller methods:
-
-            - GET '/id/:id'
-
-            - PUT '/register'
-
-            - GET '/home
-
-            - PATCH '/update'
-
-            - DELETE '/id/:id'
-
-        - Once finished, we must indicate to our index.ts that our router exists:
-
-            - import your router 
-            
-            - call the method .use the app variable
-
-            - Insert middleware between route and router.
-        
-        - Start the backend with the command npm run dev
-
-        - Test your endpoints with Postman.
-
-        - Test if informations of each user are stored correctly in mongoDb. Check that with the help of the mongo express interface avaible at.
-
-Pro tips:
-
-Here is an article about router in express : [How to Build a REST API With Express JS and Typescript - Part II (Organising Routes)](https://medium.com/geekculture/how-to-build-a-rest-api-with-express-js-and-typescript-part-ii-organising-routes-ee293eeb16eb)
-
-### 4 - Users authentication
-
-Congratulation ! You can now create, modify, and remove users. However, we are missing one crucial step: authentication. 
-
-A middleware is a function that allows interaction with informations which transit in a function call. They are very useful in user verification because they can prevent the execution of an endpoint if the user does not have the right token of identification. This is the role of our auth middleware present in the middleWares folder in `auth.ts`.
-
-Your Job: 
-
-    - Navigate to the middleware section of the project and open the auth.ts file.
-
-    - Create a route in the index.ts file with the path "/helloWorld" which returns as response a status 0K with the message "hello world"
-
-    - Test your route
-
-    - Put your middleware in between the route and the callback response function.
-
-    - You should now receive an error "403 No acces token provided"
-
-As you can see, your users can not yet prove that they are who they pretend to be or not to be ;) but don't panic we will see this together.
-
-Going back to our UserData.ts folder, we will add some changes to our methods.
-
-Your Job:
-
-    - We will use the jsonWebToken library to generate a new token when the user logs in, or is created. This token will be based on the user id and the TOKEN_SECRET environment variable. We need to implement that in login and register methods.
-
-    - then in a second step we will use the bcrypt library to compare the user’s password with the hash created in the database verify that the password entered is correct when logging in. We need to implement that in login and register methods too.
-
-Pro tips:
-
-Here is a documentation about jsw token creation: [How To Use JSON Web Tokens (JWTs) in Express.js
-](https://www.digitalocean.com/community/tutorials/nodejs-jwt-expressjs)
-
-Here is a documentation about password hash: [Using Bcrypt To Hash & Check Passwords In Node.js
-](https://coderrocketfuel.com/article/using-bcrypt-to-hash-and-check-passwords-in-node-js)
-
-
-## Step 2: Creating a smart contract
-
-Good job ! the backend app is once again able to manage users and authenticate them. However, we still have work to do. We need to create Smart Contracts with ipfs to store our NFT’s!
-
-To create a Smart Contract capable of saving Nfts, we will have to follow several steps:
+We will have to follow several steps:
 
     - Create a pattern of metadata that will constitute the information of the NFTs that will be created by us later
 
@@ -174,45 +89,55 @@ To create a Smart Contract capable of saving Nfts, we will have to follow severa
 
     - Create your control method linking everything. In your case, these will already be implemented.
 
-That’s when Starton’s API comes in. We’re going to use it in everything concerning the blockchain. To be able to interact with this api you will need your API key available in the dev section of the dashboard, you will also need your wallet ID and to claim token on polygon-mumbai if you haven’t already do that.
+That’s when Starton’s API comes in. We’re going to use it in everything concerning the blockchain. To be able to interact with this api you will need your API key available in the dev section of the dashboard, you will also need your wallet ID and to claim token on polygon-mumbai. If you haven’t already do that, go back to the SETUP.md file to fix that.
+
+Go to the `src/controller/SmartContractController.ts`, as you can see there is some methodes which need to be implemented.
 
 Your Jobs: 
 
     - Implement missing methods
 
-    - Implementes routes
-
-    - Test if the contract does publish on your Starton dashboard.
+    - Test if it's work with Postman
 
 
 Pro tips:
 
-If you want more details about Ipfs storage check this link: [What is IPFS?](https://docs.ipfs.io/concepts/what-is-ipfs/)
+The comunication with the Starton api will be in Http.
+You you will need to understand how HTTP protocol works.
+Here is documentation about it:  [HTTP request methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods), [HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+
+For getting information with the Starton API you will send requests and get responses on it. You will need the axios Modules.
+Here is a documentation about it: [How to make HTTP requests with Axios](https://blog.logrocket.com/how-to-make-http-requests-like-a-pro-with-axios/#:~:text=To%20perform%20an%20HTTP%20POST,must%20have%20a%20url%20property.)
 
 When you need to interact with another API, it's very important to check the api documentation. Here it is [API Doc](https://docs.starton.io/connect/api-doc)
 
 Also this exercise is based on the first three chapters of the tutorial [Deploy your NFTs on blockchain with Starton
 ](https://docs.starton.io/tutorials/deploy-your-nfts-on-blockchain-with-starton)
 
-### 2 - Saving a smart contract for a user.
+
+### 3 - Saving a smart contract for a user.
 
 Incredible ! Our backend manages Nft's creation ! We will finally get out of here alive ! However, we have to add one last thing for the smart contract creation. We need to save it in a Nft Schema.
 
 Go to the data folder and open the NftData.ts file. You will find the following methods:
 
-    - getByUserId
+    - getByUserId // for getting Nft's informations about a user. 
 
-    - create
+    - create // for adding a new NftShema documment for a user with the userId and the smart contract Id (no nft id at this moment) 
 
-    - update
-    
-You will also need the NftSchema file to store the Nft corresponding to each user.
+    - update // for adding new Nft of the user
+ 
+You will also need the NftSchema.ts file to store the Nft corresponding to each user and as you can see 
 
 Your Job: 
 
     - Implement the create and getByUserId methods. we’ll see the rest later.
 
     - Test that the contract stores itself well for each user
+
+Pro tips:
+
+The mongo [findOne](https://mongoosejs.com/docs/api/model.html#model_Model.findOne), [create](https://mongoosejs.com/docs/api/model.html#model_Model.create), [save](https://mongoosejs.com/docs/api/model.html#model_Model-save), methods provided by the mongoose library in the NftShemma.ts will be very helpfull.
 
 ## Step 3: Nft Release
 
@@ -232,13 +157,13 @@ In order to upload a Nft we will have to interact with the Starton API again.
 
 Your Jobs:  
 
-    - Open the NftController.ts file
+    - Open the NftController.ts file in the controller section of our api.
 
     - Implement the UploadImage, Upload Metadata, MintNft methods
 
-    - Linking methods to retrieve missing information in the database
+    - Retrivied missing informations with the database to complete the requests on Starton.
 
-    - Implement new routes in the controller
+    - Implement new routes corresponding to our controller in the NftRouter.ts 
 
     - Test if your Nft uploads well with the help of postman.
 
@@ -264,4 +189,4 @@ Your Jobs:
 
     - Test if your implementation is working
 
-Bip boop bip boop boop. Congratulations ! The backend part is now functional but the job is not finished: you will have to fix the frontend part now...
+Bip boop bip boop boop. Congratulations ! The backend part is now functional but the job is not finished: go back to the first README.md to see the next !
