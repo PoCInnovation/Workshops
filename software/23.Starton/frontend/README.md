@@ -1,6 +1,11 @@
 ## Introduction
 
-*Rob the robot* 🤖: Bip boop bip boop boop... To date, there are many technologies available in order to create a website.
+*Rob the robot* 🤖: Bip boop bip boop boop... Now we have a functional backend but there is no interface who allow us to use it, so we finished the half of the work ! We need to implement it now or we will die... lost in the galaxy... forever... It’s up to you ! 
+
+
+## What is a React ?
+
+Today, there are many technologies available in order to create a website.
 The React library is one of the most used and popular, having a very important place in the world and being carried by Facebook.
 
 Using TypeScript against JavaScript is the best thing that could happen to you.
@@ -156,3 +161,6 @@ We will develop this page later in this workshop.
 
 You also need to implement a new page to be opened when you click on an NFT.
 This page allows you to better visualize the NFT in question, but also to delete it.
+
+
+Good job ! We can now send a message with our Nft to be rescued ! Youhou, I'm not going to get thrown away ! 
