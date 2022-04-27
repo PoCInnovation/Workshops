@@ -142,7 +142,7 @@ Pro tips:
 
 The mongo [findOne](https://mongoosejs.com/docs/api/model.html#model_Model.findOne), [create](https://mongoosejs.com/docs/api/model.html#model_Model.create), [save](https://mongoosejs.com/docs/api/model.html#model_Model-save), methods provided by the mongoose library in the NftShemma.ts will be very helpfull.
 
-## Step 3: Nft Release
+## Step 2: Nft Release
 
 bip boop boop...
 

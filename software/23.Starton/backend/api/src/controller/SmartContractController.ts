@@ -21,19 +21,26 @@ const userData = new UserData()
 const nftData = new NftData()
 
 class SmartContractController {
+    
+    async getTemplate(res : express.Response) : Promise<express.Response> 
+    {
+        // need to implement this method
+
+        return null;
+    }
 
     async createContractLevelMetadata(contract: IpfsNftContract): Promise<string | null> 
     {
-      /// Need to implement this method
+      // need to implement this method
 
-      return null
+      return null;
     }
 
     async createIpfsNftContract(contract: IpfsNftContract, uriSufix: string): Promise<string | null>
     {
-      /// Need to implement this method
+      // need to implement this method
 
-      return null
+      return null;
     }
 
     async postIpfsNftContract(req: express.Request, res: express.Response) : Promise<express.Response>
@@ -59,14 +66,12 @@ class SmartContractController {
         wallet: user.wallet
       }
 
-
       const uriSufix = await this.createContractLevelMetadata(contract)
       let contractId: string | null = null;
       
       if (uriSufix != null)
         contractId = await this.createIpfsNftContract(contract, uriSufix)
       if (contractId != null) {
-        console.log(contractId)
         await nftData.create(user._id, contractId)
         return res.status(201).send("Created");
       }
