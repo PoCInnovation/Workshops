@@ -1,6 +1,6 @@
 ## Introduction
 
-*Rob the robot* 🤖: Bip boop bip boop boop... Now we have a functional backend but there is no interface who allow us to use it, so we finished the half of the work ! We need to implement it now or we will die... lost in the galaxy... forever... It’s up to you ! 
+*Rob the robot* 🤖: Bip boop bip boop boop... Now we have a functional backend but there is no interface that allows us to use it, so we finished the half of the work ! We need to implement it now or we will die... lost in the galaxy... forever... It’s up to you ! 
 
 
 ## What is a React ?
@@ -29,7 +29,7 @@ Before starting the workshop, make sure you've completed all the steps of the [s
 
 This part focuses on the frontend of your project. This is an early and broad area. But today we are going to focus on three main areas: the visuals, the user experience, and the code architecture.
 
-That's why we will guide you throughout this part, by proposing you some visuals as an example, but be careful, this is only a recommendation. Feel free using personal artistic choice.
+That's why we will guide you throughout this part, by proposing you some visuals as an example, but be careful, this is only a recommendation. Feel free to use your personal artistic choice.
 
 ## Step 1 - Connection management
 
@@ -54,7 +54,7 @@ Now that you understand how it works, you will have to create a new route.
 
 Your route must call the `Connection` component with the path `/login`.
 
-Congratulations, you have just finished your first step !
+Congratulations, you just finished your first step !
 
 Now, we are going to attack the heart of the project, the first step will be to implement a connection page and that can be either a `login` page or a `register` page depending on the URL.
 
