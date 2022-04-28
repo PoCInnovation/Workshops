@@ -18,11 +18,11 @@
 
 # Part 1 : repair the backend
 
-First of all, we need to repair the backend app. Go to the backend folder and open the README.md file.
+First of all, we need to repair the backend app. Go to the backend folder and open the [README.md](./backend/README.md) file.
 
 # Part 2 : repair the frontend
 
-Well done engineer ! The backend app is fixed, now it's time to repair the frontend app. Go to the frontend folder and open the README.md file.
+Well done engineer ! The backend app is fixed, now it's time to repair the frontend app. Go to the frontend folder and open the [README.md](./frontend/README.md) file.
 
 # Author
 
