@@ -23,10 +23,12 @@ First of all, we need to repair the backend app. Go to the backend folder and op
 # Part 2 : repair the frontend
 
 Well done engineer ! The backend app is fixed, now it's time to repair the frontend app. Go to the frontend folder and open the [README.md](./frontend/README.md) file.
+
 ## Authors
 
-| <img width="85" alt="image" src="https://user-images.githubusercontent.com/72018664/165754368-6e3b1915-f938-4ebd-b5cb-8015a5fdd300.png"><br><sub>[Nicolas HEUDE</sub>](https://www.linkedin.com/in/nicolas-heude-525567197/) | 
-| :---: |
+<img width="85" alt="image" src="https://user-images.githubusercontent.com/72018664/165754368-6e3b1915-f938-4ebd-b5cb-8015a5fdd300.png">  <img width="85" alt="image" src="https://media-exp1.licdn.com/dms/image/C4E03AQGjv0GhVoedIg/profile-displayphoto-shrink_200_200/0/1613485146387?e=1656547200&v=beta&t=MEcnp2c73CxTvtkRWiBQX5gKS4m1oWSsWwvpjy0L8vg"><br><sub>[Nicolas HEUDE](https://www.linkedin.com/in/nicolas-heude-525567197/)   [Baptiste BARBOTIN](https://www.linkedin.com/in/baptiste-barbotin-449072206/)</sub>
+
+:---: |
 <h2 align=center>
 Organization
 </h2>
