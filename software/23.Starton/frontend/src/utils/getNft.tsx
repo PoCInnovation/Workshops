@@ -7,11 +7,11 @@ interface NftArray {
   nft?: [string]
 }
 
-interface UseNftProps {
+interface GetNftProps {
 
 }
 
-const useNft = async ({  }: UseNftProps): Promise<NftArray> => {
+const getNft = async ({  }: GetNftProps): Promise<NftArray> => {
   const userId = localStorage.getItem('id');
 
   try {
@@ -22,4 +22,4 @@ const useNft = async ({  }: UseNftProps): Promise<NftArray> => {
   }
 };
 
-export default useNft;
+export default getNft;

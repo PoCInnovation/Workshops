@@ -75,7 +75,7 @@ This one is quite simple, you just need to implement a form containing an input 
 
 > Be careful with each styled component that you will implement, it is important to keep in mind a responsiveness dimension. A good way to test this is to open your web console.
 
-When a user presses the login button, you must call the function `useLogin` to connect with your backend.
+When a user presses the login button, you must call the function `postLogin` to connect with your backend.
 
 You will have to implement a form without using the classic HTML tag, in our case we will use simple HTML `<input>` tags with the following `props`:
 - value
@@ -128,7 +128,7 @@ You will still need to implement your form, using States.
 The only difference is that when you click on the register button, you will have to
 register the user, but also create a `Smart Contract` for them.
 
-To do this you need to look at and call the functions `useRegister` and `useSmartContract`.
+To do this you need to look at and call the functions `putRegister` and `postSmartContract`.
 
 > Let's do a quick recap of what we have at this point. For now, your users can log in from the `/login` URL with their email address and password. But also create an account if needed and directly connect it to their wallet via the URL `signup`.
 
@@ -162,7 +162,7 @@ In order to do this, it must propose a form to the user, containing the followin
 - receiverAddress
 - image (you have to find a way to import an image and to transform it into a base64 buffer)
 
-By the way, after the user has fill all his datas, you need to call the function `useNftUpload`.
+By the way, after the user has fill all his datas, you need to call the function `postUploadNft`.
 
 You will also notice that this function take the exact same parameters that the ones asked previously.
 
@@ -179,7 +179,7 @@ To do this go back to the `ViewNft` component in the `NftManager`.
 
 After your create button, you will have to add all the user's NFTs.
 
-You need to use the `useNft` function, it allows you to retrieve the user's nft.
+You need to use the `getNft` function, it allows you to retrieve the user's nft.
 
 Look at its return type, and display each element of the array in your component. The idea would be to make an grid of images.
 

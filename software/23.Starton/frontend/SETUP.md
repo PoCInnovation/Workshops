@@ -7,6 +7,8 @@ Go to the `frontend` folder
 ```shell
     cd frontend
     npm install
+    npm install axios
+    npm i @types/axios
 ```
 
 ## 2. Start your project

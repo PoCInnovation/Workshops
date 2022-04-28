@@ -1,11 +1,11 @@
 import {httpConnection} from "utils/AxiosHttp";
 
-interface UseLoginProps {
+interface PostLoginProps {
   email: string;
   password: string;
 }
 
-const useLogin = async ({ email, password }: UseLoginProps): Promise<boolean> => {
+const postLogin = async ({ email, password }: PostLoginProps): Promise<boolean> => {
   try {
     const response = await httpConnection.post('/user/login', {email, password});
 
@@ -21,4 +21,4 @@ const useLogin = async ({ email, password }: UseLoginProps): Promise<boolean> =>
   }
 };
 
-export default useLogin;
+export default postLogin;
