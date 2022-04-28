@@ -38,7 +38,7 @@ The authentication has not been damaged, so we can directly start the process of
 
 ### 1 - Creates routes for Smarts contracts
 
-Go to `src/routes/smartContractRouter.ts`
+Go to [src/routes/smartContractRouter.ts](./api/src/routes/smartContractRouter.ts)
 
 Oh, what a disaster ! All the routes have been destroyed ! We need to fix that !
 
@@ -55,7 +55,7 @@ When an endpoint is requested, its mission is to give a response with informatio
 
 🛠️ <u>Your Job</u> 🛠️
 
-1. Recreate routes that call the methods found in  `SmartContractController.ts`
+1. Recreate the route POST `smart-contract/ipfs-nft-contract` that call the methods found in `SmartContractController.ts`
 
 2. Check the middleware inside `middleware/auth.ts`. Its role is to check if the token of the user calling the route is valid or not.
 
@@ -91,7 +91,7 @@ That’s when Starton’s API comes in. We’re going to use it in everything co
 
 If you haven’t already done these steps, go back to [SETUP.md](SETUP.md) to fix that.
 
-Go to `src/controller/SmartContractController.ts`, as you can see there are some methods which need to be implemented.
+Go to [`src/controller/SmartContractController.ts`](./api/src/controller/SmartContractController.ts), as you can see there are some methods which need to be implemented.
 
 🛠️ <u>Your Job</u> 🛠️
 
@@ -115,7 +115,7 @@ Go to `src/controller/SmartContractController.ts`, as you can see there are some
 
 Incredible ! Our backend manages Nft creation ! We will finally get out of here alive ! However, we have to add one last thing for the smart contract creation. We need to save it in a Nft Schema.
 
-Open `data/NftData.ts`. You will find the following methods:
+Open [`data/NftData.ts`](./api/src/data/NftData.ts). You will find the following methods:
 
 - `getByUserId`: for getting Nft's information about a user.
 - `create`: for adding a new NftShema documment for a user with the userId and the smart contract Id (no nft id at this moment)
@@ -150,10 +150,10 @@ In order to upload a Nft we will have to interact with the Starton API again.
 
 🛠️ <u>Your Job</u> 🛠️  
 
-1. Open `controller/NftController.ts` .
+1. Open [`controller/NftController.ts`](./api/src/controller/NftController.ts) .
 2. Implement the UploadImage, UploadMetadata and MintNft methods
 3. Retrieve missing information with the database to complete the requests on Starton.
-4. Implement new routes corresponding to our controller in the NftRouter.ts file.
+4. Implement new routes POST `nft/uploadNft` and GET `nft/userNft/:id` corresponding to our controller in the NftRouter.ts file.
 5. Test if your Nft uploads well with the help of Postman.
 
 <u>Pro tips:</u>
