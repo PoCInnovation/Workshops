@@ -1,9 +1,9 @@
 ## Introduction
 
-*Rob the robot* 🤖: Bip boop bip boop boop... Now we have a functional backend but there is no interface that allows us to use it, so we finished the half of the work ! We need to implement it now or we will die... lost in the galaxy... forever... It’s up to you ! 
+*Rob the robot* 🤖: Bip boop bip boop boop... Now we have a functional backend but there is no interface that allows us to use it, so we finished half of the work ! We need to implement it now or we will die... lost in the galaxy... forever... It’s up to you ! 
 
 
-## What is a React ?
+## What is React ?
 
 Today, there are many technologies available in order to create a website.
 The React library is one of the most used and popular, having a very important place in the world and being carried by Facebook.
@@ -17,7 +17,7 @@ TypeScript is :
 
 #### Start by documenting yourself
 
-I allow myself to put you some links which could be useful for this workshop and in a general way for your borders :
+Let me show you a few links to websites which could be useful for this workshop and in a general way for your borders :
 * [React](https://fr.reactjs.org/)
 * [TypeScript](https://www.typescriptlang.org/)
 * [CSS](https://developer.mozilla.org/fr/docs/Web/CSS)
@@ -42,7 +42,7 @@ Before starting the workshop, make sure you've completed all the steps of the [s
 
 This part focuses on the frontend of your project. This is an early and broad area. But today we are going to focus on three main areas: the visuals, the user experience, and the code architecture.
 
-That's why we will guide you throughout this part, by proposing you some visuals as an example, but be careful, this is only a recommendation. Feel free to use your personal artistic choice.
+That's why we will guide you throughout this part, by proposing you some visuals as an example, but be careful, this is only a recommendation. Feel free to use your personal artistic choices.
 
 ## Step 1 - Connection management
 
@@ -149,15 +149,15 @@ To do this you need to look at and call the functions `putRegister` and `postSma
 
 _**Take a look at the `Dashboard` component.**_
 
-We land in your users space. In fact, this is your first step. You need to get your users to this page once they've logged in.
+We land in your user's space. In fact, this is your first step. You need to get your users to this page once they've logged in.
 
-> We also remind you that at the bottom of each step documentation is available.
+> We also remind you that at the bottom of each step documentation is available. Make sure you read it!
 
-The idea is to create a space where each user will be able to visualize all his NFTs, but also to interact with them. From this page it should also be possible to `Log out`.
+The idea is to create a space where each user will be able to visualize all his NFTs, and interact with them. From this page it should also be possible to `Log out`.
 
 In order to do this, add a button allowing you to `Log out` in the `TopBar`.
 
-Perfect ! It is now time to create your button to add a new NFT. This button must look like this <img width="404" alt="image" src="https://user-images.githubusercontent.com/72018664/165753355-5f34b658-ee2e-4ffc-a09b-491c9e4a672e.png">
+Perfect ! It is now time to create your button to add a new NFT. This button must look like this. (see image below)<img width="404" alt="image" src="https://user-images.githubusercontent.com/72018664/165753355-5f34b658-ee2e-4ffc-a09b-491c9e4a672e.png">
 
 You must create this button in the component `ViewNft` in the `NftManager`.
 
@@ -167,7 +167,7 @@ When this is implemented, you should have a white page with your top bar. This m
 
 This page must allow you to upload a new NFT.
 
-In order to do this, it must propose a form to the user, containing the following information :
+In order to do this, it must show a form to the user, containing the following information :
 
 - name
 - nftName
@@ -175,27 +175,27 @@ In order to do this, it must propose a form to the user, containing the followin
 - receiverAddress
 - image (In this first iteration the image will be represented by a string)
 
-By the way, after the user has fill all his datas, you need to call the function `postUploadNft`.
+By the way, after the user has filled all these fields, you need to call the function `postUploadNft`.
 
-You will also notice that this function take the exact same parameters that the ones asked previously.
+You will also notice that this function take the exact same parameters as the ones asked previously.
 
 Once the user created his NFT, you must set the page status to `view`;
 
 ## Step 3: Display all your NFTs
 
-Now that you know how to create NFTs. It would be very useful to display them all.
+Now that you know how to create NFTs, it would be very useful to display them all.
 
 To do this go back to the `ViewNft` component in the `NftManager`.
 
-After your create button, you will have to add all the user's NFTs.
+You will have to display all the user's NFTs next to the button used to create an NFT, which will remain at the first position in the grid.
 
-You need to use the `getNft` function, it allows you to retrieve the user's nft.
+You need to use the `getNft` function, it allows you to retrieve the user's NFTs.
 
 Look at its return type, and display each element of the array in your component. The idea would be to make an grid of images.
 
 Ideally it should be positioned like this <img width="1680" alt="image" src="https://user-images.githubusercontent.com/72018664/165753665-a36287e6-7d3d-4b22-8a80-eccbd0a77f9b.png">
 
-In order to do this you will have to use the `map` method of an array.
+In order to do this you will have to use the `map` method which allows you to iterate over an array in typescript.
 
 #### A little help with documentation :
 - [Router navigation](https://v5.reactrouter.com/web/api/history)
