@@ -23,3 +23,9 @@ First of all, we need to repair the backend app. Go to the backend folder and op
 # Part 2 : repair the frontend
 
 Well done engineer ! The backend app is fixed, now it's time to repair the frontend app. Go to the frontend folder and open the README.md file.
+
+# Author
+
+Baptiste Barbotin [@barbo69](https://github.com/barbo69)
+
+Nicolas Heude [@nicolasheude](https://github.com/nicolasheude)
