@@ -55,11 +55,11 @@ When an endpoint is requested, its mission is to give a response with informatio
 
 🛠️ <u>Your Job</u> 🛠️
 
-1. Recreate the route POST `smart-contract/ipfs-nft-contract` that call the methods found in `SmartContractController.ts`
+1. Recreate the route POST `smart-contract/ipfs-nft-contract` that call the methods found in [`SmartContractController.ts`](./api/src/controller/SmartContractController.ts)
 
-2. Check the middleware inside `middleware/auth.ts`. Its role is to check if the token of the user calling the route is valid or not.
+2. Check the middleware inside [`middleware/auth.ts`](./api/src/middleware/auth.ts). Its role is to check if the token of the user calling the route is valid or not.
 
-3. Call your router in `index.ts`  with  the `app.use` method. Don't forget to use the auth middleware in between the path and your router in this method. We don't want any unauthorized person to access it.
+3. Call your router in [`index.ts`](./api/src/index.ts)  with  the `app.use` method. Don't forget to use the auth middleware in between the path and your router in this method. We don't want any unauthorized person to access it.
 
 4. Use Postman to test your routes.
 
@@ -166,9 +166,9 @@ Once your Nft is uploaded, it is rather convenient to store all its CIDs  in a N
 
 🛠️ <u>Your Job</u> 🛠️
 
-1. Navigate to the `NftData`
+1. Navigate to the [`NftData.ts`](./api/src/data/NftData.ts)
 2. Implement the UpdateNft method, to add new Nfts
-3. Navigate to `NftController.ts`
+3. Navigate to [`NftController.ts`](./api/src/controller/NftController.ts)
 4. Implement the getUserNft method
 5. Create the GET `"/nftUser/:id"` route
 6. Test if your implementation is working
