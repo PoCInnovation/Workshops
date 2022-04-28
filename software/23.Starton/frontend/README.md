@@ -157,7 +157,7 @@ The idea is to create a space where each user will be able to visualize all his 
 
 In order to do this, add a button allowing you to `Log out` in the `TopBar`.
 
-Perfect ! It is now time to create your button to add a new NFT. This button must look like this (IMAGE).
+Perfect ! It is now time to create your button to add a new NFT. This button must look like this <img width="404" alt="image" src="https://user-images.githubusercontent.com/72018664/165753355-5f34b658-ee2e-4ffc-a09b-491c9e4a672e.png">
 
 You must create this button in the component `ViewNft` in the `NftManager`.
 
@@ -193,7 +193,7 @@ You need to use the `getNft` function, it allows you to retrieve the user's nft.
 
 Look at its return type, and display each element of the array in your component. The idea would be to make an grid of images.
 
-Ideally it should be positioned like this (IMAGE).
+Ideally it should be positioned like this <img width="1680" alt="image" src="https://user-images.githubusercontent.com/72018664/165753665-a36287e6-7d3d-4b22-8a80-eccbd0a77f9b.png">
 
 In order to do this you will have to use the `map` method of an array.
 
