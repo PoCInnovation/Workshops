@@ -170,7 +170,7 @@ Once your Nft is uploaded, it is rather convenient to store all its CIDs  in a N
 2. Implement the UpdateNft method, to add new Nfts
 3. Navigate to [`NftController.ts`](./api/src/controller/NftController.ts)
 4. Implement the getUserNft method
-5. Create the GET `"/nftUser/:id"` route
+5. Create the GET `/nftUser/:id` route
 6. Test if your implementation is working
 
 🤖 Bip boop bip boop boop. Congratulations ! The backend part is now functional, but the job is not finished: go back to the first [README.md](../README.md) to see what's next !

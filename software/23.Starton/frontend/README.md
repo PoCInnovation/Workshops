@@ -59,7 +59,7 @@ The **router** will allow you to call the desired component according to the pag
 
 For example, we have already implemented a _Hello World page_ ([here](http://localhost:3000/hello)) but also a page managing the _404 error_ ([here](http://localhost:3000/404)).
 
-> 👁️ Take a look at these two pages and _the code_ ([here](./front/src/pages/Router/index.tsx)) to better understand your router.
+> 👁️ Take a look at these two pages and _the code_ ([here](./src/pages/Router/index.tsx)) to better understand your router.
 
 `src/pages/Connection/index.tsx`
 
