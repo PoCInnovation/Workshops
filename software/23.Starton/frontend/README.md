@@ -197,8 +197,6 @@ Ideally it should be positioned like this (IMAGE).
 
 In order to do this you will have to use the `map` method of an array.
 
-To retrieve your image find out how to turn a base64 buffer into a `HtmlImageElement`.
-
 #### A little help with documentation :
 - [Router navigation](https://v5.reactrouter.com/web/api/history)
 - [Mapping over an array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
