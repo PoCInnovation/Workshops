@@ -61,4 +61,6 @@ This tool allow you to test your api's endpoints without a frontend.
 
 To download it, go to the [download page](https://www.postman.com/downloads/) on the Postman Website.
 
+After that, click on the import button on your Postamn interface and import the file [StartonApi.postman_collection.json](./Postman/StartonApi.postman_collection.json) this provided you tests for each endpoints.
+
 Congratulations, you can now start the backend project ! 🎉
