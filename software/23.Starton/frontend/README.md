@@ -15,11 +15,24 @@ TypeScript is :
 * 🎯 More explicit thanks to its types
 * ↔️ TypeScript and JavaScript are practically interchangeable
 
-#### Start by documenting yourself :
+#### Start by documenting yourself
+
+I allow myself to put you some links which could be useful for this workshop and in a general way for your borders :
 * [React](https://fr.reactjs.org/)
 * [TypeScript](https://www.typescriptlang.org/)
 * [CSS](https://developer.mozilla.org/fr/docs/Web/CSS)
+* [MDN Web Docs - Mozilla](https://developer.mozilla.org/en-US/)
+* [hooks](https://fr.reactjs.org/docs/hooks-intro.html)
+
 * [Styled Components](https://styled-components.com/)
+* [Flex box](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+* [Flex box game](https://mastery.games/flexboxzombies/)
+* [Gradient generator](https://cssgradient.io/gradient-backgrounds/)
+* [Royalty free icon](https://ionic.io/ionicons)
+* [Nice illustration](https://undraw.co/illustrations)
+* [Flat color](https://flatuicolors.com/palette/au)
+* [Color](https://htmlcolorcodes.com/fr/)
+* [Shadow](https://getcssscan.com/css-box-shadow-examples)
 
 ## Step 0 - Setup
 
@@ -150,26 +163,23 @@ You must create this button in the component `ViewNft` in the `NftManager`.
 
 When a user clicks on this button, you must set the page status to `create`.
 
-When this is implemented, you should have a white page with your topbar. This means that you are on your creation page.
+When this is implemented, you should have a white page with your top bar. This means that you are on your creation page.
 
 This page must allow you to upload a new NFT.
 
-In order to do this, it must propose a form to the user, containing the following informations :
+In order to do this, it must propose a form to the user, containing the following information :
 
 - name
 - nftName
 - description
 - receiverAddress
-- image (you have to find a way to import an image and to transform it into a base64 buffer)
+- image (In this first iteration the image will be represented by a string)
 
 By the way, after the user has fill all his datas, you need to call the function `postUploadNft`.
 
 You will also notice that this function take the exact same parameters that the ones asked previously.
 
 Once the user created his NFT, you must set the page status to `view`;
-
-#### A little help with documentation :
-- 
 
 ## Step 3: Display all your NFTs
 

@@ -11,6 +11,12 @@ Go to the `frontend` folder
     npm i @types/axios
 ```
 
+⚠️ You must download the extension for your IDE, styled components ⚠️ :
+* [Vscode](https://marketplace.visualstudio.com/items?itemName=diegolincoln.vscode-styled-components#:~:text=The%20styled%2Dcomponents%20extension%20adds,linter%20and%20other%20language%20features.)
+* [WebStorm](https://plugins.jetbrains.com/plugin/9997-styled-components--styled-jsx)
+
+To make web, we can only advise you to use [WebStorm](https://www.jetbrains.com/fr-fr/toolbox-app/) 😉
+
 ## 2. Start your project
 
 To start your project you can do:
