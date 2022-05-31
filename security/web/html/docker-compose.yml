@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  intro:
+    build:
+      context: ./intro
+      dockerfile: Dockerfile
+    ports:
+      - "4001:4001"
+    volumes:
+      - log_intro:/var/log
+    container_name: intro
+
+  hidden:
+    build:
+      context: ./hidden
+      dockerfile: Dockerfile
+    ports:
+      - "4002:4002"
+    volumes:
+      - log_hidden:/var/log
+    container_name: hidden
+
+volumes:
+  log_intro: {}
+  log_hidden: {}
