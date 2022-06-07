@@ -42,7 +42,7 @@ For this step, we will use some others' method:
 ```
 
 - a `POST` request `/item/display`: to display the item passed in the body as follows.
-<img src="./assets/request-item-display.png">
+  <img src="./.assets/request-item-display.png">
 
 
 also try to implement a default endpoint for the URL's that doesn't match any routes. (404 notfound error)
@@ -55,7 +55,7 @@ also try to implement a default endpoint for the URL's that doesn't match any ro
 > - name
 > - description
 > - price
-> 
+>
 > and bind the request body to the structure to retrieve it (do it in a structure folder).
 <details>
   <summary>See how to request with postman :satellite:</summary>
@@ -70,7 +70,14 @@ Then the result (if there is any) will be printed out at the bottom.
 
 </details>
 
-## Step 2: Database interaction
+## Step 2: Authorization middleware
+
+Now let's create a middleware that will check if the user is authorized to access the endpoint.
+
+We won't use real token like a [JWT](https://jwt.io/), we will just check if the request contains a header with the name `Authorization` and a value.
+
+
+## Step 3: Database interaction
 
 For the following we won't use a real database, but we will use a simple json file as the database.
 (The configuration would have been too long to explain and to do here)
