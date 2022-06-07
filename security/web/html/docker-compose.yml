@@ -31,6 +31,16 @@ services:
       - log_calling:/var/log
     container_name: calling
 
+  bypath:
+    build:
+      context: ./bypath
+      dockerfile: Dockerfile
+    ports:
+      - "4006:4006"
+    volumes:
+      - log_bypath:/var/log
+    container_name: bypath
+
   cooked:
     build:
       context: ./cooked
@@ -46,3 +56,4 @@ volumes:
   log_hidden: {}
   log_calling: {}
   log_cooked: {}
+  log_bypath: {}
