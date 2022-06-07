@@ -21,6 +21,17 @@ services:
       - log_hidden:/var/log
     container_name: hidden
 
+  calling:
+    build:
+      context: ./calling
+      dockerfile: Dockerfile
+    ports:
+      - "4004:4004"
+    volumes:
+      - log_calling:/var/log
+    container_name: calling
+
 volumes:
   log_intro: {}
   log_hidden: {}
+  log_calling: {}
