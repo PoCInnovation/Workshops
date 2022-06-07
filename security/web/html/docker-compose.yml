@@ -31,7 +31,18 @@ services:
       - log_calling:/var/log
     container_name: calling
 
+  cooked:
+    build:
+      context: ./cooked
+      dockerfile: Dockerfile
+    ports:
+      - "4008:4008"
+    volumes:
+      - log_cooked:/var/log
+    container_name: cooked
+
 volumes:
   log_intro: {}
   log_hidden: {}
   log_calling: {}
+  log_cooked: {}
