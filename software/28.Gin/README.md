@@ -8,7 +8,7 @@ In this workshop we will learn how to use the main functions of the Gin package 
 
 All the required information to install the workshop's dependencies are given in the [SETUP.md](./SETUP.md)
 
-## Step 0.5: The codebase
+## Step 1: The codebase
 
 We designed a boilerplate for this project, it will be useful to start this project, but also to summarize all the required parts of an API
 We will have :
@@ -25,7 +25,7 @@ Add a route on the endpoint `/`:
 
 > You can test it with `http://localhost:8080/` in a browser or with `postman`
 
-## Step 1: Let's get started
+## Step 2: Let's get started
 
 You are now fine with the creation of endpoint.
 Next step is to create different request method.
@@ -70,14 +70,14 @@ Then the result (if there is any) will be printed out at the bottom.
 
 </details>
 
-## Step 2: Authorization middleware
+## Step 3: Authorization middleware
 
 Now let's create a middleware that will check if the user is authorized to access the endpoint.
 
 We won't use real token like a [JWT](https://jwt.io/), we will just check if the request contains a header with the name `Authorization` and a value.
 
 
-## Step 3: Database interaction
+## Step 4: Database interaction
 
 For the following we won't use a real database, but we will use a simple json file as the database.
 (The configuration would have been too long to explain and to do here)
@@ -91,7 +91,7 @@ You can see the database.json in the database folder.
 
 > Look at the [documentation](https://tutorialedge.net/golang/reading-writing-files-in-go/) to interact with the file
 
-## Step 3: To go further (BONUS)
+## Step 5: To go further
 
 To go further you can add some others routes :
 - a `DELETE` request `/item`: to delete an item in the database.
