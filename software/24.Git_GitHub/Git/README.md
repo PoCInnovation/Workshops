@@ -59,7 +59,7 @@ When you want to modify the repository content, you have multiple ways of doing 
 The one that you might already know is using `git add`, a lot of people use `git add .` at the root of the repository, but it is not recommended because you might add files that you do not want to.
 Also, a better way of adding everything is using `git add --all`, because if you're not at the root of your repository, one will work and not the other.
 
-`git add .` is more intended to be used whe you're wandering around in your repo and want to add the folder you're in.
+`git add .` is more intended to be used when you're wandering around in your repo and want to add the folder you're in.
 
 You also have other commands that can be used to modify files such as `git rm` and `git mv`, they are respectively used to remove and move a file.
 
@@ -132,7 +132,7 @@ There are multiple ways of doing this but let's see one that I particularly like
 It used the `git stash` command.
 
 So you have made changes to test stuff out and realise that you've made a lot of changes and don't want to undo these by hand.
-You can just run `git stahs push <files with modifications to drop>` and `git stash drop`, be careful because it isn't retrievable past this point.
+You can just run `git stash push <files with modifications to drop>` and `git stash drop`, be careful because it isn't retrievable past this point.
 
 ## Step 5 - Branches
 
