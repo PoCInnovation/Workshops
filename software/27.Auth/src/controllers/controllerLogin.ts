@@ -49,9 +49,7 @@ export const signinUser: RequestHandler = async (req, res, next) => {
                 expiresIn: "1d",
             }
         );
-
         res.cookie("jwt", token);
-
         res.json({ name: user.name, token });
     } catch (error) {
         return next(InternalServerError);
@@ -72,16 +70,6 @@ export const sendVerificationMail: RequestHandler = async (req, res, next) => {
         const jwtToken = jwt.sign({ userId: user._id }, JWT_KEY, {
             expiresIn: "60m",
         });
-        // let testAccount = await nodemailer.createTestAccount();
-        // let transporter = nodemailer.createTransport({
-        //     host: "smtp.ethereal.email",
-        //     port: 587,
-        //     secure: false, // true for 465, false for other ports
-        //     auth: {
-        //         user: testAccount.user, // generated ethereal user
-        //         pass: testAccount.pass, // generated ethereal password
-        //     },
-        // });
         let info = await transporter.sendMail({
             from: '"Fred Foo 👻" <foo@example.com>', // sender address
             to: "bar@example.com, baz@example.com", // list of receivers

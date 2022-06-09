@@ -22,6 +22,6 @@
     "ts-node": "^10.8.1"
   },
   "scripts": {
-    "start": "PORT=8081 nodemon src/app.ts"
+    "start": "nodemon src/app.ts"
   }
 }

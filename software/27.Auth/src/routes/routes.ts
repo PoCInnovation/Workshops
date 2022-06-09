@@ -1,4 +1,4 @@
-import express, { Request, Response } from 'express';
+import express , {Response, Request} from 'express';
 import { sendVerificationMail, signinUser, signupUser, verifyUserMail } from "../controllers/controllerLogin";
 import { signupUserValidation, signinUserValidation, verifyUserMailValidation, sendVerificationMailValidation } from "../midleware/midleware";
 
