@@ -1,7 +1,3 @@
-<script
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-  type="text/javascript">
-</script>
 <p align="center"><img src="./images/logo.svg" alt="Gradio logo"></p>
 
 ## X - Gradio interface 📱
@@ -91,12 +87,12 @@ In the method `train` you will:
 
 ### Loss function
 
-<p align="center"><img src="./images/loss_function.png" alt="Loss function"></p>
+<p align="center"><img src="./images/loss_function.png" alt="Loss function" style="width: 500px"></p>
 
 A prediction task can be considered as a simple optimization task, where the model tries to optimize its performance by predicting the correct value. The actual value that we optimize is called the "loss" (which we try to minimize, of course). To do this, the model must be able to measure what is called the "loss", which depends on the problem.
 
 #### The function
-<p align="center"><img src="./images/loss_function_2.png" alt="Loss function"></p>
+<p align="center"><img src="./images/loss_function_2.png" alt="Loss function" style="width: 500px"></p>
 
 #### Implementation
 
