@@ -39,6 +39,8 @@ _This part doesn't require you to do anything it's mainly for knowledge_
 
 ## Step 2 - Modifying repository content
 
+Before applying any changes, it is a good reflex to check what has been modified.
+
 ### Control what files can be added
 
 It is recommended to use a `.gitignore` file to list all the files you never want to push (like binaries, or your local IDE configs).
@@ -48,7 +50,7 @@ You can even have generated ones based on the language you're developing in.
 
 You have multiple ways of doing that.
 
-The first one is to check the status of your local repository with `git status`, you will see what file has been changed.
+The first one is to check the status of your local repository with `git status`, you will see what files have been changed.
 
 After that, you can see exactly what lines have been modified using `git diff`.
 
