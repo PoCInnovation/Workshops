@@ -92,7 +92,13 @@ you can now easily check the commits that have been made using `git log`
 
 ### Apply your changes to the remote 
 
-In order to apply your changes to the remote, you can simply use `git push`
+In order to apply your changes to the remote, you can simply use `git push`.
+
+For the record, pull is calling other git commands.
+You probably have already seen in your git config that you can set the parameter `pull.rebase` to `true` or `false`.
+
+It allows you to set how git pull acts.
+So by default it will run a `git fetch` following by a `git merge origin/my-super-branch`, if you set `pull.rebase` to `true`, it will run a `git rebase origin/my-super-branch` instead of the merge.
 
 Go ahead and push your commit.
 
