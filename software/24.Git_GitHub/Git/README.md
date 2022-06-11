@@ -142,6 +142,9 @@ It used the `git stash` command.
 So you have made changes to test stuff out and realise that you've made a lot of changes and don't want to undo these by hand.
 You can just run `git stash push <files with modifications to drop>` and `git stash drop`, be careful because it isn't retrievable past this point.
 
+For your knowledge, know that `git stash` also has other commands like `pop` and `apply`.
+`apply` allows you to reapply the changes stored, whereas `pop`, runs apply followed by drop when there are no conflicts.
+
 ## Step 5 - Branches
 
 Now that you know new things about git, you may want to improve your workflow and use branches.
