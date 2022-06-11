@@ -15,13 +15,26 @@ Several links to specific parts of the [getting started guide](https://github.co
 
 ## Step 1 - [Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues)
 On a project, you'll need a tool to track and organize your work: with GitHub Issues, you can track feature requests, user feedbacks and bug reports.  
-If you played a bit with the calculator you may notice the given result isn't correct.  
+If you played a bit with the calculator you may notice the given result isn't correct.
+
 You have to create 3 issues:
 - One to describe the problem, with expected behaviour and what you are experiencing.
 - Another to suggest a feature (add all the arguments instead of just the first 2)
 - A last one to take a single string as parameter and support operators in it (this one will not be implemented)
 
-Method: result screen to reproduce or fully autonomous with correction after
+Try to make it as complete as possible, then take a look at the expected results:
+<details>
+  <summary>Problem issue</summary>
+  <img src="./assets/issue_bug.png"/>
+</details>
+<details>
+  <summary>Feature issue</summary>
+  <img src="./assets/issue_feature.png"/>
+</details>
+<details>
+  <summary>Not implemented issue</summary>
+  <img src="./assets/issue_feature_wontfix.png"/>
+</details>
 
 <i>Pro tips:</i>
 > Take a look at [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) and [assignees](https://docs.github.com/en/issues/tracking-your-work-with-issues/assigning-issues-and-pull-requests-to-other-github-users)
@@ -35,7 +48,7 @@ But don't close them yet, you will now learn to use Pull Requests and use the op
 Create 2 Pull Requests, and use 2 different methods to link the related issues.
 When it's done, add your teammate as reviewer and play with the review tool in the `Files Changed` tab !
 
-<i>Pro tip:</i>
+<i>Pro tips:</i>
 
 > Take a look at [Closing keywords](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/using-keywords-in-issues-and-pull-requests) 😉
 
@@ -56,7 +69,12 @@ You can find them in the `Issues` tab.
 > You won't find a lot of documentation about it, but it's also possible to create [milestone templates](https://github.com/PoCInnovation/open-source-project-template/blob/main/.github/milestone_template.md) 🚀
 
 ## Step 5 - [Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)
-<u>Pro tips:</u>
+Keeping your code clean and making sure it still works as intended when you develop new features is very important, and GitHub provides you a useful tool for this: Actions !  
+Whether you want to build, test or deploy your code, you can create custom workflows triggered by any GitHub event (push, pull_request, new issue...)
+
+Follow [this quickstart](https://docs.github.com/en/actions/quickstart) to create your first action !
+
+<i>Pro tips:</i>
 > If you want to learn more about GitHub Actions, you can check [our dedicated workshop](https://github.com/PoCInnovation/Workshops/tree/24.Git_Github/software/05.Actions) !
 
 ## Step 6 - [Branches protection settings](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branches) (optional)
