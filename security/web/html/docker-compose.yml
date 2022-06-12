@@ -21,6 +21,16 @@ services:
       - log_hidden:/var/log
     container_name: hidden
 
+  logger:
+    build:
+      context: ./logger
+      dockerfile: Dockerfile
+    ports:
+      - "4003:4003"
+    volumes:
+      - log_logger:/var/log
+    container_name: logger
+
   calling:
     build:
       context: ./calling
@@ -54,6 +64,7 @@ services:
 volumes:
   log_intro: {}
   log_hidden: {}
+  log_logger: {}
   log_calling: {}
   log_cooked: {}
   log_bypath: {}
