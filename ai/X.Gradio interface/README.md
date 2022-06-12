@@ -104,9 +104,13 @@ We advise you to use the `CrossEntropyLoss` loss function.
 
 #### The function
 
+<p align="center"><img src="./images/optimizer_function.png" alt="Optimizer" style="width: 500px"></p>
+
+Optimizers are algorithms or methods used to change the attributes of the neural network such as weights and learning rate to reduce the losses. Optimizers are used to solve optimization problems by minimizing the function.
+
 #### Implementation
 
-In this workshop we will use an optimizer already coded and included in PyTorch.
+In this workshop we will use an optimizer algorithm already coded and included in PyTorch.
 
 We advise you to use the `Adam` optimizer.
 
