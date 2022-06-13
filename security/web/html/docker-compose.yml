@@ -41,6 +41,16 @@ services:
       - log_calling:/var/log
     container_name: calling
 
+  capture:
+    build:
+      context: ./capture
+      dockerfile: Dockerfile
+    ports:
+      - "4005:4005"
+    volumes:
+      - log_capture:/var/log
+    container_name: capture
+
   bypath:
     build:
       context: ./bypath
@@ -78,3 +88,4 @@ volumes:
   log_calling: {}
   log_cooked: {}
   log_bypath: {}
+  log_capture: {}
