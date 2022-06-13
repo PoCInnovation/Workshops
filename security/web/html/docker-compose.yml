@@ -61,6 +61,16 @@ services:
       - log_cooked:/var/log
     container_name: cooked
 
+  rabbit_hole:
+    build:
+      context: ./rabbit_hole
+      dockerfile: Dockerfile
+    ports:
+      - "4010:4010"
+    volumes:
+      - log_intro:/var/log
+    container_name: rabbit_hole
+
 volumes:
   log_intro: {}
   log_hidden: {}
