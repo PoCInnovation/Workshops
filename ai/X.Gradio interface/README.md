@@ -14,9 +14,9 @@ You will:
 
 ## Documentation
 
-- [Gradio Docs](https://gradio.app/docs/)
-- [Torch Docs](https://pytorch.org/docs/stable/index.html)
-- [Matplotlib Docs](https://matplotlib.org/3.1.1/index.html)
+- [Torch](https://pytorch.org/docs/stable/index.html)
+- [Gradio](https://gradio.app/docs/)
+- [Matplotlib](https://matplotlib.org/3.1.1/index.html)
 
 
 ## Workspace
