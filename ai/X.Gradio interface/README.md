@@ -61,7 +61,7 @@ In the class `app` you will add the following attributes:
 - In your class app you will create an attribute `classes` that will contain the classes of your dataset.
 - Create a method called `add_dataset` that will return a dataloader.
 
-The `add_dataset` method will receive a `dataset_name`, `dataset_path` and if you want a train set or test set.
+The `add_dataset` method will receive a `dataset_path` and if you want a train set or test set.
 
 ## Step 2.5: Check if the dataset is already downloaded
 
