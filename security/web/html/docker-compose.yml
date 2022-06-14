@@ -61,6 +61,16 @@ services:
       - log_bypath:/var/log
     container_name: bypath
 
+  head:
+    build:
+      context: ./head
+      dockerfile: Dockerfile
+    ports:
+      - "4007:4007"
+    volumes:
+      - log_head:/var/log
+    container_name: head
+
   cooked:
     build:
       context: ./cooked
@@ -89,3 +99,4 @@ volumes:
   log_cooked: {}
   log_bypath: {}
   log_capture: {}
+  log_head: {}
