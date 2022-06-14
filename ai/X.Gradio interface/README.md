@@ -30,7 +30,7 @@ Folder: app
 ├── my_app.py
 │   dataset/
 │   └── (Empty folder)
-│   weights/
+│   model/
 │   └── (Empty folder)
 ```
 
@@ -128,9 +128,9 @@ Use Matplotlib for this step.
 In one figure you will display the loss and accuracy of the training.
 
 
-## Step 6: Save the weights
+## Step 6: Save the model
 
-After your training, you will save the weights of your model in the `weights` folder.
+After your training, you will save your model in the `model` folder.
 
 ## Step 7: Predict an image
 
