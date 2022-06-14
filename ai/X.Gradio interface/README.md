@@ -12,6 +12,13 @@ You will:
 - Use different Gradio interfaces
 - Share your app on the Gradio platform
 
+## Documentation
+
+- [Gradio Docs](https://gradio.app/docs/)
+- [Torch Docs](https://pytorch.org/docs/stable/index.html)
+- [Matplotlib Docs](https://matplotlib.org/3.1.1/index.html)
+
+
 ## Workspace
 
 For this workshop you will not use a jupyter notebook. You will create your own application.
