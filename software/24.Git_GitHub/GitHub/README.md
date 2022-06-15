@@ -13,7 +13,7 @@ Go to your repository settings, and in the `Collaborators` add your teammate !
 > This workshop is based on [PoC Innovation's Open-Source project template](https://github.com/PoCInnovation/open-source-project-template).  
 Several links to specific parts of the [getting started guide](https://github.com/PoCInnovation/open-source-project-template/blob/main/.github/getting-started.md) will be given to you, but don't spend too much time on it, we have a lot to cover ! You can read it entirely later.
 
-## Step 1 - [Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) && [Pull Requests (PRs)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
+## Step 1 - [Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) & [Pull Requests (PRs)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
 On a project, you'll need a tool to track and organize your work: with GitHub Issues, you can track feature requests, user feedbacks and bug reports.  
 If you played a bit with the calculator you may notice the given result isn't correct.
 
@@ -63,10 +63,30 @@ Try to make it as complete as possible, then take a look at the expected results
   <summary>Feature PR</summary>
   <img src="./assets/pr_feature.png"/>
 </details>
+<details>
+  <summary>Review example</summary>
+  <img src="./assets/pr_review.png"/>
+</details>
 
-## Step 2 - [Projects](https://docs.github.com/en/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards) && [Milestones](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/about-milestones)
+## Step 2 - [Projects](https://docs.github.com/en/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards) & [Milestones](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/about-milestones)
 You can manage features and tasks with issues, group commits and do code reviews with PRs, but how do you actually organize
 your work in tables like well-known ticketing tools ? That's where GitHub Projects come into play !
+
+Create a project named `Calculator` with 3 columns (by default `To do`, `In progress` and `Done` but you can rename it) with automation to add issues in `To do` when they are created, move created PRs to `In progress` and fill the `Done` column when closing issues or merging PRs.
+
+You can test it by creating other issues:
+<details>
+  <summary>Creating an issue</summary>
+  <img src="./assets/project_creating_automation.png"/>
+</details>
+<details>
+  <summary>Closing an issue</summary>
+  <img src="./assets/project_closing_automation.png"/>
+</details>
+<details>
+  <summary>Project view example</summary>
+  <img src="./assets/project_view.png"/>
+</details>
 
 > A [new GitHub Project experience](https://docs.github.com/en/issues/trying-out-the-new-projects-experience/about-projects) is currently in public beta. We chose not to cover it because it's subject to major changes, but it brings great features such as [custom fields](https://docs.github.com/en/issues/trying-out-the-new-projects-experience/about-projects#adding-metadata-to-your-tasks) and [different views](https://docs.github.com/en/issues/trying-out-the-new-projects-experience/about-projects#adding-metadata-to-your-tasks).
 
