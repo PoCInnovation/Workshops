@@ -9,13 +9,13 @@ app = Flask(__name__, template_folder='template', static_folder='static')
 def home():
     resp = make_response(render_template('index.html'))
     resp.set_cookie('SESSION1', '23a2719ddd0c2d7d34b68d1d3e298a32')
-    resp.set_cookie('SESSION2', '284246fd2d36bdebfe25c6ab1d0ab3a9')
-    resp.set_cookie('SESSION3', '576e09d1183e3df45ded91f0a112c48b')
-    resp.set_cookie('SESSION4', 'ea3d14e7540435bde184ca97d8c6c907')
-    resp.set_cookie('SESSION5', '39ec8e428652ac83e5c4dafb7f34f8f8')
-    resp.set_cookie('SESSION6', 'acf2ec480e0bc08bb6be8d71e9a33d36')
-    resp.set_cookie('SESSION7', '350441ffd1593132df7069e611c4470c')
-    resp.set_cookie('SESSION8', 'e66019b582a31bf3da4e763a13f1e86f')
+    resp.set_cookie('SESSION2', '24e7f06357b04604d949e9760acce8aa')
+    resp.set_cookie('SESSION3', '82c2f2b4d27e6b2ab696fea0393393a5')
+    resp.set_cookie('SESSION4', 'eeffe284082952321a82929efdd6dbc3')
+    resp.set_cookie('SESSION5', '999edda14328d5f86e5e5a981fbea493')
+    resp.set_cookie('SESSION6', 'a308a6987c2b221cec397c288488fda4')
+    resp.set_cookie('SESSION7', '511cc4ba9e7e86e13bd9283a7a9e2e79')
+    resp.set_cookie('SESSION8', 'd9bb1a64853a8e251d23c54228f8bedd')
     return resp
 
 

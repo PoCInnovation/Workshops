@@ -1,0 +1,65 @@
+PoC-HTML-2022: Disallow Flag
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+            AppleWebKit/537.36 (KHTML, like Gecko)
+            Chrome/80.0.3987.149 Safari/537.36
+
+Disallow: /*/pulse
+Disallow: /*/tree/
+Disallow: /gist/
+Disallow: /*/forks
+Disallow: /*/stars
+Disallow: /*/download
+Disallow: /*/revisions
+Disallow: /*/issues/new
+Disallow: /*/issues/search
+Disallow: /*/commits/
+Disallow: /*/commits/*?author
+Disallow: /*/commits/*?path
+Disallow: /*/branches
+Disallow: /*/tags
+Disallow: /*/contributors
+Disallow: /*/comments
+Disallow: /*/stargazers
+Disallow: /*/archive/
+Disallow: /*/blame/
+Disallow: /*/watchers
+Disallow: /*/network
+Disallow: /*/graphs
+Disallow: /*/raw/
+Disallow: /*/compare/
+Disallow: /*/cache/
+Disallow: /.git/
+Disallow: */.git/
+Disallow: /*.git$
+Disallow: /search/advanced
+Disallow: /search
+Disallow: */search
+Disallow: /*q=
+Disallow: /*.atom
+
+Disallow: /ekansa/Open-Context-Data
+Disallow: /ekansa/opencontext-*
+Disallow: */tarball/
+Disallow: */zipball/
+
+Disallow: /*source=*
+Disallow: /*ref_cta=*
+Disallow: /*plan=*
+Disallow: /*return_to=*
+Disallow: /*ref_loc=*
+Disallow: /*setup_organization=*
+Disallow: /*source_repo=*
+Disallow: /*ref_page=*
+Disallow: /*source=*
+Disallow: /*referrer=*
+Disallow: /*report=*
+Disallow: /*author=*
+Disallow: /*since=*
+Disallow: /*until=*
+Disallow: /*commits?author=*
+Disallow: /*report-abuse?report=*
+Disallow: /*tab=*
+Allow: /*?tab=achievements&achievement=*
+
+Disallow: /account-login
+Disallow: /Explodingstuff/

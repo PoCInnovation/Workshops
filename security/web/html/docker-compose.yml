@@ -61,6 +61,16 @@ services:
       - log_bypath:/var/log
     container_name: bypath
 
+  head:
+    build:
+      context: ./head
+      dockerfile: Dockerfile
+    ports:
+      - "4007:4007"
+    volumes:
+      - log_head:/var/log
+    container_name: head
+
   cooked:
     build:
       context: ./cooked
@@ -71,21 +81,34 @@ services:
       - log_cooked:/var/log
     container_name: cooked
 
-  rabbit_hole:
+  rabbit:
     build:
-      context: ./rabbit_hole
+      context: ./rabbit
+      dockerfile: Dockerfile
+    ports:
+      - "4009:4009"
+    volumes:
+      - log_rabbit:/var/log
+    container_name: rabbit
+
+  reverse:
+    build:
+      context: ./reverse
       dockerfile: Dockerfile
     ports:
       - "4010:4010"
     volumes:
-      - log_intro:/var/log
-    container_name: rabbit_hole
+      - log_reverse:/var/log
+    container_name: reverse
 
 volumes:
   log_intro: {}
   log_hidden: {}
   log_logger: {}
   log_calling: {}
-  log_cooked: {}
-  log_bypath: {}
   log_capture: {}
+  log_bypath: {}
+  log_head: {}
+  log_cooked: {}
+  log_rabbit: {}
+  log_reverse: {}

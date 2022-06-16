@@ -1,8 +1,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>PoC - Calling</title>
-        <script src='static/script.js'></script>
+        <title>PoC - Reverse</title>
     </head>
     <body>
         <link href='static/style.css' rel='stylesheet' type='text/css'>
@@ -10,15 +9,24 @@
             <ul class="navbar-container">
                 <li><a href="#" class="left-underline nav-button brand-logo">PoC</a></li>
                 <li class="nav-item"><a href="#" class="left-underline nav-button" data-scroll>Wallet</a></li>
-                <li class="nav-item"><a href="#" class="left-underline nav-button" data-scroll>Pictures</a></li>
+                <li class="nav-item"><a href="/picture" class="left-underline nav-button" data-scroll>Pictures</a></li>
                 <li class="nav-item active"><a href="#" class="left-underline nav-button" data-scroll>Home</a></li>
             </ul>
         </div>
         <div class="parallax p1" id="section-1">
             <hgroup>
-                <h1>Challenge 4 - Calling</h1>
+                <h1>Challenge 10 - Reverse</h1>
                 <h1>Welcome to PoC Hacking Plateform</h1>
                 <h2>Will you be able to hack me ?!</h2>
+            </hgroup>
+        </div>
+        <div>
+            <hgroup>
+                <form action="/exploit">
+                    <input type="text" id="search" name="search" value="Searching Exploit..."><br><br>
+                    <input type="submit" value="Search">
+                    <p>{{value}}</p>
+                </form>
             </hgroup>
         </div>
         <div class="row">
