@@ -7,7 +7,7 @@ app = Flask(__name__, template_folder='template', static_folder='static')
 
 @app.route('/')
 def home():
-    if (request.headers.get('User-aagent') == 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'):
+    if (request.headers.get('User-Agent') == 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'):
         if (request.headers.get('PoC-HTML-2022') == 'Can I get the flag, please?'):
             return render_template('flag.html', flag=os.getenv('FLAG'))
     return render_template('index.html')
