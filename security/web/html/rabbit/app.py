@@ -133,107 +133,107 @@ def study():
 def gibraltar():
 	return render_template('index.html')
 
-@app.route('/P/O/C')
+@app.route('/P/o/C')
 def september():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{')
+@app.route('/P/o/C/{')
 def architecture():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/y')
+@app.route('/P/o/C/{/y')
 def technological():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/y/o')
+@app.route('/P/o/C/{/y/o')
 def insights():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/y/o/e')
+@app.route('/P/o/C/{/y/o/e')
 def abu():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/y/o/e/l')
+@app.route('/P/o/C/{/y/o/e/l')
 def via():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/y/o/e/l/m')
+@app.route('/P/o/C/{/y/o/e/l/m')
 def greg():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/y/o/e/l/m/a')
+@app.route('/P/o/C/{/y/o/e/l/m/a')
 def gotten():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/y/o/e/l/m/a/i')
+@app.route('/P/o/C/{/y/o/e/l/m/a/i')
 def saturn():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/y/o/e/l/m/a/i/s')
+@app.route('/P/o/C/{/y/o/e/l/m/a/i/s')
 def afghanistan():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/y/o/e/l/m/a/i/s/n')
+@app.route('/P/o/C/{/y/o/e/l/m/a/i/s/n')
 def hunt():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/y/o/e/l/m/a/i/s/n/o')
+@app.route('/P/o/C/{/y/o/e/l/m/a/i/s/n/o')
 def il():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/y/o/e/l/m/a/i/s/n/o/n')
+@app.route('/P/o/C/{/y/o/e/l/m/a/i/s/n/o/n')
 def vacancies():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/y/o/e/l/m/a/i/s/n/o/n/c')
+@app.route('/P/o/C/{/y/o/e/l/m/a/i/s/n/o/n/c')
 def usage():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/y/o/e/l/m/a/i/s/n/o/n/c/e')
+@app.route('/P/o/C/{/y/o/e/l/m/a/i/s/n/o/n/c/e')
 def house():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/y/o/e/l/m/a/i/s/n/o/n/c/e/s')
+@app.route('/P/o/C/{/y/o/e/l/m/a/i/s/n/o/n/c/e/s')
 def ghz():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/y/o/e/l/m/a/i/s/n/o/n/c/e/s/t')
+@app.route('/P/o/C/{/y/o/e/l/m/a/i/s/n/o/n/c/e/s/t')
 def plain():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/y/o/e/l/m/a/i/s/n/o/n/c/e/s/t/p')
+@app.route('/P/o/C/{/y/o/e/l/m/a/i/s/n/o/n/c/e/s/t/p')
 def asked():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/y/o/e/l/m/a/i/s/n/o/n/c/e/s/t/p/a')
+@app.route('/P/o/C/{/y/o/e/l/m/a/i/s/n/o/n/c/e/s/t/p/a')
 def bio():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/y/o/e/l/m/a/i/s/n/o/n/c/e/s/t/p/a/s')
+@app.route('/P/o/C/{/y/o/e/l/m/a/i/s/n/o/n/c/e/s/t/p/a/s')
 def tn():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/y/o/e/l/m/a/i/s/n/o/n/c/e/s/t/p/a/s/l')
+@app.route('/P/o/C/{/y/o/e/l/m/a/i/s/n/o/n/c/e/s/t/p/a/s/l')
 def relaxation():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/y/o/e/l/m/a/i/s/n/o/n/c/e/s/t/p/a/s/l/e')
+@app.route('/P/o/C/{/y/o/e/l/m/a/i/s/n/o/n/c/e/s/t/p/a/s/l/e')
 def beaches():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/y/o/e/l/m/a/i/s/n/o/n/c/e/s/t/p/a/s/l/e/f')
+@app.route('/P/o/C/{/y/o/e/l/m/a/i/s/n/o/n/c/e/s/t/p/a/s/l/e/f')
 def worcester():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/y/o/e/l/m/a/i/s/n/o/n/c/e/s/t/p/a/s/l/e/f/l')
+@app.route('/P/o/C/{/y/o/e/l/m/a/i/s/n/o/n/c/e/s/t/p/a/s/l/e/f/l')
 def storm():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/y/o/e/l/m/a/i/s/n/o/n/c/e/s/t/p/a/s/l/e/f/l/a')
+@app.route('/P/o/C/{/y/o/e/l/m/a/i/s/n/o/n/c/e/s/t/p/a/s/l/e/f/l/a')
 def jet():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/y/o/e/l/m/a/i/s/n/o/n/c/e/s/t/p/a/s/l/e/f/l/a/g')
+@app.route('/P/o/C/{/y/o/e/l/m/a/i/s/n/o/n/c/e/s/t/p/a/s/l/e/f/l/a/g')
 def constitutional():
 	return render_template('index.html')
 
@@ -829,99 +829,99 @@ def spread():
 def locked():
 	return render_template('index.html')
 
-@app.route('/P/O/C')
+@app.route('/P/o/C')
 def enabling():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{')
+@app.route('/P/o/C/{')
 def highland():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/a')
+@app.route('/P/o/C/{/a')
 def relevance():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/a/b')
+@app.route('/P/o/C/{/a/b')
 def fate():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/a/b/d')
+@app.route('/P/o/C/{/a/b/d')
 def piano():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/a/b/d/e')
+@app.route('/P/o/C/{/a/b/d/e')
 def moreover():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/a/b/d/e/l')
+@app.route('/P/o/C/{/a/b/d/e/l')
 def threesome():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/a/b/d/e/l/k')
+@app.route('/P/o/C/{/a/b/d/e/l/k')
 def occupied():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/a/b/d/e/l/k/v')
+@app.route('/P/o/C/{/a/b/d/e/l/k/v')
 def incentive():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/a/b/d/e/l/k/v/i')
+@app.route('/P/o/C/{/a/b/d/e/l/k/v/i')
 def measured():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/a/b/d/e/l/k/v/i/e')
+@app.route('/P/o/C/{/a/b/d/e/l/k/v/i/e')
 def summaries():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/a/b/d/e/l/k/v/i/e/n')
+@app.route('/P/o/C/{/a/b/d/e/l/k/v/i/e/n')
 def critics():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/a/b/d/e/l/k/v/i/e/n/t')
+@app.route('/P/o/C/{/a/b/d/e/l/k/v/i/e/n/t')
 def verbal():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/a/b/d/e/l/k/v/i/e/n/t/p')
+@app.route('/P/o/C/{/a/b/d/e/l/k/v/i/e/n/t/p')
 def employer():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/a/b/d/e/l/k/v/i/e/n/t/p/a')
+@app.route('/P/o/C/{/a/b/d/e/l/k/v/i/e/n/t/p/a')
 def metals():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/a/b/d/e/l/k/v/i/e/n/t/p/a/s')
+@app.route('/P/o/C/{/a/b/d/e/l/k/v/i/e/n/t/p/a/s')
 def butterfly():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/a/b/d/e/l/k/v/i/e/n/t/p/a/s/a')
+@app.route('/P/o/C/{/a/b/d/e/l/k/v/i/e/n/t/p/a/s/a')
 def nokia():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/a/b/d/e/l/k/v/i/e/n/t/p/a/s/a/l')
+@app.route('/P/o/C/{/a/b/d/e/l/k/v/i/e/n/t/p/a/s/a/l')
 def debian():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/a/b/d/e/l/k/v/i/e/n/t/p/a/s/a/l/a')
+@app.route('/P/o/C/{/a/b/d/e/l/k/v/i/e/n/t/p/a/s/a/l/a')
 def officials():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/a/b/d/e/l/k/v/i/e/n/t/p/a/s/a/l/a/m')
+@app.route('/P/o/C/{/a/b/d/e/l/k/v/i/e/n/t/p/a/s/a/l/a/m')
 def beverly():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/a/b/d/e/l/k/v/i/e/n/t/p/a/s/a/l/a/m/u')
+@app.route('/P/o/C/{/a/b/d/e/l/k/v/i/e/n/t/p/a/s/a/l/a/m/u')
 def voted():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/a/b/d/e/l/k/v/i/e/n/t/p/a/s/a/l/a/m/u/s')
+@app.route('/P/o/C/{/a/b/d/e/l/k/v/i/e/n/t/p/a/s/a/l/a/m/u/s')
 def shown():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/a/b/d/e/l/k/v/i/e/n/t/p/a/s/a/l/a/m/u/s/c')
+@app.route('/P/o/C/{/a/b/d/e/l/k/v/i/e/n/t/p/a/s/a/l/a/m/u/s/c')
 def solutions():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/a/b/d/e/l/k/v/i/e/n/t/p/a/s/a/l/a/m/u/s/c/u')
+@app.route('/P/o/C/{/a/b/d/e/l/k/v/i/e/n/t/p/a/s/a/l/a/m/u/s/c/u')
 def updates():
 	return render_template('index.html')
 
@@ -1113,91 +1113,91 @@ def magazine():
 def could():
 	return render_template('index.html')
 
-@app.route('/P/O/C')
+@app.route('/P/o/C')
 def specs():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{')
+@app.route('/P/o/C/{')
 def board():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/Y')
+@app.route('/P/o/C/{/Y')
 def popularity():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/Y/_')
+@app.route('/P/o/C/{/Y/_')
 def says():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/Y/_/4')
+@app.route('/P/o/C/{/Y/_/4')
 def yards():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/Y/_/4/_')
+@app.route('/P/o/C/{/Y/_/4/_')
 def diane():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/Y/_/4/_/p')
+@app.route('/P/o/C/{/Y/_/4/_/p')
 def toolkit():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/Y/_/4/_/p/a')
+@app.route('/P/o/C/{/Y/_/4/_/p/a')
 def jerusalem():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/Y/_/4/_/p/a/s')
+@app.route('/P/o/C/{/Y/_/4/_/p/a/s')
 def yn():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/Y/_/4/_/p/a/s/_')
+@app.route('/P/o/C/{/Y/_/4/_/p/a/s/_')
 def suspected():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/Y/_/4/_/p/a/s/_/d')
+@app.route('/P/o/C/{/Y/_/4/_/p/a/s/_/d')
 def skype():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/Y/_/4/_/p/a/s/_/d/e')
+@app.route('/P/o/C/{/Y/_/4/_/p/a/s/_/d/e')
 def insider():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/Y/_/4/_/p/a/s/_/d/e/_')
+@app.route('/P/o/C/{/Y/_/4/_/p/a/s/_/d/e/_')
 def notification():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/Y/_/4/_/p/a/s/_/d/e/_/F')
+@app.route('/P/o/C/{/Y/_/4/_/p/a/s/_/d/e/_/F')
 def syndicate():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/Y/_/4/_/p/a/s/_/d/e/_/F/l')
+@app.route('/P/o/C/{/Y/_/4/_/p/a/s/_/d/e/_/F/l')
 def same():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/Y/_/4/_/p/a/s/_/d/e/_/F/l/4')
+@app.route('/P/o/C/{/Y/_/4/_/p/a/s/_/d/e/_/F/l/4')
 def separately():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/Y/_/4/_/p/a/s/_/d/e/_/F/l/4/g')
+@app.route('/P/o/C/{/Y/_/4/_/p/a/s/_/d/e/_/F/l/4/g')
 def duty():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/Y/_/4/_/p/a/s/_/d/e/_/F/l/4/g/_')
+@app.route('/P/o/C/{/Y/_/4/_/p/a/s/_/d/e/_/F/l/4/g/_')
 def pike():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/Y/_/4/_/p/a/s/_/d/e/_/F/l/4/g/_/I')
+@app.route('/P/o/C/{/Y/_/4/_/p/a/s/_/d/e/_/F/l/4/g/_/I')
 def breathing():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/Y/_/4/_/p/a/s/_/d/e/_/F/l/4/g/_/I/c')
+@app.route('/P/o/C/{/Y/_/4/_/p/a/s/_/d/e/_/F/l/4/g/_/I/c')
 def burton():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/Y/_/4/_/p/a/s/_/d/e/_/F/l/4/g/_/I/c/I')
+@app.route('/P/o/C/{/Y/_/4/_/p/a/s/_/d/e/_/F/l/4/g/_/I/c/I')
 def incorporated():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/Y/_/4/_/p/a/s/_/d/e/_/F/l/4/g/_/I/c/I/}')
+@app.route('/P/o/C/{/Y/_/4/_/p/a/s/_/d/e/_/F/l/4/g/_/I/c/I/}')
 def thick():
 	return render_template('index.html')
 
@@ -1209,63 +1209,63 @@ def college():
 def broker():
 	return render_template('index.html')
 
-@app.route('/P/O/C')
+@app.route('/P/o/C')
 def pro():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{')
+@app.route('/P/o/C/{')
 def counts():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/C')
+@app.route('/P/o/C/{/C')
 def trans():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/C/a')
+@app.route('/P/o/C/{/C/a')
 def circle():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/C/a/c')
+@app.route('/P/o/C/{/C/a/c')
 def ignore():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/C/a/c/e')
+@app.route('/P/o/C/{/C/a/c/e')
 def username():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/C/a/c/e/s')
+@app.route('/P/o/C/{/C/a/c/e/s')
 def rg():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/C/a/c/e/s/t')
+@app.route('/P/o/C/{/C/a/c/e/s/t')
 def beatles():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/C/a/c/e/s/t/l')
+@app.route('/P/o/C/{/C/a/c/e/s/t/l')
 def southampton():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/C/a/c/e/s/t/l/e')
+@app.route('/P/o/C/{/C/a/c/e/s/t/l/e')
 def booty():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/C/a/c/e/s/t/l/e/f')
+@app.route('/P/o/C/{/C/a/c/e/s/t/l/e/f')
 def write():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/C/a/c/e/s/t/l/e/f/l')
+@app.route('/P/o/C/{/C/a/c/e/s/t/l/e/f/l')
 def supreme():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/C/a/c/e/s/t/l/e/f/l/a')
+@app.route('/P/o/C/{/C/a/c/e/s/t/l/e/f/l/a')
 def restrictions():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/C/a/c/e/s/t/l/e/f/l/a/g')
+@app.route('/P/o/C/{/C/a/c/e/s/t/l/e/f/l/a/g')
 def definitely():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/C/a/c/e/s/t/l/e/f/l/a/g/_')
+@app.route('/P/o/C/{/C/a/c/e/s/t/l/e/f/l/a/g/_')
 def ln():
 	return render_template('index.html')
 
@@ -1333,47 +1333,47 @@ def explorer():
 def europe():
 	return render_template('index.html')
 
-@app.route('/P/O/C')
+@app.route('/P/o/C')
 def describe():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{')
+@app.route('/P/o/C/{')
 def ethiopia():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/A')
+@app.route('/P/o/C/{/A')
 def specification():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/A/l')
+@app.route('/P/o/C/{/A/l')
 def blow():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/A/l/l')
+@app.route('/P/o/C/{/A/l/l')
 def expenditures():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/A/l/l/e')
+@app.route('/P/o/C/{/A/l/l/e')
 def dinner():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/A/l/l/e/z')
+@app.route('/P/o/C/{/A/l/l/e/z')
 def outcome():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/A/l/l/e/z/l')
+@app.route('/P/o/C/{/A/l/l/e/z/l')
 def consistency():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/A/l/l/e/z/l/_')
+@app.route('/P/o/C/{/A/l/l/e/z/l/_')
 def bin():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/A/l/l/e/z/l/_/O')
+@app.route('/P/o/C/{/A/l/l/e/z/l/_/O')
 def alleged():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/A/l/l/e/z/l/_/O/L')
+@app.route('/P/o/C/{/A/l/l/e/z/l/_/O/L')
 def vitamin():
 	return render_template('index.html')
 
@@ -1385,39 +1385,39 @@ def copied():
 def playstation():
 	return render_template('index.html')
 
-@app.route('/P/O/C')
+@app.route('/P/o/C')
 def grades():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{')
+@app.route('/P/o/C/{')
 def material():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/p')
+@app.route('/P/o/C/{/p')
 def jazz():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/p/i')
+@app.route('/P/o/C/{/p/i')
 def stretch():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/p/i/p')
+@app.route('/P/o/C/{/p/i/p')
 def ons():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/p/i/p/i')
+@app.route('/P/o/C/{/p/i/p/i')
 def geological():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/p/i/p/i/p')
+@app.route('/P/o/C/{/p/i/p/i/p')
 def compatible():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/p/i/p/i/p/i')
+@app.route('/P/o/C/{/p/i/p/i/p/i')
 def hb():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/p/i/p/i/p/i/p')
+@app.route('/P/o/C/{/p/i/p/i/p/i/p')
 def rhythm():
 	return render_template('index.html')
 
@@ -1429,79 +1429,79 @@ def robertson():
 def glasses():
 	return render_template('index.html')
 
-@app.route('/P/O/C')
+@app.route('/P/o/C')
 def limit():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{')
+@app.route('/P/o/C/{')
 def scholarships():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/p')
+@app.route('/P/o/C/{/p')
 def permission():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/p/a')
+@app.route('/P/o/C/{/p/a')
 def tracked():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/p/a/p')
+@app.route('/P/o/C/{/p/a/p')
 def prerequisite():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/p/a/p/a')
+@app.route('/P/o/C/{/p/a/p/a')
 def sex():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/p/a/p/a/p')
+@app.route('/P/o/C/{/p/a/p/a/p')
 def kidney():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/p/a/p/a/p/a')
+@app.route('/P/o/C/{/p/a/p/a/p/a')
 def dozens():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/p/a/p/a/p/a/p')
+@app.route('/P/o/C/{/p/a/p/a/p/a/p')
 def dame():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/p/a/p/a/p/a/p/a')
+@app.route('/P/o/C/{/p/a/p/a/p/a/p/a')
 def understood():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/p/a/p/a/p/a/p/a/p')
+@app.route('/P/o/C/{/p/a/p/a/p/a/p/a/p')
 def regards():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/p/a/p/a/p/a/p/a/p/a')
+@app.route('/P/o/C/{/p/a/p/a/p/a/p/a/p/a')
 def acquisitions():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/p/a/p/a/p/a/p/a/p/a/p')
+@app.route('/P/o/C/{/p/a/p/a/p/a/p/a/p/a/p')
 def mo():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/p/a/p/a/p/a/p/a/p/a/p/a')
+@app.route('/P/o/C/{/p/a/p/a/p/a/p/a/p/a/p/a')
 def mauritius():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/p/a/p/a/p/a/p/a/p/a/p/a/p')
+@app.route('/P/o/C/{/p/a/p/a/p/a/p/a/p/a/p/a/p')
 def ch():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/p/a/p/a/p/a/p/a/p/a/p/a/p/a')
+@app.route('/P/o/C/{/p/a/p/a/p/a/p/a/p/a/p/a/p/a')
 def fleet():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/p/a/p/a/p/a/p/a/p/a/p/a/p/a/p')
+@app.route('/P/o/C/{/p/a/p/a/p/a/p/a/p/a/p/a/p/a/p')
 def quantities():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/p/a/p/a/p/a/p/a/p/a/p/a/p/a/p/a')
+@app.route('/P/o/C/{/p/a/p/a/p/a/p/a/p/a/p/a/p/a/p/a')
 def stores():
 	return render_template('index.html')
 
-@app.route('/P/O/C/{/p/a/p/a/p/a/p/a/p/a/p/a/p/a/p/a/p')
+@app.route('/P/o/C/{/p/a/p/a/p/a/p/a/p/a/p/a/p/a/p/a/p')
 def ur():
 	return render_template('index.html')
 
