@@ -36,9 +36,9 @@ Folder: app
 
 ## Dataset
 
-<p align="center"><img src="./images/quick_draw.png" alt="Quick Draw"></p>
+<p align="center"><img src="./images/cifar10.png" alt="Quick Draw"></p>
 
-In this workshop you will use the [Quick, Draw!](https://quickdraw.withgoogle.com/data).
+In this workshop you will use the [CIFAR10](http://www.cs.toronto.edu/~kriz/cifar.html).
 
 ## Step 0: Initialization
 
