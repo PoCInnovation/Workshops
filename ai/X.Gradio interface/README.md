@@ -15,6 +15,7 @@ You will:
 ## Documentation
 
 - [Torch](https://pytorch.org/docs/stable/index.html)
+- [Numpy](https://numpy.org/doc/)
 - [Gradio](https://gradio.app/docs/)
 - [Matplotlib](https://matplotlib.org/3.1.1/index.html)
 
@@ -57,8 +58,8 @@ In the class `app` you will add the following attributes:
 
 ## Step 2: Add the dataset
 
-- In your class app create an attribute `train_loader` and an attribute `test_loader` that will contain the dataset.
-- In your class app you will create an attribute `classes` that will contain the classes of your dataset.
+- In your class app create an attribute `train_set` and an attribute `train_lodear` that will contain the dataset.
+- In your class app you will create an attribute `classes` that will contain the classes of your dataset. (Take the classes in the `train_set`)
 - Create a method called `add_dataset` that will return a dataloader.
 
 The `add_dataset` method will receive a `dataset_path` and if you want a train set or test set.
@@ -131,6 +132,10 @@ In one figure you will display the loss and accuracy of the training.
 ## Step 6: Save the model
 
 After your training, you will save your model in the `model` folder.
+
+With `torch` you can simply save your models.
+
+So remember to load the template if it is already present in the appropriate file.
 
 ## Step 7: Predict an image
 
@@ -228,9 +233,3 @@ Organization
 </p>
 
 > :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
-
-# TODO
-- Add classes in class app
-- Update dataset
-- Add documentations
-- Add images
