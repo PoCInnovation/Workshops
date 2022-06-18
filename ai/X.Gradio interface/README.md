@@ -81,6 +81,8 @@ In your init method of the class `model` you will add the following attributes:
 - `linear2`: the second linear layer
 - `linear3`: the third linear layer
 
+You can use [this documentation](https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html) for the convolutions
+
 Create a forward method that will receive the input of your model and use the model variables.
 
 ## Step 4: Implement the training
