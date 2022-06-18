@@ -1,5 +1,10 @@
 # Setup
 
+## Requirements
+
+In the `app` folder you can find the `requirements.txt` file to install the dependencies easily.
+Unless you want to do it by hand, you can follow these instructions
+
 ## 1. PyTorch
 
 For this workshop you will use the [PyTorch](https://pytorch.org/) framework.
