@@ -1,31 +1,41 @@
 # Part 1: Git
 
+## Introduction
+
+There are a bunch of hyperlinks in this workshop, it is meant to give you as much information as possible so please follow them and read the website content.
+
+There are some git commands that won't really be seen on their own but will be mentioned on some parts where it matters.
+
 ## Step 0 - Project initialization
 
 Even though it seems obvious, you need [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed for this workshop
 
 You will have a repo ready on the GitHub Classroom setup for this part.
 
-There are a bunch of hyperlinks in this workshop, unless you already know the website follow the link and read the website content.
-
 This workshop is meant to see everything with git, the start may be a bit tedious, but it's better to go over the basics for people who need it rather than skip it.
 
-There are some git commands that won't really be seen on their own but will be mentioned on some parts where it matters.
-
-If you are using OhMyZsh and aren't using the git aliases it comes with you are making a big mistake so check out the available git aliases and try and use those, you will gain time by typing fewer letters and have much more advanced formatting sometimes (thinking about `glods` here). 
-To see those aliases it's simple: `alias | grep git`
+Check the [Oh My Zsh](#oh-my-zsh) tip.
 
 ## Step 1 - Initialize a repository locally
 
 There are multiple ways to initialize a repository locally.
+
+### Local and Remote
+
+Throughout all this workshop, we will make references to local and remote repository.
+
+You have to understand that the remote repository is the one hosted onto the server (for example GitHub's servers).
+This is where people will retrieve others work from.
+
+Then you have the local repository which is the copy of the remote one that you have on your computer.
+This is where you will make all your modifications before pushing those.
 
 ### Clone an existing repository
 
 The most known one is to clone a repository using `git clone`.
 
 It is recommended to clone via ssh rather than https.
-SSH repository URLs can be identified as they start with `git@github.com:` whereas HTTPS URLs start with `https://github.com/`
-The reason why ssh is recommended is that you don't have to enter your username and password everytime you want to pull or push because your ssh key authenticates you, and it is more secured than your password.
+Check the [HTTPS vs SSH clone](#https-vs-ssh-clone) tip.
 
 If you haven't already, go ahead and clone the GitHub repository created for this workshop.
 
@@ -68,6 +78,8 @@ You also have other commands that can be used to modify files such as `git rm` a
 Now add a file named `step2.txt` with "Hello World!" written in it.
 
 ### Commit your modifications
+
+First, it is important that you understand that the commit history of a repo should not be modified, you may only add commits to the succession of the history.
 
 Once you have modified your files and added these modifications to the index, you can go ahead and commit those.
 Keep in mind that a single commit should make as few changes as possible, and should keep the changes on the same topic.
@@ -198,3 +210,23 @@ So go ahead and restore the file `step4.txt`
 You have learned a lot about git and a lot about processes used in most workflows using git nowadays.
 
 Make good use of it.
+
+## Tips
+
+### Oh My Zsh
+
+<details>
+
+> If you are using OhMyZsh and aren't using the git aliases it comes with you are making a big mistake so check out the available git aliases and try and use those, you will gain time by typing fewer letters and have much more advanced formatting sometimes (thinking about `glods` here).
+To see those aliases it's simple: `alias | grep git`
+
+</details>
+
+### HTTPS vs SSH clone
+
+<details>
+
+> SSH repository URLs can be identified as they start with `git@github.com:` whereas HTTPS URLs start with `https://github.com/`
+The reason why ssh is recommended is that you don't have to enter your username and password everytime you want to pull or push because your ssh key authenticates you, and it is more secured than your password.
+
+</details>
