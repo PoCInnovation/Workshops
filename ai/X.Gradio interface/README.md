@@ -71,7 +71,7 @@ If it is downloaded, check if the dataset is correct.
 
 ## Step 3: Create the model
 
-<p align="center"><img src="./images/model.png" alt="Model"></p>
+<p align="center"><img src="./images/model.png" alt="Model" style="width: 500px"></p>
 
 Create a class called `model` that will contain the model of your application.
 
@@ -89,7 +89,7 @@ Create a forward method that will receive the input of your model and use the mo
 
 ## Step 4: Implement the training
 
-<p align="center"><img src="./images/training.png" alt="Training"></p>
+<p align="center"><img src="./images/training.png" alt="Training" style="width: 500px"></p>
 
 Create a method called `train` that will train your model.
 
