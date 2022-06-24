@@ -71,6 +71,8 @@ If it is downloaded, check if the dataset is correct.
 
 ## Step 3: Create the model
 
+<p align="center"><img src="./images/model.png" alt="Model"></p>
+
 Create a class called `model` that will contain the model of your application.
 
 In your init method of the class `model` you will add the following attributes:
@@ -86,6 +88,8 @@ You can use [this documentation](https://pytorch.org/tutorials/beginner/blitz/ci
 Create a forward method that will receive the input of your model and use the model variables.
 
 ## Step 4: Implement the training
+
+<p align="center"><img src="./images/training.png" alt="Training"></p>
 
 Create a method called `train` that will train your model.
 
