@@ -130,12 +130,14 @@ Use Matplotlib for this step.
 
 In one figure you will display the loss and accuracy of the training.
 
+Check the documentation of [Matplotlib plot](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html).
+
 
 ## Step 6: Save the model
 
 After your training, you will save your model in the `model` folder.
 
-With `torch` you can simply save your models.
+With `torch` you can simply [save your models](https://pytorch.org/tutorials/beginner/saving_loading_models.html).
 
 So remember to load the template if it is already present in the appropriate file.
 
@@ -147,7 +149,7 @@ The prediction is an element of the `classes` attribute.
 
 ## Step 8: Create the Gradio interface
 
-Create a gradio interface with for inputs an image.
+Create a [gradio interface](https://gradio.app/docs/#interface) with for inputs an image.
 
 For this, you need a function called `execute_predict` (You will create this function in the next step) that will receive an image and return the prediction.
 
@@ -183,6 +185,8 @@ To calculate the mean and std of the dataset you need to create a function with 
 - Set `mean` variable to the result of `channels_sum` divided by `batch_num`
 - Set `std` variable to this equation: `std = sqrt(E[X^2] - (E[X])^2)`
 - Return the mean and std
+
+[This documentation](https://towardsdatascience.com/how-to-calculate-the-mean-and-standard-deviation-normalizing-datasets-in-pytorch-704bd7d05f4c) can be help you.
 
 ## Step 9.3: Execute the prediction
 
