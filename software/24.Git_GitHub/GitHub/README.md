@@ -1,7 +1,7 @@
 # Part 2: GitHub :rocket:
 
 ## Step 0 - Project initialization
-Create a repository and commit the files & folders contained in [project folder].
+Create a repository and commit the files & folders contained in the `calculator` folder.
 Some steps should be completed in groups of at least 2.
 Go to your repository settings, and in the `Collaborators` add your teammate !
 
@@ -95,7 +95,7 @@ Organizing taks with states like `To do`, `In progress` and `Done` is great, but
 linked to a sprint for example ? Milestones are exactly what you need !  
 You can find them in the `Issues` tab.
 
-> You won't find a lot of documentation about it, but it's also possible to create [milestone templates](https://github.com/PoCInnovation/open-source-project-template/blob/main/.github/milestone_template.md) 🚀
+> There is no milestone template, but nothing prevents you from having one in the `.github` folder and paste it's content when you create a milestone. Here's [an example of what it could look like](https://github.com/PoCInnovation/open-source-project-template/blob/main/.github/milestone_template.md) 🚀
 
 ## Step 3 - [Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)
 ### :bookmark_tabs: **Description**:
@@ -105,7 +105,14 @@ Whether you want to build, test or deploy your code, you can create custom workf
 ### :pushpin: **Tasks**:
 Follow [this quickstart](https://docs.github.com/en/actions/quickstart) to create your first action !
 
-> If you want to learn more about GitHub Actions, you can check [our dedicated workshop](https://github.com/PoCInnovation/Workshops/tree/24.Git_Github/software/05.Actions) !
+### :heavy_check_mark: **Validation**:
+You can see your workflow runs in the `Action` tab of your repository
+<details>
+  <summary>Action tab preview</summary>
+  <img str="./assets/action_result.png"/>
+</details>
+
+> If you want to learn more about GitHub Actions with real use cases, you can check [our dedicated workshop](https://github.com/PoCInnovation/Workshops/tree/24.Git_Github/software/05.Actions) !
 
 ## Step 4 - [Branches protection settings](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branches) (optional)
 ### :bookmark_tabs: **Description**:
