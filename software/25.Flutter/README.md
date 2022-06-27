@@ -185,3 +185,11 @@ Now that you can navigate between your home page and your todo creation page, yo
   - `TextField` for the description of todo.
   - A create `Button` to [pop](https://docs.flutter.dev/cookbook/navigation/returning-data) the todo to the page pusher. 
   - A cancel `Button` to close the page.
+
+## Bonuses
+
+Labels in todo, as exemple: `urgent`, `important`, `less important`.
+
+Deadline for the todo.
+
+Add the possibility to move the todo up and down.
