@@ -68,10 +68,15 @@ Try to make it as complete as possible, then take a look at the expected results
 ## Step 2 - [Projects](https://docs.github.com/en/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards) & [Milestones](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/about-milestones)
 ### :bookmark_tabs: **Description**:
 You can manage features and tasks with issues, group commits and do code reviews with PRs, but how do you actually organize
-your work in tables like well-known ticketing tools ? That's where GitHub Projects come into play !
+your work in tables like well-known ticketing tools ? That's where GitHub Projects come into play !  
+But how to you handle deadlines and group several issues and PRs linked to a sprint for example ? Milestones are exactly what you need for this !  
+You can find them in the `Issues` tab.  
 
 ### :pushpin: **Tasks**:
-Create a project named `Calculator` with 3 columns (by default `To do`, `In progress` and `Done` but you can rename it) with automation to add issues in `To do` when they are created, move created PRs to `In progress` and fill the `Done` column when closing issues or merging PRs.
+Create a project named `Calculator` with 3 columns (by default `To do`, `In progress` and `Done` but you can rename it) with automation to add issues in `To do` when they are created, move created PRs to `In progress` and fill the `Done` column when closing issues or merging PRs.  
+Then, you can play with milestones by creating one with a due date of `January 19, 2038` and adding Issues to it. 
+
+> There is no milestone template, but nothing prevents you from having one in the `.github` folder and paste it's content when you create a milestone. Here's [an example of what it could look like](https://github.com/PoCInnovation/open-source-project-template/blob/main/.github/milestone_template.md) 🚀
 
 ### :heavy_check_mark: **Validation**:
 You can test it by creating other issues:
@@ -87,15 +92,12 @@ You can test it by creating other issues:
   <summary>Project view example</summary>
   <img src="./assets/project_view.png"/>
 </details>
+<details>
+  <summary>Milestone example</summary>
+  <img src="./assets/milestone_view.png"/>
+</details>
 
 > A [new GitHub Project experience](https://docs.github.com/en/issues/trying-out-the-new-projects-experience/about-projects) is currently in public beta. We chose not to cover it because it's subject to major changes, but it brings great features such as [custom fields](https://docs.github.com/en/issues/trying-out-the-new-projects-experience/about-projects#adding-metadata-to-your-tasks) and [different views](https://docs.github.com/en/issues/trying-out-the-new-projects-experience/about-projects#adding-metadata-to-your-tasks).
-
-### :bookmark_tabs: **Description**:
-Organizing taks with states like `To do`, `In progress` and `Done` is great, but how to you handle deadlines and group several issues and PRs
-linked to a sprint for example ? Milestones are exactly what you need !  
-You can find them in the `Issues` tab.
-
-> There is no milestone template, but nothing prevents you from having one in the `.github` folder and paste it's content when you create a milestone. Here's [an example of what it could look like](https://github.com/PoCInnovation/open-source-project-template/blob/main/.github/milestone_template.md) 🚀
 
 ## Step 3 - [Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)
 ### :bookmark_tabs: **Description**:
