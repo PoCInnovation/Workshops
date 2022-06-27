@@ -87,11 +87,9 @@ class _ToDoListState extends State<ToDoList> {
 }
 ```
 
-This code create a `component` `ToDoList` that take a list of string in parameters. To use the paremeters you have to call it like this:
+This code create a `component` `ToDoList` that take a list of string in parameters.
 
-```dart
-widget.arr
-```
+Here is to know [how to access of parameters](https://stackoverflow.com/questions/50287995/passing-data-to-statefulwidget-and-accessing-it-in-its-state-in-flutter).
 
 Lets take a look of how to do list with Flutter. For it you have muliple choices, here are few of them:
 
@@ -114,4 +112,37 @@ Lets take a look of how to do list with Flutter. For it you have muliple choices
 
 - [For loop](https://stackoverflow.com/questions/56947046/flutter-for-loop-to-generate-list-of-widgets)
 
+You have to make sure you component is workink by calling your component with this list in parameters:
+
+```dart
+final List<String> _arr = ["Todo 1", "Todo 2", "Todo 3", "Todo 4", "Todo 5"];
+```
+
 :warning: If the list can't be display to the entire screen (it will happen), you might wrap your list with [SingleChildScrollView](https://api.flutter.dev/flutter/widgets/SingleChildScrollView-class.html), to make your screen scrollable.
+
+## Step 3 - Models
+
+For this step you have to create a folder `lib/models` and a `todo.dart`.
+
+The goal of this step is to create a class that will define the atributs of a todo and impelement it.
+
+Your todo class need to contain the following attributs:
+  
+  - A required string `title`
+  - An optional string `description`
+
+Then you have to replace the list of string `_arr` that you passed as parameters of your `ToDoList component` by:
+
+```dart
+final List<Todo> _todos = [Todo(title: "Todo 1"), Todo(title: "Todo 2", description: "description of todo 2"), Todo(title: "Todo 3"), Todo(title: "Todo 4"), Todo(title: "Todo 5", description: "description of todo 5")];
+```
+
+Then your `ToDoList component` have now to display the title of all todos.
+
+## Step 4 - Card and ListTile
+
+In order to make the work easier, you will use a [list tile](https://api.flutter.dev/flutter/material/ListTile-class.html). It will help you to organise your todo.
+
+So you can set the title of your todo as the title of your `tile` and the `description` of the todo as the subtitle (but you are free to whatever you want).
+
+That seem a little bit better but we can do more. Make your list more eye-catching by wraping each element of your list with a [card](https://api.flutter.dev/flutter/material/Card-class.html).
