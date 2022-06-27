@@ -59,6 +59,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
 If everything has worked and you launche the project, you migth have the text `Step 1` in the middle of the application.
 
+:warning: In this code you have some const that you will have to remove because of non const contructor of widget you will use.
+
 ## Step 2 - Lists
 
 The most important thing in a `to do list` is to have a list of `Widget` that will represent your todos.
@@ -146,3 +148,40 @@ In order to make the work easier, you will use a [list tile](https://api.flutter
 So you can set the title of your todo as the title of your `tile` and the `description` of the todo as the subtitle (but you are free to whatever you want).
 
 That seem a little bit better but we can do more. Make your list more eye-catching by wraping each element of your list with a [card](https://api.flutter.dev/flutter/material/Card-class.html).
+
+As now you have a `list tile` you can already make the delete [icon button](https://api.flutter.dev/flutter/material/IconButton-class.html) in the trailing of your tile.
+
+:warning: In flutter you have to [refresh the state of the page](https://api.flutter.dev/flutter/widgets/State/setState.html) after modifing a displayed variable to see it.
+
+## Step 5 - Create a todo
+
+At this time, you might have the display and the delete of your todos, the only thing that miss is the todo creation page.
+
+In order to make the creation page you have to create a `lib/pages/create_todo.dart` file with the following code in it:
+```dart
+class CreateTodoPage extends StatelessWidget {
+  const CreateTodoPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      body: SafeArea(
+        child: Center(
+          child: Text("Create todo page"),
+        ),
+      ),
+    );
+  }
+}
+```
+
+For it you need to add a button in your home page that redirect to the creation page, I recommand you to use the `floatingActionButton` of your `Scaffold` from your home page.
+
+Then the button need to use the [navigator class](https://docs.flutter.dev/cookbook/navigation/navigation-basics) to change the screen to the creation page.
+
+Now that you can navigate between your home page and your todo creation page, you can create the page. This page must containe the following widgets:
+
+  - `TextField` for the title of todo.
+  - `TextField` for the description of todo.
+  - A create `Button` to [pop](https://docs.flutter.dev/cookbook/navigation/returning-data) the todo to the page pusher. 
+  - A cancel `Button` to close the page.
