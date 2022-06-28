@@ -1,6 +1,6 @@
 # Workshop 12 - Create a web application with GraphQL and Apollo
 
-:heavy_check_mark: Learn graphql API concept
+:heavy_check_mark: Learn Graphql API concept
 
 :heavy_check_mark: Interact with a graphQL API
 
@@ -22,7 +22,7 @@ Curious by nature and looking for something new, you decide to set up your littl
 
 ## Step 1 - Welcome to GraphQl Playground
 
-Your first reflex is to try the World Map API to play with Graphql and understand concepts.
+Your first reflex is to try the World Map API to play with Graphql and understand its concepts.
 
   - Go to [World Map API](https://countries.trevorblades.com)
 
@@ -54,7 +54,7 @@ Your directory should have the following structure :
 │   ├── feeds
 │   │   └── feed.ts # Feed database
 │   ├── helpers
-│   │   └── Errors.ts # Apollo custom errors 
+│   │   └── Errors.ts # Apollo custom errors
 │   ├── resolver # All resolvers (queries and mutations)
 │   │   ├── Categories
 │   │   │   ├── index.ts
@@ -104,9 +104,9 @@ Go to http://localhost:5000 to reach the local playground of your API.
 ### Basics functions
 
 We will start with some basic function to warm up, let's write :
- - a query named `hello` that return the `string` "Hello World"
- - a query named `personalHello` that takes a `string` as parameter and return : "Hello " + the parameter
- - a mutation named `add` that takes two numbers as parameters and return the additive
+ - a query named `hello` that returns the `string` "Hello World"
+ - a query named `personalHello` that takes a `string` as parameter and returns : "Hello " + the parameter
+ - a mutation named `add` that takes two numbers as parameters and returns the additive
 
 First, you must modify the schema in `src/schema/schema.graphql` to define your query and mutation.
 
@@ -130,10 +130,10 @@ First, you must modify `src/schema/schema.graphql` to implement two new types :
   - `Product` that has the same fields as model `Product` in `schema.prisma`.
 
 Then, create resolvers that can read of `Category` and `Product` :
- - a query `categories` that return all categories 
- - a query `category` takes an `id` as parameter and return the category.
+ - a query `categories` that return all categories
+ - a query `category` takes an `id` as parameter and returns the category.
  - a query `products` that return all products
- - a query `product` takes an `id` as parameter and return the product.
+ - a query `product` takes an `id` as parameter and returns the product.
 
 > :bulb: You can add comments that will be displayed in the playground with `"`.
 
@@ -159,11 +159,11 @@ Create two `input` that defines arguments for mutation :
 
 Add the following `Mutation` in `src/schema/schema.graphql`:
  - `createProduct` that takes an `input` of type `ProductInput` as parameter and return the product created in the database.
- - `updateProduct` that takes an `input` of type `ProductInput` as parameter and return the product updated in the database.
- - `deleteProduct` that takes an `id`  as parameter and return the product deleted from the database.
+ - `updateProduct` that takes an `id` and an `input` of type `ProductInput` as parameter and return the product updated in the database.
+ - `deleteProduct` that takes an `id` as parameter and return the product deleted from the database.
  - `createCategory` that takes an `input` of type `CategoryInput` as parameter and return the category created in the database.
- - `updateCategory` that takes an `input` of type `CategoryInput` as parameter and return the category updated in the database.
- - `deleteCategory` that takes an `id`  as parameter and return the category deleted from the database.
+ - `updateCategory` that takes an `id` and an `input` of type `CategoryInput` as parameter and return the category updated in the database.
+ - `deleteCategory` that takes an `id` as parameter and return the category deleted from the database.
 
 > :bulb: Don't forget to write documentation for your mutation and queries with commentaries
 
@@ -189,7 +189,7 @@ Your directory should have the following structure :
 
 ```shell
 ├── public # Public directory with not important stuff
-├── src 
+├── src
 │   ├── api # API connection and types definition
 │   │   ├── client.ts
 │   │   └── Entities.ts
