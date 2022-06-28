@@ -1,6 +1,6 @@
 # Workshop 12 - Create a web application with GraphQL and Apollo
 
-:heavy_check_mark: Learn Graphql API concept
+:heavy_check_mark: Learn graphql API concept
 
 :heavy_check_mark: Interact with a graphQL API
 
@@ -121,7 +121,7 @@ Then you can define your queries and mutation in `src/resolver/Hello/` folder.
 
 ## Step 3 - Schema
 
-Warm up is finished. It's time to create schema that define our API.
+Warm up is finished. It's time to create the schema that define our API.
 
 The database schema is already defined in `prisma/schema.prisma`.
 
@@ -158,12 +158,12 @@ Create two `input` that defines arguments for mutation :
 :bulb: Don't forget to add fields from relation to allow connection between entities.
 
 Add the following `Mutation` in `src/schema/schema.graphql`:
- - `createProduct` that takes an `input` of type `ProductInput` as parameter and return the product created in the database.
- - `updateProduct` that takes an `id` and an `input` of type `ProductInput` as parameter and return the product updated in the database.
- - `deleteProduct` that takes an `id` as parameter and return the product deleted from the database.
- - `createCategory` that takes an `input` of type `CategoryInput` as parameter and return the category created in the database.
- - `updateCategory` that takes an `id` and an `input` of type `CategoryInput` as parameter and return the category updated in the database.
- - `deleteCategory` that takes an `id` as parameter and return the category deleted from the database.
+ - `createProduct` that takes an `input` of type `ProductInput` as parameter and returns the product created in the database.
+ - `updateProduct` that takes an `id` and an `input` of type `ProductInput` as parameters and returns the product updated in the database.
+ - `deleteProduct` that takes an `id` as parameter and returns the product deleted from the database.
+ - `createCategory` that takes an `input` of type `CategoryInput` as parameter and returns the category created in the database.
+ - `updateCategory` that takes an `id` and an `input` of type `CategoryInput` as parameters and returns the category updated in the database.
+ - `deleteCategory` that takes an `id` as parameter and returns the category deleted from the database.
 
 > :bulb: Don't forget to write documentation for your mutation and queries with commentaries
 
