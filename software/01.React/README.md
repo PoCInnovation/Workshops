@@ -41,16 +41,16 @@ Now that you know how to create a component in React, let's get into [Material U
 Material UI is a library of pre-built components that you can use in your React app.
 Discover [here](https://dev.to/amberjones/5-delightful-things-about-material-ui-5402) the advantages of using a components library such as Material UI.
 
-The goal of this task is to create the `Task` component: this component will represent a task with all its information, including:
+The goal of this task is to create the `TaskCard` component: this component will represent a task with all its information, including:
 - A title
 - A description
-- A due time
+- A due date
 
 To do so, you must use the [Material UI Components](https://mui.com/components/), such as [Box](https://mui.com/material-ui/react-box/) or [Typography](https://mui.com/material-ui/react-typography/).
 
 :bulb: We let you figure out which components you may use from the link below!
 
-> From now, we recommend you to create a `components` folder in your `src` folder, and to create one file per component and naming it with the name of your component. For instance, the `Task` component should be located in `src/components/App.tsx`.
+> From now, we recommend you to create a `components` folder in your `src` folder, and to create one file per component and naming it with the name of your component. For instance, the `TaskCard` component should be located in `src/components/TaskCard.tsx`.
 
 :bulb: Don't forget to [export](https://medium.com/swlh/javascript-import-export-basics-ed7d94caf4c0) your functions to reuse them in your `src/App.tsx`!
 <br/><br/>
@@ -58,11 +58,11 @@ To do so, you must use the [Material UI Components](https://mui.com/components/)
 
 At this moment, you know how to create a single component and how to add it to your application. But what if you need to show a list of components that you cannot determine in advance? For example a list of tasks :thinking:
 
-To do so, you can create a `List` component that will show all the tasks iteratively. 
+To do so, you can create a `TaskList` component that will show all the tasks iteratively. 
 
 > You can create a [Typescript type](https://www.typescriptlang.org/docs/handbook/basic-types.html) representing the tasks and their information, and a array to store them.
 
-You can then use [React Props](https://reactjs.org/docs/components-and-props.html#rendering-a-component) to pass variables from your main components to your children components, and iterate your `Tasks array` with the Javascript [map](https://reactjs.org/docs/lists-and-keys.html) function.
+You can then use [React Props](https://reactjs.org/docs/components-and-props.html#rendering-a-component) to pass variables from your main components to your children components, and iterate your `Tasks` array with the Javascript [map](https://reactjs.org/docs/lists-and-keys.html) function.
 
 :bulb: When you create a component through an iteration, don't forget to pass a unique `key` in component props!
 <br/><br/>
@@ -71,7 +71,7 @@ You can then use [React Props](https://reactjs.org/docs/components-and-props.htm
 From now, you are able to create static components that don't interact with the user.
 We will now create dynamic components to allow the user to add a new task to the list, using [React hooks](https://reactjs.org/docs/hooks-intro.html).
 
-To create a task, we need to create forms where the user can enter a title and a description, and a button to validate. Let's create them with [Material UI](https://mui.com/components/)!
+To create a task, we need to create forms where the user can enter a title, a description and a due date with a button to validate. Let's create them with [Material UI](https://mui.com/components/)!
 
 Let's then use the [useState](https://www.freecodecamp.org/news/introduction-to-react-hooks/) hook to handle user input and button clicks!
 
@@ -79,7 +79,7 @@ Let's then use the [useState](https://www.freecodecamp.org/news/introduction-to-
 
 > We recommend you to create a small '+' button in one of the corner of your app that will open a small window containing the title and description forms as well as the button to add the task.
 
-:bulb: You can customize your hooks to avoid unwanted cases, such as an empty title or description.
+:bulb: You can customize your hooks to avoid unwanted cases, such as an empty field.
 <br/><br/>
 ## Step 5: Discover another hook: React contexts
 
@@ -107,7 +107,7 @@ You can still enhance it's behaviour, here are some examples:
 
 - You can add a [background](https://www.freecodecamp.org/news/react-background-image-tutorial-how-to-set-backgroundimage-with-inline-css-style/) to your application
 - You can add a `Delete` button on each task to delete it
-- You can add a Due time using [Calendars](https://mui.com/x/react-date-pickers/getting-started/)
+- You can add a real due date using [Calendars](https://mui.com/x/react-date-pickers/getting-started/)
 - You can link your application to a `backend` and a `database` to properly store your tasks (EPyTodo ?)
 
 :bulb: We suggest you to take a look at [NextJS](https://nextjs.org) or [Remix](https://remix.run)!
