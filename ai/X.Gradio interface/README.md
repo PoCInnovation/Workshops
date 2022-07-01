@@ -29,6 +29,7 @@ You will follow this architecture to start and then you are free to change it to
 Folder: app
 
 ├── my_app.py
+├── neural_network.py
 │   dataset/
 │   └── (Empty folder)
 │   model/
@@ -56,24 +57,40 @@ In the class `app` you will add the following attributes:
 - `learning_rate`: the learning rate
 - `classes`: the list of classes
 
+If you don't know what is a class, check the [Python documentation](https://docs.python.org/3/tutorial/classes.html)
+
 ## Step 2: Add the dataset
 
 - In your class app create an attribute `train_set` and an attribute `train_lodear` that will contain the dataset.
 - In your class app you will create an attribute `classes` that will contain the classes of your dataset. (Take the classes in the `train_set`)
 - Create a method called `add_dataset` that will return a dataloader.
 
+You can use this for the `classes:
+```python
+self.classes = ('plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
+```
+
 The `add_dataset` method will receive a `dataset_path` and if you want a train set or test set.
+
+For this step the torchvision [dataloaders](https://pytorch.org/vision/stable/generated/torchvision.datasets.CIFAR10.html#torchvision.datasets.CIFAR10).
+
 
 ## Step 2.5: Check if the dataset is already downloaded
 
 In your method `add_dataset` you will check if the dataset is already downloaded.
-If it is downloaded, check if the dataset is correct.
+If it is downloaded, check if the dataset is correct. (If you setup the dataset correctly, the dataset will be automatically downloaded and checked)
+For automatic download, you will to set the `download` parameter to `True`.
 
 ## Step 3: Create the model
 
 <p align="center"><img src="./images/model.png" alt="Model" style="width: 500px"></p>
 
-Create a class called `model` that will contain the model of your application.
+Create a class called `model` that will contain the model of your application in the `neural_network.py` file.
+
+For your parameters, you will know this informations:
+- Size of image: 32x32x3
+- Start with 3 channels
+- Use a kernel size of 5
 
 In your init method of the class `model` you will add the following attributes:
 - `conv1`: the first convolutional layer
@@ -83,7 +100,7 @@ In your init method of the class `model` you will add the following attributes:
 - `linear2`: the second linear layer
 - `linear3`: the third linear layer
 
-You can use [this documentation](https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html) for the convolutions
+You can use [this documentation](https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html#define-a-convolutional-neural-network) for the convolutions
 
 Create a forward method that will receive the input of your model and use the model variables.
 
@@ -98,6 +115,10 @@ In the method `train` you will:
 - Create a optimizer
 - Keep track of the loss and accuracy
 - Create a loop to train the model
+
+You can use your hyperparameters in your app to train your model.
+
+Documentation for understanding the training: [this](https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html#train-the-model)
 
 ### Loss function
 
@@ -133,6 +154,10 @@ We advise you to use the `Adam` optimizer.
 Use Matplotlib for this step.
 
 In one figure you will display the loss and accuracy of the training.
+
+You will save the data epoch by epoch.
+
+You can use this [documentation](https://niruhan.medium.com/drawing-loss-curves-for-deep-neural-network-training-in-pytorch-ac617b24c388) for keeping track of the loss and accuracy.
 
 Check the documentation of [Matplotlib plot](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html).
 
