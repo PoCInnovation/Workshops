@@ -18,12 +18,10 @@ go mod init workshop-gin
 ```
 
 Afterwards you can follow the official [documentation](https://github.com/gin-gonic/gin#installation) to install Gin correctly.
->Once again don't hesitate if you a$have any issue during the installation ! :smile:
+>Once again don't hesitate if you have any issue during the installation ! :smile:
 
 
 **Now everything should work properly you can start the workshop !**
-
-[Go back to the exercises](./README.md)
 
 ## Step 1: The codebase
 
