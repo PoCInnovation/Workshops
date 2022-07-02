@@ -5,6 +5,8 @@
 In this workshop, we will create an HTTP REST server using Go.
 First of all, make sure you have **Go 1.14** or higher installed, allowing you to use the Gin Web Framework.
 
+You can install **Go** following this [link](https://go.dev/doc/install).
+
 If you have the right version installed, you should have something similar:
 ```shell
 go version
