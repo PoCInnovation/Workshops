@@ -21,19 +21,3 @@ We will be using `postman` to test out our routes.
 
 - [Postman](https://www.postman.com/downloads/)
 ⚠️ you should not install it with snap because it's not updated on this package manager. ⚠️
-
-## 3. Gin
-
-Once everything is installed, you have to download the Gin package.
-Go at the root of your repo and run this commands to init a go project:
-```shell
-go mod init workshop-gin
-```
-
-Afterwards you can follow the official [documentation](https://github.com/gin-gonic/gin#installation) to install Gin correctly.
->Once again don't hesitate if you a$have any issue during the installation ! :smile:
-
-
-**Now everything should work properly you can start the workshop !**
-
-[Go back to the exercises](./README.md)
