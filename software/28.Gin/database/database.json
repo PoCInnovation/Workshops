@@ -1,32 +1,17 @@
 [
  {
-  "name": "objet2",
-  "description": "un autre objet",
-  "price": 20
+  "name": "banana",
+  "description": "a yellow fruit",
+  "price": 4
  },
  {
-  "name": "objet3",
-  "description": "un objet de test",
-  "price": 30
+  "name": "apple",
+  "description": "a green fruit",
+  "price": 2
  },
  {
-  "name": "objet9",
-  "description": "le objet",
-  "price": 10
- },
- {
-  "name": "objetBETA",
-  "description": "un bel objet",
-  "price": 10
- },
- {
-  "name": "objetALPHA",
-  "description": "un bel objet",
-  "price": 10
- },
- {
-  "name": "objet10",
-  "description": "un bel objeEEEt",
+  "name": "strawberry",
+  "description": "a red fruit",
   "price": 10
  }
 ]
