@@ -20,6 +20,7 @@ go version
 We will be using `postman` to test out our routes.
 
 - [Postman](https://www.postman.com/downloads/)
+⚠️ you should not install it with snap because it's not updated on this package manager. ⚠️
 
 ## 3. Gin
 
