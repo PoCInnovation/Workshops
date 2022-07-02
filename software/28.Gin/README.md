@@ -36,7 +36,7 @@ There are plenty of other important package you may need in a real API, but thes
 
 Add a route on the endpoint `/`:
 - It uses the `GET` method
-- It responds `"hello: world"` in a json format
+- It must call a helloWorld function that responds `"hello: world"` in a json format
 
 > You can test it with `http://localhost:8080/` in a browser or with `postman`
 
@@ -87,7 +87,7 @@ Then the result (if there is any) will be printed out at the bottom.
 
 ## Step 3: Authorization middleware
 
-Now let's create a middleware that will check if the user is authorized to access the endpoint.
+Now let's create a middleware `Auth()` that will check if the user is authorized to access the endpoint.
 
 We won't use real token like a [JWT](https://jwt.io/), we will just check if the request contains a header with the name `Authorization` and a value.
 
