@@ -8,6 +8,23 @@ In this workshop we will learn how to use the main functions of the Gin package 
 
 All the required information to install the workshop's dependencies are given in the [SETUP.md](./SETUP.md)
 
+#### Gin
+
+Once everything is installed, you have to download the Gin package.
+
+Go at the root of your repo and run this commands to init your go project:
+```shell
+go mod init workshop-gin
+```
+
+Afterwards you can follow the official [documentation](https://github.com/gin-gonic/gin#installation) to install Gin correctly.
+>Once again don't hesitate if you a$have any issue during the installation ! :smile:
+
+
+**Now everything should work properly you can start the workshop !**
+
+[Go back to the exercises](./README.md)
+
 ## Step 1: The codebase
 
 We designed a boilerplate for this project, it will be useful to start it, but also to summarize all the required parts of an API
