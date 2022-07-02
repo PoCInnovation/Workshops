@@ -10,11 +10,11 @@ All the required information to install the workshop's dependencies are given in
 
 ## Step 1: The codebase
 
-We designed a boilerplate for this project, it will be useful to start this project, but also to summarize all the required parts of an API
+We designed a boilerplate for this project, it will be useful to start it, but also to summarize all the required parts of an API
 We will have :
 
-- `controllers`: this is where you will design your routes endpoint. it will often be a wrapper that calls other API or the database itself
-- `middlewares`: those are functions that can be called to print logs ,check access rights before entering a controller or define a default endpoint
+- `controllers`: this is where you will design your routes endpoints. it will often be a wrapper that calls other API or the database itself
+- `middlewares`: those are a type of function used to intercept and process informations between two functions
 - `routes`: the core of the router, setting up all the routes handler, with their middlewares and controllers
 
 There are plenty of other important package you may need in a real API, but these are the main one you can be sure you'll need one time or another. Now let's code.
@@ -27,7 +27,7 @@ Add a route on the endpoint `/`:
 
 ## Step 2: Let's get started
 
-You are now fine with the creation of endpoint.
+You are now fine with the creation of endpoints.
 Next step is to create different request method.
 There is many [request method](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods), you already experimented the `GET` request.
 
