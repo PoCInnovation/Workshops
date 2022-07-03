@@ -51,6 +51,23 @@ To install `Flutter` & `Dart` extensions on VSCode:
 To install `Flutter` & `Dart` extensions on another IDE:
 - You can use the [flutter commands](https://docs.flutter.dev/reference/flutter-cli) to install the extensions.
 
+## Emulation
+
+This workshop is for mobil developpement, so you need a smartphone to see what you are doing.
+
+To create a smartphone emulator:
+- Go to `Virtual Device Manager`
+- Click on `Create device`
+- Selecte `Pixel 4`
+- Click on `Download` to the `API 33`
+- Then `Next` and `Finish`
+
+## VsCode
+
+For this workshop, I recommend you to code on vsCode instead of Android Studio
+
+Here is a tuto to help you with [vsCode for Flutter](https://docs.flutter.dev/development/tools/vs-code)
+
 ## Project setup
 
 ```sh
@@ -68,10 +85,8 @@ cd myapp
 
 # Launch the application
 flutter run
-
-Select the "Chrome (chrome)" options
 ```
 
-**If it opens a tab in your browser with a *Flutter Demo Home Page*, then you can start the exercises!**
+**If it start the application in your emulator and lauch the *Flutter Demo Home Page*, then you can start the exercises!**
 
 [Go back to the exercises](./README.md)
