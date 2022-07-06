@@ -11,16 +11,27 @@ services:
       - log_intro:/var/log
     container_name: intro
 
+  error:
+    build:
+      context: ./error
+      dockerfile: Dockerfile
+    ports:
+      - "5002:5002"
+    volumes:
+      - log_error:/var/log
+    container_name: error
+
   dom:
     build:
       context: ./dom
       dockerfile: Dockerfile
     ports:
-      - "5002:5002"
+      - "5003:5003"
     volumes:
       - log_dom:/var/log
     container_name: dom
 
 volumes:
   log_intro: {}
+  log_error: {}
   log_dom: {}
