@@ -191,11 +191,19 @@ You will :
 
 ## 22 - [Encore](./22.Encore)
 
-Discover a powerful go framework that's speed up your development of backend & micro-services
+Discover a powerful go framework that's speed up your development of backend & micro-services.  
 You will :
 - Discover [Encore](https://encore.dev/) a powerful go framework to develop APIs.  
 - Learn services logics
 - Improve your Go and architecture design skills
+
+## 24 - [Git & GitHub](./24.Git_GitHub)
+
+Learn best practices of Git and GitHub.
+You will :
+- Discover advanced features of Git, the well known version control system
+- Learn how to organize a project using GitHub tools
+- Improve your efficiency with these tools you use every day
 
 <br />
 <h2 align=center>
