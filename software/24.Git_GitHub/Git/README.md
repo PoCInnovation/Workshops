@@ -1,12 +1,18 @@
 # Part 1: Git
 
+During this workshop, you will learn the following:
+- The basics of git (you're probably already familiar with these)
+-
+
 ## Introduction
 
 There are a bunch of hyperlinks in this workshop, it is meant to give you as much information as possible so please follow them and read the website content.
 
 There are some git commands that won't really be seen on their own but will be mentioned on some parts where it matters.
 
-## Step 0 - Project initialization
+If you feel that information has been left out, you can always check the man.
+
+## Step 0 - Initialization
 
 Even though it seems obvious, you need [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed for this workshop
 
@@ -16,7 +22,7 @@ This workshop is meant to see everything with git, the start may be a bit tediou
 
 Check the [Oh My Zsh](#oh-my-zsh) tip.
 
-## Step 1 - Initialize a repository locally
+## Step 1 - Initialize a repository locally and modify its content
 
 There are multiple ways to initialize a repository locally.
 
@@ -47,8 +53,6 @@ Once again it is recommended to use the SSH URL instead of the HTTPS one.
 
 _This part doesn't require you to do anything it's mainly for knowledge_
 
-## Step 2 - Modifying repository content
-
 Before applying any changes, it is a good reflex to check what has been modified.
 
 ### Control what files can be added
@@ -64,7 +68,7 @@ The first one is to check the status of your local repository with `git status`,
 
 After that, you can see exactly what lines have been modified using `git diff`.
 
-### Add Modifications to the index
+### Add modifications to the index
 
 When you want to modify the repository content, you have multiple ways of doing that.
 
@@ -75,7 +79,7 @@ Also, a better way of adding everything is using `git add --all`, because if you
 
 You also have other commands that can be used to modify files such as `git rm` and `git mv`, they are respectively used to remove and move a file.
 
-Now add a file named `step2.txt` with "Hello World!" written in it.
+Now add a file named `step1.txt` with "Hello World!" written in it.
 
 ### Commit your modifications
 
@@ -87,7 +91,7 @@ It is completely fine to commit a single line.
 
 I recommend using `git commit` without the `-m` option, this will open your default editor and allow you to write a formatted message.
 
-By default, `vi` will be your default editor wo if you want to change it, you can use `git config` and change the value of `core.editor` to your preferred editor.
+By default, `vi` will be your default editor, if you want to change it, you can use `git config` and change the value of `core.editor` to your preferred editor.
 
 _You can change your default editor for every program by setting the environment variable EDITOR_
 
@@ -100,17 +104,13 @@ You can now simply commit this file, and try to find a [good commit message](htt
 
 you can now easily check the commits that have been made using `git log`
 
-## Step 3 - Updating Repository
-
-### Apply your changes to the remote 
+### Apply your changes to the remote
 
 In order to apply your changes to the remote, you can simply use `git push`.
 
-For the record, pull is calling other git commands.
-You probably have already seen in your git config that you can set the parameter `pull.rebase` to `true` or `false`.
-
-It allows you to set how git pull acts.
-So by default it will run a `git fetch` following by a `git merge origin/my-super-branch`, if you set `pull.rebase` to `true`, it will run a `git rebase origin/my-super-branch` instead of the merge.
+You probably have heard of force push, you shouldn't use it most of the time, the only reason to use it would be to push
+changes you applied to your branch by rebasing your branch on top of main, because it will apply the changes from main
+before the changes made on your branch, hence rewritting the history.
 
 Go ahead and push your commit.
 
@@ -120,21 +120,27 @@ Here again you can simply retrieve those changes using `git pull`
 
 In case you have made changes locally, you will need to put these changes away, you can do this using the `git stash` command.
 
+For the record, pull is calling other git commands.
+You probably have already seen in your git config that you can set the parameter `pull.rebase` to `true` or `false`.
+
+It allows you to set how git pull acts.
+So by default it will run a `git fetch` following by a `git merge origin/my-super-branch`, if you set `pull.rebase` to `true`, it will run a `git rebase origin/my-super-branch` instead of the merge.
+
 ### Retrieve changes on the remote without applying them
 
 You can actually check if there have been changes made onto the remote without applying them or checking on a web interface.
 For this, you have to use `git fetch`
 
-## Step 4 - Revert changes
+## Step 2 - Revert changes
 
 ### Remove a mistake made by a pushed commit
 
-First go ahead and add a file named `step4.txt` with "This is a bug", written in it, commit it and push it.
+First go ahead and add a file named `step2.txt` with "This is a bug", written in it, commit it and push it.
 
 Remember how we said that making small commits was a good thing, well this is where making small commits comes in handy.
 Well now you will learn how to revert a commit, which allows fixing bugs easily.
 
-Let's assume that the step4.txt was not intended to be pushed, you can simply go ahead and use `git revert` on the commit to revert the changes and get back to the state without this commit.
+Let's assume that the step2.txt was not intended to be pushed, you can simply go ahead and use `git revert` on the commit to revert the changes and get back to the state without this commit.
 
 Go ahead and use `git revert` on your last commit.
 
@@ -146,7 +152,7 @@ The exact command would be `git reset --hard HEAD~N` where N is the number of co
 Be careful because you won't be able to retrieve it after the fact.
 This could also be used to remove sensitive information, but you would have to rewrite the commit history which isn't that great.
 
-### Remove a mistake made locally
+### Remove a mistake/test made locally
 
 There are multiple ways of doing this but let's see one that I particularly like for its simplicity.
 It used the `git stash` command.
@@ -157,7 +163,7 @@ You can just run `git stash push <files with modifications to drop>` and `git st
 For your knowledge, know that `git stash` also has other commands like `pop` and `apply`.
 `apply` allows you to reapply the changes stored, whereas `pop`, runs apply followed by drop when there are no conflicts.
 
-## Step 5 - Branches
+## Step 3 - Branches
 
 Now that you know new things about git, you may want to improve your workflow and use branches.
 
@@ -169,8 +175,8 @@ Here there are also multiple ways of doing that, but let's stick with the easies
 You can simply create a branch and switch to it at the same time using `git switch -c <my branch name>`.
 Yes `git checkout` can also be used but checkout allows more than just switching to branch, so we'll stick to `git switch`.
 
-Go ahead and create a branch named `feat/step5`, and push it.
-Add a file named `step5.txt` containing "WIP feature".
+Go ahead and create a branch named `feat/step3`, and push it.
+Add a file named `step3.txt` containing "WIP feature".
 
 ### Update your branch with changes made on `main`
 
@@ -178,7 +184,7 @@ When changes have been made on main, while you were working on your feature, you
 After that, you will be able to merge your work into main.
 
 First, you will need to update main so switch to main and pull the changes.
-For the sake of the workshop, you will push a file named "coworker_feature.txt" on main containing "Most awaited feature".
+For the sake of the workshop, you will push a file named `coworker_feature.txt` on main containing "Most awaited feature".
 
 Then go back to your branch and use `git rebase` onto main.
 Now you would resolve conflicts if there are any.
@@ -186,24 +192,46 @@ Then you can push, but since you rewrote your history you need to force push, it
 
 ### Merge your branch into main
 
-Now that you are completely up-to-date with main and that you have finished your feature, you can switch to main and use `git merge` with your feature branch to apply the changes to main, and push it.
+Now that you are completely up-to-date with main and that you have finished your feature, you can switch to main and use `git merge` or `git rebase` with your feature branch to apply the changes to main, and push it.
 
 This process can be made using Pull Requests on GitHub but this is not the focus right now.
 
+So go ahead and merge your branch into main using rebase (there are reasons why you want to rebase and not merge but it is not the focus here, and it is explained in the Github part of this workshop).
+
 ### Manage branches
 
-In the end, you can manage your branches using the `git branch` command, so using it, now delete the `feat/step5` branch you created earlier.
+In the end, you can manage your branches using the `git branch` command, so using it, now delete the `feat/step3` branch you created earlier.
 
-## Step 6 - Restore files
+## Step 4 - Restore files
 
 Sometimes you may delete files but want to retrieve them later.
+
+### The old method
 
 We've seen earlier that `git switch` allows to change branch but to retrieve a file this is useless.
 There exists a command that allows to switch commits, `git checkout`.
 
 Used well it can help you restore deleted files.
 
-So go ahead and restore the file `step4.txt`
+### The more recent method
+
+Another command could be `git restore` which works the same way as you'd do with `git checkout` but is much easier to use.
+
+So go ahead and restore the file `step2.txt`
+
+## Summary
+
+During this workshop, we've made you use a particular workflow with git.
+This is obviously not the only one that exists, but it is the most widely used one, and it is fairly easy to understand
+and use.
+
+So quickly here is how you would work with branches:
+- Commit changes on your branch
+- Checkout on main
+- Pull main
+- Checkout on your branch
+- Rebase your branch on top of main
+- Force push
 
 ## Congrats
 
