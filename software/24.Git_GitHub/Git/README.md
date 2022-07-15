@@ -2,7 +2,8 @@
 
 During this workshop, you will learn the following:
 - The basics of git (you're probably already familiar with these)
--
+- A good, easy to use git workflow with branches
+- Extra stuff about why doing stuff one way or the other
 
 ## Introduction
 
