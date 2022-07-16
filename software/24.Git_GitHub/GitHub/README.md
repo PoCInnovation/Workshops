@@ -38,6 +38,8 @@ When it's done, add your teammate as reviewer and play with the review tool in t
 > Instead of organizing the content manually, you can use templates for [issues](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository) and [PRs](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository). It's really useful to let contributors know what information maintainers need and keep a common structure between contributions.  
 You can find some great examples for different types of issues in [our Open-Source project template](https://github.com/PoCInnovation/open-source-project-template/tree/main/.github/ISSUE_TEMPLATE) as long as [one for Pull Requests](https://github.com/PoCInnovation/open-source-project-template/blob/main/.github/pull_request_template.md).
 
+> Several options are available when merging a PR. Here's a [Comparison of Merging Strategies in GitHub](https://elliotchance.medium.com/comparison-of-merging-strategies-in-github-2f948c3b8fdc) filling with information to let you choose according to your needs.
+
 ### :heavy_check_mark: **Validation**:
 Try to make it as complete as possible, then take a look at the expected results:
 <details>
@@ -132,3 +134,4 @@ You've learned how to use a lot of tools provided by GitHub, but there's a lot m
 - The [GitHub Learning Lab](https://lab.github.com/) provides some great hands-on courses to grow your skills !  
 - [Making open-source contributions](https://docs.github.com/en/get-started/exploring-projects-on-github/finding-ways-to-contribute-to-open-source-on-github) is a great way to apply what you've learned in a real project.  
   Pay attention to `good first issue` labels directly on GitHub or on [dedicated sites](https://goodfirstissue.dev/).
+  
