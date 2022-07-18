@@ -56,6 +56,7 @@ To install `Flutter` & `Dart` extensions on another IDE:
 This workshop is for mobil developpement, so you need a smartphone to see what you are doing.
 
 To create a smartphone emulator:
+- Open `Android Studio`
 - Go to `Virtual Device Manager`
 - Click on `Create device`
 - Selecte `Pixel 4`
