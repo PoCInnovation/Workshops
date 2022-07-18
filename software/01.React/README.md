@@ -1,9 +1,15 @@
 # Workshop 1 - Kanban App in React
 
-The goal of this workshop is to create a [Kanban-like](https://www.digite.com/kanban/what-is-kanban/) application using the React library in Typescript
+:heavy_check_mark: Learn the basics of [React](https://reactjs.org/) with [TypeScript](https://www.typescriptlang.org/)
+
+:heavy_check_mark: Use the component library [Material UI](https://mui.com/) to quickly build a great UI
+
+:heavy_check_mark: Have an overview of front end development
+
 <br/><br/>
 ## Step 0: Initialization
 
+The goal of this workshop is to create a [Kanban-like](https://www.digite.com/kanban/what-is-kanban/) application using the React library in Typescript.  
 All the installation steps required to do the exercises are detailed in the [SETUP.md](./SETUP.md)
 <br/><br/>
 ## Step 1: Create your first component
