@@ -88,6 +88,8 @@ cd myapp
 flutter run
 ```
 
+To run the project with `VSCode`, if you have downloaded the `Flutter` extension, you juste have to open the `lib/main.dart` file and you will have a button `Start Debugging` in top right of your VSCode.
+
 **If it start the application in your emulator and lauch the *Flutter Demo Home Page*, then you can start the exercises!**
 
 [Go back to the exercises](./README.md)
