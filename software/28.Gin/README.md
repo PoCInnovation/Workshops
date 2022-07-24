@@ -1,6 +1,8 @@
-# Workshop 2 - API REST in Go with Gin
+# Workshop - API REST in Go with Gin
 
-In this workshop we will learn how to use the main functions of the Gin package in Go and how to create a REST API.
+:heavy_check_mark: Learn the basics of REST API.
+
+:heavy_check_mark: Learn how to use basic features of the [gin](https://github.com/gin-gonic/gin) framework.
 
 > :bulb: A quick [documentation](https://searchapparchitecture.techtarget.com/definition/RESTful-API) about REST API.
 
@@ -38,6 +40,7 @@ Add a route on the endpoint `/`:
 - It uses the `GET` method
 - It must call a helloWorld function that responds `"hello: world"` in a json format
 
+> don't hesitate to take a look at the offcial [documentation](https://github.com/gin-gonic/gin#api-examples).
 > You can test it with `http://localhost:8080/` in a browser or with `postman`
 
 ## Step 2: Let's get started
