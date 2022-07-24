@@ -1,7 +1,7 @@
 # Workshop 27 - Auth :rocket:
 
 :heavy_check_mark: Discover how to manage authentification with nodejs and mongodb database.  
-:heavy_check_mark: Learn services logics
+:heavy_check_mark: Learn services logics  
 :heavy_check_mark: Improve your Typescript and architecture design skills
 
 ## Step 0: Setup
@@ -23,8 +23,9 @@ First of all, you need to create three routes thanks to [Express Routing](https:
 To interact with MongoDB, you need to create a MongoDB instance using docker.
 You can use the following command:
 
-> docker run --rm --name mongodb -p 127.0.0.1:27017:27017 -e MONGO_INITDB_ROOT_USERNAME=your_username -e MONGO_INITDB_ROOT_PASSWO\
-RD=your_password -e MONGO_INITDB_DATABSE=your_database -d mongo
+```
+docker run --rm --name mongodb -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=your_username -e MONGO_INITDB_ROOT_PASSWORD=your_password -e MONGO_INITDB_DATABSE=your_database -d mongo
+```
 
 Then, take a look at the [MongoDB Documentation](https://www.npmjs.com/package/mongodb) in order to connect to your database!
 
@@ -42,7 +43,7 @@ In the login route, you need to `check` the credentials from the `body` (again :
 
 Finally, you will need to check the given `JWT` in the profile route to determine if a user is linked to this token. If so, you can respond to the request with the user information.
 <br><br/>
-## Step 4: Add a email verification
+## Step 4: Add an email verification
 
 Your backend application is now able to authenticate users. What you need to do now is to make it stronger, a perfect example would be to verify new users with their email address.
 
