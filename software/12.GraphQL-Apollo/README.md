@@ -1,14 +1,14 @@
 # Workshop 12 - Create a web application with GraphQL and Apollo
 
-:heavy_check_mark: Learn graphql API concept
+:heavy_check_mark: Learn GraphQL API concept
 
-:heavy_check_mark: Interact with a graphQL API
+:heavy_check_mark: Interact with a GraphQL API
 
-:heavy_check_mark: Define your own graphql schema
+:heavy_check_mark: Define your own GraphQL schema
 
-:heavy_check_mark: Build a basic graphQL API
+:heavy_check_mark: Build a basic GraphQL API
 
-:heavy_check_mark: Use graphql in a React application
+:heavy_check_mark: Use GraphQL in a React application
 
 ## Step 0 - Initialization
 
@@ -22,7 +22,7 @@ Curious by nature and looking for something new, you decide to set up your littl
 
 ## Step 1 - Welcome to GraphQl Playground
 
-Your first reflex is to try the World Map API to play with Graphql and understand its concepts.
+Your first reflex is to try the World Map API to play with GraphQL and understand its concepts.
 
   - Go to [World Map API](https://countries.trevorblades.com)
 
@@ -37,7 +37,7 @@ Let's do some queries to retrieve data :
 
 ## Step 2 - Hello Apollo
 
-It's time to try graphql, the simplest and most popular library is [Apollo server](https://github.com/apollographql/apollo-server).
+It's time to try GraphQL, the simplest and most popular library is [Apollo server](https://github.com/apollographql/apollo-server).
 
 ### Setup backend
 
@@ -73,9 +73,7 @@ Your directory should have the following structure :
 │   │   └── schema.graphql # GraphQL schema
 │   ├── schema.ts # Compute schema and resolver
 │   └── server.ts # Apollo Server
-├── .eslintrc.js # Code-quality rules
 ├── .gitignore # Tells git which files (or patterns) it should ignored
-├── .prettierrc.js # Code formatting rules
 ├── package.json # Package manager
 ├── tsconfig.json # Typescript configuration
 └── yarn.lock # Dependencies file
@@ -205,7 +203,7 @@ Your directory should have the following structure :
 ├── package.json # Package manager
 ├── README.md # Default README.md when creating a React App
 ├── tsconfig.json # Typescript config
-└── yarn.lock # Dependencies lock 
+└── yarn.lock # Dependencies lock
 ```
 
 To start the project, execute the following commands :
@@ -245,7 +243,7 @@ You should now implement more functionalities like :
 
 - [Auto generate your schema with Nexus](https://nexusjs.org/)
 - [Mix GraphQL with Graph database though DGraph](https://dgraph.io/)
-- [Integrate graphQL with Relay](https://relay.dev/)
+- [Integrate GraphQL with Relay](https://relay.dev/)
 - [Understand GraphQL security problems to avoid it](https://carvesystems.com/news/the-5-most-common-graphql-security-vulnerabilities/)
 
 ## Authors
