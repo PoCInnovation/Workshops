@@ -85,7 +85,7 @@ For automatic download, you will to set the `download` parameter to `True`.
 
 <p align="center"><img src="./images/model.png" alt="Model" style="width: 500px"></p>
 
-Create a class called `model` that will contain the model of your application in the `neural_network.py` file.
+Create a class called `model` that will contain the model of your application in the `neural_network.py` file in `app` folder.
 
 For your parameters, you will know this informations:
 - Size of image: 32x32x3
@@ -116,7 +116,7 @@ In the method `train` you will:
 - Keep track of the loss and accuracy
 - Create a loop to train the model
 
-You can use your hyperparameters in your app to train your model.
+You must use your hyperparameters in your app to train your model.
 
 Documentation for understanding the training: [this](https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html#train-the-model)
 
