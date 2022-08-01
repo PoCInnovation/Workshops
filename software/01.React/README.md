@@ -9,7 +9,15 @@
 <br/><br/>
 ## Step 0: Initialization
 
-The goal of this workshop is to create a [Kanban-like](https://www.digite.com/kanban/what-is-kanban/) application using the React library in Typescript.  
+The goal of this workshop is to create a [Kanban-like](https://www.digite.com/kanban/what-is-kanban/) application using the React library in Typescript. 
+
+[React](https://github.com/facebook/react) is an open-source library created at Facebook to build User Interfaces. It is widely used because of the high performance it offers with its [Virtual DOM](https://reactjs.org/docs/faq-internals.html#what-is-the-virtual-dom), [reusable components](https://reactjs.org/docs/components-and-props.html) making it easy to build a complex UI step by step and the easier learning curve compared to other frameworks like [Angular](https://angular.io/).
+
+As you go through this workshop you'll come up with a lot of files, and it's important to keep them organized.  
+Here we're gonna use [a structure based on file types](https://reactjs.org/docs/faq-structure.html#grouping-by-file-type), do your best to keep your project clean :wink:
+
+We're also going to use TypeScript, a superset of JavaScript to add static typing, which has some benefits such as early bug detection or improved IDE suggestions. Here is [an overview of the differences](https://geekflare.com/typescript-vs-javascript/) if you want to learn more about it.  
+
 All the installation steps required to do the exercises are detailed in the [SETUP.md](./SETUP.md)
 <br/><br/>
 ## Step 1: Create your first component
