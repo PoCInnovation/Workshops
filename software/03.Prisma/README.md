@@ -46,7 +46,7 @@ Create the `removePost` function:
 
 ## Step 3: Apollo Server and Nexus
 
-Prisma allows us to retrieve data from the database, but we then have to allow the users to retrieve this data. We will use [GraphQL Nexus](https://nexus.js.org/) and [Apollo server](https://www.apollographql.com/docs/apollo-server/) for this purpose.
+Prisma allows us to retrieve data from the database, but we then have to allow the users to retrieve this data. We will use [GraphQL Nexus](https://nexusjs.org/) and [Apollo server](https://www.apollographql.com/docs/apollo-server/) for this purpose.
 
 You will have to install new packages to do this:
 
