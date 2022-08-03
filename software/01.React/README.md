@@ -1,241 +1,174 @@
-# Workshop 1 - Todo List in React
+# Workshop 1 - Kanban App in React
 
-## Step 0: initialization
+:heavy_check_mark: Learn the basics of [React](https://reactjs.org/) with [TypeScript](https://www.typescriptlang.org/)
+
+:heavy_check_mark: Use the component library [Material UI](https://mui.com/) to quickly build a great UI
+
+:heavy_check_mark: Have an overview of front end development
+
+<br/>
+
+## Step 0: Initialization
+
+The goal of this workshop is to create a [Kanban-like](https://www.digite.com/kanban/what-is-kanban/) application using the React library in Typescript. 
+
+[React](https://github.com/facebook/react) is an open-source library created at Facebook to build User Interfaces. It is widely used because of the high performance it offers with its [Virtual DOM](https://reactjs.org/docs/faq-internals.html#what-is-the-virtual-dom), [reusable components](https://reactjs.org/docs/components-and-props.html) making it easy to build a complex UI step by step and the easier learning curve compared to other frameworks like [Angular](https://angular.io/).
+
+As you go through this workshop you'll come up with a lot of files, and it's important to keep them organized.  
+Here we're gonna use [a structure based on file types](https://reactjs.org/docs/faq-structure.html#grouping-by-file-type), do your best to keep your project clean :wink:
+
+We're also going to use TypeScript, a superset of JavaScript to add static typing, which has some benefits such as early bug detection or improved IDE suggestions. Here is [an overview of the differences](https://geekflare.com/typescript-vs-javascript/) if you want to learn more about it.  
 
 All the installation steps required to do the exercises are detailed in the [SETUP.md](./SETUP.md)
 
-### Todo List
+<br/>
 
-`components` are the core of React. They represent a single element in a web page, like a `text` box, a `button`, a `div` etc. All combined together, they create a fully working web page. These components are re-usable, they prevent you from code duplication.
+## Step 1: Create your first component
 
-You will learn how to create one right now in the first step!
+[Components](https://reactjs.org/docs/components-and-props.html) are the core of React. They represent a single element in a web page, like a `text` box, a `button`, a `div` etc. All combined together, they create a fully working web page. These components are re-usable, they prevent you from code duplication.
 
-> In this workshop, you are not allowed to use JavaScript classes, you must use `Functional Components`. [Here](https://medium.com/@Zwenza/functional-vs-class-components-in-react-231e3fbd7108) is a little explanation of the differences.
+You will learn how to [create components](https://www.w3schools.com/react/react_components.asp) right now in the first step!
 
-## Step 1: `Task` component
+> In this workshop, we recommend you to use `Functional Components`, instead of `Javascript classes`. [Here](https://djoech.medium.com/functional-vs-class-components-in-react-231e3fbd7108) is a little explanation of the differences.
 
-In `src/App.js`, create a component that will display the task description, which is just a string.
+In `src/App.tsx`, create a component that will display the application title, which is just a string.
+In Typescript, we must specify the type of the return value of the function: for all TSX React components, you can use `JSX.Element`.
 
-This component represents one single task in your todolist. The `description` must be received as parameter from the [props](https://fr.reactjs.org/docs/components-and-props.html). It will look something like this, you just have to complete what the component returns.
-
-```jsx
-function Task(props) {
+```tsx
+function Title(): JSX.Element {
     return (...)
 }
 ```
 
-To display your `Task` component, paste this line in your `App` component:
+Then in your app function, you should have this:
 
-```jsx
-<Task description="finish step 1" />
-```
-
-## Step 2: `List` component
-
-### Display the tasks
-
-Create a component that will display a list of `Task` components. To do so, you will have an Array of objects:
-
-```js
-function List(props) {
-    const [taskList, setTaskList] = React.useState(["finish step 2", "finish step 3"]);
-    return (...)
-}
-```
-Some precisions:
-
-- `taskList` is a const variable that can only be changed by the function `setTaskList` associated with it
-- `taskList` is an array of objects with currently only 2 index in the example
-- Each index of the array represents the variable that will be sent to the `Task` component
-- Adding or removing an index to `taskList` is equivalent to add or remove a `Task`
-
-> The [map](https://reactjs.org/docs/lists-and-keys.html) function will be very useful to iterate over our array
-
-### Adding features
-
-Your `List` component must also:
-
-- Display a `input` and a `button` allowing you to add a new Task (add an index to `taskList` variable)
-  - You will need another variable with `React.useState`to store it in your component
-  - You will probably have to create a function that updates `taskList` when the button is clicked
-- Display a `button` next to your `Task` component to delete it (remove an index to `taskList` variable)
-  - Same as before, you will probably have to create a function that updates `taskList` when the button is clicked
-
-> Find out more about the `hooks` in React
-> To edit you array, the `splice` and `concat` methods will be very useful
-
-
-
-## Step 3: Adding the API
-
-### Get hands on the API
-
-We will now connect our todolist to a public API that stores tasks for us! It is very clear and simple to use. All the available routes can be found **[here](https://documenter.getpostman.com/view/8858534/SW7dX7JG?version=latest#627465c4-0b9f-4306-8897-038268188093)**. First, let's create an account via curl in your terminal:
-
-```sh
-curl --location --request POST 'https://api-nodejs-todolist.herokuapp.com/user/register' \
---header 'Content-Type: application/json' \
---data-raw '{
-	"name": "YOUR_FAKE_NAME",
-	"email": "YOUR_FAKE_EMAIL",
-	"password": "YOUR_LONG_PASSWORD",
-	"age": YOUR_FAKE_AGE
-}'
-```
-
-This will return you something like:
-
-```json
-{
-   "user":{
-      "age":YOUR_FAKE_AGE,
-      "_id":"5f61fb805ac0a50017bd8867",
-      "name":"YOUR_FAKE_NAME",
-      "email":"YOUR_FAKE_EMAIL",
-      "createdAt":"2020-09-16T11:48:16.439Z",
-      "updatedAt":"2020-09-16T11:48:16.789Z",
-      "__v":1
-   },
-   "token":"eyJhbGgiOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ayJfaWQiOiI2ZjYxZmI4MDVpYzBhNTAwMTdiZPg4NjciLCJpYXQiOjE2MDAyNTY4OTZ9.2skAVYPi4vS2bDd0dQN9Melu9aqNY-13APzyqyQ9Q-4"
+```tsx
+function App(): JSX.Element {
+    return <Title />;
 }
 ```
 
-The `token` field contains the string that you will use to be identified. By adding it in your requests, the API will know who you are and which task you have!
+<details>
+	<summary>✔️ Result preview</summary>
+	<br>
+	<p>The background was added with simple CSS</p>
+	<img src="https://user-images.githubusercontent.com/49811529/182241478-40f5e380-8de1-4062-96c3-1acde999ad90.png"/>
+</details>
 
-If you want to add a new note, just do:
+<br/>
 
-```sh
-curl --location --request POST 'https://api-nodejs-todolist.herokuapp.com/task' \
---header 'Authorization: Bearer REPLACE_YOUR_TOKEN_HERE' \
---header 'Content-Type: application/json' \
---data-raw '{
-	"description": "finish workshop"
-}'
+## Step 2: Show content with Components from Material UI
+
+Now that you know how to create a component in React, let's get into [Material UI](https://mui.com).
+Material UI is a library of pre-built components that you can use in your React app.
+Discover [here](https://dev.to/amberjones/5-delightful-things-about-material-ui-5402) the advantages of using a components library such as Material UI.
+
+The goal of this task is to create the `TaskCard` component: this component will represent a task with all its information, including:
+- A title
+- A description
+- A due date
+
+To do so, you must use the [Material UI Components](https://mui.com/components/), such as [Card](https://mui.com/material-ui/react-card/) or [Typography](https://mui.com/material-ui/react-typography/).
+
+> Feel free to choose the MUI components you want to create a great design 🚀
+
+Create a `components` folder in your `src` folder.  
+From now on, you will add one file per component inside it, with the name of your component as the filename.  
+For instance, the `TaskCard` component should be located in `src/components/TaskCard.tsx`.
+
+> You have to [export](https://medium.com/swlh/javascript-import-export-basics-ed7d94caf4c0) your functions to reuse them in your `src/App.tsx`.
+
+> You can put the task's data directly in your code, we'll cover props in the next step to make your component generic 😜
+
+<details>
+	<summary>✔️ Result preview</summary>
+	<img src="https://user-images.githubusercontent.com/49811529/182241268-4877fe93-b682-4416-8304-a9a37a2d7c86.png"/>
+</details>
+
+<br/>
+
+## Step 3: Show all the tasks from a list with props
+
+At this moment, you know how to create a single component and how to add it to your application.  
+But what if you need to show a list of components that you cannot determine in advance? For example a list of tasks :thinking:
+
+To do so, create and use a `TaskList` component that will show all the tasks iteratively, with a [Typescript type](https://www.typescriptlang.org/docs/handbook/basic-types.html) to represent the tasks and their information.  
+
+You can [store your tasks in a JSON file](https://bobbyhadz.com/blog/javascript-import-json-file) as an array.  
+Then, import it in your `TaskList` component and use the Javascript [map](https://reactjs.org/docs/lists-and-keys.html) method to iterate through your tasks.
+
+Finally, use [React Props](https://reactjs.org/docs/components-and-props.html#rendering-a-component) to pass values of each task from your `TaskList` to the `TaskCard` component.
+
+:bulb: When you create a component through an iteration, don't forget to pass a unique `key` in component props!
+
+<details>
+	<summary>✔️ Result preview</summary>
+	<img src="https://user-images.githubusercontent.com/49811529/182241779-c76d5f95-39db-4989-8ee8-dc0de5b6db97.png"/>
+</details>
+
+<br>
+
+## Step 4: Create interactive components using useState
+
+From now, you are able to create static components that don't interact with the user.
+We will now create dynamic components to allow the user to add a new task to the list, using [React hooks](https://reactjs.org/docs/hooks-intro.html).
+
+To create a task, we need to create forms where the user can enter a title, a description and a due date with a button to validate. Let's create them with [Material UI](https://mui.com/components/)!
+
+Let's then use the [useState](https://www.freecodecamp.org/news/introduction-to-react-hooks/) hook to handle user input and button clicks!
+
+:bulb: Mix the usage of `useState` with `props`!
+
+> We recommend you to create a small '+' button in one of the corner of your app that will open a small window containing the title and description forms as well as the button to add the task.
+
+:bulb: You can customize your hooks to avoid unwanted cases, such as an empty field.
+
+<details>
+	<summary>✔️ Result preview</summary>
+	<img src="https://user-images.githubusercontent.com/49811529/182242490-78432edc-c932-416f-a1f1-2449ac37686c.png"/>
+</details>
+
+<br/>
+
+## Step 5: Discover another hook: React contexts
+
+In the previous step, we told you that you could pass your `useState` hooks into your components `props`. This way to do can be a bit annoying as you have to pass the variable into props from all the children from the component you created it.
+
+To solve this problem, we can use `contexts`. [React contexts](https://reactjs.org/docs/context.html) are another type of React hooks, allowing the same things as `useState` does, but using a slightly different syntax and behavior.  
+It's a great way to pass data used in whole parts of your application, such as themes (dark/light mode), user language, or in the case of our small app, tasks !  
+You can wrap your components in a `Provider` like the sample code below and access the value in any of its sub-component!
+```tsx
+function Component(): JSX.Element {
+    const [variable, setter] = useState<any>());
+
+    return (
+        <TaskContext.Provider value={{ variable, setter }}>
+            ...
+        </TaskContext.Provider>
+    );
+}
 ```
 
-You should receive a JSON object saying `succes: true` with the note you just added.
-
-Finally, if you want to see all your notes, just do:
-
-```sh
-curl --location --request GET 'https://api-nodejs-todolist.herokuapp.com/task' \
---header 'Authorization: Bearer REPLACE_YOUR_TOKEN_HERE' \
---header 'Content-Type: application/json'
-```
-
-Of course, there is a request to delete a note, but find it by yourself on the documentation, it should not be very hard!
-
-### Use the API in React
-
-You've probably saw it in the documentation, but examples in other languages are available. The one we want is JavaScript Fetch because we will use it directly in our react code. What you will have to do now is to call theses functions to send the result in your `Task` component. First, create a `request.js` file in the `src` folder containing this code:
-
-<Details><Summary><strong>request.js</strong></Summary>
-
-```js
-/* eslint-disable */
-const fetch = require('node-fetch');
-
-const TOKEN = 'REPLACE_YOUR_TOKEN_HERE';
-
-// based on this public API
-// https://documenter.getpostman.com/view/8858534/SW7dX7JG?version=latest#intro
-
-export async function addTask(token, description) {
-  const raw = JSON.stringify({ description });
-  const requestOptions = {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${token}`,
-    },
-    body: raw,
-    redirect: 'follow',
-  };
-
-  const tasks = await fetch('https://api-nodejs-todolist.herokuapp.com/task', requestOptions);
-  const list = await tasks.json();
-  return list;
-}
-
-export async function delTask(token, id) {
-  const requestOptions = {
-    method: 'DELETE',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${token}`,
-    },
-    redirect: 'follow',
-  };
-
-  const tasks = await fetch(`https://api-nodejs-todolist.herokuapp.com/task/${id}`, requestOptions);
-  const list = await tasks.json();
-  return list;
-}
-
-export async function getAllTask(token) {
-  const requestOptions = {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${token}`,
-    },
-    redirect: 'follow',
-  };
-
-  const tasks = await fetch('https://api-nodejs-todolist.herokuapp.com/task', requestOptions);
-  const list = await tasks.json();
-  return list;
-}
-
-// Example of how to use the functions
-async function main() {
-  const newTask = await addTask(TOKEN, 'new Task');
-  console.log(newTask);
-  const tasks = await getAllTask(TOKEN);
-  console.log(tasks);
-  const deletedTask = await delTask(TOKEN, newTask.data._id);
-  console.log(deletedTask);
-}
-```
-
-</Details>
-
-You now have to use these functions to create, delete and list your tasks. There is an example of how to call them at the end of the file, but to do so you will have to import them in your `App.js` file:
-
-```js
-import { addTask, delTask, getAllTask } from './request';
-```
-
-The easiest thing to do to have your todolist working smoothly is to keep the functions you've created to edit the array, and add an extra step that updates the online tasks with the API functions. So when you add a new task, you add it in your `taskList` array and then you call `addTask`
-
-- In the objects you will receive in response, there are multiple fields, the one we are interested in is `data`, it contains the task information
-
-- It's pretty easy to know when you will call `addTask` and  `delTask`, remember the buttons you previously used
-- `delTask` needs an id to find the task to delete, it means you'll probably have to store more data than just the description in `taskList`
-- `getAllTask` is a bit more complex because you want to call it at the beginning of the component to get all the tasks already existing in the server loaded in `taskList`. You will need to use the [useEffect](https://reactjs.org/docs/hooks-effect.html) function
-
-> Don't forget that these functions are async, you'll need the await keyword to have the final JSON result
-
+<br/>
 
 ## Bonus
 
-If you've finished all the steps, then well done, you've reached the end of the workshop! :clap:
+Congratulations, you now have a functionnal Kanban style app to keep yourself organized in all your future projects!
 
-If you want to upgrade your online todolist, you can add more features, like:
+You can still enhance it's behaviour, here are some examples:
 
-- Bad token detection: show an error when the token used is invalid and make the request fail
+- You can add a [background](https://www.freecodecamp.org/news/react-background-image-tutorial-how-to-set-backgroundimage-with-inline-css-style/) to your application
+- You can add a `Delete` button on each task to delete it
+- You can add a real due date using [Calendars](https://mui.com/x/react-date-pickers/getting-started/)
+- You can link your application to a `backend` and a `database` to properly store your tasks (EPyTodo ?)
 
-- discover the joys of [css](https://malcoded.com/posts/react-component-style/), here is an nice tutorial to master [flex-box](https://flexboxfroggy.com/#fr).
-- Use [Bootstrap](https://getbootstrap.com/) to have simple style on your components
-- Install external packages with pre-built and styled components like
-  - [Material UI](https://material-ui.com/)
-  - [Material Design](https://material.io/design/)
-  - [Ant Design](https://ant.design/)
+:bulb: We suggest you to take a look at [NextJS](https://nextjs.org) or [Remix](https://remix.run)!
 
+<br/><br/>
 ## Authors
 
-| [<img src="https://github.com/PaulMonnery.png?size=85" width=85><br><sub>Paul Monnery</sub>](https://github.com/PaulMonnery) | [<img src="https://github.com/Qwexta.png?size=85" width=85><br><sub>Théo Ardouin</sub>](https://github.com/Qwexta) 
-| :---: | :---: |
+| [<img src="https://github.com/RezaRahemtola.png?size=85" width=85><br><sub>Reza Rahemtola</sub>](https://github.com/RezaRahemtola) | [<img src="https://github.com/EdenComp.png?size=85" width=85><br><sub>Florian Lauch</sub>](https://github.com/EdenComp) | [<img src="https://github.com/Samoten777.png?size=85" width=85><br><sub>Laure Gagner</sub>](https://github.com/Samoten777) | [<img src="https://github.com/nicolasheude.png?size=85" width=85><br><sub>Nicolas Heude</sub>](https://github.com/nicolasheude) 
+| :---: | :---: | :---: | :---: |
 <h2 align=center>
 Organization
 </h2>
