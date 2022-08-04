@@ -1,6 +1,6 @@
 # Part 1: Git
 
-During this workshop, you will learn the following:
+:heavy_check_mark: Competencies:
 - The basics of git (you're probably already familiar with these)
 - A good, easy to use git workflow with branches
 - Extra stuff about why doing stuff one way or the other
@@ -25,6 +25,8 @@ Check the [Oh My Zsh](#oh-my-zsh) tip.
 
 ## Step 1 - Initialize a repository locally and modify its content
 
+### :bookmark_tabs: Description:
+
 There are multiple ways to initialize a repository locally.
 
 ### Local and Remote
@@ -43,6 +45,8 @@ The most known one is to clone a repository using `git clone`.
 
 It is recommended to clone via ssh rather than https.
 Check the [HTTPS vs SSH clone](#https-vs-ssh-clone) tip.
+
+#### :pushpin: Tasks:
 
 If you haven't already, go ahead and clone the GitHub repository created for this workshop.
 
@@ -80,7 +84,9 @@ Also, a better way of adding everything is using `git add --all`, because if you
 
 You also have other commands that can be used to modify files such as `git rm` and `git mv`, they are respectively used to remove and move a file.
 
-Now add a file named `step1.txt` with "Hello World!" written in it.
+#### :pushpin: Tasks:
+
+Add a file named `step1.txt` with "Hello World!" written in it.
 
 ### Commit your modifications
 
@@ -99,7 +105,9 @@ _You can change your default editor for every program by setting the environment
 If you wish to include the modifications you have made to all the files already tracked by git but do not wish to add untracked files you can simply use the `-a` option.
 Think about signing off your commits when you contribute to public repos with `-s`.
 
-You can now simply commit this file, and try to find a [good commit message](https://cbea.ms/git-commit/) that you will want to read.
+#### :pushpin: Tasks:
+
+Simply commit this file, and try to find a [good commit message](https://cbea.ms/git-commit/) that you will want to read, an easy way to do that is following [conventional commit](https://www.conventionalcommits.org/en/v1.0.0/).
 
 ### Check the commits
 
@@ -111,7 +119,9 @@ In order to apply your changes to the remote, you can simply use `git push`.
 
 You probably have heard of force push, you shouldn't use it most of the time, the only reason to use it would be to push
 changes you applied to your branch by rebasing your branch on top of main, because it will apply the changes from main
-before the changes made on your branch, hence rewritting the history.
+before the changes made on your branch, hence rewriting the history.
+
+#### :pushpin: Tasks:
 
 Go ahead and push your commit.
 
@@ -134,24 +144,12 @@ For this, you have to use `git fetch`
 
 ## Step 2 - Revert changes
 
-### Remove a mistake made by a pushed commit
+### :bookmark_tabs: Description:
 
-First go ahead and add a file named `step2.txt` with "This is a bug", written in it, commit it and push it.
-
-Remember how we said that making small commits was a good thing, well this is where making small commits comes in handy.
-Well now you will learn how to revert a commit, which allows fixing bugs easily.
-
-Let's assume that the step2.txt was not intended to be pushed, you can simply go ahead and use `git revert` on the commit to revert the changes and get back to the state without this commit.
-
-Go ahead and use `git revert` on your last commit.
-
-### Remove a mistake made by a local commit
-
-Let's say you have committed something locally but not pushed it yet, and you realise that it was a mistake, you can easily delete it with `git reset`.
-
-The exact command would be `git reset --hard HEAD~N` where N is the number of commits you want to delete.
-Be careful because you won't be able to retrieve it after the fact.
-This could also be used to remove sensitive information, but you would have to rewrite the commit history which isn't that great.
+Reverting changes comes in handy a lot of times, and you are really happy to know how to do that when you need it.
+It takes all the stress off and allows you to do it properly because you are confident of what you are doing and not 
+hesitating.
+So when you need to do that last minute you will make fewer mistakes by knowing what you are doing.
 
 ### Remove a mistake/test made locally
 
@@ -164,7 +162,30 @@ You can just run `git stash push <files with modifications to drop>` and `git st
 For your knowledge, know that `git stash` also has other commands like `pop` and `apply`.
 `apply` allows you to reapply the changes stored, whereas `pop`, runs apply followed by drop when there are no conflicts.
 
+### Remove a mistake made by a local commit
+
+Let's say you have committed something locally but not pushed it yet, and you realise that it was a mistake, you can easily delete it with `git reset`.
+
+The exact command would be `git reset --hard HEAD~N` where N is the number of commits you want to delete.
+Be careful because you won't be able to retrieve it after the fact.
+This could also be used to remove sensitive information, but you would have to rewrite the commit history which isn't that great.
+
+### Remove a mistake made by a pushed commit
+
+First go ahead and add a file named `step2.txt` with "This is a bug", written in it, commit it and push it.
+
+Remember how we said that making small commits was a good thing, well this is where making small commits comes in handy.
+Well now you will learn how to revert a commit, which allows fixing bugs easily.
+
+#### :pushpin: Tasks:
+
+Let's assume that the step2.txt was not intended to be pushed, you can simply go ahead and use `git revert` on the commit to revert the changes and get back to the state without this commit.
+
+Go ahead and use `git revert` on your last commit.
+
 ## Step 3 - Branches
+
+### :bookmark_tabs: Description:
 
 Now that you know new things about git, you may want to improve your workflow and use branches.
 
@@ -176,6 +197,8 @@ Here there are also multiple ways of doing that, but let's stick with the easies
 You can simply create a branch and switch to it at the same time using `git switch -c <my branch name>`.
 Yes `git checkout` can also be used but checkout allows more than just switching to branch, so we'll stick to `git switch`.
 
+#### :pushpin: Tasks:
+
 Go ahead and create a branch named `feat/step3`, and push it.
 Add a file named `step3.txt` containing "WIP feature".
 
@@ -183,6 +206,8 @@ Add a file named `step3.txt` containing "WIP feature".
 
 When changes have been made on main, while you were working on your feature, you will need to first apply these changes on your branch, resolve conflicts and push it to your branch.
 After that, you will be able to merge your work into main.
+
+#### :pushpin: Tasks:
 
 First, you will need to update main so switch to main and pull the changes.
 For the sake of the workshop, you will push a file named `coworker_feature.txt` on main containing "Most awaited feature".
@@ -197,13 +222,17 @@ Now that you are completely up-to-date with main and that you have finished your
 
 This process can be made using Pull Requests on GitHub but this is not the focus right now.
 
-So go ahead and merge your branch into main using rebase (there are reasons why you want to rebase and not merge but it is not the focus here, and it is explained in the Github part of this workshop).
+#### :pushpin: Tasks:
+
+So go ahead and merge your branch into main using rebase (there are reasons why you want to rebase and not merge but it is not the focus here, and it is explained in the GitHub part of this workshop).
 
 ### Manage branches
 
 In the end, you can manage your branches using the `git branch` command, so using it, now delete the `feat/step3` branch you created earlier.
 
 ## Step 4 - Restore files
+
+### :bookmark_tabs: Description:
 
 Sometimes you may delete files but want to retrieve them later.
 
@@ -217,6 +246,8 @@ Used well it can help you restore deleted files.
 ### The more recent method
 
 Another command could be `git restore` which works the same way as you'd do with `git checkout` but is much easier to use.
+
+#### :pushpin: Tasks:
 
 So go ahead and restore the file `step2.txt`
 
@@ -234,11 +265,24 @@ So quickly here is how you would work with branches:
 - Rebase your branch on top of main
 - Force push
 
-## Congrats
+## To go further
 
 You have learned a lot about git and a lot about processes used in most workflows using git nowadays.
 
 Make good use of it.
+There are still a lot of stuff to learn about git so here are a few:
+- git bisect
+- git cherry-pick
+- git clean
+- git range-dif
+- git shortlog
+- git submodule
+- git tag
+- git remote
+- git blame
+- Check out `man git`, it links to many man pages about git and good git practices.
+
+There are multiple graphical tools for git, the default one (bundled with git) is `git gui`, but another good one is `gitg`.
 
 ## Tips
 
