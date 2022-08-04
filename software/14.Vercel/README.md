@@ -1,4 +1,4 @@
-# Workshop 14 - Discover the deployment as a service with Vercel and Netlify
+# Workshop 14 - Discover the Deployment as a Service with Vercel and Netlify
 
 :heavy_check_mark: Learn how you can deploy website without cost 
 
@@ -17,15 +17,15 @@ All the required information to start this workshop can be found in [SETUP.md](.
 ## Story
 
 You are a young developer with many ideas to change the world !
-The first step is to create your own website but you want to do it fast because you are young and hurry.
+The first step is to create your own website but you want to do it fast because you are young and in a hurry.
 
-Your idea is simple, create a blog to show what you can do to everyone. You want to share your skill in front, backend and operational.<br>
-But you got a problem, it will be boring and long to deploy all your stacks, set the ssl certificate and DNS to secure your blog etc...
+Your idea is simple, create a blog to show what you can do to everyone. You want to share your skills in front, backend and operational.<br>
+But you have a problem, it will be boring and long to deploy all your stacks, set the SSL certificate and DNS to secure your blog etc...
 
-Don't worry, you like challenge, you go to internet and search some tools to easily set an environment and deploy your application.
+Don't worry, you like the challenge, you search for some tools to easily set an environment and deploy your application.
 You see that [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/) can be really cool to achieve your objective.
 
-In this workshop, we will explore the power of CD as services. Here is a schema of the functioning of those services
+In this workshop, we will explore the power of CD as services. Here is a schema of the functioning of those services:
 
 ![Schema Netlify Vercel](../../.github/assets/software/netlify-vercel/workshop-vercel-netlify.png)
 
@@ -43,10 +43,10 @@ Let's start a simple Next project.
 - Go to [Vercel](https://vercel.com/)
 - Create an account
 - Link your [Github](https://github.com/) account
-- Create a new project with **NextJS** template
+- Create a new project with the **NextJS** template
 - Wait until your project is deployed
 
-> :bulb: There are many templates available [here](https://github.com/vercel/next.js/tree/master/examples)
+> :bulb: There are many templates available [here](https://github.com/vercel/next.js/tree/canary/examples)
 
 Your project is now deployed online.
 
@@ -68,16 +68,16 @@ It should have the following architecture :
 │  ├── globals.css
 │  └── Home.module.css
 ├── .eslintrc.json     # Code-quality rules
-├── .gitignore         # Tells git which files (or patterns) it should ignored
+├── .gitignore         # Tells git which files (or patterns) it should ignore
 ├── next.config.js     # Next JS config
 ├── package-lock.json  # Dependencies manager
 ├── package.json       # Package manager
 └── README.md          # Starter help          
 ```
 
-Thanks [NextJS](https://nextjs.org/) we can both develop the frontend and the backend of our application.
+Thanks to [NextJS](https://nextjs.org/) we can both develop the frontend and the backend of our application.
 
-You must install dependencies :
+You must install the dependencies with one of those commands:
 
 Yarn : `yarn`<br>
 Npm:   `npm install`
@@ -88,17 +88,17 @@ To design our blog, first we will need a backend to store our posts.
 
 First, let's write a simple route to understand how [NextJS](https://nextjs.org/) and [Vercel](https://vercel.com/) work with [serverless functions](https://vercel.com/docs/serverless-functions/introduction).
 
-> NextJS can create an endpoint from a file, for example : you can actually reach the endpoint `<your_website>/api/hello> in your project.
+> NextJS can create an endpoint from a file, for example you can actually reach the endpoint `<your_website>/api/hello> in your project.
 
 #### Ping
 
-In `api` folder, create a file `ping.js` that will just respond `pong` when you hit the endpoint.
+In the `api` folder, create a file `ping.js` that will just respond `pong` when you hit the endpoint.
 
 > :bulb: You should take as example the file `hello.js`.
 
 > You can run your project with `yarn dev` or `npm run dev`.
 
-If you've done everything good, you should reach your endpoint through `http://localhost:3000/api/ping`. The command below should print `Success`.
+If you've done everything good, you should reach your endpoint through http://localhost:3000/api/ping. The command below should print `Success`.
 
 ```shell
 curl -s http://localhost:3000/api/ping | grep "pong" > /dev/null && echo "Success" || echo "Fail"
@@ -193,11 +193,11 @@ Take a look at a `next frontend architecture` :
 │  └── Home.module.css # Style scoped for Home component
 ```
 
-Now, to create the top bar we need 2 things: a component named `TopBar` wrote in a `TopBar.js` and a `stylesheet` named `TopBar.module.css`.
+Now, to create the top bar we need 2 things: a component named `TopBar` wrote in a `topBar.js` file and a `stylesheet` named `TopBar.module.css`.
 
 Here we go, first :
 
-- Create a file named `TopBar.js` that will export a component that display a topBar.
+- Create a file named `topBar.js` that will export a component that displays a topBar.
 
 > You can `return` simple html, it's not different from vanilla html for the moment.
 
@@ -207,33 +207,33 @@ Here we go, first :
 
 Push your work and share your `website url` to your friends, so they can be impressed by your skills :rocket:
 
-## Step 5 - Look posts
+## Step 5 - View posts in your browser
 
-It's time to retrieve your posts and share it with the rest of the world.
+It's time to retrieve your posts and share them with the rest of the world.
 
 To do it, you know the recipe, just create a new component named `Posts` and a `stylesheet` named `Posts.module.css`.
 
 You will also need to fetch your data from your API. This [documentation](https://nextjs.org/docs/basic-features/data-fetching) can help you to do it.
 
-> :bulb: To fetch your **properties**, you should use [axios](https://www.npmjs.com/package/axios) and that [example](https://github.com/vercel/next.js/blob/canary/examples/with-custom-reverse-proxy/pages/index.js#L5).
+> :bulb: To fetch your **properties**, you should use [axios](https://www.npmjs.com/package/axios)
 
-> :bulb: Thanks NextJS integration, you don't need to care about [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing).
+> :bulb: Thanks to the NextJS integration, you don't need to care about [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing).
 
 Now you can publish your beautiful blog online and share it with your friends !
 
 ## Further steps
 
-Now that you got the list of your posts. You should add a new `button` that will trigger a forms to add component.
+Now that you got the list of your posts, you should add a new `button` that will trigger a form to add a post.
 
-You could also provide a little red cross that will delete the note when you click on it. It's up to you to customize your blog.
+You could also provide a little red cross that will delete the post when you click on it. It's up to you to customize your blog.
 
 ## Bonus
 
-You are now an expert of deployment as a service. Why don't you try other websites like [Netlify](https://www.netlify.com/).
+You are now an expert of Deployment as a Service. Why don't you try other websites like [Netlify](https://www.netlify.com/).
 
 Deploy a new website in this platform, it's really easy.
 
-Here's steps to deploy on Netlify :
+Here are the steps to deploy on Netlify :
 - Create a git repository
 - Sign-in on [Netlify](https://www.netlify.com/)
 - Go to `New site from Git`
