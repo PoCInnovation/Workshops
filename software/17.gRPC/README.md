@@ -44,7 +44,7 @@ Please follow the instructions available [here](./SETUP.md).
 ## Step 1 - Designing the gRPC service
 
 ### :bookmark_tabs: **Description**:
-When dealing with gRPC, you need to define two things in a very specific file : the [protobuf](https://developers.google.com/protocol-buffers) file.
+When dealing with gRPC, you need to define two things in a very specific file: the [protobuf](https://developers.google.com/protocol-buffers) file.
 These two things are :
 
 - `Service` - This is the global communication between two entities
@@ -77,6 +77,7 @@ Run the following command and nothing should have appeared on your screen:
 ```shell
 protoc --go_out=messenger --go-grpc_out=messenger messenger/messenger.proto
 ```
+> Two files were generated in the `messenger` directory, we'll use them later 😉
 
 ## Step 2 - Implement the main logic
 
@@ -127,7 +128,7 @@ exit status 1
 ## Step 3 - Implement the server
 
 ### :bookmark_tabs: **Description**:
-At the first step, the protoc compiler generated 2 files: `messenger_grpc.pb.go` and `messenger.pb.go`.  
+At the first step, the protoc compiler [generated 2 files](https://grpc.io/docs/languages/go/basics/#generating-client-and-server-code): `messenger_grpc.pb.go` and `messenger.pb.go`.  
 Let's focus on the first one, which contains a lot of things, including a `MessengerServiceServer` interface.
 
 During this step, you will implement this interface and its method, `Send`.
