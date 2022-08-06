@@ -26,8 +26,8 @@ export PATH=$PATH:/usr/local/go/bin:$(go env GOPATH)/bin
 ### **protoc**
 
 protoc is the protocol buffer compiler, you can install it with your package manager:
-- under fedora: `sudo dnf install protobuf-compiler`.
-- under ubuntu: `sudo apt install protobuf-compiler`.
+- under fedora: `sudo dnf install protobuf-compiler`
+- under ubuntu: `sudo apt install protobuf-compiler`  
 or by following the instructions given [here](https://grpc.io/docs/protoc-installation/).
 
 ## 2 - Workshop
