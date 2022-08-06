@@ -1,9 +1,9 @@
 # Workshop 24 - Git and GitHub :rocket:
 
 
-## Part 1 - Git
+## [Part 1 - Git](./Git)
 
-## Part 2 - GitHub
+## [Part 2 - GitHub](./GitHub)
 
 
 
