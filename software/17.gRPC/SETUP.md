@@ -12,10 +12,10 @@ You can install both of them using the following commands respectively:
 ### **go**
 ```shell
 # Will download go binaries
-wget https://go.dev/dl/go1.16.6.linux-amd64.tar.gz
+wget https://go.dev/dl/go1.19.linux-amd64.tar.gz
 
 # Will extract and move binaries into GOPATH
-sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.16.6.linux-amd64.tar.gz
+sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.19.linux-amd64.tar.gz
 ```
 
 Then, open your `.zshrc` or `.bashrc` file and append the following line at the end:
@@ -29,14 +29,14 @@ protoc is the protocol buffer compiler, you can install it by following the inst
 
 ## 2 - Workshop
 
-Run the following command to initialize the go project:
+Create a folder and run the following command inside to initialize the go project:
 ```shell
 go mod init grpc-poc
 ```
 
 Then run:
 ```shell
-go get -u github.com/golang/protobuf/protoc-gen-go
+go install google.golang.org/protobuf/cmd/protoc-gen-go@1.28.1
 ```
 
 Go back to the [exercise](./README.md)
