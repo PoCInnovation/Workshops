@@ -102,17 +102,17 @@ Before implementing both the server and the client, you will implement the main 
 ### :heavy_check_mark: **Validation**:
 Run the following commands:
 ```shell
-go run main.go "-c"
 go run main.go "-s"
+go run main.go "-c"
 ```
 Should print respectively:
 ```shell
-go run main.go "-c"
-Starting the client
-
-
 go run main.go "-s"
 Starting the server
+
+
+go run main.go "-c"
+Starting the client
 ```
 
 And running the following command:
@@ -171,7 +171,7 @@ In the `main.go` file:
 ### :heavy_check_mark: **Validation**:
 Run the following command:
 ```shell
-go run main.go "-s"
+go run main.go -s
 ```
 
 Should make the program run indefinitely !
@@ -228,7 +228,7 @@ Starting the server
 ## Step 5 - Shutdown properly
 
 ### :bookmark_tabs: **Description**:
-When you don't need the server to run anymore, or whenever the client has stopped sending their requests, when need 
+When you don't need the server to run anymore, or whenever the client has stopped sending their requests, we need 
 to shut it down properly.
 
 As you created the `Disconnect` method for the client, you only need to create the same method for the server that 
@@ -243,7 +243,7 @@ triggers whenever you hit `CTRL + C`.
 - [Signals in go](https://pkg.go.dev/os/signal)
 
 ### :heavy_check_mark: **Validation**:
-Try to hit `CTRL + C` while running the server, and it should shut down.
+Try to hit `CTRL + C` while running the server, and it should shut down without any error message.
 
 ## To go further
 
@@ -260,7 +260,7 @@ If you want to learn more about gRPC project out there, check out [this](https:/
 
 ## Authors
 
-| [<img src="https://github.com/PtitLuca.png?size=85" width=85><br><sub>Luca Georges Francois</sub>](https://github.com/PtitLuca) | 
+| [<img src="https://github.com/0xPanoramix.png?size=85" width=85><br><sub>Luca Georges Francois</sub>](https://github.com/0xPanoramix) | 
 | :---: |
 <h2 align=center>
 Organization
