@@ -25,11 +25,14 @@ export PATH=$PATH:/usr/local/go/bin:$(go env GOPATH)/bin
 
 ### **protoc**
 
-protoc is the protocol buffer compiler, you can install it by following the instructions given [here](https://grpc.io/docs/protoc-installation/).
+protoc is the protocol buffer compiler, you can install it with your package manager:
+- under fedora: `sudo dnf install protobuf-compiler`.
+- under ubuntu: `sudo apt install protobuf-compiler`.
+or by following the instructions given [here](https://grpc.io/docs/protoc-installation/).
 
 ## 2 - Workshop
 
-Create a folder and run the following command inside to initialize the go project:
+Create a folder for this workshop and run the following command inside to initialize the go project:
 ```shell
 go mod init grpc-poc
 ```
