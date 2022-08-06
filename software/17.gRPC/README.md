@@ -2,7 +2,7 @@
 
 :heavy_check_mark: Design a gRPC service
 
-:heavy_check_mark: Write protocol buffer file
+:heavy_check_mark: Write a protocol buffer file
 
 :heavy_check_mark: Make gRPC unary call
 
@@ -23,7 +23,6 @@ one of the other ways to communicate - like REST does.
 
 - gRPC stands for **g**oogle **R**emote **P**rocedure **C**all.
 - It is a framework developed by Google on top of the [RPC protocol](https://en.wikipedia.org/wiki/Remote_procedure_call).
-- If you want to learn more about the differences between gRPC and REST, you can read [this great blogpost](https://www.imaginarycloud.com/blog/grpc-vs-rest/#comparison).
 - When dealing with gRPC, the data sent between the client and the server is packed in a specific format : protobuffers.
 
 > :bulb: Okay, but why do we use protobuf and not JSON ? [JSON are nice](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON#json_structure) : they are human-readable, easy to build and to extract.
@@ -76,7 +75,7 @@ These two things are :
 ### :heavy_check_mark: **Validation**:
 Run the following command and nothing should have appeared on your screen:
 ```shell
-protoc --go_out=plugins=grpc:messenger messenger/messenger.proto
+protoc --go_out=messenger --go-grpc_out=messenger messenger/messenger.proto
 ```
 
 ## Step 2 - Implement the main logic
