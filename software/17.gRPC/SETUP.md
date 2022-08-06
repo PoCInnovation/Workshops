@@ -20,7 +20,7 @@ sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.19.linux-amd64.tar.
 
 Then, open your `.zshrc` or `.bashrc` file and append the following line at the end:
 ```shell
-export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/usr/local/go/bin:$(go env GOPATH)/bin
 ```
 
 ### **protoc**
