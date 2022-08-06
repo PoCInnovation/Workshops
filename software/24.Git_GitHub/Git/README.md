@@ -298,8 +298,8 @@ There are multiple graphical tools for git, the default one (bundled with git) i
 
 ## Authors
 
-| [<img src="https://github.com/Breigner01.png?size=85" width=85><br><sub>Bnejamin Reigner</sub>](https://github.com/Breigner01)
-| :---: | 
+| [<img src="https://github.com/Breigner01.png?size=85" width=85><br><sub>Benjamin Reigner</sub>](https://github.com/Breigner01)
+| :---: |
 <h2 align=center>
 Organization
 </h2>
