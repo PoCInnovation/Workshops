@@ -135,9 +135,9 @@ You've learned how to use a lot of tools provided by GitHub, but there's a lot m
 - [Making open-source contributions](https://docs.github.com/en/get-started/exploring-projects-on-github/finding-ways-to-contribute-to-open-source-on-github) is a great way to apply what you've learned in a real project.  
   Pay attention to `good first issue` labels directly on GitHub or on [dedicated sites](https://goodfirstissue.dev/).
   
-## Authors
+## Author
 
-| [<img src="https://github.com/RezaRahemtola.png?size=85" width=85><br><sub>Reza Rahemtolar</sub>](https://github.com/RezaRahemtola)
+| [<img src="https://github.com/RezaRahemtola.png?size=85" width=85><br><sub>Reza Rahemtola</sub>](https://github.com/RezaRahemtola)
 | :---: | 
 <h2 align=center>
 Organization
