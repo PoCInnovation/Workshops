@@ -37,6 +37,7 @@ go mod init grpc-poc
 Then run:
 ```shell
 go install google.golang.org/protobuf/cmd/protoc-gen-go@1.28.1
+go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.2
 ```
 
 Go back to the [exercise](./README.md)
