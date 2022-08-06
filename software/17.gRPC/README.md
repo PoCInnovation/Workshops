@@ -210,20 +210,20 @@ In the `main.go` file:
 ### :heavy_check_mark: **Validation**:
 - Run the server
 ```shell
-go run main.go "-s"
+go run main.go -s
 ```
 - Open a new terminal, and run
 ```shell
-go run main.go "-c"
+go run main.go -c
 ```
 
 The server should print:
 ```shell
-$ go run main.go "-s"
+$ go run main.go -s
 Starting the server
-[SERVER]: received Hello World! at 1628075261
+[SERVER]: received Hello World! at 1659805496
 ```
-The message and the timestamp are obviously different from mine.
+> The timestamp is obviously different in your case.
 
 ## Step 5 - Shutdown properly
 
