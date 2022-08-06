@@ -91,8 +91,8 @@ Before implementing both the server and the client, you will implement the main 
 - Create a `main` function
 - Check the first argument provided to the program
 
-  - If it is "-c", it will start the client. For the moment, just print `Starting the client`
-  - If it is "-s", it will start the server. For the moment, just print `Starting the server`
+  - If it is `-s`, it will start the server. For the moment, just print `Starting the server`
+  - If it is `-c`, it will start the client. For the moment, just print `Starting the client`
   - Otherwise, the program will exit with an error code of 1
 
 ### :books: **Documentation**:
@@ -121,7 +121,6 @@ go run main.go "-h"
 ```
 Should print:
 ```shell
-# Display help
 exit status 1
 ```
 
