@@ -38,7 +38,7 @@ yarn start
   </details>
 - Shut down the server (Ctrl + C)
 
-> To finish this part, we gonna push everything on github 📌
+> To finish this part, we're gonna push everything on github 📌
 - Commit and push
 
 ## Netlify
@@ -51,7 +51,7 @@ yarn start
 - Click the `Create an App` button
 - Create an account
 - You should get a private key on your dashboard
-- Take care of it, you will need it sooner !
+- Take care of it, you will need it later !
 
 ## Serverless Framework
 
