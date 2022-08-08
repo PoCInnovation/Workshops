@@ -1,6 +1,6 @@
 <p align="center"><img src="./images/logo.svg" alt="Gradio logo"></p>
 
-## X - Gradio interface 📱
+## Gradio interface 📱
 
 Discover Gradio, a tool to create interfaces for your artificial intelligence applications.
 
