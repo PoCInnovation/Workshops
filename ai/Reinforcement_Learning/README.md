@@ -1,4 +1,4 @@
-Introduction to Reinforcement Learning ❄️
+# Introduction to Reinforcement Learning ❄️
 
 Discover Reinforcement Learning, an exciting field within Artificial Intelligence.
 
