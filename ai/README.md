@@ -9,7 +9,7 @@ In each directory, you will find the exercises, a README explaining the purpose 
 
 ### [🌐 Click to join our Discord](https://discord.gg/Yqq2ADGDS7)
 
-## 0 - Python3 & Jupyter Notebook 🐍
+## Python3 & Jupyter Notebook 🐍
 
 Basics of python and usage of Jupyter Notebook. You will:
 - Learn to use iPython notebooks
@@ -17,27 +17,27 @@ Basics of python and usage of Jupyter Notebook. You will:
 - Solve complex algorithm exercises
 - Master the different programming paradigms of Python
 
-## 1 - Data Science & Pandas basics 👨‍🔬
+## Data Science & Pandas basics 👨‍🔬
 Basics of Data Science and introduce Pandas. You will:
 - learn to use Pandas
 - analyse huge datasets
 - clean datasets
 - visualize data analyse
 
-## 2 - Logistic Regression :computer:
+## Logistic Regression :computer:
 Creation of your first classification method. You will:
 - initialize hyperparameters
 - calculate of the loss function and usage of gradient
 - usage of optimizing algorithm
 
-## 3 - Hidden Layer :chart_with_upwards_trend:
+## Hidden Layer :chart_with_upwards_trend:
 Discover the effect of a hidden layer. You will:
 - create a neural network with a hidden layer
 - use neurons with a nonlinear activation function (tanh)
 - calculate the loss cross-entropy
 - implement forward and backward propagations
 
-## 4 - Tensorflow :orange_book:
+## Tensorflow :orange_book:
 Usage of Tensorflow. You will:
 - create a Sequential model
 - use Dense layers
@@ -45,31 +45,31 @@ Usage of Tensorflow. You will:
 - classify fashion_mnist
 - classify mnist
 
-## 5 - Convolution :black_square_button:
+## Convolution :black_square_button:
 Discover the effect and usage of convolution. You will:
 - understand the point to use convolutional neural network
 - use Conv2D
 - use Maxpooling2D
 
-## 6 - Value function :house_with_garden:
+## Value function :house_with_garden:
 Basics of Reinforcement Learning. You will:
 - understand the Markov Decision Process
 - use the value function
 - solve the *Antic* maze
 
-## 7 - Q-Learning 🚙
+## Q-Learning 🚙
 Continuation of Reinforcement Learning. You will:
 - use Gym environment
 - use Q learning
 - solve Mountain-Car-V0
 
-## 8 - Decision Tree :evergreen_tree:
+## Decision Tree :evergreen_tree:
 Discover one of the most popular supervised learning methods for classification problems. You will:
 - Use Scikit-learn
 - Create a Decision Tree
 - Create a Decision Tree Forest
 
-## 9 - Predict house price 🗺️
+## Predict house price 🗺️
 Use different machine learning techniques to predict house prices. You will:
 - Use Scikit-learn
 - Create neural networks with PyTorch
