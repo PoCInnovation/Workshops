@@ -1,4 +1,4 @@
-## 8 - Decision Tree :evergreen_tree:
+## Decision Tree :evergreen_tree:
 Discover one of the most popular supervised learning methods for classification problems. You will:
 - Use Scikit-learn
 - Create a Decision Tree
