@@ -26,13 +26,13 @@ Now that it's clear, time to work! The template repo is quite large, so let's di
 
 ## Step 1: Basic todolist
 
-Now that you understand a bit more the architecture of the project, let's create something! First off, wipe everything inside the `tabOneScreen.tsx` file: we will create a simple todolist component.
+Now that you understand a bit more the architecture of the project, let's create something! First off, wipe everything inside the `TabOneScreen.tsx` file: we will create a simple todolist component.
 
 The goal of the workshop of not to learn how to code in React but rather learn how to use React Native, so we won't waste time on creating basic components. Here is a `Task` component, copy everything inside your empty file:
 
 ```tsx
 import * as React from 'react';
-import { StyleSheet, ScrollView } from 'react-native';
+import { ScrollView } from 'react-native';
 import { Text, View } from '../components/Themed';
 
 function Task(props: {title: string, completed: boolean}) {
@@ -70,7 +70,7 @@ Some precisions:
 
 - React Native uses different components of React, here is the [documentation](https://reactnative.dev/docs/components-and-apis)
 
-- By default, all task `completed` props will be `false`
+- By default, all task `completed` props will be set to `false`
 
 - `taskList` is a const variable that can only be changed by the function `setTaskList` associated with it
 
@@ -91,17 +91,17 @@ Add this block of code after your imports:
 ```tsx
 import axios from 'axios'
 
-interface TodoDto {
-	userId: number;
-	id: number;
-	title: string;
-	completed: boolean;
+type TodoDto = {
+    userId: number;
+    id: number;
+    title: string;
+    completed: boolean;
 }
 
 async function getTasks(): Promise<TodoDto[]> {
-  const ret = await axios.get("https://jsonplaceholder.typicode.com/todos")
-  console.log(ret.data)
-  return ret.data
+    const ret = await axios.get("https://jsonplaceholder.typicode.com/todos")
+    console.log(ret.data)
+    return ret.data
 }
 ```
 
@@ -109,7 +109,7 @@ and call `getTasks` on your list component (before the return), this should prin
 
 - Don't forget to use the `completed` variable
 - The data fetching is asynchronous, you won't have data while it's loading, so `taskList` will be called with `React.useState<TodoDto[] | null>(null);`
-- You'll need the [useEffect](https://modern-javascript.fr/comment-utiliser-une-async-function-dans-un-hook-useeffect-avec-react/) to execute actions when the component is created (here, the action will be to load data)
+- You'll need the [useEffect hook](https://reactjs.org/docs/hooks-effect.html) to execute actions when the component is created (here, the action will be to load data)
 
 
 
@@ -121,7 +121,7 @@ First off, you'll have to install new packages:
 
 ```bash
 # Stop your server and run
-expo install expo-camera expo-barcode-scanner expo-media-library
+npx expo install expo-camera expo-barcode-scanner expo-media-library
 
 # Then restart your server
 npm start
@@ -129,8 +129,9 @@ npm start
 
 > Here is the [Camera documentation](https://docs.expo.io/versions/latest/sdk/camera/), there are useful examples, search for code scanning
 
-- `handleBarCodeScanned` arguments type are `{ type: string; data: string }`
-- Your IDE might show you errors because of types but don't waste time fixing them if it doesn't block the compilation
+> You can do this in the file `TabTwoScreen.tsx` :wink:
+
+- `handleBarCodeScanned` arguments type are `{ type: string; data: string }` (but you may only need `data` :wink:)
 - If the QR code struggles, do not hesitate to reload the app (shake your device to trigger the option panel)
 
 You can use this QR code as an example:
@@ -147,7 +148,8 @@ Our camera works great, but we cannot even do basic stuff such as taking picture
 - A **flip** button that changes the camera type from front to back and vice versa
 - A **trigger** button that will take a picture and save it to the camera roll
 
-> You'll need to use React refs to take a picture
+> You'll need to use [React refs](https://reactjs.org/docs/hooks-reference.html#useref) to take a picture
+> Your IDE might show an error when using the `ref` attribute, you can ignore it as it shouldn't block the compilation 
 
 ## Bonus
 
@@ -157,7 +159,7 @@ Here is a list of possible features you could add to your project
 
 - Add styles to your todolist ! Use some CSS
 - Add a [pull to refresh](https://reactnative.dev/docs/scrollview#refreshcontrol) option to your `ScrollView`s
-- Use a [Flatlist](https://reactnative.dev/docs/scrollview#refreshcontrol) instead of a `ScrollView` to have the ability to load data when the end is reached (and also have the ability to pull to refresh)
+- Use a [Flatlist](https://reactnative.dev/docs/flatlist) instead of a `ScrollView` to have the ability to load data when the end is reached (and also have the ability to pull to refresh)
 
 **Medium**
 
