@@ -13,11 +13,11 @@ type Users struct {
 
 var db = map[int]Users{}
 
-// MaxUser says the max number of users that be registered at the same time
+// MaxUser is the max number of users that can be registered at the same time
 const MaxUser = 10
 
-// Creatuser generate a user based on the information given
-// return an error if there is place left in the DB
+// Creatuser generates a user based on the information given
+// it returns an error if there is no place left in the DB
 func Creatuser(usr Users) error {
 	for id := 0; id < MaxUser; id++ {
 		if _, exist := db[id]; !exist {
@@ -29,8 +29,8 @@ func Creatuser(usr Users) error {
 	return errors.New("-- DB -- couldn't generate user: DB full")
 }
 
-// Deluser delete the user based on its key
-// returns an error if no user match the key
+// Deluser deletes the user based on its key
+// it returns an error if no user match the key
 func Deluser(id int) error {
 	if _, exist := db[id]; exist {
 		delete(db, id)
@@ -40,8 +40,8 @@ func Deluser(id int) error {
 	return nil
 }
 
-// Getuser return an user based on its key
-// retruns an error if no user match the key
+// Getuser returns an user based on its key
+// it returns an error if no user match the key
 func Getuser(id int) (Users, error) {
 	if user, exist := db[id]; exist {
 		return user, nil
