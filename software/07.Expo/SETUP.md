@@ -22,7 +22,7 @@ Then Expo CLI : `sudo npm install -g expo-cli`
 
 First off, create your project with the CLI:
 ```bash
-expo init --npm -t tabs --name expo-workshop-poc && cd expo-workshop-poc && npm install axios
+npx create-expo-app -t tabs expo-workshop-poc && cd expo-workshop-poc && npm install axios
 ```
 
 It will create a basic repo based on a template with several pages.
@@ -33,7 +33,7 @@ The architecture of the project looks like this:
 expo-workshop-poc
 ├── app.json           <-- config file
 ├── App.tsx            <-- app entrypoint, equivalent to a main
-├── assets             <-- assets folder (font, iamges...)
+├── assets             <-- assets folder (font, images...)
 ├── babel.config.js    <-- config file
 ├── components         <-- component folder (react notion)
 ├── constants          <-- useful variables (color palet, phone dimensions...)
@@ -49,8 +49,9 @@ expo-workshop-poc
 
 All you have to do after that is opening the `expo-workshop-poc` folder in VSCode and run `npm start` inside.
 
-This should start the dev server and print a QR code in your terminal. Scan it with your phone (from the expo app on Android or directly from the camera on iPhones). You can test it and what (simple) features are available
+This should start the dev server and print a QR code in your terminal. Scan it with your phone (from the expo app on Android or directly from the camera on iPhones). You can test it and what (simple) features are available.
 
+> If you have an error on your phone when scanning the QR code, run `npm install @expo/ngrok@^4.1.0` and replace the `start` script content in the `package.json` with `expo-cli start --tunnel`. Run `npm start` again and everything should work fine :wink:
 
 **If it loads the app on your phone then shows a basic app with a bottom navigator and 2 tabs, then you can start the exercises!**
 
