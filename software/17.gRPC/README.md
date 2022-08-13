@@ -2,7 +2,7 @@
 
 :heavy_check_mark: Design a gRPC service
 
-:heavy_check_mark: Write protocol buffer file
+:heavy_check_mark: Write a protocol buffer file
 
 :heavy_check_mark: Make gRPC unary call
 
@@ -23,7 +23,6 @@ one of the other ways to communicate - like REST does.
 
 - gRPC stands for **g**oogle **R**emote **P**rocedure **C**all.
 - It is a framework developed by Google on top of the [RPC protocol](https://en.wikipedia.org/wiki/Remote_procedure_call).
-- If you want to learn more about the differences between gRPC and REST, you can read [this great blogpost](https://www.imaginarycloud.com/blog/grpc-vs-rest/#comparison).
 - When dealing with gRPC, the data sent between the client and the server is packed in a specific format : protobuffers.
 
 > :bulb: Okay, but why do we use protobuf and not JSON ? [JSON are nice](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON#json_structure) : they are human-readable, easy to build and to extract.
@@ -45,7 +44,7 @@ Please follow the instructions available [here](./SETUP.md).
 ## Step 1 - Designing the gRPC service
 
 ### :bookmark_tabs: **Description**:
-When dealing with gRPC, you need to define two things in a very specific file : the [protobuf](https://developers.google.com/protocol-buffers) file.
+When dealing with gRPC, you need to define two things in a very specific file: the [protobuf](https://developers.google.com/protocol-buffers) file.
 These two things are :
 
 - `Service` - This is the global communication between two entities
@@ -76,8 +75,9 @@ These two things are :
 ### :heavy_check_mark: **Validation**:
 Run the following command and nothing should have appeared on your screen:
 ```shell
-protoc --go_out=plugins=grpc:messenger messenger/messenger.proto
+protoc --go_out=messenger --go-grpc_out=messenger messenger/messenger.proto
 ```
+> Two files were generated in the `messenger` directory, we'll use them later 😉
 
 ## Step 2 - Implement the main logic
 
@@ -92,8 +92,8 @@ Before implementing both the server and the client, you will implement the main 
 - Create a `main` function
 - Check the first argument provided to the program
 
-  - If it is "-c", it will start the client. For the moment, just print `Starting the client`
-  - If it is "-s", it will start the server. For the moment, just print `Starting the server`
+  - If it is `-s`, it will start the server. For the moment, just print `Starting the server`
+  - If it is `-c`, it will start the client. For the moment, just print `Starting the client`
   - Otherwise, the program will exit with an error code of 1
 
 ### :books: **Documentation**:
@@ -103,17 +103,17 @@ Before implementing both the server and the client, you will implement the main 
 ### :heavy_check_mark: **Validation**:
 Run the following commands:
 ```shell
-go run main.go "-c"
 go run main.go "-s"
+go run main.go "-c"
 ```
 Should print respectively:
 ```shell
-go run main.go "-c"
-Starting the client
-
-
 go run main.go "-s"
 Starting the server
+
+
+go run main.go "-c"
+Starting the client
 ```
 
 And running the following command:
@@ -122,23 +122,22 @@ go run main.go "-h"
 ```
 Should print:
 ```shell
-# Display help
 exit status 1
 ```
 
 ## Step 3 - Implement the server
 
 ### :bookmark_tabs: **Description**:
-The protoc compiler generated a `messenger.pb.go` at the first step, which contains a lot of things, including a 
-`MessengerServiceServer` interface.
+At the first step, the protoc compiler [generated 2 files](https://grpc.io/docs/languages/go/basics/#generating-client-and-server-code): `messenger_grpc.pb.go` and `messenger.pb.go`.  
+Let's focus on the first one, which contains a lot of things, including a `MessengerServiceServer` interface.
 
 During this step, you will implement this interface and its method, `Send`.
 
 ### :pushpin: **Tasks**:
-- Open the `messenger/messenger.pb.go` file
+- Open the `messenger/messenger_grpc.pb.go` file
 - Look for the `MessengerServiceServer`
-- Create a folder named `server`
-- Create a `server.go` in the `server` folder
+- Create a folder named `server` at the root of your working directory
+- Create a `server.go` file in the `server` folder
 - In the `server/server.go` file, create a `Server` structure which contains nothing for the moment
 - Create a `Send` method for the `Server` structure which takes the same arguments as the `Send` method of the 
   `MessengerServiceServer` interface
@@ -148,13 +147,13 @@ During this step, you will implement this interface and its method, `Send`.
 
 Now that your `Server` structure implements all the `MessengerServiceServer` methods, you can start the server.
 
-  - Add a `New` method to the `Server` structure
   - Add a field named `listener` in the `Server` structure
   - Add a field named `core` in the `Server` structure
-  - The listener must listen on `tcp:9000`
-  - The core is a `grpc.Server` that you must create using a method from the grpc package
-  - You must register the server using one of the method in `messenger.pb.go`
-  - Then return the instance of the created `Server`
+  - [Embed the unimplemented server](https://github.com/grpc/grpc-go/issues/3794#issuecomment-720599532) in the `Server` structure 
+  - Add a `New` method to the `Server` structure
+      - The core is a `grpc.Server` that you must create using a method from the grpc package
+      - You must register the server using one of the method in `messenger_grpc.pb.go`
+      - Then return the instance of the created `Server`
 
 Let's start the server:
 
@@ -164,6 +163,7 @@ Let's start the server:
 In the `main.go` file:
 
   - Below the print of `Starting the server`, create a new server and start it
+      - The listener must listen on `tcp:9000`
 
 ### :books: **Documentation**:
 
@@ -172,7 +172,7 @@ In the `main.go` file:
 ### :heavy_check_mark: **Validation**:
 Run the following command:
 ```shell
-go run main.go "-s"
+go run main.go -s
 ```
 
 Should make the program run indefinitely !
@@ -211,25 +211,25 @@ In the `main.go` file:
 ### :heavy_check_mark: **Validation**:
 - Run the server
 ```shell
-go run main.go "-s"
+go run main.go -s
 ```
 - Open a new terminal, and run
 ```shell
-go run main.go "-c"
+go run main.go -c
 ```
 
 The server should print:
 ```shell
-$ go run main.go "-s"
+$ go run main.go -s
 Starting the server
-[SERVER]: received Hello World! at 1628075261
+[SERVER]: received Hello World! at 1659805496
 ```
-The message and the timestamp are obviously different from mine.
+> The timestamp is obviously different in your case.
 
 ## Step 5 - Shutdown properly
 
 ### :bookmark_tabs: **Description**:
-When you don't need the server to run anymore, or whenever the client has stopped sending their requests, when need 
+When you don't need the server to run anymore, or whenever the client has stopped sending their requests, we need 
 to shut it down properly.
 
 As you created the `Disconnect` method for the client, you only need to create the same method for the server that 
@@ -244,7 +244,7 @@ triggers whenever you hit `CTRL + C`.
 - [Signals in go](https://pkg.go.dev/os/signal)
 
 ### :heavy_check_mark: **Validation**:
-Try to hit `CTRL + C` while running the server, and it should shut down.
+Try to hit `CTRL + C` while running the server, and it should shut down without any error message.
 
 ## To go further
 
@@ -261,7 +261,7 @@ If you want to learn more about gRPC project out there, check out [this](https:/
 
 ## Authors
 
-| [<img src="https://github.com/PtitLuca.png?size=85" width=85><br><sub>Luca Georges Francois</sub>](https://github.com/PtitLuca) | 
+| [<img src="https://github.com/0xPanoramix.png?size=85" width=85><br><sub>Luca Georges Francois</sub>](https://github.com/0xPanoramix) | 
 | :---: |
 <h2 align=center>
 Organization
