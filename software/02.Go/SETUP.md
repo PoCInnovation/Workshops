@@ -3,7 +3,7 @@
 ## 1. Go
 
 In this workshop, we will create an HTTP REST server using Go.
-First of all, make sure you have **Go 1.11** or higher installed, allowing you to use the `go mod` feature. It makes the development easier.
+First of all, make sure you have [**Go 1.11** or higher installed](https://go.dev/doc/install), allowing you to use the `go mod` feature. It makes the development easier.
 
 If you have the right version installed, you should have something similar:
 ```sh
