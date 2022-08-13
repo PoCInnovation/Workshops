@@ -1,5 +1,11 @@
 # Workshop 7 - Mobile app with Expo
 
+:heavy_check_mark: Learn the basics of [React Native](https://reactnative.dev/) 
+
+:heavy_check_mark: Discover [Expo](https://expo.dev/) to easily develop a mobile app
+
+:heavy_check_mark: Explore mobile-specific features with the camera
+
 In this workshop, we will create a simple mobile in written in React Native with TypeScript. When working with mobile apps, you often need to build your app, have `xcode` or `android studio` launched, your device plugged, your ram almost full, struggling with permissions and compilations errors because of unsupported model or update etc.
 
 Expo is here to simplify all this laborious work. No wire, no android studio, no version errors, just a QR code to scan and the app is locally built and sent to the expo client on your phone. Way easier!
