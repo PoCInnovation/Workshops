@@ -1,4 +1,4 @@
-module poc-workshop
+module poc-workshop-go
 
 go 1.13
 
