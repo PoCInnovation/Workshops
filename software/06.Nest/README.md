@@ -1,8 +1,14 @@
-# REST API with Nestjs
+# REST API with NestJS
 
-## Typescript
+:heavy_check_mark: Discover [Nest](https://nestjs.com/), a framework to build server-side NodeJS applications with full TypeScript support.
 
-If you do not already know typescript, you can read [this file](https://github.com/PoCInnovation/Workshops/blob/master/software/06.Nest/src/step-0/learn.md) to learn the basics.
+:heavy_check_mark: Learn the concept of decorator
+
+:heavy_check_mark: Create services to interact with a mocked database
+
+In this workshop, you'll use [Nest](https://nestjs.com/), a framework built on top of [Express](https://expressjs.com/) to create efficient and scalable apps. Nest fully supports TypeScript (in fact it's [built in TypeScript](https://github.com/nestjs/nest).
+
+> If you aren't familiar with TypeScript, you can read [this file](https://github.com/PoCInnovation/Workshops/blob/master/software/06.Nest/src/step0/learn.md) to learn the basics.
 
 ## Step 0: Setup
 
