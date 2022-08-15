@@ -42,7 +42,7 @@ We will be using `postman` to test out our routes, but you can also use `Hoppsco
 - [Hoppscotch](https://hoppscotch.io/)
 - [Curl](https://curl.haxx.se/) (often already installed on your computer)
 
-## 3. Launching the server
+## Launching the server
 
 ```sh
 npm run start
