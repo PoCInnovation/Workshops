@@ -19,8 +19,7 @@ Then `sudo npm install -g npx`
 
 First off, create your project with npx:
 ```sh
-npx create-react-app react-workshop --template typescript
-cd react-workshop
+npx create-react-app react-workshop-poc --template typescript && cd react-workshop-poc
 ```
 
 Then, install the dependencies we will be using for build our app:
@@ -30,9 +29,9 @@ npm install -D @types/material-ui
 ```
 :bulb: You will figure out later their purposes!
 
-All you have to do now is to open the `react-workshop` folder in VSCode (if you just open the `src` folder, ESlint won't be able to give warnings)
+All you have to do now is to open the `react-workshop-poc` folder in VSCode (if you just open the `src` folder, ESlint won't be able to give warnings)
 
-Finally, launch the app (in the `react-workshop` folder once again):
+Finally, launch the app (in the `react-workshop-poc` folder once again):
 
 ```sh
 npm start
