@@ -21,7 +21,7 @@ def error():
         return '''
             <script>alert("File not found!")</script>
         '''
-    if request.args.get('script') == '3c7363726970743e616c657274282258535322293c2f7363726970743e' or request.args.get('script') == '3c7363726970743e616c657274282758535327293c2f7363726970743e':
+    if request.args.get('script') == '616c65727428275853532729' or request.args.get('script') == '616c65727428225853532229':
         return "<script>alert('" + os.getenv('FLAG') + "')</script>" 
 
 if __name__ == "__main__":
