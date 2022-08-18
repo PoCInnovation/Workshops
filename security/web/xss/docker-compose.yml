@@ -31,7 +31,19 @@ services:
       - log_dom:/var/log
     container_name: dom
 
+  forum:
+    build:
+      context: ./forum
+      dockerfile: Dockerfile
+    ports:
+      - "5004:5004"
+    volumes:
+      - log_forum:/var/log
+    container_name: forum
+
+
 volumes:
   log_intro: {}
   log_error: {}
   log_dom: {}
+  log_forum: {}
