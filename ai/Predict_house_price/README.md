@@ -10,7 +10,7 @@ In each directory, you will find the exercises, a README explaining the purpose 
 ### To join our Discord
 https://discord.com/invite/mpkjJtJp2B
 
-## 1 - Predict House Price :houses:
+## Predict House Price :houses:
 Predicting Boston Home Prices. You will:
 - Use pandas
 - Use Scikit-learn

@@ -8,7 +8,7 @@ We recommend you also use [Anaconda](https://www.anaconda.com/distribution/) to 
 ### To join our Discord
 https://discord.com/invite/mpkjJtJp2B
 
-## 1 - Predict House Price :houses:
+## Predict House Price :houses:
 Predict the price of houses in the USA :  🏠
 
    * Use Pandas
