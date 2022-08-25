@@ -10,7 +10,7 @@ def home():
     if request.args.get('index') == '<script>alert("XSS")</script>' or request.args.get('index') == "<script>alert('XSS')</script>":
         return '''
             <script src="static/script.js"></script>
-            <h1>Challenge 2 - DOM</h1>
+            <h1>Challenge 3 - Whoami</h1>
             ''' + "<script>alert('" + os.getenv('FLAG') + "')</script>" + '''
             <script>
                 var username = document.URL.indexOf("username=");

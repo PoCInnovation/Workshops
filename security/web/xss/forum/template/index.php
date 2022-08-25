@@ -8,7 +8,7 @@
 <p>{{data}}</p>
 <p>----------------------------------------</p>
 
-<form action="/append" method="get" target="_blank">
+<form action="/append" method="get">
   <input type="text" id="content" name="content"><br><br>
   <input type="submit" value="Send">
 </form>

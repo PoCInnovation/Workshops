@@ -1,7 +1,7 @@
 FROM python:3.8-alpine
 
 # Set flag secret key
-ENV FLAG=PoC{HeyHey!}
+ENV FLAG=PoC{T4kE_CAr3_WhEn_3rrOr_AppE4r}
 
 # Install requiring packages
 WORKDIR /app

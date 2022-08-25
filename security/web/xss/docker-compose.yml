@@ -21,15 +21,15 @@ services:
       - log_error:/var/log
     container_name: error
 
-  dom:
+  whoami:
     build:
-      context: ./dom
+      context: ./whoami
       dockerfile: Dockerfile
     ports:
       - "5003:5003"
     volumes:
-      - log_dom:/var/log
-    container_name: dom
+      - log_whoami:/var/log
+    container_name: whoami
 
   forum:
     build:
@@ -45,5 +45,5 @@ services:
 volumes:
   log_intro: {}
   log_error: {}
-  log_dom: {}
+  log_whoami: {}
   log_forum: {}
