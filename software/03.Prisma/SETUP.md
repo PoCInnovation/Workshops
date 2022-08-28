@@ -3,7 +3,7 @@
 ## Installation
 
 You will need:
-- [node (version 10 minimum)](https://github.com/nodejs/node): javascript interpreter
+- [node (version 10 minimum)](https://github.com/nodejs/node): JavaScript runtime
 - [npm](https://www.npmjs.com/): node package manager
 - [npx](https://www.npmjs.com/package/npx) : node_modules command executor
 

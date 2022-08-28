@@ -3,7 +3,7 @@
 ## Node, CLI & IDE
 
 In this workshop, you'll have to install:
-- [node (at least version 10)](https://github.com/nodejs/node): JavaScript interpretor
+- [node (at least version 10)](https://github.com/nodejs/node): JavaScript runtime
 - [npm](https://www.npmjs.com/): node package manager
 - [ESlint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) VSCode extension
 - [Expo Client](https://expo.io/) on your phone:
