@@ -3,7 +3,7 @@
 ## 1. Installation
 
 Please make sure you have the following programs installed:
-- [node (version 10 or higher)](https://github.com/nodejs/node): javascript interpreter
+- [node (version 10 or higher)](https://github.com/nodejs/node): JavaScript runtime
 - [npm](https://www.npmjs.com/): node package manager
 - [docker](https://www.docker.com/): docker
 

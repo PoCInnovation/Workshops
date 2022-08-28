@@ -3,7 +3,7 @@
 ## Node & IDE
 
 In this workshop, you'll have to install:
-- [nodejs](https://github.com/nodejs/node): JavaScript interpretor
+- [nodejs](https://github.com/nodejs/node): JavaScript runtime
 - [npm](https://www.npmjs.com/): node package manager
 - [npx](https://www.npmjs.com/package/npx): node_modules command executor
 - [ESlint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) VSCode extension
