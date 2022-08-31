@@ -18,7 +18,7 @@ mkdir flask-workshop-poc && cd flask-workshop-poc
 python -m venv venv
 source venv/bin/activate
 
-pip install flask mysql-connector-python
+pip install flask mysql-connector-python python-dotenv
 ```
 
 ## MySQL

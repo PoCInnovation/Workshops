@@ -38,7 +38,10 @@ But first, you need to create your database using the [`db.sql`](./src/db.sql) f
 mysql -u <user> -p < db.sql
 ```
 It will create a database with 2 tables, `user` and `todo`.  
-To interact with it, we are also giving you the file `database.py`. It creates the connection with the DB for you, your job will be to add methods to perform SQL queries and use them in your app:
+To interact with it, we are also giving you the file `database.py`. It creates the connection with the DB for you, your job will be to add methods to perform SQL queries and use them in your app.
+
+> If you take a look at `database.py`, you'll notice we are loading several database config values from the environment.  
+> Create a `.env` file and add the corresponding variables, Flask will then automatically load them for you :wink:
 
 Create a `/register` endpoint using the POST method. Every call must provide 2 JSON params: an email and a password.
 > :bulb: You can access the params using the [request object](https://flask.palletsprojects.com/en/2.2.x/api/#incoming-request-data)
