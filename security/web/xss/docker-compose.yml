@@ -41,9 +41,19 @@ services:
       - log_forum:/var/log
     container_name: forum
 
+  hash:
+    build:
+      context: ./hash
+      dockerfile: Dockerfile
+    ports:
+      - "5005:5005"
+    volumes:
+      - log_hash:/var/log
+    container_name: hash
 
 volumes:
   log_intro: {}
   log_error: {}
   log_whoami: {}
   log_forum: {}
+  log_hash: {}

