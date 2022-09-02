@@ -4,6 +4,7 @@ import { initializeApp } from 'firebase/app'
 import {
   getFirestore, collection, getDocs, addDoc
 } from 'firebase/firestore'
+import { getAuth, createUserWithEmailAndPassword, signOut, signInWithEmailAndPassword, onAuthStateChanged} from 'firebase/auth';
 
 const app = express();
 
@@ -26,16 +27,16 @@ initializeApp(firebaseConfig)
 
 // init services
 const db = getFirestore()
-
+const auth = getAuth();
 // collection ref
 const colRef = collection(db, 'books')
 
 // get collection data
 
-function getBooks(req, res) {
+async function getBooks(req, res) {
     let books = [];
 
-    getDocs(colRef)
+    await getDocs(colRef)
     .then(data => {
       data.docs.forEach(doc => {
         books.push({ ...doc.data(), id: doc.id })
@@ -49,6 +50,9 @@ function getBooks(req, res) {
 
 async function addBooks(req, res) {
     const body = { title: req.body.title, author: req.body.author };
+
+    if (!checkUserLoggedIn())
+      res.send('User not logged in!');
     await addDoc(colRef, body)
         .then( () => {
             res.send('data sended!');
@@ -58,11 +62,51 @@ async function addBooks(req, res) {
         });
 }
 
+async function register(req, res) {
+  const email = req.body.email;
+  const password = req.body.password;
+
+  await createUserWithEmailAndPassword(auth, email, password)
+  .then((cred) => {
+    res.send(cred.user);
+  }).catch((err) => {
+    res.send(err.message);
+  });
+}
+
+async function logout(req, res) {
+  await signOut(auth)
+  .then(() => {
+    res.send('User logged out!');
+  }).catch((err) => {
+    res.send(err.message);
+  });
+}
+
+async function login(req, res) {
+  const email = req.body.email;
+  const password = req.body.password;
+
+  await signInWithEmailAndPassword(auth, email, password)
+  .then((cred) => {
+    res.send(cred.user);
+  }).catch((err) => {
+    res.send(err.message);
+  });
+}
 
 // petite routes vite faits pour comprendre le fonctionnement
 app.get('/books', getBooks);
 
 app.post('/addBooks', addBooks);
+
+app.post('/register', register);
+
+app.get('/login', login);
+
+app.get('/logout', logout);
+
+
 
 app.listen(4000, () =>
   console.log(`Example app l4000 ${4000}!`),
