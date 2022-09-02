@@ -35,31 +35,39 @@ const colRef = collection(db, 'books')
 
 async function getBooks(req, res) {
     let books = [];
-
-    await getDocs(colRef)
-    .then(data => {
-      data.docs.forEach(doc => {
-        books.push({ ...doc.data(), id: doc.id })
+    const user = auth.currentUser;
+    
+    if (user) {
+      await getDocs(colRef)
+      .then(data => {
+        data.docs.forEach(doc => {
+          books.push({ ...doc.data(), id: doc.id })
+        })
+        res.send(books);
       })
-      res.send(books);
-    })
-    .catch(err => {
-      console.log(err.message)
-    });
+      .catch(err => {
+        console.log(err.message)
+      });
+  } else {
+    res.send('User not logged in!');
+  }
 }
 
 async function addBooks(req, res) {
     const body = { title: req.body.title, author: req.body.author };
-
-    if (!checkUserLoggedIn())
-      res.send('User not logged in!');
-    await addDoc(colRef, body)
+    const user = auth.currentUser;
+    
+    if (user) {
+      await addDoc(colRef, body)
         .then( () => {
             res.send('data sended!');
         })
         .catch(err => {
             console.log(err.message);
         });
+    } else {
+      res.send('User not logged in!');
+    }
 }
 
 async function register(req, res) {
