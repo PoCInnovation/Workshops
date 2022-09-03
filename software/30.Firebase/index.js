@@ -56,7 +56,7 @@ async function getBooks(req, res) {
 async function addBooks(req, res) {
     const body = { title: req.body.title, author: req.body.author };
     const user = auth.currentUser;
-    
+
     if (user) {
       await addDoc(colRef, body)
         .then( () => {
