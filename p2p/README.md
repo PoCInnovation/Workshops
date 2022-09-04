@@ -66,7 +66,7 @@ Now deploy and interract with the storage of the `random` contract to determine 
 
 When you think it's done you can try it by calling the `guess()` function with your number as an arg, if it is the good one this will return `true`.
 
-Step 4:
+## Step 4:
 
 For this step we will interract with a testnets.
 
