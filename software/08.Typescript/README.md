@@ -197,64 +197,7 @@ How to step 2 test your routes with **postman**
 - [Test suite Postman](https://www.postman.com/use-cases/api-testing-automation/)
 - [Environnement Postman](https://learning.postman.com/docs/sending-requests/managing-environments/)
 
-## Step 06 : Create multiple USER
-
-Now let’s move to higher speed :)
-
-Formatting the returned data is mandatory to facilitate the use of your API!<br>
-You can return information in various forms. The most common is an object array.
-
-- Create a route **GET** `/repeat-all-my-queries` :
-  - Returns an array of objects in the following form:
-    ```json
-    [
-      {
-        "FirstName": "USER1",
-        "LastName": "USER1"
-      },
-      {
-        "FirstName": "USER2",
-        "LastName": "USER2"
-      }
-    ]
-    ```
-
-
-:lamp:You will probably need an `interface` and especially an interface array
-
-#### Resources :
-- [Working with an object](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object)
-
-## Step 07 : a little logic 🤯
-
-Formatting data is good. Working with it is better!
-
-- Create a route **POST** `/are-these-palindromes`
-  - Receives as parameter a JSON body of the following form:
-    ```json
-    [
-        "meow",
-        "lol"
-    ]
-    ```
-  - Must return an array of objects in the following form:
-    ```json
-    [
-        {
-            "input": "meow",
-            "result": false
-        },
-        {
-            "input": "lol",
-            "result": true
-        }
-    ]
-    ```
-
-#### Resources :
-- [TypeScript - Strings](https://www.tutorialspoint.com/typescript/typescript_strings.htm)
-
-## Step 08 : The bodyguards of the servers
+## Step 06 : The bodyguards of the servers
 
 In web, it is important to know what types of data are sent to your API.<br>
 This allows you to have a stable and secure code.
@@ -308,12 +251,12 @@ In case of invalid headers, return the status `400` and the reason for the refus
 ## additional resources
 
 Here is a list of links if you want to learn more about Typescript APIs:
-- [Documenter son API](https://stoplight.io/)
-- [NestJS, le boilerplate express](https://nestjs.com/)
-- [Gérer l'asynchronicité sur son server](https://github.com/tranvansang/middleware-async)
-- [Insomnia, un Postman épuré](https://insomnia.rest/)
-- [Les frameworks NodeJS](https://nodesource.com/blog/Express-Koa-Hapi)
-- [Une gestion d'erreur centralisé](https://dev.to/nedsoft/central-error-handling-in-express-3aej)
+- [How to Write Useful API Documentation](https://www.freecodecamp.org/news/how-to-write-api-documentation-like-a-pro/#:~:text=Your%20API%20documentation%20should%20be,the%20end%20of%20the%20documentation.)
+- [How to work with asynchronicity](https://javascript.info/async-await#:~:text=1.,settles%20and%20returns%20its%20result)
+- [Test your app with insomnia](https://insomnia.rest/)
+- [Other NodeJs framework](https://nodesource.com/blog/Express-Koa-Hapi)
+- [Nestjs, a progressive NodeJs framework](https://docs.nestjs.com/)
+- [Centralized error management](https://dev.to/nedsoft/central-error-handling-in-express-3aej)
 
 <h2 align=center>
 Organization
