@@ -59,7 +59,7 @@ contract Random {
         require(_number == rand, "It is not the right number, try again. :)");
         return true;
     }
-
+}
 ```
 
 Now deploy and interract with the storage of the `random` contract to determine the value of `rand`.
