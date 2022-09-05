@@ -1,30 +1,30 @@
 # Workshop 8 - Setup
 
-## Outils
+## Tools
 
-Pour ce workshop il vous faut installer les outils suivant :
-  - [VSCode](https://code.visualstudio.com/) ou [WebStorm](https://www.jetbrains.com/fr-fr/webstorm/) d'installé sur votre ordinateur
-  - [NodeJS](https://nodejs.org/en/) >= 10 ([installation](https://lmgtfy.com/?q=how+to+install+nodejs))
-  - [npm](https://www.npmjs.com/) (généralement installé avec NodeJS)
+For this workshop, you need to install these tools :
+  - [VSCode](https://code.visualstudio.com/) or [WebStorm](https://www.jetbrains.com/fr-fr/webstorm/)
+  - [NodeJS](https://nodejs.org/en/) >= 10 ([installation guide](https://lmgtfy.com/?q=how+to+install+nodejs))
+  - [npm](https://www.npmjs.com/) the Node package manager
 
-## Préparation
+## Preparation
 
-Télécharger les [sources](./source.zip) afin d'avoir une base pour commencer.
+Download the [sources](./source.zip) file.
 
-Les sources se composent des fichiers suivant :
- - `package.json` : Le gestionnaire de dépendances de NPM
- - `package-lock.json` : Un fichier contenant les versions de chaque dépendances utilisées sur le projet.
- - `tsconfig.json` : Un fichier de configuration pour le Typescript
- - `src/index.ts` : Exécute une simple fonction hello world
+This file contains the following sub-files:
+ - `package.json` : The NPM Dependency Manager file
+ - `package-lock.json` : A file containing the versions of each dependency used on the project.
+ - `tsconfig.json` : A configuration file for Typescript
+ - `src/index.ts` : A file which execute a simple Hello world function
  
-Vous n'avez plus qu'à suivre les étapes suivantes :
- - Créer un dossier `workshop-national-typescript`
- - Copier le fichier `source.zip` dans le dossier
- - Lancer la commande `unzip source.zip`
- - Installer les dépendances avec la commande `npm install`
- - Vérifier que tout fonctionne avec la commande `npm start`
+All you have to do is to follow these steps:
+ - Create a folder `workshop-national-typescript`
+ - Copy the file `source.zip` inside.
+ - Run the command `unzip source.zip`
+ - Install all the dependences with the command `npm install`
+ - Run the server with the command `npm start`
 
-Vous devriez obtenir le résultat suivant :
+You should get the following result:
 
 ```sh
 > ts-node src/index.ts
@@ -32,4 +32,4 @@ Vous devriez obtenir le résultat suivant :
 Welcome to the national workshop :)
 ```
 
-Vous pouvez passer au [workshop](./README.md).
+Congratulations! You can now start the [workshop](./README.md).

@@ -91,7 +91,7 @@ Once your queries are created, you should be able to run a test-suite on your se
 #### Resources :
 - [Collection Postman](https://learning.postman.com/docs/sending-requests/intro-to-collections/)
 - [Test suite Postman](https://www.postman.com/use-cases/api-testing-automation/)
-- [Environnement Postman](https://learning.postman.com/docs/sending-requests/managing-environments/)
+- [Postman Environnement ](https://learning.postman.com/docs/sending-requests/managing-environments/)
 
 
 ## Step 03 : Abuse the good things
