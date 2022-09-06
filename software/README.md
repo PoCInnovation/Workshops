@@ -63,12 +63,12 @@ You will :
  - learn basics to React Native
  - create your own QR code scanner
  
-## 8 - [Learn Typescript](08.Typescript)
+## 8 - [Express API in TypeScript](08.Typescript)
 
 Learn Typescript by creating a complete Express API.  
 You will :
- - learn basics of Typescript
- - understand API
+ - Learn the basics of Typescript
+ - Understand the basics and best practices of web development.
 
 ## 9 - [Create an Event Calendar with Svelte](09.Svelte)
 

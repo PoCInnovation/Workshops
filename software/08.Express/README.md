@@ -1,4 +1,4 @@
-# Workshop 8 - Typescript with Express
+# Workshop 8 - Express with TypeScript
 
 ✔ Learn how to create an HTTP server with express.
 
@@ -10,51 +10,51 @@
 
 All the information related to the preparation of the workshop is available in the [SETUP.md](./SETUP.md).
 
-Make sure you have completed their steps before moving on.
+Make sure you have completed its steps before moving on.
 
 ## Step 01 : Health or Death
 
-To create a web server in TS, you will need the package [express](https://github.com/expressjs/express).
+To create a web server in TS, you will need the [express](https://github.com/expressjs/express) package.
 
 ```sh
 npm install express @types/express
 ```
 
-The purpose of this exercise is to set up a server that exposes two routes `/health` and `/death`. With `/health` return `OK` and `/death` return `BAD_REQUEST`.
+The purpose of this exercise is to set up a server that exposes two routes `/health` and `/death`. With `/health` returns `OK` and `/death` returns `BAD_REQUEST`.
 
 For this it will be necessary to create and to use the method  **GET**.
 
 In the file `src/server.ts` :
 - Create a new variable `app` who will instantiate your express server.
 - Start the server by listening on the port `8080`.
-- Define a route **GET** `/health` which return `OK`
-- Define another route **GET** `/death` which return `BAD_REQUEST` 
+- Define a route **GET** `/health` which returns `OK`
+- Define another route **GET** `/death` which returns `BAD_REQUEST` 
 
 > A basic practice when starting a server is to display a message with the server address so that you can easily access it.
 
 #### Resources :
 - [Express](https://github.com/expressjs/express)
 - [Serveur HTTP](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server)
-- [Méthode HTTP](https://developer.mozilla.org/fr/docs/Web/HTTP/M%C3%A9thode)
+- [HTTP Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
 
 
 ## Step 02 : Use our routes
 
-Before we test we will change the satus that sees our route.
+We'll need to test those routes, but before let's change the status that sees our route.
 
-> A REST API returns data based on what a client requests, but if a client tries to access data that does not belong to them, or does not exist, our API will not be able to send them what they request.
+> :bulb: A REST API returns data based on what a client requests, but if a client tries to access data that does not belong to them, or does not exist, our API will not be able to send them what they request.
 
->An HTTP code is used to determine the result of a request or to indicate an error to the client. These codes are essential for the proper functioning of HTTP communication services. It is therefore just as essential to properly code your server to return the codes adapted to the situation.
+> :bulb: An HTTP code is used to determine the result of a request or to indicate an error to the client. These codes are essential for the proper functioning of HTTP communication services. It is therefore essential to properly setup your server to return the codes adapted to the situation.
 
-Change your route **GET** `/health` which always returns the status `200` and always displays the message `OK`.
+Change your route **GET** `/health` to always return the status `200` and always display the message `OK`.
 
-Change your route **GET** `/death` which always returns the status `400` and always displays the message `BAD_REQUEST`.
+Change your route **GET** `/death` to always return the status `400` and always display the message `BAD_REQUEST`.
 
 If ever during your tests this route does not work anymore, it is because your server is not running or does not work.
 
-It is common to use dependence `http-status-codes` to explain your status in your code.
+It is common to use `http-status-codes` to explain your status in your code.
 
-Install the dependency with the following command:
+Install this dependency with the following command:
 
 ```sh
 npm i http-status-codes
@@ -64,7 +64,7 @@ npm i http-status-codes
 import { StatusCodes } from 'http-status-codes'
 ```
 
-Replace your hard-written status-codes with those offered in the package.
+Replace your hard-written status-codes with those offered in the package:
 
 ```ts
 res.status(StatusCodes.OK).send("ok");
@@ -72,12 +72,11 @@ res.status(StatusCodes.OK).send("ok");
 
 #### Resources :
 - [The main HTTP codes](https://medium.com/@sahelasumi/http-status-codes-31644d99fb1)
-- [Full list of codes 1](http://www.standard-du-web.com/liste_des_codes_http.php)
-- [Full list of codes 2](https://developer.mozilla.org/fr/docs/Web/HTTP/Status)
+- [Full list of codes](https://developer.mozilla.org/docs/Web/HTTP/Status)
 - [Using HTTP status in Typescript](https://github.com/prettymuchbryce/http-status-codes)
 
 
-> When we create route, we want to be able to simply test if they work, and if their implementation has not broken the other route.
+> When we create a route, we want to be able to simply test if it works, and if its implementation has not broken the other route.
 <br>
 It is in this case that Postman can be very useful.
 
@@ -86,11 +85,10 @@ Once your queries are created, you should be able to run a test-suite on your se
 
 > We recommend that you update this collection for all routes of the following exercises.
 
-- Install **POSTMAN**
-
 #### Resources :
-- [Collection Postman](https://learning.postman.com/docs/sending-requests/intro-to-collections/)
-- [Test suite Postman](https://www.postman.com/use-cases/api-testing-automation/)
+- [Installing Postman](https://www.postman.com/downloads/)
+- [Postman Collection](https://learning.postman.com/docs/sending-requests/intro-to-collections/)
+- [Postman Test suite](https://www.postman.com/use-cases/api-testing-automation/)
 - [Postman Environnement ](https://learning.postman.com/docs/sending-requests/managing-environments/)
 
 
@@ -104,7 +102,7 @@ In HTTP, the parameters of your request can be expressed in different places:
 - `cookie`
 - `header`
 
-To parse data from these different locations, you will need to install middleware used by express:
+To parse data from these different locations, you will need to install [middlewares](https://aws.amazon.com/what-is/middleware/) used by express:
 ```sh
 npm install body-parser cookie-parser @types/cookie-parser
 ```
@@ -123,20 +121,20 @@ Now all you have to do is create these different routes:
 - Create a route **GET** `/repeat-my-param/:message`
   - Takes a parameter `message`
   - Returns the given message as a parameter
-<br><br>
+  <br><br>
 - Create a route **POST** `/repeat-my-body`
   - Returns the `message` given in the body of the request
   - If the body is empty
     - Set Status 400
     - Return `Bad Request`
-<br><br>
+    <br><br>
 - Create a route **GET** `/repeat-my-header`
   - Cherche un header `X-Message`
   - Returns the message written in it
   - If no message is given
     - Set Status 400
     - Return `Bad Request`
-<br><br>
+    <br><br>
 - Create a route **GET** `/repeat-my-cookie`
   - Look for a cookie `message`
   - Returns the message given in the cookie
@@ -144,17 +142,17 @@ Now all you have to do is create these different routes:
     - Set Status 400
     - Return `Bad Request`
 
-> [Postman](https://www.postman.com/) may be useful to test your HTTP routes.
+> As before, [Postman](https://www.postman.com/) may be useful to test your HTTP routes :rocket:
 
 #### Resources :
-- [Les cookies dans Express](https://github.com/expressjs/cookie-parser)
-- [Les headers dans Express](https://flaviocopes.com/express-headers/)
+- [Cookies with Express](https://github.com/expressjs/cookie-parser)
+- [headers with Express](https://flaviocopes.com/express-headers/)
 
 ## Step 04 : Always think about scaling
 
-> Environment variables are variables used by your operating system in many areas. They are visible by typing `env` in your terminal. 
+> :bulb: Environment variables are variables used by your operating system in many areas. They are visible by typing `env` in your terminal. 
 
-> These variables are used when you deploy an application in production to secure passwords and private identifiers. It is therefore essential to know how to use them in your code.<>
+> These variables are used when you deploy an application in production to secure passwords and private identifiers. It is therefore essential to know how to use them in your code :wink:
  
 For this, we will use the package [env-var](https://github.com/evanshortiss/env-var) which allows you to automatically load environment variables from a file:
 
@@ -168,45 +166,50 @@ Next, create a file `.envrc` which will export the following environment variabl
 
 :warning: You will also need to install [direnv](https://direnv.net/) to load the variables into your environment with the `direnv allow`.
 
-In the file `src/serverConfig.ts`, Retrieve the two environment variables and export them.
+In the file `src/serverConfig.ts`, retrieve these two environment variables and export them.
 
-> It is common in an API to have a file specific to the configuration, it allows you to keep an architecture clean and constant.
+> It is common in an API to have a file specific to the configuration, it allows you to keep a clean and constant architecture.
 
-Adapt the express server code to use the port set in the preferred environment, and if not set, use the port `8080`.
+Adapt the express server code to use the port set in the your environment, and if it's not set, use the port `8080`.
 
 Create a route **GET** `/hello` to use the variable `HELLO_MESSAGE` as a response.
   - If the variable is not present:
       - Set Status 404
       - Return `No Message Defined`
 
-:lamp: If your `.envrc` contains private variables, it is imperative not to push it on the repo.
-The best practice is to create a `envrc.example` file containing the various variables but without their values, in order to indicate what will subsequently be needed, then fill it in and rename it to `.envrc`.
+>:bulb: If your `.envrc` contains private variables, it is imperative not to push it on the repo.  
+> The best practice is to create a `envrc.example` file containing the various variables but without their values, in order to indicate what will subsequently be needed, then fill it in and rename it to `.envrc`.
 
-> It is important to think from the beginning of the application about integrating your server into a Web architecture by placing as many variables as possible that may change in the environment.
+> It is important to think from the beginning of the application about integrating your server into a web architecture by placing as many variables as possible that may change in the environment :floppy_disk:
 
 #### Resources :
-- [Env-var](https://github.com/evanshortiss/env-var)
-- [Direnv](https://direnv.net/)
+- [env-var](https://github.com/evanshortiss/env-var)
+- [direnv](https://direnv.net/)
 
 ## Step 05 : Testing time
 
-How to step 2 test your routes with **postman**
+Have you tested the new routes you created?
+
+If you did, congratulations, that's a good habit to have, you can move on to the next step :partying_face:
+
+Else, enrich your test collection with tests for your new routes :wink:
 
 #### Resources :
-- [Collection Postman](https://learning.postman.com/docs/sending-requests/intro-to-collections/)
-- [Test suite Postman](https://www.postman.com/use-cases/api-testing-automation/)
-- [Environnement Postman](https://learning.postman.com/docs/sending-requests/managing-environments/)
+- [Postman Collection](https://learning.postman.com/docs/sending-requests/intro-to-collections/)
+- [Postman Test suite](https://www.postman.com/use-cases/api-testing-automation/)
+- [Postman Environnement ](https://learning.postman.com/docs/sending-requests/managing-environments/)
 
 ## Step 06 : The bodyguards of the servers
 
-In web, it is important to know what types of data are sent to your API.<br>
+On the web, it's important to know which types of data are sent to your API.<br>
 This allows you to have a stable and secure code.
 
-Send an empty body to the previous route, you should get an error back. This kind of error is not acceptable for an API.
+Send an empty body to a route reading data from it, you should get an error back if you didn't perform checks.  
+This kind of error is not acceptable for an API.
 
-To ensure the security of an API, there is a system called `Middleware`.
+But fortunately, to ensure the security of an API, there is a system called `middleware`.
 
-Here is the structure of a middleware in an express API:
+Here is the structure of a custom middleware in an express API:
 
 
 ```typescript
@@ -216,7 +219,7 @@ const myMiddleware = (req: Request, res: Response, next: NextFunction) => {
 
 ```
 
-> Middlewares can also be used to set up a logger, manage permissions etc.
+> :bulb: Middlewares can also be used to set up a logger, manage permissions etc.
 
 - Create a route `/private`.
 - You can see that in the second parameter we have the middleware
@@ -235,7 +238,7 @@ Create a new variable in your `.envrc`
 AUTHORIZATION_PORT=mykey
 ```
 
-:warning:Your objective is to verify the value of the user in his headers, which must be equal to your variable `AUTHORIZATION_PORT`
+:warning: Your objective is to verify the value of the user in his headers, which must be equal to your variable `AUTHORIZATION_PORT`
 
 ### Write a middleware
 Create a file `middlewares.ts`, write a middleware that will check the headers of the `/private` route with as key `authorization`.<br>
@@ -243,12 +246,12 @@ In case of invalid headers, return the status `400` and the reason for the refus
 <br>
 <br>
 
-#### resources :
+#### Resources :
 - [Middleware](https://expressjs.com/en/guide/using-middleware.html)
 <br>
 <br>
 
-## additional resources
+## To go further
 
 Here is a list of links if you want to learn more about Typescript APIs:
 - [How to Write Useful API Documentation](https://www.freecodecamp.org/news/how-to-write-api-documentation-like-a-pro/#:~:text=Your%20API%20documentation%20should%20be,the%20end%20of%20the%20documentation.)
