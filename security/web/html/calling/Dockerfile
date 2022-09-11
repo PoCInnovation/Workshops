@@ -2,7 +2,7 @@ FROM python:3.8-alpine
 
 # Set flag secret key
 ENV FLAG=PoC{I_l0v3_scr1pTs_4nd_fUnct10n_cAll1ng}
-ENV PASSWD='SwiBizIsTh3M0stIncr3diblePlatF0rm'
+ENV PASSWD='V3ryV3ryS3cr3tP4ssw0rd'
 
 # Install requiring packages
 WORKDIR /app

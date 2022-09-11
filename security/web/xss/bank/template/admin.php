@@ -1,16 +1,24 @@
-<script src="static/script.js"></script>
-<h1>Challenge 5 - Hash</h1>
-
-<h3>SHA1 Message Encryption</h3>
-
-<form action="/encrypt" method="get">
-  <label for="decoded">Text to hash:</label><br>
-  <input type="text" id="hash" name="hash"><br><br>
-  <input type="submit" value="Send">
-</form>
-
 <script src='static/script.js'></script>
-<script src='static/decode.js'></script>
+<form action="#" method="post"
+  <div class="imgcontainer">
+    <img src="/static/img_avatar2.png" alt="Avatar" class="avatar">
+  </div>
 
-<label for="decoded">Result:</label><br>
-<p>{{data}}</p>
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" id="username" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" id="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="button" class="submit" onclick="login()">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
