@@ -1,10 +1,7 @@
-import express from 'express';
-
 import { initializeApp } from 'firebase/app'
 import {
-  getFirestore, collection, getDocs, addDoc
+  getFirestore
 } from 'firebase/firestore'
-import { getAuth, createUserWithEmailAndPassword, signOut, signInWithEmailAndPassword, onAuthStateChanged} from 'firebase/auth';
 
 const firebaseConfig = {
   apiKey: "AIzaSyA2e7Qg9ZamfWhZ6QyQkTwEoMWdsdmJLNc",
@@ -16,8 +13,6 @@ const firebaseConfig = {
   measurementId: "G-XDKE66K47L"
 };
 
-// init firebase
 initializeApp(firebaseConfig)
 
-// init services
 const db = getFirestore()

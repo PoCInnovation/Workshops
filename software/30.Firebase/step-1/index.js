@@ -1,9 +1,6 @@
 import express from 'express';
 
 import { initializeApp } from 'firebase/app'
-import {
-  getFirestore
-} from 'firebase/firestore'
 import { getAuth, createUserWithEmailAndPassword} from 'firebase/auth';
 
 const firebaseConfig = {
@@ -16,11 +13,8 @@ const firebaseConfig = {
   measurementId: "G-XDKE66K47L"
 };
 
-// init firebase
 initializeApp(firebaseConfig)
 
-// init services
-const db = getFirestore()
 const auth = getAuth();
 const app = express();
 

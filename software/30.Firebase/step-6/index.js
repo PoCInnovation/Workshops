@@ -1,5 +1,5 @@
 import express from 'express';
-
+import cors from 'cors'
 import { initializeApp } from 'firebase/app'
 import {
   getFirestore, collection, getDocs, addDoc
@@ -7,11 +7,9 @@ import {
 import { getAuth, createUserWithEmailAndPassword, signOut, signInWithEmailAndPassword } from 'firebase/auth';
 
 const app = express();
-
+app.use(cors());
 app.use(express.json());
 
-
-// config a genere via firebase en creant un projet a placer dans un conf.js
 const firebaseConfig = {
   apiKey: "AIzaSyA2e7Qg9ZamfWhZ6QyQkTwEoMWdsdmJLNc",
   authDomain: "try-something-new-206a1.firebaseapp.com",
@@ -22,16 +20,11 @@ const firebaseConfig = {
   measurementId: "G-XDKE66K47L"
 };
 
-// init firebase
 initializeApp(firebaseConfig)
 
-// init services
 const db = getFirestore()
 const auth = getAuth();
-// collection ref
 const colRef = collection(db, 'books')
-
-// get collection data
 
 async function getBooks(req, res) {
     let books = [];
@@ -105,7 +98,7 @@ async function login(req, res) {
 
 app.post('/register', register);
 
-app.get('/login', login);
+app.post('/login', login);
 
 app.get('/logout', logout);
 

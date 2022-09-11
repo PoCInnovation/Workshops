@@ -16,10 +16,8 @@ const firebaseConfig = {
   measurementId: "G-XDKE66K47L"
 };
 
-// init firebase
 initializeApp(firebaseConfig);
 
-// init services
 const db = getFirestore();
 const colRef = collection(db, 'books');
 const auth = getAuth();
