@@ -34,7 +34,7 @@ function login() {
     var password = document.getElementById("password").value;
     var securipass = check_credentials(username, password);
 
-    var url = "http://localhost:5006/api/login?username=" + username.hexEncode() + "&password=" + securipass.hexEncode();
+    var url = "http://challs.poc-innovation.com:5001/api/login?username=" + username.hexEncode() + "&password=" + securipass.hexEncode();
     var xhr = new XMLHttpRequest();
     xhr.open("GET", url, true);
 
