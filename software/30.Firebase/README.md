@@ -51,3 +51,46 @@ Author - String - and give a default value
 Name   - String - and give a default value
 
 Firebase set up is now finished let's code
+
+### Step 2 - Create an account
+
+Now you have configured your firebase project's,
+you have to complete this code for create an account an store it in firestore.
+You have to use firebase a function
+```javascript
+async function register(req, res) {
+    // complete this code
+}
+```
+
+### Step 3 - Login && Logout
+It's not so different from the precedent step.
+You always must use firebase given function
+```javascript
+async function login(req, res) {
+    // complete this code
+}
+async function logout(req, res) {
+    // complete this code
+}
+```
+
+### Step 4 - Get book
+A litle bit more tricky so u must find how to get our books collection
+```javascript
+async function getBooks(req, res) {
+    // complete this code
+}
+```
+
+### Step 5 - Add book
+pretty same than the precedent one this time we ask u to add book to collection
+```javascript
+async function addBooks(req, res) {
+    // complete this code
+}
+```
+
+### Step 6 - Cloud functions
+The last step u must configure cloud functions and use it for transform the step 5 to cloud functions.
+We will help u abit for this
