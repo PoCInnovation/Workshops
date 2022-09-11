@@ -51,9 +51,20 @@ services:
       - log_hash:/var/log
     container_name: hash
 
+  bank:
+    build:
+      context: ./bank
+      dockerfile: Dockerfile
+    ports:
+      - "5006:5006"
+    volumes:
+      - log_bank:/var/log
+    container_name: bank
+
 volumes:
   log_intro: {}
   log_error: {}
   log_whoami: {}
   log_forum: {}
   log_hash: {}
+  log_bank: {}
