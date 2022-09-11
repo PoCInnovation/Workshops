@@ -15,7 +15,7 @@ def home():
 def append():
     encode = request.args.get("hash", None)
     if encode is not None and len(encode) != 0:
-        encode = hashlib.sha1(encode.encode())
+        encode = hashlib.sha256(encode.encode())
         encode = encode.hexdigest()
         return render_template('index.php', data=encode)
     return redirect('/')
