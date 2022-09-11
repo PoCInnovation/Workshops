@@ -1,7 +1,7 @@
 <script src="static/script.js"></script>
 <h1>Challenge 5 - Hash</h1>
 
-<h3>SHA1 Message Encryption</h3>
+<h3>SHA256 Message Encryption</h3>
 
 <form action="/encrypt" method="get">
   <label for="decoded">Text to hash:</label><br>
