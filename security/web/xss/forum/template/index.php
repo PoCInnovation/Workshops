@@ -1,14 +1,20 @@
+<link href='/static/style.css' rel='stylesheet' type='text/css'>
 <script src="static/script.js"></script>
-<h1>Challenge 4 - Forum</h1>
 
-<h3>PoChat</h3>
-<h5>v2.6.3</h5>
-
-<p>----------------------------------------</p>
-<p>{{data}}</p>
-<p>----------------------------------------</p>
-
-<form action="/append" method="get">
-  <input type="text" id="content" name="content"><br><br>
-  <input type="submit" value="Send">
-</form>
+<div class="login-box">
+  <h2>PoChat</h2>
+  <p style="color: white;">{{data}}</p>
+  <form id="msg" action="/append" method="get">
+    <div class="user-box">
+      <input type="text" id="content" name="content" required="">
+      <label>Message</label>
+    </div>
+    <a href="javascript:{}" onclick="document.getElementById('msg').submit();">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Send
+    </a>
+  </form>
+</div>

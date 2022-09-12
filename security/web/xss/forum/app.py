@@ -15,12 +15,14 @@ def home():
     if "<script>alert('XSS')</script>" in data or '<script>alert("XSS")</script>' in data:
         chat.clear()
         return "<script>alert('" + os.getenv('FLAG') + "')</script>"
+    elif len(chat) >= 20:
+        chat.clear()
     return render_template('index.php', data=data)
 
 @app.route('/append', methods = ['POST', 'GET'])
 def append():
     content = request.args.get("content", None)
-    if content is not None:
+    if content is not None and len(content) != 0:
         content = content.replace('<', "&lt;").replace('>', "&gt;");
         chat.append(request.remote_addr + ': ' + unquote(content))
     return redirect('/')

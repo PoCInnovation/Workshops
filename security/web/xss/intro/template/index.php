@@ -1,6 +1,13 @@
+<link href='/static/style.css' rel='stylesheet' type='text/css'>
 <script src="static/script.js"></script>
-<h1>Challenge 1 - Intro</h1>
-<form>
-    <input type="text" name="payload" id="payload" placeholder="Type text here...">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PoC - Intro</title>
+</head>
+
+<div class="form__group field">
+    <center><img src="static/nsa.png", style="width: 25%; padding: 5%"><center>
+    <input type="text" name="payload" id="payload" placeholder="Search criminal...">
     <button onclick="sendRequest(document.getElementById('payload'))">GO</button>
-</form>
+</div>

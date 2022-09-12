@@ -10,7 +10,7 @@ chat = list()
 def home():
     return render_template('index.php', data="")
 
-@app.route('/admin')
+@app.route('/my_account')
 def admin():
     return render_template('admin.php', data="")
 
