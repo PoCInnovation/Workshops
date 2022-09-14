@@ -31,7 +31,7 @@
     <script>
         var index = document.URL.indexOf("index=");
         var id = document.URL.substring(index + 8);
-        document.write("<h5>Hello " + id.slice(0, -1) + " !</h5>");
+        document.write("<h6>Hello " + id.slice(0, -1) + " !</h6>");
     </script>
   </div>
 </div>

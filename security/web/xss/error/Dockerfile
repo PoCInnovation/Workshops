@@ -11,4 +11,4 @@ RUN pip install -r requirements.txt
 # Run flask app challenge
 COPY . /app
 ENTRYPOINT [ "python" ]
-CMD ["app.py" ]
+CMD [ "app.py" ]
