@@ -16,10 +16,14 @@ The only thing you need to do before starting the workshop is to create an accou
 
 
 ## Step 1 - Create a contract
-Let's create your first contract in [Solidity](https://docs.soliditylang.org/en/v0.8.17/) :rocket:  
+Let's create your first contract in [Solidity](https://docs.soliditylang.org/en/v0.8.0/) :rocket:  
 > 💡 You can use the online IDE [Remix](https://remix.ethereum.org/) which is really useful to develop contracts for the Ethereum blockchain.
 
-TODO: Clear objective of functions to create
+Your objectif is to create a contract named `WallOfFame`:
+- It should have function to register a new warrior (storing both his address and a preudo given as parameter)
+- Another function should return a list with the pseudos of registered warriors
+
+> Since you have access to the address that calls your contract, you can also add a check to avoid registering the same address multiple times with different pseudos 😉
  
 <details>
     <summary>How to easily test your contract 🤔</summary>
@@ -47,6 +51,15 @@ If your request is successful, you should have a new contract in the **Interact*
 
 
 ## Step 3 - Find and import a contract
+
+You successfully deployed a contract, that's great 🎉  
+In a real-world scenario though, you might want to interact with a contract that is already deployed by you or someone else.  
+You need to import a contract in Starton using a single information:
+```
+TODO: add the secret information
+```
+
+> It can seems hard, but with a few searches you'll find what you need to import the contract 😉
 
 ## Step 4 - Interact with a template contract
 Writing a contract in Solidity from scratch is great, but sometimes you just want to create something simple and generic and you don't want to spend time learning Solidity in depth, making sure your contract is secure...  
