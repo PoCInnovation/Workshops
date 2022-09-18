@@ -1,6 +1,6 @@
 # Workshop 30 - Firebase ✨
 
-### Step 0 - Create your project
+## Step 0 - Create your project
 ```
 To create your firebase project, go to this page: [firebase](https://firebase.google.com).
 
@@ -39,7 +39,7 @@ You need to start the db in test mode.
 
 Set the time to: eur3 europe-west
 ```
-### Step 1.5 - Create collection
+## Step 1.5 - Create collection
 
 Then create a collection whit collection ID put [Books]()
 
@@ -52,7 +52,7 @@ Name   - String - and give a default value
 
 Firebase set up is now finished let's code
 
-### Step 2 - Create an account
+## Step 2 - Create an account
 
 Now you have configured your firebase project's,
 you have to complete this code for create an account an store it in firestore.
@@ -63,7 +63,7 @@ async function register(req, res) {
 }
 ```
 
-### Step 3 - Login && Logout
+## Step 3 - Login && Logout
 It's not so different from the precedent step.
 You always must use firebase given function
 ```javascript
@@ -75,7 +75,7 @@ async function logout(req, res) {
 }
 ```
 
-### Step 4 - Get book
+## Step 4 - Get book
 A litle bit more tricky so u must find how to get our books collection
 ```javascript
 async function getBooks(req, res) {
@@ -83,7 +83,7 @@ async function getBooks(req, res) {
 }
 ```
 
-### Step 5 - Add book
+## Step 5 - Add book
 pretty same than the precedent one this time we ask u to add book to collection
 ```javascript
 async function addBooks(req, res) {
@@ -126,3 +126,37 @@ exports.addBooks = functions.https.onRequest(async (req, res) => {
     //add your code here
   });
   ```
+
+## To go further
+
+TODO
+
+## Authors
+
+| [<img src="https://github.com/tonida-rodda.png?size=85" width=85><br><sub>Toni Da rodda</sub>](https://github.com/tonida-rodda) | [<img src="https://github.com/RezaRahemtola.png?size=85" width=85><br><sub>Reza Rahemtola</sub>](https://github.com/RezaRahemtola)
+| :---: | :---: |
+<h2 align=center>
+Organization
+</h2>
+<br/>
+<p align='center'>
+    <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+    </a>
+    <a href="https://www.instagram.com/pocinnovation/">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+    </a>
+    <a href="https://twitter.com/PoCInnovation">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+    </a>
+    <a href="https://discord.com/invite/Yqq2ADGDS7">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+    </a>
+</p>
+<p align=center>
+    <a href="https://www.poc-innovation.fr/">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+    </a>
+</p>
+
+> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
