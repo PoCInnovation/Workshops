@@ -1,0 +1,41 @@
+<!-- <div class="login">
+    <h2>Loggin to your account</h2>
+    <br>
+    <input type="text" placeholder="email" [(ngModel)]="email">
+    <br>    
+    <input type="text" placeholder="password" [(ngModel)]="password">
+    <br>
+    <button type="submit" (click)="loginUser()"> send data</button>
+</div> -->
+
+<!-- Pills navs -->
+<ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
+      <a class="nav-link active" href="/login">Login</a>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="tab-register" data-mdb-toggle="pill" href="/register" role="tab"
+        aria-controls="pills-register" aria-selected="false">Register</a>
+    </li>
+  </ul>
+  <!-- Pills navs -->
+  
+  <!-- Pills content -->
+  <div class="tab-content">
+    <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+      <form>
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <label class="form-label" for="loginName">Email</label>
+          <input type="email" id="loginName" class="form-control" [(ngModel)]="email" name="email"/>
+        </div>
+  
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <label class="form-label" for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" class="form-control" [(ngModel)]="password" name="password"/>
+        </div>
+  
+      </form>
+      <button class="btn" type="button" (click)="loginUser()" class="btn btn-primary">register</button>
+    </div>
+  </div>
+  <!-- Pills content -->

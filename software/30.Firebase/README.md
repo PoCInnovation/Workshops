@@ -94,3 +94,35 @@ async function addBooks(req, res) {
 ### Step 6 - Cloud functions
 The last step u must configure cloud functions and use it for transform the step 5 to cloud functions.
 We will help u abit for this
+
+First of all run these command:
+```
+npm install firebase-functions@latest firebase-admin@latest --save
+
+firebase init emulators
+
+firebase init functions
+
+firebase emulators:start
+```
+
+you will have a folder functions, you need to add your firebase configuration
+```
+const firebaseConfig = {
+    apiKey: ,
+    authDomain: ,
+    projectId: ,
+    storageBucket: ,
+    messagingSenderId: ,
+    appId: ,
+    measurementId: 
+};
+```
+
+samething as the first exercice, and now try to implement your addBooks but in cloud function, i will help you abit
+
+```
+exports.addBooks = functions.https.onRequest(async (req, res) => {
+    //add your code here
+  });
+  ```
