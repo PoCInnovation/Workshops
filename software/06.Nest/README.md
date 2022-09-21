@@ -1,4 +1,4 @@
-# REST API with NestJS
+# Workshop 6 - REST API with NestJS
 
 :heavy_check_mark: Discover [Nest](https://nestjs.com/), a framework to build server-side NodeJS applications with full TypeScript support.
 
