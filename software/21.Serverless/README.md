@@ -21,7 +21,7 @@ Well, you have a third option: adopt a **serverless architecture**.
 **But what is serverless architecture ?**  
 When you build an API to link your frontend with your database for example, you usually run it on a server. This means that a server is allocated and listen to the queries to this API.  
   
-Using a serverless archtitecture, it's different.  
+Using a serverless architecture, it's different.  
   
 You don't allocate a specific server listening on queries to your API. You just choose a cloud provider ([aws](https://aws.amazon.com/fr/), [scaleway](https://www.scaleway.com/en/), ...), and you give it your API's functions, one by one. They will be called **serverless functions**.  
 > :bulb: You don't give the whole API to a server ! You just give to the cloud provider your functions one by one.  
@@ -100,7 +100,7 @@ Now you will deploy your app using [Netlify](https://www.netlify.com/) !
   <details>
     <summary>See the default settings</summary>
   
-   ![Netlify Defaut Settings](.github/assets/netlifyDeploy.png)
+   ![Netlify Default Settings](.github/assets/netlifyDeploy.png)
 
   </details>
 > Good ! Your application is now deployed ! But if you try to use it, we can see that it doesn't work, you get a full blank page 🤔  

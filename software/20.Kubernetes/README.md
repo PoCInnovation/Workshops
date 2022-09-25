@@ -91,7 +91,7 @@ The Deployment resource for the web server must:
 
 Once your deployments YAML are valid, **apply** them with the `kubectl` command.
 
-If you have completed this step successfuly, you should be able to see both your deployments and their associated pods when running the following command.
+If you have completed this step successfully, you should be able to see both your deployments and their associated pods when running the following command.
 
 ```
 kubectl get all
@@ -116,7 +116,7 @@ pod/server-deployment-5ddbdc478-qqcwr   0/1     CrashLoopBackOff   4          11
 If we investigate the issue by inspecting the deployment's logs  (`kubectl logs deployment.apps/server-deployment`)  we get the following output.
 
 ```
-panic: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongo-service:27017, Type: Unknown, Average RTT: 0, Last error: connection() error occured during connection handshake: dial tcp: lookup mongo-service on 10.96.0.10:53: server misbehaving }, ] }
+panic: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongo-service:27017, Type: Unknown, Average RTT: 0, Last error: connection() error occurred during connection handshake: dial tcp: lookup mongo-service on 10.96.0.10:53: server misbehaving }, ] }
 
 goroutine 1 [running]:
 gokube/models.init.0()
@@ -125,7 +125,7 @@ gokube/models.init.0()
 
 Weird! The server application is telling us it cannot connect to the Mongo database.
 
-That's because, for now, the `mongo-deployment` and the `server-deployment` are isolated from one another. They cannot comunicate.
+That's because, for now, the `mongo-deployment` and the `server-deployment` are isolated from one another. They cannot communicate.
 
 This is where [Kubernetes services](https://kubernetes.io/docs/concepts/services-networking/service/) come into play. A service allows a Kubernetes object to expose itself to other objects.
 
@@ -153,7 +153,7 @@ You can inspect the `server-deployment`'s logs to make sure everything is okay.
 
 ## Step 4 - Make it robust
 
-You never know what can happen with your application. Crashes happen all the time and as a developper you can't afford **downtime** or **data loss**.
+You never know what can happen with your application. Crashes happen all the time and as a developer you can't afford **downtime** or **data loss**.
 
 Kubernetes already shields you against your app going offline. It will identify crashes and restart your app so it's always available. However, it's your job to make sure your data persists!
 

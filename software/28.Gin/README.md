@@ -31,7 +31,7 @@ We designed a boilerplate for this project, it will be useful to start it, but a
 We will have :
 
 - `controllers`: this is where you will design your routes endpoints. it will often be a wrapper that calls other API or the database itself
-- `middlewares`: those are a type of function used to intercept and process informations between two functions
+- `middlewares`: those are a type of function used to intercept and process information between two functions
 - `routes`: the core of the router, setting up all the routes handler, with their middlewares and controllers
 
 There are plenty of other important package you may need in a real API, but these are the main one you can be sure you'll need one time or another. Now let's code.
@@ -40,7 +40,7 @@ Add a route on the endpoint `/`:
 - It uses the `GET` method
 - It must call a helloWorld function that responds `"hello: world"` in a json format
 
-> don't hesitate to take a look at the offcial [documentation](https://github.com/gin-gonic/gin#api-examples).
+> don't hesitate to take a look at the official [documentation](https://github.com/gin-gonic/gin#api-examples).
 > You can test it with `http://localhost:8080/` in a browser or with `postman`
 
 ## Step 2: Let's get started

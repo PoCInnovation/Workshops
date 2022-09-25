@@ -137,7 +137,7 @@ You have zero limits, it's up to you to add as many options or features as possi
 Here are some bonus ideas if you want to venture further into the Rust adventure! 💪
  - Why not create your own game concepts or reproduce existing games.
 
-> If you ever feel like sharing your creations in the `partagez-vos-réalisations` room on the Discord server `PoC - Community`.
+> If you ever feel like sharing your creations, you can do it in the `software-chat` room on the Discord server `PoC - Community`.
 
 ## Further reading
  - [The Rust website](https://www.rust-lang.org/fr)

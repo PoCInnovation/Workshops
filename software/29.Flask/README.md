@@ -1,10 +1,10 @@
 # Workshop 29 - Flask Backend with MySQL
 
-:heavy_check_mark: Discover [Flask](https://flask.palletsprojects.com/), a lighweight framework to build a Python backend.
+:heavy_check_mark: Discover [Flask](https://flask.palletsprojects.com/), a lightweight framework to build a Python backend.
 
 :heavy_check_mark: Interact with a MySQL database
 
-:heavy_check_mark: Build a basic todo list & authentification system
+:heavy_check_mark: Build a basic todo list & authentication system
 
 
 ## Step 0: Initialization
@@ -26,12 +26,12 @@ Now that everything is installed, let's create a basic Flask application.
     - Respond with `Hello world`
 
 To test your route, you can use `flask run` to launch the server and open your browser at http://localhost:5000.
-> :bulb: Several options can be provided to `flask run` to customize it's behaviour (the debug mode can be useful to reload the server when your file changes).  
+> :bulb: Several options can be provided to `flask run` to customize it's behavior (the debug mode can be useful to reload the server when your file changes).  
 > You can also run your app from your Python file with specific parameters and launch it with `python app.py` :wink: 
 
 ## Step 2: Register
 
-Congratulations, you have succesfully created your first endpoint :partying_face:  
+Congratulations, you have successfully created your first endpoint :partying_face:  
 The next step is to add a route to register users.  
 But first, you need to create your database using the [`db.sql`](./src/db.sql) file. This can be done with this command:
 ```sh
