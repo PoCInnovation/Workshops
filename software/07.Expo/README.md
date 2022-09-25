@@ -14,7 +14,7 @@ Expo is here to simplify all this laborious work. No wire, no android studio, no
 
 All the required information to install dependencies can be found in [SETUP.md](./SETUP.md).
 
-## Step 0.5: Informations
+## Step 0.5: Information
 
 As written in the name, react native is based on React, a very popular front-end framework to create websites. `components` are the core of React. They represent a single element in a web page, like a `text` box, a `button`, a `div`, etc. All combined, they create a fully working web page. These components are reusable, they prevent you from code duplication. This also works in React Native, component won't be web elements but will create native mobile components.
 

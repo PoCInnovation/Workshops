@@ -21,7 +21,7 @@ If you played a bit with the calculator you may notice the given result isn't co
 
 ### :pushpin: **Tasks**:
 You have to create 3 issues:
-- One to describe the problem, with expected behaviour and what you are experiencing.
+- One to describe the problem, with expected behavior and what you are experiencing.
 - Another to suggest a feature (add all the arguments instead of just the first 2)
 - A last one to take a single string as parameter and support operators in it (this one will not be implemented)
 

@@ -34,7 +34,7 @@ In the file `src/server.ts` :
 
 #### Resources :
 - [Express](https://github.com/expressjs/express)
-- [Serveur HTTP](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server)
+- [HTTP Server](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server)
 - [HTTP Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
 
 
@@ -129,7 +129,7 @@ Now all you have to do is create these different routes:
     - Return `Bad Request`
     <br><br>
 - Create a route **GET** `/repeat-my-header`
-  - Cherche un header `X-Message`
+  - Look for a header `X-Message`
   - Returns the message written in it
   - If no message is given
     - Set Status 400
@@ -258,7 +258,7 @@ Here is a list of links if you want to learn more about Typescript APIs:
 - [How to work with asynchronicity](https://javascript.info/async-await#:~:text=1.,settles%20and%20returns%20its%20result)
 - [Test your app with insomnia](https://insomnia.rest/)
 - [Other NodeJs framework](https://nodesource.com/blog/Express-Koa-Hapi)
-- [Nestjs, a progressive NodeJs framework](https://docs.nestjs.com/)
+- [NestJS, a progressive Node framework](https://docs.nestjs.com/)
 - [Centralized error management](https://dev.to/nedsoft/central-error-handling-in-express-3aej)
 
 <h2 align=center>

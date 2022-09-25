@@ -53,7 +53,7 @@ To install `Flutter` & `Dart` extensions on another IDE:
 
 ## Emulation
 
-This workshop is for mobil developpement, so you need a smartphone to see what you are doing.
+This workshop is for mobile development, so you need a smartphone to see what you are doing.
 
 To create a smartphone emulator:
 - Open `Android Studio`
@@ -67,7 +67,7 @@ To create a smartphone emulator:
 
 For this workshop, I recommend you to code on vsCode instead of Android Studio
 
-Here is a tuto to help you with [vsCode for Flutter](https://docs.flutter.dev/development/tools/vs-code)
+Here is a tutorial to help you with [VSCode for Flutter](https://docs.flutter.dev/development/tools/vs-code)
 
 ## Project setup
 
@@ -90,6 +90,6 @@ flutter run
 
 To run the project with `VSCode`, if you have downloaded the `Flutter` extension, you juste have to open the `lib/main.dart` file and you will have a button `Start Debugging` in top right of your VSCode.
 
-**If it start the application in your emulator and lauch the *Flutter Demo Home Page*, then you can start the exercises!**
+**If it start the application in your emulator and launch the *Flutter Demo Home Page*, then you can start the exercises!**
 
 [Go back to the exercises](./README.md)

@@ -59,7 +59,7 @@ The most known one is to clone a repository using `git clone`.
   <summary>HTTPS vs SSH clone</summary>
   <br>
   <p>SSH repository URLs can be identified as they start with `git@github.com:` whereas HTTPS URLs start with `https://github.com/`</p>
-  <p>SSH is recommended because you don't have to enter your username and password everytime you want to pull or push because your ssh key authenticates you (and is more secured than your password).</p>
+  <p>SSH is recommended because you don't have to enter your username and password every time you want to pull or push because your ssh key authenticates you (and is more secured than your password).</p>
 
 </details>
 
@@ -170,7 +170,7 @@ hesitating.
 
 There are multiple ways of doing this but let's see a pretty simple one using the `git stash` command.
 
-So you have made changes to test stuff out and realise that you've made a lot of changes and don't want to undo these by hand.
+So you have made changes to test stuff out and realize that you've made a lot of changes and don't want to undo these by hand.
 You can just run `git stash push <files with modifications to drop>` and `git stash drop`
 > :warning: Be careful because it isn't retrievable past this point.
 
@@ -179,7 +179,7 @@ For your knowledge, `git stash` also has other commands like `pop` and `apply`.
 
 ### Remove a mistake made by a local commit
 
-Let's say you have committed something locally but not pushed it yet, and you realise that it was a mistake, you can easily delete it with `git reset`.
+Let's say you have committed something locally but not pushed it yet, and you realize that it was a mistake, you can easily delete it with `git reset`.
 
 The exact command would be `git reset --hard HEAD~N` where N is the number of commits you want to delete.
 > :warning: Once again, be careful with this command, you won't be able to retrieve your deleted local commits after

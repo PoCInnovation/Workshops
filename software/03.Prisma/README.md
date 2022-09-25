@@ -4,7 +4,7 @@ In this workshop, we will learn how to create GraphQL APIs using [Prisma2](https
 
 ## Step 0: initialization
 
-All the required informations to install the workshop dependencies are available in [SETUP.md](./SETUP.md).
+All the required information to install the workshop dependencies are available in [SETUP.md](./SETUP.md).
 
 ## Step 1: Retrieve posts
 
@@ -14,7 +14,7 @@ Create the `getPosts` function:
 - It doesn't take any parameters
 - It returns a list of all the posts in the database.
 
-All the necessary informations about the database schema are in the `schema.prisma`.
+All the necessary information about the database schema are in the `schema.prisma`.
 
 ## Step 2: Create - Read - Update - Delete
 

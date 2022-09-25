@@ -28,7 +28,7 @@ Add a route on the endpoint `/hello`:
 
 ## Step 1: Let's get started
 
-You have succesfully created an endpoint!
+You have successfully created an endpoint!
 The next step is to add message logs because our server doesn't print anything, yet we would like to know when a route is called to know if everything went well.
 
 Create a middleware that logs the traffic of the API:
