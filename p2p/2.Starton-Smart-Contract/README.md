@@ -80,10 +80,15 @@ To further understand how a smart contract works, now we'll dive into a contract
 Don't worry, you won't have to write it entirely as it would be too long and complicated here.  
 
 In the boilerplate code we gave you ([`step5/ERC20`](./step5/ERC20/) folder), you'll find the contract files, but 3 functions were lost:
-`_transfer`, `_mint` and `_burn`.  
+`_transfer`, `_mint` and `_burn`.
 Your objective is to reimplement them in the `ERC20.sol` file to have a better understanding of the Solidity syntax.
 
 You should import the given files on remix using [remixd](https://www.npmjs.com/package/@remix-project/remixd).
+
+To do it:
+- `npm install -g @remix-project/remixd`
+- run `remixd` in the directory you want to import on remix.
+- Go to remix click `default_workspace`, select `- connect to localhost -`.
 
 > Take a look at the official [documentation](https://docs.soliditylang.org/en/v0.8.17/) to get more infos about the language.
 
