@@ -19,8 +19,8 @@ The only thing you need to do before starting the workshop is to create an accou
 Let's create your first contract in [Solidity](https://docs.soliditylang.org/en/v0.8.0/) :rocket:  
 > 💡 You can use the online IDE [Remix](https://remix.ethereum.org/) which is really useful to develop contracts for the Ethereum blockchain.
 
-Your objectif is to create a contract named `WallOfFame`:
-- It should have function to register a new warrior (storing both his address and a preudo given as parameter)
+Your objective is to create a contract named `WallOfFame`:
+- It should have function to register a new warrior (storing both his address and a pseudo given as parameter)
 - Another function should return a list with the pseudos of registered warriors
 
 > Since you have access to the address that calls your contract, you can also add a check to avoid registering the same address multiple times with different pseudos 😉
@@ -51,7 +51,6 @@ If your request is successful, you should have a new contract in the **Interact*
 
 
 ## Step 3 - Find and import a contract
-
 You successfully deployed a contract, that's great 🎉  
 In a real-world scenario though, you might want to interact with a contract that is already deployed by you or someone else.  
 You need to import a contract in Starton using a single information:
@@ -76,6 +75,15 @@ You have to make several API calls:
 - Then, find an call the route to call the `burn` function of your contract to reduce the token supply :fire:
 - Finally, check the balance again too make sure the tokens were destroyed
 
+## Step 5 - Time for real Solidity
+To further understand how a smart contract works, now we'll dive into a contract similar to the one you created in the previous step.  
+Don't worry, you won't have to write it entirely as it would be too long and complicated here.  
+TODO: add code
+In the boilerplate code we gave you (you can also find it in the [`src`](./src) folder), you'll find the contract files, but 3 functions were lost:
+`_transfer`, `_mint` and `_burn`.  
+Your objective is to reimplement them to have a better understanding of the Solidity syntax.
+
+> You'll also realize how much effort you're saving by using a Starton template 😉
 
 ## To go further
 Congratulations, you now have an overview of smart contracts deployment and interaction, simplified with Starton.  
@@ -83,8 +91,8 @@ But there's still a lot to discover, here are a few links:
 
 - Go deeper into [Ethereum smart contracts](https://ethereum.org/en/developers/docs/#foundational-topics) with concepts like [Opcodes](https://ethereum.org/en/developers/docs/evm/opcodes/) and [useful frameworks](https://ethereum.org/en/developers/docs/frameworks/)
 - Use other Starton services like [Notify](https://docs.starton.io/connect/api-doc/notify) and [IPFS hosting](https://docs.starton.io/connect/api-doc/ipfs) for your smart contracts
-- Integrate Starton services into a real app
-
+- Integrate Starton services into a real app (you can take a look at our Software workshop to create a Space Invaders with a Play to Earn model 🚀)
+TODO: add link to the soft starton workshop
 
 ## Authors
 
