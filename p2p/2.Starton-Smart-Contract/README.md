@@ -83,6 +83,10 @@ In the boilerplate code we gave you (you can also find it in the [`src/ERC20`](.
 `_transfer`, `_mint` and `_burn`.  
 Your objective is to reimplement them in the `ERC20.sol` file to have a better understanding of the Solidity syntax.
 
+You should import the given files on remix using [remixd](https://www.npmjs.com/package/@remix-project/remixd).
+
+> Take a look at the official [documentation](https://docs.soliditylang.org/en/v0.8.17/) to get more infos about the language.
+
 > You'll also realize how much effort you're saving by using a Starton template 😉
 
 ## To go further
