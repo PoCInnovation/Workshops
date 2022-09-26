@@ -79,7 +79,7 @@ You have to make several API calls:
 To further understand how a smart contract works, now we'll dive into a contract similar to the one you created in the previous step.  
 Don't worry, you won't have to write it entirely as it would be too long and complicated here.  
 
-In the boilerplate code we gave you (you can also find it in the [`src/ERC20`](./src/ERC20/) folder), you'll find the contract files, but 3 functions were lost:
+In the boilerplate code we gave you ([`step5/ERC20`](./step5/ERC20/) folder), you'll find the contract files, but 3 functions were lost:
 `_transfer`, `_mint` and `_burn`.  
 Your objective is to reimplement them in the `ERC20.sol` file to have a better understanding of the Solidity syntax.
 
