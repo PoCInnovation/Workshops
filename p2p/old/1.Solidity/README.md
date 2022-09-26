@@ -15,7 +15,7 @@ Every JavaScript files contains TODO instructions. Take a look at them to get mo
 ## Step 0 : Initialization :rocket:
 
 First, download and extract the `source.zip` file [here](https://github.com/PoCInnovation/Workshops/blob/master/p2p/1.Solidity/src/source.zip).
-It contains all necessary files, but for the moment they're empty :wink:
+It contains all necessary files, but for the moment they're empty 😉
 
 The project structure should be the following :
 
@@ -63,7 +63,7 @@ You need to do the following steps to get the bytecode & ABI (Application Binary
 
 - Give the content to the compiler. Note that the `compile.js` file already contains a variable, but the `sources['Inbox.sol']` field is empty.
 
-- Compile and extract the bytecode & ABI from the result (check [this](https://github.com/ethereum/solc-js) out :wink:).
+- Compile and extract the bytecode & ABI from the result (check [this](https://github.com/ethereum/solc-js) out 😉).
 
 - Write the bytecode & ABI to the corresponding file in the `out` folder.
 
@@ -133,7 +133,7 @@ Your smart contract is fully tested and ready to be deployed on the real blockch
 
 But deploying a smart contract is done by sending a transaction, and you probably don't want to pay real money to accomplish this step wright ?
 
-This is why testnet are useful :wink:, they behave the same way as the mainnet does, but their ether value is null. 
+This is why testnet are useful 😉, they behave the same way as the mainnet does, but their ether value is null. 
 
 So first, you need to install Metamask extension on your browser.
 Follow the steps required and don't forget to set the network to be the Ropsten Test Network.

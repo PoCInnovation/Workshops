@@ -66,7 +66,7 @@ Today's your lucky day, Starton has a service exactly for this: contract templat
 
 Go to your [Starton dashboard](https://app.starton.io/) and create an [ERC-20](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/) token with a fixed supply.  
 > If you want more challenge, you can try to deploy the template contract using the API instead of the UI  
-> You should find everything you need in their [documentation](https://docs.starton.io/), but don't hesitate to ask for help if you are stuck :wink:
+> You should find everything you need in their [documentation](https://docs.starton.io/), but don't hesitate to ask for help if you are stuck 😉
 
 When your contract is deployed, you need to interact with it!
 You have to make several API calls:
@@ -79,18 +79,23 @@ You have to make several API calls:
 To further understand how a smart contract works, now we'll dive into a contract similar to the one you created in the previous step.  
 Don't worry, you won't have to write it entirely as it would be too long and complicated here.  
 
-In the boilerplate code we gave you ([`step5/ERC20`](./step5/ERC20/) folder), you'll find the contract files, but 3 functions were lost:
+In the boilerplate code we gave you in the ([`step5/ERC20`](./step5/ERC20/) folder), you'll find the contract files, but 3 functions were lost:
 `_transfer`, `_mint` and `_burn`.
 Your objective is to reimplement them in the `ERC20.sol` file to have a better understanding of the Solidity syntax.
 
-You should import the given files on remix using [remixd](https://www.npmjs.com/package/@remix-project/remixd).
+You'll need to use Remix again, but to import your files you need to use[remixd](https://www.npmjs.com/package/@remix-project/remixd) by running the following commands:
+- ``
+```shell
+# Install the npm package globally
+npm install -g @remix-project/remixd
 
-To do it:
-- `npm install -g @remix-project/remixd`
-- run `remixd` in the directory you want to import on remix.
-- Go to remix click `default_workspace`, select `- connect to localhost -`.
+## Run it in the directory you want to import
+remixd
+```
 
-> Take a look at the official [documentation](https://docs.soliditylang.org/en/v0.8.17/) to get more infos about the language.
+You can then go to [remix](https://remix.ethereum.org/) and click on `default_workspace`, then select `- connect to localhost -`.
+
+> Take a look at the official [Solidity documentation](https://docs.soliditylang.org/en/v0.8.0/) to get more information about the language.
 
 > You'll also realize how much effort you're saving by using a Starton template 😉
 
@@ -100,8 +105,7 @@ But there's still a lot to discover, here are a few links:
 
 - Go deeper into [Ethereum smart contracts](https://ethereum.org/en/developers/docs/#foundational-topics) with concepts like [Opcodes](https://ethereum.org/en/developers/docs/evm/opcodes/) and [useful frameworks](https://ethereum.org/en/developers/docs/frameworks/)
 - Use other Starton services like [Notify](https://docs.starton.io/connect/api-doc/notify) and [IPFS hosting](https://docs.starton.io/connect/api-doc/ipfs) for your smart contracts
-- Integrate Starton services into a real app (you can take a look at our Software workshop to create a Space Invaders with a Play to Earn model 🚀)
-TODO: add link to the soft starton workshop
+- Integrate Starton services into a real app (you can take a look at our software workshop to [create a Space Invaders with a Play to Earn model](../../software/26.SpaceInvaders_Starton) 🚀)
 
 ## Authors
 

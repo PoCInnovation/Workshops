@@ -23,7 +23,7 @@ pip install flask mysql-connector-python python-dotenv
 
 ## MySQL
 
-> If you already have MariaDB the commands below should also work, you don't need to install MySQL :wink:
+> If you already have MariaDB the commands below should also work, you don't need to install MySQL 😉
 
 Ubuntu: [Installation guide](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-22-04)  
 Fedora: [Installation guide](https://www.tecmint.com/install-mysql-fedora-linux/)  

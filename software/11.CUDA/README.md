@@ -85,7 +85,7 @@ So you will use the very large number of cores available on a GPU to speed up th
 
 > :warning: ***Here are the resources you will need*** :
 
-- [The functions used to manage the memory (CRTL + F -> memc.. or mall.. :wink:)](https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__MEMORY.html).
+- [The functions used to manage the memory (CRTL + F -> memc.. or mall.. 😉)](https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__MEMORY.html).
 
 - [Thread synchronization](https://www.google.com/).
 

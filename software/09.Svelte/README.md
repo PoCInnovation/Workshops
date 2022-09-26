@@ -48,7 +48,7 @@ Create file named `Event.svelte` in `src/components`, it will contain a componen
 
 Then, create two events in your `App.svelte` and display them.
 
-> Don't forget to apply styles to your components :wink:
+> Don't forget to apply styles to your components 😉
 
 ### :book: Resources
 - [Properties with Svelte](https://svelte.dev/tutorial/declaring-props)

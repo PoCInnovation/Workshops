@@ -6,7 +6,7 @@ Some steps should be completed in groups of at least 2.
 Go to your repository settings, and in the `Collaborators` add your teammate !
 
 <i>Pro tips:</i>
-> Don't forget to use the commit norm you learned in the previous part :wink:
+> Don't forget to use the commit norm you learned in the previous part 😉
 
 > Don't forget to use branches ! This time, try to create it directly in GitHub :rocket:
 

@@ -31,7 +31,7 @@ npm run start:dev
 You can now go to http://localhost:3000/article in your browser (or using Postman) to see if it works :rocket:
 
 > As said before, the command `start:dev` makes use of `file watchers`. Every time you save a file, Nest will automatically rebuild the server with the updated file(s).  
-> This way you won't need to restart it manually after each modification :wink:
+> This way you won't need to restart it manually after each modification 😉
 
 > :bulb: As you can see, AppService is an AppModule Provider (in `app.module.ts`) and it's [injected](https://docs.nestjs.com/providers#dependency-injection) in the controller (in the constructor).
 
@@ -53,7 +53,7 @@ You should now be able to create a route `/article` using `@Post()`. The type of
 
 Now, add debug logs that print the received body.
 
-> Use Postman to test your new route :wink:
+> Use Postman to test your new route 😉
 
 Here is an example of a body:
 ```js
@@ -71,7 +71,7 @@ First, read a little about [route parameters](https://docs.nestjs.com/controller
 You can now update the previously created `getArticle` function to take a title as a route `@Param()`.  
 Add debug logs again to check if you are correctly receiving it :rocket:
 
-> We'll use this param later to search for this title in our mocked article DB :wink:
+> We'll use this param later to search for this title in our mocked article DB 😉
 
 ### Step 2.3: PUT request to update data
 

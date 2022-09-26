@@ -152,7 +152,7 @@ Now all you have to do is create these different routes:
 
 > :bulb: Environment variables are variables used by your operating system in many areas. They are visible by typing `env` in your terminal. 
 
-> These variables are used when you deploy an application in production to secure passwords and private identifiers. It is therefore essential to know how to use them in your code :wink:
+> These variables are used when you deploy an application in production to secure passwords and private identifiers. It is therefore essential to know how to use them in your code 😉
  
 For this, we will use the package [env-var](https://github.com/evanshortiss/env-var) which allows you to automatically load environment variables from a file:
 
@@ -192,7 +192,7 @@ Have you tested the new routes you created?
 
 If you did, congratulations, that's a good habit to have, you can move on to the next step :partying_face:
 
-Else, enrich your test collection with tests for your new routes :wink:
+Else, enrich your test collection with tests for your new routes 😉
 
 #### Resources :
 - [Postman Collection](https://learning.postman.com/docs/sending-requests/intro-to-collections/)
