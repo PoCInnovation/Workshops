@@ -1,4 +1,4 @@
-# Workshop - API REST in Go with Gin
+# Workshop 28 - API REST in Go with Gin
 
 :heavy_check_mark: Learn the basics of REST API.
 
