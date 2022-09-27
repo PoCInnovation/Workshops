@@ -158,7 +158,7 @@ function Component(): JSX.Element {
 
 Congratulations, you now have a functionnal Kanban style app to keep yourself organized in all your future projects!
 
-You can still enhance it's behaviour, here are some examples:
+You can still enhance it's behavior, here are some examples:
 
 - You can add a [background](https://www.freecodecamp.org/news/react-background-image-tutorial-how-to-set-backgroundimage-with-inline-css-style/) to your application
 - You can add a `Delete` button on each task to delete it

@@ -31,7 +31,7 @@ Kafka is a [message broker](https://www.ibm.com/cloud/learn/message-brokers), me
 Other message brokers exists, like [RabbitMQ](https://www.rabbitmq.com/), but Kafka is much more resilient, because it is designed to support stream interruptions.
 
 I'm not going to lie, Kafka is a bit overkill for this workshop.
-Well it is still a good way to learn its behaviour and how to interact with Kafka using your own producer / consumer.
+Well it is still a good way to learn its behavior and how to interact with Kafka using your own producer / consumer.
 
 At the end of the workshop, you'll be able to scale up even further this application with more producers / consumers.
 

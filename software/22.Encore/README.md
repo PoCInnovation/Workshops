@@ -8,7 +8,7 @@
 
 ## Introduction
 
-With the evolution of the web the arrival of Saas, Paas, Iaas, develop and deploy an API has become a *must-have* knowledge.
+With the evolution of the web the arrival of SaaS, PaaS, IaaS, developing and deploying an API has become a *must-have* knowledge.
 More and more frameworks exist to code faster, optimize deployment, remove boring boilerplate but there is no solution that manage both of those things for you.
 
 [Encore](https://encore.dev/) does, it's a powerful golang framework that help you to build production-ready API and services without coding boilerplate, pay attention to the deployment or manage your database. In conclusion, [Encore](https://encore.dev/) helps you to stay focus on the most important thing : your product.
@@ -105,13 +105,13 @@ The client will be forward to our other services:
 - `delivery`: manage delivery
 - `deliveryman`: manage deliverymen
 
-This way, we got independant services that share the same database to simplify data management, specialy when we will need to handle relation between our tables.
+This way, we got independent services that share the same database to simplify data management, especially when we will need to handle relation between our tables.
 
 > deliverymen will be protected with an authentication process explained further.
 
 #### Database
 
-First, create a new folder named `delivery`, this is where we will code our `develiry-api`.
+First, create a new folder named `delivery`, this is where we will code our `delivery-api`.
 
 Before coding our API, we must define models and create our database.<br>
 We are lucky, [encore](https://encore.dev/docs/develop/databases) manage the boring stuff for you, you only have to create a `migrations` directory in a `service` that will store your `sql` files and everything will work automatically.
@@ -192,7 +192,7 @@ Here we are exporting a client from [sqlx](https://pkg.go.dev/github.com/jmoiron
 
 > :bulb: Note that `encore` provide his own version of the [sql](https://pkg.go.dev/database/sql) package named `sqldb`.
 
-:bulb: **In this workshop, you will need to write raw SQL queries to interfact with the database. To help you, look at that [little sheatcheet](./help/requests.sql) with all queries involved.**
+:bulb: **In this workshop, you will need to write raw SQL queries to interact with the database. To help you, look at that [little cheatsheet](./help/requests.sql) with all queries involved.**
 
 #### Packet's time
 

@@ -16,7 +16,7 @@ Before starting you need to `install Flutter` with the [SETUP.md](./SETUP.md)
 
 Flutter is a framework based on the dart language.
 
-***"We strongly advise you to check the [documentation of Dart langage](https://dart.dev/samples) if you don't know it***
+***"We strongly advise you to check the [documentation of Dart language](https://dart.dev/samples) if you don't know it***
 
 ## Step 1 - Get started
 
@@ -74,7 +74,7 @@ As you can see in all the class that extends `StatefulWidget` of `StatelessWidge
 
 If everything has worked and you launch the project, you might have the text `Step 1` in the middle of the application.
 
-:warning: In this code you have some const that you will have to remove because of non const contructor of widget you will use.
+:warning: In this code you have some const that you will have to remove because of non const constructor of widget you will use.
 
 ## Step 2 - Lists
 
@@ -142,12 +142,12 @@ You will have nothing more to do in the `home.dart` for this step.
 
 To access the parameters of a StateFullWidget in it State, you need to add the keyword `widget.` before the name of the parameter.
 
-Let's take a look of how to do a list with Flutter. For it you have muliple choices, here are a few of them:
+Let's take a look of how to do a list with Flutter. For it you have multiple choices, here are a few of them:
 
 - [List.generate](https://api.flutter.dev/flutter/dart-core/List/List.generate.html)
 
 
-    As there is no exemple with `widget` in the doc, here is one: 
+    As there is no example with `widget` in the doc, here is one: 
     
     ```dart
     Column(
@@ -169,7 +169,7 @@ Let's take a look of how to do a list with Flutter. For it you have muliple choi
 
 For this step you have to create a folder `lib/models` and a `todo.dart`.
 
-The goal of this step is to create a class that will define the atributes of a todo and implement it.
+The goal of this step is to create a class that will define the attributes of a todo and implement it.
 
 Your todo class needs to contain the following attributes:
   
@@ -189,7 +189,7 @@ class MyClass {
   int tata;
 
   MyClass({
-    requeried this.toto,
+    required this.toto,
     this.tata = 0,
   });
 }
@@ -199,19 +199,19 @@ Then your `ToDoList` component has now to display the title of all todos.
 
 ## Step 4 - Card and ListTile
 
-In order to make the work easier, you will use a [list tile](https://api.flutter.dev/flutter/material/ListTile-class.html). It will help you to organise your todo.
+In order to make the work easier, you will use a [list tile](https://api.flutter.dev/flutter/material/ListTile-class.html). It will help you to organized your todo.
 
 So you can set the title of your todo as the title of your `tile` and the `description` of the todo as the subtitle (but you are free to whatever you want).
 
-That seem a little bit better but we can do more. Make your list more eye-catching by wraping each element of your list with a [card](https://api.flutter.dev/flutter/material/Card-class.html).
+That seem a little bit better but we can do more. Make your list more eye-catching by wrapping each element of your list with a [card](https://api.flutter.dev/flutter/material/Card-class.html).
 
 As now you have a `list tile` you can already make the delete [icon button](https://api.flutter.dev/flutter/material/IconButton-class.html) in the trailing of your tile.
 
-:warning: In flutter you have to [refresh the state of the page](https://api.flutter.dev/flutter/widgets/State/setState.html) after modifing a displayed variable to see it.
+:warning: In flutter you have to [refresh the state of the page](https://api.flutter.dev/flutter/widgets/State/setState.html) after modifying a displayed variable to see it.
 
 ## Step 5 - Create a todo
 
-At this time, you might havedisplay and deletion features of your todos, the only thing that is missing, is the todo creation page.
+At this time, you might have display and deletion features of your todos, the only thing that is missing, is the todo creation page.
 
 In order to make the creation page you have to create a `lib/pages/create_todo.dart` file with the following code in it:
 ```dart
@@ -244,7 +244,7 @@ Now that you can navigate between your home page and your todo creation page, yo
 
 ## Bonuses
 
-- Labels in todo, as exemple: `urgent`, `important`, `less important`.
+- Labels in todo, as example: `urgent`, `important`, `less important`.
 - Deadline for the todo.
 - Add the possibility to move the todo up and down.
 

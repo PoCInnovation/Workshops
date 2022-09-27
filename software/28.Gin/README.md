@@ -1,8 +1,10 @@
-# Workshop - API REST in Go with Gin
+# Workshop 28 - API REST in Go with Gin
 
 :heavy_check_mark: Learn the basics of REST API.
 
-:heavy_check_mark: Learn how to use basic features of the [gin](https://github.com/gin-gonic/gin) framework.
+:heavy_check_mark: Discover the basic features of the [gin](https://github.com/gin-gonic/gin) framework.
+
+:heavy_check_mark: Read and write files in Go
 
 > :bulb: A quick [documentation](https://searchapparchitecture.techtarget.com/definition/RESTful-API) about REST API.
 
@@ -10,47 +12,41 @@
 
 All the required information to install the workshop's dependencies are given in the [SETUP.md](./SETUP.md)
 
-#### Gin
+## Step 1: Hello World!
 
-Once everything is installed, you have to download the Gin package.
+We designed a boilerplate for this project, it will be useful to start it, but also to summarize all the required parts of an API.  
+We will have:
 
-Go at the root of your repo and run this commands to init your go project:
-```shell
-go mod init workshop-gin
-```
+- `controllers`: this is where you will design your routes endpoints. it will often be a wrapper that calls other APIs or make requests to a database.
+- `middlewares`: those are used to intercept and process information between two functions. You could typically have a logger middleware that will be called right before your controller.
+- `models`: the role of this folder is to contains all the data related code, like type definitions and database logics
+- `main.go`: this is the the core of your program: you'll instantiate Gin inside it 😉
 
-Afterwards you can follow the official [documentation](https://github.com/gin-gonic/gin#installation) to install Gin correctly.
->Once again don't hesitate if you have any issue during the installation ! :smile:
+There are plenty of other structures you may need in a real API, but these are the main ones you'll need for this workshop.
 
-
-**Now everything should work properly you can start the workshop !**
-
-## Step 1: The codebase
-
-We designed a boilerplate for this project, it will be useful to start it, but also to summarize all the required parts of an API
-We will have :
-
-- `controllers`: this is where you will design your routes endpoints. it will often be a wrapper that calls other API or the database itself
-- `middlewares`: those are a type of function used to intercept and process informations between two functions
-- `routes`: the core of the router, setting up all the routes handler, with their middlewares and controllers
-
-There are plenty of other important package you may need in a real API, but these are the main one you can be sure you'll need one time or another. Now let's code.
+Now let's code :rocket:
 
 Add a route on the endpoint `/`:
 - It uses the `GET` method
-- It must call a helloWorld function that responds `"hello: world"` in a json format
+- It must call a `HelloWorld` controller that responds `hello world` in a [JSON](https://www.w3schools.com/whatis/whatis_json.asp) format like this:
+```json
+{
+  "hello": "world"
+}
+```
 
-> don't hesitate to take a look at the offcial [documentation](https://github.com/gin-gonic/gin#api-examples).
-> You can test it with `http://localhost:8080/` in a browser or with `postman`
+> Don't hesitate to take a look at the official [documentation](https://github.com/gin-gonic/gin#api-examples) 😉  
 
-## Step 2: Let's get started
+> You can test it by opening http://localhost:8080/ in your browser or with Postman!
 
-You are now fine with the creation of endpoints.
-Next step is to create different request method.
-There is many [request method](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods), you already experimented the `GET` request.
+## Step 2: Diversify your API
 
-For this step, we will use some others' method:
-- a `GET` request `/item/template`: to get the template of the item as follows.
+Now that you are familiar with the creation of an endpoint, we'll use different HTTP methods!  
+You already used `GET`, but [many other exists](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods) and you can even [pass data to it using headers, body, query params...](https://rapidapi.com/guides/send-data-to-server) :slight_smile:
+
+Let's create two other endpoints:
+
+- `/item/template` that will return the following template of an `Item` on a `GET` request:
 ```json
 {
   "name": "name",
@@ -59,22 +55,16 @@ For this step, we will use some others' method:
 }
 ```
 
-- a `POST` request `/item/display`: to display the item passed in the body as follows.
-  <img src="./.assets/request-item-display.png">
+- a `POST` request on `/item/display` that will take an `Item` from the body of the request, and return it in the response.
+
+> This request should have a result similar to this one:
+![item display request](https://user-images.githubusercontent.com/49811529/192164951-2188584a-0ec9-4b0a-b6cc-83be19b8cca2.png)
 
 
-also try to implement a default endpoint for the URL's that doesn't match any routes. (404 notfound error)
+This may seem hard, but here are a few advices to help you:
+> `Item` is a data **model**, creating a structure with its fields (`name`, `description` and `price`) will be necessary.  
+> For the `POST` request, you'll then need to bind the request body to the `Item` structure to retrieve and return it, 
 
-
-
-> This [tutorial](https://blog.logrocket.com/making-http-requests-in-go/) may help you
-
-> You should create a structure item with the following fields:
-> - name
-> - description
-> - price
->
-> and bind the request body to the structure to retrieve it (do it in a structure folder).
 <details>
   <summary>See how to request with postman :satellite:</summary>
 
@@ -88,48 +78,55 @@ Then the result (if there is any) will be printed out at the bottom.
 
 </details>
 
-## Step 3: Authorization middleware
+## Step 3: Authorization middleware and custom errors
 
-Now let's create a middleware `Auth()` that will check if the user is authorized to access the endpoint.
+Having multiple endpoints is great, but sometimes we need a way to restrict access to logged in users for example.  
+This is where a middleware comes into play :rocket:
 
-We won't use real token like a [JWT](https://jwt.io/), we will just check if the request contains a header with the name `Authorization` and a value.
+Let's create an `Auth` middleware that will check if the user is authorized to access the endpoint.
 
+> We won't use real token like a [JWT](https://jwt.io/) here, but we'll rather just check if the request contains a header with the name `Authorization` and a value to it.
+
+You can add this middleware to the `/item/display` endpoint and check if it works in Postman!
+
+Gin also allows you to use custom controllers on certain errors, let's add one for invalid endpoints (the famous 404 Not Found error).
+> [The official README](https://github.com/gin-gonic/gin) could once again help you accomplish this 😉
 
 ## Step 4: Database interaction
 
-For the following we won't use a real database, but we will use a simple json file as the database.
-(The configuration would have been too long to explain and to do here)
-You can see the database.json in the database folder.
+You've had a glimpse of `models`, now its time to dive into it!
+We won't use a real database here but rather a simple json file to mock a database.
+> The configuration would have been too long to explain and to do here, but it's surely a great bonus idea when you've completed this workshop :rocket:
+
+You should already have a few items in the `database.json` file given in the boilerplate, so let's implement the following endpoints:
+
+- `/items` to retrieve all the items in the database on a `GET` request
+- `/item` with the `POST` method to create a new item
+
+> You must fill the functions you need in `models/item.go` (`GetItems` & `AddItem`) and call them inside a controller 😉
+
+> You'll need to read and write in the JSON file, this [documentation](https://tutorialedge.net/golang/reading-writing-files-in-go/) will be useful for this.
+
+## Bonus
+
+Congratulations for going through this workshop!  
+You can go further by adding other methods to complete your database:
+- a `DELETE` request on `/item`: remove an item from the database.
+- a `PUT` request on `/item` to update an item.
+- a `POST` request on `/items` to create multiple items at the same time.
+
+You can also use a real database with an ORM:
+- [Ent](https://github.com/ent/ent) and their [CRUD API](https://entgo.io/docs/crud/)
+- [GORM](https://github.com/go-gorm/gorm)
 
 
-- Create a `GET` request `/item`: to retrieve all the items in the database.
-- Create a `POST` request `/item`: to create a new item in the database.
-
-> You must fill the `database/database.go` functions you need (`GetDatabase` & `AddItemInDB`) and call.
-
-> Look at the [documentation](https://tutorialedge.net/golang/reading-writing-files-in-go/) to interact with the file
-
-## Step 5: To go further
-
-To go further you can add some others routes :
-- a `DELETE` request `/item`: to delete an item in the database.
-- a `PUT` request `/item`: to update an item in the database.
-- a `POST` request `/items`: to create multiple items in the database.
-
-## Go
-
-If you still want to toy around with Go and all its usages, you can take a look at other go features like:
-- `go routines`
-- `interfaces`
-
-You can also use a real database with this ORM packages:
-- [Ent](https://github.com/facebookincubator/ent)
-- [postgres/ent](https://entgo.io/docs/crud/)
+And if you still want to play around with Go and all its usages, you can take a look at other cool Go features like [goroutine](https://go.dev/tour/concurrency) or [generics](https://go.dev/doc/tutorial/generics) :rocket:
 
 ## Authors
 
-| [<img src="https://github.com/Doozers.png?size=85" width=85><br><sub>Ismaël FALL</sub>](https://github.com/Doozers) |
-|:-------------------------------------------------------------------------------------------------------------------:|
+| [<img src="https://github.com/Doozers.png?size=85" width=85><br><sub>Ismaël Fall</sub>](https://github.com/Doozers) | [<img src="https://github.com/RezaRahemtola.png?size=85" width=85><br><sub>Reza Rahemtola</sub>](https://github.com/RezaRahemtola) |
+|--------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
+
 <h2 align=center>
 Organization
 </h2>

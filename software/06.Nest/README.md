@@ -1,4 +1,4 @@
-# REST API with NestJS
+# Workshop 6 - REST API with NestJS
 
 :heavy_check_mark: Discover [Nest](https://nestjs.com/), a framework to build server-side NodeJS applications with full TypeScript support.
 
@@ -21,7 +21,7 @@ All the required information to start this workshop can be found in [SETUP.md](.
 - In the `app.controller.ts` file, create a `@Get()` route `/article` (the route `hello` should help you to do so)
 - You also have to create the corresponding provider to return a test value.
 
-> :book: The documentation about [modules](https://docs.nestjs.com/modules) and [providers](https://docs.nestjs.com/providers) will teach you some basic concepts and architecture of Nest. The concept of [dependency injection](https://docs.nestjs.com/providers#dependency-injection)
+> :book: The documentation about [modules](https://docs.nestjs.com/modules) and [providers](https://docs.nestjs.com/providers) will teach you some basic concepts and architecture of Nest. The concept of [dependency injection](https://docs.nestjs.com/providers#dependency-injection) is a really interesting part of Nest.
 
 Now, launch the server:
 ```sh
@@ -44,7 +44,7 @@ You can read more about decorators [here](https://www.sitepoint.com/javascript-d
 
 You will now use the [POST](https://en.wikipedia.org/wiki/POST_(HTTP)) method to send data via a Body.
 
-The object containing data that will be transfered is a DTO ([Data Transfer Object](https://en.wikipedia.org/wiki/Data_transfer_object)).  
+The object containing data that will be transferred is a DTO ([Data Transfer Object](https://en.wikipedia.org/wiki/Data_transfer_object)).  
 A class `article.dto` is provided [here](https://github.com/PoCInnovation/Workshops/blob/master/software/06.Nest/src/step2/article.dto.ts). It is a simple class that describes an article.
 
 With the decorator [@Body()](https://docs.nestjs.com/controllers#request-payloads) (found in `@nestjs/common`), you will be able to get the body of the request.
@@ -117,7 +117,7 @@ Create a route to `@Delete()` an article on your own !
 
 ### Step 3.4: Bonus
 
-Nestjs [HttpException](https://docs.nestjs.com/exception-filters#built-in-http-exceptions)s are an elegant way to send an error response.  
+NestJS [HttpExceptions](https://docs.nestjs.com/exception-filters#built-in-http-exceptions) are an elegant way to send an error response.  
 For example, the `findArticle` function may return `undefined` if no article matches the requested title.
 In that case you should send a `NotFoundException`.
 

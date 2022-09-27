@@ -79,8 +79,8 @@ Your folder structure should look like this:
 ```
 
 Your docker-compose will have 2 services:
-- `app`: Launchs your Flask API (created by your Dockerfile)
-- `db`: Launchs your `mariadb` database (more information [here](https://hub.docker.com/_/mariadb))
+- `app`: Launches your Flask API (created by your Dockerfile)
+- `db`: Launches your `mariadb` database (more information [here](https://hub.docker.com/_/mariadb))
 
 Here is a base to start off your `docker-compose.yml`
 
