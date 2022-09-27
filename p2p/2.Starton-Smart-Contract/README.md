@@ -83,8 +83,7 @@ In the boilerplate code we gave you in the ([`step5/ERC20`](./step5/ERC20/) fold
 `_transfer`, `_mint` and `_burn`.
 Your objective is to reimplement them in the `ERC20.sol` file to have a better understanding of the Solidity syntax.
 
-You'll need to use Remix again, but to import your files you need to use[remixd](https://www.npmjs.com/package/@remix-project/remixd) by running the following commands:
-- ``
+You'll need to use Remix again, but to import your files you need to use [remixd](https://www.npmjs.com/package/@remix-project/remixd) by running the following commands:
 ```shell
 # Install the npm package globally
 npm install -g @remix-project/remixd
