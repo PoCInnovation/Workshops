@@ -21,9 +21,11 @@ go version
 
 Once Go is installed, you have to download the Gin package.
 
-Run this command at the root of your repo to init your go project:
+Run these commands at the root of your repo to init your go project:
 ```shell
 go mod init gin-workshop-poc
+
+go mod tidy
 ```
 
 Afterwards you can follow the official [documentation](https://github.com/gin-gonic/gin#installation) to install Gin correctly.
