@@ -1,14 +1,14 @@
 {
-  "name": "ws",
+  "name": "firebase-workshop-poc",
   "version": "1.0.0",
-  "description": "",
+  "description": "Sample firebase project",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js"
   },
   "type": "module",
-  "author": "",
+  "author": "PoC Innovation",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
@@ -19,6 +19,6 @@
   },
   "devDependencies": {
     "@types/firebase": "^3.2.1",
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.20"
   }
 }

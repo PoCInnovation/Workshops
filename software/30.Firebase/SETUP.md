@@ -1,26 +1,21 @@
 # Workshop 30 - Firebase
 
-In this workshop, you'll need:
+## Node and NPM
+In this workshop, you'll need to install the JavaScript runtime [node (at least version 10)](https://github.com/nodejs/node) and its package manager [npm](https://www.npmjs.com/).
 
-- [node (at least version 10)](https://github.com/nodejs/node): JavaScript interpretor
-- [npm](https://www.npmjs.com/): node package manager
-- [Firebase CLI](https://encore.dev/docs/quick-start#install-the-encore-cli): encore official CLI
-
-## Installation
-
-### Firebase CLI
-
-First, remove these packages if installed on your dump:
-=======
-- [node (at least version 10)](https://github.com/nodejs/node): JavaScript runtime
-- [npm](https://www.npmjs.com/): node package manager
-- [yarn](https://yarnpkg.com/): a better package manager
-
-To install `node` and `npm`:
+You can use the following command to do so:
 - under fedora: `sudo dnf install nodejs`.
 - under ubuntu: `sudo apt install nodejs npm`.
 
-To install `yarn`: `npm install --global yarn`
+## Google account
+Since Firebase is a Google product, you'll need a [Google account](https://accounts.google.com/) for this workshop, you can create it [here](https://accounts.google.com/signup) if you don't have one :wink:
 
-## Installation
-TODO: Firebase account setup
+## Base project
+To use firebase, we first need to setup a project.  
+Normally you would have to use `npm install`, but here we provided you an existing `package.json`.  
+
+It's pretty basic, we just installed the `nodemon` package to use it in our `start` script, it will watch for changes in our code to automatically reload our server, which is gonna be very useful :rocket:  
+This script will execute the `index.js` file: it's empty for now, but we will fill it soon enough don't worry :wink:
+
+
+It's finally time to use Firebase, click [here to go back to the exercises](./README.md)

@@ -93,7 +93,7 @@ async function addBooks(req, res) {
 
 ### Step 6 - Cloud functions
 The last step u must configure cloud functions and use it for transform the step 5 to cloud functions.
-We will help u abit for this
+We will help you a bit for this
 
 First of all run these command:
 ```
@@ -119,7 +119,7 @@ const firebaseConfig = {
 };
 ```
 
-samething as the first exercice, and now try to implement your addBooks but in cloud function, i will help you abit
+samething as the first exercise, and now try to implement your addBooks but in cloud function, i will help you a bit
 
 ```
 exports.addBooks = functions.https.onRequest(async (req, res) => {
