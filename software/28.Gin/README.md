@@ -42,7 +42,7 @@ Add a route on the endpoint `/`:
 ## Step 2: Diversify your API
 
 Now that you are familiar with the creation of an endpoint, we'll use different HTTP methods!  
-You already used `GET`, but [many other exists](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods) and you can even [pass data to it using headers, body, query params...](https://rapidapi.com/guides/send-data-to-server) :slight_smile:
+You already used `GET`, but [many other exists](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods) and you can even [pass data to it using headers, body, query params...](https://rapidapi.com/guides/send-data-to-server) 🙂
 
 Let's create two other endpoints:
 
@@ -62,8 +62,9 @@ Let's create two other endpoints:
 
 
 This may seem hard, but here are a few advices to help you:
-> `Item` is a data **model**, creating a structure with its fields (`name`, `description` and `price`) will be necessary.  
-> For the `POST` request, you'll then need to bind the request body to the `Item` structure to retrieve and return it, 
+> `Item` is a data **model**, creating a structure with its fields (`name`, `description` and `price`) will be necessary.
+  
+> For the `POST` request, you'll then need to bind the request body to the `Item` structure to retrieve and return it.
 
 <details>
   <summary>See how to request with postman :satellite:</summary>
