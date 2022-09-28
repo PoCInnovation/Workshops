@@ -19,11 +19,9 @@ The only thing you need to do before starting the workshop is to create an accou
 Let's create your first contract in [Solidity](https://docs.soliditylang.org/en/v0.8.0/) :rocket:  
 > 💡 You can use the online IDE [Remix](https://remix.ethereum.org/) which is really useful to develop contracts for the Ethereum blockchain.
 
-Your objective is to create a contract named `WallOfFame`:
-- It should have function to register a new warrior (storing both his address and a pseudo given as parameter)
-- Another function should return a list with the pseudos of registered warriors
-
-> Since you have access to the address that calls your contract, you can also add a check to avoid registering the same address multiple times with different pseudos 😉
+Your objective is to create a contract named `Task1`:
+- It should have an unsigned int variable named num and a function `incrAndRetrieve()` that increment num and returns its new value. 
+- It should also have a function that takes a `string` as an argument and return a `string` that is equal to your parameter followed by " word!"
  
 <details>
     <summary>How to easily test your contract 🤔</summary>
@@ -55,7 +53,7 @@ You successfully deployed a contract, that's great 🎉
 In a real-world scenario though, you might want to interact with a contract that is already deployed by you or someone else.  
 You need to import a contract in Starton using a single information:
 ```
-TODO: add the secret information
+0x9165321A42Dad69828D0459a77cafC0B3C95DBc3 on mumbai (polygon testnet)
 ```
 
 > It can seems hard, but with a few searches you'll find what you need to import the contract 😉
