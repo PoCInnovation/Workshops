@@ -53,10 +53,12 @@ You successfully deployed a contract, that's great 🎉
 In a real-world scenario though, you might want to interact with a contract that is already deployed by you or someone else.  
 You need to import a contract in Starton using a single information:
 ```
-0x9165321A42Dad69828D0459a77cafC0B3C95DBc3 on mumbai (polygon testnet)
+0x9165321A42Dad69828D0459a77cafC0B3C95DBc3
 ```
 
-> It can seems hard, but with a few searches you'll find what you need to import the contract 😉
+> This contract is deployed on Mumbai (the Polygon testnet) 😉
+
+> It can seems hard, but with a few searches you'll find what you need to import the contract
 
 ## Step 4 - Interact with a template contract
 Writing a contract in Solidity from scratch is great, but sometimes you just want to create something simple and generic and you don't want to spend time learning Solidity in depth, making sure your contract is secure...  
