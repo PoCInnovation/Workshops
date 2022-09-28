@@ -21,7 +21,7 @@ Let's create your first contract in [Solidity](https://docs.soliditylang.org/en/
 
 Your objective is to create a contract named `Task1`:
 - It should have an unsigned int variable named num and a function `incrAndRetrieve()` that increment num and returns its new value. 
-- It should also have a function that takes a `string` as an argument and return a `string` that is equal to your parameter followed by " word!"
+- It should also have a function named `worldify` that takes a `string` as an argument and return a `string` that is equal to your parameter followed by ` world!` like this: `worldify("Hello") => Hello world!`
  
 <details>
     <summary>How to easily test your contract 🤔</summary>
