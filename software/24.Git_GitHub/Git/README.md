@@ -74,7 +74,7 @@ You can also simply initialize a directory as a git repository by using `git ini
 
 Once again it is recommended to use the SSH URL instead of the HTTPS one.
 
-> This part doesn't require you to do anything, it's mainly for knowledge :wink:
+> This part doesn't require you to do anything, it's mainly for knowledge 😉
 
 > Before applying any changes, it's a good reflex to check what has been modified.
 
@@ -192,7 +192,7 @@ The exact command would be `git reset --hard HEAD~N` where N is the number of co
 - Speaking of mistakes, go ahead and add a file named `step2.txt` with "This is a bug", written in it, commit it and push it.
 
 > Remember how we said that making small commits was a good thing?  
-> Well here is a case where making small commits comes in handy :wink:  
+> Well here is a case where making small commits comes in handy 😉  
 > You will now learn how to revert a commit, which allows fixing bugs easily.
 
 - Let's assume that `step2.txt` was not intended to be pushed, you can simply use [`git revert`](https://git-scm.com/docs/git-revert) on the commit to revert the changes and get back to the state without this commit.
@@ -239,7 +239,7 @@ Now that you are completely up-to-date with `main` and that you have finished yo
 ### :pushpin: Task:
 
 - Merge your branch into `main` using rebase
-> The different merging strategies will be explained in the GitHub part of this workshop :wink:
+> The different merging strategies will be explained in the GitHub part of this workshop 😉
 
 ### Manage branches
 

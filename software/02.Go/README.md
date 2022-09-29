@@ -36,7 +36,7 @@ Create a middleware that logs the traffic of the API:
 - Apply this middleware to the `/hello` route
 
 
-> Look at the example in the code and at this [article](https://dev.to/karankumarshreds/middlewares-in-go-41j) :wink:
+> Look at the example in the code and at this [article](https://dev.to/karankumarshreds/middlewares-in-go-41j) 😉
 
 > :bulb: You can make this middleware global to all routes rather than calling it manually on each and every route you create
 
@@ -63,7 +63,7 @@ To protect some routes from unknown users, we'll have to add another middleware.
 
 > In a real life scenario you will check if the field contains a token, and if this token is valid thanks to [`JSON Web Token`](https://jwt.io/introduction) for example
 
-> `r.Header` is of type `map[string]string`, you should take a look at how to check if a value exists within a map :wink:
+> `r.Header` is of type `map[string]string`, you should take a look at how to check if a value exists within a map 😉
 
 <details>
 

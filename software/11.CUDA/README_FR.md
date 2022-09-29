@@ -84,7 +84,7 @@ Vous allez donc utiliser le très grand nombre de cœurs présents sur un GPU po
 
 > :warning: ***Voici les ressources dont vous aurez besoin*** :
 
-- [Les fonctions permettant de gérer la mémoire (CRTL + F -> memc.. ou mall.. :wink:)](https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__MEMORY.html).
+- [Les fonctions permettant de gérer la mémoire (CRTL + F -> memc.. ou mall.. 😉)](https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__MEMORY.html).
 
 - [Synchronisation des threads](https://www.google.com/).
 

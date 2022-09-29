@@ -51,7 +51,7 @@ All you have to do after that is opening the `expo-workshop-poc` folder in VSCod
 
 This should start the dev server and print a QR code in your terminal. Scan it with your phone (from the expo app on Android or directly from the camera on iPhones). You can test it and what (simple) features are available.
 
-> If you have an error on your phone when scanning the QR code, run `npm install @expo/ngrok@^4.1.0` and replace the `start` script content in the `package.json` with `expo-cli start --tunnel`. Run `npm start` again and everything should work fine :wink:
+> If you have an error on your phone when scanning the QR code, run `npm install @expo/ngrok@^4.1.0` and replace the `start` script content in the `package.json` with `expo-cli start --tunnel`. Run `npm start` again and everything should work fine 😉
 
 **If it loads the app on your phone then shows a basic app with a bottom navigator and 2 tabs, then you can start the exercises!**
 

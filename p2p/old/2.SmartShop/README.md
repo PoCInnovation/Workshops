@@ -81,7 +81,7 @@ As you can see, there are some basic features already implemented.
 You must implement the following ones :
 
 - Update the `smartshopcontract.js` file with the correct information
-- Load the accounts provided by metamask in your browser. The [web3](https://web3js.readthedocs.io/en/v1.3.0/web3-eth.html) documentation should help you :wink:
+- Load the accounts provided by metamask in your browser. The [web3](https://web3js.readthedocs.io/en/v1.3.0/web3-eth.html) documentation should help you 😉
 - Implement the function body used to interact with the smart contract in the `interact.js` file.
   Once again, this [web3](https://web3js.readthedocs.io/en/v1.3.0/web3-eth-contract.html#methods-mymethod-call) documentation should help you.
 

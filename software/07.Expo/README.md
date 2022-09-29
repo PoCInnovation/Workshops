@@ -135,9 +135,9 @@ npm start
 
 > Here is the [Camera documentation](https://docs.expo.io/versions/latest/sdk/camera/), there are useful examples, search for code scanning
 
-> You can do this in the file `TabTwoScreen.tsx` :wink:
+> You can do this in the file `TabTwoScreen.tsx` 😉
 
-- `handleBarCodeScanned` arguments type are `{ type: string; data: string }` (but you may only need `data` :wink:)
+- `handleBarCodeScanned` arguments type are `{ type: string; data: string }` (but you may only need `data` 😉)
 - If the QR code struggles, do not hesitate to reload the app (shake your device to trigger the option panel)
 
 You can use this QR code as an example:
