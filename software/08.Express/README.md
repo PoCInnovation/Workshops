@@ -42,9 +42,9 @@ In the file `src/server.ts` :
 
 We'll need to test those routes, but before let's change the status that sees our route.
 
-> :bulb: A REST API returns data based on what a client requests, but if a client tries to access data that does not belong to them, or does not exist, our API will not be able to send them what they request.
+> 💡 A REST API returns data based on what a client requests, but if a client tries to access data that does not belong to them, or does not exist, our API will not be able to send them what they request.
 
-> :bulb: An HTTP code is used to determine the result of a request or to indicate an error to the client. These codes are essential for the proper functioning of HTTP communication services. It is therefore essential to properly setup your server to return the codes adapted to the situation.
+> 💡 An HTTP code is used to determine the result of a request or to indicate an error to the client. These codes are essential for the proper functioning of HTTP communication services. It is therefore essential to properly setup your server to return the codes adapted to the situation.
 
 Change your route **GET** `/health` to always return the status `200` and always display the message `OK`.
 
@@ -150,7 +150,7 @@ Now all you have to do is create these different routes:
 
 ## Step 04 : Always think about scaling
 
-> :bulb: Environment variables are variables used by your operating system in many areas. They are visible by typing `env` in your terminal. 
+> 💡 Environment variables are variables used by your operating system in many areas. They are visible by typing `env` in your terminal. 
 
 > These variables are used when you deploy an application in production to secure passwords and private identifiers. It is therefore essential to know how to use them in your code 😉
  
@@ -164,7 +164,7 @@ Next, create a file `.envrc` which will export the following environment variabl
   - SERVER_PORT=8080
   - HELLO_MESSAGE=world
 
-:warning: You will also need to install [direnv](https://direnv.net/) to load the variables into your environment with the `direnv allow`.
+⚠️ You will also need to install [direnv](https://direnv.net/) to load the variables into your environment with the `direnv allow`.
 
 In the file `src/serverConfig.ts`, retrieve these two environment variables and export them.
 
@@ -177,7 +177,7 @@ Create a route **GET** `/hello` to use the variable `HELLO_MESSAGE` as a respons
       - Set Status 404
       - Return `No Message Defined`
 
->:bulb: If your `.envrc` contains private variables, it is imperative not to push it on the repo.  
+>💡 If your `.envrc` contains private variables, it is imperative not to push it on the repo.  
 > The best practice is to create a `envrc.example` file containing the various variables but without their values, in order to indicate what will subsequently be needed, then fill it in and rename it to `.envrc`.
 
 > It is important to think from the beginning of the application about integrating your server into a web architecture by placing as many variables as possible that may change in the environment :floppy_disk:
@@ -219,7 +219,7 @@ const myMiddleware = (req: Request, res: Response, next: NextFunction) => {
 
 ```
 
-> :bulb: Middlewares can also be used to set up a logger, manage permissions etc.
+> 💡 Middlewares can also be used to set up a logger, manage permissions etc.
 
 - Create a route `/private`.
 - You can see that in the second parameter we have the middleware
@@ -238,7 +238,7 @@ Create a new variable in your `.envrc`
 AUTHORIZATION_PORT=mykey
 ```
 
-:warning: Your objective is to verify the value of the user in his headers, which must be equal to your variable `AUTHORIZATION_PORT`
+⚠️ Your objective is to verify the value of the user in his headers, which must be equal to your variable `AUTHORIZATION_PORT`
 
 ### Write a middleware
 Create a file `middlewares.ts`, write a middleware that will check the headers of the `/private` route with as key `authorization`.<br>

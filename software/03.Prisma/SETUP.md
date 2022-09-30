@@ -36,7 +36,7 @@ You can also display the database via a web interface:
 ```sh
 npx prisma studio
 ```
-:bulb: If you have an error while running this command, try to update the `prisma` packages:
+💡 If you have an error while running this command, try to update the `prisma` packages:
 ```
 npm add -D prisma@3.15.0 && npm add @prisma/client@3.15.0
 ```

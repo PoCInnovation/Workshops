@@ -21,7 +21,7 @@ Log-In and create new Circuit.
   
 >**Constraints**: You don't have to produce any code for this execise. You may not use the 3.3V pin of your board.  
   
->:warning: Can the led take the voltage sent by the board ? 
+>⚠️ Can the led take the voltage sent by the board ? 
 
 #
 
@@ -75,7 +75,7 @@ Log-In and create new Circuit.
   
 >**Constraints**: Null.
 
->:warning: Learn more about the `PWM` pins
+>⚠️ Learn more about the `PWM` pins
 
 #
 
@@ -144,7 +144,7 @@ Log-In and create new Circuit.
   
 >**Constraints**: Null.
 
->:warning: INPUT_PULLUP
+>⚠️ INPUT_PULLUP
 
 #
 
@@ -212,7 +212,7 @@ Log-In and create new Circuit.
   
 >**Constraints**: Null.  
 
->:warning: How to make your code clean in order to light each segment properly? and get a correct display !
+>⚠️ How to make your code clean in order to light each segment properly? and get a correct display !
 
 #
 
@@ -231,7 +231,7 @@ Log-In and create new Circuit.
   
 >**Constraints**: Null.  
 
->:warning: check Keypad.h
+>⚠️ check Keypad.h
 
 #
 
@@ -250,7 +250,7 @@ Log-In and create new Circuit.
   
 >**Constraints**: Null.  
 
->:warning: check LiquidCrystal.h and what is the purpose of the potentiometer ?
+>⚠️ check LiquidCrystal.h and what is the purpose of the potentiometer ?
 
 >:green_square: **Bonus**: Create game with Keypad and lcd display (ENJOY :))
 
@@ -271,11 +271,11 @@ When I click on 0, the first LED of my row turns on and when I press 0 again, th
   
 >**Constraints**: Null.  
 
->:warning: check IRremote.h and [IR (infrared)](https://learn.sparkfun.com/tutorials/ir-communication/all)
+>⚠️ check IRremote.h and [IR (infrared)](https://learn.sparkfun.com/tutorials/ir-communication/all)
 
 #
 
-## :tada: Congratulation !
+## 🎉 Congratulation !
 
 You now know the basics of the arduino. Feel free to use your imagination to create circuits. Or combine the previous exercises for new results.
 

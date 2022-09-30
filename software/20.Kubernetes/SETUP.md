@@ -17,7 +17,7 @@ sudo sh get-docker.sh
 
 Once the installation is complete, start the docker service with `sudo systemctl start docker`
 
-> :bulb: If you want Docker to run every time you start your computer, run `sudo systemctl enable docker`
+> 💡 If you want Docker to run every time you start your computer, run `sudo systemctl enable docker`
 
 If your installation was successful, you should be able to run the following command without any issues.
 

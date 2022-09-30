@@ -1,14 +1,14 @@
 # Workshop 12 - Create a web application with GraphQL and Apollo
 
-:heavy_check_mark: Learn GraphQL API concept
+✔️ Learn GraphQL API concept
 
-:heavy_check_mark: Interact with a GraphQL API
+✔️ Interact with a GraphQL API
 
-:heavy_check_mark: Define your own GraphQL schema
+✔️ Define your own GraphQL schema
 
-:heavy_check_mark: Build a basic GraphQL API
+✔️ Build a basic GraphQL API
 
-:heavy_check_mark: Use GraphQL in a React application
+✔️ Use GraphQL in a React application
 
 ## Step 0 - Initialization
 
@@ -110,7 +110,7 @@ First, you must modify the schema in `src/schema/schema.graphql` to define your 
 
 Then you can define your queries and mutation in `src/resolver/Hello/` folder.
 
-> :bulb: You can auto feed your database through the `yarn feed`.
+> 💡 You can auto feed your database through the `yarn feed`.
 
 ##### Resources
   - [Apollo schema](https://www.apollographql.com/docs/tutorial/schema/)
@@ -133,7 +133,7 @@ Then, create resolvers that can read of `Category` and `Product` :
  - a query `products` that return all products
  - a query `product` takes an `id` as parameter and returns the product.
 
-> :bulb: You can add comments that will be displayed in the playground with `"`.
+> 💡 You can add comments that will be displayed in the playground with `"`.
 
 You can now write `resolvers` in `src/resolver/Categories` and `src/resolver/Products`.
 
@@ -153,7 +153,7 @@ Create two `input` that defines arguments for mutation :
  - `CategoryInput`: input fields for a new category
  - `ProductInput`: input fields for a new product
 
-:bulb: Don't forget to add fields from relation to allow connection between entities.
+💡 Don't forget to add fields from relation to allow connection between entities.
 
 Add the following `Mutation` in `src/schema/schema.graphql`:
  - `createProduct` that takes an `input` of type `ProductInput` as parameter and returns the product created in the database.
@@ -163,7 +163,7 @@ Add the following `Mutation` in `src/schema/schema.graphql`:
  - `updateCategory` that takes an `id` and an `input` of type `CategoryInput` as parameters and returns the category updated in the database.
  - `deleteCategory` that takes an `id` as parameter and returns the category deleted from the database.
 
-> :bulb: Don't forget to write documentation for your mutation and queries with commentaries
+> 💡 Don't forget to write documentation for your mutation and queries with commentaries
 
 Your schema is defined, you can now write `resolvers` in `src/resolver/Categories` and `src/resolver/Products`.
 

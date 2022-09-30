@@ -13,13 +13,13 @@
 
 In this Workshop, you will learn :
 
-:heavy_check_mark: Run a web application with `docker-compose`
+✔️ Run a web application with `docker-compose`
 
-:heavy_check_mark: The basics of HTTP
+✔️ The basics of HTTP
 
-:heavy_check_mark: The basics of IPFS, and why in some cases it is better than HTTP
+✔️ The basics of IPFS, and why in some cases it is better than HTTP
 
-:heavy_check_mark: How to change a centralized storage into a distributed one via IPFS with Infura !
+✔️ How to change a centralized storage into a distributed one via IPFS with Infura !
 
 ## :wrench: Step 0 - Setup
 Please follow each instruction on the [SETUP.md](SETUP.md) file.
@@ -38,7 +38,7 @@ You have to only use this command once. After several steps, you should have thi
 Successfully built a998a543950c
 Successfully tagged music-share_web:latest
 ```
-> :bulb: The number `a998a543950c` is the id of your container, it's ok if yours is different.
+> 💡 The number `a998a543950c` is the id of your container, it's ok if yours is different.
 
 Then, each time you want to launch your website, run :
 ```bash
@@ -111,21 +111,21 @@ that the server is ok to give us that page from the `/` route, and it has been d
 ![](http_request_flowchart.png)
 *Scheme of a HTTP request*
 
->:bulb: What does `POST` means ?
+>💡 What does `POST` means ?
 
 `POST` is another **HTTP method** than `GET`. When you fill the form earlier, it was **you** that was giving the server
 some information :that is the main difference between `POST` and `GET`.
  
-> :bulb: Learn more about HTTP methods [here](https://www.restapitutorial.com/lessons/httpmethods.html).
+> 💡 Learn more about HTTP methods [here](https://www.restapitutorial.com/lessons/httpmethods.html).
 
 Now, look at our [/media/static](./sources/musicshare/media/static) folder : you have the mp3 file you just downloaded in here !
->:bulb: This is how HTTP works. When retrieving data, HTTP focuses on **location**. Have you noticed the url ?
+>💡 This is how HTTP works. When retrieving data, HTTP focuses on **location**. Have you noticed the url ?
 First, it is `0.0.0.0` which is your local IP; then `:8000` to signify the port. Finally, the routes or file you want to
 get, joined by a `/`. That format does not ring a bell to you ? It is like a path !
 
 ## Step 2 - IPFS
 
-> :bulb: HTTP is cool but has its limits : if the server is down, you won't be able to retrieve the data stored. Furthermore,
+> 💡 HTTP is cool but has its limits : if the server is down, you won't be able to retrieve the data stored. Furthermore,
 your government can easily block access to certain servers by their IPs that host particular website for censure purposes.
 Let's see how IPFS answers this issues.
 

@@ -1,12 +1,12 @@
 # Workshop 18 - Setup Kafka in a microservice architecture
 
-:heavy_check_mark: Start Kafka and ZooKeeper using docker compose
+✔️ Start Kafka and ZooKeeper using docker compose
 
-:heavy_check_mark: Create a producer service
+✔️ Create a producer service
 
-:heavy_check_mark: Create two consumer services
+✔️ Create two consumer services
 
-:heavy_check_mark: Publish messages into Kafka
+✔️ Publish messages into Kafka
 
 ## Introduction
 
@@ -70,7 +70,7 @@ Then, create a second service, named `kafka`:
 - [Kafka listeners explained](https://www.confluent.io/blog/kafka-listeners-explained/)
 - [Kafka configuration properties](https://jaceklaskowski.gitbooks.io/apache-kafka/content/kafka-properties.html)
 
-### :heavy_check_mark: **Validation**:
+### ✔️ **Validation**:
 
 Run `docker-compose up --build -d`, wait 30 seconds and in a new terminal run `docker-compose logs kafka | grep -i 
 started`. 
@@ -118,7 +118,7 @@ You'll use the [Go programming language](https://golang.org/), and the package [
 - [How to send message from any type ? Use bytes](https://pkg.go.dev/github.com/sclasen/sarama#ByteEncoder)
 - [Sarama documentation](https://pkg.go.dev/github.com/sclasen/sarama#section-documentation)
 
-### :heavy_check_mark: **Validation**:
+### ✔️ **Validation**:
 
 Run the following command while your Kafka cluster is running:
 ```shell
@@ -160,7 +160,7 @@ First, you will create the actual consumer and then consume messages.
 - [Consumer with Sarama](https://pkg.go.dev/github.com/Shopify/sarama#ConsumerGroup)
 - [How to consume partitions ?](https://pkg.go.dev/github.com/Shopify/sarama#Consumer)
 
-### :heavy_check_mark: **Validation**:
+### ✔️ **Validation**:
 Start your Kafka cluster using `docker-compose up --build`.
 
 Then, start the consumer in a new terminal using `go run main.go` in the `kitchen` folder.
@@ -188,7 +188,7 @@ We split the kitchen and manager service to improve the single-responsibility fe
 ### :books: **Documentation**:
 - [Working with files](https://gobyexample.com/writing-files)
 
-### :heavy_check_mark: **Validation**:
+### ✔️ **Validation**:
 Use the same commands as in the previous step, and start the new consumer in the `manager` folder using `go run main.go`.
 
 It should have created a file named `log.txt` with the following sentence inside: `Received an order for a pizza margherita at table 17 !`.

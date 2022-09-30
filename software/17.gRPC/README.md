@@ -1,14 +1,14 @@
 # Workshop 17 - Discover gRPC with go
 
-:heavy_check_mark: Design a gRPC service
+✔️ Design a gRPC service
 
-:heavy_check_mark: Write a protocol buffer file
+✔️ Write a protocol buffer file
 
-:heavy_check_mark: Make gRPC unary call
+✔️ Make gRPC unary call
 
-:heavy_check_mark: Implement a gRPC server
+✔️ Implement a gRPC server
 
-:heavy_check_mark: Implement a gRPC client
+✔️ Implement a gRPC client
 
 # Introduction
 
@@ -25,7 +25,7 @@ one of the other ways to communicate - like REST does.
 - It is a framework developed by Google on top of the [RPC protocol](https://en.wikipedia.org/wiki/Remote_procedure_call).
 - When dealing with gRPC, the data sent between the client and the server is packed in a specific format : protobuffers.
 
-> :bulb: Okay, but why do we use protobuf and not JSON ? [JSON are nice](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON#json_structure) : they are human-readable, easy to build and to extract.
+> 💡 Okay, but why do we use protobuf and not JSON ? [JSON are nice](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON#json_structure) : they are human-readable, easy to build and to extract.
 In fact, it is the data serialization method used in a lot of REST APIs.
 
 **But why gRPC instead of REST ?**
@@ -34,7 +34,7 @@ In fact, it is the data serialization method used in a lot of REST APIs.
 - gRPC is *kinda* easier to implement, but not faster
 - gRPC uses HTTP/2, which is better than HTTP 1.1, the one that REST uses
 
-You can learn more about the main differences between these two models [on this great blogpost](https://www.imaginarycloud.com/blog/grpc-vs-rest/).
+You can learn more about the main differences between these two models [on this great blog post](https://www.imaginarycloud.com/blog/grpc-vs-rest/).
 I highly recommend that you take a look at the article, it is easy to understand, and you will learn a lot of stuff !
 
 ## Step 0 - Setup
@@ -72,7 +72,7 @@ These two things are :
 
 - [Protobuf language guide](https://developers.google.com/protocol-buffers/docs/proto)
 
-### :heavy_check_mark: **Validation**:
+### ✔️ **Validation**:
 Run the following command and nothing should have appeared on your screen:
 ```shell
 protoc --go_out=messenger --go-grpc_out=messenger messenger/messenger.proto
@@ -100,7 +100,7 @@ Before implementing both the server and the client, you will implement the main 
 
 - [Command line args in go](https://gobyexample.com/command-line-arguments)
 
-### :heavy_check_mark: **Validation**:
+### ✔️ **Validation**:
 Run the following commands:
 ```shell
 go run main.go "-s"
@@ -169,7 +169,7 @@ In the `main.go` file:
 
 - Look at the generated protobuf file :)
 
-### :heavy_check_mark: **Validation**:
+### ✔️ **Validation**:
 Run the following command:
 ```shell
 go run main.go -s
@@ -208,7 +208,7 @@ In the `main.go` file:
 
 - Look at the protobuf generated file :)
 
-### :heavy_check_mark: **Validation**:
+### ✔️ **Validation**:
 - Run the server
 ```shell
 go run main.go -s
@@ -243,7 +243,7 @@ triggers whenever you hit `CTRL + C`.
 ### :books: **Documentation**:
 - [Signals in go](https://pkg.go.dev/os/signal)
 
-### :heavy_check_mark: **Validation**:
+### ✔️ **Validation**:
 Try to hit `CTRL + C` while running the server, and it should shut down without any error message.
 
 ## To go further

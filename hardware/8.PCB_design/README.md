@@ -96,7 +96,7 @@ A new page opens up, use the default parameters.
 Create the board in such a way that the arduino board's usb port in facing the
 right side and the led is on top, with the buttons underneath.
 
-## :tada: Congratulation !
+## 🎉 Congratulation !
 
 ## 2. Medium PCB
 
@@ -230,7 +230,7 @@ Here's a solution : add a battery !
 
 Don't forget to add a tension regulator, a charging system and a level indicator
 
-## :tada: Congratulation ! :tada:
+## 🎉 Congratulation ! 🎉
 
 ### Bonus
 
@@ -253,7 +253,7 @@ useful to you here.
 
 ## Conclusion
 
-Congratulations !  :tada:
+Congratulations !  🎉
 You made your very own PCB.
 You can even order your first creation directly from your schematics.
 

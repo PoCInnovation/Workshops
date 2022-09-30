@@ -1,10 +1,10 @@
 # Workshop 6 - REST API with NestJS
 
-:heavy_check_mark: Discover [Nest](https://nestjs.com/), a framework to build server-side NodeJS applications with full TypeScript support.
+✔️ Discover [Nest](https://nestjs.com/), a framework to build server-side NodeJS applications with full TypeScript support.
 
-:heavy_check_mark: Learn the concept of decorator
+✔️ Learn the concept of decorator
 
-:heavy_check_mark: Create services to interact with a mocked database
+✔️ Create services to interact with a mocked database
 
 In this workshop, you'll use [Nest](https://nestjs.com/), a framework built on top of [Express](https://expressjs.com/) to create efficient and scalable apps. It's a very opinionated framework that provides everything you need and has built-in integration with many other frameworks (queues, type ORMs, validators, documentation, and much more!).  
 Nest fully supports TypeScript (in fact it's [built in TypeScript](https://github.com/nestjs/nest)).
@@ -33,7 +33,7 @@ You can now go to http://localhost:3000/article in your browser (or using Postma
 > As said before, the command `start:dev` makes use of `file watchers`. Every time you save a file, Nest will automatically rebuild the server with the updated file(s).  
 > This way you won't need to restart it manually after each modification 😉
 
-> :bulb: As you can see, AppService is an AppModule Provider (in `app.module.ts`) and it's [injected](https://docs.nestjs.com/providers#dependency-injection) in the controller (in the constructor).
+> 💡 As you can see, AppService is an AppModule Provider (in `app.module.ts`) and it's [injected](https://docs.nestjs.com/providers#dependency-injection) in the controller (in the constructor).
 
 ## Step 2: Variable decorator
 
@@ -92,7 +92,7 @@ With [controller routing](https://docs.nestjs.com/controllers#routing) you can s
 
 You can find a Provider DatabaseService [here](https://github.com/PoCInnovation/Workshops/blob/master/software/06.Nest/src/step3/database.service.ts). This provider is simulating a database by using an array as storage. You will use it for the last step as setting up and using a real database is a bit out of scope for this workshop.
 
-> :bulb: Make sure the import statement of `article.dto.ts` is correct in the `database.service.ts`. it may not be according to the file locations
+> 💡 Make sure the import statement of `article.dto.ts` is correct in the `database.service.ts`. it may not be according to the file locations
 
 As for the AppService, you will have to add the DatabaseService in the Module Provider list and `inject` it (via the constructor) in AppService.
 

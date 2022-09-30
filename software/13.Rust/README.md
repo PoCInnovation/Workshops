@@ -10,7 +10,7 @@
 
 All the required information to install dependencies can be found in [SETUP.md](./SETUP.md).
 
-> :bulb: We recommend you to follow the [Tour of Rust](https://tourofrust.com/index.html) for this workshop.
+> 💡 We recommend you to follow the [Tour of Rust](https://tourofrust.com/index.html) for this workshop.
 
 ## Introduction to Rust
 
@@ -23,9 +23,9 @@ For the first exercise, we simply ask you to write `Hello world!` in your termin
 To do this, create a file `main.rs` in a folder called `src`.
 
 
-> :bulb: Rust file has `rs` extension.
+> 💡 Rust file has `rs` extension.
 
-> :bulb: Now, that you have created a file `main.rs`, you can use other files. To use them in your `main.rs` you have to integrate the modulude with the keyword `mod` ([read more](https://stackoverflow.com/questions/26388861/how-to-include-a-module-from-another-file-from-the-same-project))
+> 💡 Now, that you have created a file `main.rs`, you can use other files. To use them in your `main.rs` you have to integrate the module with the keyword `mod` ([read more](https://stackoverflow.com/questions/26388861/how-to-include-a-module-from-another-file-from-the-same-project))
 
 ##### Resources
 
@@ -47,7 +47,7 @@ This function must return true if the word given in parameter is a palindrome an
  - [New function](https://doc.rust-lang.org/book/ch03-03-how-functions-work.html)
  - [The `bool` in Rust](https://doc.rust-lang.org/std/primitive.bool.html)
 
-> :bulb: To easily test your functions during this workshop, we advise you to look at this tool. [`assert_eq`](https://doc.rust-lang.org/std/macro.assert_eq.html)
+> 💡 To easily test your functions during this workshop, we advise you to look at this tool. [`assert_eq`](https://doc.rust-lang.org/std/macro.assert_eq.html)
 
 ### Step 3 - Fibonacci sequence
 
@@ -58,7 +58,7 @@ Create a file `fibonacci.rs` for this new function.
 For the third exercise, create a function that takes one parameter:
 - A number `max` with type `usize` that represent the number of element to compute.
 
-You must now display the sequence of Fibbonaci from the number of starts to the maximum value.
+You must now display the sequence of Fibonacci from the number of starts to the maximum value.
 
 Here is a small example of the beginning of the Fibonacci sequence :
 
@@ -81,7 +81,7 @@ First, create a `linked_list` structure with the following attributes :
 - `value: i32`
 - `next` which has the structure type.
 
-> :bulb: It's up to you to figure out how to initialize the structure to make a linked list.
+> 💡 It's up to you to figure out how to initialize the structure to make a linked list.
 
 In a second step, create a vector `vector` which will be transformed into a linked list.
 
@@ -111,7 +111,7 @@ To do this, you have to make a calculator that can do :
 
 between two values that must be retrieved one after the other from the user's input.
 
-> :bulb: Pay attention to your error handling !
+> 💡 Pay attention to your error handling !
 
 Display the result of the calculation in your terminal.
 
@@ -137,7 +137,7 @@ Get a string as parameter, from this word you have to apply or not the following
 
 - If the word starts with a consonant, you must take the first letter of the word and place it in the first position of the suffix.
 
-> :bulb: To help you visualize the exercise, here are some examples :
+> 💡 To help you visualize the exercise, here are some examples :
 
 ```Rust
 "PoC"        -->    "oC-Pay"
@@ -154,7 +154,7 @@ As you can see, try to do the same thing, but for whole sentences.
 
 To do this reuse the same function, but create a loop in your function.
 
-> :bulb: Here are some examples too:
+> 💡 Here are some examples too:
 
 ```Rust
 "Live as if you were to die tomorrow. Learn as if you were to live forever."

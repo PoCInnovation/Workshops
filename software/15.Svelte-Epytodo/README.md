@@ -52,7 +52,7 @@ The register button should trigger a function that will use [axios](https://www.
 
 You should get a `token` as a response. Store it in the `token` variable, you'll be able to use it to authenticate.
 
-:warning: axios works in an asynchronous way, so the keyword `async / await` will become very handy
+⚠️ axios works in an asynchronous way, so the keyword `async / await` will become very handy
 
 
 > If you want to go further, you could apply some [jwt good practices](https://blog.logrocket.com/jwt-authentication-best-practices/), this way to store the token is actually not really safe...

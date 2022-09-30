@@ -27,7 +27,7 @@ Then, install the dependencies we will be using for build our app:
 npm install @mui/material @emotion/react @emotion/styled @mui/icons-material
 npm install -D @types/material-ui
 ```
-:bulb: You will figure out later their purposes!
+💡 You will figure out later their purposes!
 
 All you have to do now is to open the `react-workshop-poc` folder in VSCode (if you just open the `src` folder, ESlint won't be able to give warnings)
 

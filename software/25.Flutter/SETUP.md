@@ -59,7 +59,7 @@ To create a smartphone emulator:
 - Open `Android Studio`
 - Go to `Virtual Device Manager`
 - Click on `Create device`
-- Selecte `Pixel 4`
+- Select `Pixel 4`
 - Click on `Download` to the `API 33`
 - Then `Next` and `Finish`
 
@@ -88,7 +88,7 @@ cd myapp
 flutter run
 ```
 
-To run the project with `VSCode`, if you have downloaded the `Flutter` extension, you juste have to open the `lib/main.dart` file and you will have a button `Start Debugging` in top right of your VSCode.
+To run the project with `VSCode`, if you have downloaded the `Flutter` extension, you just have to open the `lib/main.dart` file and you will have a button `Start Debugging` in top right of your VSCode.
 
 **If it start the application in your emulator and launch the *Flutter Demo Home Page*, then you can start the exercises!**
 

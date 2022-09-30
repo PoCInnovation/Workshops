@@ -10,7 +10,7 @@ Please make sure you have the following programs installed:
 ```shell
 $ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
-> :bulb: We recommend you to download the vscode extension [Rust](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust) for Rust or Jetbrains extension [IntelliJ Rust](https://www.jetbrains.com/fr-fr/rust/).
+> 💡 We recommend you to download the vscode extension [Rust](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust) for Rust or JetBrains extension [IntelliJ Rust](https://www.jetbrains.com/fr-fr/rust/).
 
 ## 2. Project
 
@@ -30,6 +30,6 @@ $ cargo run
 
 ## 3. Start workshop
 
-> :bulb: We recommend you to follow the [Tour of Rust](https://tourofrust.com/index.html) for this workshop.
+> 💡 We recommend you to follow the [Tour of Rust](https://tourofrust.com/index.html) for this workshop.
 
 [Go back to the exercise](./README.md)

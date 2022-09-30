@@ -1,11 +1,11 @@
 # Part 1: Git
 
 
-:heavy_check_mark: The basics of git (you're probably already familiar with these)
+✔️ The basics of git (you're probably already familiar with these)
 
-:heavy_check_mark: A good, easy to use git workflow with branches
+✔️ A good, easy to use git workflow with branches
 
-:heavy_check_mark: Extra stuff about why doing stuff one way or the other
+✔️ Extra stuff about why doing stuff one way or the other
 
 
 ## Introduction
@@ -44,7 +44,7 @@ There are multiple ways to initialize a repository locally.
 Throughout all this workshop, we will make references to local and remote repository.
 
 You have to understand that the remote repository is the one **hosted onto the server** (for example GitHub's servers).
-> :bulb: This is where people will retrieve others work from.
+> 💡 This is where people will retrieve others work from.
 
 Then you have the local repository which is the **copy of the remote** one that you have on your computer.
 This is where you will make all your modifications before pushing those.
@@ -53,7 +53,7 @@ This is where you will make all your modifications before pushing those.
 
 The most known one is to clone a repository using `git clone`.
 
-> :bulb: It is recommended to clone via SSH rather than HTTPS.
+> 💡 It is recommended to clone via SSH rather than HTTPS.
 
 <details>
   <summary>HTTPS vs SSH clone</summary>
@@ -118,7 +118,7 @@ You can use `git commit` without the `-m` option, this will open your default ed
 
 By default, `vi` will be your default editor, if you want to change it, you can use `git config` and change the value of `core.editor` to your preferred editor.
 
-> :bulb: You can change your default editor for every program by setting the environment variable `EDITOR`
+> 💡 You can change your default editor for every program by setting the environment variable `EDITOR`
 
 If you wish to include the modifications you have made to all the files already tracked by git but do not wish to add untracked files you can simply use the `-a` option.
 Think about [signing off](https://developercertificate.org/) your commits when you contribute to public repos with `-s`.
@@ -149,7 +149,7 @@ Here again you can simply retrieve those changes using `git pull`
 
 In case you have made changes locally, you will need to put these changes away, you can do this using the `git stash` command.
 
-> :warning: `pull` is only calling other git commands under the hood.  
+> ⚠️ `pull` is only calling other git commands under the hood.  
 > Indeed, you can set the parameter `pull.rebase` to `true` or `false` in your `git config` to control how `git pull` acts.  
 > By default it will run a `git fetch` followed by a `git merge origin/my-super-branch`, if you set `pull.rebase` to `true`, it will run a `git rebase origin/my-super-branch` instead of the merge.
 
@@ -172,7 +172,7 @@ There are multiple ways of doing this but let's see a pretty simple one using th
 
 So you have made changes to test stuff out and realize that you've made a lot of changes and don't want to undo these by hand.
 You can just run `git stash push <files with modifications to drop>` and `git stash drop`
-> :warning: Be careful because it isn't retrievable past this point.
+> ⚠️ Be careful because it isn't retrievable past this point.
 
 For your knowledge, `git stash` also has other commands like `pop` and `apply`.
 `apply` allows you to reapply the changes stored, whereas `pop`, runs `apply` followed by `drop` when there are no conflicts.
@@ -182,9 +182,9 @@ For your knowledge, `git stash` also has other commands like `pop` and `apply`.
 Let's say you have committed something locally but not pushed it yet, and you realize that it was a mistake, you can easily delete it with `git reset`.
 
 The exact command would be `git reset --hard HEAD~N` where N is the number of commits you want to delete.
-> :warning: Once again, be careful with this command, you won't be able to retrieve your deleted local commits after
+> ⚠️ Once again, be careful with this command, you won't be able to retrieve your deleted local commits after
 
-> :bulb: This could also be used to remove sensitive information pushed by mistake, but you would have to rewrite the commit history which isn't that great.
+> 💡 This could also be used to remove sensitive information pushed by mistake, but you would have to rewrite the commit history which isn't that great.
 
 ### Remove a mistake made by a pushed commit
 
@@ -209,7 +209,7 @@ You will want to create a branch that has the content of main to be able to work
 Here there are also multiple possibilities, but let's stick with the easiest and safest way, using `git switch`
 
 You can simply create a branch and switch to it at the same time using `git switch -c <my branch name>`.
-> :bulb: Yes, `git checkout` can also be used but [`checkout` is a legacy command that allows more than just switching to branch](https://linuxhandbook.com/git-switch-checkout/), so we'll stick to `git switch` here.
+> 💡 Yes, `git checkout` can also be used but [`checkout` is a legacy command that allows more than just switching to branch](https://linuxhandbook.com/git-switch-checkout/), so we'll stick to `git switch` here.
 
 ### :pushpin: Tasks:
 
@@ -234,7 +234,7 @@ After that, you will be able to merge your work into `main`.
 
 Now that you are completely up-to-date with `main` and that you have finished your feature, you can switch to main and use `git merge` or `git rebase` with your feature branch to apply the changes to `main`, and push it.
 
-> :bulb: This process can be made using Pull Requests on GitHub, but this is not the focus right now.
+> 💡 This process can be made using Pull Requests on GitHub, but this is not the focus right now.
 
 ### :pushpin: Task:
 

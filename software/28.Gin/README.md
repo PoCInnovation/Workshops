@@ -1,12 +1,12 @@
 # Workshop 28 - API REST in Go with Gin
 
-:heavy_check_mark: Learn the basics of REST API.
+✔️ Learn the basics of REST API.
 
-:heavy_check_mark: Discover the basic features of the [gin](https://github.com/gin-gonic/gin) framework.
+✔️ Discover the basic features of the [gin](https://github.com/gin-gonic/gin) framework.
 
-:heavy_check_mark: Read and write files in Go
+✔️ Read and write files in Go
 
-> :bulb: A quick [documentation](https://searchapparchitecture.techtarget.com/definition/RESTful-API) about REST API.
+> 💡 A quick [documentation](https://searchapparchitecture.techtarget.com/definition/RESTful-API) about REST API.
 
 ## Step 0: Initialization
 

@@ -10,7 +10,7 @@
   - [**`Step 05`** - SetUp IFTTT](#step-05---setup-ifttt)
   - [**`Step 06`** - Let's go code](#step-06---lets-go-code)
   - [**`Step 07`** - Turn ON and turn OFF](#step-07---turn-on-and-turn-off)
-  - [:tada: Congratulation !](#tada-congratulation-)
+  - [🎉 Congratulation !](#tada-congratulation-)
   - [Authors](#authors)
 
 ## Story
@@ -186,7 +186,7 @@ Currently you only send "on" thanks to your voice assistant now it would be nice
 
 Use your voice assistant and turn your LED on and off !
 
-## :tada: Congratulation !
+## 🎉 Congratulation !
 
 You now know the basics of MQTT ESP32. Feel free to use your imagination to impletement IoT Communcation.
 Or combine the previous exercises for new results.

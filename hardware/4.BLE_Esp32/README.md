@@ -14,7 +14,7 @@
   - [**`Step 06`** - Waiting for a message](#step-06---waiting-for-a-message)
   - [**`Step 07`** - Scan BLE](#step-07---scan-ble)
     - [📚 Documentation:](#-documentation-2)
-  - [:tada: Congratulation !](#tada-congratulation-)
+  - [🎉 Congratulation !](#tada-congratulation-)
   - [Authors](#authors)
 
 
@@ -162,14 +162,14 @@ We will:
 We will now create a bluetooth scanner with a second ESP32.
 
 :blub: `#include <BLEScan.h>`, `#include <BLEAdvertisedDevice.h>` <br/>
-> :warning: Be careful to upload one code at a time on each board. <br/>
+> ⚠️ Be careful to upload one code at a time on each board. <br/>
 
 If you find the name of your BLE server in the monitor of your scanner, you have succeeded!
 
 ### 📚 Documentation:
 - [Scan BLE](http://www.neilkolban.com/esp32/docs/cpp_utils/html/class_b_l_e_scan.html)
 
-## :tada: Congratulation !
+## 🎉 Congratulation !
 
 You now know the basics of BLE ESP32.<br/>
 Feel free to use your imagination to create circuits.<br/>

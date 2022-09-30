@@ -1,10 +1,10 @@
 # Workshop 2 - Smart Contracts with Starton
 
-:heavy_check_mark: Create your first smart contract in Solidity
+✔️ Create your first smart contract in Solidity
 
-:heavy_check_mark: Learn how to deploy and interact with a contract
+✔️ Learn how to deploy and interact with a contract
 
-:heavy_check_mark: Discover the Starton tools to easily build blockchain applications
+✔️ Discover the Starton tools to easily build blockchain applications
 
 
 ## Step 0: Initialization
@@ -71,8 +71,8 @@ Go to your [Starton dashboard](https://app.starton.io/) and create an [ERC-20](h
 When your contract is deployed, you need to interact with it!
 You have to make several API calls:
 - The first will check if you really have the generated tokens in your wallet
-> :bulb: You could also see it in an explorer of the blockchain network you published your contract to, but the safest way is still to call the contract directly
-- Then, find an call the route to call the `burn` function of your contract to reduce the token supply :fire:
+> 💡 You could also see it in an explorer of the blockchain network you published your contract to, but the safest way is still to call the contract directly
+- Then, find an call the route to call the `burn` function of your contract to reduce the token supply 🔥
 - Finally, check the balance again too make sure the tokens were destroyed
 
 ## Step 5 - Time for real Solidity

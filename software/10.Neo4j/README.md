@@ -1,16 +1,16 @@
 # Workshop 10 - Discover graph database with Neo4j
 
-:heavy_check_mark: Learn graph database concept
+✔️ Learn graph database concept
 
-:heavy_check_mark: Interact with a graph database
+✔️ Interact with a graph database
 
-:heavy_check_mark: Use an OGM to simplify your development
+✔️ Use an OGM to simplify your development
 
-:heavy_check_mark: Understand Cypher syntax
+✔️ Understand Cypher syntax
 
-:heavy_check_mark: Build basics query through a query builder
+✔️ Build basics query through a query builder
 
-:heavy_check_mark: Test your Typescript code with Jest framework
+✔️ Test your Typescript code with Jest framework
 
 ## Step 0 - Initialization
 
@@ -50,9 +50,9 @@ Hmm yes, we must run a database to work with ! Let's launch [neo4j database](htt
 $ docker run -d --name workshop-poc-neo4j -p 7474:7474 -p 7687:7687 -e NEO4J_AUTH=$NEO4J_USER/$NEO4J_PASSWORD neo4j
 ```
 
-> :warning: You must load your environment to make this commands work !
+> ⚠️ You must load your environment to make this commands work !
 >
-> :bulb: If you don't understand the command, check `docker run` [options](https://docs.docker.com/engine/reference/run/)
+> 💡 If you don't understand the command, check `docker run` [options](https://docs.docker.com/engine/reference/run/)
 
 The container expose :
  - The **graphic interface** on port `7474`, you can go it through this [link](http://localhost:7474/).
@@ -68,7 +68,7 @@ We will use an [OGM](https://en.wikipedia.org/wiki/Object_graph) to simplify our
 - Create a file named `appDatabase.ts` in the `src` folder.
 - In this file, use Neogma to export a database `client` connected to your database.
 
-> :bulb: You should use the `dbConfig` variable to authenticate your client to your database.
+> 💡 You should use the `dbConfig` variable to authenticate your client to your database.
 
 Take a look at the [documentation](https://themetalfleece.github.io/neogma-docs/docs/Getting-Started#initializing) to learn how set up a client.
 
@@ -87,7 +87,7 @@ It should print an empty object like this :
 
 Good job, the database is ready to store some data !
 
-> :bulb: You should take a look at this [link](https://themetalfleece.github.io/neogma-docs/docs/Models/Defining-a-Model#using-the-models-helpers) to see some `helpers` about models.
+> 💡 You should take a look at this [link](https://themetalfleece.github.io/neogma-docs/docs/Models/Defining-a-Model#using-the-models-helpers) to see some `helpers` about models.
 
 ## Step 2 - Books
 
@@ -104,7 +104,7 @@ Create a file named `BooksEntity.ts` and define your entity properties in.
 To do that :
 - Create a [type](https://www.typescriptlang.org/docs/handbook/2/objects.html) `BooksPropertiesI` which define all your fields and their type according to the previous schema. 
   
-> :bulb: You must add a property `id` of type `string` to recognize books that has common values.
+> 💡 You must add a property `id` of type `string` to recognize books that has common values.
 
 - Create an empty interface named `BooksRelationNodesI` to store all your relation, we will fill it later.
 - Create a [type]([type](https://www.typescriptlang.org/docs/handbook/2/objects.html)) `BooksInstance`, which will be equal to the generic type `NeogmaInstance`,  filled with the types we previously defined.
@@ -117,15 +117,15 @@ The `ModelFactory` function takes an object which must contain the following fie
 - `primaryKeyField`: primary key use to recognize entity, here it's `id`.
 - `schema`: defines the data of the model, and applies some constraints to enforce some data safety. 
 
-> :warning: Don't forget to pass the `neogma` client as the second argument !
+> ⚠️ Don't forget to pass the `neogma` client as the second argument !
 
-:bulb: You should take a look at this [link](https://medium.com/neo4j/using-neogma-to-build-a-type-safe-node-js-app-with-a-neo4j-graph-database-f289d79dbc52) to get some examples of entity definition.
+💡 You should take a look at this [link](https://medium.com/neo4j/using-neogma-to-build-a-type-safe-node-js-app-with-a-neo4j-graph-database-f289d79dbc52) to get some examples of entity definition.
 
 ### Function
 
 Let's develop some functions to interact with our entity. It's common to add elementary [CRUD](https://www.sumologic.com/glossary/crud/) functions when you create an entity.
 
-:bulb: Be careful, those operations are asynchronous ! Don't forget to use `async` and `await` keywords.
+💡 Be careful, those operations are asynchronous ! Don't forget to use `async` and `await` keywords.
 You can check this [documentation](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/async_function) for more information.
 
 You must write those function in a file named `BooksModels` in the `entities/Books` folder.
@@ -134,7 +134,7 @@ You must write those function in a file named `BooksModels` in the `entities/Boo
 
 - Create a function `createBook` which takes book properties as parameters expect the id and create a new book in the database.
 
-> :bulb: You should generate a unique id with the [uuid](https://www.npmjs.com/package/uuid) npm package.
+> 💡 You should generate a unique id with the [uuid](https://www.npmjs.com/package/uuid) npm package.
 >
 > The create function return a `BooksInstance`, you should create a utility function to convert it to `BooksPropertiesI`.
 
@@ -151,13 +151,13 @@ You must write those function in a file named `BooksModels` in the `entities/Boo
     
 This function must return the updated book.
 
-> :bulb: Take your time to understand what is the return type of the update function provide by the `Books` factory.
+> 💡 Take your time to understand what is the return type of the update function provide by the `Books` factory.
 
 #### Delete
 
 - Create a function `deleteBook` which takes as parameter an `id` and return nothing.
 
-> :warning: A deleted node must also close all his relation.
+> ⚠️ A deleted node must also close all his relation.
 
 #### Tests
 
@@ -173,7 +173,7 @@ Let's add a new entity named `Authors` in the `entities` folder.
 
 Repeat the same process from step 1 to interact with this new entity.
 
-> :bulb: You can do it very fast because the only things that changes are properties of the entity, the management functions should be the same
+> 💡 You can do it very fast because the only things that changes are properties of the entity, the management functions should be the same
 
 #### Tests
 
@@ -189,13 +189,13 @@ Modify the `BooksEntity.ts` file to add the relation `WriteBy` in your book.
 - Add the relationship `Author` in the `BooksRelationNodeI` interface.
 - Add the relationship `Author` in the `Books` factory.
 
-> :bulb: Take a look at this [documentation](https://themetalfleece.github.io/neogma-docs/docs/Models/Defining-a-Model#using-modelfactory) to understand how add relation in your factory.
+> 💡 Take a look at this [documentation](https://themetalfleece.github.io/neogma-docs/docs/Models/Defining-a-Model#using-modelfactory) to understand how add relation in your factory.
 
 ### Function
 
 Create the `BooksRelations.ts` file and develop three important function :
 
-:warning: This step is very hard and need some research to finish it. Take your time.
+⚠️ This step is very hard and need some research to finish it. Take your time.
 
 - `linkBookToAuthor` which takes as parameters :
   - `bookId`: Book id
@@ -208,7 +208,7 @@ Create the `BooksRelations.ts` file and develop three important function :
 
 You will need to create a utility function that convert the query result into a readable object.
 
-> :bulb: You can create type in the `BookEntity.ts` file. Don't store it in `AuthorEntity.ts` to avoid **circle dependencies problem**.
+> 💡 You can create type in the `BookEntity.ts` file. Don't store it in `AuthorEntity.ts` to avoid **circle dependencies problem**.
 
 
 - `detachBookFromAuthor` which takes as parameters :
@@ -216,13 +216,13 @@ You will need to create a utility function that convert the query result into a 
   - `authorId`: Author id
     This function should delete the relation `WriteBy` between the book and the author and return true if the operation works, false if it failed.
     
-#### Tests
+#### Tests 🧪
 
 You can add the [books-authors.tests.ts](./tests/books-authors.tests.ts) file from the [tests](./tests) folder of that repository to test your work.
 
-> :bulb: You can also use the [tests.zip](./tests/tests.zip) to use the complete test suite of the workshop.
+> 💡 You can also use the [tests.zip](./tests/tests.zip) to use the complete test suite of the workshop.
 >
-> :warning: You will the to modify the `jest.config.js` and replace `testMatch` field with `testMatch: ['**/tests/index.ts'],`
+> ⚠️ You will the to modify the `jest.config.js` and replace `testMatch` field with `testMatch: ['**/tests/index.ts'],`
 
 ## Bonus
 

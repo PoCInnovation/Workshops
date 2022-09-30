@@ -173,7 +173,7 @@ The color will be defined according to the button:
 
 When you press the buttons the color of your RGB LED should change.
 
-## :tada: Congratulation !
+## 🎉 Congratulation !
 
 You now know the basics of WI-FI ESP32. Feel free to use your imagination to create circuits.
 Or combine the previous exercises for new results.

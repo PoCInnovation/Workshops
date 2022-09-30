@@ -62,7 +62,7 @@ Add a new job called `unit-test` composed of **3** steps:
 
 Use command from `step 0` to run tests 
 
-:warning: Your job must run on a container that support Criterion, use the Epitech image
+⚠️ Your job must run on a container that support Criterion, use the Epitech image
 
 Don't forget to define a name for each step, it's important to clarify your workflow.
 

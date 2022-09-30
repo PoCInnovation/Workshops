@@ -1,10 +1,10 @@
 # Workshop 22 - Encore :rocket:
 
-:heavy_check_mark: Discover [Encore](https://encore.dev/) a powerful go framework to develop APIs.  
+✔️ Discover [Encore](https://encore.dev/) a powerful go framework to develop APIs.  
 
-:heavy_check_mark: Learn services logics
+✔️ Learn services logics
 
-:heavy_check_mark: Improve your Go and architecture design skills
+✔️ Improve your Go and architecture design skills
 
 ## Introduction
 
@@ -36,9 +36,9 @@ That endpoint aim to retrieve the parameter from the url.
 Create the function `URLParam` which takes a `string` named `param` as url parameter.
 It should return an object of type `URLParamResponse`  which contains a field  `Message` of type `string`.
 
-:warning: The message's content must be `Received a query with '<$param>' as url parameter`.
+⚠️ The message's content must be `Received a query with '<$param>' as url parameter`.
 
-:bulb: You must [configure your function](https://encore.dev/docs/develop/services-and-apis#access-controls) to be reached through a request to `/url/:param` with the `GET` method.
+💡 You must [configure your function](https://encore.dev/docs/develop/services-and-apis#access-controls) to be reached through a request to `/url/:param` with the `GET` method.
 
 Example
 ```shell
@@ -59,9 +59,9 @@ Create the function `QueryParam` which takes as query parameter two fields :
 
 It should return an object of type `QueryParamResponse` which contains a field `Result` of type `string`.
 
-:warning: The result's content must be `Received a query with param foo='<$Foo>' and param Bar='<$Bar>'`
+⚠️ The result's content must be `Received a query with param foo='<$Foo>' and param Bar='<$Bar>'`
 
-:bulb: You must [configure your function](https://encore.dev/docs/develop/services-and-apis#access-controls) to be reached through a request to `/query` with the `GET` method
+💡 You must [configure your function](https://encore.dev/docs/develop/services-and-apis#access-controls) to be reached through a request to `/query` with the `GET` method
 
 Example
 ```shell
@@ -81,9 +81,9 @@ Create the function `BodyData` which takes a body with two fields :
 
 It should return an object of type `BodyDataResponse` which contains a field `Message` of type `string`
 
-:warning: The message's content must be `Received a body with title ='<$Title>'' and content='<$Content>'`
+⚠️ The message's content must be `Received a body with title ='<$Title>'' and content='<$Content>'`
 
-:bulb: You must [configure your function](https://encore.dev/docs/develop/services-and-apis#access-controls) to be reached through a request to `/body` with a `POST` method.
+💡 You must [configure your function](https://encore.dev/docs/develop/services-and-apis#access-controls) to be reached through a request to `/body` with a `POST` method.
 
 Use the [dashboard](https://encore.dev/docs/observability/dev-dash) to test your function, it should be easier than a `curl` command.
 
@@ -145,7 +145,7 @@ CREATE TABLE packet
 );
 ```
 
-> The purpose of this workshop is not to waste your time with postgresql, we keep it for another workshop :laught:
+> The purpose of this workshop is not to waste your time with postgresql, we keep it for another workshop 😄
 
 Then, you will need to define your entities as go code to easily manage it in our API
 
@@ -153,7 +153,7 @@ Then, you will need to define your entities as go code to easily manage it in ou
 - Create a file `entities.go`.
 - In this file, you will define a [struct](https://gobyexample.com/structs) `Packet` with fields corresponding to the database model.
 
-> :bulb: Don't lost time defining an enumeration if you are not familiar with Go.
+> 💡 Don't lost time defining an enumeration if you are not familiar with Go.
 
 You will also need to export your database client to execute SQL query on your models.
 
@@ -190,9 +190,9 @@ func Placeholder(_ context.Context) error {
 
 Here we are exporting a client from [sqlx](https://pkg.go.dev/github.com/jmoiron/sqlx) ORM, a wrapper around [sql](https://pkg.go.dev/database/sql) to execute query easily.
 
-> :bulb: Note that `encore` provide his own version of the [sql](https://pkg.go.dev/database/sql) package named `sqldb`.
+> 💡 Note that `encore` provide his own version of the [sql](https://pkg.go.dev/database/sql) package named `sqldb`.
 
-:bulb: **In this workshop, you will need to write raw SQL queries to interact with the database. To help you, look at that [little cheatsheet](./help/requests.sql) with all queries involved.**
+💡 **In this workshop, you will need to write raw SQL queries to interact with the database. To help you, look at that [little cheatsheet](./help/requests.sql) with all queries involved.**
 
 #### Packet's time
 
@@ -288,7 +288,7 @@ If you don't notice, there was no instruction about the kind of endpoint your `A
 We don't really want to allow anyone adding an employee so we should be able to authenticate the one that trying to create a resource on our service.<br>
 Storing the caller identity will be too long for a workshop and involve to design `login` and `logout` endpoint, instead we will just use a simple `passphrase` as proof of our identity.
 
-> :warning: I **DON'T** recommend that method in production API, it's just to win time.
+> ⚠️ I **DON'T** recommend that method in production API, it's just to win time.
 
 Encore framework provide an [elegant way](https://encore.dev/docs/develop/auth) to manage our authentication system through a simple keyword : `authHandler`.
 
@@ -338,11 +338,11 @@ Now let's expose your functions.
 
 Those two functions must be public and reachable with a request `POST`. You are free to choose the name of your endpoints.
 
-> :bulb: You can also write some error handling about status. For example, a deliveryman with the status `working` can not handle an other delivery request.
+> 💡 You can also write some error handling about status. For example, a deliveryman with the status `working` can not handle an other delivery request.
 
 #### Who's the owner
 
-> :bulb: This step is a bonus.
+> 💡 This step is a bonus.
 
 I think you notice it but we can't actually see the links between deliverymen and packets when we retrieve our list of packet or deliverymen.
 
@@ -398,9 +398,9 @@ That would be awesome to get something like this when we reach `/deliveryman`
 
 Find a way to get that result.
 
-:bulb: They are views created when initialized the database, maybe that could help you. You can find the `sql` file in `database/migrations/`.
+💡 They are views created when initialized the database, maybe that could help you. You can find the `sql` file in `database/migrations/`.
 
-Congratz ! You finished that workshop and build your own delivery API with [Encore framework](https://encore.dev/).
+Congrats! You finished that workshop and build your own delivery API with [Encore framework](https://encore.dev/).
 
 ## Bonus
 

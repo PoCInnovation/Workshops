@@ -12,7 +12,7 @@
 
 All the required information to install dependencies can be found in [SETUP.md](./SETUP.md).
 
-> :bulb: You may want to take a look at the Svelte [tutorial](https://svelte.dev/tutorial/basics) and [documentation](https://svelte.dev/docs) for this workshop.
+> 💡 You may want to take a look at the Svelte [tutorial](https://svelte.dev/tutorial/basics) and [documentation](https://svelte.dev/docs) for this workshop.
 
 ## Step 1 - Your first component
 
@@ -42,9 +42,9 @@ Create file named `Event.svelte` in `src/components`, it will contain a componen
   - `startingDate` as a `Date`
   - `endDate` as a `Date`
 
-> :bulb: You can export these variables as types with a [script module](https://stackoverflow.com/questions/64064506/export-typescript-type-in-svelte-file) to define your properties.
+> 💡 You can export these variables as types with a [script module](https://stackoverflow.com/questions/64064506/export-typescript-type-in-svelte-file) to define your properties.
 
-> :bulb: You may want to create an array with every month of the year displayed properly. The same applies for the days of the week.
+> 💡 You may want to create an array with every month of the year displayed properly. The same applies for the days of the week.
 
 Then, create two events in your `App.svelte` and display them.
 
@@ -74,13 +74,13 @@ You must add the following fields:
   - `start date`
   - `end date`
 
-> :bulb: The [input](https://developer.mozilla.org/fr/docs/Web/HTML/Element/Input) tag will be useful.
+> 💡 The [input](https://developer.mozilla.org/fr/docs/Web/HTML/Element/Input) tag will be useful.
 
-> :bulb: Take a look at the [on:submit property](https://svelte.dev/repl/8eb540552faa4651a398b182fa5cdd48?version=3.49.0).
+> 💡 Take a look at the [on:submit property](https://svelte.dev/repl/8eb540552faa4651a398b182fa5cdd48?version=3.49.0).
 
 A `button` must appear to cancel the form and another one to submit it. It should add an event to your page.
 
-> :bulb: You should use a [store](https://svelte.dev/tutorial/writable-stores) to synchronize your components.
+> 💡 You should use a [store](https://svelte.dev/tutorial/writable-stores) to synchronize your components.
 
 ##### Resources
 

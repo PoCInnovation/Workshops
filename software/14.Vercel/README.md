@@ -1,14 +1,14 @@
 # Workshop 14 - Discover the Deployment as a Service with Vercel and Netlify
 
-:heavy_check_mark: Learn how you can deploy website without cost 
+✔️ Learn how you can deploy website without cost 
 
-:heavy_check_mark: Explore Vercel x NextJS potential  
+✔️ Explore Vercel x NextJS potential  
 
-:heavy_check_mark: Use professional tool to deploy your application
+✔️ Use professional tool to deploy your application
 
-:heavy_check_mark: Build a basic REST API
+✔️ Build a basic REST API
 
-:heavy_check_mark: Automate your continuous deployment
+✔️ Automate your continuous deployment
 
 ## Step 0 - Setup
 
@@ -34,7 +34,7 @@ In this workshop, we will explore the power of CD as services. Here is a schema 
 
 The objective is to deploy your own blog on [Netlify](https://www.netlify.com/) or [Vercel](https://vercel.com/), here is a really basic [example](https://blissful-dijkstra-a9097f.netlify.app/) of blog with some articles.
 
-> :warning: The primary objective is to discover the power of those platform, don't judge the design.
+> ⚠️ The primary objective is to discover the power of those platform, don't judge the design.
 
 For this workshop, we are going to use [Vercel](https://vercel.com/) because it has a perfect integration with [NextJS](https://nextjs.org/).
 
@@ -46,7 +46,7 @@ Let's start a simple Next project.
 - Create a new project with the **NextJS** template
 - Wait until your project is deployed
 
-> :bulb: There are many templates available [here](https://github.com/vercel/next.js/tree/canary/examples)
+> 💡 There are many templates available [here](https://github.com/vercel/next.js/tree/canary/examples)
 
 Your project is now deployed online.
 
@@ -94,7 +94,7 @@ First, let's write a simple route to understand how [NextJS](https://nextjs.org/
 
 In the `api` folder, create a file `ping.js` that will just respond `pong` when you hit the endpoint.
 
-> :bulb: You should take as example the file `hello.js`.
+> 💡 You should take as example the file `hello.js`.
 
 > You can run your project with `yarn dev` or `npm run dev`.
 
@@ -116,7 +116,7 @@ It must :
 
 The command below should print `Success`
 
-> :bulb: Next will automatically reload your application, you don't need to restart your server.
+> 💡 Next will automatically reload your application, you don't need to restart your server.
 
 ```shell
 curl -s http://localhost:3000/api/hello/John | grep "Hello John \!" > /dev/null && echo "Success" || echo "Fail"
@@ -163,9 +163,9 @@ It must :
 - On **PUT** : Update post data
 - On **DELETE** : Delete the post
 
-> :bulb: You can use [Postman](https://www.postman.com/) to test your API.
+> 💡 You can use [Postman](https://www.postman.com/) to test your API.
 >
-> :bulb: You should create some `fake data` to easily feed your frontend for the next step
+> 💡 You should create some `fake data` to easily feed your frontend for the next step
 
 #### Deploy
 
@@ -215,9 +215,9 @@ To do it, you know the recipe, just create a new component named `Posts` and a `
 
 You will also need to fetch your data from your API. This [documentation](https://nextjs.org/docs/basic-features/data-fetching) can help you to do it.
 
-> :bulb: To fetch your **properties**, you should use [axios](https://www.npmjs.com/package/axios)
+> 💡 To fetch your **properties**, you should use [axios](https://www.npmjs.com/package/axios)
 
-> :bulb: Thanks to the NextJS integration, you don't need to care about [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing).
+> 💡 Thanks to the NextJS integration, you don't need to care about [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing).
 
 Now you can publish your beautiful blog online and share it with your friends !
 

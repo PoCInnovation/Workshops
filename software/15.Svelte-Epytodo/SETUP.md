@@ -14,7 +14,7 @@ To install `node` and `npm`:
 
 To install [docker](https://www.docker.com/), follow the [tutorial](https://github.com/PoCInnovation/Workshops/blob/master/software/4.Docker/SETUP.md) from our docker workshop.
 
-## 2 - Project boostrap
+## 2 - Project bootstrap
 
 Amazing! You are now ready to create your Svelte project!
 
@@ -41,7 +41,7 @@ $ chmod +x direnv # Give execution permission
 $ sudo mv -t /usr/local/bin direnv # Put it in binary
 ```
 
-> :bulb: You can follow the [official documentation](https://direnv.net/docs/installation.html) to install the binary.
+> 💡 You can follow the [official documentation](https://direnv.net/docs/installation.html) to install the binary.
 
 You must add the following hook in your shell source :
 
@@ -57,7 +57,7 @@ eval "$(direnv hook bash)"
 
 ## 4 - Run container
 
-:warning: Don't forget to download the [source](./source/) directory and move those files in your current directory.
+⚠️ Don't forget to download the [source](./source/) directory and move those files in your current directory.
 
 #### Run the codebase
 
@@ -71,7 +71,7 @@ $ ls -a
 $ docker-compose up -d
 ```
 
-:bulb: The API should run on http://localhost:8000/
+💡 The API should run on http://localhost:8000/
 
 #### Stop codebase
 

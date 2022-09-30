@@ -38,6 +38,6 @@ You should be able to login using this command:
 ```sh
 mysql -u <user> -p
 ```
-> :bulb: For this workshop you can use the `root` user, but it's usually better to [create another user with scoped privileges](https://www.hostinger.com/tutorials/mysql/how-create-mysql-user-and-grant-permissions-command-line).
+> 💡 For this workshop you can use the `root` user, but it's usually better to [create another user with scoped privileges](https://www.hostinger.com/tutorials/mysql/how-create-mysql-user-and-grant-permissions-command-line).
 
 [Go back to the exercises](./README.md)

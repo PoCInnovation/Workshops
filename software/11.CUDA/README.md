@@ -15,21 +15,21 @@ Whenever you push, tests will be launched and will allow you to validate the nex
 
 >:checkered_flag:  **Before you begin, it is necessary that you understand a few terms.**
 
-:heavy_check_mark: Understand the execution model on CUDA
+✔️ Understand the execution model on CUDA
 
-:heavy_check_mark: Understand the memory distribution between Host and Device
+✔️ Understand the memory distribution between Host and Device
 
-:heavy_check_mark: Understand naming conventions on CUDA
+✔️ Understand naming conventions on CUDA
 
 The syntax of CUDA is very similar to C / C++.
 
-> :warning: **You will find a detailed explanation [here](https://dev.to/zenulabidin/an-overview-of-cuda-part-2-host-and-device-code-69d) of the first two points**.
+> ⚠️ **You will find a detailed explanation [here](https://dev.to/zenulabidin/an-overview-of-cuda-part-2-host-and-device-code-69d) of the first two points**.
 
 1. In the resources and during your research, the term used to designate the processor (CPU) as well as the classic memory (RAM) is **Host**.
 
 2. When referring to the graphics card (GPU) as well as its memory (VRAM), the term used is **Device**.
 
-> :warning: **You will find a detailed explanation [here](https://en.wikipedia.org/wiki/Thread_block_(CUDA_programming)) of the last two points**.
+> ⚠️ **You will find a detailed explanation [here](https://en.wikipedia.org/wiki/Thread_block_(CUDA_programming)) of the last two points**.
 
 3. In order to better organize the parallel execution of the GPU cores, called a thread, they are represented on a 3 dimensional frame.
 
@@ -45,17 +45,17 @@ Here is a descriptive diagram, because *a picture is worth a thousand words*, of
 
 > :triangular_flag_on_post: **First task: classic, but effective. Hello CUDA World.**
 
-:heavy_check_mark: Running code using CUDA
+✔️ Running code using CUDA
 
-:heavy_check_mark: Indexing threads
+✔️ Indexing threads
 
-:heavy_check_mark: Understand the execution of a [kernel](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/)
+✔️ Understand the execution of a [kernel](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/)
 
 To familiarize yourself with CUDA, you will start by running a function on two threads.
 
 It should display the string `"Hello CUDA World {idx}"`, where idx is the index of the thread.
 
-> :warning: ***Here are the resources you will need*** :
+> ⚠️ ***Here are the resources you will need*** :
 
 - [Indexing on CUDA](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#built-in-variables).
 
@@ -68,24 +68,24 @@ It should display the string `"Hello CUDA World {idx}"`, where idx is the index 
 > :triangular_flag_on_post: **Second task: add two lists, each containing 1,048,576 elements.
 > The result of the addition must be contained in the second list.**
 
-:heavy_check_mark: Dynamically allocate memory on a GPU
+✔️ Dynamically allocate memory on a GPU
 
-:heavy_check_mark: Use thread indexing in the logic of a program
+✔️ Use thread indexing in the logic of a program
 
-:heavy_check_mark: Copy data from Host to Device
+✔️ Copy data from Host to Device
 
-:heavy_check_mark: Copy data from Device to Host
+✔️ Copy data from Device to Host
 
-:heavy_check_mark: Synchronize the execution of threads
+✔️ Synchronize the execution of threads
 
 *Your CPU goes fast, very fast, but its number of cores is limited (no more than 128 for the best).
 So you will use the very large number of cores available on a GPU to speed up the execution of a program.*
 
 > **All the steps are described in the code from the [resources](https://github.com/PoCInnovation/Workshops/raw/cuda/software/10.CUDA/CUDA_steps.zip) in the form of TODOs.**
 
-> :warning: ***Here are the resources you will need*** :
+> ⚠️ ***Here are the resources you will need*** :
 
-- [The functions used to manage the memory (CRTL + F -> memc.. or mall.. 😉)](https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__MEMORY.html).
+- [The functions used to manage the memory (CTRL + F -> memc.. or mall.. 😉)](https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__MEMORY.html).
 
 - [Thread synchronization](https://www.google.com/).
 
@@ -114,7 +114,7 @@ You must:
 - For a certain number of pixels, generate random values for the fields r, g and b contained between 0 and 255. Small note, the rand function does not exist on CUDA.
 - Calculate the gray value of the pixel.
 
-> :warning: ***Here are the resources you will need*** :
+> ⚠️ ***Here are the resources you will need*** :
 
 - [Did you say random?](https://docs.nvidia.com/cuda/curand/index.html)
 

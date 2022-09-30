@@ -1,10 +1,10 @@
 # Workshop 20 - Introduction to Kubernetes
 
-:heavy_check_mark: Discover the Dev Ops universe
+✔️ Discover the Dev Ops universe
 
-:heavy_check_mark: Learn about basic Kubernetes concepts
+✔️ Learn about basic Kubernetes concepts
 
-:heavy_check_mark: Deploy a web application
+✔️ Deploy a web application
 
 Welcome to this workshop about [Kubernetes](https://kubernetes.io/), the leading container orchestration system! In 3 hours time you will learn how to deploy a web application on Kubernetes and grow familiar with multiple Kubernetes concepts.
 
@@ -14,7 +14,7 @@ Most of this workshop will consist in putting together [YAML files](https://fr.w
 
 To get started, please follow the installation steps listed in [this guide](./SETUP.md).
 
-> :warning: It's essential that you complete the setup guide before attempting any of the steps.
+> ⚠️ It's essential that you complete the setup guide before attempting any of the steps.
 
 ## Step 1 - Hello Pods
 
@@ -36,7 +36,7 @@ If you struggle to understand the syntax, make use of the `kubectl explain`.
 
 For example, `kubectl explain pod` will help you figure out the syntax for defining a Pod resource. You can also ask `kubectl` to explain a specific field like with `kubectl explain pod.metadata`.
 
-> :bulb: Check out the links in the **Resources** section for guidance.
+> 💡 Check out the links in the **Resources** section for guidance.
 
 If you have completed this step successfully, you should be able to see your Pod when running the following command.
 
@@ -140,7 +140,7 @@ The service for the `mongo-deployment` must:
 
 Once it's done, apply all your changes and run `kubectl get all`. Your deployments should be running without any errors.
 
-> :bulb: Make sure to restart any deployment or resource that might be affected by the changes you made.
+> 💡 Make sure to restart any deployment or resource that might be affected by the changes you made.
 
 You can inspect the `server-deployment`'s logs to make sure everything is okay.
 
@@ -167,7 +167,7 @@ You must:
 - Link the `PersistentVolumeClaim` to your `mongo-deployment`.
   - The mount path must be set to `/data/db`. *(This is where MongoDB stores its data)*.
 
-> :bulb: Make sure to restart any deployment or resource that might be affected by the changes you made.
+> 💡 Make sure to restart any deployment or resource that might be affected by the changes you made.
 
 To make sure your `PersistentVolumeClaim` works, we can create a document in our database through the web app.
 

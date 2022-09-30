@@ -1,17 +1,17 @@
 # Workshop 29 - Flask Backend with MySQL
 
-:heavy_check_mark: Discover [Flask](https://flask.palletsprojects.com/), a lightweight framework to build a Python backend.
+✔️ Discover [Flask](https://flask.palletsprojects.com/), a lightweight framework to build a Python backend.
 
-:heavy_check_mark: Interact with a MySQL database
+✔️ Interact with a MySQL database
 
-:heavy_check_mark: Build a basic todo list & authentication system
+✔️ Build a basic todo list & authentication system
 
 
 ## Step 0: Initialization
 
 In this workshop, you'll lean how to use Flask to easily create a REST API performing operations on a database. 
 
-> :bulb: A quick [documentation](https://www.ibm.com/cloud/learn/rest-apis) about REST API.
+> 💡 A quick [documentation](https://www.ibm.com/cloud/learn/rest-apis) about REST API.
 
 All the required information to install the workshop's dependencies are given in the [SETUP.md](./SETUP.md)
 
@@ -27,7 +27,7 @@ Now that everything is installed, let's create a basic Flask application.
 
 To test your route, you can use `flask run` to launch the server and open your browser at http://localhost:5000.
 
-> :bulb: Several options can be provided to `flask run` to customize it's behaviour (the debug mode can be useful to reload the server when your file changes).  
+> 💡 Several options can be provided to `flask run` to customize it's behavior (the debug mode can be useful to reload the server when your file changes).  
 > You can also run your app from your Python file with specific parameters and launch it with `python app.py` 😉 
 
 ## Step 2: Register
@@ -45,10 +45,10 @@ To interact with it, we are also giving you the file `database.py`. It creates t
 > Create a `.env` file and add the corresponding variables, Flask will then automatically load them for you 😉
 
 Create a `/register` endpoint using the POST method. Every call must provide 2 JSON params: an email and a password.
-> :bulb: You can access the params using the [request object](https://flask.palletsprojects.com/en/2.2.x/api/#incoming-request-data)
+> 💡 You can access the params using the [request object](https://flask.palletsprojects.com/en/2.2.x/api/#incoming-request-data)
 
 Once you retrieved those params, add a `create_user` method in `database.py` to insert them in the `user` table.
-> :bulb: The [official documentation of the mysql connector](https://dev.mysql.com/doc/connector-python/en/) will be useful to discover how to perform queries.  
+> 💡 The [official documentation of the mysql connector](https://dev.mysql.com/doc/connector-python/en/) will be useful to discover how to perform queries.  
 > You will also need to write some SQL, here's [a small cheatsheet](https://www.codecademy.com/learn/learn-sql/modules/learn-sql-manipulation/cheatsheet)
 to help you getting starting with SQL :rocket:
 
@@ -59,7 +59,7 @@ Test your route using postman, and don't forget to add some error handling in ca
 Now that we are able to create users, the next logical step is to retrieve a registered user.
 
 But wait, didn't we forget something in the previous step?  
-In a real-world scenario, storing the password without any form of encryption is a really bad practice: any person who manages to access our database could log as any user :warning:
+In a real-world scenario, storing the password without any form of encryption is a really bad practice: any person who manages to access our database could log as any user ⚠️
 
 Update your previous code to hash the password before storing it :lock:
 
@@ -68,7 +68,7 @@ Update your previous code to hash the password before storing it :lock:
 Alright, we can now move on to the next route:  
 Create a `/login` endpoint with the same characteristics than `/register`, but this time you will check if the data given matches an user in your table.
 
-> :bulb: Don't forget what you did just before: the stored password in now hashed 😉
+> 💡 Don't forget what you did just before: the stored password in now hashed 😉
 
 ## Step 4: Add a todo
 
@@ -86,7 +86,7 @@ For this, you'll use the same endpoint `/todos` but with the `GET` method.
 Instead of duplicating your decorators with the only change being the method, you should use [flask_restful](https://flask-restful.readthedocs.io/en/latest/index.html)
 to handle this case in a cleaner way :rocket:
 
-> :bulb: You can return an array of strings corresponding to the todos' content, we don't need the other fields
+> 💡 You can return an array of strings corresponding to the todos' content, we don't need the other fields
 
 ## To go further
 

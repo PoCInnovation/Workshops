@@ -1,10 +1,10 @@
 # Workshop 1 - Kanban App in React
 
-:heavy_check_mark: Learn the basics of [React](https://reactjs.org/) with [TypeScript](https://www.typescriptlang.org/)
+✔️ Learn the basics of [React](https://reactjs.org/) with [TypeScript](https://www.typescriptlang.org/)
 
-:heavy_check_mark: Use the component library [Material UI](https://mui.com/) to quickly build a great UI
+✔️ Use the component library [Material UI](https://mui.com/) to quickly build a great UI
 
-:heavy_check_mark: Have an overview of front end development
+✔️ Have an overview of front end development
 
 <br/>
 
@@ -102,7 +102,7 @@ Then, import it in your `TaskList` component and use the Javascript [map](https:
 
 Finally, use [React Props](https://reactjs.org/docs/components-and-props.html#rendering-a-component) to pass values of each task from your `TaskList` to the `TaskCard` component.
 
-:bulb: When you create a component through an iteration, don't forget to pass a unique `key` in component props!
+💡 When you create a component through an iteration, don't forget to pass a unique `key` in component props!
 
 <details>
 	<summary>✔️ Result preview</summary>
@@ -120,11 +120,11 @@ To create a task, we need to create forms where the user can enter a title, a de
 
 Let's then use the [useState](https://www.freecodecamp.org/news/introduction-to-react-hooks/) hook to handle user input and button clicks!
 
-:bulb: Mix the usage of `useState` with `props`!
+💡 Mix the usage of `useState` with `props`!
 
 > We recommend you to create a small '+' button in one of the corner of your app that will open a small window containing the title and description forms as well as the button to add the task.
 
-:bulb: You can customize your hooks to avoid unwanted cases, such as an empty field.
+💡 You can customize your hooks to avoid unwanted cases, such as an empty field.
 
 <details>
 	<summary>✔️ Result preview</summary>
@@ -156,7 +156,7 @@ function Component(): JSX.Element {
 
 ## Bonus
 
-Congratulations, you now have a functionnal Kanban style app to keep yourself organized in all your future projects!
+Congratulations, you now have a functional Kanban style app to keep yourself organized in all your future projects!
 
 You can still enhance it's behavior, here are some examples:
 
@@ -165,7 +165,7 @@ You can still enhance it's behavior, here are some examples:
 - You can add a real due date using [Calendars](https://mui.com/x/react-date-pickers/getting-started/)
 - You can link your application to a `backend` and a `database` to properly store your tasks (EPyTodo ?)
 
-:bulb: We suggest you to take a look at [NextJS](https://nextjs.org) or [Remix](https://remix.run)!
+💡 We suggest you to take a look at [NextJS](https://nextjs.org) or [Remix](https://remix.run)!
 
 <br/><br/>
 ## Authors

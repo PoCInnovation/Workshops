@@ -1,12 +1,12 @@
 # Workshop 1 - Building a P2P network with lib2p in golang
 
-:heavy_check_mark: Use libp2p to create a host.
+✔️ Use libp2p to create a host.
 
-:heavy_check_mark: Use multiaddresses to connect two nodes.
+✔️ Use multiaddresses to connect two nodes.
 
-:heavy_check_mark: Connect more nodes using discovery.
+✔️ Connect more nodes using discovery.
 
-:heavy_check_mark: Exchange data between nodes.
+✔️ Exchange data between nodes.
 
 ## Introduction
 
@@ -71,7 +71,7 @@ It is used to bootstrap the network when all nodes are disconnected from each ot
 - [MultiAddress format and specification](https://github.com/multiformats/multiaddr)
 - [libp2p documentation](https://pkg.go.dev/github.com/libp2p/go-libp2p#New)
 
-### :heavy_check_mark: **Validation**:
+### ✔️ **Validation**:
 
 In your main file, call the `node.NewBootNode()`, `yourNode.Start()` and `yourNode.Stop()` methods.
 Don't forget to print the multiaddress between the two last function calls, you should see the following printed in
@@ -113,7 +113,7 @@ To address nodes, libp2p uses the node's multiaddress, which identifies and loca
 - [Signals in golang](https://gobyexample.com/signals)
 - [Address info, used by the Connect method of the node](https://pkg.go.dev/github.com/libp2p/go-libp2p-core@v0.10.0/peer#AddrInfo)
 
-### :heavy_check_mark: **Validation**:
+### ✔️ **Validation**:
 
 In a first terminal, run the following command `go run main.go`, and you should get :
 
@@ -165,7 +165,7 @@ It will help nodes to find each other automatically by doing the following :
 - [Assignation between interface and structures](https://stackoverflow.com/questions/13511203/why-cant-i-assign-a-struct-to-an-interface)
 - [libp2p mDNS service](https://pkg.go.dev/github.com/libp2p/go-libp2p@v0.15.0/p2p/discovery/mdns#NewMdnsService)
 
-### :heavy_check_mark: **Validation**:
+### ✔️ **Validation**:
 
 First, you'll start the first node by running the following command in a new terminal :
 

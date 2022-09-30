@@ -40,7 +40,7 @@ You can find some great examples for different types of issues in [our Open-Sour
 
 > Several options are available when merging a PR. Here's a [Comparison of Merging Strategies in GitHub](https://elliotchance.medium.com/comparison-of-merging-strategies-in-github-2f948c3b8fdc) filling with information to let you choose according to your needs.
 
-### :heavy_check_mark: **Validation**:
+### ✔️ **Validation**:
 Try to make it as complete as possible, then take a look at the expected results:
 <details>
   <summary>Problem issue</summary>
@@ -80,7 +80,7 @@ Then, you can play with milestones by creating one with a due date of `January 1
 
 > There is no milestone template, but nothing prevents you from having one in the `.github` folder and paste it's content when you create a milestone. Here's [an example of what it could look like](https://github.com/PoCInnovation/open-source-project-template/blob/main/.github/milestone_template.md) 🚀
 
-### :heavy_check_mark: **Validation**:
+### ✔️ **Validation**:
 You can test it by creating other issues:
 <details>
   <summary>Creating an issue</summary>
@@ -109,7 +109,7 @@ Whether you want to build, test or deploy your code, you can create custom workf
 ### :pushpin: **Tasks**:
 Follow [this quickstart](https://docs.github.com/en/actions/quickstart) to create your first action !
 
-### :heavy_check_mark: **Validation**:
+### ✔️ **Validation**:
 You can see your workflow runs in the `Action` tab of your repository
 <details>
   <summary>Action tab preview</summary>

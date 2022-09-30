@@ -10,7 +10,7 @@ In this workshop you will learn how to create a `To do list` with the [Dart](htt
 
 ## Step 0 - Setup
 
-:warning: ***Complete this setup before the workshop***, you will have to download big packages.
+⚠️ ***Complete this setup before the workshop***, you will have to download big packages.
 
 Before starting you need to `install Flutter` with the [SETUP.md](./SETUP.md)
 
@@ -74,7 +74,7 @@ As you can see in all the class that extends `StatefulWidget` of `StatelessWidge
 
 If everything has worked and you launch the project, you might have the text `Step 1` in the middle of the application.
 
-:warning: In this code you have some const that you will have to remove because of non const constructor of widget you will use.
+⚠️ In this code you have some const that you will have to remove because of non const constructor of widget you will use.
 
 ## Step 2 - Lists
 
@@ -163,7 +163,7 @@ Let's take a look of how to do a list with Flutter. For it you have multiple cho
 
 - [For loop](https://stackoverflow.com/questions/56947046/flutter-for-loop-to-generate-list-of-widgets)
 
-:warning: If the list can't be display to the entire screen (it will happen), you might wrap your list with [SingleChildScrollView](https://api.flutter.dev/flutter/widgets/SingleChildScrollView-class.html), to make your screen scrollable.
+⚠️ If the list can't be display to the entire screen (it will happen), you might wrap your list with [SingleChildScrollView](https://api.flutter.dev/flutter/widgets/SingleChildScrollView-class.html), to make your screen scrollable.
 
 ## Step 3 - Models
 
@@ -207,7 +207,7 @@ That seem a little bit better but we can do more. Make your list more eye-catchi
 
 As now you have a `list tile` you can already make the delete [icon button](https://api.flutter.dev/flutter/material/IconButton-class.html) in the trailing of your tile.
 
-:warning: In flutter you have to [refresh the state of the page](https://api.flutter.dev/flutter/widgets/State/setState.html) after modifying a displayed variable to see it.
+⚠️ In flutter you have to [refresh the state of the page](https://api.flutter.dev/flutter/widgets/State/setState.html) after modifying a displayed variable to see it.
 
 ## Step 5 - Create a todo
 

@@ -55,7 +55,7 @@ For this workshop, you have to run your docker commands with `sudo`, if you find
 
 #### Fedora 31+
 
-:warning: If you are running fedora 31 or above, you'll probably have cgroups errors like:
+⚠️ If you are running fedora 31 or above, you'll probably have cgroups errors like:
 
 ```
 docker: Error response from daemon: cgroups: cannot found cgroup mount destination: unknown.

@@ -24,7 +24,7 @@ When you build an API to link your frontend with your database for example, you 
 Using a serverless architecture, it's different.  
   
 You don't allocate a specific server listening on queries to your API. You just choose a cloud provider ([aws](https://aws.amazon.com/fr/), [scaleway](https://www.scaleway.com/en/), ...), and you give it your API's functions, one by one. They will be called **serverless functions**.  
-> :bulb: You don't give the whole API to a server ! You just give to the cloud provider your functions one by one.  
+> 💡 You don't give the whole API to a server ! You just give to the cloud provider your functions one by one.  
   
 Consequently, when a query is made to call the API, it will create a container on a cloud provider's server and run the function inside.  
 The benefits are the following: 
@@ -33,7 +33,7 @@ The benefits are the following:
 - All that without the headache of implementing a server setup. You just give to the cloud provider your functions, it handles the rest.
 
 **It's very useful ... but not always !**  
-It depends on what you want to do :warning:  
+It depends on what you want to do ⚠️  
 In fact, there are some drawbacks to use a serverless architecture.  
 First, a serverless function has a limit of [15 minutes of running](https://aws.amazon.com/about-aws/whats-new/2018/10/aws-lambda-supports-functions-that-can-run-up-to-15-minutes/). So you can't build a game using a serverless architecture.  
 Then, a serverless function needs sometimes a cold start before running. Depending on the cloud provider you will use, you can lose up to 4 seconds !
@@ -55,7 +55,7 @@ In this step you will code a simple serverless gifs app using [React](https://re
 
 - Go to your Serverless Gifs App repository with `cd [YOUR GIFS REPO NAME]`  
 - Code your app
- > :bulb: You will need a [form](https://reactjs.org/docs/forms.html), with an [input](https://chakra-ui.com/docs/form/input), and a submit [button](https://chakra-ui.com/docs/form/button)
+ > 💡 You will need a [form](https://reactjs.org/docs/forms.html), with an [input](https://chakra-ui.com/docs/form/input), and a submit [button](https://chakra-ui.com/docs/form/button)
 
 > For now, just call the Giphy API inside the frontend of your project
 
@@ -96,7 +96,7 @@ Now you will deploy your app using [Netlify](https://www.netlify.com/) !
   </details>
 - Choose your Serverless Gifs App repository
 - Deploy your application with the default settings  
-  :warning: **Check the branch to deploy: select your default repository branch**
+  ⚠️ **Check the branch to deploy: select your default repository branch**
   <details>
     <summary>See the default settings</summary>
   

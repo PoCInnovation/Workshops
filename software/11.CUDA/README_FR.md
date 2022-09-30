@@ -14,21 +14,21 @@ Un repository a été créé pour vous grâce au lien d'invitation qui vous a é
 
 >:checkered_flag:  **Avant de débuter, il est nécessaire que vous compreniez quelques termes.**
 
-:heavy_check_mark: Comprendre l'execution sur CUDA
+✔️ Comprendre l'execution sur CUDA
 
-:heavy_check_mark: Comprendre la répartition de la mémoire entre Host et Device
+✔️ Comprendre la répartition de la mémoire entre Host et Device
 
-:heavy_check_mark: Comprendre la nomenclature sur CUDA
+✔️ Comprendre la nomenclature sur CUDA
 
 La syntaxe de CUDA est très similaire à celle du C / C++.
 
-> :warning: **Vous trouverez une explication détaillée [ici](https://dev.to/zenulabidin/an-overview-of-cuda-part-2-host-and-device-code-69d) des deux premiers points**.
+> ⚠️ **Vous trouverez une explication détaillée [ici](https://dev.to/zenulabidin/an-overview-of-cuda-part-2-host-and-device-code-69d) des deux premiers points**.
 
 1. Dans les ressources et durant vos recherches, le terme utilisé pour designer le processeur (CPU) ainsi que la mémoire classique (RAM) est **Host**.
 
 2. Lorsqu'il est question de la carte graphique (GPU) ainsi que de la mémoire de celle-ci (VRAM), le terme utilisé est **Device**.
 
-> :warning: **Vous trouverez une explication détaillée [ici](https://en.wikipedia.org/wiki/Thread_block_(CUDA_programming)) des deux derniers points**.
+> ⚠️ **Vous trouverez une explication détaillée [ici](https://en.wikipedia.org/wiki/Thread_block_(CUDA_programming)) des deux derniers points**.
 
 3. Afin de mieux organiser l'exécution en parallele des cœurs du GPU, appelé un thread, ils sont représentés sur un repère à 3 dimensions.
 
@@ -44,17 +44,17 @@ Voici un schéma descriptif, car *une image vaut mieux que mille mots*, de l'org
 
 > :triangular_flag_on_post: **Première tâche : classique, mais efficace. Hello CUDA World.**
 
-:heavy_check_mark: Exécuter du code avec CUDA
+✔️ Exécuter du code avec CUDA
 
-:heavy_check_mark: Indexer des threads
+✔️ Indexer des threads
 
-:heavy_check_mark: Comprendre l'execution d'un [kernel](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/)
+✔️ Comprendre l'execution d'un [kernel](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/)
 
 Pour vous familiariser avec CUDA, vous allez commencer par lancer une fonction sur 2 threads.
 
 Celle-ci devra afficher la chaîne de caractères `"Hello CUDA World {idx}"`, ou idx correspond à l'index du thread.
 
-> :warning: ***Voici les ressources dont vous aurez besoin*** :
+> ⚠️ ***Voici les ressources dont vous aurez besoin*** :
 
 - [L'indexation sur CUDA](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#built-in-variables).
 
@@ -67,22 +67,22 @@ Celle-ci devra afficher la chaîne de caractères `"Hello CUDA World {idx}"`, ou
 > :triangular_flag_on_post: **Seconde tâche : additionner 2 listes qui contiennent chacune 1 048 576 d'éléments.
 > Le résultat de l'addition doit être contenu dans la seconde liste.**
 
-:heavy_check_mark: Allouer dynamiquement de la mémoire sur un GPU
+✔️ Allouer dynamiquement de la mémoire sur un GPU
 
-:heavy_check_mark: Utiliser l'indexation des threads dans la logique d'un programme
+✔️ Utiliser l'indexation des threads dans la logique d'un programme
 
-:heavy_check_mark: Copier des données depuis le Host vers le Device
+✔️ Copier des données depuis le Host vers le Device
 
-:heavy_check_mark: Copier des données depuis le Device vers le Host
+✔️ Copier des données depuis le Device vers le Host
 
-:heavy_check_mark: Synchroniser l'exécution des threads
+✔️ Synchroniser l'exécution des threads
 
 *Votre CPU va vite, très vite, mais son nombre de cœurs est limité (pas plus de 128 pour les meilleurs).
 Vous allez donc utiliser le très grand nombre de cœurs présents sur un GPU pour accélérer l'exécution d'un programme.*
 
 > **Toutes les étapes sont décrites dans le code issu des [ressources](https://github.com/PoCInnovation/Workshops/raw/cuda/software/10.CUDA/CUDA_steps.zip) sous la forme de TODOs.**
 
-> :warning: ***Voici les ressources dont vous aurez besoin*** :
+> ⚠️ ***Voici les ressources dont vous aurez besoin*** :
 
 - [Les fonctions permettant de gérer la mémoire (CRTL + F -> memc.. ou mall.. 😉)](https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__MEMORY.html).
 
@@ -113,7 +113,7 @@ Vous devez :
 - Pour un certain nombre de pixels, générer des valeurs aléatoires pour les champs r, g et b contenues entre 0 et 255. Petite note, la fonction rand n'existe pas sur CUDA.
 - Calculer la valeur de gris du pixel.
 
-> :warning: ***Voici les ressources dont vous aurez besoin*** :
+> ⚠️ ***Voici les ressources dont vous aurez besoin*** :
 
 - [Vous avez dit aléatoire ?](https://docs.nvidia.com/cuda/curand/index.html)
 

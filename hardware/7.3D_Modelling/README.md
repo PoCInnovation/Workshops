@@ -20,7 +20,7 @@ You just need to create an account with the epitech link.
 
 ### 1.1 Make a Square
 Your first object is the creation of a square.
-You will learn how to **extrude** :tada:
+You will learn how to **extrude** 🎉
 
 ### 📌 Tasks:
 Make a cube of 57.58mm side (Careful, we'll come and check the measurements !)
@@ -93,7 +93,7 @@ Make a servomotor. Nothing too fancy, but try to get as close as you can to the 
 ### 📌 Tasks:
 > For this exercise, you will have to make a car :blue_car: , a rocket :rocket: , or even a pocket watch if that is what you like. The important thing is that it is printable and that it measures less than 10 cm³. This is the average size that is suitable for the 3D printer. :fireworks:
 
-## :tada: Congratulation !
+## 🎉 Congratulation !
 
 You now know the basics of 3D modelling. Feel free to use your imagination to implement many other shapes.
 Or combine the previous exercises for new results.

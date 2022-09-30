@@ -48,7 +48,7 @@ For this workshop, you have to run your docker commands with `sudo`, if you find
 
 #### Fedora 31+
 
-:warning: If you are running fedora 31 or above, you'll probably have cgroups errors like:
+⚠️ If you are running fedora 31 or above, you'll probably have cgroups errors like:
 
 ```
 docker: Error response from daemon: cgroups: cannot found cgroup mount destination: unknown.
@@ -168,7 +168,7 @@ curl localhost:4000/hello/John
 
 You can now stop the application with a `CTRL +C` in the running terminal.
 
-> :bulb: You can also run application's test with `encore test ./<your service>`
+> 💡 You can also run application's test with `encore test ./<your service>`
 > E.g `encore test ./hello`
 
 [Go back to the exercises](./README.md)

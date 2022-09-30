@@ -123,7 +123,7 @@ We want `app` and `db` to be able to communicate properly, so we are going to pu
 - `networks`: to allow the app to reach the database
 - `volumes`: to specify which volume you'll use to save the data, and to load `epytodo.sql` on database initialization
 
-:warning: The database inside the `db` container must be named `epytodo`, as written in the sql file.
+⚠️ The database inside the `db` container must be named `epytodo`, as written in the sql file.
 
 > Documentation on how [docker-compose](https://docs.docker.com/compose/) works.<br>
 > What is the default port of your flask/mysql services ?<br>

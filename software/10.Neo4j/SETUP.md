@@ -60,7 +60,7 @@ $ chmod +x direnv # Give execution permission
 $ sudo mv -t /usr/local/bin direnv # Put it in binary
 ```
 
-> :bulb: You can follow the [official documentation](https://direnv.net/docs/installation.html) to install the binary.
+> 💡 You can follow the [official documentation](https://direnv.net/docs/installation.html) to install the binary.
 
 You must add the following hook in your shell source :
 

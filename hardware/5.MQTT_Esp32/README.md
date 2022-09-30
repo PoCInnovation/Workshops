@@ -12,7 +12,7 @@
   - [**`Step 06`** - Publish with Mosquitto](#step-06---publish-with-mosquitto)
   - [**`Step 07`** - Set MQTT with your esp32](#step-07---set-mqtt-with-your-esp32)
   - [**`Step 08`** - Create your Broker](#step-08---create-your-broker)
-  - [:tada: Congratulation !](#tada-congratulation-)
+  - [🎉 Congratulation !](#tada-congratulation-)
   - [Authors](#authors)
 
 
@@ -101,7 +101,7 @@ Integred conditional state for print Wi-fi and Ip Address of your device. <br/>
 ### ✔️ Validation:
 
 - Ping your device.  
-If this step is ending you can go out to the next step. :tada:
+If this step is ending you can go out to the next step. 🎉
 
 
 ## **`Step 04`** - SetUp Mosquitto
@@ -163,7 +163,7 @@ Now it's time to know how subscribes to a topic.
 
 ### ✔️ Validation:  
 
-If your received message, you can jump to the task 06 :tada:
+If your received message, you can jump to the task 06 🎉
 
 
 ## **`Step 06`** - Publish with Mosquitto
@@ -244,7 +244,7 @@ Your job if you accept it is :
 - [Configuration MQTT](http://www.steves-internet-guide.com/mosquitto-bridge-configuration/)
 - [Configuration mosquitto.conf](https://stackoverflow.com/questions/33867534/how-to-conditionally-forward-messages-between-two-bridged-mqtt-broker)
 
-## :tada: Congratulation !
+## 🎉 Congratulation !
 
 You now know the basics of MQTT ESP32. Feel free to use your imagination to impletement IoT Communcation.
 Or combine the previous exercises for new results.

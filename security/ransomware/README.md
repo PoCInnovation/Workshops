@@ -6,7 +6,7 @@ With this Workshop, you'll learn:
 
 ## Disclaimer
 
-:warning: This Workshop is for educational purposes only. Poc Innovation isn't responsable
+⚠️ This Workshop is for educational purposes only. Poc Innovation isn't responsable
 for what you will do with this knowledge.
 
 We provided you a `Documents/` directory to infect. Be careful not to infect your own and important files.

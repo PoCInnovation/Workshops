@@ -2,13 +2,13 @@
 
 In this Workshop, you will learn : 
 
-:heavy_check_mark: How to use Remix IDE
+✔️ How to use Remix IDE
 
-:heavy_check_mark: How does Smart Contracts are written
+✔️ How does Smart Contracts are written
 
-:heavy_check_mark: How to interact with Smart Contracts Method
+✔️ How to interact with Smart Contracts Method
 
-:heavy_check_mark: ... and how to exploit them !!
+✔️ ... and how to exploit them !!
 
 ## :dizzy: Table of contents
 * [Setup](README.md#wrench-setup)
@@ -31,7 +31,7 @@ In this Workshop, you will learn :
 Please follow the instructions on your [SETUP.md](SETUP.md) file.
 
 ## :hand_over_mouth: Step 1 - Easy level
-> :bulb: Those challenges are here to introduce to you the [Solidity](https://docs.soliditylang.org/en/v0.4.21/) language and the
+> 💡 Those challenges are here to introduce to you the [Solidity](https://docs.soliditylang.org/en/v0.4.21/) language and the
 basic concepts of a smart contract and its related data.
 
 ### [Hello Ethernaut](https://ethernaut.openzeppelin.com/level/0x4E73b858fD5D7A5fc1c3455061dE52a53F35d966)
@@ -59,7 +59,7 @@ It's going to introduce you to the basic random number generator security breach
 
 ## :cry: Step 2 - Medium Level
 
-> :bulb: Here, you are really going to start practicing the Solidity language !
+> 💡 Here, you are really going to start practicing the Solidity language !
 
 ### [Gatekeeper One](https://ropsten.ethernaut.openzeppelin.com/level/0xfe1B0cb67F95Ab51e9052e70424A49A6d34769ed)
 This challenge will introduce you to the `gasleft` function, and the conversion between types.
@@ -72,11 +72,11 @@ complex smart contracts.
 ### [Vault](https://ropsten.ethernaut.openzeppelin.com/level/0xe2F72aa61fD6322C6c4d22227a594391E051F990)
 This challenge will help you understand how bigger Smart Contracts are, how does `flashloan` works the potential exploit in it.
 
-> :bulb: No resources here because in each challenge the website already provides them !
+> 💡 No resources here because in each challenge the website already provides them !
 
 ## :skull_and_crossbones: Step 3 - Hard Level
 
-> :bulb: Those challenges will introduce you to how the variables are stored in the Ethereum blockchain.
+> 💡 Those challenges will introduce you to how the variables are stored in the Ethereum blockchain.
 > 
 ### [The rewarder](https://www.damnvulnerabledefi.xyz/challenges/5.html)
 

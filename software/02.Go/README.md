@@ -2,7 +2,7 @@
 
 In this workshop we will learn how to use the main functions of the http package in Go and how to create a REST API.
 
-> :bulb: A quick [documentation](https://www.ibm.com/cloud/learn/rest-apis) about REST API.
+> 💡 A quick [documentation](https://www.ibm.com/cloud/learn/rest-apis) about REST API.
 
 ## Step 0: Initialization
 
@@ -38,7 +38,7 @@ Create a middleware that logs the traffic of the API:
 
 > Look at the example in the code and at this [article](https://dev.to/karankumarshreds/middlewares-in-go-41j) 😉
 
-> :bulb: You can make this middleware global to all routes rather than calling it manually on each and every route you create
+> 💡 You can make this middleware global to all routes rather than calling it manually on each and every route you create
 
 <details>
   <summary>See how to request with postman :satellite:</summary>
@@ -91,7 +91,7 @@ Create an endpoint `/whoami/{user}`
 
 Last but not least, we will use the API to manipulate data in a database. As we don't have the time to setup a real database, we've created functions to fake the behavior of a simple database.
 
-> :bulb: You must import the `models` package, it contains 3 functions to manipulate users.
+> 💡 You must import the `models` package, it contains 3 functions to manipulate users.
 
 You will need to implement an endpoint for:
 

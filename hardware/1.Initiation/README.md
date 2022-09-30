@@ -42,7 +42,7 @@ Merci de lire/regarder
 
 >**Contraintes**: Vous ne devrez utiliser AUCUN CODE pour cet exercice. Vous n'avez pas le droit à au pin 3,3V de votre board.
 
->:warning: Est-ce que le voltage accepté par la LED est compatible avec le voltage produit par la board ?
+>⚠️ Est-ce que le voltage accepté par la LED est compatible avec le voltage produit par la board ?
 
 ## Exercice 2
 
@@ -100,7 +100,7 @@ Merci de lire/regarder
 
 >**Contraintes**: Aucune
 
->:warning: Renseignez-vous sur les pins "PWM"
+>⚠️ Renseignez-vous sur les pins "PWM"
 
 
 ## Exercice 5
@@ -175,7 +175,7 @@ Merci de lire/regarder
 
 **Consigne**: faite en sorte que le bouton change d'état (allumer/éteindre) la LED a chaque pression.
 
->:warning: INPUT_PULLUP 
+>⚠️ INPUT_PULLUP 
 
 ## Exercice 9
 
@@ -265,7 +265,7 @@ Merci de lire/regarder
 
 **Consigne**: Realiser une webui ou gui avec un LEDpicker qui pilote plusieurs LED.
 
->:warning: Appelez un encadrant avant de faire vos branchements.
+>⚠️ Appelez un encadrant avant de faire vos branchements.
 
 ## Exercice 14
 
@@ -282,11 +282,11 @@ Merci de lire/regarder
 
 **Consigne**: Votre Arduino / ESP32 devra se connecte à votre téléphone ou ordinateur en bluetooth et afficher la distance en cm donnée par le capteur ultrasson
 
->:warning: Appelez un encadrant avant de faire vos branchements
+>⚠️ Appelez un encadrant avant de faire vos branchements
 
 >:green_square: **Bonus**: afficher la distance sous forme de graphe
 
-# :tada: Bravo
+# 🎉 Bravo
 Vous connaissez désormais les bases de l'arduino.
 Libre à vous d'utiliser votre imagination pour créer des circuits. Ou de combiner les exercices précedents pour de nouveau résultats.
 

@@ -38,6 +38,6 @@ cargo add tetra
 
 ## 3. Start workshop
 
-> :bulb: We recommend you to follow the [Tour of Rust](https://tourofrust.com/index.html) for this workshop.
+> 💡 We recommend you to follow the [Tour of Rust](https://tourofrust.com/index.html) for this workshop.
 
 [Go back to the exercise](./README.md)

@@ -1,9 +1,9 @@
 # Workshop 19 - Chat with Socket.IO
 
-:heavy_check_mark: Learn Typescript fundamental<br/>
-:heavy_check_mark: Work with socket and http servers<br/>
-:heavy_check_mark: Understand sockets<br/>
-:heavy_check_mark: Understand how transmits data<br/>
+✔️ Learn Typescript fundamental<br/>
+✔️ Work with socket and http servers<br/>
+✔️ Understand sockets<br/>
+✔️ Understand how transmits data<br/>
 
 ## Story
 
@@ -56,7 +56,7 @@ Then, we will add the `socket server` to our `express`:
 - Create a new server using `http` package with your old express `app` as arguments
 - Create a new `io` server that listens to your HTTP server.
 - Replace the `start` method of your server with `listen`
-> :bulb: Your server must listen to port `8080`
+> 💡 Your server must listen to port `8080`
 
 If you don't have any errors in your terminal, and you have your browser on your HTML page, let's go to the next step!
 #### Resources
@@ -93,7 +93,7 @@ Now, complete the Class `Chat` in `src/front/chat.ts`  :
 - In `index.ts` you must receive the information from the `data` event log the `message`.
 - Call your `emit method` in `chat.ts` with `Hello World !` as message.
 
-> :bulb: Take your time to read the documentation.
+> 💡 Take your time to read the documentation.
 
 In your terminal you should see `Hello World !` logged.
 
@@ -125,9 +125,9 @@ In `chat.ts`, you will create two constants variables:
 - Call `emit_data` to send the `message`.
 - Update input's value to an empty string.
 
-> :bulb: To get value from `data_input`, cast your variable to `HTMLInputElement`.
+> 💡 To get value from `data_input`, cast your variable to `HTMLInputElement`.
 >
-> :warning: It's necessary to always update the input value with an empty string to doesn't keep the previous value. 
+> ⚠️ It's necessary to always update the input value with an empty string to doesn't keep the previous value. 
 
 You should see the message logged in your terminal after you have clicked the button `Send`
 
@@ -211,7 +211,7 @@ The final touch is to add the name of each user before the message is sent.
 In `chat.ts`, add the name of the client before the message.
 - Change the value of the display when you add the content of the input into your div.
 
-:bulb: **Example**: `name: message`.
+💡 **Example**: `name: message`.
 
 If you send messages on your HTML page you should see the username before the message.
 

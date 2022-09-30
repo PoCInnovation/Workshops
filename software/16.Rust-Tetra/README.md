@@ -12,7 +12,7 @@ All the required information to install dependencies can be found in [SETUP.md](
 
 > :exclamation: To follow this part of the workshop we strongly advise you to have followed the workshop [Introduction to Rust](https://github.com/PoCInnovation/Workshops/tree/master/software/13.Rust).
 
-> :bulb: We recommend you to follow the [Tour of Rust](https://tourofrust.com/index.html) for this workshop.
+> 💡 We recommend you to follow the [Tour of Rust](https://tourofrust.com/index.html) for this workshop.
 
 ### Step 1 - Display your first window with Tetra !
 
@@ -30,7 +30,7 @@ We just ask you to display a simple window with no content inside, the title is 
 
 To do this, create a file `main.rs` in a folder called `src`.
 
-> :bulb: Rust file has `rs` extension.
+> 💡 Rust file has `rs` extension.
 
 ##### Resources
  - [Docs Tetra](https://docs.rs/tetra/0.6.3/tetra/)
@@ -39,7 +39,7 @@ To do this, create a file `main.rs` in a folder called `src`.
 
 > :exclamation: We strongly advise you to use the resources given for this exercise.
 
-Congratulations! :tada:
+Congratulations! 🎉
 
 With the previous step, you have displayed your first window. Now, why not display some text in this window?
 
@@ -53,7 +53,7 @@ To display text, you need to follow three steps:
 
 3. Display `vector_text` in your window.
 
-> :bulb: This step like the others is important for the rest of the workshop, don't hesitate to look at the resources.
+> 💡 This step like the others is important for the rest of the workshop, don't hesitate to look at the resources.
 
 ##### Resources
  - [Fonts with Tetra](https://docs.rs/tetra/0.2.18/tetra/graphics/text/struct.Font.html)
@@ -70,7 +70,7 @@ First, you need an image. Make sure you have a `PoC.png` file in the `assets/ima
 Your program must display an image with the parameter :
 - The scale of type `Vec2`.
 
-- The postition of type `Vec2`.
+- The position of type `Vec2`.
 
 - The origin of the image of type `Vec2`.
 
