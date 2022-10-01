@@ -1,5 +1,13 @@
 # Workshop 30 - Firebase ✨
 
+✔️ Discover the power of an app development platform
+
+✔️ Create a collection in a NoSQL database
+
+✔️ Build an authentication system
+
+✔️ Get a preview of serverless functions    
+
 ## Step 0 - Create your project
 ```
 To create your firebase project, go to this page: [firebase](https://firebase.google.com).
@@ -129,7 +137,11 @@ exports.addBooks = functions.https.onRequest(async (req, res) => {
 
 ## To go further
 
-TODO
+You've explored simple options of Firebase, but it's a powerful platform on which you can do a lot more 😄
+- [Measure your app usage](https://firebase.google.com/docs/analytics/) with the integration of Google Analytics
+- [Hosting on Firebase](https://firebase.google.com/products/hosting) to deploy anything from Cloud functions like the one you just created to static websites. It has a great integration with GitHub, supports custom domain names...
+- You can also do [Machine Learning on Firebase](https://firebase.google.com/docs/ml) with their SDK to easily integrate AI features in a mobile app 🧠📱
+- Discover [Supabase](https://supabase.com/), an open-source alternative to Firebase with similar services 🤩
 
 ## Authors
 
