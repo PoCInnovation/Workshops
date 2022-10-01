@@ -18,8 +18,28 @@ Here we give you a simple Space Invader game (a customized version of a game mad
 
 All the installation steps required to do the exercises are detailed in the [SETUP.md](./SETUP.md)
 
-**What is Starton?**
-Starton is a service that
+## Step 1 - ERC20
 
-provides an API-platform to connect any application to blockchains. We deliver simplicity and scalability on Blockchain technologies.
+## Step 2 - NFT
 
+## Step 3 - IPFS background and decorator to validate address
+You are rewarded with tokens and NFTs, that's great!  
+But blockchains and P2P networks usage is not restricted to game rewards, you can do a lot more, like hosting your game assets (images, musics...) on [IPFS](https://ipfs.tech/), a decentralized network for storing and sharing data 🔥
+
+To use it, you generally have to install [a CLI](https://ipfs.io/#install) and run your node to store your files and make them accessible...  
+But with Starton you're ready to go in just a few clicks 🤩
+
+You objective is to change the background image of the game with an image from IPFS instead 🕸️  
+> 💡 You can use any image you want, like this [simple background generated with DALL·E](https://labs.openai.com/s/o7FRxbyER0wGMAy8umPYrGTu) for example
+
+To do so, upload your image in the [IPFS tab of Starton](https://app.starton.io/ipfs), which should give you an URL like this one:
+```
+https://ipfs.starton.io/ipfs/<CID>
+```
+
+Once you're here, you have to modify your code you have to load it and assign it to `BACKGROUND_FILE` 😄
+
+> Nothing specific to IPFS here, you just have to search how to load an image from an URL in Python 🔎
+
+
+## Step 4 - Display the number of tokens in game
