@@ -8,12 +8,7 @@
 
 
 ## Step 0: Initialization
-In this workshop, you'll use [Starton](https://www.starton.io/), a service to easily connect Web2 applications to blockchain with a simple API.  
-With it, you can do a lot of things: monitoring on-chain events, deploying an interacting with smart contracts, uploading files to IPFS... 
-It's a great starting point for web developers who wants to get involved in blockchain and Web3 without a steep learning curve.  
-
-The only thing you need to do before starting the workshop is to create an account on https://app.starton.io/ and you're ready to go 🚀
-
+All the required information to install the workshop's dependencies are given in the [SETUP.md](./SETUP.md)
 
 ## Step 1 - Create a contract
 Let's create your first contract in [Solidity](https://docs.soliditylang.org/en/v0.8.0/) :rocket:  
