@@ -8,46 +8,64 @@
 
 ✔️ Get a preview of serverless functions    
 
-## Step 0 - Create your project
-```
-To create your firebase project, go to this page: [firebase](https://firebase.google.com).
+## Step 0 - Initialization
 
-You will have yo create a google account if you don't have any one, after that click on get started.
+All the required information to install the workshop's dependencies are given in the [SETUP.md](./SETUP.md)
 
-Now you will be ask to create new project so go ahead
-```
-### step 0.5 - Register your app
+### Step 0.5 - Create your project
+Let's create your firebase project 🚀  
+For this, you should go to [the firebase console](https://console.firebase.google.com/) and choose a name for your project (you can use `firebase-workshop-poc` for example 😉)
 
-Now click on web app and register your app,
-don't forget to copy the sdk given it look something like that:
+Firebase will then take you to a dashboard where you will be able to select an app on which you want to add Firebase:  
+![image](https://user-images.githubusercontent.com/49811529/193420648-40733ffd-a5f3-4935-915a-5c599d5476dd.png)
+
+Click on the web icon `</>`, you'll need to enter a name once again (using the same name as before is fine).
+> 💡 Don't select the hosting option, it's another great feature of Firebase but we won't cover it here
+
+And just with those few clicks we are done!  
+Firebase should give you a command to run in your local project to install the firebase package, as long as some starter code that you can paste in your `index.js` 🤩
+
+## Step 1 - Authentication
+Now we are ready to use our first Firebase service: Authentication 🔒  
+You just have to activate the `Email/Password` provider in the `Sign-in method` section of [your firebase console](https://console.firebase.google.com/):  
+![auth-console](https://user-images.githubusercontent.com/49811529/193460013-bda98391-0964-4481-a91f-e4029812ac2f.png)
+
+And you are ready to code!
+Let's write some code to create an account in `index.js`:  
 ```javascript
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+async function register(req, res) {
+    // Complete this code
+}
+```
+TODO: add explanations and express code
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  // your config
-};
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+## Step 2 - Login and logout
+It's not so different from the precedent step.
+You always must use firebase given function
+
+TODo: frontend launching and testing
+```javascript
+async function login(req, res) {
+    // complete this code
+}
+async function logout(req, res) {
+    // complete this code
+}
 ```
 
+## Step 3 - Firestore, a NoSQL cloud database
+Authentication is great, but we can do a lot more with other Firebase products, like Firestore 💥  
+It's a flexible database to store any type of data that you want, with out of the box synchronization to keep your data updated in realtime between your clients and server 😍
 
-## Step 1 - Init firestore
-```
-Now go to firestore database for create a database we have to do this for initialize our database it's like create table in SQL.
+Back to your project dashboard, select Cloud Firestore and create a database 🔥
+![cloud-firestore](https://user-images.githubusercontent.com/49811529/193421532-f8281f56-f7e5-47ac-a6af-ce88ef0bd98a.png)
 
-You need to start the db in test mode.
+> 💡 You can use the test mode to avoid setting up security rules
 
-Set the time to: eur3 europe-west
-```
-## Step 1.5 - Create collection
+> Select a location near you for better performance, like `eur3 (europe-west)` in our case 😉
+
+## Step 3.5 - Create collection
 
 Then create a collection whit collection ID put [Books]()
 
@@ -60,31 +78,8 @@ Name   - String - and give a default value
 
 Firebase set up is now finished let's code
 
-## Step 2 - Create an account
-
-Now you have configured your firebase project's,
-you have to complete this code for create an account an store it in firestore.
-You have to use firebase a function
-```javascript
-async function register(req, res) {
-    // complete this code
-}
-```
-
-## Step 3 - Login && Logout
-It's not so different from the precedent step.
-You always must use firebase given function
-```javascript
-async function login(req, res) {
-    // complete this code
-}
-async function logout(req, res) {
-    // complete this code
-}
-```
-
 ## Step 4 - Get book
-A litle bit more tricky so u must find how to get our books collection
+A little bit more tricky so u must find how to get our books collection
 ```javascript
 async function getBooks(req, res) {
     // complete this code
