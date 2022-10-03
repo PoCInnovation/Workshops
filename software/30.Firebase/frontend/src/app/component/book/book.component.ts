@@ -6,21 +6,21 @@ import { BooksManagementService } from 'src/app/service/books-management.service
 @Component({
   selector: 'app-book',
   templateUrl: './book.component.html',
-  styleUrls: ['./book.component.scss']
+  styleUrls: ['./book.component.scss'],
 })
 export class BookComponent implements OnInit {
-
-  bookList!:book[];
+  bookList!: book[];
   private subBook!: Subscription;
 
   constructor(private booksManagementService: BooksManagementService) {
-    this.subBook = booksManagementService.booksSubject.subscribe((data: book[]) => {
-      this.bookList = data;
-    })
-   }
+    this.subBook = booksManagementService.booksSubject.subscribe(
+      (data: book[]) => {
+        this.bookList = data;
+      }
+    );
+  }
 
   ngOnInit(): void {
     this.booksManagementService.getBooks();
   }
-
 }

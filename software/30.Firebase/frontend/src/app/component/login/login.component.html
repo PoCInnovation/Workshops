@@ -2,7 +2,7 @@
     <h2>Loggin to your account</h2>
     <br>
     <input type="text" placeholder="email" [(ngModel)]="email">
-    <br>    
+    <br>
     <input type="text" placeholder="password" [(ngModel)]="password">
     <br>
     <button type="submit" (click)="loginUser()"> send data</button>
@@ -17,7 +17,7 @@
     </li>
   </ul>
   <!-- Pills navs -->
-  
+
   <!-- Pills content -->
   <div class="tab-content">
     <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
@@ -27,13 +27,13 @@
           <label class="form-label" for="loginName">Email</label>
           <input type="email" id="loginName" class="form-control" [(ngModel)]="email" name="email"/>
         </div>
-  
+
         <!-- Password input -->
         <div class="form-outline mb-4">
           <label class="form-label" for="loginPassword">Password</label>
           <input type="password" id="loginPassword" class="form-control" [(ngModel)]="password" name="password"/>
         </div>
-  
+
       </form>
       <button class="btn" type="button" (click)="loginUser()" class="btn btn-primary">register</button>
     </div>

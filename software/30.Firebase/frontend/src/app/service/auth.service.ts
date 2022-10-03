@@ -4,12 +4,12 @@ import { user } from '../model/user.model';
 import { HttpRequestService } from './http-request.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
   private user!: any;
 
-  constructor(private httpRquest: HttpRequestService) { }
+  constructor(private httpRquest: HttpRequestService) {}
 
   public login(user: user): Promise<AxiosResponse<any, any>> {
     return this.httpRquest.post('http://localhost:4000/login', user);
@@ -19,7 +19,7 @@ export class AuthService {
     return this.httpRquest.post('http://localhost:4000/register', user);
   }
 
-  public logout(): void {
-    const data = this.httpRquest.get('http://localhost:4000/logout');
+  public logout(): Promise<AxiosResponse<any, any>> {
+    return this.httpRquest.post('http://localhost:4000/logout', undefined);
   }
 }
