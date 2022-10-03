@@ -8,14 +8,17 @@ You can use the following command to do so:
 - under ubuntu: `sudo apt install nodejs npm`.
 
 ## Google account
-Since Firebase is a Google product, you'll need a [Google account](https://accounts.google.com/) for this workshop, you can create it [here](https://accounts.google.com/signup) if you don't have one :wink:
+Since Firebase is a Google product, you'll need a [Google account](https://accounts.google.com/) for this workshop, you can create it [here](https://accounts.google.com/signup) if you don't have one 😉
 
 ## Base project
 To use firebase, we first need to setup a project.  
 Normally you would have to use `npm install`, but here we provided you an existing `package.json`.  
 
-It's pretty basic, we just installed the `nodemon` package to use it in our `start` script, it will watch for changes in our code to automatically reload our server, which is gonna be very useful :rocket:  
-This script will execute the `index.js` file: it's empty for now, but we will fill it soon enough don't worry :wink:
+It's pretty basic, we just installed a few packages:
+- `nodemon` to use it in our `start` script, it will watch for changes in our code to automatically reload our server, which is gonna be very useful 🚀
+- `express` to create a basic API
+- `cors` to [enable any origin to access our API](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
+The `start` script will execute the `index.js` file: it's pretty empty for now, but we will fill it soon enough don't worry 😉
 
 
 It's finally time to use Firebase, click [here to go back to the exercises](./README.md)

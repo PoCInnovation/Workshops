@@ -31,20 +31,42 @@ You just have to activate the `Email/Password` provider in the `Sign-in method` 
 ![auth-console](https://user-images.githubusercontent.com/49811529/193460013-bda98391-0964-4481-a91f-e4029812ac2f.png)
 
 And you are ready to code!
-Let's write some code to create an account in `index.js`:  
+Let's write some code to create an account in `index.js` in a function with the following prototype:  
 ```javascript
-async function register(req, res) {
+function register(req, res) {
     // Complete this code
 }
-```
-TODO: add explanations and express code
 
+app.post('/register', register);
+```
+> This function will be executed every time a `POST` request is made to `localhost:4000/register` 😉
+
+Your objective is to retrieve the `email` and `password` from the request body, create a user in Firebase, and return the registered user object on success (or an error message on failure).
+
+> 💡 You'll deal with [Promises], so you'll need to use the [.then() and .catch() methods](https://www.freecodecamp.org/news/javascript-promise-methods/)
+ to return data, or [`async/await`](https://javascript.info/async-await) if you prefer
+
+To test your function, we created a frontend for you 🎉, here's how to launch it:
+```shell
+# Go in the folder
+cd frontend
+
+# Install dependencies
+npm install && npm install -g ng
+
+# Start the project
+npm start
+```
+
+Then you can go to http://localhost:4200/register and try to create your user (check in Firebase if it worked)
+
+> You can also use the browser console to debug, but some non-related error messages may appear due to other routes have not created... yet 😉
 
 ## Step 2 - Login and logout
-It's not so different from the precedent step.
-You always must use firebase given function
+Let's make sure you have understand how authentication works in Firebase 😄
 
-TODo: frontend launching and testing
+Nothing new here, you have to create 2 other endpoints (`/login` and `/logout`, using the `POST` method as before)
+ to complete your authentication workflow 🔥
 ```javascript
 async function login(req, res) {
     // complete this code
@@ -53,6 +75,8 @@ async function logout(req, res) {
     // complete this code
 }
 ```
+
+> Again, you can test using the frontend at http://localhost:4200/login and with the logout button 😉
 
 ## Step 3 - Firestore, a NoSQL cloud database
 Authentication is great, but we can do a lot more with other Firebase products, like Firestore 💥  
