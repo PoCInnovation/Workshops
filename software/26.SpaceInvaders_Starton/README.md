@@ -15,14 +15,12 @@ It's a great starting point for web developers who wants to get involved in bloc
 
 Here we give you a simple Space Invader game (a customized version of a game made by the Starton team, itself based on a fork of [this game](https://github.com/leerob/space-invaders)). Your objective is to deploy smart contracts with Starton, and interact with them in your game to create [a Play to Earn](https://decrypt.co/resources/what-are-play-to-earn-games-how-players-are-making-a-living-with-nfts).
 
-
 All the installation steps required to do the exercises are detailed in the [SETUP.md](./SETUP.md)
 
 ## Step 1 - ERC20
+TODO: deploy contract with Starton from UI template, interact with it in code
 
-## Step 2 - NFT
-
-## Step 3 - IPFS background and decorator to validate address
+## Step 2 - IPFS background and decorator to validate address
 You are rewarded with tokens and NFTs, that's great!  
 But blockchains and P2P networks usage is not restricted to game rewards, you can do a lot more, like hosting your game assets (images, musics...) on [IPFS](https://ipfs.tech/), a decentralized network for storing and sharing data 🔥
 
@@ -41,5 +39,12 @@ Once you're here, you have to modify your code you have to load it and assign it
 
 > Nothing specific to IPFS here, you just have to search how to load an image from an URL in Python 🔎
 
+## Step 3 - NFT
+TODO: deploy contract with Starton from code, interact with it in code
 
 ## Step 4 - Display the number of tokens in game
+TODO: use pygame to display a screen with number of tokens earned this game + total in wallet using a get request
+
+## To go further
+
+- Dive deeper into smart contracts with Starton with [our workshop](https://github.com/PoCInnovation/Workshops/tree/master/p2p/2.Starton_Smart_Contracts) 😄
