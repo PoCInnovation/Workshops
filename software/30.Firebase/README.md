@@ -43,7 +43,7 @@ app.post('/register', register);
 
 Your objective is to retrieve the `email` and `password` from the request body, create a user in Firebase, and return the registered user object on success (or an error message on failure).
 
-> 💡 You'll deal with [Promises], so you'll need to use the [.then() and .catch() methods](https://www.freecodecamp.org/news/javascript-promise-methods/)
+> 💡 You'll deal with [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), so you'll need to use the [.then() and .catch() methods](https://www.freecodecamp.org/news/javascript-promise-methods/)
  to return data, or [`async/await`](https://javascript.info/async-await) if you prefer
 
 To test your function, we created a frontend for you 🎉, here's how to launch it:
@@ -83,46 +83,71 @@ Authentication is great, but we can do a lot more with other Firebase products, 
 It's a flexible database to store any type of data that you want, with out of the box synchronization to keep your data updated in realtime between your clients and server 😍
 
 Back to your project dashboard, select Cloud Firestore and create a database 🔥
+
 ![cloud-firestore](https://user-images.githubusercontent.com/49811529/193421532-f8281f56-f7e5-47ac-a6af-ce88ef0bd98a.png)
 
 > 💡 You can use the test mode to avoid setting up security rules
 
 > Select a location near you for better performance, like `eur3 (europe-west)` in our case 😉
 
-## Step 3.5 - Create collection
+## Create a collection
 
-Then create a collection whit collection ID put [Books]()
+Let's create a collection:
 
-Then click on [Auto-id]()
+Click on `+ Start collection` and create one named `Books`.
+You can then use the Auto-ID option 😄
 
-your collection will have two field:
+The last thing to do is to create the 2 fields we will use:
+- `author` of type `string`
+- `title` of type `string`
+> Don't forget to add default values for these fields 😉
 
-Author - String - and give a default value
-Name   - String - and give a default value
+Now let's code 🚀
 
-Firebase set up is now finished let's code
+## Add a book
 
-## Step 4 - Get book
-A little bit more tricky so u must find how to get our books collection
+Create an endpoint `/book` using the `POST` method to add a new document in Firestore 🔥
+
+Same as before, you'll the use a code similar to this one:
+```javascript
+async function addBook(req, res) {
+    // complete this code
+}
+
+app.post("/book", addBook);
+```
+
+> You need to import the functions necessary to interact with your Firestore instance from `firebase/firestore` 😉
+
+> 💡 The [documentation](https://firebase.google.com/docs/firestore/quickstart#web-version-9) is very complete
+
+You can use the frontend and then check your Firebase console if the document was added 😉
+
+## Step 4 - Retrieve the books
+
+Adding a book is great, but we want to be able to display them in our app too 🙂
+
+Let's see if you've understood how it works by creating an endpoint `/books` to return all the books in the collection with a `GET` method:
 ```javascript
 async function getBooks(req, res) {
     // complete this code
 }
 ```
 
-## Step 5 - Add book
-pretty same than the precedent one this time we ask u to add book to collection
-```javascript
-async function addBooks(req, res) {
-    // complete this code
-}
-```
+If you do it right, the front should automatically display them in the home page 🥳
 
-### Step 6 - Cloud functions
-The last step u must configure cloud functions and use it for transform the step 5 to cloud functions.
-We will help you a bit for this
+### Step 5 - Cloud functions
+This last step is a bit more complicated: until now, all the functions you've written are exposed in an express API that should be reachable anytime for your frontend to work.
 
-First of all run these command:
+In today's world, a lot of applications choose to use [a serverless backend](https://www.cloudflare.com/learning/serverless/what-is-serverless/) instead of fixed amounts of servers to handle incoming requests.
+
+Firebase has its own serverless framework that we will use here: [Cloud Functions](https://firebase.google.com/docs/functions) 🔥
+
+Your objective is to replace the `addBook` function with a cloud function 😄
+
+> We'll use an [emulator](https://firebase.google.com/docs/functions/local-emulator) to run it locally, but later you could deploy it on Firebase 🚀
+
+Run these commands to setup the emulator:
 ```
 npm install firebase-functions@latest firebase-admin@latest --save
 
@@ -133,30 +158,18 @@ firebase init functions
 firebase emulators:start
 ```
 
-you will have a folder functions, you need to add your firebase configuration
-```
-const firebaseConfig = {
-    apiKey: ,
-    authDomain: ,
-    projectId: ,
-    storageBucket: ,
-    messagingSenderId: ,
-    appId: ,
-    measurementId: 
-};
-```
+> 💡 It will create a `functions` folder, where you need to add your firebase configuration in `index.js`.
 
-samething as the first exercise, and now try to implement your addBooks but in cloud function, i will help you a bit
-
-```
+Then you can implement your cloud function:
+```js
 exports.addBooks = functions.https.onRequest(async (req, res) => {
-    //add your code here
-  });
-  ```
+    // add your code here
+});
+```
 
 ## To go further
 
-You've explored simple options of Firebase, but it's a powerful platform on which you can do a lot more 😄
+You've explored a few options of Firebase, but it's a powerful platform on which you can do a lot more 😄
 - [Measure your app usage](https://firebase.google.com/docs/analytics/) with the integration of Google Analytics
 - [Hosting on Firebase](https://firebase.google.com/products/hosting) to deploy anything from Cloud functions like the one you just created to static websites. It has a great integration with GitHub, supports custom domain names...
 - You can also do [Machine Learning on Firebase](https://firebase.google.com/docs/ml) with their SDK to easily integrate AI features in a mobile app 🧠📱

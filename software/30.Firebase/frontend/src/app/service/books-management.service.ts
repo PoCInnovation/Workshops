@@ -21,8 +21,8 @@ export class BooksManagementService {
     this.shareBooksSubject();
   }
 
-  public async addBooks(body: book): Promise<void> {
-    await this.httpRequest.post('http://localhost:4000/addBooks', body);
+  public async addBook(body: book): Promise<void> {
+    await this.httpRequest.post('http://localhost:4000/book', body);
     this.getBooks();
   }
 }
