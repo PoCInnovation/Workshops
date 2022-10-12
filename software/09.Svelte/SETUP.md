@@ -21,7 +21,7 @@ and select the following options
 ```shell
 ✔ Project name: › svelte-workshop-poc
 ✔ Select a framework: › svelte
-✔ Select a variant: › svelte-ts
+✔ Select a variant: › TypeScript
 ```
 
 ## 3. Start
