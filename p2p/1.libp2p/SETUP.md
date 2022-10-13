@@ -32,7 +32,7 @@ Run the following command to add the required dependencies to your project :
 
 ```shell
 go get github.com/libp2p/go-libp2p
-go get github.com/libp2p/go-libp2p/p2p/discovery/mdns@v0.15.1
+go get github.com/libp2p/go-libp2p/p2p/discovery/mdns
 ```
 
 ## Back to the workshop
