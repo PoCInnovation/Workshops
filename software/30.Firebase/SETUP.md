@@ -7,6 +7,8 @@ You can use the following command to do so:
 - under fedora: `sudo dnf install nodejs`.
 - under ubuntu: `sudo apt install nodejs npm`.
 
+> 💡 You can use [nvm](https://github.com/nvm-sh/nvm) to easily manage your versions of node
+
 ## Google account
 Since Firebase is a Google product, you'll need a [Google account](https://accounts.google.com/) for this workshop, you can create it [here](https://accounts.google.com/signup) if you don't have one 😉
 
@@ -16,7 +18,7 @@ Normally you would have to use `npm install`, but here we provided you an existi
 
 It's pretty basic, we just installed a few packages:
 - `nodemon` to use it in our `start` script, it will watch for changes in our code to automatically reload our server, which is gonna be very useful 🚀
-- `express` to create a basic API
+- `express` to create and run an HTTP server
 - `cors` to [enable any origin to access our API](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
 The `start` script will execute the `index.js` file: it's pretty empty for now, but we will fill it soon enough don't worry 😉
 

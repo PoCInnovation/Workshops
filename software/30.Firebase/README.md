@@ -13,21 +13,21 @@
 All the required information to install the workshop's dependencies are given in the [SETUP.md](./SETUP.md)
 
 ### Step 0.5 - Create your project
-Let's create your firebase project 🚀  
-For this, you should go to [the firebase console](https://console.firebase.google.com/) and choose a name for your project (you can use `firebase-workshop-poc` for example 😉)
+Let's create your Firebase project 🚀  
+For this, go [the Firebase console](https://console.firebase.google.com/) and choose a name for your project (you can use `firebase-workshop-poc` for example 😉)
 
 Firebase will then take you to a dashboard where you will be able to select an app on which you want to add Firebase:  
 ![image](https://user-images.githubusercontent.com/49811529/193420648-40733ffd-a5f3-4935-915a-5c599d5476dd.png)
 
 Click on the web icon `</>`, you'll need to enter a name once again (using the same name as before is fine).
-> 💡 Don't select the hosting option, it's another great feature of Firebase but we won't cover it here
+> ⚠️ Don't select the hosting option, it's another great feature of Firebase but we won't cover it here
 
-And just with those few clicks we are done!  
-Firebase should give you a command to run in your local project to install the firebase package, as long as some starter code that you can paste in your `index.js` 🤩
+And just with those few clicks you're are done!  
+Firebase should give you a command to run in your local project to install the Firebase package, as long as some starter code that you can paste in your `index.js` 🤩
 
 ## Step 1 - Authentication
-Now we are ready to use our first Firebase service: Authentication 🔒  
-You just have to activate the `Email/Password` provider in the `Sign-in method` section of [your firebase console](https://console.firebase.google.com/):  
+Now you are ready to use your first Firebase service: Authentication 🔒  
+You just have to activate the `Email/Password` provider in the `Sign-in method` section of [your Firebase console](https://console.firebase.google.com/):  
 ![auth-console](https://user-images.githubusercontent.com/49811529/193460013-bda98391-0964-4481-a91f-e4029812ac2f.png)
 
 And you are ready to code!
@@ -58,14 +58,14 @@ npm install && npm install -g ng
 npm start
 ```
 
-Then you can go to http://localhost:4200/register and try to create your user (check in Firebase if it worked)
+Then you can go to `http://localhost:4200/register` and try to create your user (check in Firebase if it worked)
 
-> You can also use the browser console to debug, but some non-related error messages may appear due to other routes have not created... yet 😉
+> 💡 You can also use the browser console to debug, but some non-related error messages may appear due to other routes not being created... yet 😉
 
 ## Step 2 - Login and logout
 Let's make sure you have understand how authentication works in Firebase 😄
 
-Nothing new here, you have to create 2 other endpoints (`/login` and `/logout`, using the `POST` method as before)
+Nothing new here, you have to create 2 other endpoints `/login` and `/logout`, using the `POST` method as before
  to complete your authentication workflow 🔥
 ```javascript
 async function login(req, res) {
@@ -79,7 +79,7 @@ async function logout(req, res) {
 > Again, you can test using the frontend at http://localhost:4200/login and with the logout button 😉
 
 ## Step 3 - Firestore, a NoSQL cloud database
-Authentication is great, but we can do a lot more with other Firebase products, like Firestore 💥  
+Authentication is great, but you can do a lot more with other Firebase products, like Firestore 💥  
 It's a flexible database to store any type of data that you want, with out of the box synchronization to keep your data updated in realtime between your clients and server 😍
 
 Back to your project dashboard, select Cloud Firestore and create a database 🔥
@@ -97,7 +97,7 @@ Let's create a collection:
 Click on `+ Start collection` and create one named `Books`.
 You can then use the Auto-ID option 😄
 
-The last thing to do is to create the 2 fields we will use:
+The last thing to do is to create the 2 fields you will use:
 - `author` of type `string`
 - `title` of type `string`
 > Don't forget to add default values for these fields 😉
@@ -119,13 +119,13 @@ app.post("/book", addBook);
 
 > You need to import the functions necessary to interact with your Firestore instance from `firebase/firestore` 😉
 
-> 💡 The [documentation](https://firebase.google.com/docs/firestore/quickstart#web-version-9) is very complete
+> 💡 This [documentation](https://firebase.google.com/docs/firestore/quickstart#web-version-9) can help you understand how to use the Firestore SDK.
 
 You can use the frontend and then check your Firebase console if the document was added 😉
 
 ## Step 4 - Retrieve the books
 
-Adding a book is great, but we want to be able to display them in our app too 🙂
+Adding a book is great, but you want to be able to display them in our app too 🙂
 
 Let's see if you've understood how it works by creating an endpoint `/books` to return all the books in the collection with a `GET` method:
 ```javascript
@@ -141,11 +141,11 @@ This last step is a bit more complicated: until now, all the functions you've wr
 
 In today's world, a lot of applications choose to use [a serverless backend](https://www.cloudflare.com/learning/serverless/what-is-serverless/) instead of fixed amounts of servers to handle incoming requests.
 
-Firebase has its own serverless framework that we will use here: [Cloud Functions](https://firebase.google.com/docs/functions) 🔥
+Firebase has its own serverless framework that you will use here: [Cloud Functions](https://firebase.google.com/docs/functions) 🔥
 
 Your objective is to replace the `addBook` function with a cloud function 😄
 
-> We'll use an [emulator](https://firebase.google.com/docs/functions/local-emulator) to run it locally, but later you could deploy it on Firebase 🚀
+> You'll use an [emulator](https://firebase.google.com/docs/functions/local-emulator) to run it locally, but later you could deploy it on Firebase 🚀
 
 Run these commands to setup the emulator:
 ```
@@ -158,7 +158,7 @@ firebase init functions
 firebase emulators:start
 ```
 
-> 💡 It will create a `functions` folder, where you need to add your firebase configuration in `index.js`.
+> 💡 It will create a `functions` folder, where you need to add your Firebase configuration in `index.js`.
 
 Then you can implement your cloud function:
 ```js
