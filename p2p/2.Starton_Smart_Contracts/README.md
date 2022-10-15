@@ -48,7 +48,7 @@ You successfully deployed a contract, that's great 🎉
 In a real-world scenario though, you might want to interact with a contract that is already deployed by you or someone else.  
 You need to import a contract in Starton using a single information:
 ```
-0x9165321A42Dad69828D0459a77cafC0B3C95DBc3
+0xE39aC98F23333589558f081870c6Ac8F0bdd6B1c
 ```
 
 > This contract is deployed on Mumbai (the Polygon testnet) 😉
