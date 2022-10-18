@@ -61,7 +61,7 @@ If you don't know what is a class, check the [Python documentation](https://docs
 
 ## Step 2: Add the dataset
 
-- In your class app create an attribute `train_set` and an attribute `train_lodear` that will contain the dataset.
+- In your class app create an attribute `train_set` and an attribute `train_loader` that will contain the dataset.
 - In your class app you will create an attribute `classes` that will contain the classes of your dataset. (Take the classes in the `train_set`)
 - Create a method called `add_dataset` that will return a dataloader.
 
