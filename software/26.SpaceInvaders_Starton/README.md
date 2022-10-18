@@ -18,7 +18,22 @@ Here we give you a simple Space Invader game (a customized version of a game mad
 All the installation steps required to do the exercises are detailed in the [SETUP.md](./SETUP.md)
 
 ## Step 1 - ERC20
-TODO: deploy contract with Starton from UI template, interact with it in code
+
+Let's create your first Smart Contract with Starton 🚀<br>
+To do so, you'll use a service they provide: contract templates. It's very useful when you want to create a simple and generic token without spending time creating your own contract from scratch in a language like [Solidity](https://docs.soliditylang.org/).
+
+Go to the [Starton deploy dashboard](https://app.starton.io/templates) and create an ERC-20 token (you're free to choose the type of supply 😄)
+
+> 💡 You can use the Avalanche blockchain with the Fuji network as it's pretty simple to get test tokens on it.
+
+Once your contract is deployed, you need to interact with it in your game!<br>
+Starton provides a really complete API that you can use instead of the dashboard.<br>
+The logic should be implemented in the `starton_send_tokens` of `starton_workshop.py`, it's already called in the game when you reach a score of 500 👾
+
+> 💡 Take a look at the [Starton documentation](https://docs.starton.io/) and the [`requests`](https://requests.readthedocs.io/en/latest/) library to make your API call
+
+> The [`dotenv`](https://pypi.org/project/python-dotenv/) package could be useful too if you store your API key in a `.env` file 😉
+
 
 ## Step 2 - IPFS background and decorator to validate address
 You are rewarded with tokens and NFTs, that's great!  
