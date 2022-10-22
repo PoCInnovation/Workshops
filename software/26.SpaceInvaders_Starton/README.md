@@ -28,7 +28,8 @@ Go to the [Starton deploy dashboard](https://app.starton.io/templates) and creat
 
 Once your contract is deployed, you need to interact with it in your game!<br>
 Starton provides a really complete API that you can use instead of the dashboard.<br>
-The logic should be implemented in the `starton_send_tokens` of `starton_workshop.py`, it's already called in the game when you reach a score of 500 👾
+The logic should be implemented in the `starton_send_tokens` of `starton_workshop.py`, it's already called in the game when you lose 👾<br>
+You objective is to send the score as tokens to the given address 💵
 
 > 💡 Take a look at the [Starton documentation](https://docs.starton.io/) and the [`requests`](https://requests.readthedocs.io/en/latest/) library to make your API call
 
