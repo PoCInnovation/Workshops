@@ -10,8 +10,8 @@ You will:
 ## Documentation
 
 - [Q-Learning](https://en.wikipedia.org/wiki/Q-learning)
-- [Gym](https://www.gymlibrary.ml/)
-- [FrozenLake](https://www.gymlibrary.ml/environments/toy_text/frozen_lake/)
+- [Gym](https://www.gymlibrary.dev/)
+- [FrozenLake](https://www.gymlibrary.dev/environments/toy_text/frozen_lake/)
 
 ## Getting Started
 

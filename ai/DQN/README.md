@@ -17,7 +17,7 @@ You will:
 ## Documentation
 
 - [DQN Paper](https://web.stanford.edu/class/psych209/Readings/MnihEtAlHassibis15NatureControlDeepRL.pdf)
-- [LunarLander Environment](https://www.gymlibrary.ml/environments/box2d/lunar_lander/)
+- [LunarLander Environment](https://www.gymlibrary.dev/environments/box2d/lunar_lander/)
 - [PyTorch Docs](https://pytorch.org/docs/stable/index.html)
 
 ## Getting Started
