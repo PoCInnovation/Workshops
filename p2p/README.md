@@ -18,3 +18,24 @@ You will :
 - Use multiaddresses to connect two nodes.
 - Connect more nodes using discovery.
 - Exchange data between nodes.
+
+### Workshop 2 - [Starton smart-contracts](./1.libp2p)
+
+Introduction to smart contracts using Starton's API.
+
+You will :
+
+- Use Starton to deploy your contracts.
+- Import an already deployed contract on your Starton dashboard.
+- Deploy and interact with a template contract provided by Starton.
+
+## Workshop 3 - [Foundry, a toolkit for Ethereum application development](./3.Foundry)
+
+Introduction to Foundry, a toolkit for Ethereum application development.
+
+You will :
+
+- Use Foundry to test your contracts.
+- Use Foundry to deploy your contracts on a local blockchain.
+- Use Foundry to access contract's level data.
+- Use Foundry to deploy your contracts on a Ethereum testnet.
