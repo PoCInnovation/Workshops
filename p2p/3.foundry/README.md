@@ -186,7 +186,7 @@ run our own node, but it would take too much time.
 - Create a [metamask](https://metamask.io/) account and fund it with some Goerli ETH.
   - You can use the [faucet](https://goerlifaucet.com/) to get some Goerli ETH.
 
-- Create an account on [infura](https://infura.io/) and get an API key.
+- Create an account on [Infura](https://infura.io/) and get an API key.
   - You will use this API key to interact with the Goerli testnet.
 
 > You can now broadcast transactions to the Goerli testnet, by the endpoint `https://goerli.infura.io/v3/<YOUR_API_KEY>`.
