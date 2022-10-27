@@ -175,7 +175,7 @@ If it is the right number you should see the following output:
 
 ### :bookmark_tabs: **Description**:
 
-The first steps you interacted with your local blockchain, but now we will use a public one.
+During the first steps you interacted with your local blockchain, but now we will use a public one :rocket: 
 Some test networks are available for you to test your contracts, they are called [testnets](https://ethereum.org/en/developers/docs/networks/).
 In this step we will interact with the [Goerli](https://goerli.net/) testnet.
 We will use [Infura](https://infura.io/)'s nodes to interact with the blockchain. We could also have
