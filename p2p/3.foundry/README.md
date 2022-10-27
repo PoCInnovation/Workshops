@@ -201,7 +201,7 @@ run our own node, but it would take too much time.
 
 ## Conclusion
 
-Well done ! You've accomplished a lot with Foundry, and there is so much more to discover.
+Well done! You've accomplished a lot with Foundry, and there is so much more to discover.
 Refer to the [official documentation](https://book.getfoundry.sh/) to deep-dive into it. 
 
 Hope you enjoyed the workshop !
