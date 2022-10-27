@@ -112,7 +112,7 @@ status                  1
 transactionHash         0x509fd1fde780cfae293155a32dfa24c16bff2d4fb48a360050dbe7f965532985
 transactionIndex        0
 ```
-> you can also test by querying again the value of `number` and see if it has been modified.
+> :bulb: You can also test by querying again the value of `number` and see if it has been modified.
 
 
 ## Step 3 - private != private ?
