@@ -29,7 +29,7 @@ You will :
 - Import an already deployed contract on your Starton dashboard.
 - Deploy and interact with a template contract provided by Starton.
 
-## Workshop 3 - [Foundry, a toolkit for Ethereum application development](./3.Foundry)
+### Workshop 3 - [Foundry, a toolkit for Ethereum application development](./3.foundry)
 
 Introduction to Foundry, a toolkit for Ethereum application development.
 
