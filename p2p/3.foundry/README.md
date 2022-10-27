@@ -20,7 +20,7 @@ from developing a regular application.
 
 Please refer to the [SETUP.md](./SETUP.md) file.
 
-## Step 1 - Forge is useful to test
+## Step 1 - Forge is useful for testing
 
 ### :bookmark_tabs: **Description**:
 
@@ -43,7 +43,7 @@ In the `src/` folder you will find the `Counter.sol` file, this is the contract 
 - Now test your function by modifying the `test/Counter.t.sol` file, the file must test the `increment` function and the `setNumber` one.
     - You can use the `forge test` command at the root of your project to test your contract.
 
-> :attention: Take care about the visibility of your functions !
+> :warning: Take care about the visibility of your functions !
 
 ### :books: **Documentation**:
 
@@ -60,7 +60,7 @@ Running 2 tests for test/Counter.t.sol:CounterTest
 Test result: ok. 2 passed; 0 failed; finished in 12.26ms
 ```
 
-## Step 2 - Forge is also useful to deploy & call is useful to interact with contracts
+## Step 2 - ...but not only
 
 ### :bookmark_tabs: **Description**:
 
@@ -72,7 +72,7 @@ use it to deploy our contract and interact with it.
 - Start the local blockchain with `anvil`
     - This will start a local blockchain on your computer, and give you some key pairs to interact with it.
 
-> :attention: You must not close the terminal where you started the blockchain, you can use it for the whole workshop. 
+> :warning: You must not close the terminal where you started the blockchain, you can use it for the whole workshop. 
  
 - Deploy your contract on the local blockchain.
     - You can use `forge` to deploy your contract.
