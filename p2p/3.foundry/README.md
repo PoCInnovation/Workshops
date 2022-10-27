@@ -52,7 +52,7 @@ In the `src/` folder you will find the `Counter.sol` file, this is the contract 
 - [visibility](https://docs.soliditylang.org/en/v0.8.13/contracts.html#function-visibility)
 
 ### ✔️ **Validation**:
-
+You should have a result similar to this one:<br>
 ```shell
 Running 2 tests for test/Counter.t.sol:CounterTest
 [PASS] testIncrement() (gas: 28312)
