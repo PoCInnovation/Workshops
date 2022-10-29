@@ -24,19 +24,6 @@ Basics of Data Science and introduce Pandas. You will:
 - clean datasets
 - visualize data analyse
 
-## Logistic Regression :computer:
-Creation of your first classification method. You will:
-- initialize hyperparameters
-- calculate of the loss function and usage of gradient
-- usage of optimizing algorithm
-
-## Hidden Layer :chart_with_upwards_trend:
-Discover the effect of a hidden layer. You will:
-- create a neural network with a hidden layer
-- use neurons with a nonlinear activation function (tanh)
-- calculate the loss cross-entropy
-- implement forward and backward propagations
-
 ## Tensorflow :orange_book:
 Usage of Tensorflow. You will:
 - create a Sequential model
@@ -51,17 +38,17 @@ Discover the effect and usage of convolution. You will:
 - use Conv2D
 - use Maxpooling2D
 
-## Value function :house_with_garden:
-Basics of Reinforcement Learning. You will:
-- understand the Markov Decision Process
-- use the value function
-- solve the *Antic* maze
-
 ## Q-Learning 🚙
-Continuation of Reinforcement Learning. You will:
+Basics of Reinforcement Learning. You will:
 - use Gym environment
 - use Q learning
-- solve Mountain-Car-V0
+- solve Frozen Lake
+
+## DQN 🚙
+Advanced Reinforcement Learning. You will:
+- use Gym environment
+- use Deep Q Networks
+- solve Lunar Lander
 
 ## Decision Tree :evergreen_tree:
 Discover one of the most popular supervised learning methods for classification problems. You will:
