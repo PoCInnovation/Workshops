@@ -78,8 +78,6 @@ Feel free to ask us any questions.
 - [Bases Python:](https://docs.google.com/presentation/d/1pcIwhpaE8DIS47WJjhXEbS0UCTLH5rA_gf3pE6iMB5A/edit?usp=sharing)
 - [Data Analysis & Data Visualization:](https://docs.google.com/presentation/d/1Ib0v-utClIE7NmevnEupjWspj17OjX0qYI338D1cUZw/edit?usp=sharing)
 - [Bases IA:](https://drive.google.com/file/d/125KpOeQkCcQDvz07naxenn_eEN0FUwfi/view?usp=sharing)
-- [Regression Logistique:](https://docs.google.com/presentation/d/1NMEmuURgo5cJTmHlS5T6E25yqqirFsrbhn8T0p1EODM/edit?usp=sharing)
-- [Réseaux de neurones:](https://drive.google.com/file/d/1X44I3y7ZUlvbXAr0-3PbTiwAxCkId4dL/view?usp=sharing)
 - [Hidden Layers:](https://docs.google.com/presentation/d/1su1fRQnxV8pCCseJcuMlo_MugO-XjeuUthj1QkLEmuc/edit?usp=sharing)
 - [Données non linéaires:](https://drive.google.com/file/d/1kj_TQVw2IN0jg9ud0gDGAZrn_7bE9FUo/view?usp=sharing)
 - [Tensorflow:](https://slides.com/thytu/tensorflow)
