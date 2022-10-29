@@ -24,7 +24,12 @@ Basics of Data Science and introduce Pandas. You will:
 - clean datasets
 - visualize data analyse
 
-## Tensorflow :orange_book:
+## PyTorch 🔦
+Usage of PyTorch. You will:
+- create a model
+- solve fashion_mnist
+
+## Tensorflow 📙
 Usage of Tensorflow. You will:
 - create a Sequential model
 - use Dense layers
@@ -32,11 +37,15 @@ Usage of Tensorflow. You will:
 - classify fashion_mnist
 - classify mnist
 
-## Convolution :black_square_button:
+## Convolution ⬛
 Discover the effect and usage of convolution. You will:
 - understand the point to use convolutional neural network
 - use Conv2D
 - use Maxpooling2D
+
+## Gradio Interface 📱
+- Create a Gradio interface
+- Share your app on the Gradio platform
 
 ## Q-Learning 🚙
 Basics of Reinforcement Learning. You will:
