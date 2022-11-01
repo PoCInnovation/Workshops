@@ -56,9 +56,8 @@ Once you're here, you have to modify your code you have to load it and assign it
 > Nothing specific to IPFS here, you just have to search how to load an image from an URL in Python 🔎
 
 ## Step 3 - NFT
-Now let's reward our user when he reach some determined points 🎉
-
-For this step we will mint and send to our user a `bronze cup` NFT as a reward if he reaches 500 points, a `silver cup` if he reach 1000 points and a `gold cup` if he reach 2000 points. 
+Now let's reward our user when he reach some determined points 🎉<br>
+For this step we will mint and send to our user a `bronze`, `silver` and `gold` cup when he finishes the 1st, 2nd and 3rd levels.
 
 First of all, we will deploy an NFT contract thanks to a Starton [template](https://app.starton.io/templates/sct_e851adefe4494fc991207b2c37ed8a83).
 
@@ -70,7 +69,7 @@ For the `Smart Contract Constructor` parameter:
 - for the `base URI` enter `ipfs://ipfs/` because our contract metadata will be hosted on ipfs. 
 - for the `contract URI suffix` leave it empty for the moment and go to the IPFS section of your Starton dashboard.
 
-Now we will host our contract and NFT's metadata on IPFS. 
+Now we will host our contract and NFT's metadata on IPFS.<br>
 First of all we will write our contract's level metadata on an IPFS-hosted JSON as explained in the Starton documentation about [how to deploy NFT's](https://docs.starton.io/tutorials/deploy-your-nfts-on-blockchain-with-starton#d139).
 
 ```json
@@ -86,7 +85,7 @@ First of all we will write our contract's level metadata on an IPFS-hosted JSON 
 
 After deploying it on IPFS we can put the retrieved CID in the `Contract URI Suffix`.
 
-Now we will upload the given cup images on IPFS thanks to the Starton dashboard. We will also add 3 NFT metadata json in the following format:
+You then have to upload the given cup images on IPFS thanks to the Starton dashboard. You also have to add 3 NFT metadata json in the following format:
 
 ```json
 {
@@ -96,7 +95,7 @@ Now we will upload the given cup images on IPFS thanks to the Starton dashboard.
 }
 ```
 
-and add the retrieved CIDs in a `.env` file next to your python files, with the following structure:
+and add the retrieved CIDs in your `.env` file, with the following structure:
 ```env
 BRONZE_CUP_METADATA=CID
 SILVER_CUP_METADATA=CID
@@ -104,10 +103,20 @@ GOLD_CUP_METADATA=CID
 ```
 
 Finally, make the corresponding request in the `starton_send_level_nft`,
- you should mint the right NFT and send it to the user depending on the number of points he reached 😄
+ you should mint the right NFT and send it to the user depending on the level he reached 😄
 
 ## Step 4 - Display the number of tokens in game
-TODO: use pygame to display a screen with number of tokens earned this game + total in wallet using a get request
+
+We send tokens and NFTs to our players, but they have no way to visualize it directly in the game 🥲
+
+Now that you are familiar with Starton, explore [their documentation](https://docs.starton.io/connect/api-doc)
+ to find an endpoint that'll give you the player's balance of the tokens you send since step 1.
+
+Then, you'll have to dig in the `beerinvaders.py` file to display it where you want, for example in the home screen 😃
+
+The other displayed text will help you do it, and you can also look at the [pygame documentation](https://www.pygame.org/docs/) for some hints!
+
+> Don't forget to refresh the displayed amount by calling Starton's API several times 😉
 
 ## To go further
 
