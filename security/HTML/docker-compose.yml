@@ -1,0 +1,114 @@
+version: '3'
+
+services:
+  intro:
+    build:
+      context: ./intro
+      dockerfile: Dockerfile
+    ports:
+      - "4001:4001"
+    volumes:
+      - log_intro:/var/log
+    container_name: intro
+
+  hidden:
+    build:
+      context: ./hidden
+      dockerfile: Dockerfile
+    ports:
+      - "4002:4002"
+    volumes:
+      - log_hidden:/var/log
+    container_name: hidden
+
+  logger:
+    build:
+      context: ./logger
+      dockerfile: Dockerfile
+    ports:
+      - "4003:4003"
+    volumes:
+      - log_logger:/var/log
+    container_name: logger
+
+  calling:
+    build:
+      context: ./calling
+      dockerfile: Dockerfile
+    ports:
+      - "4004:4004"
+    volumes:
+      - log_calling:/var/log
+    container_name: calling
+
+  capture:
+    build:
+      context: ./capture
+      dockerfile: Dockerfile
+    ports:
+      - "4005:4005"
+    volumes:
+      - log_capture:/var/log
+    container_name: capture
+
+  bypath:
+    build:
+      context: ./bypath
+      dockerfile: Dockerfile
+    ports:
+      - "4006:4006"
+    volumes:
+      - log_bypath:/var/log
+    container_name: bypath
+
+  head:
+    build:
+      context: ./head
+      dockerfile: Dockerfile
+    ports:
+      - "4007:4007"
+    volumes:
+      - log_head:/var/log
+    container_name: head
+
+  cooked:
+    build:
+      context: ./cooked
+      dockerfile: Dockerfile
+    ports:
+      - "4008:4008"
+    volumes:
+      - log_cooked:/var/log
+    container_name: cooked
+
+  rabbit:
+    build:
+      context: ./rabbit
+      dockerfile: Dockerfile
+    ports:
+      - "4009:4009"
+    volumes:
+      - log_rabbit:/var/log
+    container_name: rabbit
+
+  reverse:
+    build:
+      context: ./reverse
+      dockerfile: Dockerfile
+    ports:
+      - "4010:4010"
+    volumes:
+      - log_reverse:/var/log
+    container_name: reverse
+
+volumes:
+  log_intro: {}
+  log_hidden: {}
+  log_logger: {}
+  log_calling: {}
+  log_capture: {}
+  log_bypath: {}
+  log_head: {}
+  log_cooked: {}
+  log_rabbit: {}
+  log_reverse: {}
