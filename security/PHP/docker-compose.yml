@@ -1,0 +1,63 @@
+version: '3'
+
+services:
+  injection:
+    image: php:8.0-apache
+    volumes:
+      - ./chall_injection/template:/var/www/html/
+      - ./chall_injection/.flag:/PoC/flag.txt
+    ports:
+      - "6001:80"
+    container_name: injection
+
+  urlexploit:
+    image: php:8.0-apache
+    volumes:
+      - ./chall_urlexploit:/var/www/html/
+    ports:
+      - "6002:80"
+    container_name: urlexploit
+
+  include:
+    image: php:8.0-apache
+    volumes:
+      - ./chall_include/template:/var/www/html/
+      - ./chall_include/php_config:/usr/local/etc/php
+      - ./chall_include/.flag:/PoC/flag.txt
+    ports:
+      - "6004:80"
+    container_name: include
+
+  typejugg:
+    image: php:7.2-apache
+    volumes:
+      - ./chall_typejugg:/var/www/html/
+    ports:
+      - "6003:80"
+    container_name: typejugg
+
+  access:
+    image: php:8.0-apache
+    volumes:
+      - ./chall_access/template:/var/www/html/
+      - ./chall_access/.flag:/PoC/flag.txt
+    ports:
+      - "6006:80"
+    container_name: access
+
+  phpsessionid:
+    image: php:8.1.9-apache
+    volumes:
+      - ./chall_phpsessionid:/var/www/html/
+    ports:
+      - "6005:80"
+    container_name: phpsessionid
+
+
+volumes:
+  log_injection: {}
+  log_urlexploit: {}
+  log_include: {}
+  log_typejugg: {}
+  log_serialization: {}
+  log_phpsessionid: {}

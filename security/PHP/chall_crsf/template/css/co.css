@@ -1,0 +1,74 @@
+body{
+	background-image: url("../image/co.jpg"); 
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-bottom:0%;
+	padding-top:5%;
+}
+
+h1{
+	text-align: center;
+	font-size: 400%;
+	color: black;
+	font-family: serif;
+	border-style:dashed; 
+	border-width:5px;
+	border-color:black;
+	margin-top:0%;
+	margin-bottom:0%;
+}
+
+div {
+	text-align:center;
+	background-color: rgba(255,255,255,0.25);
+	width: 50%;
+	position:relative;
+	padding-top:0%;
+	padding-bottom: 0%;
+	border-style:solid;
+	border-width:5px;
+	margin:auto;
+}
+
+table { 
+	text-align: center;
+	font-family: sans-serif;
+	margin:auto;
+	padding-top:5%;
+	font-size: 125%;
+	position:relative;
+}
+
+#connect{
+	position:relative;
+	width:30%;
+	padding-top:3%;
+	padding-bottom:3%;
+	margin:auto;
+}
+
+input[type=submit]:hover, input[type=reset]:hover {
+ background-color:#E549EABF;
+ }
+input[type=submit]:active, input[type=reset]:active {
+	background-color:#E549EABF;
+	box-shadow:1px 1px 1px #D83F3D inset;
+}
+
+#reg{
+	position:absolute;
+	width:20%;
+	right:80%;
+	top:90%;
+	bottom:10%;
+	font-size:100%;
+}
+
+#accueil{
+	position:absolute;
+	width:20%;
+	left:80%;
+	top:90%;
+	bottom:10%;
+	font-size:100%;
+}

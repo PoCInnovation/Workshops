@@ -1,0 +1,29 @@
+User-agent: baidu
+crawl-delay: 1
+
+<?php
+class App
+{
+    public $log = 'log.txt';
+    public $data = 'no data';
+
+    public function checkServices()
+    {
+        echo '<script>console.log("[+] Checking Services.")</script>';
+        $this->data = 'Success';
+    }
+
+    public function __destruct()
+    {
+        @file_put_contents(__DIR__. '/' . $this->log, $this->data);
+        echo '<script>console.log("[+] Logs written to log file.")</script>';
+    }
+}
+$userInput = $_GET['data'] ?? '';
+$someData = unserialize($userInput);
+
+$app = new App;
+$app->checkServices();
+?>
+
+# Any question ? Don't hesitate to ping antony.jin@epitech.eu ;)
