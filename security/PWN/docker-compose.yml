@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  Antony:
+    image: dellabetta/tcpserver
+    volumes:
+      - ./binary/Antony:/root/Antony
+      - ./flag/antony.txt:/root/antony.txt
+    command:
+      - '0'
+      - '6101'
+      - 'sh'
+      - '-c'
+      - '/root/Antony'
+    ports:
+      - "6101:6101"
+    container_name: Antony
+
