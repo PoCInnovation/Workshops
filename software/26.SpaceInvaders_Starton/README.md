@@ -56,47 +56,55 @@ Once you're here, you have to modify your code you have to load it and assign it
 > Nothing specific to IPFS here, you just have to search how to load an image from an URL in Python 🔎
 
 ## Step 3 - NFT
-Now let's reward our user when he reach some determined points.
-For this step we will mint to our user a `bronze cup` NFT as a reward when he reach 500 points, a `silver cup` when he reach 1000 points and a `gold cup` when he reach 2000 points. 
+Now let's reward our user when he reach some determined points 🎉
 
-First of all, we will deploy an NFT contract thanks to a Starton [template](https://app.starton.io/templates/sct_e851adefe4494fc991207b2c37ed8a83). Name your contract as you want but deploy it on Polygon Mumbai testnet for an easy testing.
-For the `smart contract constructor` parameter:
+For this step we will mint and send to our user a `bronze cup` NFT as a reward if he reaches 500 points, a `silver cup` if he reach 1000 points and a `gold cup` if he reach 2000 points. 
+
+First of all, we will deploy an NFT contract thanks to a Starton [template](https://app.starton.io/templates/sct_e851adefe4494fc991207b2c37ed8a83).
+
+> Name your contract as you want but deploy it on the Polygon Mumbai testnet for an easy testing 😉
+
+For the `Smart Contract Constructor` parameter:
 - chose the `name` you want.
 - same for the `symbol`
 - for the `base URI` enter `ipfs://ipfs/` because our contract metadata will be hosted on ipfs. 
-- for the `contract URI suffix` let it empty for the moment and go to the IPFS section of Starton dashboard.
+- for the `contract URI suffix` leave it empty for the moment and go to the IPFS section of your Starton dashboard.
 
 Now we will host our contract and NFT's metadata on IPFS. 
-First of all we will write our contract's level metadata,on an IPFS hosted json as we can found in Starton documentation about [how to deploy NFT's](https://docs.starton.io/tutorials/deploy-your-nfts-on-blockchain-with-starton).
+First of all we will write our contract's level metadata on an IPFS-hosted JSON as explained in the Starton documentation about [how to deploy NFT's](https://docs.starton.io/tutorials/deploy-your-nfts-on-blockchain-with-starton#d139).
 
 ```json
 {
-  "name": “My Super NFTs“,
-  "description": “You’ve never seen NFTs this beautiful.”,
+  "name": "My Super NFTs",
+  "description": "You've never seen NFTs this beautiful.",
   "image": "",
   "external_link": "",
   "seller_fee_basis_points": 100,
-  "fee_recipient": “PUT YOUR ADDRESS HERE”
+  "fee_recipient": "PUT YOUR ADDRESS HERE"
 }
 ```
 
-After deploying it on IPFS we can put the retrieved CID int the `contract URI suffix`.
+After deploying it on IPFS we can put the retrieved CID in the `Contract URI Suffix`.
 
 Now we will upload the given cup images on IPFS thanks to the Starton dashboard. We will also add 3 NFT metadata json in the following format:
 
 ```json
 {
   "name": "${COLOR} cup",
-  "description": "WP you reached ${POINTS} !",
-  "image": "ipfs://ipfs/${imgCid}",
+  "description": "GG you reached ${POINTS} points!",
+  "image": "ipfs://ipfs/${imgCid}"
 }
 ```
 
-and add the retrieved CIDs in our .env file.
+and add the retrieved CIDs in a `.env` file next to your python files, with the following structure:
+```env
+BRONZE_CUP_METADATA=CID
+SILVER_CUP_METADATA=CID
+GOLD_CUP_METADATA=CID
+```
 
-Now write the corresponding request in the `starton_send_level_nft()`, the function should mint the good NFT to the user depending on the level he achieved.
-
-TODO: deploy contract with Starton from code, interact with it in code
+Finally, make the corresponding request in the `starton_send_level_nft`,
+ you should mint the right NFT and send it to the user depending on the number of points he reached 😄
 
 ## Step 4 - Display the number of tokens in game
 TODO: use pygame to display a screen with number of tokens earned this game + total in wallet using a get request
@@ -104,3 +112,33 @@ TODO: use pygame to display a screen with number of tokens earned this game + to
 ## To go further
 
 - Dive deeper into smart contracts with Starton with [our workshop](https://github.com/PoCInnovation/Workshops/tree/master/p2p/2.Starton_Smart_Contracts) 😄
+
+## Authors
+
+| [<img src="https://github.com/RezaRahemtola.png?size=85" width=85><br><sub>Reza Rahemtola</sub>](https://github.com/RezaRahemtola) | [<img src="https://github.com/Doozers.png?size=85" width=85><br><sub>Ismaël Fall</sub>](https://github.com/Doozers)
+| :---: | :---: |
+<h2 align=center>
+Organization
+</h2>
+<br/>
+<p align='center'>
+    <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+    </a>
+    <a href="https://www.instagram.com/pocinnovation/">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+    </a>
+    <a href="https://twitter.com/PoCInnovation">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+    </a>
+    <a href="https://discord.com/invite/Yqq2ADGDS7">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+    </a>
+</p>
+<p align=center>
+    <a href="https://www.poc-innovation.fr/">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+    </a>
+</p>
+
+> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
