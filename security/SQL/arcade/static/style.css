@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: justify;
+    color: #b8bad4;
+    overflow-x: hidden;
+    background-color: #040203;
+}
+
+.layout-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min-content, 1fr));
+    grid-auto-rows: minmax(150px, auto);
+    grid-auto-flow: dense;
+    grid-gap: 1em;
+    break-inside: avoid;
+}
+
+.cover-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    background: url(https://images.unsplash.com/photo-1533236897111-3e94666b2edf)
+    center center / 100vw auto no-repeat fixed;
+    height: 100vh;
+    object-fit: contain;
+}
+
+.article-tags {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.headline,
+.subhead,
+.article-meta,
+aside,
+h2 {
+    font-family: "Chakra Petch", sans-serif;
+    text-transform: uppercase;
+}
+
+figure,
+img {
+    width: 100%;
+    max-width: 37.5rem;
+}
+
+figure {
+    position: relative;
+    margin: 0 auto;
+}
+
+img {
+    position: relative;
+    text-align: center;
+    object-fit: contain;
+    padding: 2rem 1rem;
+}
+
+figcaption {
+    position: absolute;
+    background-color: #000;
+    color: #fff;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    bottom: 0.75rem;
+    left: 2.75rem;
+    padding: 0.25rem;
+}
+
+.headline {
+    font-weight: 700;
+    font-size: 8rem;
+    line-height: 8rem;
+    text-align: center;
+    color: rgb(250, 213, 255);
+    text-shadow: 0.0625rem 0.0625rem 0.125rem black, 0.25rem 0.25rem 0 #fb3ae3,
+    0.5rem 0.5rem 0 #5c0dfc, 0.75rem 0.75rem 0.125rem black;
+}
+
+.page-sub {
+    background-color: #5c0dfc;
+    padding: 3rem 0;
+    margin-top: 2rem;
+
+    /* https://codersblock.com/blog/creating-glow-effects-with-css/ */
+    box-shadow: inset 60px 0 120px #f0f,
+        /* left magenta */ inset -60px 0 120px #0ff; /* right cyan */
+}
+
+.subhead-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.subhead,
+h2 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    color: #d7d9ff;
+    margin-top: 2rem;
+}
+
+h2 {
+    text-align: left;
+}
+
+.subhead {
+    text-align: center;
+}
+
+.glow:hover {
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from {
+        box-shadow: 0 0 0.75rem #fb3ae3;
+    }
+    to {
+        box-shadow: 0 0 1.5rem #fb3ae3;
+    }
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 0.75rem #fb3ae3;
+    }
+    to {
+        box-shadow: 0 0 1.5rem #fb3ae3;
+    }
+}
+
+.article-meta {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 0.8rem;
+    margin: 0.75rem 0.5rem;
+}
+
+#author-avatar {
+    height: 2rem;
+    float: left;
+}
+
+.second-heading {
+    margin-top: 3rem;
+}
+
+aside {
+    color: #5c0dfc;
+    padding: 4rem 3rem 0 3rem;
+    font-size: 3.25rem;
+    line-height: 3.25rem;
+    text-align: center;
+}
+
+.full-width-span {
+    grid-column: span 2;
+    margin: 0;
+}
+
+.section-1 > p,
+.section-2 > p,
+.section-3 > p {
+    padding-top: 1rem;
+}
+
+.section-1,
+.section-2,
+.section-3 {
+    padding: 3rem;
+    columns: 2 600px;
+    column-gap: 4em;
+    column-rule: 1px dotted #5c0dfc;
+    column-fill: auto;
+}
+
+.section-2,
+.section-3,
+.full-width-span {
+    padding-top: 0;
+}
+
+.section-3 > p:last-of-type {
+    margin-bottom: 3rem;
+}
+
+.byline,
+.dateline {
+    padding-right: 1rem;
+}
+
+.tag {
+    background-color: #5c0dfc;
+    margin: 0.5rem 0.5rem 0.5rem 1rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+
+    /* needed to center text due to below featured border */
+    border: 2px solid #5c0dfc;
+}
+
+.featured {
+    border: 2px solid #fb3ae3;
+}
+
+.first-paragraph::first-letter {
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 5rem;
+    padding: 1rem;
+    margin-right: 0.25rem;
+    float: left;
+    color: #5c0dfc;
+    font-weight: 900;
+    text-shadow: 0.0625rem 0.0625rem 0.125rem black, 0.25rem 0.25rem 0 #0e028c;
+}
+
+@media (max-width: 61rem) {
+    .layout-wrapper {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .headline {
+        font-size: 13vw;
+        line-height: 8vw;
+    }
+
+    .tag {
+        padding: 0.5rem;
+        margin: 0.5rem;
+    }
+
+    .page-sub {
+        padding: 0.5rem;
+    }
+
+    aside {
+        font-size: 8vw;
+        line-height: 8vw;
+    }
+
+    .section-2,
+    .section-3 {
+        padding: 0 3rem;
+    }
+
+    figure,
+    img {
+        width: 75vw;
+        max-width: 75vw;
+    }
+}

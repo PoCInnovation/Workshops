@@ -1,0 +1,87 @@
+version: '3'
+
+services:
+  intro:
+    build:
+      context: ./intro
+      dockerfile: Dockerfile
+    ports:
+      - "7001:7001"
+    volumes:
+        - log_intro:/var/log
+    container_name: intro
+
+  arcade:
+    build:
+      context: ./arcade
+      dockerfile: Dockerfile
+    ports:
+      - "7002:7002"
+    volumes:
+        - log_arcade:/var/log
+    container_name: arcade
+
+  secret:
+    build:
+      context: ./secret
+      dockerfile: Dockerfile
+    ports:
+      - "7003:7003"
+    volumes:
+        - log_secret:/var/log
+    container_name: secret
+
+  platform:
+    build:
+      context: ./platform
+      dockerfile: Dockerfile
+    ports:
+      - "7004:7004"
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/postgres
+    volumes:
+      - log_platform:/var/log
+    container_name: platform
+
+  gandalf:
+    build:
+      context: ./gandalf
+      dockerfile: Dockerfile
+    ports:
+      - "7005:7005"
+    volumes:
+      - log_gandalf:/var/log
+    container_name: gandalf
+
+  intranet:
+    build:
+      context: ./intranet
+      dockerfile: Dockerfile
+    ports:
+        - "7006:7006"
+    volumes:
+      - log_intranet:/var/log
+    container_name: intranet
+
+  db:
+    image: postgres:14.1-alpine
+    restart: always
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+        - db_data:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+
+volumes:
+    db_data: {}
+    log_intro: {}
+    log_arcade: {}
+    log_secret: {}
+    log_platform: {}
+    log_gandalf: {}
+    log_intranet: {}
