@@ -116,7 +116,9 @@ Then, you'll have to dig in the `beerinvaders.py` file to display it where you w
 
 The other displayed text will help you do it, and you can also look at the [pygame documentation](https://www.pygame.org/docs/) for some hints!
 
-> Don't forget to refresh the displayed amount by calling Starton's API several times 😉
+> It might be confusing at first, but if you search for the right keywords (`level` for example, or a text displayed near where you want to show the token amount) it should be alright 😉
+
+> 💡 Don't forget to refresh the displayed amount by calling Starton's API several times during a game session
 
 ## To go further
 
