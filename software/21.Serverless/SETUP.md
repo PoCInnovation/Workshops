@@ -18,7 +18,7 @@ To install `yarn`: `npm install --global yarn`
 > You will need a Github repository to use Netlify 📂
 - Create a Github repository (named: `Serverless-Gifs-App` for example) and clone it with `git clone`
 - Download the [files](./Netlify-App.zip)
-- Run the following commands :
+- Run the following commands:
 ```shell
 mv Netlify-App/* Netlify-App/.* [YOUR REPO NAME]
 cd [YOUR REPO NAME]
@@ -58,7 +58,7 @@ yarn start
 **Not inside your github repository created above**
 - Install [serverless framework](https://www.serverless.com) with `npm install -g serverless`
 - Download the [files](./Serverless-API.zip)
-- Run the following commands :
+- Run the following commands:
 ```shell
 unzip Serverless-API.zip
 cd Serverless-API
@@ -68,7 +68,7 @@ yarn install
 
 # Now we gonna verify that the api is working
 yarn test
-# You should the get all the tests successfull (in green)
+# You should the get all the tests successful (in green)
 ```
 
 [Go back to the exercise](./README.md)

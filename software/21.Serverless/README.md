@@ -143,12 +143,12 @@ Once you're done, just push your work on your default branch. Netlify will autom
 
 You will now create a serverless API using the [serverless framework](https://www.serverless.com)
 
-- Go to your Serverless API folder
+- Go to your `Serverless-API` folder
 - Create a file named `fetchGiphy.ts` in which you will implement the function to fetch the Giphy API. You can have a look at the file `setup.ts` to learn how to do it
 - Update the file `serverless.yml` in order to call your new function. See the [documentation](https://www.serverless.com/framework/docs/providers/aws/guide/events/)
 - Create a file `fetchGiphy.test.ts` inside the `tests` folder and implement some code to test your new function. You can have a look at the file `tests/setup.test.ts`, or read the [Jest documentation](https://jestjs.io/docs/using-matchers) to learn how to do it
 
-**Usefull commands**
+**Useful commands**
 ```shell
 # To call a serverless function
 serverless invoke local -f [YOUR FUNCTION NAME - example: setup]
@@ -162,8 +162,8 @@ yarn test
 
 ## Bonus:
 
-- Deploy your API with [AWS](https://aws.amazon.com/lambda/) (or better: with [Scaleway](https://www.scaleway.com/en/docs/scaleway-elements-serverless-getting-started/) :fr: ), and call it inside your serverless app !
-- Discover [Vercel](https://vercel.com), a Netlify competitor with our [workshop](https://github.com/PoCInnovation/Workshops/tree/feat/software-ws-serverless/software/14.Vercel)
+- Deploy your API with [AWS](https://aws.amazon.com/lambda/) (or better: with [Scaleway](https://www.scaleway.com/en/docs/scaleway-elements-serverless-getting-started/) 🇫🇷 ), and call it inside your serverless app !
+- Discover [Vercel](https://vercel.com), a Netlify competitor with our [workshop](https://github.com/PoCInnovation/Workshops/tree/master/software/14.Vercel)
 
 ## Author
 | [<img src="https://github.com/adrienfort.png?size=85" width=85><br><sub>Adrien Fort</sub>](https://github.com/adrienfort) | 
