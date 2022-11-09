@@ -138,14 +138,14 @@ contract Random {
     uint256 private rand;
 
     constructor() {
-        rand = uint256(blockhash(block.number));
+        rand = uint256(blockhash(block.number - 1));
     }
 
     function guess(uint256 _number) public view returns(bool) {
         require(_number == rand, "It is not the right number, try again. :)");
         return true;
     }
-
+}
 ``` 
 
 
