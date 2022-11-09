@@ -61,7 +61,7 @@ In this step you will code a simple serverless gifs app using [React](https://re
 
 > You can display the GIFs using the [iframe](https://developer.mozilla.org/fr/docs/Web/HTML/Element/iframe) element
 
-[Click to see an example of what you can do](https://eager-albattani-482adb.netlify.app/) 👀  
+[Click to see an example of what you can do](https://fluffy-frangollo-0da1a9.netlify.app/) 👀  
   
 **Useful links:**
 - [React general tutorial](https://reactjs.org/tutorial/tutorial.html#what-is-react)
