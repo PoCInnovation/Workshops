@@ -85,7 +85,7 @@ First of all we will write our contract's level metadata on an IPFS-hosted JSON 
 
 After deploying it on IPFS we can put the retrieved CID in the `Contract URI Suffix`.
 
-You then have to upload the given cup images on IPFS thanks to the Starton dashboard. You also have to add 3 NFT metadata json in the following format:
+You then have to upload 3 images of your choice on IPFS through the Starton dashboard. You also have to add 3 NFT json metadata in the following format:
 
 ```json
 {
