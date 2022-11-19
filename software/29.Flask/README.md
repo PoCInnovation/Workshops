@@ -15,7 +15,7 @@ In this workshop, you'll lean how to use Flask to easily create a REST API perfo
 
 All the required information to install the workshop's dependencies are given in the [SETUP.md](./SETUP.md)
 
-## Step 1: Create your first endpoint :rocket:
+## Step 1: Create your first endpoint 🚀
 
 Now that everything is installed, let's create a basic Flask application. 
 > Don't worry, Flask is designed for a quick and simple start 😉
@@ -30,31 +30,31 @@ To test your route, you can use `flask run` to launch the server and open your b
 > 💡 Several options can be provided to `flask run` to customize it's behavior (the debug mode can be useful to reload the server when your file changes).  
 > You can also run your app from your Python file with specific parameters and launch it with `python app.py` 😉 
 
-## Step 2: Register
+## Step 2: Register 👨
 
-Congratulations, you have successfully created your first endpoint :partying_face:  
-The next step is to add a route to register users.  
-But first, you need to create your database using the [`db.sql`](./src/db.sql) file. This can be done with this command:
-```sh
-mysql -u <user> -p < db.sql
-```
-It will create a database with 2 tables, `user` and `todo`.  
-To interact with it, we are also giving you the file [`database.py`](./src/database.py). It creates the connection with the DB for you, your job will be to add methods to perform SQL queries and use them in your app.
+Congratulations, you have successfully created your first endpoint 🥳  
+The next step is to add a route to register users.<br>
 
-> If you take a look at `database.py`, you'll notice we are loading several database config values from the environment.  
-> Create a `.env` file and add the corresponding variables, Flask will then automatically load them for you 😉
+When starting your mysql server with docker compose in the setup, [`an SQL file`](./src/db/mysql-dump/db.sql) was run and created a database with 2 tables, `user` and `todo`.<br>
+To interact with it, you a basic [`database.py`](./src/database.py) file. It creates the connection with the DB for you, your job will be to add methods to perform SQL queries and use them in your app.
 
-Create a `/register` endpoint using the POST method. Every call must provide 2 JSON params: an email and a password.
+If you take a look at `database.py`, you'll notice that we are loading several database config variables from the environment. You have to create a `.env` file and add the corresponding values.
+
+> Some of the values can be found in [the `db` folder](./src/db/).
+
+> Flask will automatically load the `.env` file for you 😉
+
+Once you are done, create a `/register` endpoint using the POST method. Every call must provide 2 JSON params: an email and a password.
 > 💡 You can access the params using the [request object](https://flask.palletsprojects.com/en/2.2.x/api/#incoming-request-data)
 
-Once you retrieved those params, add a `create_user` method in `database.py` to insert them in the `user` table.
+After retrieving these parameters, add a `create_user` method in `database.py` to insert them in the `user` table.
 > 💡 The [official documentation of the mysql connector](https://dev.mysql.com/doc/connector-python/en/) will be useful to discover how to perform queries.  
 > You will also need to write some SQL, here's [a small cheatsheet](https://www.codecademy.com/learn/learn-sql/modules/learn-sql-manipulation/cheatsheet)
 to help you getting starting with SQL :rocket:
 
 Test your route using postman, and don't forget to add some error handling in case your insertion failed.  
 
-## Step 3: Login
+## Step 3: Login 🔒
 
 Now that we are able to create users, the next logical step is to retrieve a registered user.
 
@@ -70,7 +70,7 @@ Create a `/login` endpoint with the same characteristics than `/register`, but t
 
 > 💡 Don't forget what you did just before: the stored password in now hashed 😉
 
-## Step 4: Add a todo
+## Step 4: Add a todo 📖
 
 The user part is functional, congratulations!  
 Now let's add another simple endpoint to interact with another table of our database:
@@ -78,7 +78,7 @@ Now let's add another simple endpoint to interact with another table of our data
 The goal is to create a todo for an user by POSTing on the `/todos` route.  
 > As always, don't forget to handle errors and display a success message at the end 😉
 
-## Step 5: Retrieve todos differently
+## Step 5: Retrieve todos differently 🤔
 
 Creating todos is great, but being able to retrieve them is better!
 For this, you'll use the same endpoint `/todos` but with the `GET` method.

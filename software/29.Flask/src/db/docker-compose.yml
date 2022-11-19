@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: 'password'  # Password for root access
+    ports:
+      - 3306:3306
+    volumes:
+      - flask-workshop-db:/var/lib/mysql
+      - ./mysql-dump:/docker-entrypoint-initdb.d
+    restart: always
+
+volumes:
+  flask-workshop-db:

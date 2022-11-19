@@ -23,21 +23,18 @@ pip install flask mysql-connector-python python-dotenv
 
 ## MySQL
 
-> If you already have MariaDB the commands below should also work, you don't need to install MySQL 😉
+We'll use MySQL as our database, but it's installation can be quite complicated so we'll run it inside a docker container.
+> If you want to play a little bit with Docker, you can follow this [tutorial](https://docker-curriculum.com) or even our [workshop](https://github.com/PoCInnovation/Workshops/tree/master/software/04.Docker) 😉
 
-Ubuntu: [Installation guide](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-22-04)  
-Fedora: [Installation guide](https://www.tecmint.com/install-mysql-fedora-linux/)  
+If you don't have `docker` and its `compose` plugin yet, you can install them by following [these instructions](https://docs.docker.com/engine/install/).
 
-If you have the right version installed, you should have something similar:
+Then all you have to do is to run the following command in [the `db` folder](./src/db/):
 ```sh
-mysql --version
-> mysql   Ver 8.0.30-0ubuntu0.22.04.1 for Linux on x86_64 ((Ubuntu)) # OK
+docker compose up -d
 ```
 
-You should be able to login using this command:
-```sh
-mysql -u <user> -p
-```
-> 💡 For this workshop you can use the `root` user, but it's usually better to [create another user with scoped privileges](https://www.hostinger.com/tutorials/mysql/how-create-mysql-user-and-grant-permissions-command-line).
+and you are ready to go 🚀
+
+> 💡 For this workshop we will use the `root` user present by default, but it's usually better to [create another user with scoped privileges](https://www.hostinger.com/tutorials/mysql/how-create-mysql-user-and-grant-permissions-command-line).
 
 [Go back to the exercises](./README.md)
