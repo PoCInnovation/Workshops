@@ -36,7 +36,7 @@ Congratulations, you have successfully created your first endpoint 🥳
 The next step is to add a route to register users.<br>
 
 When starting your mysql server with docker compose in the setup, [`an SQL file`](./src/db/mysql-dump/db.sql) was run and created a database with 2 tables, `user` and `todo`.<br>
-To interact with it, you a basic [`database.py`](./src/database.py) file. It creates the connection with the DB for you, your job will be to add methods to perform SQL queries and use them in your app.
+To interact with it, you need a basic [`database.py`](./src/database.py) file. It creates the connection with the DB for you, your job will be to add methods to perform SQL queries and use them in your app.
 
 If you take a look at `database.py`, you'll notice that we are loading several database config variables from the environment. You have to create a `.env` file and add the corresponding values.
 
