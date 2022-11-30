@@ -1,6 +1,6 @@
 # Workshop 25 - Flutter
 
-In this workshop you will learn how to create a `To do list` with the [Dart](https://dart.dev/) framework, [Flutter](https://flutter.dev/).
+In this workshop you will learn how to create a Todo list with the [Dart](https://dart.dev/) framework, [Flutter](https://flutter.dev/) 🚀
 
 ✔ The fundamentals of Flutter.
 
@@ -12,9 +12,9 @@ In this workshop you will learn how to create a `To do list` with the [Dart](htt
 
 ⚠️ ***Complete this setup before the workshop***, you will have to download big packages.
 
-Before starting you need to `install Flutter` with the [SETUP.md](./SETUP.md)
+Before starting you need to install Flutter with the [SETUP.md](./SETUP.md)
 
-Flutter is a framework based on the dart language.
+Flutter is a framework based on the Dart language.
 
 ***"We strongly advise you to check the [documentation of Dart language](https://dart.dev/samples) if you don't know it***
 
@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
 }
 ```
 
-Create a folder `lib/pages` and put a `home.dart` file with this code in it:
+Create a folder `lib/pages` and put a `home.dart` file with it with this code:
 ```dart
 import 'package:flutter/material.dart';
 
@@ -66,19 +66,19 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 ```
 
-In this code, we use [StatelessWidget](https://api.flutter.dev/flutter/widgets/StatelessWidget-class.html) to run the application in a [MaterialApp](https://api.flutter.dev/flutter/material/MaterialApp-class.html) and we set the home of the app as `MyHomePage`, the class define in `home.dart`.
+Here we are using [StatelessWidget](https://api.flutter.dev/flutter/widgets/StatelessWidget-class.html) to run the application in a [MaterialApp](https://api.flutter.dev/flutter/material/MaterialApp-class.html) and we set the home of the app to `MyHomePage`, the class defined in `home.dart`.
 
-The homePage class extends [StatefulWidget](https://api.flutter.dev/flutter/widgets/StatefulWidget-class.html) to have a home page with state that can be refresh with the [setState](https://api.flutter.dev/flutter/widgets/State/setState.html) method.
+The homePage class extends [StatefulWidget](https://api.flutter.dev/flutter/widgets/StatefulWidget-class.html) to have a home page with state that can be refreshed with the [setState](https://api.flutter.dev/flutter/widgets/State/setState.html) method.
 
-As you can see in all the class that extends `StatefulWidget` of `StatelessWidget`, we [build method](https://api.flutter.dev/flutter/widgets/State/build.html), you will code in it to code the graphical part.
+As you can see in all the classes that extends `StatefulWidget` of `StatelessWidget`, we override the [build method](https://api.flutter.dev/flutter/widgets/State/build.html), you will code in it to code the graphical part.
 
-If everything has worked and you launch the project, you might have the text `Step 1` in the middle of the application.
+If everything has worked and you launch the project, you should have the text `Step 1` in the middle of the application, which means you are ready to continue 🔥
 
-⚠️ In this code you have some const that you will have to remove because of non const constructor of widget you will use.
+> ⚠️ In this code you have some `const` that you'll have to remove because of non-const constructor of widget you will use later.
 
 ## Step 2 - Lists
 
-The most important thing in a `to do list` is to have a list of `Widget` that will represent your todos.
+The most important thing to build a todo list is to have a list of `Widget` that will represent your todos.
 
 A `Widget` is the thing that you will use to create the user interface, here is the [Widget catalog](https://docs.flutter.dev/development/ui/widgets), you will find every widget that you can use in Flutter.
 
@@ -140,9 +140,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
 You will have nothing more to do in the `home.dart` for this step.
 
-To access the parameters of a StateFullWidget in it State, you need to add the keyword `widget.` before the name of the parameter.
+To access the parameters of a `StateFullWidget` in its State, you need to add the keyword `widget.` before the name of the parameter.
 
-Let's take a look of how to do a list with Flutter. For it you have multiple choices, here are a few of them:
+Let's take a look of how to do a list with Flutter. You have multiple choices, here are a few ones:
 
 - [List.generate](https://api.flutter.dev/flutter/dart-core/List/List.generate.html)
 
@@ -163,7 +163,7 @@ Let's take a look of how to do a list with Flutter. For it you have multiple cho
 
 - [For loop](https://stackoverflow.com/questions/56947046/flutter-for-loop-to-generate-list-of-widgets)
 
-⚠️ If the list can't be display to the entire screen (it will happen), you might wrap your list with [SingleChildScrollView](https://api.flutter.dev/flutter/widgets/SingleChildScrollView-class.html), to make your screen scrollable.
+> ⚠️ If the list can't be display in the entire screen (it will happen), you have to wrap your list with [SingleChildScrollView](https://api.flutter.dev/flutter/widgets/SingleChildScrollView-class.html) to make your screen scrollable.
 
 ## Step 3 - Models
 
@@ -176,7 +176,7 @@ Your todo class needs to contain the following attributes:
   - A required string `title`
   - An optional string `description`
 
-Then you have to replace the list of string `_arr` that you passed as parameters of your `ToDoList component` by:
+Then you have to replace the list of string `_arr` that you pass as parameters of your `ToDoList` component by:
 
 ```dart
 final List<Todo> _todos = [Todo(title: "Todo 1"), Todo(title: "Todo 2", description: "description of todo 2"), Todo(title: "Todo 3"), Todo(title: "Todo 4"), Todo(title: "Todo 5", description: "description of todo 5")];
@@ -195,23 +195,24 @@ class MyClass {
 }
 ```
 
-Then your `ToDoList` component has now to display the title of all todos.
+Your `ToDoList` component has now to display the title of all todos 😉
 
 ## Step 4 - Card and ListTile
 
 In order to make the work easier, you will use a [list tile](https://api.flutter.dev/flutter/material/ListTile-class.html). It will help you to organized your todo.
 
-So you can set the title of your todo as the title of your `tile` and the `description` of the todo as the subtitle (but you are free to whatever you want).
+So you can set the title of your todo as the title of your `tile` and the `description` of the todo as the subtitle (but you are free to do whatever you want).
 
-That seem a little bit better but we can do more. Make your list more eye-catching by wrapping each element of your list with a [card](https://api.flutter.dev/flutter/material/Card-class.html).
+That seems a little bit better but we can do more 🚀<br>
+Make your list more eye-catching by wrapping each element of your list with a [card](https://api.flutter.dev/flutter/material/Card-class.html) 😄
 
-As now you have a `list tile` you can already make the delete [icon button](https://api.flutter.dev/flutter/material/IconButton-class.html) in the trailing of your tile.
+As now you have a list tile, you can already add the delete [icon button](https://api.flutter.dev/flutter/material/IconButton-class.html) in the trailing of your tile.
 
-⚠️ In flutter you have to [refresh the state of the page](https://api.flutter.dev/flutter/widgets/State/setState.html) after modifying a displayed variable to see it.
+> ⚠️ In flutter you have to [refresh the state of the page](https://api.flutter.dev/flutter/widgets/State/setState.html) after modifying a displayed variable to see it.
 
 ## Step 5 - Create a todo
 
-At this time, you might have display and deletion features of your todos, the only thing that is missing, is the todo creation page.
+At this time, you have display and deletion features of your todos, the only thing that is missing is the todo creation page 😃
 
 In order to make the creation page you have to create a `lib/pages/create_todo.dart` file with the following code in it:
 ```dart
@@ -222,7 +223,7 @@ class CreateTodoPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: SafeArea(
-        child: Center( // Step 5: replace this center and it text child by your code
+        child: Center( // Step 5: replace this center and its text child by your code
           child: Text("Create todo page"),
         ),
       ),
@@ -231,7 +232,7 @@ class CreateTodoPage extends StatelessWidget {
 }
 ```
 
-For it you need to add a button in your home page that redirects to the creation page, I recommend you to use the `floatingActionButton` of your `Scaffold` from your home page.
+To do so you need to add a button in your home page that redirects to the creation page, I recommend you to use the `floatingActionButton` of your `Scaffold` from your home page.
 
 Then the button needs to use the [navigator class](https://docs.flutter.dev/cookbook/navigation/navigation-basics) to change the screen to the creation page.
 
@@ -242,11 +243,17 @@ Now that you can navigate between your home page and your todo creation page, yo
   - A create `Button` to [pop](https://docs.flutter.dev/cookbook/navigation/returning-data) the todo to the page pusher. 
   - A cancel `Button` to close the page.
 
-## Bonuses
+## Bonus
+
+Congratulations for completing this workshop 🔥
+
+To go further, here's what you can add to your app:
 
 - Labels in todo, as example: `urgent`, `important`, `less important`.
 - Deadline for the todo.
 - Add the possibility to move the todo up and down.
+
+You can also take a look at our workshop on [React Native with Expo](https://github.com/PoCInnovation/Workshops/tree/master/software/07.Expo), an alternative to Flutter to build mobile apps 👀
 
 ## Authors
 
