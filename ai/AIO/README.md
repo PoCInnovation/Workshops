@@ -42,8 +42,8 @@ On répétera ces étapes sur chacun des états rencontrés dans l'environnement
 - Créez un model de Deep Learning apte à recevoir un state
 - Créez une memory (Replay memory) pour faciliter l'apprentissage de votre agent
 - Créez une class agent qui aura un attribut network et différentes méthodes pour apprendre
-- Solvez l'environnement [CartPole-v1](https://gym.openai.com/envs/CartPole-v1/) pour vous assurer du bon fonctionnement de votre agent
-- Soumettez un code capable de résoudre l'environnement [LunarLander-v2](https://gym.openai.com/envs/LunarLander-v2/)
+- Solvez l'environnement [CartPole-v1](https://www.gymlibrary.dev/environments/classic_control/cart_pole/) pour vous assurer du bon fonctionnement de votre agent
+- Soumettez un code capable de résoudre l'environnement [LunarLander-v2](https://www.gymlibrary.dev/environments/box2d/lunar_lander/)
 
 **Few tips**
 - On souhaite avoir autant d'output que d'action possible dans notre environnement.

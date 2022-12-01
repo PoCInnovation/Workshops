@@ -25,7 +25,7 @@ All the required information to start this workshop can be found in [SETUP.md](.
 
 Be careful to finish every step before moving one to the next thing.
 
-If you are new to Typescript, you should check our [Typescript cheatsheet](https://github.com/PoCInnovation/Workshops/blob/master/software/8.Typescript/HELP.md).
+If you are new to Typescript, you should check our [Typescript cheatsheet](https://github.com/PoCInnovation/Workshops/blob/master/software/08.Express/HELP.md).
 
 ## Step 01 - Link your HTML page
 

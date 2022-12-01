@@ -107,7 +107,7 @@ To do that :
 > 💡 You must add a property `id` of type `string` to recognize books that has common values.
 
 - Create an empty interface named `BooksRelationNodesI` to store all your relation, we will fill it later.
-- Create a [type]([type](https://www.typescriptlang.org/docs/handbook/2/objects.html)) `BooksInstance`, which will be equal to the generic type `NeogmaInstance`,  filled with the types we previously defined.
+- Create a [type](https://www.typescriptlang.org/docs/handbook/2/objects.html) `BooksInstance`, which will be equal to the generic type `NeogmaInstance`,  filled with the types we previously defined.
 
 Your types are defined, let's create the node :
   
@@ -220,17 +220,17 @@ You will need to create a utility function that convert the query result into a 
 
 You can add the [books-authors.tests.ts](./tests/books-authors.tests.ts) file from the [tests](./tests) folder of that repository to test your work.
 
-> 💡 You can also use the [tests.zip](./tests/tests.zip) to use the complete test suite of the workshop.
+> 💡 You can also use the [tests](./tests/) to use the complete test suite of the workshop.
 >
 > ⚠️ You will the to modify the `jest.config.js` and replace `testMatch` field with `testMatch: ['**/tests/index.ts'],`
 
 ## Bonus
 
-You learnt how to use neogma and Neo4j ! Congratulation !
+You learnt how to use neogma and Neo4j! Congratulation 🔥
 
 Now, you can complete your work by implementing others entities.
 
-Remember that schema :
+Remember that schema:
 
 ![Data scheme](../../.github/assets/software/neo4j/data-scheme.png)
 

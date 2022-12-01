@@ -8,13 +8,13 @@
 ## VR :
 
 ### Workshop 1: [CardBoard VR - Statue game VR](./Workshop_VR_1/Workshop_VR_1.pdf)
-- Compatibility : Andoid phone with at least version 4.4 (Kitkat)
+- Compatibility : Android phone with at least version 4.4 (Kitkat)
 
 ### Workshop 2: [CardBoard VR - Video 360° VR](./Workshop_VR_2/Workshop_VR_2.pdf)
-- Compatibility : Andoid phone with at least version 4.4 (Kitkat)
+- Compatibility : Android phone with at least version 4.4 (Kitkat)
 
 ### Workshop 3: [CardBoard VR - Arizona Like](./Workshop_VR_3)
-- Compatibility : Andoid phone with at least version 4.4 (Kitkat)
+- Compatibility : Android phone with at least version 4.4 (Kitkat)
 
 ### Workshop 4: [Mock HMD - Minimalist VR](./Workshop_VR_4)
 - Need Unity 2020.3.0f1 at least

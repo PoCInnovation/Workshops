@@ -141,7 +141,7 @@ Here are some bonus ideas if you want to venture further into the Rust adventure
 
 ## Further reading
  - [The Rust website](https://www.rust-lang.org/fr)
- - [Tour of Rust](https://tourofrust.com/00_en.html)
+ - [Tour of Rust](https://tourofrust.com/)
 
 ## Authors
 

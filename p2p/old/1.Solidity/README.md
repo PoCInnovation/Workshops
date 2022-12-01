@@ -4,7 +4,7 @@ During this workshop, you will create a smart contract that can run onto the Eth
 You'll achieve this in 4 steps : write, compile, test & deploy the contract.
 
 A smart contract is an application that can run on a blockchain.
-Once you've written a smart contract on a blockchain, the same behaviour as with the transactions applies :
+Once you've written a smart contract on a blockchain, the same behavior as with the transactions applies :
 you can not update it.
 The most popular blockchain that supports smart contract is Ethereum, this is the main reason we are using this particular one.
 
@@ -14,7 +14,7 @@ Every JavaScript files contains TODO instructions. Take a look at them to get mo
 
 ## Step 0 : Initialization :rocket:
 
-First, download and extract the `source.zip` file [here](https://github.com/PoCInnovation/Workshops/blob/master/p2p/1.Solidity/src/source.zip).
+First, download and extract the `source.zip` file [here](https://github.com/PoCInnovation/Workshops/blob/master/p2p/old/1.Solidity/src/source.zip).
 It contains all necessary files, but for the moment they're empty 😉
 
 The project structure should be the following :
@@ -54,12 +54,12 @@ So your `Inbox` contract must respect the following rules :
 
 ## Step 2 : Compiling the contract :gear:
 
-Now that you've written the contract, you need to compile it !
+Now that you've written the contract, you need to compile it!
 The compiler used is `solc`, and has already been included to your `package.json` dependencies file.
 
 You need to do the following steps to get the bytecode & ABI (Application Binary Interface) of the contract :
 
-- Retrieve the file content. The solc compiler obviously needs the contract's code to compile it, but instead of juste copy/paste the code for the next step you may wan't to automate this process by reading the file dynamically. 
+- Retrieve the file content. The solc compiler obviously needs the contract's code to compile it, but instead of just copy/paste the code for the next step you may wan't to automate this process by reading the file dynamically. 
 
 - Give the content to the compiler. Note that the `compile.js` file already contains a variable, but the `sources['Inbox.sol']` field is empty.
 
@@ -142,7 +142,7 @@ Then, go to [this faucet](https://faucet.dimensions.network/) and paste your wal
 You also need a new provider, since ganache only works locally. You will use the `HDWalletProvider` one provided in the `deploy.js` file.
 Because you are sending a transaction to the real network, you have to know the endpoint of an ethereum node.
 
-Infura can provide this information. As we support decentralisation of the Ethereum blockchain here is an endpoint you can use :
+Infura can provide this information. As we support decentralization of the Ethereum blockchain here is an endpoint you can use :
 
 https://ropsten.infura.io/v3/510289ba8f254e46891aaa84a718ddd9
 
@@ -150,7 +150,7 @@ Feel free to use the code you've written during tests to deploy and interact wit
 
 ## Authors
 
-| [<img src="https://github.com/PtitLuca.png?size=85" width=85><br><sub>Luca Georges Francois</sub>](https://github.com/PtitLuca) | 
+| [<img src="https://github.com/0xpanoramix.png?size=85" width=85><br><sub>Luca Georges Francois</sub>](https://github.com/0xpanoramix) | 
 | :---: |
 <h2 align=center>
 Organization

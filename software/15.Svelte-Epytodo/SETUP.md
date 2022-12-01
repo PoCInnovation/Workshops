@@ -12,7 +12,7 @@ To install `node` and `npm`:
 - under fedora: `sudo dnf install nodejs`.
 - under ubuntu: `sudo apt install nodejs npm`.
 
-To install [docker](https://www.docker.com/), follow the [tutorial](https://github.com/PoCInnovation/Workshops/blob/master/software/4.Docker/SETUP.md) from our docker workshop.
+To install [docker](https://www.docker.com/), follow the [tutorial](https://github.com/PoCInnovation/Workshops/blob/master/software/04.Docker/SETUP.md) from our docker workshop.
 
 ## 2 - Project bootstrap
 

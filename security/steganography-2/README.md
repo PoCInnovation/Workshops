@@ -24,17 +24,17 @@ You'll learn to detect those techniques but also to counter them in order to get
 - Some ways to detect steganography in files
 - The use of various tools that will help you practice steganography
 
-# [](https://github.com/PoCInnovation/Pool2021/blob/master/Security/Steganography/student.md#useful-tools) Ressources
- - [Stegsolve](https://www.wechall.net/de/forum/show/thread/527/Stegsolve_1.3/) is an old but very useful tool that allows you to analyse an image with some filters.
+# [](https://github.com/PoCInnovation/Pool2021/blob/master/Security/Steganography/README.md#useful-tools) Ressources
+ - [Stegsolve](https://www.wechall.net/de/forum/show/thread/527/Stegsolve_1.3/) is an old but very useful tool that allows you to analyze an image with some filters.
  - [Steghide](https://github.com/StefanoDeVuono/steghide) is a steganography program that hides data in various kinds of image and audio files , only supports these file formats : `JPEG, BMP, WAV and AU`. but it’s also useful for extracting embedded and encrypted data from other files.
  - Strings is a basic linux command that displays the displayable strings in a file of any type. This should be one of the reflex that you should have when you see a file that you think contains hidden data.
  - [Sonic visualizer](https://www.sonicvisualiser.org) is a tool for viewing and analyzing the contents of audio files, however it can be helpful when dealing with audio steganography. You can reveal hidden shapes in audio files.
  - [exiftool](https://exiftool.org) is a great tool for working with metadata in image, audio, and video files. exiftool enables you to read, write, copy, and edit the metadata. It is interesting to note that exiftool can write to read-only files if the user has write permission in the directory.
  - [binwalk](https://github.com/ReFirmLabs/binwalk)  is a tool for searching a given binary image for embedded files and executable code. Specifically, it is designed for identifying files and code embedded inside of firmware images.
 
-# [](https://github.com/PoCInnovation/Pool2021/blob/master/Security/Steganography/student.md#challenges)Challenges
+# [](https://github.com/PoCInnovation/Pool2021/blob/master/Security/Steganography/README.md#challenges)Challenges
 
-## [](https://github.com/PoCInnovation/Pool2021/blob/master/Security/Steganography/student.md#pdf) Newbies
+## [](https://github.com/PoCInnovation/Pool2021/blob/master/Security/Steganography/README.md#pdf) Newbies
 As the name is saying this challenge is very easy. You can flag it without any tool. However you could also use a tool if you feel more comfortable with a tool. I just want my flag back.
 
 This challenge is only here to introduce you to the mentality of steganography so if you are ready you will find everything you need is `newbies.zip`
@@ -48,8 +48,8 @@ In `booh.zip` there is an audio that I made myself to have fun but I forgot what
 Well for this challenge there will be no `.zip` just the link to a tweet and from this tweet you will have to find the hidden flag.
 You will find the tweet at [this](https://twitter.com/etarc0s/status/1356688435042545671) link and now I guess it's your turn to find how to retrieve data from this tweet.
 
-## [](https://github.com/PoCInnovation/Pool2021/blob/master/Security/Steganography/student.md#filter-pictures) French Touch
-This challenge is here to introduce you to a reflex that you should have in every steganography challenge when you have an image or even an audio, analyzing the metadata. When a picture is taken/create metadata will be given with the file. For example some phones will put in the metadata the GPS coordinates where the photo was taken. In this challenge your job is to analyse the picture and find the flag.
+## [](https://github.com/PoCInnovation/Pool2021/blob/master/Security/Steganography/README.md#filter-pictures) French Touch
+This challenge is here to introduce you to a reflex that you should have in every steganography challenge when you have an image or even an audio, analyzing the metadata. When a picture is taken/create metadata will be given with the file. For example some phones will put in the metadata the GPS coordinates where the photo was taken. In this challenge your job is to analyze the picture and find the flag.
 
  As always the challenge files are in `french_touch.zip`
  
@@ -59,12 +59,12 @@ My friend sent me this audio with absolutely no context. Help me to find what he
 You will find the .wav in `aviator.zip`
 
 
-## [](https://github.com/PoCInnovation/Pool2021/blob/master/Security/Steganography/student.md#filter-pictures) Magic
+## [](https://github.com/PoCInnovation/Pool2021/blob/master/Security/Steganography/README.md#filter-pictures) Magic
 A friend sent you this photo saying it was very important,it's now time for you to challenge the Magic box !
 
  As always the challenge files are in `magic.png`
  
-## [](https://github.com/PoCInnovation/Pool2021/blob/master/Security/Steganography/student.md#lsb) LSB
+## [](https://github.com/PoCInnovation/Pool2021/blob/master/Security/Steganography/README.md#lsb) LSB
 
 One of the most popular techniques is 'least significant bit (LSB) steganography. In this type of steganography, the information hider embeds the secret information in the least significant bits of a media file.
 

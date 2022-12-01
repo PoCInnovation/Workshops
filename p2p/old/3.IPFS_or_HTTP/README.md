@@ -26,7 +26,7 @@ Please follow each instruction on the [SETUP.md](SETUP.md) file.
 
 ## Step 1 - HTTP
 ### :pencil2: 1.0 Discover the basics
-Wanna launch the platform? Alright, make sure you are on the [sources](./sources) directory where the `Dockerfile` and
+Wanna launch the platform? Alright, make sure you are on the [sources](./sources.zip) directory where the `Dockerfile` and
 `docker-compose.yml` are.
 
 Build the multi service container :
@@ -75,7 +75,7 @@ web_1  | Quit the server with CONTROL-C.
 ```
 As you can see, `db_1` is our database which seems okay and ready to accept new connections,
 and `web_1` is the backend of our website. You can open your favorite browser like Firefox or Chrome (or Opera,
-no discrimination here) and go to this url : [http://0.0.0.0:8000/](http://0.0.0.0:8000/).
+no discrimination here) and go to this url: [http://0.0.0.0:8000/](http://0.0.0.0:8000/).
 
 You should see our beautiful website !!
 
@@ -90,8 +90,8 @@ stick with this song.
 Go back to [http://0.0.0.0:8000/](http://0.0.0.0:8000/), scroll down and click on the button `upload a song`.
 Fill the form correctly and validates it. 
 
-You can find the code of the form in [./musichare/forms.py](./sources/musicshare/forms.py), and the associate model object in
-[./musicshare/models.py](./sources/musicshare/models.py).
+You can find the code of the form in `musichare/forms.py`, and the associate model object in
+`musicshare/models.py`.
 
 Now, look at your terminal, you should see those strange logs appear:
 ```bash
@@ -118,7 +118,7 @@ some information :that is the main difference between `POST` and `GET`.
  
 > 💡 Learn more about HTTP methods [here](https://www.restapitutorial.com/lessons/httpmethods.html).
 
-Now, look at our [/media/static](./sources/musicshare/media/static) folder : you have the mp3 file you just downloaded in here !
+Now, look at our `media/static` folder : you have the mp3 file you just downloaded in here !
 >💡 This is how HTTP works. When retrieving data, HTTP focuses on **location**. Have you noticed the url ?
 First, it is `0.0.0.0` which is your local IP; then `:8000` to signify the port. Finally, the routes or file you want to
 get, joined by a `/`. That format does not ring a bell to you ? It is like a path !
@@ -143,10 +143,10 @@ If this is not enough clear for you, I strongly advise you to refer to this [vid
 Here is what we are going to do : We are going to upload our files directly on IPFS and not locally anymore.
 Instead of having the file locally, let's have its corresponding hash in our database.
 
-1. Go to [musicshare/models.py](./sources/musicshare/models.py) and add a CharField for the hash.
-2. Go to [musicshare/views.py](./sources/musicshare/views.py) and modify the code of the upload view to communicate with IPFS API in order to upload the file there.
+1. Go to `musicshare/models.py` and add a CharField for the hash.
+2. Go to `musicshare/views.py` and modify the code of the upload view to communicate with IPFS API in order to upload the file there.
    Please use port `5001` for the connection.
-3. Open [musicshare/templates/musicshare/index.html](./sources/musicshare/templates/musicshare/index.html) to line `179`
+3. Open `musicshare/templates/musicshare/index.html` to line `179`
    and make sure the hash of the song appears.
    
 <details>
@@ -170,8 +170,8 @@ You should see your song play, even if the server has been shut down !
 
 ### :inbox_tray: 2.2 Retrieve
 Last step : if anyone wants to download from our website some mp3 songs, we need to get it from IPFS.
-Since you did the previous step, this one would seem easy : in your [musicshare/views.py](./sources/musicshare/views.py)
-on the `download` view, do the same thing as previously but instead of adding a file, call the `cat` (or `get`) method.
+Since you did the previous step, this one would seem easy : in your `musicshare/views.py`
+ on the `download` view, do the same thing as previously but instead of adding a file, call the `cat` (or `get`) method.
 
 ## :rocket: Going further
 A very cool feature with IPFS is that if someone is having an IPFS node running on its machine and download your mp3 audio

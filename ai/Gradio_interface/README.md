@@ -227,7 +227,7 @@ Use your `predict` function for return the prediction.
 
 ## Step 10: Share your app on the Gradio platform
 
-With Gradio you can share your application. This is integrated in the Gradio interface. Check the [Gradio documentation](https://docs.gradio.org/en/latest/).
+With Gradio you can share your application. This is integrated in the Gradio interface. Check the [Gradio documentation](https://gradio.app/docs/).
 
 Share your app with your friends and test it.
 

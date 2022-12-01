@@ -87,7 +87,7 @@ You must implement the following ones :
 
 ## Authors
 
-| [<img src="https://github.com/PtitLuca.png?size=85" width=85><br><sub>Luca Georges Francois</sub>](https://github.com/PtitLuca) | 
+| [<img src="https://github.com/0xpanoramix.png?size=85" width=85><br><sub>Luca Georges Francois</sub>](https://github.com/0xpanoramix) | 
 | :---: |
 <h2 align=center>
 Organization

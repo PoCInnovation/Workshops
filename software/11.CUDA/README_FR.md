@@ -80,7 +80,7 @@ Celle-ci devra afficher la chaîne de caractères `"Hello CUDA World {idx}"`, ou
 *Votre CPU va vite, très vite, mais son nombre de cœurs est limité (pas plus de 128 pour les meilleurs).
 Vous allez donc utiliser le très grand nombre de cœurs présents sur un GPU pour accélérer l'exécution d'un programme.*
 
-> **Toutes les étapes sont décrites dans le code issu des [ressources](https://github.com/PoCInnovation/Workshops/raw/cuda/software/10.CUDA/CUDA_steps.zip) sous la forme de TODOs.**
+> **Toutes les étapes sont décrites dans le code issu des [ressources](https://github.com/PoCInnovation/Workshops/blob/master/software/11.CUDA/CUDA_steps.zip) sous la forme de TODOs.**
 
 > ⚠️ ***Voici les ressources dont vous aurez besoin*** :
 
@@ -119,4 +119,4 @@ Vous devez :
 
 ## Authors
 
-[Luca Georges Francois](https://github.com/PtitLuca)
+[Luca Georges Francois](https://github.com/0xpanoramix)

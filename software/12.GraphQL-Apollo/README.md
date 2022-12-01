@@ -33,7 +33,7 @@ Let's do some queries to retrieve data :
 ##### Resources
 
 - [GraphQL syntax](https://graphql.org/learn/queries/)
-- [Apollo playground](https://www.apollographql.com/docs/apollo-server/testing/graphql-playground/)
+- [Apollo playground](https://www.apollographql.com/docs/apollo-server/testing/build-run-queries#graphql-playground)
 
 ## Step 2 - Hello Apollo
 
@@ -224,7 +224,7 @@ If you are not familiar to react, take a loot at this [documentation](https://re
 
 ##### Resources
  - [Apollo client](https://www.apollographql.com/docs/react/)
- - [React](https://reactjs.org/docs/)
+ - [React](https://reactjs.org/docs/getting-started.html)
  - [Functional components](https://djoech.medium.com/functional-vs-class-components-in-react-231e3fbd7108)
  - [React with Typescript](https://blog.bitsrc.io/5-strong-reasons-to-use-typescript-with-react-bc987da5d907)
 

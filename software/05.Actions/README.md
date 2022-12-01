@@ -27,7 +27,7 @@ Now, run tests in the container
 
 > Check the `Makefile` to find the good command
 
-Your CI will do the same things, but automatically in a [github runner](https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/introduction-to-github-actions)
+Your CI will do the same things, but automatically in a [github runner](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)
 
 ## Step 1: Your first action
 
@@ -49,7 +49,7 @@ Push your work and check on `https://github.com/<your-github-username>/<your-rep
 
 Congratulation, you've written your first action !
 
-> Check the help about workflow syntax [here](https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions)
+> Check the help about workflow syntax [here](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions)
 
 ## Step 2: Run test
 
@@ -66,7 +66,7 @@ Use command from `step 0` to run tests
 
 Don't forget to define a name for each step, it's important to clarify your workflow.
 
-> A [tip](https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions#jobsjob_idcontainer) that can help you to run a job in a container
+> A [tip](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idcontainer) that can help you to run a job in a container
 
 ## Step 3: Artifact
 
@@ -80,7 +80,7 @@ Your artifact must be called `coverage_outputs`.
 
 **The step must run even if previous steps fail**.
 
-> Find help about condition [here](https://docs.github.com/en/free-pro-team@latest/actions/reference/context-and-expression-syntax-for-github-actions)
+> Find help about condition [here](https://docs.github.com/en/actions/learn-github-actions/contexts)
 
 ## Step 4: Functional test
 
@@ -115,7 +115,7 @@ If you like web development, you can:
 
 You can also check these links
   - [Marketplace](https://github.com/marketplace?type=actions)
-  - [Documentation](https://docs.github.com/en/free-pro-team@latest/actions)
+  - [Documentation](https://docs.github.com/en/actions)
   - [Write your own action](https://levelup.gitconnected.com/how-to-write-github-actions-30b54ddf6f52)
   
 ## Authors

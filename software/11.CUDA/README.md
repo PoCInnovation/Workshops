@@ -81,7 +81,7 @@ It should display the string `"Hello CUDA World {idx}"`, where idx is the index 
 *Your CPU goes fast, very fast, but its number of cores is limited (no more than 128 for the best).
 So you will use the very large number of cores available on a GPU to speed up the execution of a program.*
 
-> **All the steps are described in the code from the [resources](https://github.com/PoCInnovation/Workshops/raw/cuda/software/10.CUDA/CUDA_steps.zip) in the form of TODOs.**
+> **All the steps are described in the code from the [resources](https://github.com/PoCInnovation/Workshops/blob/master/software/11.CUDA/CUDA_steps.zip) in the form of TODOs.**
 
 > ⚠️ ***Here are the resources you will need*** :
 
@@ -120,7 +120,7 @@ You must:
 
 ## Authors
 
-| [<img src="https://github.com/PtitLuca.png?size=85" width=85><br><sub>Luca Georges Francois</sub>](https://github.com/PtitLuca)
+| [<img src="https://github.com/0xpanoramix.png?size=85" width=85><br><sub>Luca Georges Francois</sub>](https://github.com/0xpanoramix)
 | :---: | 
 <h2 align=center>
 Organization

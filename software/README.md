@@ -63,7 +63,7 @@ You will:
  - learn basics to React Native
  - create your own QR code scanner
  
-## 8 - [Express API in TypeScript](08.Typescript)
+## 8 - [Express API in TypeScript](08.Express)
 
 Learn Typescript by creating a complete Express API.  
 You will:
@@ -164,7 +164,7 @@ You will:
 - Create two consumer services
 - Publish messages into Kafka
 
-##  19 - [Multi-client chat with Socket.IO](./1.Socket.io)
+##  19 - [Multi-client chat with Socket.IO](./19.Socket.io)
 
 Learn Socket.IO by implementing your own online chat.  
 You will:
