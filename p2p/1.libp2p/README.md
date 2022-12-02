@@ -33,13 +33,13 @@ Please refer to the [SETUP.md](./SETUP.md) file.
 
 ## Step 1 - Create a bootnode
 
-### :bookmark_tabs: **Description**:
+### 📑 **Description**:
 
 You'll need to create a bootnode, i.e. a node able to handle connections between the first nodes of the network.
 
 It is used to bootstrap the network when all nodes are disconnected from each other.
 
-### :pushpin: **Tasks**:
+### 📌 **Tasks**:
 
 - Create a `main.go` file
     - This is the file containing your `main` function, it is therefore in the `main` package
@@ -66,7 +66,7 @@ It is used to bootstrap the network when all nodes are disconnected from each ot
         - If required, use the first available multiaddress during the node startup
         - Create a `NewBootNode` method, which creates and returns a new bootnode
 
-### :books: **Documentation**:
+### 📚 **Documentation**:
 
 - [MultiAddress format and specification](https://github.com/multiformats/multiaddr)
 - [libp2p documentation](https://pkg.go.dev/github.com/libp2p/go-libp2p#New)
@@ -83,13 +83,13 @@ your terminal. Don't worry if the IP address or the multihash is not the same :
 
 ## Step 2 - Connect to the bootnode
 
-### :bookmark_tabs: **Description**:
+### 📑 **Description**:
 
 Now that you've got a running bootnode, it could be a good idea to connect to it.
 
 To address nodes, libp2p uses the node's multiaddress, which identifies and locate them at the same time.
 
-### :pushpin: **Tasks**:
+### 📌 **Tasks**:
 
 - Open the `node/node.go` file
 - Add a `Connect` method to the `Node` interface, taking a multiaddress as a parameter
@@ -107,7 +107,7 @@ To address nodes, libp2p uses the node's multiaddress, which identifies and loca
 - Add a `CTRL + C` catch, so that the node can run and not stop immediately
 - Add a way to pass the multihash as a program argument, and connect the node if this argument was provided
 
-### :books: **Documentation**:
+### 📚 **Documentation**:
 
 - [All the node methods, including `Connect`](https://pkg.go.dev/github.com/libp2p/go-libp2p-core/host#Host)
 - [Signals in golang](https://gobyexample.com/signals)
@@ -115,13 +115,13 @@ To address nodes, libp2p uses the node's multiaddress, which identifies and loca
 
 ### ✔️ **Validation**:
 
-In a first terminal, run the following command `go run main.go`, and you should get :
+In a first terminal, run the following command `go run main.go`, and you should get:
 
 ```shell
 /ip6/2a01:e0a:214:11a0:d435:8690:b245:9613/tcp/43729/p2p/QmdRRWQJMLaHBHwXtgT9hDavVCPkSQLR5PSXmQq8qe95EV
 ```
 
-In a second terminal, run `go run main.go <MULTIADDRESS_FROM_ABOVE>`, and you should get :
+In a second terminal, run `go run main.go <MULTIADDRESS_FROM_ABOVE>`, and you should get:
 
 ```shell
 /ip4/192.168.0.43/tcp/32927/p2p/QmTmLdJMhjc4HN8eKA2uxzeTyADJU2AE5jh4nP9PYFnLVg
@@ -130,23 +130,23 @@ Connected to {QmdRRWQJMLaHBHwXtgT9hDavVCPkSQLR5PSXmQq8qe95EV: [/ip6/2a01:e0a:214
 
 ## Step 3 - Add a discovery service
 
-### :bookmark_tabs: **Description**:
+### 📑 **Description**:
 
 Well we wanted to create a p2p network right ? So lets implement the peer discovery service.
 
-It will help nodes to find each other automatically by doing the following :
+It will help nodes to find each other automatically by doing the following:
 
 - I'm the node A connected to node B and B only
 - Node B is connected to node A and node C
 - Node B will tell node A where is node C to create more connections in the network
 
-### :pushpin: **Tasks**:
+### 📌 **Tasks**:
 
 - Hopefully, libp2p already has a discovery service, you'll just use it
 
 
 - Create a `node/discovery.go` file
-- In this file, do the following :
+- In this file, do the following:
     - Create a `DiscoveryPing` structure, containing a single field of type `host.Host`
     - It must implement the [Notifee](https://pkg.go.dev/github.com/libp2p/go-libp2p@v0.15.0/p2p/discovery/mdns#Notifee) interface
 
@@ -160,32 +160,32 @@ It will help nodes to find each other automatically by doing the following :
 
 - Call the `StartDiscovery` method in the main function
 
-### :books: **Documentation**:
+### 📚 **Documentation**:
 
 - [Assignation between interface and structures](https://stackoverflow.com/questions/13511203/why-cant-i-assign-a-struct-to-an-interface)
 - [libp2p mDNS service](https://pkg.go.dev/github.com/libp2p/go-libp2p@v0.15.0/p2p/discovery/mdns#NewMdnsService)
 
 ### ✔️ **Validation**:
 
-First, you'll start the first node by running the following command in a new terminal :
+First, you'll start the first node by running the following command in a new terminal:
 
 ```shell
 go run main.go
 ```
 
-Then, you'll start a second node, connected manually to the first one :
+Then, you'll start a second node, connected manually to the first one:
 
 ```shell
 go run main.go <MULTIADDRESS_OF_FIRST_NODE>
 ```
 
-Finally, you'll start a third node, not connected to any of the two previous nodes :
+Finally, you'll start a third node, not connected to any of the two previous nodes:
 
 ```shell
 go run main.go
 ```
 
-You should see this kind of messages appearing in your terminals :
+You should see this kind of messages appearing in your terminals:
 
 ```shell
 Found new peer: {QmYbQaq7jFLhgPoj1NtuExnPm28GtRrizEZ7DpSRPwHDtw: [/ip4/127.0.0.1/tcp/35961 /ip4/192.168.0.43/tcp/35961 /ip4/172.17.0.1/tcp/35961 /ip4/172.19.0.1/tcp/35961 /ip6/::1/tcp/43721 /ip6/2a01:e0a:214:11a0:d435:8690:b245:9613/tcp/43721 /ip6/2a01:e0a:214:11a0:8c20:cc8e:345c:41b6/tcp/43721]}
@@ -200,7 +200,7 @@ On the other hand, don't forget to add a handler in every node, which will liste
 
 ## Conclusion
 
-Well done ! You've accomplished a lot with libp2p, and there is so much more to discover.
+Well done! You've accomplished a lot with libp2p, and there is so much more to discover.
 Refer to the [official documentation](https://docs.libp2p.io/) to deep-dive into this very great project.
 
 Hope you enjoyed the workshop !
@@ -233,5 +233,5 @@ Organization
     </a>
 </p>
 
-> :rocket: Follow us on our different social networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Follow us on our different social networks, and put a star 🌟 on `PoC's` repositories.
 

@@ -79,6 +79,6 @@ $ docker-compose up -d
 $ docker-compose down -v
 ```
 
-You don't need to do more, just start the workshop :rocket:
+You don't need to do more, just start the workshop 🚀
 
 [Go back to the exercise](./README.md)

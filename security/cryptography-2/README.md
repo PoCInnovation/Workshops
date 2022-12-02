@@ -5,7 +5,7 @@
 This workshop aims to introduce you to cryptography.
 From substitution cryptography to symmetric methods, including hashing functions or asymmetric encryption; at the end of this workshop you will have the basics to understand modern cryptography.
 
-**Warning** : encryption != encoding ! When you encrypt data, you make sure that is only understandable by your targeted correspondants. When you encode a data, you transform it to another form to facilitate its use. For example, the base64 encoding is used in a lot of web applications (because it represents data with ascii characters only), but it is meant to be secure : anyone who has access to base64 data can decode it !
+**Warning** : encryption != encoding ! When you encrypt data, you make sure that is only understandable by your targeted correspondents. When you encode a data, you transform it to another form to facilitate its use. For example, the base64 encoding is used in a lot of web applications (because it represents data with ascii characters only), but it is meant to be secure: anyone who has access to base64 data can decode it !
 
 ## What you'll do
 
@@ -68,12 +68,12 @@ Well, this time I think you should look the man before typing "Hash sha decrypt"
 
 # XOR
 
-Every documents, images, sounds … can be stored in a file. A file contains data which must be used to render its content. The data organisation in a file is defined by its file format specifications (pdf, jpg, png, wav, zip …).
+Every documents, images, sounds … can be stored in a file. A file contains data which must be used to render its content. The data organization in a file is defined by its file format specifications (pdf, jpg, png, wav, zip …).
 
-Almost all the main file formats have some structural similarities :
+Almost all the main file formats have some structural similarities:
 
--   they start with a header describing the file : the size of its content, the targeted environments etc.
--   the content which can be organised in various ways
+-   they start with a header describing the file: the size of its content, the targeted environments etc.
+-   the content which can be organized in various ways
 -   sometimes a end pattern, used to know where the parsers should stop
 
 For example this is the format for JPEG:  [![](https://camo.githubusercontent.com/0e2fb017568710b28938c8749ded781b9163029c9e484720ea115e02f5c2ac55/68747470733a2f2f6968302e726564627562626c652e6e65742f696d6167652e313838393934303737352e363937332f666c61742c3130303078313030302c3037352c662e75312e6a7067)](https://camo.githubusercontent.com/0e2fb017568710b28938c8749ded781b9163029c9e484720ea115e02f5c2ac55/68747470733a2f2f6968302e726564627562626c652e6e65742f696d6167652e313838393934303737352e363937332f666c61742c3130303078313030302c3037352c662e75312e6a7067)
@@ -158,4 +158,4 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

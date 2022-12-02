@@ -2,13 +2,13 @@
 
 Basics of Data Science and introduce Pandas. You will:
 - learn to use Pandas
-- analyse huge datasets
+- analyze huge datasets
 - clean datasets
-- visualize data analyse
+- visualize data analyses
 
 ⚠️ Don't forget to extract the datasets from the file compress datasets.zip
 
-## What is Jupyter Notebook :book:
+## What is Jupyter Notebook 📖
 
 Jupyter Notebook allows you to work by cells. Modify the cells to pass the exercises.  
 Then execute the cells by clicking on the play button or with the shortcut: ``shift + enter``.  
@@ -51,4 +51,4 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

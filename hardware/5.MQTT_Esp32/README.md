@@ -145,7 +145,7 @@ Now it's time to know how subscribes to a topic.
 
 ### 📌 Tasks:
 
-> This information is necessary to communicate with the Broker :rocket:
+> This information is necessary to communicate with the Broker 🚀
 
 **Topic** : /Workshop/Hardware/MQTT  
 **Username** : MosquiFruit  
@@ -278,4 +278,4 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

@@ -2,14 +2,14 @@
 
 Reverse Engineering aims to understand what a program does. The goal of the Reverse Engineer is to deduce the source code of a given program from the analysis he made on it.
 
-This field of security is often encountered in :
+This field of security is often encountered in:
 
 * video games / software cracking (analysis of the way the game is protected -> binary patching)
 * malware analysis (understand the way it works -> conclude how to neutralize it)
 * vulnerability analysis
 
 Reverse Engineer implies a certain knowledge of the way the computer memory works and of creation and execution of a binary.
-Here are some keywords you should be able to understand to start your Reverse Engineering journey :
+Here are some keywords you should be able to understand to start your Reverse Engineering journey:
 
 * binary file
 * ELF
@@ -18,7 +18,7 @@ Here are some keywords you should be able to understand to start your Reverse En
 * stack
 * registers
 
-Here are some useful ressources to help you understand those words :
+Here are some useful resources to help you understand those words:
 
 * [some nice slides](http://slides.pwnh4.com/reverse)
 * [article on the stack](https://beta.hackndo.com/stack-introduction/)
@@ -31,7 +31,7 @@ For this workshop, you will need to install `gdb` (if not already installed on y
 
 *Challenge Name: reflexes*
 
-Here is the first exercice. The purpose here is to make you have the good reflexes when you start the analysis of a binary.
+Here is the first exercise. The purpose here is to make you have the good reflexes when you start the analysis of a binary.
 
 * What is the format of the *reflexes* binary ?
 * What is the targeted architecture ?
@@ -58,7 +58,7 @@ The purpose of this challenge is not to find a flag but to translate the asm cod
 
 Now we are going to learn how to analyze dynamically a binary. With GDB we can run our binary instruction by instruction and see, for each one of them, the corresponding values of the registers and the stack.
 To dynamically analyze a binary, you can use `start` in gdb.
-Here are the most useful commands during a dynamic analysis in GDB :
+Here are the most useful commands during a dynamic analysis in GDB:
 
 * `s` to execute the next instruction.
 * `finish` to go directly to the next instruction after the current function.
@@ -69,7 +69,7 @@ Here are the most useful commands during a dynamic analysis in GDB :
 
 *Challenge name: Basic protection*
 
-There various way of protecting a binary from Reverse Engineering, for example :
+There various way of protecting a binary from Reverse Engineering, for example:
 
 * obfuscation : you pollute your binary with useless instructions to make the work of the reverse engineer harder.
 * dynamic analysis protection with ptrace
@@ -81,7 +81,7 @@ Try to identify which protection(s) is/are used on *im-protected*. Find a way to
 
 *Challenge name: arena*
 
-It's time to use your knowledge in a typical CTF exercice. The *arena* binary will take you through various way to check an input.
+It's time to use your knowledge in a typical CTF exercise. The *arena* binary will take you through various way to check an input.
 Each step has its own logic : you have to find ways to go and to validate the final step.
 Try to strictly apply all the techniques you have learnt before !
 
@@ -116,4 +116,4 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

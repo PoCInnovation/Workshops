@@ -2,7 +2,7 @@
 
 ## Tools
 
-For this workshop, you need to install these tools :
+For this workshop, you need to install these tools:
   - [VSCode](https://code.visualstudio.com/) or [WebStorm](https://www.jetbrains.com/webstorm/)
   - [NodeJS](https://nodejs.org/en/) >= 10 ([installation guide](https://lmgtfy.com/?q=how+to+install+nodejs))
   - [npm](https://www.npmjs.com/) the Node package manager
@@ -12,10 +12,10 @@ For this workshop, you need to install these tools :
 Download the [source](./source.zip) file.
 
 This file contains the following sub-files:
- - `package.json` : The NPM Dependency Manager file
- - `package-lock.json` : A file containing the versions of each dependency used on the project.
- - `tsconfig.json` : A configuration file for Typescript
- - `src/index.ts` : A file which execute a simple Hello world function
+ - `package.json`: The NPM Dependency Manager file
+ - `package-lock.json`: A file containing the versions of each dependency used on the project.
+ - `tsconfig.json`: A configuration file for Typescript
+ - `src/index.ts`: A file which execute a simple Hello world function
  
 All you have to do is to follow these steps:
  - Create a folder `express-workshop-poc`

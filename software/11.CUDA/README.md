@@ -8,7 +8,7 @@ Then, you will develop an application able of accelerating the addition of 2 ver
 
 Finally, you will look at a bigger problem: transforming a colored image into a black and white one.
 
-## **Step 0 - :rocket: Initialization**
+## **Step 0 - 🚀 Initialization**
 
 A repository has been created for you when you accepted the invitation link that was sent to you by email.
 Whenever you push, tests will be launched and will allow you to validate the next steps.
@@ -55,7 +55,7 @@ To familiarize yourself with CUDA, you will start by running a function on two t
 
 It should display the string `"Hello CUDA World {idx}"`, where idx is the index of the thread.
 
-> ⚠️ ***Here are the resources you will need*** :
+> ⚠️ ***Here are the resources you will need***:
 
 - [Indexing on CUDA](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#built-in-variables).
 
@@ -114,7 +114,7 @@ You must:
 - For a certain number of pixels, generate random values for the fields r, g and b contained between 0 and 255. Small note, the rand function does not exist on CUDA.
 - Calculate the gray value of the pixel.
 
-> ⚠️ ***Here are the resources you will need*** :
+> ⚠️ ***Here are the resources you will need***:
 
 - [Did you say random?](https://docs.nvidia.com/cuda/curand/index.html)
 
@@ -146,4 +146,4 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

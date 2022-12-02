@@ -11,7 +11,7 @@
 All the required information to install the workshop's dependencies are given in the [SETUP.md](./SETUP.md)
 
 ## Step 1 - Create a contract
-Let's create your first contract in [Solidity](https://docs.soliditylang.org/en/v0.8.0/) :rocket:  
+Let's create your first contract in [Solidity](https://docs.soliditylang.org/en/v0.8.0/) 🚀  
 > 💡 You can use the online IDE [Remix](https://remix.ethereum.org/) which is really useful to develop contracts for the Ethereum blockchain.
 
 Your objective is to create a contract named `Task1`:
@@ -57,7 +57,7 @@ You need to import a contract in Starton using a single information:
 
 ## Step 4 - Interact with a template contract
 Writing a contract in Solidity from scratch is great, but sometimes you just want to create something simple and generic and you don't want to spend time learning Solidity in depth, making sure your contract is secure...  
-Today's your lucky day, Starton has a service exactly for this: contract templates :rocket:
+Today's your lucky day, Starton has a service exactly for this: contract templates 🚀
 
 Go to your [Starton dashboard](https://app.starton.io/) and create an [ERC-20](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/) token with a fixed supply.  
 > If you want more challenge, you can try to deploy the template contract using the API instead of the UI  
@@ -129,4 +129,4 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

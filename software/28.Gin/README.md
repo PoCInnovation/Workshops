@@ -24,7 +24,7 @@ We will have:
 
 There are plenty of other structures you may need in a real API, but these are the main ones you'll need for this workshop.
 
-Now let's code :rocket:
+Now let's code 🚀
 
 Add a route on the endpoint `/`:
 - It uses the `GET` method
@@ -67,7 +67,7 @@ This may seem hard, but here are a few advices to help you:
 > For the `POST` request, you'll then need to bind the request body to the `Item` structure to retrieve and return it.
 
 <details>
-  <summary>See how to request with postman :satellite:</summary>
+  <summary>See how to request with postman 📡</summary>
 
 Enter your URL and the method you which to use in the title bar and click `Send`.
 
@@ -82,7 +82,7 @@ Then the result (if there is any) will be printed out at the bottom.
 ## Step 3: Authorization middleware and custom errors
 
 Having multiple endpoints is great, but sometimes we need a way to restrict access to logged in users for example.  
-This is where a middleware comes into play :rocket:
+This is where a middleware comes into play 🚀
 
 Let's create an `Auth` middleware that will check if the user is authorized to access the endpoint.
 
@@ -97,7 +97,7 @@ Gin also allows you to use custom controllers on certain errors, let's add one f
 
 You've had a glimpse of `models`, now its time to dive into it!
 We won't use a real database here but rather a simple json file to mock a database.
-> The configuration would have been too long to explain and to do here, but it's surely a great bonus idea when you've completed this workshop :rocket:
+> The configuration would have been too long to explain and to do here, but it's surely a great bonus idea when you've completed this workshop 🚀
 
 You should already have a few items in the `database.json` file given in the boilerplate, so let's implement the following endpoints:
 
@@ -121,7 +121,7 @@ You can also use a real database with an ORM:
 - [GORM](https://github.com/go-gorm/gorm)
 
 
-And if you still want to play around with Go and all its usages, you can take a look at other cool Go features like [goroutine](https://go.dev/tour/concurrency) or [generics](https://go.dev/doc/tutorial/generics) :rocket:
+And if you still want to play around with Go and all its usages, you can take a look at other cool Go features like [goroutine](https://go.dev/tour/concurrency) or [generics](https://go.dev/doc/tutorial/generics) 🚀
 
 ## Authors
 
@@ -152,4 +152,4 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

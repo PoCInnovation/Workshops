@@ -6,7 +6,7 @@ Basics of python and usage of Jupyter Notebook. You will:
 - Solve complex algorithm exercises
 - Master the different programming paradigms of Python
 
-## What is Jupyter Notebook :book:
+## What is Jupyter Notebook 📖
 
 Jupyter Notebook allows you to work by cells. Modify the cells to pass the exercises.  
 Then execute the cells by clicking on the play button or with the shortcut: ``shift + enter``.  
@@ -49,4 +49,4 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

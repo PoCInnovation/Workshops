@@ -17,7 +17,7 @@ To install docker, follow the [guide](https://github.com/PoCInnovation/Workshops
 
 Download the [source](./source/source.zip) available in the [source folder](./source)
 
-Then tip the following command :
+Then tip the following command:
 
 ```shell
 # Setup
@@ -52,7 +52,7 @@ $ tree -a
 
 You must install [direnv](https://direnv.net/) to easily use the environment config file `.envrc`.
 
-You can install it through the command :
+You can install it through the command:
 
 ```shell
 $ curl -sfL https://direnv.net/install.sh | bash # Install direnv
@@ -62,7 +62,7 @@ $ sudo mv -t /usr/local/bin direnv # Put it in binary
 
 > 💡 You can follow the [official documentation](https://direnv.net/docs/installation.html) to install the binary.
 
-You must add the following hook in your shell source :
+You must add the following hook in your shell source:
 
 ```shell
 # In .zshrc

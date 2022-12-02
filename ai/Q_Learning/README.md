@@ -4,7 +4,7 @@ Continuation of Reinforcement Learning. You will:
 - use Q learning
 - solve Mountain-Car-V0
 
-## What is Jupyter Notebook :book:
+## What is Jupyter Notebook 📖
 
 Jupyter Notebook allows you to work by cells. Modify the cells to pass the exercises.  
 Then execute the cells by clicking on the play button or with the shortcut: ``shift + enter``.  
@@ -41,4 +41,4 @@ Notebook files are recognized by the extension: ``.ipynb``.
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

@@ -18,7 +18,7 @@ You should have the following folders:
 - `routes`: the core of the router, setting up all the routes handler, with their middlewares and controllers
 - `models`: wraps all the database calls
 
-There are plenty of other important packages you may need in a real API, but these are the main ones you can be sure you'll need one time or another. Now let's code :rocket:
+There are plenty of other important packages you may need in a real API, but these are the main ones you can be sure you'll need one time or another. Now let's code 🚀
 
 Add a route on the endpoint `/hello`:
 - It uses the `GET` method
@@ -41,7 +41,7 @@ Create a middleware that logs the traffic of the API:
 > 💡 You can make this middleware global to all routes rather than calling it manually on each and every route you create
 
 <details>
-  <summary>See how to request with postman :satellite:</summary>
+  <summary>See how to request with postman 📡</summary>
 
   Enter your URL and the method you wish to use in the titlebar and click `Send`.
 
@@ -67,7 +67,7 @@ To protect some routes from unknown users, we'll have to add another middleware.
 
 <details>
 
-  <summary>See how to send a header :satellite:</summary>
+  <summary>See how to send a header 📡</summary>
 
   Go into the 3rd panel, there you will be able to create the headers that you want to send, toggle the checkbox to send them or not.
 
@@ -109,7 +109,7 @@ You will need to implement an endpoint for:
 
 <details>
 
-  <summary>See how to send JSON in body :satellite:</summary>
+  <summary>See how to send JSON in body 📡</summary>
 
   Go into the 4th panel and select the `raw` option, then you can write your JSON (you can also copy this one).
 
@@ -155,4 +155,4 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

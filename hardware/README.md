@@ -1,7 +1,7 @@
 # Hardware Workshops
 
-Hardware workshops to introduce the students to hardware.  
-  
+Hardware workshops to introduce the students to hardware.
+
 In each directory the README explaining the purpose of workshop.
 
 ### [🌐 Click to join our Discord](https://discord.gg/Yqq2ADGDS7)
@@ -10,20 +10,20 @@ In each directory the README explaining the purpose of workshop.
 Creation of your first circuits:
 - Learn the basics of voltage
 - Interact with microcontrollers
-- Have an overwiew of electronics  
+- Have an overview of electronics  
   
 ## 2 - [Initiation in Simulateur](./2.Simulateur)
 Creation of your first circuits:
 - Learn to use [TinkerCad](https://www.tinkercad.com/)
 - Learn the basics of voltage
 - Interact with microcontrollers
-- Have an overwiew of electronics
+- Have an overview of electronics
 
 ## 3 - [Initiation WI-FI ESP32](./3.Wi-Fi_Esp32/README.md)
 Creation of your own local network:
 - Learn how works WI-FI and local network
 - Interact with microcontrollers
-- Have an overwiew of electronics
+- Have an overview of electronics
 
 ## 4. [Initiation BLE_ESP32](./4.BLE_Esp32/README.md)
 Creation of your own Server local and Scanner:
@@ -34,14 +34,14 @@ Creation of your own Server local and Scanner:
 ## 5. [Initiation MQTT_ESP32](./5.MQTT_Esp32/README.md)
 Creation of your own Broker Local:
 - SetUp Wi-fi with Esp32
-- Subcribe and publish data on topics
+- Subtribe and publish data on topics
 - Interact with Broker
 - Redirection topic and data
 - Configuration of Esp32 and Raspberry pi
 
 ## 6. [IFTTT MQTT_ESP32](./6.MQTT_with_IFTTT_Esp32/README.md)
 - SetUp Wi-fi with Esp32
-- Subcribe and publish data on topics
+- Subscribe and publish data on topics
 - Use Adafruit
 - Use IFTTT
 
@@ -69,4 +69,4 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

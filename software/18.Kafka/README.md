@@ -41,12 +41,12 @@ Please follow the instructions available [here](./SETUP.md).
 
 ## Step 1 - Start Kafka and ZooKeeper
 
-### :bookmark_tabs: **Description**:
+### 📑 **Description**:
 You'll need to start Kafka in a docker container, but Kafka actually relies on [ZooKeeper](http://cloudurable.com/blog/kafka-architecture/index.html).
 
 Those services will start into docker containers.
 
-### :pushpin: **Tasks**:
+### 📌 **Tasks**:
 - Create a `docker-compose.yaml` file
 
 In this file, create a `zookeeper` service:
@@ -64,7 +64,7 @@ Then, create a second service, named `kafka`:
 
 > You'll have to setup non-required environment variables, look for the listeners related ones !
 
-### :books: **Documentation**:
+### 📚 **Documentation**:
 
 - [Control startup and shutdown order in docker compose](https://docs.docker.com/compose/startup-order/)
 - [Kafka listeners explained](https://www.confluent.io/blog/kafka-listeners-explained/)
@@ -93,14 +93,14 @@ kafka_1      | [2021-08-08 14:10:13,104] INFO [KafkaServer id=1002] started (kaf
 
 ## Step 2 - Creating the producer
 
-### :bookmark_tabs: **Description**:
+### 📑 **Description**:
 In this step, you will create a service responsible for publishing messages into Kafka.
 
 You'll use the [Go programming language](https://golang.org/), and the package [sarama](https://github.com/Shopify/sarama) to create the producer.
 
-### :pushpin: **Tasks**:
+### 📌 **Tasks**:
 - Create a `client` folder and jump into it
-- Initialize the go module with the following command : `go mod init waiter`
+- Initialize the go module with the following command: `go mod init waiter`
 - Install sarama with `go get github.com/Shopify/sarama`
 - Create a `main.go` file
 - Create 3 functions:
@@ -114,7 +114,7 @@ You'll use the [Go programming language](https://golang.org/), and the package [
 - You'll then call the two last functions in the `main` one
 - Once the message has been published, print the partition and the offset it has been published to 
 
-### :books: **Documentation**:
+### 📚 **Documentation**:
 - [How to send message from any type ? Use bytes](https://pkg.go.dev/github.com/sclasen/sarama#ByteEncoder)
 - [Sarama documentation](https://pkg.go.dev/github.com/sclasen/sarama#section-documentation)
 
@@ -139,13 +139,13 @@ message published on partition `0` with offset `1`
 
 ## Step 3 - Creating the first consumer - the cook
 
-### :bookmark_tabs: **Description**:
+### 📑 **Description**:
 
-It's now time for you to create the first consumer : the cooks in your kitchen !
+It's now time for you to create the first consumer: the cooks in your kitchen !
 
 First, you will create the actual consumer and then consume messages.
 
-### :pushpin: **Tasks**:
+### 📌 **Tasks**:
 - Create a `kitchen` folder and jump in it
 - Once again, initialize the go module using `go mo init kitchen`
 - Install sarama using `go get github.com/Shopify/sarama`
@@ -156,7 +156,7 @@ First, you will create the actual consumer and then consume messages.
   - `consumeMessages` which retrieves the partitions, and then read for the incoming messages as they arrive and 
     print their content after decoding them
 
-### :books: **Documentation**:
+### 📚 **Documentation**:
 - [Consumer with Sarama](https://pkg.go.dev/github.com/Shopify/sarama#ConsumerGroup)
 - [How to consume partitions ?](https://pkg.go.dev/github.com/Shopify/sarama#Consumer)
 
@@ -175,17 +175,17 @@ Received an order for a pizza margherita at table 17 !
 
 ## Step 4 - Creating the second consumer - the manager
 
-### :bookmark_tabs: **Description**:
+### 📑 **Description**:
 This service act as a storage / monitoring for the incoming orders.
 It will save the incoming orders in a file.
 
 We split the kitchen and manager service to improve the single-responsibility feature of each service.
 
-### :pushpin: **Tasks**:
+### 📌 **Tasks**:
 - You already did one consumer right ? Now just save the result in a file named `log.txt` :)
 - Create it in the `manager` folder
 
-### :books: **Documentation**:
+### 📚 **Documentation**:
 - [Working with files](https://gobyexample.com/writing-files)
 
 ### ✔️ **Validation**:
@@ -229,4 +229,4 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

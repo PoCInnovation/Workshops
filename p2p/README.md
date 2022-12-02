@@ -12,7 +12,7 @@ In each directory you will find a `README` explaining the purpose of the Worksho
 
 Create your own p2p network using libp2p and the golang language.
 
-You will :
+You will:
 
 - Use libp2p to create a host.
 - Use multiaddresses to connect two nodes.
@@ -23,7 +23,7 @@ You will :
 
 Introduction to smart contracts using Starton's API.
 
-You will :
+You will:
 
 - Use Starton to deploy your contracts.
 - Import an already deployed contract on your Starton dashboard.
@@ -33,7 +33,7 @@ You will :
 
 Introduction to Foundry, a toolkit for Ethereum application development.
 
-You will :
+You will:
 
 - Use Foundry to test your contracts.
 - Use Foundry to deploy your contracts on a local blockchain.

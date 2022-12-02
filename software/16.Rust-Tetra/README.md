@@ -67,7 +67,7 @@ To display text, you need to follow three steps:
 
 First, you need an image. Make sure you have a `PoC.png` file in the `assets/images` folder.
 
-Your program must display an image with the parameter :
+Your program must display an image with the parameter:
 - The scale of type `Vec2`.
 
 - The position of type `Vec2`.
@@ -171,5 +171,5 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
 

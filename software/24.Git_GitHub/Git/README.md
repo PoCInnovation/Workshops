@@ -35,7 +35,7 @@ To see those aliases it's simple: <code>alias | grep git</code></p>
 
 ## Step 1 - Initialize a repository locally and modify its content
 
-### :bookmark_tabs: Description:
+### 📑 Description:
 
 There are multiple ways to initialize a repository locally.
 
@@ -64,7 +64,7 @@ The most known one is to clone a repository using `git clone`.
 </details>
 
 
-### :pushpin: Task:
+### 📌 Task:
 
 - If you haven't already, go ahead and clone the GitHub repository created for this workshop.
 
@@ -81,7 +81,7 @@ Once again it is recommended to use the SSH URL instead of the HTTPS one.
 ### Control what files can be added
 
 It is recommended to use a `.gitignore` file to list all the files you never want to push (like binaries, or your local IDE configs).  
-> You can even have [generated ones based on the language you're developing in](https://github.com/github/gitignore) :rocket:
+> You can even have [generated ones based on the language you're developing in](https://github.com/github/gitignore) 🚀
 
 ### Check what's been modified
 
@@ -102,7 +102,7 @@ Also, a better way of adding everything is using `git add --all`, because if you
 
 You also have other commands that can be used to modify files such as `git rm` and `git mv`, they are respectively used to remove and move a file.
 
-### :pushpin: Task:
+### 📌 Task:
 
 - Add a file named `step1.txt` with "Hello World!" written in it.
 
@@ -123,7 +123,7 @@ By default, `vi` will be your default editor, if you want to change it, you can 
 If you wish to include the modifications you have made to all the files already tracked by git but do not wish to add untracked files you can simply use the `-a` option.
 Think about [signing off](https://developercertificate.org/) your commits when you contribute to public repos with `-s`.
 
-### :pushpin: Task:
+### 📌 Task:
 
 - Simply commit this file, and try to find a [good commit message](https://cbea.ms/git-commit/) that you will want to read, an easy way to do that is following [conventional commit](https://www.conventionalcommits.org/en/v1.0.0/).
 
@@ -139,7 +139,7 @@ You probably have heard of force push, you shouldn't use it most of the time, th
 changes you applied to your branch by rebasing your branch on top of `main`, because it will apply the changes from `main`
 before the changes made on your branch, hence rewriting the history.
 
-### :pushpin: Task:
+### 📌 Task:
 
 - Go ahead and push your commit.
 
@@ -160,7 +160,7 @@ For this, you have to use `git fetch`
 
 ## Step 2 - Revert changes
 
-### :bookmark_tabs: Description:
+### 📑 Description:
 
 Reverting changes comes in handy a lot of times, and you are really happy to know how to do that when you need it.
 It takes all the stress off and allows you to do it properly because you are confident of what you are doing and not 
@@ -188,7 +188,7 @@ The exact command would be `git reset --hard HEAD~N` where N is the number of co
 
 ### Remove a mistake made by a pushed commit
 
-### :pushpin: Tasks:
+### 📌 Tasks:
 - Speaking of mistakes, go ahead and add a file named `step2.txt` with "This is a bug", written in it, commit it and push it.
 
 > Remember how we said that making small commits was a good thing?  
@@ -199,7 +199,7 @@ The exact command would be `git reset --hard HEAD~N` where N is the number of co
 
 ## Step 3 - Branches
 
-### :bookmark_tabs: Description:
+### 📑 Description:
 
 Now that you know new things about git, you may want to improve your workflow and use branches.
 
@@ -211,7 +211,7 @@ Here there are also multiple possibilities, but let's stick with the easiest and
 You can simply create a branch and switch to it at the same time using `git switch -c <my branch name>`.
 > 💡 Yes, `git checkout` can also be used but [`checkout` is a legacy command that allows more than just switching to branch](https://linuxhandbook.com/git-switch-checkout/), so we'll stick to `git switch` here.
 
-### :pushpin: Tasks:
+### 📌 Tasks:
 
 - Go ahead and create a branch named `feat/step3`, and push it.
 - Add a file on it named `step3.txt` containing "WIP feature".
@@ -221,7 +221,7 @@ You can simply create a branch and switch to it at the same time using `git swit
 When changes are made on `main` while you were working on your feature, you need to first apply these changes on your branch, resolve conflicts and push it to your branch.  
 After that, you will be able to merge your work into `main`.
 
-### :pushpin: Tasks:
+### 📌 Tasks:
 
 - Update `main` by switching to it and pulling the changes.  
 - For the sake of the workshop, push a file named `coworker_feature.txt` on `main` containing "Most awaited feature".
@@ -236,7 +236,7 @@ Now that you are completely up-to-date with `main` and that you have finished yo
 
 > 💡 This process can be made using Pull Requests on GitHub, but this is not the focus right now.
 
-### :pushpin: Task:
+### 📌 Task:
 
 - Merge your branch into `main` using rebase
 > The different merging strategies will be explained in the GitHub part of this workshop 😉
@@ -247,7 +247,7 @@ In the end, you can manage your branches using the [`git branch`](https://git-sc
 
 ## Step 4 - Restore files
 
-### :bookmark_tabs: Description:
+### 📑 Description:
 
 Sometimes you may delete files but want to retrieve them later.
 
@@ -260,7 +260,7 @@ There is a command that allows to switch commits, `git checkout`, [it can help y
 
 Another option could be [`git restore`](https://git-scm.com/docs/git-restore), which works the same way as you'd do with `git checkout` but is much easier to use.
 
-### :pushpin: Tasks:
+### 📌 Tasks:
 
 - Restore the file `step2.txt`
 
@@ -324,4 +324,4 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

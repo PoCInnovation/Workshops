@@ -21,14 +21,14 @@ All the required information to start this workshop can be found in [SETUP.md](.
 - In the `app.controller.ts` file, create a `@Get()` route `/article` (the route `hello` should help you to do so)
 - You also have to create the corresponding provider to return a test value.
 
-> :book: The documentation about [modules](https://docs.nestjs.com/modules) and [providers](https://docs.nestjs.com/providers) will teach you some basic concepts and architecture of Nest. The concept of [dependency injection](https://docs.nestjs.com/providers#dependency-injection) is a really interesting part of Nest.
+> 📖 The documentation about [modules](https://docs.nestjs.com/modules) and [providers](https://docs.nestjs.com/providers) will teach you some basic concepts and architecture of Nest. The concept of [dependency injection](https://docs.nestjs.com/providers#dependency-injection) is a really interesting part of Nest.
 
 Now, launch the server:
 ```sh
 npm run start:dev
 ```
 
-You can now go to http://localhost:3000/article in your browser (or using Postman) to see if it works :rocket:
+You can now go to http://localhost:3000/article in your browser (or using Postman) to see if it works 🚀
 
 > As said before, the command `start:dev` makes use of `file watchers`. Every time you save a file, Nest will automatically rebuild the server with the updated file(s).  
 > This way you won't need to restart it manually after each modification 😉
@@ -69,7 +69,7 @@ Here is an example of a body:
 First, read a little about [route parameters](https://docs.nestjs.com/controllers#route-parameters).
 
 You can now update the previously created `getArticle` function to take a title as a route `@Param()`.  
-Add debug logs again to check if you are correctly receiving it :rocket:
+Add debug logs again to check if you are correctly receiving it 🚀
 
 > We'll use this param later to search for this title in our mocked article DB 😉
 
@@ -158,4 +158,4 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

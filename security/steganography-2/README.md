@@ -26,7 +26,7 @@ You'll learn to detect those techniques but also to counter them in order to get
 
 # [](https://github.com/PoCInnovation/Pool2021/blob/master/Security/Steganography/README.md#useful-tools) Ressources
  - [Stegsolve](https://www.wechall.net/de/forum/show/thread/527/Stegsolve_1.3/) is an old but very useful tool that allows you to analyze an image with some filters.
- - [Steghide](https://github.com/StefanoDeVuono/steghide) is a steganography program that hides data in various kinds of image and audio files , only supports these file formats : `JPEG, BMP, WAV and AU`. but it’s also useful for extracting embedded and encrypted data from other files.
+ - [Steghide](https://github.com/StefanoDeVuono/steghide) is a steganography program that hides data in various kinds of image and audio files , only supports these file formats: `JPEG, BMP, WAV and AU`. but it’s also useful for extracting embedded and encrypted data from other files.
  - Strings is a basic linux command that displays the displayable strings in a file of any type. This should be one of the reflex that you should have when you see a file that you think contains hidden data.
  - [Sonic visualizer](https://www.sonicvisualiser.org) is a tool for viewing and analyzing the contents of audio files, however it can be helpful when dealing with audio steganography. You can reveal hidden shapes in audio files.
  - [exiftool](https://exiftool.org) is a great tool for working with metadata in image, audio, and video files. exiftool enables you to read, write, copy, and edit the metadata. It is interesting to note that exiftool can write to read-only files if the user has write permission in the directory.
@@ -79,7 +79,7 @@ Since modifying the last bit of the pixel value doesn’t result in a visually p
 This technique consists of encoding the data to hide to base64 and wrote, bit per bit, to the byte describing the image content.
 The same scheme can be applied to other digital media (audio and video), where data is hidden in parts of the file that result in the least change to the audible or visual output.
 
-The disadvantage is that you can detect the use of this technique if you open the image at high contrast and check the pixel color : if it’s not as uniform as it appeared to be, some content must be stored with the LSB technique.
+The disadvantage is that you can detect the use of this technique if you open the image at high contrast and check the pixel color: if it’s not as uniform as it appeared to be, some content must be stored with the LSB technique.
 
 Now that I gave you an introduction I think it's time for you to do the challenge `lsb.zip`  using the knowledge you just gain.
 
@@ -107,4 +107,4 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

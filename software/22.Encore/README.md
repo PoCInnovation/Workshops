@@ -1,4 +1,4 @@
-# Workshop 22 - Encore :rocket:
+# Workshop 22 - Encore 🚀
 
 ✔️ Discover [Encore](https://encore.dev/) a powerful go framework to develop APIs.  
 
@@ -11,7 +11,7 @@
 With the evolution of the web the arrival of SaaS, PaaS, IaaS, developing and deploying an API has become a *must-have* knowledge.
 More and more frameworks exist to code faster, optimize deployment, remove boring boilerplate but there is no solution that manage both of those things for you.
 
-[Encore](https://encore.dev/) does, it's a powerful golang framework that help you to build production-ready API and services without coding boilerplate, pay attention to the deployment or manage your database. In conclusion, [Encore](https://encore.dev/) helps you to stay focus on the most important thing : your product.
+[Encore](https://encore.dev/) does, it's a powerful golang framework that help you to build production-ready API and services without coding boilerplate, pay attention to the deployment or manage your database. In conclusion, [Encore](https://encore.dev/) helps you to stay focus on the most important thing: your product.
 
 In this workshop, we will create a simple delivery application that will manage packets to understand and uses all features available by [Encore](https://encore.dev/).
 
@@ -27,7 +27,7 @@ First, create a new folder named `discovery` and create the file `discovery.go` 
 
 > With encore, each directory that contains an endpoint is considered as a *services*.
 
-We are going to create **3** endpoints :
+We are going to create **3** endpoints:
 
 ##### 1 - URLParam
 
@@ -53,7 +53,7 @@ curl http://localhost:4000/url/test
 
 This one aim to retrieve the parameter from query parameters
 
-Create the function `QueryParam` which takes as query parameter two fields :
+Create the function `QueryParam` which takes as query parameter two fields:
 - `Foo` of type `string`
 - `Bar` of type `int`
 
@@ -75,7 +75,7 @@ curl http://localhost:4000/query\?foo\=test\&bar\=3
 
 The last one aim to retrieve values from the body.
 
-Create the function `BodyData` which takes a body with two fields :
+Create the function `BodyData` which takes a body with two fields:
 - `Title` of type `string`
 - `Content` of type `string`
 
@@ -116,7 +116,7 @@ First, create a new folder named `delivery`, this is where we will code our `del
 Before coding our API, we must define models and create our database.<br>
 We are lucky, [encore](https://encore.dev/docs/develop/databases) manage the boring stuff for you, you only have to create a `migrations` directory in a `service` that will store your `sql` files and everything will work automatically.
 
-Let's create our database :
+Let's create our database:
 - Create a `database` service
 - Create a directory `migrations` in your service
 - Create a file named `1_create_database.up.sql` in that folder
@@ -206,7 +206,7 @@ First, we must retrieve our database client, to do so a file named `packet.go` t
 
 Next, let's expose endpoints to read our packets.
 
-Create the file `get.go` that will contain two functions :
+Create the file `get.go` that will contain two functions:
 
 - `GetAll` that will retrieve **all** packets stored in the database.<br>
   You must return an object with the list of all packets and the number of package.<br>
@@ -229,7 +229,7 @@ Perfect, now verify your endpoint with the [awesome encore dashboard](https://en
 
 #### Bonus
 
-If you are a brave developer, you can continue with `Update` and `Delete`. You got the logic so it shouldn't be a big deal for you now :rocket:
+If you are a brave developer, you can continue with `Update` and `Delete`. You got the logic so it shouldn't be a big deal for you now 🚀
 
 ## Step 3 - Hire employee
 
@@ -290,7 +290,7 @@ Storing the caller identity will be too long for a workshop and involve to desig
 
 > ⚠️ I **DON'T** recommend that method in production API, it's just to win time.
 
-Encore framework provide an [elegant way](https://encore.dev/docs/develop/auth) to manage our authentication system through a simple keyword : `authHandler`.
+Encore framework provide an [elegant way](https://encore.dev/docs/develop/auth) to manage our authentication system through a simple keyword: `authHandler`.
 
 Create a new service named `auth` in the `delivery` folder.
 
@@ -309,7 +309,7 @@ Great, your endpoint is protected ! Test it with the dashboard.
 
 You are now ready to complete other function.
 
-We want to :
+We want to:
 - List all deliverymen
 - Get a deliveryman information selected by his ID
 
@@ -414,7 +414,7 @@ Congrats! You finished that workshop and build your own delivery API with [Encor
 
 - [Discover Encore community](https://encore.dev/docs/community)
 - [Encore git repository](https://github.com/encoredev/encore)
-- [Deploy in production](https://encore.dev/docs/deploy/platform)
+- [Deploy in production](https://encore.dev/docs/deploy/infra)
 - [Monitor your application](https://encore.dev/docs/observability/monitoring) 
 
 ## Authors
@@ -445,4 +445,4 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

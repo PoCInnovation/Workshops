@@ -231,7 +231,7 @@ You can also play around with tools like [helm](https://helm.sh/), [rancher](htt
 
 ## Authors
 
-| [<img src="https://github.com/rojasdiegopro.png?size=85" width=85><br><sub>Diego Rojas</sub>](https://github.com/rojasdiegopro) | 
+| [<img src="https://github.com/rojas-diego.png?size=85" width=85><br><sub>Diego Rojas</sub>](https://github.com/rojas-diego) | 
 | :---: |
 <h2 align=center>
 Organization
@@ -257,5 +257,5 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
 

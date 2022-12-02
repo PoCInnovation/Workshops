@@ -45,7 +45,7 @@ This challenge introduce you to the fallback security breach as well as Solidity
 It's going to introduce you to the basic random number generator security breach.
 
 <details>
-<summary>:book: Easy Level - Resources</summary>
+<summary>📖 Easy Level - Resources</summary>
     <li>
         <a href="https://www.tutorialspoint.com/solidity/">Syntax of Solidity language</a>
     </li>
@@ -110,4 +110,4 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

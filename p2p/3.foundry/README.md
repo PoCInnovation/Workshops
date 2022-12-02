@@ -22,7 +22,7 @@ Please refer to the [SETUP.md](./SETUP.md) file.
 
 ## Step 1 - Forge is useful for testing
 
-### :bookmark_tabs: **Description**:
+### 📑 **Description**:
 
 In this step you will learn how to use foundry to test your contracts.
 Before starting take a look at the generated files, specially in the `src/` & `test/` folders.
@@ -30,7 +30,7 @@ In the `src/` folder you will find the `Counter.sol` file, this is the contract 
 
 
 
-### :pushpin: **Tasks**:
+### 📌 **Tasks**:
 
 - Add a constructor to the contract, it will be used to initialize the number value. 
     - The constructor must take a `uint256` as an argument.
@@ -43,9 +43,9 @@ In the `src/` folder you will find the `Counter.sol` file, this is the contract 
 - Now test your function by modifying the `test/Counter.t.sol` file, the file must test the `increment` function and the `setNumber` one.
     - You can use the `forge test` command at the root of your project to test your contract.
 
-> :warning: Take care about the visibility of your functions !
+> ⚠️ Take care about the visibility of your functions!
 
-### :books: **Documentation**:
+### 📚 **Documentation**:
 
 - [functions and constructor](https://docs.soliditylang.org/en/v0.8.13/contracts.html)
 - [test with forge](https://book.getfoundry.sh/forge/writing-tests)
@@ -62,17 +62,17 @@ Test result: ok. 2 passed; 0 failed; finished in 12.26ms
 
 ## Step 2 - ...but not only
 
-### :bookmark_tabs: **Description**:
+### 📑 **Description**:
 
 In this step we'll use the `anvil` command to start a local test blockchain. We will
 use it to deploy our contract and interact with it.
 
-### :pushpin: **Tasks**:
+### 📌 **Tasks**:
 
 - Start the local blockchain with `anvil`
     - This will start a local blockchain on your computer, and give you some key pairs to interact with it.
 
-> :warning: You must not close the terminal where you started the blockchain, you can use it for the whole workshop. 
+> ⚠️ You must not close the terminal where you started the blockchain, you can use it for the whole workshop. 
  
 - Deploy your contract on the local blockchain.
     - You can use `forge` to deploy your contract.
@@ -91,7 +91,7 @@ use it to deploy our contract and interact with it.
   - You can also use `cast` to call a function of your contract.
 
 
-### :books: **Documentation**:
+### 📚 **Documentation**:
 
 - [anvil specifications](https://book.getfoundry.sh/reference/anvil/)
 - [use forge to deploy](https://book.getfoundry.sh/forge/deploying)
@@ -117,7 +117,7 @@ transactionIndex        0
 
 ## Step 3 - private != private ?
 
-### :bookmark_tabs: **Description**:
+### 📑 **Description**:
 
 The Contract Application Binary Interface (ABI) is the standard way to 
 interact with contracts in the Ethereum ecosystem,
@@ -127,7 +127,7 @@ The encoding is not self describing and thus requires a schema in order to decod
 
 > from the [solidity documentation](https://docs.soliditylang.org/en/v0.8.13/abi-spec.html)
 
-### :pushpin: **Tasks**:
+### 📌 **Tasks**:
 
 - Now create a `Contract.sol` file and add the following contract to it.
 ```Solidity
@@ -155,7 +155,7 @@ contract Random {
 
 > Take a look at the notion of [Storage slot](https://mixbytes.io/blog/collisions-solidity-storage-layouts#:~:text=Solidity%20does%20not%20possess%20a,and%20unpacked%20on%20the%20fly.).
 
-### :books: **Documentation**:
+### 📚 **Documentation**:
 
 - [Contract ABI](https://docs.soliditylang.org/en/v0.8.13/abi-spec.html#contract-abi-specification)
 - [Storage slot](https://mixbytes.io/blog/collisions-solidity-storage-layouts#:~:text=Solidity%20does%20not%20possess%20a,and%20unpacked%20on%20the%20fly.)
@@ -173,15 +173,15 @@ If it is the right number you should see the following output:
 
 ## Step 4 - Time to play outside
 
-### :bookmark_tabs: **Description**:
+### 📑 **Description**:
 
-During the first steps you interacted with your local blockchain, but now we will use a public one :rocket: 
+During the first steps you interacted with your local blockchain, but now we will use a public one 🚀 
 Some test networks are available for you to test your contracts, they are called [testnets](https://ethereum.org/en/developers/docs/networks/).
 In this step we will interact with the [Goerli](https://goerli.net/) testnet.
 We will use [Infura](https://infura.io/)'s nodes to interact with the blockchain. We could also have
 run our own node, but it would take too much time.
 
-### :pushpin: **Tasks**:
+### 📌 **Tasks**:
 
 - Create a [metamask](https://metamask.io/) account and fund it with some Goerli ETH.
   - You can use the [faucet](https://goerlifaucet.com/) to get some Goerli ETH.
@@ -195,7 +195,7 @@ run our own node, but it would take too much time.
 > Don't forget to use your endpoint, shutdown your local blockchain to be sure you are using the Goerli testnet.
 
   
-### :books: **Documentation**:
+### 📚 **Documentation**:
 
 - [wallet](https://ethereum.org/en/wallets/)
 
@@ -208,7 +208,7 @@ Hope you enjoyed the workshop!
 
 ## Authors
 
-| [<img src="https://github.com/Doozers.png?size=85" width=85><br><sub>Isma</sub>](https://github.com/Doozers) | 
+| [<img src="https://github.com/Doozers.png?size=85" width=85><br><sub>Ismael FALL</sub>](https://github.com/Doozers) | 
 |:------------------------------------------------------------------------------------------------------------:|
 <h2 align=center>
 Organization
@@ -234,5 +234,5 @@ Organization
     </a>
 </p>
 
-> :rocket: Follow us on our different social networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Follow us on our different social networks, and put a star 🌟 on `PoC's` repositories.
 

@@ -1,4 +1,4 @@
-# Part 2: GitHub :rocket:
+# Part 2: GitHub 🚀
 
 ## Step 0 - Project initialization
 Create a repository and commit the files & folders contained in the `calculator` folder.
@@ -8,18 +8,18 @@ Go to your repository settings, and in the `Collaborators` add your teammate !
 <i>Pro tips:</i>
 > Don't forget to use the commit norm you learned in the previous part 😉
 
-> Don't forget to use branches ! This time, try to create it directly in GitHub :rocket:
+> Don't forget to use branches ! This time, try to create it directly in GitHub 🚀
 
 > This workshop is based on [PoC Innovation's Open-Source project template](https://github.com/PoCInnovation/open-source-project-template).  
 Several links to specific parts of the [getting started guide](https://github.com/PoCInnovation/open-source-project-template/blob/main/.github/getting-started.md) will be given to you, but don't spend too much time on it, we have a lot to cover ! You can read it entirely later.
 
 ## Step 1 - [Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) & [Pull Requests (PRs)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
-### :bookmark_tabs: **Description**:
+### 📑 **Description**:
 On a project, you'll need a tool to track and organize your work: with GitHub Issues, you can track feature requests, user feedbacks and bug reports.  
 Contributions can also be managed with Pull Requests to review code and discuss about it before merging on another branch.  
 If you played a bit with the calculator you may notice the given result isn't correct.
 
-### :pushpin: **Tasks**:
+### 📌 **Tasks**:
 You have to create 3 issues:
 - One to describe the problem, with expected behavior and what you are experiencing.
 - Another to suggest a feature (add all the arguments instead of just the first 2)
@@ -30,7 +30,7 @@ Create a Pull Request for each branch and use 2 different methods to link the re
 When it's done, add your teammate as reviewer and play with the review tool in the `Files Changed` tab !
 
 
-### :books: **Documentation**:
+### 📚 **Documentation**:
 - [Classification with labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels)
 - [Assignment](https://docs.github.com/en/issues/tracking-your-work-with-issues/assigning-issues-and-pull-requests-to-other-github-users)
 - [Closing keywords](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/using-keywords-in-issues-and-pull-requests)
@@ -68,13 +68,13 @@ Try to make it as complete as possible, then take a look at the expected results
 </details>
 
 ## Step 2 - [Projects](https://docs.github.com/en/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards) & [Milestones](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/about-milestones)
-### :bookmark_tabs: **Description**:
+### 📑 **Description**:
 You can manage features and tasks with issues, group commits and do code reviews with PRs, but how do you actually organize
 your work in tables like well-known ticketing tools ? That's where GitHub Projects come into play !  
 But how to you handle deadlines and group several issues and PRs linked to a sprint for example ? Milestones are exactly what you need for this !  
 You can find them in the `Issues` tab.  
 
-### :pushpin: **Tasks**:
+### 📌 **Tasks**:
 Create a project named `Calculator` with 3 columns (by default `To do`, `In progress` and `Done` but you can rename it) with automation to add issues in `To do` when they are created, move created PRs to `In progress` and fill the `Done` column when closing issues or merging PRs.  
 Then, you can play with milestones by creating one with a due date of `January 19, 2038` and adding Issues to it. 
 
@@ -102,11 +102,11 @@ You can test it by creating other issues:
 > A [new GitHub Project experience](https://docs.github.com/en/issues/trying-out-the-new-projects-experience/about-projects) is currently in public beta. We chose not to cover it because it's subject to major changes, but it brings great features such as [custom fields](https://docs.github.com/en/issues/trying-out-the-new-projects-experience/about-projects#adding-metadata-to-your-tasks) and [different views](https://docs.github.com/en/issues/trying-out-the-new-projects-experience/about-projects#adding-metadata-to-your-tasks).
 
 ## Step 3 - [Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)
-### :bookmark_tabs: **Description**:
+### 📑 **Description**:
 Keeping your code clean and making sure it still works as intended when you develop new features is very important, and GitHub provides you a useful tool for this: Actions !  
 Whether you want to build, test or deploy your code, you can create custom workflows triggered by any GitHub event (push, pull_request, new issue...)
 
-### :pushpin: **Tasks**:
+### 📌 **Tasks**:
 Follow [this quickstart](https://docs.github.com/en/actions/quickstart) to create your first action !
 
 ### ✔️ **Validation**:
@@ -119,12 +119,12 @@ You can see your workflow runs in the `Action` tab of your repository
 > If you want to learn more about GitHub Actions with real use cases, you can check [our dedicated workshop](https://github.com/PoCInnovation/Workshops/tree/master/software/05.Actions) !
 
 ## Step 4 - [Branches protection settings](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branches) (optional)
-### :bookmark_tabs: **Description**:
+### 📑 **Description**:
 Branch protection rules are a great way to enforce good practices.  
 For example, your production branch (usually `main`) should be as clean and bug-free as possible, so you don't want to push directly on it and if you have CI tests with GitHub Actions it's a good practice to ensure they all passed when merging on `main`.  
 Even if your collaborators and yourself know this, a mistake or a malicious act may occur and enforcing these practices isn't a bad idea.
 
-### :pushpin: **Tasks**:
+### 📌 **Tasks**:
 Go to `Settings` -> `Code and automation` -> `Branches` and add rules to protect your `main` and `dev` branches.
 > Take a look at the [protection settings we recommend for `main`](https://github.com/PoCInnovation/open-source-project-template/blob/main/.github/getting-started.md#branches) and don't hesitate to ask if you have any question about it 😉
 
@@ -163,4 +163,4 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

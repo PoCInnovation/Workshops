@@ -1,8 +1,8 @@
 
 # Security Workshops
-Security workshops to introduce students to security with CTF-like exercices.
+Security workshops to introduce students to security with CTF-like exercises.
 
-In each directory, you will find the exercices, a README explaining the purpose of the workshop and the slides used during the workshop.
+In each directory, you will find the exercises, a README explaining the purpose of the workshop and the slides used during the workshop.
 
 ### [🌐 Click to join our Discord](https://discord.gg/Yqq2ADGDS7)
 
@@ -15,7 +15,7 @@ You will learn to:
 * understand https
 * extract data from gsm communications
 * extract data from tcp communications
-* use paquet analysis for usb communications
+* use packet analysis for usb communications
 * extract data from packets
 * use wireshark in a real forensic scenario
 
@@ -27,7 +27,7 @@ Basics of steganography, you will be introduced to basics of files extraction, s
 * data in sound
 * data in pdf files
 
-## :lock: cryptography
+## 🔒 cryptography
 
 Introduction to cryptography
 You will learn to:
@@ -102,4 +102,4 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

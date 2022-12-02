@@ -1,4 +1,4 @@
-# Hardware Pool : 3D modelling
+# Hardware Pool: 3D modelling
 
 In this workshop you will learn the basics of 3D modeling with Fusion 360. :muscle:
 The exercises are of increasing difficulty.
@@ -11,19 +11,19 @@ In case of blockages, do not hesitate to ask the workshop leader.
 
 ## Setup:
 
-The first step is to install Fusion 360, you can find the necessary documentation just below: :books:
+The first step is to install Fusion 360, you can find the necessary documentation just below: 📚
 You go to this [link](https://www.autodesk.fr/education/edu-software/overview?sorting=featured&filters=individual) and go to **mise en route**.
 
 You just need to create an account with the epitech link.
 
-## Exercise 1: First things first : the basics
+## Exercise 1: First things first: the basics
 
 ### 1.1 Make a Square
 Your first object is the creation of a square.
 You will learn how to **extrude** 🎉
 
 ### 📌 Tasks:
-Make a cube of 57.58mm side (Careful, we'll come and check the measurements !)
+Make a cube of 57.58mm side (Careful, we'll come and check the measurements!)
 
 ![cube](../.3d_model/cube.png)
 
@@ -91,7 +91,7 @@ Make a servomotor. Nothing too fancy, but try to get as close as you can to the 
 ## Exercise 5:
 
 ### 📌 Tasks:
-> For this exercise, you will have to make a car :blue_car: , a rocket :rocket: , or even a pocket watch if that is what you like. The important thing is that it is printable and that it measures less than 10 cm³. This is the average size that is suitable for the 3D printer. :fireworks:
+> For this exercise, you will have to make a car :blue_car: , a rocket 🚀 , or even a pocket watch if that is what you like. The important thing is that it is printable and that it measures less than 10 cm³. This is the average size that is suitable for the 3D printer. :fireworks:
 
 ## 🎉 Congratulation !
 
@@ -127,4 +127,4 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

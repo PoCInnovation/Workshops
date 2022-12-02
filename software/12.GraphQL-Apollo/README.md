@@ -26,7 +26,7 @@ Your first reflex is to try the World Map API to play with GraphQL and understan
 
   - Go to [World Map API](https://countries.trevorblades.com)
 
-Let's do some queries to retrieve data :
+Let's do some queries to retrieve data:
   - Retrieve all continents' code, name and all their countries' code, name and capital.
   - Retrieve the code, name, currency and its states' code and name of the country with `FR` code.
 
@@ -44,7 +44,7 @@ It's time to try GraphQL, the simplest and most popular library is [Apollo serve
 Create a folder named `backend` to develop your API.
 Download the [source](./sources/backend.zip) and extract it in the `backend` folder.
 
-Your directory should have the following structure :
+Your directory should have the following structure:
 
 ```shell
 ├── prisma
@@ -79,7 +79,7 @@ Your directory should have the following structure :
 └── yarn.lock # Dependencies file
 ```
 
-To start the project, execute the following commands :
+To start the project, execute the following commands:
 
 With yarn
 ```shell
@@ -101,9 +101,9 @@ Go to http://localhost:5000 to reach the local playground of your API.
 
 ### Basics functions
 
-We will start with some basic function to warm up, let's write :
+We will start with some basic function to warm up, let's write:
  - a query named `hello` that returns the `string` "Hello World"
- - a query named `personalHello` that takes a `string` as parameter and returns : "Hello " + the parameter
+ - a query named `personalHello` that takes a `string` as parameter and returns: "Hello " + the parameter
  - a mutation named `add` that takes two numbers as parameters and returns the additive
 
 First, you must modify the schema in `src/schema/schema.graphql` to define your query and mutation.
@@ -123,11 +123,11 @@ Warm up is finished. It's time to create the schema that define our API.
 
 The database schema is already defined in `prisma/schema.prisma`.
 
-First, you must modify `src/schema/schema.graphql` to implement two new types :
+First, you must modify `src/schema/schema.graphql` to implement two new types:
   - `Category` that has the same fields as model `Category` in `schema.prisma`.
   - `Product` that has the same fields as model `Product` in `schema.prisma`.
 
-Then, create resolvers that can read of `Category` and `Product` :
+Then, create resolvers that can read of `Category` and `Product`:
  - a query `categories` that return all categories
  - a query `category` takes an `id` as parameter and returns the category.
  - a query `products` that return all products
@@ -149,7 +149,7 @@ Now that you have queries to read data, it's time to modify our products and cat
 
 In `src/schema/schema.graphql`:
 
-Create two `input` that defines arguments for mutation :
+Create two `input` that defines arguments for mutation:
  - `CategoryInput`: input fields for a new category
  - `ProductInput`: input fields for a new product
 
@@ -183,7 +183,7 @@ Now that you have finished your API, it's time to develop your web application.
 Go back to the root of the workshop's folder and create a new folder `fronted`.
 Download the [source](./sources/frontend.zip) and extract it in the `frontend` folder.
 
-Your directory should have the following structure :
+Your directory should have the following structure:
 
 ```shell
 ├── public # Public directory with not important stuff
@@ -206,14 +206,14 @@ Your directory should have the following structure :
 └── yarn.lock # Dependencies lock
 ```
 
-To start the project, execute the following commands :
+To start the project, execute the following commands:
 ```shell
 yarn # Install dependencies
 yarn start # Start server in developer mode
 ```
 
 The objective is to have a simple front with a menu that shows the list of all products.
-Here is an example made with the [material UI library](https://material-ui.com/) :
+Here is an example made with the [material UI library](https://material-ui.com/):
 
 ![Menu maquette](../../.github/assets/software/graphql-apollo/graphql-product-workshop.png)
 
@@ -232,7 +232,7 @@ If you are not familiar to react, take a loot at this [documentation](https://re
 
 You know how to create a GraphQL and interact with it from frontend through the `apolloClient`.
 
-You should now implement more functionalities like :
+You should now implement more functionalities like:
   - User management
   - Button and forms to add products
   - Page Routing
@@ -274,4 +274,4 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

@@ -54,7 +54,7 @@ $ docker run -d --name workshop-poc-neo4j -p 7474:7474 -p 7687:7687 -e NEO4J_AUT
 >
 > 💡 If you don't understand the command, check `docker run` [options](https://docs.docker.com/engine/reference/run/)
 
-The container expose :
+The container expose:
  - The **graphic interface** on port `7474`, you can go it through this [link](http://localhost:7474/).
  - The `bolt` on port `7687`, you can use it to send request from your code.
 
@@ -76,7 +76,7 @@ Take a look at the [documentation](https://themetalfleece.github.io/neogma-docs/
 
 To verify that your connection is working, modify the file `index.ts` to print models defined in the database.
 
-It should print an empty object like this :
+It should print an empty object like this:
 
 ```shell
 > typescript-project-template@1.0.0 dev
@@ -91,7 +91,7 @@ Good job, the database is ready to store some data !
 
 ## Step 2 - Books
 
-Let's store the main entity of our schema : books.
+Let's store the main entity of our schema: books.
 
 First, create a directory `entities` in the directory `src` to store all our entities management functions.
 
@@ -101,7 +101,7 @@ Now, inside this directory, let's create another directory named `Books`.
 
 Create a file named `BooksEntity.ts` and define your entity properties in.
 
-To do that :
+To do that:
 - Create a [type](https://www.typescriptlang.org/docs/handbook/2/objects.html) `BooksPropertiesI` which define all your fields and their type according to the previous schema. 
   
 > 💡 You must add a property `id` of type `string` to recognize books that has common values.
@@ -109,10 +109,10 @@ To do that :
 - Create an empty interface named `BooksRelationNodesI` to store all your relation, we will fill it later.
 - Create a [type](https://www.typescriptlang.org/docs/handbook/2/objects.html) `BooksInstance`, which will be equal to the generic type `NeogmaInstance`,  filled with the types we previously defined.
 
-Your types are defined, let's create the node :
+Your types are defined, let's create the node:
   
 [Export](https://riptutorial.com/typescript/example/28118/exporting-importing-declarations) a `const` variable named `Books`. It is equal to the result of the function `ModelFactory`, which create a new model using the types we previously defined, and some additional information we give in the parameters.
-The `ModelFactory` function takes an object which must contain the following fields :
+The `ModelFactory` function takes an object which must contain the following fields:
 - `label`: the name we choose for the Model, here it's `Book`.
 - `primaryKeyField`: primary key use to recognize entity, here it's `id`.
 - `schema`: defines the data of the model, and applies some constraints to enforce some data safety. 
@@ -145,7 +145,7 @@ You must write those function in a file named `BooksModels` in the `entities/Boo
 
 #### Update
 
-- Create a function `updateBook` which takes as parameters :
+- Create a function `updateBook` which takes as parameters:
   - `id`: book id
   - `bookProperties`: all properties to update, this parameter must be of type `Partial<BooksPropertiesI>` to make the all properties optional. Like this, we can update on or more values without problem.
     
@@ -183,7 +183,7 @@ You can add the [authors.tests.ts](./tests/authors.tests.ts) file from the [test
 
 Now, we got books and authors... Let's link them with a simple relation.
 
-In graph database, relations can be represented like human relation. For example : **authors wrote those books**.
+In graph database, relations can be represented like human relation. For example: **authors wrote those books**.
 
 Modify the `BooksEntity.ts` file to add the relation `WriteBy` in your book.
 - Add the relationship `Author` in the `BooksRelationNodeI` interface.
@@ -193,11 +193,11 @@ Modify the `BooksEntity.ts` file to add the relation `WriteBy` in your book.
 
 ### Function
 
-Create the `BooksRelations.ts` file and develop three important function :
+Create the `BooksRelations.ts` file and develop three important function:
 
 ⚠️ This step is very hard and need some research to finish it. Take your time.
 
-- `linkBookToAuthor` which takes as parameters :
+- `linkBookToAuthor` which takes as parameters:
   - `bookId`: Book id
   - `authorId`: Author id
     This function should create the relation `WriteBy` between the book and the author and return the book with the author.
@@ -211,7 +211,7 @@ You will need to create a utility function that convert the query result into a 
 > 💡 You can create type in the `BookEntity.ts` file. Don't store it in `AuthorEntity.ts` to avoid **circle dependencies problem**.
 
 
-- `detachBookFromAuthor` which takes as parameters :
+- `detachBookFromAuthor` which takes as parameters:
   - `bookId`: Book id
   - `authorId`: Author id
     This function should delete the relation `WriteBy` between the book and the author and return true if the operation works, false if it failed.
@@ -262,4 +262,4 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

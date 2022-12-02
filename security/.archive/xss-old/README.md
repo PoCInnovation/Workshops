@@ -3,7 +3,7 @@
 Today we are going to learn what is Client Web Security and how we can identify and exploit different types of XSS vulnerabilities.
 There is no flag to find in the first challenges, you should only follow what each exercise is asking you to do (make a prompt(1) for example).
 
-Before we start, here are some usefull ressources:
+Before we start, here are some useful resources:
 * the slides of this workshop https://slides.com/pwnh4/xss
 * a really (really) big collection of [XSS payloads](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection)
 * the PortSwigger article about XSS https://portswigger.net/web-security/cross-site-scripting
@@ -35,4 +35,4 @@ Let's discover mutation XSS. These payloads are remarkably difficult to craft bu
 This challenge is a replica of a previous XSS vulnerability found on Google services:
 * http://ctf.oursin.eu/workshops/01/
 
-![PoC Innovation](../../.github/favicon.png)
+![PoC Innovation](../../../.github/favicon.png)

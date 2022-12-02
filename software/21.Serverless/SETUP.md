@@ -31,7 +31,7 @@ yarn start
 ```
 - To check if everything is good, go to [http://localhost:3000](http://localhost:3000)
   <details>
-    <summary>You should see :</summary>
+    <summary>You should see:</summary>
   
    ![Netlify Setup Page](.github/assets/setupPage.png)
 

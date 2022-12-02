@@ -22,12 +22,12 @@ Create a `components` directory in `src/` which will contain a file named `TopBa
 
 Inside it, you'll create a basic top bar that will be `fixed` at the top of your page and display the title of your application.
 
-> Display your component with a cool style :rocket:  
+> Display your component with a cool style 🚀  
 > For this, you can use CSS or a UI library like [Svelte Materialify](https://svelte-materialify.vercel.app/)
 
 Then, you can call it inside your `App.svelte` to display it :star_struck:
 
-### :book: Resources
+### 📖 Resources
 - [Import components in Svelte](https://svelte.dev/tutorial/nested-components)
 - [Svelte's style](https://svelte.dev/tutorial/styling)
 
@@ -50,13 +50,13 @@ Then, create two events in your `App.svelte` and display them.
 
 > Don't forget to apply styles to your components 😉
 
-### :book: Resources
+### 📖 Resources
 - [Properties with Svelte](https://svelte.dev/tutorial/declaring-props)
 
 
 ## Step 3 - Interaction
 
-It's time to add more events :rocket:
+It's time to add more events 🚀
 
 Create a `Button` component which opens a `Form` component in the center of your page.
 
@@ -132,4 +132,4 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

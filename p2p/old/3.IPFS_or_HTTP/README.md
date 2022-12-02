@@ -173,7 +173,7 @@ Last step : if anyone wants to download from our website some mp3 songs, we need
 Since you did the previous step, this one would seem easy : in your `musicshare/views.py`
  on the `download` view, do the same thing as previously but instead of adding a file, call the `cat` (or `get`) method.
 
-## :rocket: Going further
+## 🚀 Going further
 A very cool feature with IPFS is that if someone is having an IPFS node running on its machine and download your mp3 audio
 then you deleted it, you will be able to retrieve it from its node !
 
@@ -208,4 +208,4 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

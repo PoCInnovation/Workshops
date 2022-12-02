@@ -8,7 +8,7 @@ Puis, vous développerez une application capable d'accélérer l'addition de 2 l
 
 Enfin, vous vous pencherez sur un problème plus conséquent : transformer une image en couleur en une image en noir et blanc.
 
-## **Step 0 - :rocket: Initialization**
+## **Step 0 - 🚀 Initialization**
 
 Un repository a été créé pour vous grâce au lien d'invitation qui vous a été communiqué par mail. Lorsque vous *pushez* sur celui-ci des tests seront lancés et vous permettrons de valider les prochaines étapes.
 

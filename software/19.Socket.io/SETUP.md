@@ -2,7 +2,7 @@
 
 ## Tools
 
-For this workshop, you need to install these tools : 
+For this workshop, you need to install these tools: 
 - [VSCode](https://code.visualstudio.com/) or [WebStorm](https://www.jetbrains.com/fr-fr/webstorm/) on your computer
 - [NodeJS](https://nodejs.org/en/) >= 10 ([installation](https://lmgtfy.com/?q=how+to+install+nodejs))
 - [npm](https://www.npmjs.com/) (Generally installed with NodeJS)
@@ -63,7 +63,7 @@ Hello World !
 ```
 
 If you go on your browser at http://localhost:8080/
-you should see this on the screen :
+you should see this on the screen:
 
 ```
 Hello World !

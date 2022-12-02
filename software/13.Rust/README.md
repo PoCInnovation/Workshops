@@ -60,7 +60,7 @@ For the third exercise, create a function that takes one parameter:
 
 You must now display the sequence of Fibonacci from the number of starts to the maximum value.
 
-Here is a small example of the beginning of the Fibonacci sequence :
+Here is a small example of the beginning of the Fibonacci sequence:
 
 ```shell
 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ...
@@ -77,7 +77,7 @@ In this exercise, you will transform vectors into a linked list.
 
 To do this, you will create a file `to_list.rs`.
 
-First, create a `linked_list` structure with the following attributes :
+First, create a `linked_list` structure with the following attributes:
 - `value: i32`
 - `next` which has the structure type.
 
@@ -103,7 +103,7 @@ The objective of this fifth exercise is to create a simplifying calculator.
 
 Create a file `calculator.rs` for this new function.
 
-To do this, you have to make a calculator that can do :
+To do this, you have to make a calculator that can do:
 - `Addition`
 - `Multiplication`
 - `Division`
@@ -137,7 +137,7 @@ Get a string as parameter, from this word you have to apply or not the following
 
 - If the word starts with a consonant, you must take the first letter of the word and place it in the first position of the suffix.
 
-> 💡 To help you visualize the exercise, here are some examples :
+> 💡 To help you visualize the exercise, here are some examples:
 
 ```Rust
 "PoC"        -->    "oC-Pay"
@@ -207,4 +207,4 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

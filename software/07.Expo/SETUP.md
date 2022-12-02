@@ -16,7 +16,7 @@ To install node:
 
 > If your distro is too old, node default version from your package manager might be under 10, you'll have to install node via [nvm](https://github.com/nvm-sh/nvm)
 
-Then Expo CLI : `sudo npm install -g expo-cli`
+Then Expo CLI: `sudo npm install -g expo-cli`
 
 ## Project setup
 
@@ -36,9 +36,9 @@ expo-workshop-poc
 ├── assets             <-- assets folder (font, images...)
 ├── babel.config.js    <-- config file
 ├── components         <-- component folder (react notion)
-├── constants          <-- useful variables (color palet, phone dimensions...)
+├── constants          <-- useful variables (color palette, phone dimensions...)
 ├── hooks              <-- hooks folder (react notion)
-├── navigation         <-- pages organisation and configuration folder
+├── navigation         <-- pages organization and configuration folder
 ├── node_modules       <-- dependencies folder
 ├── package.json       <-- node file that define dependencies, rules and commands
 ├── package-lock.json  <-- dependencies specifications

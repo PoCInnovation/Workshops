@@ -23,9 +23,9 @@ one of the other ways to communicate - like REST does.
 
 - gRPC stands for **g**oogle **R**emote **P**rocedure **C**all.
 - It is a framework developed by Google on top of the [RPC protocol](https://en.wikipedia.org/wiki/Remote_procedure_call).
-- When dealing with gRPC, the data sent between the client and the server is packed in a specific format : protobuffers.
+- When dealing with gRPC, the data sent between the client and the server is packed in a specific format: protobuffers.
 
-> 💡 Okay, but why do we use protobuf and not JSON ? [JSON are nice](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON#json_structure) : they are human-readable, easy to build and to extract.
+> 💡 Okay, but why do we use protobuf and not JSON ? [JSON are nice](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON#json_structure): they are human-readable, easy to build and to extract.
 In fact, it is the data serialization method used in a lot of REST APIs.
 
 **But why gRPC instead of REST ?**
@@ -43,14 +43,14 @@ Please follow the instructions available [here](./SETUP.md).
 
 ## Step 1 - Designing the gRPC service
 
-### :bookmark_tabs: **Description**:
+### 📑 **Description**:
 When dealing with gRPC, you need to define two things in a very specific file: the [protobuf](https://developers.google.com/protocol-buffers) file.
 These two things are :
 
 - `Service` - This is the global communication between two entities
 - `Message` - It defines the messages sent and received during the communication
 
-### :pushpin: **Tasks**:
+### 📌 **Tasks**:
 - Create a folder `messenger`
 - In this folder, create a `messenger.proto` file
 - Create a `MessengerService` in the `messenger.proto` file
@@ -68,7 +68,7 @@ These two things are :
 - The syntax version you must use is `proto3`
 - Don't forget to set the `option go_package` with the value `./`
 
-### :books: **Documentation**:
+### 📚 **Documentation**:
 
 - [Protobuf language guide](https://developers.google.com/protocol-buffers/docs/proto)
 
@@ -81,13 +81,13 @@ protoc --go_out=messenger --go-grpc_out=messenger messenger/messenger.proto
 
 ## Step 2 - Implement the main logic
 
-### :bookmark_tabs: **Description**:
+### 📑 **Description**:
 Before implementing both the server and the client, you will implement the main logic of the program, which will:
 
 - Take several arguments
 - Start as the server or the client
 
-### :pushpin: **Tasks**:
+### 📌 **Tasks**:
 - Create a `main.go` file at the root of your working folder
 - Create a `main` function
 - Check the first argument provided to the program
@@ -96,7 +96,7 @@ Before implementing both the server and the client, you will implement the main 
   - If it is `-c`, it will start the client. For the moment, just print `Starting the client`
   - Otherwise, the program will exit with an error code of 1
 
-### :books: **Documentation**:
+### 📚 **Documentation**:
 
 - [Command line args in go](https://gobyexample.com/command-line-arguments)
 
@@ -127,13 +127,13 @@ exit status 1
 
 ## Step 3 - Implement the server
 
-### :bookmark_tabs: **Description**:
+### 📑 **Description**:
 At the first step, the protoc compiler [generated 2 files](https://grpc.io/docs/languages/go/basics/#generating-client-and-server-code): `messenger_grpc.pb.go` and `messenger.pb.go`.  
 Let's focus on the first one, which contains a lot of things, including a `MessengerServiceServer` interface.
 
 During this step, you will implement this interface and its method, `Send`.
 
-### :pushpin: **Tasks**:
+### 📌 **Tasks**:
 - Open the `messenger/messenger_grpc.pb.go` file
 - Look for the `MessengerServiceServer`
 - Create a folder named `server` at the root of your working directory
@@ -165,7 +165,7 @@ In the `main.go` file:
   - Below the print of `Starting the server`, create a new server and start it
       - The listener must listen on `tcp:9000`
 
-### :books: **Documentation**:
+### 📚 **Documentation**:
 
 - Look at the generated protobuf file :)
 
@@ -179,14 +179,14 @@ Should make the program run indefinitely !
 
 ## Step 4 - Implement the client
 
-### :bookmark_tabs: **Description**:
+### 📑 **Description**:
 Your server is running, but you need a way to send request.
 Here comes the client !
 
 During this step, you will create a client and add methods allowing it to connect, send a message and disconnect 
 from the server.
 
-### :pushpin: **Tasks**:
+### 📌 **Tasks**:
 - Create a folder named `client`
 - In this folder, create a `client.go` file
 - In this file, create a `Client` structure
@@ -204,7 +204,7 @@ In the `main.go` file:
 
 - Below the print of `Starting the client`, create a new client and send a message
 
-### :books: **Documentation**:
+### 📚 **Documentation**:
 
 - Look at the protobuf generated file :)
 
@@ -228,19 +228,19 @@ Starting the server
 
 ## Step 5 - Shutdown properly
 
-### :bookmark_tabs: **Description**:
+### 📑 **Description**:
 When you don't need the server to run anymore, or whenever the client has stopped sending their requests, we need 
 to shut it down properly.
 
 As you created the `Disconnect` method for the client, you only need to create the same method for the server that 
 triggers whenever you hit `CTRL + C`.
 
-### :pushpin: **Tasks**:
+### 📌 **Tasks**:
 - Capture when the user hit `CTRL + C` on the server-side
 - Create a `Stop` method for the server and call it when necessary
 - Use the `Disconnect` method for the client when it has sent its message
 
-### :books: **Documentation**:
+### 📚 **Documentation**:
 - [Signals in go](https://pkg.go.dev/os/signal)
 
 ### ✔️ **Validation**:
@@ -287,4 +287,4 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

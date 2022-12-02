@@ -52,7 +52,7 @@ Your project is now deployed online.
 
 Now, `clone` the Github repository in your computer.
 
-It should have the following architecture :
+It should have the following architecture:
 
 ```shell
 .
@@ -79,7 +79,7 @@ Thanks to [NextJS](https://nextjs.org/) we can both develop the frontend and the
 
 You must install the dependencies with one of those commands:
 
-Yarn : `yarn`<br>
+Yarn: `yarn`<br>
 Npm:   `npm install`
 
 ## Step 2 - Serverless functions
@@ -106,11 +106,11 @@ curl -s http://localhost:3000/api/ping | grep "pong" > /dev/null && echo "Succes
 
 #### Hello dude !
 
-Now the objective is simple : use an url parameter to say hello with a [dynamic api route](https://nextjs.org/docs/api-routes/dynamic-api-routes).
+Now the objective is simple: use an url parameter to say hello with a [dynamic api route](https://nextjs.org/docs/api-routes/dynamic-api-routes).
 
 Create a folder `hello` and a file named `[name].js` in this folder.
 
-It must :
+It must:
 - Retrieve the name in the `url parameter`
 - Response with the string `Hello <parameter> !`.
 
@@ -124,7 +124,7 @@ curl -s http://localhost:3000/api/hello/John | grep "Hello John \!" > /dev/null 
 
 #### Deploy
 
-You had some fun with Next backend, it's time to deploy your changes in public with Vercel ! 
+You had some fun with Next backend, it's time to deploy your changes in public with Vercel! 
 
 To do it, just `push` your code, it should reload your application.
 
@@ -136,7 +136,7 @@ You can now play with the `url` to test your backend. Try to share your url with
 
 It's time to create our backend to manage your post.
 
-Your post must be represented like the following object :
+Your post must be represented like the following object:
 ```json
 {
   "id": "the post id",
@@ -151,17 +151,17 @@ Create a file named `resources.js` that export a variable that stores data in an
 
 Create a file `posts.js` in `api` that will be our [REST endpoint](https://www.sitepoint.com/rest-api/) to manage posts.
 
-It must :
-- On **GET** : Retrieve all posts stored in the API
-- On **POST** : Create a new post
+It must:
+- On **GET**: Retrieve all posts stored in the API
+- On **POST**: Create a new post
   - The **body** of your request must have a `title` and a `content`, you can generate the `created_at` with `Date`.
     
 > You can retrieve the body with `req.body`.
 
-:rocket: Now, you can create a folder `posts` that get an `id` as `url parameter` to do :
-- On **GET** : Retrieve the post identified by its `id`
-- On **PUT** : Update post data
-- On **DELETE** : Delete the post
+🚀 Now, you can create a folder `posts` that get an `id` as `url parameter` to do:
+- On **GET**: Retrieve the post identified by its `id`
+- On **PUT**: Update post data
+- On **DELETE**: Delete the post
 
 > 💡 You can use [Postman](https://www.postman.com/) to test your API.
 >
@@ -177,7 +177,7 @@ Now you got your backend, let's create the frontend !
 
 To begin with, we will create the top bar to discover [next syntax](https://nextjs.org/docs/basic-features/pages).
 
-Take a look at a `next frontend architecture` :
+Take a look at a `next frontend architecture`:
 
 ```shell
 ├── pages
@@ -195,7 +195,7 @@ Take a look at a `next frontend architecture` :
 
 Now, to create the top bar we need 2 things: a component named `TopBar` wrote in a `topBar.js` file and a `stylesheet` named `TopBar.module.css`.
 
-Here we go, first :
+Here we go, first:
 
 - Create a file named `topBar.js` that will export a component that displays a topBar.
 
@@ -205,7 +205,7 @@ Here we go, first :
 
 - Now you must display it to your website, go to `index.js` and remove all the code in the `return`, replace it with your component, you can use it like a html tag (e.g: `<TopBar/>`). 
 
-Push your work and share your `website url` to your friends, so they can be impressed by your skills :rocket:
+Push your work and share your `website url` to your friends, so they can be impressed by your skills 🚀
 
 ## Step 5 - View posts in your browser
 
@@ -233,13 +233,13 @@ You are now an expert of Deployment as a Service. Why don't you try other websit
 
 Deploy a new website in this platform, it's really easy.
 
-Here are the steps to deploy on Netlify :
+Here are the steps to deploy on Netlify:
 - Create a git repository
 - Sign-in on [Netlify](https://www.netlify.com/)
 - Go to `New site from Git`
 - Choose your repository
 - Push `Deploy`
-- It's done, your website is now online :rocket:
+- It's done, your website is now online 🚀
 
 ## Go Further
 
@@ -278,4 +278,4 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

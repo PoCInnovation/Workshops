@@ -23,11 +23,11 @@ myInference = 3 // This create an error because your variable as type string
 ### Array
 
 ```typescript
-const myArr: Array<string> = ['hello world'] // You can create an array with the keyword Array<> or []. Exemple: Array<number> === number[] 
+const myArr: Array<string> = ['hello world'] // You can create an array with the keyword Array<> or []. Example: Array<number> === number[] 
 ```
 
 ### Interface
-You can also create types for object, it's an interface :
+You can also create types for object, it's an interface:
 
 ```typescript
 interface Person {
@@ -36,7 +36,7 @@ interface Person {
 }
 
 const me: Person = { name: 'John', age: 20 };
-const otherPerson: Person = { name: 'John', age: 20, sexe: 'man' }; // This create an error because the attribut 'sexe' doesn't exist in the type Person.
+const otherPerson: Person = { name: 'John', age: 20, sex: 'man' }; // This create an error because the attribute 'sex' doesn't exist in the type Person.
 ```
 
 ### Function
@@ -55,7 +55,7 @@ sum(1, 'a') // Error
 ```typescript
 const arrowSum = (n1: number, n2: number) => n1 + n2; // Same as previous "sum" function. If your arrow function is inline, it's instant returning.
 
-const longArrowSum = (n1: number, n2: number) => { // Same as "arrowSum" but more long :) 
+const longArrowSum = (n1: number, n2: number) => { // Same as "arrowSum" but longer) 
     return n1 + n2;
 }
 

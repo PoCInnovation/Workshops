@@ -2,8 +2,8 @@
 
 This workshop only requires you to install docker, its dependencies and to activate the docker service. You'll need:
 
-- [docker-ce](https://docs.docker.com/engine/install/fedora/) : docker community edition
-- [docker-compose](https://docs.docker.com/compose/install/) : complementary tool to simplify the creation of images and containers
+- [docker-ce](https://docs.docker.com/engine/install/fedora/): docker community edition
+- [docker-compose](https://docs.docker.com/compose/install/): complementary tool to simplify the creation of images and containers
 
 ## Installation
 

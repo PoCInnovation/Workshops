@@ -50,7 +50,7 @@ Once you are done, create a `/register` endpoint using the POST method. Every ca
 After retrieving these parameters, add a `create_user` method in `database.py` to insert them in the `user` table.
 > 💡 The [official documentation of the mysql connector](https://dev.mysql.com/doc/connector-python/en/) will be useful to discover how to perform queries.  
 > You will also need to write some SQL, here's [a small cheatsheet](https://www.codecademy.com/learn/learn-sql/modules/learn-sql-manipulation/cheatsheet)
-to help you getting starting with SQL :rocket:
+to help you getting starting with SQL 🚀
 
 Test your route using postman, and don't forget to add some error handling in case your insertion failed.  
 
@@ -61,7 +61,7 @@ Now that we are able to create users, the next logical step is to retrieve a reg
 But wait, didn't we forget something in the previous step?  
 In a real-world scenario, storing the password without any form of encryption is a really bad practice: any person who manages to access our database could log as any user ⚠️
 
-Update your previous code to hash the password before storing it :lock:
+Update your previous code to hash the password before storing it 🔒
 
 > You can use [bcrypt](https://pypi.org/project/bcrypt/) to generate the hash and check it later
 
@@ -84,7 +84,7 @@ Creating todos is great, but being able to retrieve them is better!
 For this, you'll use the same endpoint `/todos` but with the `GET` method.
 
 Instead of duplicating your decorators with the only change being the method, you should use [flask_restful](https://flask-restful.readthedocs.io/en/latest/index.html)
-to handle this case in a cleaner way :rocket:
+to handle this case in a cleaner way 🚀
 
 > 💡 You can return an array of strings corresponding to the todos' content, we don't need the other fields
 
@@ -121,4 +121,4 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

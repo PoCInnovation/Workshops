@@ -87,7 +87,7 @@ You have established connection !
 
 It's time to implement a method to send messages from your frontend to your backend.
 
-Now, complete the Class `Chat` in `src/front/chat.ts`  :
+Now, complete the Class `Chat` in `src/front/chat.ts`:
 - Create a method `emit_data` with a `message` of type `string` as parameter.
 - Emit socket with your event named `data` and your `message`.
 - In `index.ts` you must receive the information from the `data` event log the `message`.
@@ -258,4 +258,4 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

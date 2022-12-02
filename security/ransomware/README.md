@@ -6,7 +6,7 @@ With this Workshop, you'll learn:
 
 ## Disclaimer
 
-⚠️ This Workshop is for educational purposes only. Poc Innovation isn't responsable
+⚠️ This Workshop is for educational purposes only. Poc Innovation isn't responsible
 for what you will do with this knowledge.
 
 We provided you a `Documents/` directory to infect. Be careful not to infect your own and important files.
@@ -20,7 +20,7 @@ You must write an encryption program compliant with the decryption already provi
 otherwise, we won't be able to help you.
 
 ### Step 0 - Setup
-All the required informations can be found in the [SETUP.md](./SETUP.md)
+All the required information can be found in the [SETUP.md](./SETUP.md)
 
 ### Step 1
 
@@ -34,7 +34,7 @@ make tests_run_clean
 
 Fill the functions in sources/encryption.c.
 In order to test your program, you can encrypt the Documents/ folder and try to decrypt it
-with the decryption program already provided. If all the sub files in your folder are readables, you are now sure that it works !
+with the decryption program already provided. If all the sub files in your folder are readable, you are now sure that it works !
 
 
 ### How to run decryption ?
@@ -44,18 +44,18 @@ make ; ./ransom -d [folder_name] [password]
 ```
 
 Some functions of the libsodium may afraid you with their long and weird names.
-Read [this](https://github.com/jedisct1/libsodium-doc/blob/master/secret-key_cryptography/secretstream.md) to more informations.
+Read [this](https://github.com/jedisct1/libsodium-doc/blob/master/secret-key_cryptography/secretstream.md) to more information.
 
 ## Obfuscation
 
-### [What is obfusation ?](https://en.wikipedia.org/wiki/Obfuscation_(software))
+### [What is obfuscation ?](https://en.wikipedia.org/wiki/Obfuscation_(software))
 
 ### Step 1
 
-When you run the `nm` commmand on your binary, you must notice a huge number of lines describing all the functions that your program calls.
-It is bad : we don't want smart reverse engineer guys to understand exactly how our program works.
+When you run the `nm` command on your binary, you must notice a huge number of lines describing all the functions that your program calls.
+It is bad: we don't want smart reverse engineer guys to understand exactly how our program works.
 
-To do so, find a way to get this output :
+To do so, find a way to get this output:
 ```sh
 nm: ransom: no symbols
 ```
@@ -96,12 +96,12 @@ Congratulations !
 
 ## Go further
 
-You can :
-* not only encrypt files, but also dump the whole computer that you infects, and get some user informations.
+You can:
+* not only encrypt files, but also dump the whole computer that you infects, and get some user information.
 * implement a web server on your code, that will send the data files.
 * on this web server, you can develop some stats about how many people did (fakely) pay, how many files did you infects, etc.
 
-## More ressources
+## More resources
 [Great GUI interface](https://github.com/leonv024/RAASNet)
 
 ## Authors
@@ -136,5 +136,5 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
 

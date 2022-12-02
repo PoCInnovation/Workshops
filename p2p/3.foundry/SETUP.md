@@ -4,7 +4,7 @@
 
 Please follow the instructions given [here](https://github.com/foundry-rs/foundry#installation).
 
-After the installation, run the following command to ensure it has been properly installed on your computer :
+After the installation, run the following command to ensure it has been properly installed on your computer:
 
 ```shell
 forge --version

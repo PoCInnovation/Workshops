@@ -24,7 +24,7 @@ The purpose of this exercise is to set up a server that exposes two routes `/hea
 
 For this it will be necessary to create and to use the method  **GET**.
 
-In the file `src/server.ts` :
+In the file `src/server.ts`:
 - Create a new variable `app` who will instantiate your express server.
 - Start the server by listening on the port `8080`.
 - Define a route **GET** `/health` which returns `OK`
@@ -32,7 +32,7 @@ In the file `src/server.ts` :
 
 > A basic practice when starting a server is to display a message with the server address so that you can easily access it.
 
-#### Resources :
+#### Resources:
 - [Express](https://github.com/expressjs/express)
 - [HTTP Server](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server)
 - [HTTP Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
@@ -70,7 +70,7 @@ Replace your hard-written status-codes with those offered in the package:
 res.status(StatusCodes.OK).send("ok");
 ```
 
-#### Resources :
+#### Resources:
 - [The main HTTP codes](https://medium.com/@sahelasumi/http-status-codes-31644d99fb1)
 - [Full list of codes](https://developer.mozilla.org/docs/Web/HTTP/Status)
 - [Using HTTP status in Typescript](https://github.com/prettymuchbryce/http-status-codes)
@@ -85,7 +85,7 @@ Once your queries are created, you should be able to run a test-suite on your se
 
 > We recommend that you update this collection for all routes of the following exercises.
 
-#### Resources :
+#### Resources:
 - [Installing Postman](https://www.postman.com/downloads/)
 - [Postman Collection](https://learning.postman.com/docs/sending-requests/intro-to-collections/)
 - [Postman Test suite](https://www.postman.com/use-cases/api-testing-automation/)
@@ -142,9 +142,9 @@ Now all you have to do is create these different routes:
     - Set Status 400
     - Return `Bad Request`
 
-> As before, [Postman](https://www.postman.com/) may be useful to test your HTTP routes :rocket:
+> As before, [Postman](https://www.postman.com/) may be useful to test your HTTP routes 🚀
 
-#### Resources :
+#### Resources:
 - [Cookies with Express](https://github.com/expressjs/cookie-parser)
 - [headers with Express](https://flaviocopes.com/express-headers/)
 
@@ -194,7 +194,7 @@ If you did, congratulations, that's a good habit to have, you can move on to the
 
 Else, enrich your test collection with tests for your new routes 😉
 
-#### Resources :
+#### Resources:
 - [Postman Collection](https://learning.postman.com/docs/sending-requests/intro-to-collections/)
 - [Postman Test suite](https://www.postman.com/use-cases/api-testing-automation/)
 - [Postman Environnement ](https://learning.postman.com/docs/sending-requests/managing-environments/)
@@ -246,7 +246,7 @@ In case of invalid headers, return the status `400` and the reason for the refus
 <br>
 <br>
 
-#### Resources :
+#### Resources:
 - [Middleware](https://expressjs.com/en/guide/using-middleware.html)
 <br>
 <br>
@@ -285,4 +285,4 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

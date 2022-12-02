@@ -20,9 +20,9 @@ Basics of python and usage of Jupyter Notebook. You will:
 ## Data Science & Pandas basics 👨‍🔬
 Basics of Data Science and introduce Pandas. You will:
 - learn to use Pandas
-- analyse huge datasets
+- analyze huge datasets
 - clean datasets
-- visualize data analyse
+- visualize data analyses
 
 ## PyTorch 🔦
 Usage of PyTorch. You will:
@@ -110,4 +110,4 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

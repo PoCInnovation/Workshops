@@ -4,11 +4,11 @@ Discover one of the most popular supervised learning methods for classification 
 - Create a Decision Tree
 - Create a Decision Tree Forest
 
-## What is Jupyter Notebook :book:
+## What is Jupyter Notebook 📖
 
 Jupyter Notebook allows you to work by cells. Modify the cells to pass the exercises.  
-Then execute the cells by clicking on the play button or with the shortcut: ``shift + enter``.  
-Notebook files are recognized by the extension: ``.ipynb``.
+Then execute the cells by clicking on the play button or with the shortcut: `shift + enter`.  
+Notebook files are recognized by the extension: `.ipynb`.
 
 
 ## How to use Jupyter Notebook?
@@ -45,4 +45,4 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

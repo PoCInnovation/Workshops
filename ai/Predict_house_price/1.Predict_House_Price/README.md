@@ -6,7 +6,7 @@ Predicting Boston Home Prices. You will:
 - Analyze datas
 - Make predictions
 
-## What is Jupyter Notebook :book:
+## What is Jupyter Notebook 📖
 
 Jupyter Notebook allows you to work by cells. Modify the cells to pass the exercises.  
 Then execute the cells by clicking on the play button or with the shortcut: ``shift + enter``.  

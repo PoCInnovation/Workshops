@@ -7,7 +7,7 @@ All workshop subjects and materials for developers. Made with :heart:.
 - 🛠️ [Hardware](./hardware/)
 - 🔑 [Security](./security/)
 - 💻 [Software](./software/)
-- :spider_web: [Peer-to-Peer](./p2p/)
+- 🕸️ [Peer-to-Peer](./p2p/)
 
 <h2 align=center>
 Organization
@@ -33,5 +33,5 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
 

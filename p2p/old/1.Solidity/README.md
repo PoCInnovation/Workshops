@@ -12,7 +12,7 @@ Please make sure to read each step carefully, as very useful links are given wit
 
 Every JavaScript files contains TODO instructions. Take a look at them to get more details and context about the task.
 
-## Step 0 : Initialization :rocket:
+## Step 0 : Initialization 🚀
 
 First, download and extract the `source.zip` file [here](https://github.com/PoCInnovation/Workshops/blob/master/p2p/old/1.Solidity/src/source.zip).
 It contains all necessary files, but for the moment they're empty 😉
@@ -57,7 +57,7 @@ So your `Inbox` contract must respect the following rules :
 Now that you've written the contract, you need to compile it!
 The compiler used is `solc`, and has already been included to your `package.json` dependencies file.
 
-You need to do the following steps to get the bytecode & ABI (Application Binary Interface) of the contract :
+You need to do the following steps to get the bytecode & ABI (Application Binary Interface) of the contract:
 
 - Retrieve the file content. The solc compiler obviously needs the contract's code to compile it, but instead of just copy/paste the code for the next step you may wan't to automate this process by reading the file dynamically. 
 
@@ -78,7 +78,7 @@ So make sure that everything is working as expected before deploying a contract.
 
 You'll use mocha as a testing framework and chai as an assertion library.
 
-Two more things before you start :
+Two more things before you start:
 
 - If you've looked at the packages in the dependencies, you probably saw `ganache`.
     Ganache will launch a virtual Ethereum network on your local environment.
@@ -98,14 +98,14 @@ Okay, time to test !
 - Then, test all of your functions.
     Note that when you declare a `public` variable in Solidity, the EVM automatically creates an accessor for this variable (a `call`).
     Whenever you call a function that modifies the contract state (i.e. stored variables), you must send a transaction to the targeted function.
-    You must test the following features :
+    You must test the following features:
   
     - The contract has been deployed properly
     - The initial message has been set to "PoC"
     - Every account can access the message
     - Every account can set a new message
     
-- Here is an example on how you can use mocha : 
+- Here is an example on how you can use mocha: 
     ```javascript
     const assert = require('assert');
     
@@ -142,7 +142,7 @@ Then, go to [this faucet](https://faucet.dimensions.network/) and paste your wal
 You also need a new provider, since ganache only works locally. You will use the `HDWalletProvider` one provided in the `deploy.js` file.
 Because you are sending a transaction to the real network, you have to know the endpoint of an ethereum node.
 
-Infura can provide this information. As we support decentralization of the Ethereum blockchain here is an endpoint you can use :
+Infura can provide this information. As we support decentralization of the Ethereum blockchain here is an endpoint you can use:
 
 https://ropsten.infura.io/v3/510289ba8f254e46891aaa84a718ddd9
 
@@ -176,4 +176,4 @@ Organization
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
