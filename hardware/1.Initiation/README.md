@@ -232,7 +232,7 @@ Merci de lire/regarder
 
 >**Contraintes**: aucune librairie spécifiquement créer pour Arduino / ESP32 n'est autorisé.
 
->:green_square: **Bonus**: afficher la distance sous forme de graph
+>🟩 **Bonus**: afficher la distance sous forme de graph
 
 ## Exercice 12
 
@@ -284,7 +284,7 @@ Merci de lire/regarder
 
 >⚠️ Appelez un encadrant avant de faire vos branchements
 
->:green_square: **Bonus**: afficher la distance sous forme de graphe
+>🟩 **Bonus**: afficher la distance sous forme de graphe
 
 # 🎉 Bravo
 Vous connaissez désormais les bases de l'arduino.

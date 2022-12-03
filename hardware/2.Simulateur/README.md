@@ -252,7 +252,7 @@ Log-In and create new Circuit.
 
 >⚠️ check LiquidCrystal.h and what is the purpose of the potentiometer ?
 
->:green_square: **Bonus**: Create game with Keypad and lcd display (ENJOY :))
+>🟩 **Bonus**: Create game with Keypad and lcd display (ENJOY :))
 
 #
 

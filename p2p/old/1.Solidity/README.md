@@ -1,4 +1,4 @@
-# Workshop 1 - Solidity & Smart Contract :open_book:
+# Workshop 1 - Solidity & Smart Contract 📖
 
 During this workshop, you will create a smart contract that can run onto the Ethereum Virtual Machine.
 You'll achieve this in 4 steps : write, compile, test & deploy the contract.
@@ -37,7 +37,7 @@ The project structure should be the following :
 
 Then, run `npm install` at the root of the downloaded folder.
 
-## Step 1 : Solidity & the contract :memo:
+## Step 1 : Solidity & the contract 📝
 
 As said before, the programming language you'll use to write the smart contract is Solidity.
 It has a similar syntax as JavaScript, but it is strongly-typed.
@@ -52,7 +52,7 @@ So your `Inbox` contract must respect the following rules :
 
 - Everyone must be able to update the message stored in the contract.
 
-## Step 2 : Compiling the contract :gear:
+## Step 2 : Compiling the contract ⚙️
 
 Now that you've written the contract, you need to compile it!
 The compiler used is `solc`, and has already been included to your `package.json` dependencies file.
@@ -70,7 +70,7 @@ You need to do the following steps to get the bytecode & ABI (Application Binary
 As you've probably guessed, the bytecode contains a compiled version of your contract that will be executed by the EVM.
 You will use the ABI to interact with the contract.
 
-## Step 3 : Tests using mocha & assert :test_tube:
+## Step 3 : Tests using mocha & assert 🧪
 
 Time to test !
 The tests are very important while writing a smart contract, because once they're deployed on a real blockchain, you can not update or delete it.
@@ -126,7 +126,7 @@ Okay, time to test !
     
     Check [this](https://web3js.readthedocs.io/en/v1.3.0/web3-eth-contract.html#methods-mymethod-call) link for more information about how you can call your contract functions.
 
-## Step 4 : Time to deploy :outbox_tray:
+## Step 4 : Time to deploy 📤
 
 Until now, you've only worked on your local ethereum network.
 Your smart contract is fully tested and ready to be deployed on the real blockchain !

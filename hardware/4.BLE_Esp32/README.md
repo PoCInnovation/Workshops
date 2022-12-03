@@ -1,12 +1,12 @@
 # WORKSHOP_BLE_ESP32
 
 ## Summary
-- [WORKSHOP_BLE_ESP32](#workshop_ble_esp32)
+- [WORKSHOP\_BLE\_ESP32](#workshop_ble_esp32)
   - [Summary](#summary)
   - [Setup:](#setup)
   - [**`Step 01`** - Turn on an LED](#step-01---turn-on-an-led)
     - [📚 Documentation:](#-documentation)
-  - [**`Step 02`** -  LED flash](#step-02----led-flash)
+  - [**`Step 02`** - LED flash](#step-02---led-flash)
   - [**`Step 03`** - Set BLE server](#step-03---set-ble-server)
     - [📚 Documentation:](#-documentation-1)
   - [**`Step 04`** - Set Client with your phone](#step-04---set-client-with-your-phone)
@@ -14,7 +14,7 @@
   - [**`Step 06`** - Waiting for a message](#step-06---waiting-for-a-message)
   - [**`Step 07`** - Scan BLE](#step-07---scan-ble)
     - [📚 Documentation:](#-documentation-2)
-  - [🎉 Congratulation !](#tada-congratulation-)
+  - [🎉 Congratulation !](#-congratulation-)
   - [Authors](#authors)
 
 
@@ -42,7 +42,7 @@
 - [Basics Electronics](https://www.physicsclassroom.com/class/circuits/Lesson-2/Electric-Current)
 - [What is resistor ?](https://learn.sparkfun.com/tutorials/resistors/all)
 - [How Work Breadboard ?](https://www.sciencebuddies.org/science-fair-projects/references/how-to-use-a-breadboard)
-## **`Step 02`** -  LED flash
+## **`Step 02`** - LED flash
 
 <details>
     <summary> 🛠️ Required Hardware:</summary>
@@ -97,7 +97,7 @@ For this, we will use a mobile application: `Serial Bluetooth Terminal`.<br/>
 - Go to `Devices`. 
 - Click the settings icon, and select Pair new device.
 - Choose and pair with your BLE server.
-:blub: Make sure you’ve enable your smartphone’s Bluetooth.
+💡 Make sure you’ve enable your smartphone’s Bluetooth.
 - Go back to the `Serial Bluetooth Terminal`.
 - Click the icon at the top to connect to the BLE server.
 
@@ -118,7 +118,7 @@ Now we want to define when a client connects or disconnects from our server.
 Add two conditions with a `Connection` / `Disconnection` display, depending on the action of your client.
 
 If the messages appear in your monitor when you click on the buttons you have successfully completed this step!*
-:blub: You can send message between your monitor and `Serial Bluetooth Terminal` !
+💡 You can send message between your monitor and `Serial Bluetooth Terminal` !
 
 Let's continue to the next step!
 
@@ -161,7 +161,7 @@ We will:
 
 We will now create a bluetooth scanner with a second ESP32.
 
-:blub: `#include <BLEScan.h>`, `#include <BLEAdvertisedDevice.h>` <br/>
+💡 `#include <BLEScan.h>`, `#include <BLEAdvertisedDevice.h>` <br/>
 > ⚠️ Be careful to upload one code at a time on each board. <br/>
 
 If you find the name of your BLE server in the monitor of your scanner, you have succeeded!

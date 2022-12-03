@@ -1,6 +1,6 @@
 # Workshops &nbsp;[![PoC Logo](./.github/favicon.png)](https://poc-innovation.fr)
 
-All workshop subjects and materials for developers. Made with :heart:.
+All workshop subjects and materials for developers. Made with ❤️.
 
 - 🧠 [AI](./ai/)
 - 👓 [AR/VR](./ar_vr/)

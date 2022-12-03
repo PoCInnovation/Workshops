@@ -118,9 +118,9 @@ If you see Connection and Disconnection in your monitor, you can go to the next 
 </details>
 
 You will now create three buttons and define a message in your monitor as follows:
-* :red_square: `Red`: Print `This color is Red`.
-* :blue_square: `Blue`: Print `This color is Blue`.
-* :purple_square: `Purple`: Print `This color is Purple`.
+* 🟥 `Red`: Print `This color is Red`.
+* 🟦 `Blue`: Print `This color is Blue`.
+* 🟪 `Purple`: Print `This color is Purple`.
 
 If the messages appear in your monitor when you click on the buttons you have successfully completed this step!
 
@@ -145,9 +145,9 @@ We will create a circuit that will change the color of the RGB LED with three bu
 Register your code to define your local server and your three buttons.
 
 Each button will define a color on your RGB LED:
-* Red color :red_square:
-* Blue color :blue_square:
-* Purple color :purple_square:
+* Red color 🟥
+* Blue color 🟦
+* Purple color 🟪
 
 ## **`Step 08`** - Change colors using your local server
 
@@ -167,9 +167,9 @@ We will change the color of our RGB LED directly by pressing the buttons of our 
 
 Take your three buttons on your HTML page.
 The color will be defined according to the button:
-* Red color :red_square:
-* Blue color :blue_square:
-* Purple color :purple_square:
+* Red color 🟥
+* Blue color 🟦
+* Purple color 🟪
 
 When you press the buttons the color of your RGB LED should change.
 

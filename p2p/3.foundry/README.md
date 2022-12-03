@@ -112,7 +112,7 @@ status                  1
 transactionHash         0x509fd1fde780cfae293155a32dfa24c16bff2d4fb48a360050dbe7f965532985
 transactionIndex        0
 ```
-> :bulb: You can also test by querying again the value of `number` and see if it has been modified.
+> 💡 You can also test by querying again the value of `number` and see if it has been modified.
 
 
 ## Step 3 - private != private ?
@@ -202,7 +202,7 @@ run our own node, but it would take too much time.
 ## Conclusion
 
 Well done! You've accomplished a lot with Foundry, and there is so much more to discover.
-Refer to the [official documentation](https://book.getfoundry.sh/) to deep-dive into it :fire: 
+Refer to the [official documentation](https://book.getfoundry.sh/) to deep-dive into it 🔥 
 
 Hope you enjoyed the workshop!
 

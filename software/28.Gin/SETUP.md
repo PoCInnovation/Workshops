@@ -13,7 +13,7 @@ go version
 > go version go1.18.2 linux/amd64 # OK
 ```
 
-> If you are using VSCode, [this extension](https://marketplace.visualstudio.com/items?itemName=golang.Go) can very helpful when writing Go code :wink:
+> If you are using VSCode, [this extension](https://marketplace.visualstudio.com/items?itemName=golang.Go) can very helpful when writing Go code 😉
 
 > The language should NOT be an issue in this workshop, if you're struggling with Go, do not hesitate to ask for help!
 
@@ -29,7 +29,7 @@ go mod tidy
 ```
 
 Afterwards you can follow the official [documentation](https://github.com/gin-gonic/gin#installation) to install Gin correctly.
-> Once again don't hesitate if you have any issue during the installation ! :smile:
+> Once again don't hesitate if you have any issue during the installation ! 😄
 
 ## Postman
 

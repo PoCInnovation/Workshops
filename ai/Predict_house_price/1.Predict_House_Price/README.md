@@ -1,9 +1,9 @@
-## Predict House Price :houses:
+## Predict House Price 🏘️
 
 Predicting Boston Home Prices. You will:
 - Use pandas
 - Use Scikit-learn
-- Analyze datas
+- Analyze data
 - Make predictions
 
 ## What is Jupyter Notebook 📖

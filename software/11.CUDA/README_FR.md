@@ -12,7 +12,7 @@ Enfin, vous vous pencherez sur un problème plus conséquent : transformer une i
 
 Un repository a été créé pour vous grâce au lien d'invitation qui vous a été communiqué par mail. Lorsque vous *pushez* sur celui-ci des tests seront lancés et vous permettrons de valider les prochaines étapes.
 
->:checkered_flag:  **Avant de débuter, il est nécessaire que vous compreniez quelques termes.**
+>🏁  **Avant de débuter, il est nécessaire que vous compreniez quelques termes.**
 
 ✔️ Comprendre l'execution sur CUDA
 
@@ -40,9 +40,9 @@ Voici un schéma descriptif, car *une image vaut mieux que mille mots*, de l'org
     <img src="../../.github/assets/CUDAthreads.png" width=50%"/>
 </div>
 
-## **Step 1 - :wave: Hello CUDA World**
+## **Step 1 - 👋 Hello CUDA World**
 
-> :triangular_flag_on_post: **Première tâche : classique, mais efficace. Hello CUDA World.**
+> 🚩 **Première tâche : classique, mais efficace. Hello CUDA World.**
 
 ✔️ Exécuter du code avec CUDA
 
@@ -62,9 +62,9 @@ Celle-ci devra afficher la chaîne de caractères `"Hello CUDA World {idx}"`, ou
 
 - [Lancement d'un kernel sur x blocs contenants y threads](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#kernels).
 
-## **Step 2 - :twisted_rightwards_arrows: Summing up two arrays**
+## **Step 2 - 🔀 Summing up two arrays**
 
-> :triangular_flag_on_post: **Seconde tâche : additionner 2 listes qui contiennent chacune 1 048 576 d'éléments.
+> 🚩 **Seconde tâche : additionner 2 listes qui contiennent chacune 1 048 576 d'éléments.
 > Le résultat de l'addition doit être contenu dans la seconde liste.**
 
 ✔️ Allouer dynamiquement de la mémoire sur un GPU
@@ -88,11 +88,11 @@ Vous allez donc utiliser le très grand nombre de cœurs présents sur un GPU po
 
 - [Synchronisation des threads](https://www.google.com/).
 
-## **Step 3 - :framed_picture: Image filter**
+## **Step 3 - 🖼️ Image filter**
 
-Bravo, vous êtes désormais à l'aise avec CUDA ! Maintenant, voyons un exemple plus... compliqué :dizzy_face:.
+Bravo, vous êtes désormais à l'aise avec CUDA ! Maintenant, voyons un exemple plus... compliqué 😵.
 
-> :triangular_flag_on_post: **Troisième tâche : parcourir une image en couleur et déterminer la valeur de gris de chaque pixel pour transformer l'image en noir et blanc.**
+> 🚩 **Troisième tâche : parcourir une image en couleur et déterminer la valeur de gris de chaque pixel pour transformer l'image en noir et blanc.**
 
 Pour cette dernière étape de ce workshop, une grande partie du code vous est volontairement donné.
 De plus, vous n'aurez pas à vous soucier de la mémoire !

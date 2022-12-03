@@ -93,7 +93,7 @@ For instance, the `TaskCard` component should be located in `src/components/Task
 ## Step 3: Show all the tasks from a list with props
 
 At this moment, you know how to create a single component and how to add it to your application.  
-But what if you need to show a list of components that you cannot determine in advance? For example a list of tasks :thinking:
+But what if you need to show a list of components that you cannot determine in advance? For example a list of tasks 🤔
 
 To do so, create and use a `TaskList` component that will show all the tasks iteratively, with a [Typescript type](https://www.typescriptlang.org/docs/handbook/basic-types.html) to represent the tasks and their information.  
 

@@ -16,7 +16,7 @@ All the required information to install dependencies can be found in [SETUP.md](
 
 ### Step 1 - Hello World! in Rust
 
-> :exclamation: We strongly advise you to use the resources given for this exercise.
+> ❗ We strongly advise you to use the resources given for this exercise.
 
 For the first exercise, we simply ask you to write `Hello world!` in your terminal when you run your program.
 
@@ -34,7 +34,7 @@ To do this, create a file `main.rs` in a folder called `src`.
 
 ### Step 2 - Palindrome ?
 
-> :exclamation: We strongly advise you to use the resources given for this exercise.
+> ❗ We strongly advise you to use the resources given for this exercise.
 
 For the second exercise, you have to create a function that takes as parameter a string `word`.
 
@@ -51,7 +51,7 @@ This function must return true if the word given in parameter is a palindrome an
 
 ### Step 3 - Fibonacci sequence
 
-> :exclamation: We strongly advise you to use the resources given for this exercise.
+> ❗ We strongly advise you to use the resources given for this exercise.
 
 Create a file `fibonacci.rs` for this new function.
 
@@ -95,7 +95,7 @@ To do this, create a function `to_list` which takes `vector` as parameter and re
 
 ### Step 5 - A simple and useful `Calculator` !
 
-> :exclamation: We strongly advise you to use the resources given for this exercise.
+> ❗ We strongly advise you to use the resources given for this exercise.
 
 Let's go further now!
 
@@ -123,7 +123,7 @@ Display the result of the calculation in your terminal.
 
 ### Step 6 - Pig Latin
 
-> :exclamation: We strongly advise you to use the resources given for this exercise.
+> ❗ We strongly advise you to use the resources given for this exercise.
 
 The serious stuff begins!
 

@@ -7,7 +7,7 @@ In each directory, you will find the exercises, a README explaining the purpose 
 ### [🌐 Click to join our Discord](https://discord.gg/Yqq2ADGDS7)
 
 
-## :shark: wireshark
+## 🦈 wireshark
 
 An introduction to Wireshark and Network Packet Analysis.
 You will learn to:
@@ -19,7 +19,7 @@ You will learn to:
 * extract data from packets
 * use wireshark in a real forensic scenario
 
-## :microscope: steganography
+## 🔬 steganography
 
 Basics of steganography, you will be introduced to basics of files extraction, stegsolve, and learn to hide and extract:
 * data in text
@@ -36,7 +36,7 @@ You will learn to:
 * recognize and uncipher substitution cryptography
 * manipulate and exploit historical breaches in JWT
 
-## :gear: reverse
+## ⚙️ reverse
 
 Introduction to reverse engineering with Ghidra tool, you'll learn to:
 * How and Why Reverse Engineering
@@ -45,7 +45,7 @@ Introduction to reverse engineering with Ghidra tool, you'll learn to:
 * Solve crackmes and basic CTF challenges
 * Learn to patch binary with Ghidra
 
-## :syringe: xss
+## 💉 xss
 
 You will learn to detect and exploit a Cross-site scripting Injection (XSS).
 *  Exploit and detect basic XSS
@@ -53,7 +53,7 @@ You will learn to detect and exploit a Cross-site scripting Injection (XSS).
 *  Craft your own XSS payloads to bypass custom filters
 *  Learn about mutation XSS and exploit a recent Chromium Breach
 
-## :bomb: sql-injection
+## 💣 sql-injection
 
 Introduction to SQL injection.
 *  Learn to detect and exploit vulnerable websites
@@ -61,13 +61,13 @@ Introduction to SQL injection.
 *  Realize a blind sql injection
 *  Exploit a CVE on Sequelize
 
-## :computer: pwntools
+## 💻 pwntools
 
 Introduction to pwntools.
 * Learn the basics of ROP
 *  Learn to write exploits script in python
 
-## :floppy_disk: GDB
+## 💾 GDB
 
 Introduction to GDB.
 * Learn to use GDB to run a binary

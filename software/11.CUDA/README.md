@@ -13,7 +13,7 @@ Finally, you will look at a bigger problem: transforming a colored image into a 
 A repository has been created for you when you accepted the invitation link that was sent to you by email.
 Whenever you push, tests will be launched and will allow you to validate the next steps.
 
->:checkered_flag:  **Before you begin, it is necessary that you understand a few terms.**
+>🏁  **Before you begin, it is necessary that you understand a few terms.**
 
 ✔️ Understand the execution model on CUDA
 
@@ -41,9 +41,9 @@ Here is a descriptive diagram, because *a picture is worth a thousand words*, of
     <img src="../../.github/assets/CUDAthreads.png" width=50%"/>
 </div>
 
-## **Step 1 - :wave: Hello CUDA World**
+## **Step 1 - 👋 Hello CUDA World**
 
-> :triangular_flag_on_post: **First task: classic, but effective. Hello CUDA World.**
+> 🚩 **First task: classic, but effective. Hello CUDA World.**
 
 ✔️ Running code using CUDA
 
@@ -63,9 +63,9 @@ It should display the string `"Hello CUDA World {idx}"`, where idx is the index 
 
 - [Launching a kernel on x blocks containing y threads](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#kernels).
 
-## **Step 2 - :twisted_rightwards_arrows: Summing up two arrays**
+## **Step 2 - 🔀 Summing up two arrays**
 
-> :triangular_flag_on_post: **Second task: add two lists, each containing 1,048,576 elements.
+> 🚩 **Second task: add two lists, each containing 1,048,576 elements.
 > The result of the addition must be contained in the second list.**
 
 ✔️ Dynamically allocate memory on a GPU
@@ -89,11 +89,11 @@ So you will use the very large number of cores available on a GPU to speed up th
 
 - [Thread synchronization](https://www.google.com/).
 
-## **Step 3 - :framed_picture: Image filter**
+## **Step 3 - 🖼️ Image filter**
 
-Congratulations, you are now comfortable with CUDA! Now, let's see a more... complicated example :dizzy_face:.
+Congratulations, you are now comfortable with CUDA! Now, let's see a more... complicated example 😵.
 
-> :triangular_flag_on_post: **Task 3: Scan a color image and determine the gray value of each pixel to transform the image to black and white.**
+> 🚩 **Task 3: Scan a color image and determine the gray value of each pixel to transform the image to black and white.**
 
 For this last step of the workshop, a large part of the code is voluntarily given to you.
 Moreover, you won't have to worry about memory!

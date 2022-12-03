@@ -25,7 +25,7 @@ Inside it, you'll create a basic top bar that will be `fixed` at the top of your
 > Display your component with a cool style 🚀  
 > For this, you can use CSS or a UI library like [Svelte Materialify](https://svelte-materialify.vercel.app/)
 
-Then, you can call it inside your `App.svelte` to display it :star_struck:
+Then, you can call it inside your `App.svelte` to display it 🤩
 
 ### 📖 Resources
 - [Import components in Svelte](https://svelte.dev/tutorial/nested-components)

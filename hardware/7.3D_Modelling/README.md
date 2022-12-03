@@ -1,6 +1,6 @@
 # Hardware Pool: 3D modelling
 
-In this workshop you will learn the basics of 3D modeling with Fusion 360. :muscle:
+In this workshop you will learn the basics of 3D modeling with Fusion 360. 💪
 The exercises are of increasing difficulty.
 
 You will first learn how to create objects and then how to link several objects to create a larger one.
@@ -27,10 +27,10 @@ Make a cube of 57.58mm side (Careful, we'll come and check the measurements!)
 
 ![cube](../.3d_model/cube.png)
 
-## 1.2 Make a Sphere :black_circle:
+## 1.2 Make a Sphere ⚫
 
 ### 📌 Tasks:
-Still more, you can now try to make your first sphere. :eyes:
+Still more, you can now try to make your first sphere. 👀
 
 ![sphere](../.3d_model/sphere.png)
 
@@ -48,7 +48,7 @@ Make a box with handles.
 
 ![box](../.3d_model/box.png)
 
-### 2.2 Telephone stand :iphone:
+### 2.2 Telephone stand 📱
 ### 📌 Tasks:
 You might as well mix the useful with the pleasant.
 An object that is often needed without having it at hand. We will create a phone holder.
@@ -67,11 +67,11 @@ You have a very good representation of the type of vase you are asked to make be
 
 ![vase](../.3d_model/vase.png)
 
-## Exercise 3: Movement :dash:
+## Exercise 3: Movement 💨
 
 Making a single object is good but combining different parts to create an object is better but also more complex.
 
-It's time to stay focused. :eyeglasses:
+It's time to stay focused. 👓
 
 ### 📌 Tasks:
 First create your empty box.
@@ -81,7 +81,7 @@ In fact, make a box with a sliding top
 
 ![slideyBox](../.3d_model/slideyBox.png)
 
-## Exercise 4: Realer than real :wrench:
+## Exercise 4: Realer than real 🔧
 
 ### 📌 Tasks:
 Make a servomotor. Nothing too fancy, but try to get as close as you can to the model.
@@ -91,7 +91,7 @@ Make a servomotor. Nothing too fancy, but try to get as close as you can to the 
 ## Exercise 5:
 
 ### 📌 Tasks:
-> For this exercise, you will have to make a car :blue_car: , a rocket 🚀 , or even a pocket watch if that is what you like. The important thing is that it is printable and that it measures less than 10 cm³. This is the average size that is suitable for the 3D printer. :fireworks:
+> For this exercise, you will have to make a car 🚙 , a rocket 🚀 , or even a pocket watch if that is what you like. The important thing is that it is printable and that it measures less than 10 cm³. This is the average size that is suitable for the 3D printer. 🎆
 
 ## 🎉 Congratulation !
 

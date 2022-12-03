@@ -124,7 +124,7 @@ Then you must understand and work MQTT IoT. <br/>
 
 ### 📌 Tasks:
 
-* Call a manager to explain how a broker works. :wave:
+* Call a manager to explain how a broker works. 👋
 
 ### 📚 Documentation:
 - [Download Mosquitto](https://everythingsmarthome.co.uk/howto/how-to-install-an-mqtt-broker-mosquitto-install-config-on-debian-ubuntu-mint-fedora-raspbian/)
@@ -153,7 +153,7 @@ Now it's time to know how subscribes to a topic.
 
 - First step : Subscribe to all topics
 - Second step : Subscribe to specifique topic /Workshop/Hardware/MQTT
-> :blush: Subscribe to the topic
+> 😊 Subscribe to the topic
 
 ### 📚 Documentation:
 - [Subscribe Mosquitto](https://mosquitto.org/man/mosquitto_sub-1.html)
@@ -179,7 +179,7 @@ You will now publish your epitech :e-mail: to the topic **/Workshop/Hardware/**.
 You can find all information in the step 05 to send me your email. <br/>
 If the messages appear in my log you have successfully completed this step! <br/>
 
-Let's continue to the next step! :clap:
+Let's continue to the next step! 👏
 
 ### 📚 Documentation:
 - [Publish Mosquitto](https://mosquitto.org/man/mosquitto_pub-1.html)
@@ -206,9 +206,9 @@ Now you must publish and subcribe to topic with your esp32.
 - Subscribe to `/Workshop/Hardware/Step07/`
 - Publish the date time.
 
-> :point_right: Don't forget information for the communication with the broker local.
+> 👉 Don't forget information for the communication with the broker local.
 
-Surprise The Broker respond to you :sunglasses: <br/>
+Surprise The Broker respond to you 😎 <br/>
 
 You can pass to the last step of this Workshop !
 
@@ -228,7 +228,7 @@ You can pass to the last step of this Workshop !
 
 ### 📑 Description:
 
-Come and see a supervisor and ask for a raspberry pi :surfer:
+Come and see a supervisor and ask for a raspberry pi 🏄
 
 The raspberry is almost configurate.
 
@@ -238,7 +238,7 @@ Your job if you accept it is :
 - to change the mosquitto configuration to subscribe to /Workshop/Hardware/Success.
 - Redirect the messages to the main broker.
 
-> :blush: After change config, don't forget to restart service.
+> 😊 After change config, don't forget to restart service.
 
 ### 📚 Documentation:
 - [Configuration MQTT](http://www.steves-internet-guide.com/mosquitto-bridge-configuration/)

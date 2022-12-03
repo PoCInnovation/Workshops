@@ -59,7 +59,7 @@ Advanced Reinforcement Learning. You will:
 - use Deep Q Networks
 - solve Lunar Lander
 
-## Decision Tree :evergreen_tree:
+## Decision Tree 🌲
 Discover one of the most popular supervised learning methods for classification problems. You will:
 - Use Scikit-learn
 - Create a Decision Tree

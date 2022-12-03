@@ -180,7 +180,7 @@ Create a route **GET** `/hello` to use the variable `HELLO_MESSAGE` as a respons
 >💡 If your `.envrc` contains private variables, it is imperative not to push it on the repo.  
 > The best practice is to create a `envrc.example` file containing the various variables but without their values, in order to indicate what will subsequently be needed, then fill it in and rename it to `.envrc`.
 
-> It is important to think from the beginning of the application about integrating your server into a web architecture by placing as many variables as possible that may change in the environment :floppy_disk:
+> It is important to think from the beginning of the application about integrating your server into a web architecture by placing as many variables as possible that may change in the environment 💾
 
 #### Resources :
 - [env-var](https://github.com/evanshortiss/env-var)
@@ -190,7 +190,7 @@ Create a route **GET** `/hello` to use the variable `HELLO_MESSAGE` as a respons
 
 Have you tested the new routes you created?
 
-If you did, congratulations, that's a good habit to have, you can move on to the next step :partying_face:
+If you did, congratulations, that's a good habit to have, you can move on to the next step 🥳
 
 Else, enrich your test collection with tests for your new routes 😉
 

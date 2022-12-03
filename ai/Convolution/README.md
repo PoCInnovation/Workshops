@@ -1,4 +1,4 @@
-# Convolution :black_square_button:
+# Convolution 🔲
 
 Discover the effect and usage of convolution. You will:
 - understand the point to use convolutional neural network

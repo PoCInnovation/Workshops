@@ -1,4 +1,4 @@
-# :spider_web: P2P Workshops
+# 🕸️ P2P Workshops
 
 Peer to peer workshops to introduce students to peer-to-peer technologies and notions.
 

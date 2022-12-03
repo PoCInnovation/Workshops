@@ -1,14 +1,14 @@
 # 3. Learn the differences between HTTP and IPFS !
 
-##  :dizzy: Table of contents
-* [Step 0 - Setup](README.md#wrench-step-0---setup)
+##  💫 Table of contents
+* [Step 0 - Setup](README.md#🔧-step-0---setup)
 * [Step 1 - HTTP](README.md#step-1---http)
-    * [Discover the basics](README.md#pencil2-10-discover-the-basics)
-    * [Storage](README.md#floppy_disk-11-storage)
+    * [Discover the basics](README.md#✏️-10-discover-the-basics)
+    * [Storage](README.md#💾-11-storage)
 * [Step 2 - IPFS](README.md#step-2---ipfs)
-    * [Improve the storage](README.md#spider_web-20-improve-the-storage)
-    * [Retrieve](README.md#inbox_tray-22-retrieve)
-* [Going further](README.md#rocket-going-further)
+    * [Improve the storage](README.md#🕸️-20-improve-the-storage)
+    * [Retrieve](README.md#📥-22-retrieve)
+* [Going further](README.md#🚀-going-further)
   
 
 In this Workshop, you will learn :
@@ -21,11 +21,11 @@ In this Workshop, you will learn :
 
 ✔️ How to change a centralized storage into a distributed one via IPFS with Infura !
 
-## :wrench: Step 0 - Setup
+## 🔧 Step 0 - Setup
 Please follow each instruction on the [SETUP.md](SETUP.md) file.
 
 ## Step 1 - HTTP
-### :pencil2: 1.0 Discover the basics
+### ✏️ 1.0 Discover the basics
 Wanna launch the platform? Alright, make sure you are on the [sources](./sources.zip) directory where the `Dockerfile` and
 `docker-compose.yml` are.
 
@@ -81,7 +81,7 @@ You should see our beautiful website !!
 
 If you want to shut down the server, use `Ctrl` + `C` and then run `docker-compose down -v`.
 
-### :floppy_disk: 1.1 Storage
+### 💾 1.1 Storage
 
 Go to the [freearchivemusic](https://freemusicarchive.org/music/Scott_Holmes/rock-background-music/country-road-drive)
 website and download the song.
@@ -138,7 +138,7 @@ have the data that corresponds to this hash?” A node on IPFS that contains the
 
 If this is not enough clear for you, I strongly advise you to refer to this [vidéo (Simply Explained IPFS)](https://www.youtube.com/watch?v=5Uj6uR3fp-U).
 
-### :spider_web: 2.0 Improve the storage
+### 🕸️ 2.0 Improve the storage
 
 Here is what we are going to do : We are going to upload our files directly on IPFS and not locally anymore.
 Instead of having the file locally, let's have its corresponding hash in our database.
@@ -168,7 +168,7 @@ To apply your migrations, shut down the server and relaunch it.
 Test another time to upload your music, copy past the hash of the newly added song and go to `https://ipfs.infura.io:5001/api/v0/cat?arg={your_hash_here}`.
 You should see your song play, even if the server has been shut down !
 
-### :inbox_tray: 2.2 Retrieve
+### 📥 2.2 Retrieve
 Last step : if anyone wants to download from our website some mp3 songs, we need to get it from IPFS.
 Since you did the previous step, this one would seem easy : in your `musicshare/views.py`
  on the `download` view, do the same thing as previously but instead of adding a file, call the `cat` (or `get`) method.

@@ -10,7 +10,7 @@ In this Workshop, you will learn :
 
 ✔️ ... and how to exploit them !!
 
-## :dizzy: Table of contents
+## 💫 Table of contents
 * [Setup](README.md#wrench-setup)
 * [Step 1 - Easy level](README.md#hand_over_mouth-step-1---easy-level)
     * [Hello Ethernaut](README.md#hello-ethernaut)
@@ -26,11 +26,11 @@ In this Workshop, you will learn :
     * [Selfie](README.md#selfie)
 * [Organisation](README.md#star2-organisation)
   
-## :wrench: Setup
+## 🔧 Setup
 
 Please follow the instructions on your [SETUP.md](SETUP.md) file.
 
-## :hand_over_mouth: Step 1 - Easy level
+## 🤭 Step 1 - Easy level
 > 💡 Those challenges are here to introduce to you the [Solidity](https://docs.soliditylang.org/en/v0.4.21/) language and the
 basic concepts of a smart contract and its related data.
 
@@ -57,7 +57,7 @@ It's going to introduce you to the basic random number generator security breach
     </li>
 </details>
 
-## :cry: Step 2 - Medium Level
+## 😢 Step 2 - Medium Level
 
 > 💡 Here, you are really going to start practicing the Solidity language !
 
@@ -74,7 +74,7 @@ This challenge will help you understand how bigger Smart Contracts are, how does
 
 > 💡 No resources here because in each challenge the website already provides them !
 
-## :skull_and_crossbones: Step 3 - Hard Level
+## ☠️ Step 3 - Hard Level
 
 > 💡 Those challenges will introduce you to how the variables are stored in the Ethereum blockchain.
 > 

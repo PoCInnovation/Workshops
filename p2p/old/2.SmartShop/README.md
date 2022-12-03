@@ -1,4 +1,4 @@
-# Workshop 2 - Smart Shop :shopping_cart:
+# Workshop 2 - Smart Shop 🛒
 
 During this workshop, you will create a decentralized online shop.
 You probably have heard about "Le bon coin", a purchasing site for individuals to individuals.
@@ -30,7 +30,7 @@ It has all required features for smart contract development:
 
 When using this editor for testing purposes, don't forget to set your environment, in the `Deploy and run transaction` tab to be JavaScript VM.
 
-## Step 1 : A product :package:
+## Step 1 : A product 📦
 
 First and because each one of them is different, you must create an abstraction of a product.
 It must contain basic fields such as:
@@ -43,7 +43,7 @@ It must contain basic fields such as:
 
 The contract must contain a global list of all the products submitted by the users, named `products` which has to be accessible to anyone.
 
-## Step 2 : Submit for sale & buy :credit_card:
+## Step 2 : Submit for sale & buy 💳
 
 Now that you've represented a product on your smart contract,
 users should be able to add a product for sale so that other can buy those products.
@@ -66,7 +66,7 @@ So when buying a product, you must make sure that:
 - Transfer the amount of ether received to the product owner
 - Delete the product in the global list
 
-## Step 3 : Frontend :framed_picture:
+## Step 3 : Frontend 🖼️
 
 Now that you've done the smart contract, it's time to let the user actually interact with it.
 

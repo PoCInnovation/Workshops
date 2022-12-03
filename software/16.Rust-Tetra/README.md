@@ -10,13 +10,13 @@
 
 All the required information to install dependencies can be found in [SETUP.md](./SETUP.md).
 
-> :exclamation: To follow this part of the workshop we strongly advise you to have followed the workshop [Introduction to Rust](https://github.com/PoCInnovation/Workshops/tree/master/software/13.Rust).
+> ❗ To follow this part of the workshop we strongly advise you to have followed the workshop [Introduction to Rust](https://github.com/PoCInnovation/Workshops/tree/master/software/13.Rust).
 
 > 💡 We recommend you to follow the [Tour of Rust](https://tourofrust.com/index.html) for this workshop.
 
 ### Step 1 - Display your first window with Tetra !
 
-> :exclamation: We strongly advise you to use the resources given for this exercise.
+> ❗ We strongly advise you to use the resources given for this exercise.
 
 The first step of this workshop is simple, you just need to display a basic window, with a title and a colored background.
 
@@ -37,7 +37,7 @@ To do this, create a file `main.rs` in a folder called `src`.
 
 ### Step 2 - Let's be crazy and add some text to this page !
 
-> :exclamation: We strongly advise you to use the resources given for this exercise.
+> ❗ We strongly advise you to use the resources given for this exercise.
 
 Congratulations! 🎉
 
@@ -63,7 +63,7 @@ To display text, you need to follow three steps:
 
 ### Step 3 - Here we go to display an image !
 
-> :exclamation: We strongly advise you to use the resources given for this exercise.
+> ❗ We strongly advise you to use the resources given for this exercise.
 
 First, you need an image. Make sure you have a `PoC.png` file in the `assets/images` folder.
 
@@ -76,7 +76,7 @@ Your program must display an image with the parameter:
 
 You now have all the necessary information to display an image in your window. 
 
-It's up to you ! :thumbsup:
+It's up to you ! 👍
 
 ##### Resources
  - [Docs Tetra](https://docs.rs/tetra/0.6.3/tetra/)
@@ -85,7 +85,7 @@ It's up to you ! :thumbsup:
 
 ### Step 4 - Keyboard interactions and event management !
 
-> :exclamation: We strongly advise you to use the resources given for this exercise.
+> ❗ We strongly advise you to use the resources given for this exercise.
 
 The interactions between the user and your program are a mandatory part of creating a video game.
 
@@ -102,7 +102,7 @@ Four keys will be used to move the image:
 - `D` to move the fish to the right.
 
 
-:dart: The objective is simple: Thanks to the previous exercises you can display a fish and now you have to make it move when you press the keys above.
+🎯 The objective is simple: Thanks to the previous exercises you can display a fish and now you have to make it move when you press the keys above.
 
 ##### Resources
  - [Tetra input](https://docs.rs/tetra/0.2.18/tetra/input/index.html)
@@ -111,9 +111,9 @@ Four keys will be used to move the image:
 
 ### Step 5 - Your first video game with Tetra and Rust !
 
-> :exclamation: We strongly advise you to use the resources given for this exercise.
+> ❗ We strongly advise you to use the resources given for this exercise.
 
-The serious things begin! :muscle:
+The serious things begin! 💪
 
 This exercise aims to condense all the skills seen in this workshop and push it even further.
 
@@ -126,7 +126,7 @@ For this last exercise we impose no constraints, the idea is simple to have a fu
 
 You have zero limits, it's up to you to add as many options or features as possible.
 
-:dart: The goal is to create your own snake game.
+🎯 The goal is to create your own snake game.
 
 ##### Resources
  - [Tetra input](https://docs.rs/tetra/0.2.18/tetra/input/index.html)

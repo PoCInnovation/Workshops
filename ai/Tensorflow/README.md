@@ -1,4 +1,4 @@
-# Tensorflow :orange_book:
+# Tensorflow 📙
 
 Usage of Tensorflow. You will:
 - create a Sequential model
