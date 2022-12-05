@@ -10,7 +10,7 @@
 
 ## Introduction
 
-There are a bunch of hyperlinks in this workshop, it is meant to give you as much information as possible so please follow them and read the website content.
+There is a bunch of hyperlinks in this workshop, it is meant to give you as much information as possible so please follow them and read the website content.
 
 There are some git commands that won't really be seen on their own but will be mentioned on some parts where it matters.
 
@@ -28,7 +28,7 @@ This workshop is meant to see everything with git, the start may be a bit tediou
 <details>
   <summary>A special tip if you are using Oh My Zsh</summary>
   <br>
-  <p>If you are using OhMyZsh and aren't using the git aliases it comes with you, be sure to check them out and try to use those, you will gain time by typing fewer letters and have much more advanced formatting sometimes (thinking about `glods` here).<br>
+  <p>If you are using OhMyZsh and aren't using the git aliases it comes with, be sure to check them out and try to use those, you will gain time by typing fewer letters and have much more advanced formatting sometimes (thinking about `glods` here).<br>
 To see those aliases it's simple: <code>alias | grep git</code></p>
 </details>
 <br>
@@ -41,7 +41,7 @@ There are multiple ways to initialize a repository locally.
 
 ### Local and Remote
 
-Throughout all this workshop, we will make references to local and remote repository.
+Throughout this workshop, we will make references to local and remote repository.
 
 You have to understand that the remote repository is the one **hosted onto the server** (for example GitHub's servers).
 > 💡 This is where people will retrieve others work from.
@@ -51,14 +51,14 @@ This is where you will make all your modifications before pushing those.
 
 ### Clone an existing repository
 
-The most known one is to clone a repository using `git clone`.
+The most known command is the one to clone a repository: `git clone`.
 
 > 💡 It is recommended to clone via SSH rather than HTTPS.
 
 <details>
   <summary>HTTPS vs SSH clone</summary>
   <br>
-  <p>SSH repository URLs can be identified as they start with `git@github.com:` whereas HTTPS URLs start with `https://github.com/`</p>
+  <p>SSH repository URLs can be identified as they start with <code>git@github.com:</code> whereas HTTPS URLs start with <code>https://github.com/</code></p>
   <p>SSH is recommended because you don't have to enter your username and password every time you want to pull or push because your ssh key authenticates you (and is more secured than your password).</p>
 
 </details>
@@ -181,7 +181,7 @@ For your knowledge, `git stash` also has other commands like `pop` and `apply`.
 
 Let's say you have committed something locally but not pushed it yet, and you realize that it was a mistake, you can easily delete it with `git reset`.
 
-The exact command would be `git reset --hard HEAD~N` where N is the number of commits you want to delete.
+The exact command would be `git reset --hard HEAD~N` where `N` is the number of commits you want to delete.
 > ⚠️ Once again, be careful with this command, you won't be able to retrieve your deleted local commits after
 
 > 💡 This could also be used to remove sensitive information pushed by mistake, but you would have to rewrite the commit history which isn't that great.
@@ -266,7 +266,7 @@ Another option could be [`git restore`](https://git-scm.com/docs/git-restore), w
 
 ## Summary
 
-During this workshop, we've made you use a particular workflow with git.
+During this part, we've made you use a particular workflow with git.
 This is obviously not the only one that exists, but it's one of the most widely used, and it's fairly easy to understand and use.
 
 So quickly here is how you would work with branches:

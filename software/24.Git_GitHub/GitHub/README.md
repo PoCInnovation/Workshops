@@ -3,15 +3,15 @@
 ## Step 0 - Project initialization
 Create a repository and commit the files & folders contained in the `calculator` folder.
 Some steps should be completed in groups of at least 2.
-Go to your repository settings, and in the `Collaborators` add your teammate !
+Go to your repository settings, and in the `Collaborators` add your teammate!
 
 <i>Pro tips:</i>
 > Don't forget to use the commit norm you learned in the previous part 😉
 
-> Don't forget to use branches ! This time, try to create it directly in GitHub 🚀
+> Don't forget to use branches! This time, try to create it directly in GitHub 🚀
 
 > This workshop is based on [PoC Innovation's Open-Source project template](https://github.com/PoCInnovation/open-source-project-template).  
-Several links to specific parts of the [getting started guide](https://github.com/PoCInnovation/open-source-project-template/blob/main/.github/getting-started.md) will be given to you, but don't spend too much time on it, we have a lot to cover ! You can read it entirely later.
+Several links to specific parts of the [getting started guide](https://github.com/PoCInnovation/open-source-project-template/blob/main/.github/getting-started.md) will be given to you, but don't spend too much time on it, we have a lot to cover! You can read it entirely later.
 
 ## Step 1 - [Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) & [Pull Requests (PRs)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
 ### 📑 **Description**:
@@ -27,7 +27,7 @@ You have to create 3 issues:
 
 Then you have to create two branches (`fix/wrong-result` and `feat/multi-arguments`) and solve the related issues on it.  
 Create a Pull Request for each branch and use 2 different methods to link the related issues.
-When it's done, add your teammate as reviewer and play with the review tool in the `Files Changed` tab !
+When it's done, add your teammate as reviewer and play with the review tool in the `Files Changed` tab!
 
 
 ### 📚 **Documentation**:
@@ -38,7 +38,7 @@ When it's done, add your teammate as reviewer and play with the review tool in t
 > Instead of organizing the content manually, you can use templates for [issues](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository) and [PRs](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository). It's really useful to let contributors know what information maintainers need and keep a common structure between contributions.  
 You can find some great examples for different types of issues in [our Open-Source project template](https://github.com/PoCInnovation/open-source-project-template/tree/main/.github/ISSUE_TEMPLATE) as long as [one for Pull Requests](https://github.com/PoCInnovation/open-source-project-template/blob/main/.github/pull_request_template.md).
 
-> Several options are available when merging a PR. Here's a [Comparison of Merging Strategies in GitHub](https://elliotchance.medium.com/comparison-of-merging-strategies-in-github-2f948c3b8fdc) filling with information to let you choose according to your needs.
+> Several options are available when merging a PR. Here's a [Comparison of Merging Strategies in GitHub](https://elliotchance.medium.com/comparison-of-merging-strategies-in-github-2f948c3b8fdc) filled with information to let you choose according to your needs.
 
 ### ✔️ **Validation**:
 Try to make it as complete as possible, then take a look at the expected results:
@@ -70,8 +70,8 @@ Try to make it as complete as possible, then take a look at the expected results
 ## Step 2 - [Projects](https://docs.github.com/en/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards) & [Milestones](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/about-milestones)
 ### 📑 **Description**:
 You can manage features and tasks with issues, group commits and do code reviews with PRs, but how do you actually organize
-your work in tables like well-known ticketing tools ? That's where GitHub Projects come into play !  
-But how to you handle deadlines and group several issues and PRs linked to a sprint for example ? Milestones are exactly what you need for this !  
+your work in tables like well-known ticketing tools? That's where GitHub Projects come into play!  
+But how to you handle deadlines and group several issues and PRs linked to a sprint for example ? Milestones are exactly what you need for this!  
 You can find them in the `Issues` tab.  
 
 ### 📌 **Tasks**:
@@ -113,12 +113,12 @@ Follow [this quickstart](https://docs.github.com/en/actions/quickstart) to creat
 You can see your workflow runs in the `Action` tab of your repository
 <details>
   <summary>Action tab preview</summary>
-  <img str="./assets/action_result.png"/>
+  <img src="./assets/action_result.png"/>
 </details>
 
-> If you want to learn more about GitHub Actions with real use cases, you can check [our dedicated workshop](https://github.com/PoCInnovation/Workshops/tree/master/software/05.Actions) !
+> If you want to learn more about GitHub Actions with real use cases, you can check [our dedicated workshop](https://github.com/PoCInnovation/Workshops/tree/master/software/05.Actions)!
 
-## Step 4 - [Branches protection settings](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branches) (optional)
+## Step 4 - [Branches protection settings](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branches)
 ### 📑 **Description**:
 Branch protection rules are a great way to enforce good practices.  
 For example, your production branch (usually `main`) should be as clean and bug-free as possible, so you don't want to push directly on it and if you have CI tests with GitHub Actions it's a good practice to ensure they all passed when merging on `main`.  
@@ -131,7 +131,7 @@ Go to `Settings` -> `Code and automation` -> `Branches` and add rules to protect
 ## To go further
 You've learned how to use a lot of tools provided by GitHub, but there's a lot more to discover !
 
-- The [GitHub Learning Lab](https://lab.github.com/) provides some great hands-on courses to grow your skills !  
+- The [GitHub Learning Lab](https://skills.github.com/) provides some great hands-on courses to grow your skills!  
 - [Making open-source contributions](https://docs.github.com/en/get-started/exploring-projects-on-github/finding-ways-to-contribute-to-open-source-on-github) is a great way to apply what you've learned in a real project.  
   Pay attention to `good first issue` labels directly on GitHub or on [dedicated sites](https://goodfirstissue.dev/).
   
