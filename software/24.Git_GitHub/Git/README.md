@@ -296,6 +296,10 @@ There are still a lot of stuff to learn about git so here are a few interesting 
 
 There are multiple graphical tools for git, the default one (bundled with git) is `git gui`, but another good one is `gitg`.
 
+And finally, a few links to learn even more 🚀:
+- [Keep your branch clean with fixup and autosquash](https://fle.github.io/git-tip-keep-your-branch-clean-with-fixup-and-autosquash.html)
+- [The gitconfig documentation to persist settings](https://git-scm.com/docs/git-config)
+
 ## Authors
 
 | [<img src="https://github.com/Breigner01.png?size=85" width=85><br><sub>Benjamin Reigner</sub>](https://github.com/Breigner01)
