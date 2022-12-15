@@ -41,8 +41,8 @@ Let's learn how to use the "moulinette"'s docker to test your EPITECH projects.
 
 Now, we will learn how to build a custom docker image thanks to a `Dockerfile`.
 
-In the [src](./src/node_api) folder, you'll find a NodeJS API. This API is very simple, it returns a message when you do a GET request on `/`.
-In a first time, download the API [here](https://downgit.github.io/#/home?url=https://github.com/PoCInnovation/Workshops/tree/master/software/04.Docker/src/node_api).
+In the [src](./src/node_api.zip) folder, you'll find a NodeJS API. This API is very simple, it returns a message when you do a GET request on `/`.
+In a first time, download the API [here](https://downgit.github.io/#/home?url=https://github.com/PoCInnovation/Workshops/tree/master/software/04.Docker/src/node_api.zip).
 
 The objective is to create a docker image of that API. You must:
 
@@ -65,7 +65,7 @@ You now have a docker image which contains a node API and everything necessary t
 
 ## Step 3: Containerization of Epytodo with a docker-compose
 
-To finish, you will containerize your `Epytodo` project. If you do not have one, we give you a downloadable tar file in the [src](./src/epytodo) directory, **but use yours if it works!**
+To finish, you will containerize your `Epytodo` project. If you do not have one, we give you a downloadable ZIP file in the [src](./src/epytodo.zip) directory, **but use yours if it works!**
 
  To do that, you will create:
 - A `Dockerfile` to build the image of your API (like in Step 2, but the API is in python, so dependencies installation will be different). You must use the `python:3.7.5-alpine` image
