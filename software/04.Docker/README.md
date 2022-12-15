@@ -31,10 +31,11 @@ Let's learn how to use the "moulinette"'s docker to test your EPITECH projects.
 - Using `docker run` command and some arguments:
   - mount your current directory `$PWD` in your container
   - launch a shell to execute commands in your container
-  - execute `cat /etc/os-release | grep PRETTY_NAME` , you should get `Fedora 32 (Container Image)`
+  - execute `cat /etc/os-release | grep PRETTY_NAME` , you should get `Fedora 34 (Container Image)`
 - Now, find the command to display images, containers, volumes and networks.
 
-> [There is a document in the intranet that can help you](https://intra.epitech.eu/file/public/technical-documentations/doc_docker.pdf) (but be careful when copying the commands, there are many extra spaces due to PDF formatting)
+<!-- markdown-link-check-disable-next-line -->
+> [There is a document in the EPITECH intranet that can help you](https://intra.epitech.eu/file/public/technical-documentations/doc_docker.pdf) (but be careful when copying the commands, there are many extra spaces due to PDF formatting)
 
 ## Step 2: Containerization of an API with a Dockerfile
 
@@ -47,7 +48,7 @@ The objective is to create a docker image of that API. You must:
 
 - Create a `Dockerfile` in the `node_api` folder.
 
-- Build an `image` from `node:12-alpine`.
+- Build an `image` from `node:16-alpine`.
 - Copy the code from the API in the image.
 - Define the environment variable `PORT` that indicate on which port the API must listen.
 - Make the API accessible from outside the image on the same port as `PORT`.
@@ -140,6 +141,7 @@ If you want to learn more on the architecture implementation and container's man
 - [Lazydocker](https://github.com/jesseduffield/lazydocker)
 - [Docker hub](https://hub.docker.com/)
 - [Docker swarm](https://docs.docker.com/get-started/swarm-deploy/)
+- [Dockerfile best practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 
 
 ## Authors
