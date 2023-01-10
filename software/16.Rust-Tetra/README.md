@@ -6,7 +6,7 @@
 
 ✔ Improve your Rust skills.
 
-### Step 0 - SETUP
+## Step 0 - SETUP
 
 All the required information to install dependencies can be found in [SETUP.md](./SETUP.md).
 
@@ -14,7 +14,7 @@ All the required information to install dependencies can be found in [SETUP.md](
 
 > 💡 We recommend you to follow the [Tour of Rust](https://tourofrust.com/index.html) for this workshop.
 
-### Step 1 - Display your first window with Tetra !
+## Step 1 - Display your first window with Tetra !
 
 > ❗ We strongly advise you to use the resources given for this exercise.
 
@@ -32,10 +32,10 @@ To do this, create a file `main.rs` in a folder called `src`.
 
 > 💡 Rust file has `rs` extension.
 
-##### Resources
+### Resources
  - [Docs Tetra](https://docs.rs/tetra/0.6.3/tetra/)
 
-### Step 2 - Let's be crazy and add some text to this page !
+## Step 2 - Let's be crazy and add some text to this page !
 
 > ❗ We strongly advise you to use the resources given for this exercise.
 
@@ -55,13 +55,13 @@ To display text, you need to follow three steps:
 
 > 💡 This step like the others is important for the rest of the workshop, don't hesitate to look at the resources.
 
-##### Resources
+### Resources
  - [Fonts with Tetra](https://docs.rs/tetra/0.2.18/tetra/graphics/text/struct.Font.html)
  - [Text with Tetra](https://docs.rs/tetra/0.2.18/tetra/graphics/text/struct.Text.html)
  - [Colors with Tetra](https://docs.rs/tetra/0.2.18/tetra/graphics/color/struct.Color.html)
  - [Maths with Tetra](https://docs.rs/tetra/0.4.0/tetra/math/index.html)
 
-### Step 3 - Here we go to display an image !
+## Step 3 - Here we go to display an image !
 
 > ❗ We strongly advise you to use the resources given for this exercise.
 
@@ -74,16 +74,16 @@ Your program must display an image with the parameter:
 
 - The origin of the image of type `Vec2`.
 
-You now have all the necessary information to display an image in your window. 
+You now have all the necessary information to display an image in your window.
 
 It's up to you ! 👍
 
-##### Resources
+### Resources
  - [Docs Tetra](https://docs.rs/tetra/0.6.3/tetra/)
  - [Texture](https://docs.rs/tetra/0.2.18/tetra/graphics/texture/struct.Texture.html)
  - [DrawParams](https://docs.rs/tetra/0.2.18/tetra/graphics/struct.DrawParams.html)
 
-### Step 4 - Keyboard interactions and event management !
+## Step 4 - Keyboard interactions and event management !
 
 > ❗ We strongly advise you to use the resources given for this exercise.
 
@@ -104,12 +104,12 @@ Four keys will be used to move the image:
 
 🎯 The objective is simple: Thanks to the previous exercises you can display a fish and now you have to make it move when you press the keys above.
 
-##### Resources
+### Resources
  - [Tetra input](https://docs.rs/tetra/0.2.18/tetra/input/index.html)
  - [Tetra Texture](https://docs.rs/tetra/0.2.18/tetra/graphics/texture/struct.Texture.html)
  - [Tetra DrawParams](https://docs.rs/tetra/0.2.18/tetra/graphics/struct.DrawParams.html)
 
-### Step 5 - Your first video game with Tetra and Rust !
+## Step 5 - Your first video game with Tetra and Rust !
 
 > ❗ We strongly advise you to use the resources given for this exercise.
 
@@ -128,12 +128,12 @@ You have zero limits, it's up to you to add as many options or features as possi
 
 🎯 The goal is to create your own snake game.
 
-##### Resources
+### Resources
  - [Tetra input](https://docs.rs/tetra/0.2.18/tetra/input/index.html)
  - [Tetra Texture](https://docs.rs/tetra/0.2.18/tetra/graphics/texture/struct.Texture.html)
  - [Tetra DrawParams](https://docs.rs/tetra/0.2.18/tetra/graphics/struct.DrawParams.html)
 
- ## Bonus
+## Bonus
 Here are some bonus ideas if you want to venture further into the Rust adventure! 💪
  - Why not create your own game concepts or reproduce existing games.
 
@@ -145,7 +145,7 @@ Here are some bonus ideas if you want to venture further into the Rust adventure
 
 ## Authors
 
-| [<img src="https://github.com/ThisisYoYoDev.png?size=85" width=85><br><sub>Yoel EDERY</sub>](https://github.com/ThisisYoYoDev) | [<img src="https://github.com/nicolasheude.png?size=85" width=85><br><sub>Nicolas HEUDE</sub>](https://github.com/nicolasheude) 
+| [<img src="https://github.com/ThisisYoYoDev.png?size=85" width=85><br><sub>Yoel EDERY</sub>](https://github.com/ThisisYoYoDev) | [<img src="https://github.com/nicolasheude.png?size=85" width=85><br><sub>Nicolas HEUDE</sub>](https://github.com/nicolasheude)
 | :---: | :---: |
 <h2 align=center>
 Organization
@@ -153,21 +153,22 @@ Organization
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 

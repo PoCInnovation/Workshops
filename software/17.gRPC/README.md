@@ -10,13 +10,13 @@
 
 ✔️ Implement a gRPC client
 
-# Introduction
+## Introduction
 
 **What you will do and why:**
 
 Let's say that you need to implement a way of communicating between a client and a server.
 You've probably heard of the REST model, one of the way that you can implement which is very common in web development.
-During this workshop, you will implement a communication channel between a client and a server using gRPC, which is 
+During this workshop, you will implement a communication channel between a client and a server using gRPC, which is
 one of the other ways to communicate - like REST does.
 
 **But what *is* gRPC ?**
@@ -139,7 +139,7 @@ During this step, you will implement this interface and its method, `Send`.
 - Create a folder named `server` at the root of your working directory
 - Create a `server.go` file in the `server` folder
 - In the `server/server.go` file, create a `Server` structure which contains nothing for the moment
-- Create a `Send` method for the `Server` structure which takes the same arguments as the `Send` method of the 
+- Create a `Send` method for the `Server` structure which takes the same arguments as the `Send` method of the
   `MessengerServiceServer` interface
   
   - Print the content received with the following format: `[SERVER]: received {body} at {date}`
@@ -149,7 +149,7 @@ Now that your `Server` structure implements all the `MessengerServiceServer` met
 
   - Add a field named `listener` in the `Server` structure
   - Add a field named `core` in the `Server` structure
-  - [Embed the unimplemented server](https://github.com/grpc/grpc-go/issues/3794#issuecomment-720599532) in the `Server` structure 
+  - [Embed the unimplemented server](https://github.com/grpc/grpc-go/issues/3794#issuecomment-720599532) in the `Server` structure
   - Add a `New` method to the `Server` structure
       - The core is a `grpc.Server` that you must create using a method from the grpc package
       - You must register the server using one of the method in `messenger_grpc.pb.go`
@@ -183,7 +183,7 @@ Should make the program run indefinitely !
 Your server is running, but you need a way to send request.
 Here comes the client !
 
-During this step, you will create a client and add methods allowing it to connect, send a message and disconnect 
+During this step, you will create a client and add methods allowing it to connect, send a message and disconnect
 from the server.
 
 ### 📌 **Tasks**:
@@ -229,10 +229,10 @@ Starting the server
 ## Step 5 - Shutdown properly
 
 ### 📑 **Description**:
-When you don't need the server to run anymore, or whenever the client has stopped sending their requests, we need 
+When you don't need the server to run anymore, or whenever the client has stopped sending their requests, we need
 to shut it down properly.
 
-As you created the `Disconnect` method for the client, you only need to create the same method for the server that 
+As you created the `Disconnect` method for the client, you only need to create the same method for the server that
 triggers whenever you hit `CTRL + C`.
 
 ### 📌 **Tasks**:
@@ -250,7 +250,7 @@ Try to hit `CTRL + C` while running the server, and it should shut down without 
 
 For the moment, you are using an int to represent the date, but there is the [Timestamp](https://stackoverflow.com/questions/3574716/date-and-time-type-for-use-with-protobuf) type available in protobuf.
 
-Take a look at the [gRPC streams](https://grpc.io/docs/what-is-grpc/core-concepts/) and try to implement a stream 
+Take a look at the [gRPC streams](https://grpc.io/docs/what-is-grpc/core-concepts/) and try to implement a stream
 RPC in the current project.
 
 Or you can try to write the client in [another programming language](https://developers.google.com/protocol-buffers/docs/pythontutorial) ! Here comes the power of protobuf :)
@@ -261,7 +261,7 @@ If you want to learn more about gRPC project out there, check out [this](https:/
 
 ## Authors
 
-| [<img src="https://github.com/0xPanoramix.png?size=85" width=85><br><sub>Luca Georges Francois</sub>](https://github.com/0xPanoramix) | 
+| [<img src="https://github.com/0xPanoramix.png?size=85" width=85><br><sub>Luca Georges Francois</sub>](https://github.com/0xPanoramix) |
 | :---: |
 <h2 align=center>
 Organization
@@ -269,21 +269,22 @@ Organization
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 

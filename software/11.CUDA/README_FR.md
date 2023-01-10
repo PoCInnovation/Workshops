@@ -28,11 +28,11 @@ La syntaxe de CUDA est très similaire à celle du C / C++.
 
 2. Lorsqu'il est question de la carte graphique (GPU) ainsi que de la mémoire de celle-ci (VRAM), le terme utilisé est **Device**.
 
-> ⚠️ **Vous trouverez une explication détaillée [ici](https://en.wikipedia.org/wiki/Thread_block_(CUDA_programming)) des deux derniers points**.
-
 3. Afin de mieux organiser l'exécution en parallele des cœurs du GPU, appelé un thread, ils sont représentés sur un repère à 3 dimensions.
 
-4. Les threads sont regroupés en blocs, eux aussi représentés sur un repère à 3 dimensions : la Grille.
+4. Les threads sont regroupés en blocs, eux aussi représentés sur un repère à 3 dimensions: la Grille.
+
+> ⚠️ **Vous trouverez une explication détaillée [ici](https://en.wikipedia.org/wiki/Thread_block_(CUDA_programming)) des deux derniers points**.
 
 Voici un schéma descriptif, car *une image vaut mieux que mille mots*, de l'organisation des threads en blocs dans une grille en 2 dimensions.
 

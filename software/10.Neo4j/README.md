@@ -36,18 +36,18 @@ _do your data have close relationships between them, are you going to use these 
 
 The answer is of course yes ! A book must always be linked to its author and its sales points, otherwise the platform would be useless.
 
-So you decide to store your data in a graph database. It's time to move on to development, let's go for the discovery of graph databases with [Neo4j](https://neo4j.com/) and its [Typescript](https://www.typescriptlang.org/) [OGM](https://neo4j.com/docs/ogm-manual/current/introduction/) : [Neogma](https://themetalfleece.github.io/neogma-docs/).
+So you decide to store your data in a graph database. It's time to move on to development, let's go for the discovery of graph databases with [Neo4j](https://neo4j.com/) and its [Typescript](https://www.typescriptlang.org/) [OGM](https://neo4j.com/docs/ogm-manual/current/introduction/) : [Neogma](https://themetalfleece.github.io/neogma).
 
-## Step 1 - Did you say database ?
+## Step 1 - Did you say database?
 
-### Database 
+### Database
 
-Our objective is to store data... Wait, where is our database ?
+Our objective is to store data... Wait, where is our database?
 
-Hmm yes, we must run a database to work with ! Let's launch [neo4j database](https://neo4j.com/) thanks docker.
+Hmm yes, we must run a database to work with! Let's launch [neo4j database](https://neo4j.com/) thanks docker.
 
 ```shell
-$ docker run -d --name workshop-poc-neo4j -p 7474:7474 -p 7687:7687 -e NEO4J_AUTH=$NEO4J_USER/$NEO4J_PASSWORD neo4j
+docker run -d --name workshop-poc-neo4j -p 7474:7474 -p 7687:7687 -e NEO4J_AUTH=$NEO4J_USER/$NEO4J_PASSWORD neo4j
 ```
 
 > ⚠️ You must load your environment to make this commands work !
@@ -62,7 +62,7 @@ Now, we must create a connection directly in the code to communicate with our da
 
 ### Connection
 
-We will use an [OGM](https://en.wikipedia.org/wiki/Object_graph) to simplify our interaction, let's use [Neogma](https://themetalfleece.github.io/neogma-docs/) a complete typed OGM for Neo4j.
+We will use an [OGM](https://en.wikipedia.org/wiki/Object_graph) to simplify our interaction, let's use [Neogma](https://themetalfleece.github.io/neogma) a complete typed OGM for Neo4j.
 
 - Tip `npm install neogma` to install the dependency in your project.
 - Create a file named `appDatabase.ts` in the `src` folder.
@@ -70,7 +70,7 @@ We will use an [OGM](https://en.wikipedia.org/wiki/Object_graph) to simplify our
 
 > 💡 You should use the `dbConfig` variable to authenticate your client to your database.
 
-Take a look at the [documentation](https://themetalfleece.github.io/neogma-docs/docs/Getting-Started#initializing) to learn how set up a client.
+Take a look at the [documentation](https://themetalfleece.github.io/neogma/docs/Getting-Started#initializing) to learn how set up a client.
 
 ### Check models
 
@@ -87,7 +87,7 @@ It should print an empty object like this:
 
 Good job, the database is ready to store some data !
 
-> 💡 You should take a look at this [link](https://themetalfleece.github.io/neogma-docs/docs/Models/Defining-a-Model#using-the-models-helpers) to see some `helpers` about models.
+> 💡 You should take a look at this [link](https://themetalfleece.github.io/neogma/docs/Models/Defining-a-Model#using-the-models-helpers) to see some `helpers` about models.
 
 ## Step 2 - Books
 
@@ -102,7 +102,7 @@ Now, inside this directory, let's create another directory named `Books`.
 Create a file named `BooksEntity.ts` and define your entity properties in.
 
 To do that:
-- Create a [type](https://www.typescriptlang.org/docs/handbook/2/objects.html) `BooksPropertiesI` which define all your fields and their type according to the previous schema. 
+- Create a [type](https://www.typescriptlang.org/docs/handbook/2/objects.html) `BooksPropertiesI` which define all your fields and their type according to the previous schema.
   
 > 💡 You must add a property `id` of type `string` to recognize books that has common values.
 
@@ -115,7 +115,7 @@ Your types are defined, let's create the node:
 The `ModelFactory` function takes an object which must contain the following fields:
 - `label`: the name we choose for the Model, here it's `Book`.
 - `primaryKeyField`: primary key use to recognize entity, here it's `id`.
-- `schema`: defines the data of the model, and applies some constraints to enforce some data safety. 
+- `schema`: defines the data of the model, and applies some constraints to enforce some data safety.
 
 > ⚠️ Don't forget to pass the `neogma` client as the second argument !
 
@@ -148,7 +148,7 @@ You must write those function in a file named `BooksModels` in the `entities/Boo
 - Create a function `updateBook` which takes as parameters:
   - `id`: book id
   - `bookProperties`: all properties to update, this parameter must be of type `Partial<BooksPropertiesI>` to make the all properties optional. Like this, we can update on or more values without problem.
-    
+
 This function must return the updated book.
 
 > 💡 Take your time to understand what is the return type of the update function provide by the `Books` factory.
@@ -163,7 +163,7 @@ This function must return the updated book.
 
 You can add the [books.tests.ts](./tests/books.tests.ts) file from the [tests](./tests) folder of that repository to test your work.
 
-## Step 3 - Authors ?
+## Step 3 - Authors?
 
 We can store books, it's cool ! But authors should be awarded for their work no ?
 
@@ -189,7 +189,7 @@ Modify the `BooksEntity.ts` file to add the relation `WriteBy` in your book.
 - Add the relationship `Author` in the `BooksRelationNodeI` interface.
 - Add the relationship `Author` in the `Books` factory.
 
-> 💡 Take a look at this [documentation](https://themetalfleece.github.io/neogma-docs/docs/Models/Defining-a-Model#using-modelfactory) to understand how add relation in your factory.
+> 💡 Take a look at this [documentation](https://themetalfleece.github.io/neogma/docs/Models/Defining-a-Model#using-modelfactory) to understand how add relation in your factory.
 
 ### Function
 
@@ -215,7 +215,7 @@ You will need to create a utility function that convert the query result into a 
   - `bookId`: Book id
   - `authorId`: Author id
     This function should delete the relation `WriteBy` between the book and the author and return true if the operation works, false if it failed.
-    
+
 #### Tests 🧪
 
 You can add the [books-authors.tests.ts](./tests/books-authors.tests.ts) file from the [tests](./tests) folder of that repository to test your work.
@@ -237,28 +237,29 @@ Remember that schema:
 ## Authors
 
 | [<img src="https://github.com/TomChv.png?size=85" width=85><br><sub>Tom Chauveau</sub>](https://github.com/TomChv)
-| :---: | 
+| :---: |
 <h2 align=center>
 Organization
 </h2>
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 

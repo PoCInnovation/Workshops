@@ -1,3 +1,5 @@
+# Workshop CardBoard VR - Arizona Like
+
 ## Prérequis
 ---
 Avoir la LTS (2020.3.0f1) d'unity installé sur votre ordinateur sous Windows.N'oubliez pas d'ajouter le module `Android build support` lors de l'installation d'Unity.
@@ -5,7 +7,7 @@ Avoir la LTS (2020.3.0f1) d'unity installé sur votre ordinateur sous Windows.N'
 ## Préparation de Unity
 ---
 
-Installation par google: https://developers.google.com/cardboard/develop/unity/quickstart
+Installation par google: <https://developers.google.com/cardboard/develop/unity/quickstart>
 
 Une première partie de setup est nécessaire pour vous permettre de faire tourner votre jeu en VR. Suivez attentivement chaque étape de cette partie et appelez un de vos encadrants au moindre doute.
 
@@ -79,11 +81,11 @@ Pour plus de simplicité nous partons du principe que notre MainCamera à l'int�
 
 ### Aller plus loin
 
--	Intégrer le système de NavMesh pour faire en sorte que vos zombies se dirigent vers vous en crée automatiquement un chemin d'eux-mêmes.
--	Rajouter une HUD pour le joueur indiquant des informations qui lui sont relatives:	
-	-	nombre de zombies tués 	
-	-	Point de vie du zombie que vous visez 	
-	-	votre score
--	Faire un système de spawner aléatoire pour les zombies
--	Rajouter des shaders graphiques
--	Faites en sorte d'avoir recours à plusieurs scripts pour que votre architecture respecte les principes de la single responsibility du SOLID.
+- Intégrer le système de NavMesh pour faire en sorte que vos zombies se dirigent vers vous en crée automatiquement un chemin d'eux-mêmes.
+- Rajouter une HUD pour le joueur indiquant des informations qui lui sont relatives:
+  - nombre de zombies tués
+  - Point de vie du zombie que vous visez
+  - votre score
+- Faire un système de spawner aléatoire pour les zombies
+- Rajouter des shaders graphiques
+- Faites en sorte d'avoir recours à plusieurs scripts pour que votre architecture respecte les principes de la single responsibility du SOLID.

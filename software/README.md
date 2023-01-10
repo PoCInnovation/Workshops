@@ -4,7 +4,7 @@ Software workshops to introduce the students to software technologies.
 
 In each directory the SETUP and a README explaining the purpose of the workshop.
 
-### [🌐 Click to join our Discord](https://discord.gg/Yqq2ADGDS7)
+## [🌐 Click to join our Discord](https://discord.gg/Yqq2ADGDS7)
 
 ## 1 - [Todo List in React](01.React)
 
@@ -62,7 +62,7 @@ Win time as mobile developer with Expo.
 You will:
  - learn basics to React Native
  - create your own QR code scanner
- 
+
 ## 8 - [Express API in TypeScript](08.Express)
 
 Learn Typescript by creating a complete Express API.  
@@ -145,7 +145,7 @@ You will:
   - Creation of your video game.
   - Improve your Rust skills.
 
-##  17 - [gRPC and Protocol Buffers with Go](./17.gRPC)
+## 17 - [gRPC and Protocol Buffers with Go](./17.gRPC)
 
 Learn gRPC by creating a client and server with go.  
 You will:
@@ -155,7 +155,7 @@ You will:
 - Implement a gRPC client with go
 - Implement a gRPC server with go
 
-##  18 - [Setup Kafka in a microservice architecture](./18.Kafka)
+## 18 - [Setup Kafka in a microservice architecture](./18.Kafka)
 
 Learn Kafka by implementing a producer and two consumers as services with Kafka.  
 You will:
@@ -164,7 +164,7 @@ You will:
 - Create two consumer services
 - Publish messages into Kafka
 
-##  19 - [Multi-client chat with Socket.IO](./19.Socket.io)
+## 19 - [Multi-client chat with Socket.IO](./19.Socket.io)
 
 Learn Socket.IO by implementing your own online chat.  
 You will:
@@ -173,7 +173,7 @@ You will:
 - Understand sockets
 - Understand how transmits data
 
-##  20 - [Introduction to Kubernetes](./20.Kubernetes)
+## 20 - [Introduction to Kubernetes](./20.Kubernetes)
 
 Learn Kubernetes basics by deploying a web application.  
 You will:
@@ -181,7 +181,7 @@ You will:
 - Learn about basic Kubernetes concepts
 - Deploy a web application
 
-##  21 - [Serverless](./21.Serverless)
+## 21 - [Serverless](./21.Serverless)
 
 Learn Serverless principles by creating a serverless application in two different ways.  
 You will:
@@ -235,24 +235,23 @@ Organization
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 
 > 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
-
-

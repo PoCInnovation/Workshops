@@ -1,3 +1,5 @@
+# Workshop CardBoard VR - Arizona Like
+
 ## Prérequis
 ---
 
@@ -6,7 +8,7 @@ N'oubliez pas d'ajouter le module `Android build support` lors de l'installation
 
 ## Préparation de Unity
 ---
-Installation guide by google: https://developers.google.com/cardboard/develop/unity/quickstart
+Installation guide by google: <https://developers.google.com/cardboard/develop/unity/quickstart>
 
 ## Arizona
 ---
@@ -23,7 +25,7 @@ For simplicity we assume that our MainCamera inside the XR Rig represents our pl
 - Create an on-camera script that detects when a zombie is in your line of sight (Raycast)
 - Create a script that communicates with the previous one and shoots a projectile when a zombie is detected. (If the projectile does not meet any obstacle it must destroy itself after X time)
 
-###  Zombie
+### Zombie
 
 - Add health points to your zombie as well as a function that inflicts damage on it when called.
 - If your zombie has no more life points it must be destroyed.

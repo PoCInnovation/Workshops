@@ -6,7 +6,6 @@
 ## [Part 2 - GitHub](./GitHub)
 
 
-
 ## Authors
 
 | [<img src="https://github.com/Breigner01.png?size=85" width=85><br><sub>Benjamin Reigner</sub>](https://github.com/Breigner01) | [<img src="https://github.com/RezaRahemtola.png?size=85" width=85><br><sub>Reza Rahemtola</sub>](https://github.com/RezaRahemtola) |

@@ -1,11 +1,13 @@
-### Basic variables
+# Learn Typescript
+
+## Basic variables
 
 ```typescript
-const myConstante = 'Hello'; // You can't modify the value
+const myConstant = 'Hello'; // You can't modify the value
 let variable = 3; // You can change this value
 ```
 
-### Basic Types
+## Basic Types
 
 ```typescript
 const myStr: string = 'hello world' // String
@@ -13,20 +15,20 @@ const myNum: number = 3 // Number
 const myBool: boolean = true // boolean
 ```
 
-#### Inference
+### Inference
 
 ```typescript
 let myInference = 'foo bar' // Your variable will be typed as string
 myInference = 3 // This create an error because your variable as type string
 ```
 
-### Array
+## Array
 
 ```typescript
 const myArr: Array<string> = ['hello world'] // You can create an array with the keyword Array<> or []. Example: Array<number> === number[] 
 ```
 
-### Interface
+## Interface
 You can also create types for object, it's an interface:
 
 ```typescript
@@ -39,7 +41,7 @@ const me: Person = { name: 'John', age: 20 };
 const otherPerson: Person = { name: 'John', age: 20, sex: 'man' }; // This create an error because the attribute 'sex' doesn't exist in the type Person.
 ```
 
-### Function
+## Function
 
 ```typescript
 function sum(n1: number, n2: number) {
@@ -69,7 +71,7 @@ sayHello('Doe') // Print "Hello Doe"
 sayHello(4) // Error, type string is required
 ```
 
-### Enum
+## Enum
 
 ```typescript
 enum School {
@@ -80,7 +82,7 @@ enum School {
 ```
 
 
-### Class
+## Class
 
 ```typescript
 class Student {

@@ -82,7 +82,7 @@ A `button` must appear to cancel the form and another one to submit it. It shoul
 
 > 💡 You should use a [store](https://svelte.dev/tutorial/writable-stores) to synchronize your components.
 
-##### Resources
+### Resources
 
 - [Store API](https://svelte.dev/docs#svelte_store)
 - [For loop in Svelte](https://medium.com/@willjohnson.io/how-to-loop-through-a-list-of-data-in-svelte-baaaaf397ec4)
@@ -99,7 +99,7 @@ To go further, consider implementing the following bonuses:
 ## Further reading
 
 - [Cool Svelte projects](https://madewithsvelte.com/)
-- [6 reasons to use Svelte](https://betterprogramming.pub/6-reasons-why-you-should-consider-svelte-for-your-next-project-45b32c92e229)
+- [6 reasons to use Svelte](https://www.eternaldev.com/blog/6-reasons-for-developers-to-consider-svelte-for-your-next-project)
 - [Svelte vs React](https://www.twilio.com/blog/react-svelte-comparing-basics)
 - [Switch from React to Svelte](https://blog.logrocket.com/should-you-switch-from-react-to-svelte/)
 - [Svelte API](https://svelte.dev/docs#Before_we_begin)
@@ -107,28 +107,29 @@ To go further, consider implementing the following bonuses:
 ## Authors
 
 | [<img src="https://github.com/TomChv.png?size=85" width=85><br><sub>Tom Chauveau</sub>](https://github.com/TomChv)
-| :---: | 
+| :---: |
 <h2 align=center>
 Organization
 </h2>
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 

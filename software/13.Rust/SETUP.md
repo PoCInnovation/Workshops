@@ -6,9 +6,9 @@ Please make sure you have the following programs installed:
  - [Rust](https://www.rust-lang.org/fr/): A language that gives everyone the power to build reliable and efficient software.
 
 ### Install Rust:
- - Under all systems: 
+ - Under all systems:
 ```shell
-$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 > 💡 We recommend you to download the vscode extension [Rust](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust) for Rust or JetBrains extension [IntelliJ Rust](https://www.jetbrains.com/fr-fr/rust/).
 
@@ -19,13 +19,13 @@ Create a working folder.
 ### Init your project:
 
 ```shell
-$ cargo init
+cargo init
 ```
 
 ### Run your project:
 
 ```shell
-$ cargo run
+cargo run
 ```
 
 ## 3. Start workshop

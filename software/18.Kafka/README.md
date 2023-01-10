@@ -72,8 +72,8 @@ Then, create a second service, named `kafka`:
 
 ### ✔️ **Validation**:
 
-Run `docker-compose up --build -d`, wait 30 seconds and in a new terminal run `docker-compose logs kafka | grep -i 
-started`. 
+Run `docker-compose up --build -d`, wait 30 seconds and in a new terminal run `docker-compose logs kafka | grep -i
+started`.
 It should print:
 ```shell
 $ docker-compose logs kafka | grep -i started
@@ -107,12 +107,12 @@ You'll use the [Go programming language](https://golang.org/), and the package [
   - The `main` one
   - `createProducer` which will create the producer and connect to the Kafka broker
   - `publishOrder` which will publish a pizza order
-- The message that the producer will publish must be of the type `Order`, a [structure](https://gobyexample.com/structs) containing a `string` - the 
-  pizza 
+- The message that the producer will publish must be of the type `Order`, a [structure](https://gobyexample.com/structs) containing a `string` - the
+  pizza
   type - and an int - the table that ordered the pizza
 - It must be published on the `pizza-order` topic
 - You'll then call the two last functions in the `main` one
-- Once the message has been published, print the partition and the offset it has been published to 
+- Once the message has been published, print the partition and the offset it has been published to
 
 ### 📚 **Documentation**:
 - [How to send message from any type ? Use bytes](https://pkg.go.dev/github.com/sclasen/sarama#ByteEncoder)
@@ -153,7 +153,7 @@ First, you will create the actual consumer and then consume messages.
 - Create 3 functions:
   - The `main` one
   - `createConsumer` which creates the consumer using sarama
-  - `consumeMessages` which retrieves the partitions, and then read for the incoming messages as they arrive and 
+  - `consumeMessages` which retrieves the partitions, and then read for the incoming messages as they arrive and
     print their content after decoding them
 
 ### 📚 **Documentation**:
@@ -203,7 +203,7 @@ It should have created a file named `log.txt` with the following sentence inside
 
 ## Authors
 
-| [<img src="https://github.com/0xpanoramix.png?size=85" width=85><br><sub>Luca Georges Francois</sub>](https://github.com/0xpanoramix) | 
+| [<img src="https://github.com/0xpanoramix.png?size=85" width=85><br><sub>Luca Georges Francois</sub>](https://github.com/0xpanoramix) |
 | :---: |
 <h2 align=center>
 Organization
@@ -211,21 +211,22 @@ Organization
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 

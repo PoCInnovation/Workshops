@@ -16,7 +16,7 @@ This file contains the following sub-files:
  - `package-lock.json`: A file containing the versions of each dependency used on the project.
  - `tsconfig.json`: A configuration file for Typescript
  - `src/index.ts`: A file which execute a simple Hello world function
- 
+
 All you have to do is to follow these steps:
  - Create a folder `express-workshop-poc`
  - Copy the file `source.zip` inside.

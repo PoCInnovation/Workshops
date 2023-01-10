@@ -16,7 +16,7 @@ To install yarn:
 `npm install --global yarn`
 
 To install prisma:
-```
+```shell
 npm install --global prisma
 ```
 

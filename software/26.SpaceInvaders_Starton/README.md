@@ -47,7 +47,7 @@ You objective is to change the background image of the game with an image from I
 > 💡 You can use any image you want, like this [simple background generated with DALL·E](https://labs.openai.com/s/o7FRxbyER0wGMAy8umPYrGTu) for example
 
 To do so, upload your image in the [IPFS tab of Starton](https://app.starton.io/ipfs), which should give you an URL like this one:
-```
+```text
 https://ipfs.starton.io/ipfs/<CID>
 ```
 
@@ -66,7 +66,7 @@ First of all, we will deploy an NFT contract thanks to a Starton [template](http
 For the `Smart Contract Constructor` parameter:
 - chose the `name` you want.
 - same for the `symbol`
-- for the `base URI` enter `ipfs://ipfs/` because our contract metadata will be hosted on ipfs. 
+- for the `base URI` enter `ipfs://ipfs/` because our contract metadata will be hosted on ipfs.
 - for the `contract URI suffix` leave it empty for the moment and go to the IPFS section of your Starton dashboard.
 
 Now we will host our contract and NFT's metadata on IPFS.<br>
@@ -134,21 +134,22 @@ Organization
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 

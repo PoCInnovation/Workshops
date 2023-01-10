@@ -1,5 +1,5 @@
 
-## Minimalist VR
+# Workshop Mock HMD - Minimalist VR
 
 Ce workshop a pour but de vous initier au développement d'applications en réalité virtuelles même si vous ne possédez pas de casque VR !
 

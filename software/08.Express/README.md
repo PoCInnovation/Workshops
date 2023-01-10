@@ -28,11 +28,11 @@ In the file `src/server.ts`:
 - Create a new variable `app` who will instantiate your express server.
 - Start the server by listening on the port `8080`.
 - Define a route **GET** `/health` which returns `OK`
-- Define another route **GET** `/death` which returns `BAD_REQUEST` 
+- Define another route **GET** `/death` which returns `BAD_REQUEST`
 
 > A basic practice when starting a server is to display a message with the server address so that you can easily access it.
 
-#### Resources:
+### Resources:
 - [Express](https://github.com/expressjs/express)
 - [HTTP Server](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server)
 - [HTTP Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
@@ -70,12 +70,6 @@ Replace your hard-written status-codes with those offered in the package:
 res.status(StatusCodes.OK).send("ok");
 ```
 
-#### Resources:
-- [The main HTTP codes](https://medium.com/@sahelasumi/http-status-codes-31644d99fb1)
-- [Full list of codes](https://developer.mozilla.org/docs/Web/HTTP/Status)
-- [Using HTTP status in Typescript](https://github.com/prettymuchbryce/http-status-codes)
-
-
 > When we create a route, we want to be able to simply test if it works, and if its implementation has not broken the other route.
 <br>
 It is in this case that Postman can be very useful.
@@ -85,11 +79,16 @@ Once your queries are created, you should be able to run a test-suite on your se
 
 > We recommend that you update this collection for all routes of the following exercises.
 
-#### Resources:
+### 📚 Resources:
+- [The main HTTP codes](https://medium.com/@sahelasumi/http-status-codes-31644d99fb1)
+- [Full list of codes](https://developer.mozilla.org/docs/Web/HTTP/Status)
+- [Using HTTP status in Typescript](https://github.com/prettymuchbryce/http-status-codes)
+
+About Postman:
 - [Installing Postman](https://www.postman.com/downloads/)
 - [Postman Collection](https://learning.postman.com/docs/sending-requests/intro-to-collections/)
 - [Postman Test suite](https://www.postman.com/use-cases/api-testing-automation/)
-- [Postman Environnement ](https://learning.postman.com/docs/sending-requests/managing-environments/)
+- [Postman Environnement](https://learning.postman.com/docs/sending-requests/managing-environments/)
 
 
 ## Step 03 : Abuse the good things
@@ -144,16 +143,16 @@ Now all you have to do is create these different routes:
 
 > As before, [Postman](https://www.postman.com/) may be useful to test your HTTP routes 🚀
 
-#### Resources:
+### Resources:
 - [Cookies with Express](https://github.com/expressjs/cookie-parser)
 - [headers with Express](https://flaviocopes.com/express-headers/)
 
 ## Step 04 : Always think about scaling
 
-> 💡 Environment variables are variables used by your operating system in many areas. They are visible by typing `env` in your terminal. 
+> 💡 Environment variables are variables used by your operating system in many areas. They are visible by typing `env` in your terminal.
 
 > These variables are used when you deploy an application in production to secure passwords and private identifiers. It is therefore essential to know how to use them in your code 😉
- 
+
 For this, we will use the package [env-var](https://github.com/evanshortiss/env-var) which allows you to automatically load environment variables from a file:
 
 ```sh
@@ -182,7 +181,7 @@ Create a route **GET** `/hello` to use the variable `HELLO_MESSAGE` as a respons
 
 > It is important to think from the beginning of the application about integrating your server into a web architecture by placing as many variables as possible that may change in the environment 💾
 
-#### Resources :
+### Resources :
 - [env-var](https://github.com/evanshortiss/env-var)
 - [direnv](https://direnv.net/)
 
@@ -194,10 +193,10 @@ If you did, congratulations, that's a good habit to have, you can move on to the
 
 Else, enrich your test collection with tests for your new routes 😉
 
-#### Resources:
+### Resources:
 - [Postman Collection](https://learning.postman.com/docs/sending-requests/intro-to-collections/)
 - [Postman Test suite](https://www.postman.com/use-cases/api-testing-automation/)
-- [Postman Environnement ](https://learning.postman.com/docs/sending-requests/managing-environments/)
+- [Postman Environnement](https://learning.postman.com/docs/sending-requests/managing-environments/)
 
 ## Step 06 : The bodyguards of the servers
 
@@ -234,7 +233,7 @@ app.get("/private", middleware, (_req, res) => {
 ### Update .envrc
 Create a new variable in your `.envrc`
 
-```
+```text
 AUTHORIZATION_PORT=mykey
 ```
 
@@ -246,7 +245,7 @@ In case of invalid headers, return the status `400` and the reason for the refus
 <br>
 <br>
 
-#### Resources:
+### Resources:
 - [Middleware](https://expressjs.com/en/guide/using-middleware.html)
 <br>
 <br>
@@ -267,21 +266,22 @@ Organization
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 

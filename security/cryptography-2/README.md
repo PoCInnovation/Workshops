@@ -1,6 +1,5 @@
 # Introduction
 
-  
 
 This workshop aims to introduce you to cryptography.
 From substitution cryptography to symmetric methods, including hashing functions or asymmetric encryption; at the end of this workshop you will have the basics to understand modern cryptography.
@@ -18,11 +17,12 @@ From substitution cryptography to symmetric methods, including hashing functions
 
 - Substitution ciphers
 - Block Encryption
--  Learn to use encryption algorithm like RSA or AES
+- Learn to use encryption algorithm like RSA or AES
 - Technic words: plaintext, cipher and ciphertext
 
-# Substitution ciphers
-## Caesar
+## Substitution ciphers
+
+### Caesar
 
 Caesar cipher is one of the simplest encryption techniques. It is a type of substitution cipher in which each letter in the secret message is 'shifted' a certain number of places down the alphabet.
 
@@ -40,10 +40,11 @@ Now that you know how Caesar cipher works, it's time for you to start your first
 
 > HGU{Lgmlw_ds_Ysmdw_wkl_guumhéw_hsj_dwk_Jgesafk._Lgmlw_?_Fgf_!_Mf_Naddsyw_hwmhdé_v’Ajjévmulatdwk_Ysmdgak_jékaklw_wfugjw_wl_lgmbgmjk_à_d’wfnszakkwmj.}
 
-# Hash functions
+## Hash functions
 A hash function is a mathematical function that converts a numerical input value into another compressed numerical value. The input to the hash function is of arbitrary length but output is always of fixed length.
 
 Values returned by a hash function are called  **message digest**  or simply  **hash values**.
+
 ### Popular hash functions:
 
  - **MD5** digests have been widely used in the software world to provide assurance about integrity of transferred file. For example, file servers often provide a pre-computed MD5 checksum for the files, so that a user can compare the checksum of the downloaded file to it.
@@ -55,6 +56,7 @@ Values returned by a hash function are called  **message digest**  or simply  **
 Can you find what format this string is and break it ?
 
 `7ecc19e1a0be36ba2c6f05d06b5d3058`
+
 ## Guess #2
 
 Can you find what format this string is and break it ?
@@ -66,27 +68,29 @@ Well, this time I think you should look the man before typing "Hash sha decrypt"
 
 `96719db60d8e3f498c98d94155e1296aac105ck4923290c89eeeb3ba26d3eef92`
 
-# XOR
+## XOR
 
 Every documents, images, sounds … can be stored in a file. A file contains data which must be used to render its content. The data organization in a file is defined by its file format specifications (pdf, jpg, png, wav, zip …).
 
 Almost all the main file formats have some structural similarities:
 
--   they start with a header describing the file: the size of its content, the targeted environments etc.
--   the content which can be organized in various ways
--   sometimes a end pattern, used to know where the parsers should stop
+- they start with a header describing the file: the size of its content, the targeted environments etc.
+- the content which can be organized in various ways
+- sometimes a end pattern, used to know where the parsers should stop
 
-For example this is the format for JPEG:  [![](https://camo.githubusercontent.com/0e2fb017568710b28938c8749ded781b9163029c9e484720ea115e02f5c2ac55/68747470733a2f2f6968302e726564627562626c652e6e65742f696d6167652e313838393934303737352e363937332f666c61742c3130303078313030302c3037352c662e75312e6a7067)](https://camo.githubusercontent.com/0e2fb017568710b28938c8749ded781b9163029c9e484720ea115e02f5c2ac55/68747470733a2f2f6968302e726564627562626c652e6e65742f696d6167652e313838393934303737352e363937332f666c61742c3130303078313030302c3037352c662e75312e6a7067)
+For example this is the format for JPEG:
+
+[![image](https://camo.githubusercontent.com/0e2fb017568710b28938c8749ded781b9163029c9e484720ea115e02f5c2ac55/68747470733a2f2f6968302e726564627562626c652e6e65742f696d6167652e313838393934303737352e363937332f666c61742c3130303078313030302c3037352c662e75312e6a7067)](https://camo.githubusercontent.com/0e2fb017568710b28938c8749ded781b9163029c9e484720ea115e02f5c2ac55/68747470733a2f2f6968302e726564627562626c652e6e65742f696d6167652e313838393934303737352e363937332f666c61742c3130303078313030302c3037352c662e75312e6a7067)
 
 ## Couple goal
 The pictures in  `goal.zip`  has been inadvertently encrypted. We are counting on you to decrypt them.
 
-# Symmetric encryption
+## Symmetric encryption
 The Advanced Encryption Standard (AES) is the first and only publicly accessible cipher approved by the US National Security Agency (NSA) for protecting top secret information. AES was first called Rijndael after its two developers, Belgian cryptographers Vincent Rijmen and Joan Daemen.
 
 The following illustration shows how symmetric key encryption works:
 
-![](https://www.atpinc.com/upload/images/2020/04-22/4e79465eb02f4422a7c4bba9f99ffa09.jpg)
+![image](https://www.atpinc.com/upload/images/2020/04-22/4e79465eb02f4422a7c4bba9f99ffa09.jpg)
 
 AES-256, which has a key length of 256 bits, supports the largest bit size and is practically unbreakable by brute force based on current computing power, making it the strongest encryption standard. The following table shows that possible key combinations exponentially increase with the key size.
 
@@ -115,7 +119,7 @@ The piece of software is in the `jacques.zip`
 
 PS: This excellent challenge was made by [Mathis Hammel](https://twitter.com/MathisHammel?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor), don't hesitate and follow him on twitter !
 
-# Asymmetric encryption
+## Asymmetric encryption
 RSA was first publicly described in 1977 by Ron Rivest, Adi Shamir and Leonard Adleman of the Massachusetts Institute of Technology.
 
 Asymmetric cryptography uses two different but mathematically linked keys, one public and one private. The public key can be shared with everyone, whereas the private key must be kept secret.
@@ -140,21 +144,22 @@ Organization
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 

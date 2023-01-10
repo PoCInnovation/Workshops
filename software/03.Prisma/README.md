@@ -76,7 +76,7 @@ You will build in your schema a `Query` object that will contain the methods to 
 > Nexus documentation about [Queries](https://nexusjs.org/docs/api/query-field) and [Mutations](https://nexusjs.org/docs/api/mutation-field)  
 > The `resolve` field is where you will call prisma to query data inside the database
 
-To test the queries/mutations you are going to set up, you can go to http://localhost:3000/ to use a playground that lets you to test your server.
+To test the queries/mutations you are going to set up, you can go to <http://localhost:3000/> to use a playground that lets you to test your server.
 
 We already gave the `getUsers` query and the `signupUser` mutation to let you see what the syntax looks like, and make it easier to create the next ones.  
 Below, we also give you examples to test your queries and mutations.
@@ -134,14 +134,14 @@ query {
 
 ```graphql
 query {
-  getPostsByUser(authorId: __AUTHOR_ID__) {
+  getPostsByUser(authorId: <AUTHOR_ID>) {
     id
     title
     content
   }
 }
 ```
-> Note: you must replace **__AUTHOR_ID__** with the current id of an author.
+> Note: you must replace **<AUTHOR_ID>** with the current id of an author.
 
 ### getPublishedPosts
 
@@ -233,21 +233,22 @@ Organization
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 

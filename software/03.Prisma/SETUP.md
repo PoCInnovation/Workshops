@@ -37,7 +37,7 @@ You can also display the database via a web interface:
 npx prisma studio
 ```
 💡 If you have an error while running this command, try to update the `prisma` packages:
-```
+```sh
 npm add -D prisma@3.15.0 && npm add @prisma/client@3.15.0
 ```
 

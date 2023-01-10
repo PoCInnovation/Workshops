@@ -25,7 +25,7 @@ If you are ever interested in checking out electronics/hardware youtubers, here'
 
 Please read this first:
 
-https://en.wikipedia.org/wiki/Resistor
+<https://en.wikipedia.org/wiki/Resistor>
 
 ## Exercise 1
 

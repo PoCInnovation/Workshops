@@ -24,16 +24,16 @@ Curious by nature and looking for something new, you decide to set up your littl
 
 Your first reflex is to try the World Map API to play with GraphQL and understand its concepts.
 
-  - Go to [World Map API](https://countries.trevorblades.com)
+- Go to World Map API: <https://countries.trevorblades.com>
 
 Let's do some queries to retrieve data:
   - Retrieve all continents' code, name and all their countries' code, name and capital.
   - Retrieve the code, name, currency and its states' code and name of the country with `FR` code.
 
-##### Resources
+### Resources
 
 - [GraphQL syntax](https://graphql.org/learn/queries/)
-- [Apollo playground](https://www.apollographql.com/docs/apollo-server/testing/build-run-queries#graphql-playground)
+- [Apollo playground](https://www.apollographql.com/docs/apollo-server/api/plugin/landing-pages/#graphql-playground-landing-page)
 
 ## Step 2 - Hello Apollo
 
@@ -97,7 +97,7 @@ npm run dev # Start server in developer mode
 ```
 
 
-Go to http://localhost:5000 to reach the local playground of your API.
+Go to <http://localhost:5000> to reach the local playground of your API.
 
 ### Basics functions
 
@@ -112,7 +112,7 @@ Then you can define your queries and mutation in `src/resolver/Hello/` folder.
 
 > 💡 You can auto feed your database through the `yarn feed`.
 
-##### Resources
+### Resources
   - [Apollo schema](https://www.apollographql.com/docs/tutorial/schema/)
   - [Apollo queries](https://www.apollographql.com/docs/tutorial/resolvers/)
   - [Apollo mutations](https://www.apollographql.com/docs/tutorial/mutation-resolvers/)
@@ -137,7 +137,7 @@ Then, create resolvers that can read of `Category` and `Product`:
 
 You can now write `resolvers` in `src/resolver/Categories` and `src/resolver/Products`.
 
-##### Resources
+### Resources
   - [Apollo schema](https://www.apollographql.com/docs/tutorial/schema/)
   - [Apollo queries](https://www.apollographql.com/docs/tutorial/resolvers/)
   - [Apollo mutations](https://www.apollographql.com/docs/tutorial/mutation-resolvers/)
@@ -169,7 +169,7 @@ Your schema is defined, you can now write `resolvers` in `src/resolver/Categorie
 
 In case of errors (e.g: a negative product price): you should use custom Apollo errors defined in `src/helpers/Errors.ts`.
 
-##### Resources
+### Resources
 - [Apollo schema](https://www.apollographql.com/docs/tutorial/schema/)
 - [Apollo queries](https://www.apollographql.com/docs/tutorial/resolvers/)
 - [Apollo mutations](https://www.apollographql.com/docs/tutorial/mutation-resolvers/)
@@ -222,7 +222,7 @@ To do it, you must use [useQuery Apollo hook](https://www.apollographql.com/docs
 
 If you are not familiar to react, take a loot at this [documentation](https://reactjs.org/docs/getting-started.html).
 
-##### Resources
+### Resources
  - [Apollo client](https://www.apollographql.com/docs/react/)
  - [React](https://reactjs.org/docs/getting-started.html)
  - [Functional components](https://djoech.medium.com/functional-vs-class-components-in-react-231e3fbd7108)
@@ -249,28 +249,29 @@ You should now implement more functionalities like:
 ## Authors
 
 | [<img src="https://github.com/TomChv.png?size=85" width=85><br><sub>Tom Chauveau</sub>](https://github.com/TomChv)
-| :---: | 
+| :---: |
 <h2 align=center>
 Organization
 </h2>
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 

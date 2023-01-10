@@ -20,4 +20,4 @@ pip install requests pygame pillow python-dotenv
 ```
 
 ## Starton
-That's the easy part, the only thing you need to do is to create an account on https://app.starton.io/ and you're ready to go 🚀
+That's the easy part, the only thing you need to do is to create an account on <https://app.starton.io/> and you're ready to go 🚀

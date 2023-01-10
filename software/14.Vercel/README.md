@@ -1,6 +1,6 @@
 # Workshop 14 - Discover the Deployment as a Service with Vercel and Netlify
 
-✔️ Learn how you can deploy website without cost 
+✔️ Learn how you can deploy website without cost
 
 ✔️ Explore Vercel x NextJS potential  
 
@@ -90,7 +90,7 @@ First, let's write a simple route to understand how [NextJS](https://nextjs.org/
 
 > NextJS can create an endpoint from a file, for example you can actually reach the endpoint `<your_website>/api/hello> in your project.
 
-#### Ping
+### Ping
 
 In the `api` folder, create a file `ping.js` that will just respond `pong` when you hit the endpoint.
 
@@ -98,7 +98,7 @@ In the `api` folder, create a file `ping.js` that will just respond `pong` when 
 
 > You can run your project with `yarn dev` or `npm run dev`.
 
-If you've done everything good, you should reach your endpoint through http://localhost:3000/api/ping. The command below should print `Success`.
+If you've done everything good, you should reach your endpoint through <http://localhost:3000/api/ping>. The command below should print `Success`.
 
 ```shell
 curl -s http://localhost:3000/api/ping | grep "pong" > /dev/null && echo "Success" || echo "Fail"
@@ -124,7 +124,7 @@ curl -s http://localhost:3000/api/hello/John | grep "Hello John \!" > /dev/null 
 
 #### Deploy
 
-You had some fun with Next backend, it's time to deploy your changes in public with Vercel! 
+You had some fun with Next backend, it's time to deploy your changes in public with Vercel!
 
 To do it, just `push` your code, it should reload your application.
 
@@ -155,7 +155,7 @@ It must:
 - On **GET**: Retrieve all posts stored in the API
 - On **POST**: Create a new post
   - The **body** of your request must have a `title` and a `content`, you can generate the `created_at` with `Date`.
-    
+
 > You can retrieve the body with `req.body`.
 
 🚀 Now, you can create a folder `posts` that get an `id` as `url parameter` to do:
@@ -167,7 +167,7 @@ It must:
 >
 > 💡 You should create some `fake data` to easily feed your frontend for the next step
 
-#### Deploy
+### Deploy
 
 You can now deploy your App on Vercel to update your application.
 
@@ -203,7 +203,7 @@ Here we go, first:
 
 - Create a stylesheet named `TopBar.module.css` that will apply some style to our component (e.g: position, size, colors, font-size...).
 
-- Now you must display it to your website, go to `index.js` and remove all the code in the `return`, replace it with your component, you can use it like a html tag (e.g: `<TopBar/>`). 
+- Now you must display it to your website, go to `index.js` and remove all the code in the `return`, replace it with your component, you can use it like a html tag (e.g: `<TopBar/>`).
 
 Push your work and share your `website url` to your friends, so they can be impressed by your skills 🚀
 
@@ -252,7 +252,7 @@ Here are the steps to deploy on Netlify:
 
 ## Authors
 
-| [<img src="https://github.com/TomChv.png?size=85" width=85><br><sub>Tom Chauveau</sub>](https://github.com/TomChv) | [<img src="https://github.com/adrienfort.png?size=85" width=85><br><sub>Adrien Fort</sub>](https://github.com/adrienfort) 
+| [<img src="https://github.com/TomChv.png?size=85" width=85><br><sub>Tom Chauveau</sub>](https://github.com/TomChv) | [<img src="https://github.com/adrienfort.png?size=85" width=85><br><sub>Adrien Fort</sub>](https://github.com/adrienfort)
 | :---: | :---: |
 <h2 align=center>
 Organization
@@ -260,21 +260,22 @@ Organization
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 

@@ -12,7 +12,7 @@ Here is what you must do, <ins>using pwntools</ins>:
 - exit the script
 
 The output could look like this:
-```
+```text
     [+] Starting local process '/bin/sh': pid ....
     echo-ing hello to process
     process response: hello
