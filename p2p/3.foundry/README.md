@@ -13,7 +13,7 @@
 Ethereum has introduced a major revolution in the blockchain world: smart-contracts.
 Smart-contracts rely on blockchain technology to guarantee their integrity and inviolability.
 They are irrevocable computer programs, most often deployed on a blockchain,
-which execute a set of pre-defined instructions. Developing smart-contracts is way more different 
+which execute a set of pre-defined instructions. Developing smart-contracts is way more different
 from developing a regular application.
 
 ## Step 0 - Setup
@@ -29,17 +29,12 @@ Before starting take a look at the generated files, specially in the `src/` & `t
 In the `src/` folder you will find the `Counter.sol` file, this is the contract you will be working on.
 
 
-
 ### 📌 **Tasks**:
 
-- Add a constructor to the contract, it will be used to initialize the number value. 
+- Add a constructor to the contract, it will be used to initialize the number value.
     - The constructor must take a `uint256` as an argument.
-
-
 - Modify the `increment` function to make it increase the value of `number` by the value passed as an argument.
     - The function must also take a `uint256` as an argument.
-
-  
 - Now test your function by modifying the `test/Counter.t.sol` file, the file must test the `increment` function and the `setNumber` one.
     - You can use the `forge test` command at the root of your project to test your contract.
 
@@ -72,8 +67,8 @@ use it to deploy our contract and interact with it.
 - Start the local blockchain with `anvil`
     - This will start a local blockchain on your computer, and give you some key pairs to interact with it.
 
-> ⚠️ You must not close the terminal where you started the blockchain, you can use it for the whole workshop. 
- 
+> ⚠️ You must not close the terminal where you started the blockchain, you can use it for the whole workshop.
+
 - Deploy your contract on the local blockchain.
     - You can use `forge` to deploy your contract.
 
@@ -119,7 +114,7 @@ transactionIndex        0
 
 ### 📑 **Description**:
 
-The Contract Application Binary Interface (ABI) is the standard way to 
+The Contract Application Binary Interface (ABI) is the standard way to
 interact with contracts in the Ethereum ecosystem,
 both from outside the blockchain and for contract-to-contract interaction.
 Data is encoded according to its type, as described in this specification.
@@ -146,7 +141,7 @@ contract Random {
         return true;
     }
 }
-``` 
+```
 
 
 - Now deploy and interact with the storage of the `random` contract to determine the value of `rand`.
@@ -175,7 +170,7 @@ If it is the right number you should see the following output:
 
 ### 📑 **Description**:
 
-During the first steps you interacted with your local blockchain, but now we will use a public one 🚀 
+During the first steps you interacted with your local blockchain, but now we will use a public one 🚀
 Some test networks are available for you to test your contracts, they are called [testnets](https://ethereum.org/en/developers/docs/networks/).
 In this step we will interact with the [Goerli](https://goerli.net/) testnet.
 We will use [Infura](https://infura.io/)'s nodes to interact with the blockchain. We could also have
@@ -202,13 +197,13 @@ run our own node, but it would take too much time.
 ## Conclusion
 
 Well done! You've accomplished a lot with Foundry, and there is so much more to discover.
-Refer to the [official documentation](https://book.getfoundry.sh/) to deep-dive into it 🔥 
+Refer to the [official documentation](https://book.getfoundry.sh/) to deep-dive into it 🔥
 
 Hope you enjoyed the workshop!
 
 ## Authors
 
-| [<img src="https://github.com/Doozers.png?size=85" width=85><br><sub>Ismael FALL</sub>](https://github.com/Doozers) | 
+| [<img src="https://github.com/Doozers.png?size=85" width=85><br><sub>Ismael FALL</sub>](https://github.com/Doozers) |
 |:------------------------------------------------------------------------------------------------------------:|
 <h2 align=center>
 Organization
@@ -216,21 +211,22 @@ Organization
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 

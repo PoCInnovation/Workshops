@@ -19,14 +19,14 @@ To install [docker](https://www.docker.com/), follow the [tutorial](https://gith
 Amazing! You are now ready to create your Svelte project!
 
 ```shell
-$ npx degit sveltejs/template poc-workshop-svelte-epytodo
+npx degit sveltejs/template poc-workshop-svelte-epytodo
 ```
 
 Install axios dependencies in the project
 
 ```shell
-$ cd poc-workshop-svelte-epytodo
-$ npm install axios
+cd poc-workshop-svelte-epytodo
+npm install axios
 ```
 
 ## 3 - Direnv
@@ -36,9 +36,9 @@ You must install [direnv](https://direnv.net/) to easily use the environment con
 You can install it through the command :
 
 ```shell
-$ curl -sfL https://direnv.net/install.sh | bash # Install direnv
-$ chmod +x direnv # Give execution permission
-$ sudo mv -t /usr/local/bin direnv # Put it in binary
+curl -sfL https://direnv.net/install.sh | bash # Install direnv
+chmod +x direnv # Give execution permission
+sudo mv -t /usr/local/bin direnv # Put it in binary
 ```
 
 > 💡 You can follow the [official documentation](https://direnv.net/docs/installation.html) to install the binary.
@@ -59,7 +59,7 @@ eval "$(direnv hook bash)"
 
 ⚠️ Don't forget to download the [source](./source/) directory and move those files in your current directory.
 
-#### Run the codebase
+### Run the codebase
 
 ```shell
 $ direnv allow
@@ -71,12 +71,12 @@ $ ls -a
 $ docker-compose up -d
 ```
 
-💡 The API should run on http://localhost:8000/
+💡 The API should run on <http://localhost:8000/>
 
-#### Stop codebase
+### Stop codebase
 
 ```shell
-$ docker-compose down -v
+docker-compose down -v
 ```
 
 You don't need to do more, just start the workshop 🚀

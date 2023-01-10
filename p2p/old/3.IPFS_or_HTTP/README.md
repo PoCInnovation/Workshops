@@ -1,6 +1,6 @@
 # 3. Learn the differences between HTTP and IPFS !
 
-##  💫 Table of contents
+## 💫 Table of contents
 * [Step 0 - Setup](README.md#🔧-step-0---setup)
 * [Step 1 - HTTP](README.md#step-1---http)
     * [Discover the basics](README.md#✏️-10-discover-the-basics)
@@ -88,7 +88,7 @@ website and download the song.
 By the way, you can look for any other genres of music you prefer on this website, it is free and open source. For the example, we are going to
 stick with this song.
 Go back to [http://0.0.0.0:8000/](http://0.0.0.0:8000/), scroll down and click on the button `upload a song`.
-Fill the form correctly and validates it. 
+Fill the form correctly and validates it.
 
 You can find the code of the form in `musichare/forms.py`, and the associate model object in
 `musicshare/models.py`.
@@ -115,7 +115,7 @@ that the server is ok to give us that page from the `/` route, and it has been d
 
 `POST` is another **HTTP method** than `GET`. When you fill the form earlier, it was **you** that was giving the server
 some information :that is the main difference between `POST` and `GET`.
- 
+
 > 💡 Learn more about HTTP methods [here](https://www.restapitutorial.com/lessons/httpmethods.html).
 
 Now, look at our `media/static` folder : you have the mp3 file you just downloaded in here !
@@ -136,7 +136,7 @@ to everything by that data’s [hash](https://docs.ipfs.io/concepts/hashing/#has
 The idea is that if you want to access a particular page from your browser, IPFS will ask the entire network, “does anyone
 have the data that corresponds to this hash?” A node on IPFS that contains the corresponding hash will return the data, allowing you to access it from anywhere (and potentially even offline).
 
-If this is not enough clear for you, I strongly advise you to refer to this [vidéo (Simply Explained IPFS)](https://www.youtube.com/watch?v=5Uj6uR3fp-U).
+If this is not enough clear for you, I strongly advise you to refer to this [video (Simply Explained IPFS)](https://www.youtube.com/watch?v=5Uj6uR3fp-U).
 
 ### 🕸️ 2.0 Improve the storage
 
@@ -148,7 +148,7 @@ Instead of having the file locally, let's have its corresponding hash in our dat
    Please use port `5001` for the connection.
 3. Open `musicshare/templates/musicshare/index.html` to line `179`
    and make sure the hash of the song appears.
-   
+
 <details>
 <summary>Some Trouble with IPFS API ?</summary>
     Here is some links that could help you:
@@ -182,7 +182,7 @@ then you deleted it, you will be able to retrieve it from its node !
 
 ## Authors
 
-| [<img src="https://github.com/NaadiQmmr.png?size=85" width=85><br><sub>Adina Cazalens</sub>](https://github.com/NaadiQmmr) | 
+| [<img src="https://github.com/NaadiQmmr.png?size=85" width=85><br><sub>Adina Cazalens</sub>](https://github.com/NaadiQmmr) |
 | :---: |
 <h2 align=center>
 Organization
@@ -190,21 +190,22 @@ Organization
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 

@@ -1,11 +1,13 @@
-# Exercice 1 - Password
+# Assembly x86 & Reverse Engineering - Solutions
+
+## Exercise 1 - Password
 
 The password is a string in .rdata section. "cr4ckm3"
 The program does a strncmp with that string and argv[1].
 
-# Exercice 2 - Good luck
+## Exercise 2 - Good luck
 
-1. in .rdata section, find "aVeryCorrect" string.
+1. in the `.rdata` section, find "aVeryCorrect" string.
 2. Go to that string's usage place
 
 Explanation:
@@ -18,7 +20,7 @@ It compares that number * 5 with the value 0x181A.
 
 Answer: "1234"
 
-# Exercice 3 - Julia
+## Exercise 3 - Julia
 
 Find the main function (ex: use the rdata section)
 
@@ -29,18 +31,13 @@ The program does a cesar code shift on argv[1] and compare the result with "VIMw
 
 [Useful](https://www.dcode.fr/chiffre-cesar)
 
-# Bonus - minesweeper
+## Bonus - minesweeper
 
 Modify the function that insert mines in the map on start.
 
 1. Search where the extern rand "function" is used.
 2. Go the parent "function"
-3. the program put the mine on line 010036FA (.text)
+3. the program put the mine on line `010036FA` (.text): `010036fa 80 08 80        OR         byte ptr [EAX], 0x80`
+4. Type in XOR instead of OR, and 81 instead of 80: `010036fa 80 08 80        XOR        byte ptr [EAX], 0x81`
 
-`010036fa 80 08 80        OR         byte ptr [EAX], 0x80`
-
-5. Type in XOR instead of OR, and 81 instead of 80.
-
-`010036fa 80 08 80        XOR        byte ptr [EAX], 0x81`
-
-More informations : [link](https://www.begin.re/hacking-minesweeper)
+More information: [link](https://www.begin.re/hacking-minesweeper)

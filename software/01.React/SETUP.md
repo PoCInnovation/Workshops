@@ -14,7 +14,8 @@ To install node:
 - Ubuntu: `sudo apt install nodejs npm -y`
 
 Then `sudo npm install -g npx`
-<br/><br/>
+
+
 ## Project setup
 
 First off, create your project with npx:

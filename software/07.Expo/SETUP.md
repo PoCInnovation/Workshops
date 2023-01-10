@@ -29,7 +29,7 @@ It will create a basic repo based on a template with several pages.
 
 The architecture of the project looks like this:
 
-```
+```text
 expo-workshop-poc
 ├── app.json           <-- config file
 ├── App.tsx            <-- app entrypoint, equivalent to a main

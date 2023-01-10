@@ -35,7 +35,7 @@ Afterwards you can follow the official [documentation](https://github.com/gin-go
 
 We will be using `postman` to test out our routes.
 
-- [Postman](https://www.postman.com/downloads/)ll instantiate 
+- [Postman](https://www.postman.com/downloads/)ll instantiate
 ⚠️ you should not install it with snap because it's not updated on this package manager. ⚠️
 
 

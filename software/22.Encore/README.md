@@ -29,7 +29,7 @@ First, create a new folder named `discovery` and create the file `discovery.go` 
 
 We are going to create **3** endpoints:
 
-##### 1 - URLParam
+### 1 - URLParam
 
 That endpoint aim to retrieve the parameter from the url.
 
@@ -49,7 +49,7 @@ curl http://localhost:4000/url/test
 
 ```
 
-##### 2 - QueryParam
+### 2 - QueryParam
 
 This one aim to retrieve the parameter from query parameters
 
@@ -71,7 +71,7 @@ curl http://localhost:4000/query\?foo\=test\&bar\=3
 }
 ```
 
-##### 3 - BodyParam
+### 3 - BodyParam
 
 The last one aim to retrieve values from the body.
 
@@ -109,7 +109,7 @@ This way, we got independent services that share the same database to simplify d
 
 > deliverymen will be protected with an authentication process explained further.
 
-#### Database
+### Database
 
 First, create a new folder named `delivery`, this is where we will code our `delivery-api`.
 
@@ -194,7 +194,7 @@ Here we are exporting a client from [sqlx](https://pkg.go.dev/github.com/jmoiron
 
 💡 **In this workshop, you will need to write raw SQL queries to interact with the database. To help you, look at that [little cheatsheet](./help/requests.sql) with all queries involved.**
 
-#### Packet's time
+### Packet's time
 
 Now we will create our endpoints to manage our packets.
 
@@ -227,7 +227,7 @@ Your endpoint must be public and reachable with a request `POST` on `/packet`
 
 Perfect, now verify your endpoint with the [awesome encore dashboard](https://encore.dev/docs/observability/dev-dash) created when you run `encore run`.
 
-#### Bonus
+### Bonus
 
 If you are a brave developer, you can continue with `Update` and `Delete`. You got the logic so it shouldn't be a big deal for you now 🚀
 
@@ -258,7 +258,7 @@ Your `database` service should now have the following architecture.
 
 Now, create a new `deliveryman` service at the root of your folder `delivery` and a file that will retrieve your database client.
 
-#### Our first employee
+### Our first employee
 
 Let's take a look at the `deliveryman` table in the database
 
@@ -282,7 +282,7 @@ In this one, write a function `Add` that will take a `CreateDTO` as parameter th
 Then, add it to your database and return a message of confirmation.<br>
 Your endpoint must be reachable with a request `POST` on path `/deliveryman`
 
-#### What's the passphrase sir ?
+### What's the passphrase sir ?
 
 If you don't notice, there was no instruction about the kind of endpoint your `Add` function must be, is it public, private or auth ?<br>
 We don't really want to allow anyone adding an employee so we should be able to authenticate the one that trying to create a resource on our service.<br>
@@ -305,7 +305,7 @@ Now you can add the keyword `auth` to the function `Add`.
 
 Great, your endpoint is protected ! Test it with the dashboard.
 
-#### Manage deliverymen
+### Manage deliverymen
 
 You are now ready to complete other function.
 
@@ -323,7 +323,7 @@ We have deliverymen and packets, the only missing part is the `delivery` service
 
 Create it in the `delivery` folder (*yes they are nested*).
 
-#### Send & receive
+### Send & receive
 
 As usual, retrieve your database client in a file named `delivery.go`.
 
@@ -340,7 +340,7 @@ Those two functions must be public and reachable with a request `POST`. You are 
 
 > 💡 You can also write some error handling about status. For example, a deliveryman with the status `working` can not handle an other delivery request.
 
-#### Who's the owner
+### Who's the owner
 
 > 💡 This step is a bonus.
 
@@ -415,11 +415,11 @@ Congrats! You finished that workshop and build your own delivery API with [Encor
 - [Discover Encore community](https://encore.dev/docs/community)
 - [Encore git repository](https://github.com/encoredev/encore)
 - [Deploy in production](https://encore.dev/docs/deploy/infra)
-- [Monitor your application](https://encore.dev/docs/observability/monitoring) 
+- [Monitor your application](https://encore.dev/docs/observability/monitoring)
 
 ## Authors
 
-| [<img src="https://github.com/TomChv.png?size=85" width=85><br><sub>Tom Chauveau</sub>](https://github.com/TomChv) | 
+| [<img src="https://github.com/TomChv.png?size=85" width=85><br><sub>Tom Chauveau</sub>](https://github.com/TomChv) |
 | :---: |
 <h2 align=center>
 Organization
@@ -427,21 +427,22 @@ Organization
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 

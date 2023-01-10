@@ -6,7 +6,7 @@ You'll learn the base of the CI thanks to github actions, but also some good pra
 
 ## Step 0: Put the bases
 
-We will create a CI for a simple Epitech project: do-op. We have unit-tests and functional tests. 
+We will create a CI for a simple Epitech project: do-op. We have unit-tests and functional tests.
 
 The finality is to execute those tests on `pull_request` from `dev` to `master`. It's an easy way to verify the code evaluated by "Marvin".
 
@@ -16,9 +16,9 @@ In order to setup your workflow, in your repository:
   - checkout in branch `dev`
   - create a directory `.github/workflows`
 
-> Commonly, `.github` folder also contains an `assets` directory that stores your png used in README ect, another folder: `ISSUE_TEMPLATE` can be useful to setup template of bug_report or feature... 
+> Commonly, `.github` folder also contains an `assets` directory that stores your png used in README ect, another folder: `ISSUE_TEMPLATE` can be useful to setup template of bug_report or feature...
 
-Thanks to the `Makefile`, your objective is to run unit-tests and functional tests in the `epitest docker image`. 
+Thanks to the `Makefile`, your objective is to run unit-tests and functional tests in the `epitest docker image`.
 We will create the same behavior in your CI so it's cool to understand steps first.
 
 You can create a container thanks to the command: `sudo docker run --rm -it -v $PWD:/home/ -w /home epitechcontent/epitest-docker /bin/zsh`. It will setup a shell in the container.
@@ -33,7 +33,7 @@ Your CI will do the same things, but automatically in a [github runner](https://
 
 Now it's time ! To begin with, you'll do a simple action by following these steps
 
-##### Setup workflow
+### Setup workflow
 
 Create a file named `test.yaml` in the folder `.github/workflows`
 
@@ -41,8 +41,8 @@ Write a github Action with the following properties:
   - name: Tests
   - trigger event: `push` on branches `dev` and `main`
   - one job called `hello-world` which run on `ubuntu-20.04`
-    
-##### First step
+
+### First step
 
 Add a step called `Say hello world` which will execute the bash command "echo Welcome to the Github Actions workshop !".
 Push your work and check on `https://github.com/<your-github-username>/<your-repository>/actions`.
@@ -60,7 +60,7 @@ Add a new job called `unit-test` composed of **3** steps:
   - Run unit-tests
   - Run coverage
 
-Use command from `step 0` to run tests 
+Use command from `step 0` to run tests
 
 ⚠️ Your job must run on a container that support Criterion, use the Epitech image
 
@@ -94,12 +94,12 @@ You should do **3** steps:
   - Upload artifacts
 
 You can use steps from the previous exercise to help you.
- 
+
 In order to win time, your CI must now be triggered on `pull_request` on branches `dev` or `master`.
 You must also protect your branch `master` from merge if the `pull request` isn't approved by peer (it's really useful when you work in group)
- 
+
 Congratulation, you have setup a clean workflow to do your Epitech project, us this to keep your project away from bad surprise.
- 
+
 ## To go further
 
 You've learned how make a continuous integration (CI). But remember, there is also continuous development !
@@ -128,21 +128,22 @@ Organization
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 

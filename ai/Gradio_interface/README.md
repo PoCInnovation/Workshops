@@ -1,6 +1,6 @@
-<p align="center"><img src="./images/logo.svg" alt="Gradio logo"></p>
+# Gradio interface 📱
 
-## Gradio interface 📱
+<img src="./images/logo.svg" alt="Gradio logo">
 
 Discover Gradio, a tool to create interfaces for your artificial intelligence applications.
 
@@ -25,7 +25,7 @@ You will:
 For this workshop you will not use a jupyter notebook. You will create your own application.
 You will follow this architecture to start and then you are free to change it to make your application grow.
 
-```
+```text
 Folder: app
 
 ├── my_app.py
@@ -87,7 +87,7 @@ For automatic download, you will to set the `download` parameter to `True`.
 
 Create a class called `model` that will contain the model of your application in the `neural_network.py` file in `app` folder.
 
-For your parameters, you will know this informations:
+For your parameters, you will know this information:
 - Size of image: 32x32x3
 - Start with 3 channels
 - Use a kernel size of 5
@@ -249,21 +249,22 @@ Organization
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 

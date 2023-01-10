@@ -11,8 +11,8 @@ Today, we're gonna see the basics of making a
 
 In order to do this, we're going to use a design software :
 [Easyeda](https://easyeda.com/). It is a proprietary software that makes design
-easy. There are alternative software bu Easyeda is the only one to provide a
-complete environment, from the componant library to the actual purchase of the
+easy. There are alternative software but Easyeda is the only one to provide a
+complete environment, from the component library to the actual purchase of the
 designed board.
 
 ### PCB alternatives
@@ -31,7 +31,7 @@ There are different ways to make a time-resistant electronic circuit :
   breadboard is made.
 
 - [PCB](https://en.wikipedia.org/wiki/Printed_circuit_board):
-  the most professionnal way, and the most adapted to automated production,
+  the most professional way, and the most adapted to automated production,
   Unlike the other 2 solutions, it is the only one that makes miniaturization
   possible thanks to the use of surface-mounted components.
 
@@ -41,15 +41,15 @@ Most electrical components are available under different formats :
 
 - [Through-hole](https://en.wikipedia.org/wiki/Through-hole_technology)
   Every component you might have used until now is part of this category, for
-  exemple, a reistor.
-  ![](../.3d_model/resistors-on-green-pcb-through-hole.png "Through hole resistor shema")
+  example, a resistor.
+  ![](../.3d_model/resistors-on-green-pcb-through-hole.png "Through hole resistor schema")
   In order to use them the board you are using must be perforated.
 
 - [SMD/SMT](https://en.wikipedia.org/wiki/Surface-mount_technology):
   This component category is surface-mounted : no need to drill the boards, which
   makes it possible de reduce manufacturing costs.
   Another advantage of this category is the size of the components, way smaller
-  than the others. For exemple a resistor. ![](../.3d_model/SMT_sizes.png)
+  than the others. For example a resistor. ![](../.3d_model/SMT_sizes.png)
 
 ## Easyeda
 
@@ -59,16 +59,16 @@ Design is done in 2 steps : The electrical schematics and then the routing.
 
 ### 1.1 Schematics
 
-### 📑 Description: 
+#### 📑 Description:
 
 For this exercise, you are gonna use an existing project and complete it to
-familiarize yourself with the editor. You can find it in the ressources folder
+familiarize yourself with the editor. You can find it in the resources folder
 
 
-### 📌 Tasks:
+#### 📌 Tasks:
 
-This project contains several buttons and leds.
-You'll need to connect them in the following way :
+This project contains several buttons and LEDs.
+You'll need to connect them in the following way:
 
 SW1 -> D7
 
@@ -84,23 +84,23 @@ you can move every component around to link them in the best possible way.
 
 ### 1.2 Routing
 
-### 📑 Description: 
+#### 📑 Description:
 
 Now that the schematics are done, we'll get to routing.
 Go to Design -> Convert schematic to PCB
 
 A new page opens up, use the default parameters.
 
-### 📌 Tasks:
+#### 📌 Tasks:
 
 Create the board in such a way that the arduino board's usb port in facing the
 right side and the led is on top, with the buttons underneath.
 
-## 🎉 Congratulation !
+🎉 Congratulation !
 
 ## 2. Medium PCB
 
-### 📑 Description: 
+### 📑 Description:
 
 Now that you've created your first pcb using components I pre-selected, you'll
 enter the most complicated part. In a real project, you need to select
@@ -122,21 +122,21 @@ the future.
 
 ### 3. Design a universal remote
 
-### 📑 Description: 
+### 📑 Description:
 
 The basics : For a remote, you need a controller, and we'll use an ESP32 board
 here.
 Any electronics component needs passive components in order to work (resistor,
-capacitor, inductor etc...). All these informations are in the component's
+capacitor, inductor etc...). All these information are in the component's
 datasheet. They are available directly on the JCLBCP website (even if you might
 find yourself literally reading chinese sometimes).
 
 ### 3.1 Read Datasheet
 
-### 📌 Tasks:
+#### 📌 Tasks:
 
-Open the ESP32 datasheet and find the missing informations you need for a
-functionnal ESP32 board. you'll need to add the missing components yourself from
+Open the ESP32 datasheet and find the missing information you need for a
+functional ESP32 board. you'll need to add the missing components yourself from
 the JLCBCP library.
 
 <details>
@@ -161,7 +161,7 @@ validate your design.
 
 ### 3.2 Routing ESP32
 
-### 📌 Tasks:
+#### 📌 Tasks:
 
 There are no additional constraints for routing. But don't forget about the
 constraints of the components you've been using so far, like the USB port and
@@ -171,14 +171,14 @@ constraints of the components you've been using so far, like the USB port and
 
 ### 4.1 Add some buttons
 
-### 📑 Description: 
+#### 📑 Description:
 
 The ESP32 basics are ready, but you'll admit that it doesn't look too much like
 a remote for now. We'll fix this right now by adding some buttons.
 
-### 📌 Tasks:
+#### 📌 Tasks:
 
-I need you to gather at least :
+I need you to gather at least:
 
 - 2 2-axis analog joysticks
 - 2 on/off switches
@@ -188,14 +188,14 @@ You can add anything else you want, but don't waste too much time
 
 ### 4.2 Arrange the shape
 
-### 📌 Tasks:
+#### 📌 Tasks:
 
 Your PCB must be shaped like a video game controller, and the switches must be
 placed in a way that makes sense on a controller.
 
 ### 4.3 Add chips
 
-### 📌 Tasks:
+#### 📌 Tasks:
 
 Now you're going to add other chips :
 
@@ -208,7 +208,7 @@ connect them to the ESP
 
 ### 4.4 Add OLED screen
 
-### 📌 Tasks:
+#### 📌 Tasks:
 
 We'll be adding an OLED display (C90547), to display all sorts of information
 and configuration.
@@ -217,32 +217,32 @@ But a screen means another control system :
 
 Don't forget to update the routing with these new components.
 
-### 4.5 Autonome remote
+### 4.5 Autonomous remote
 
-### 📑 Description: 
+#### 📑 Description:
 
 Up to this point, your remote needed to be plugged-in to work, not very
 practical.
 
-### 📌 Tasks:
+#### 📌 Tasks:
 
-Here's a solution : add a battery !
+Here's a solution: add a battery!
 
 Don't forget to add a tension regulator, a charging system and a level indicator
 
-## 🎉 Congratulation ! 🎉
+🎉 Congratulation ! 🎉
 
 ### Bonus
 
 How about going farther ?
 
-#### Bonus 1 : Create 3D Modelling
+#### Bonus 1: Create 3D Modelling
 
 You're right, holding a naked pcb isn't the most ergonomic thing. What if you
 used what you learned earlier today in this project ?
 I'm asking you to create a 3D model of a case for your remote.
 
-#### Bonus 2 : Change the usage
+#### Bonus 2: Change the usage
 
 At the beginning, I made you use an ESP32-S2. This microcontroller has a few
 advantages : it carries wifi and bluetooth, but it also has a complete 2.0
@@ -253,7 +253,7 @@ useful to you here.
 
 ## Conclusion
 
-Congratulations !  🎉
+Congratulations!  🎉
 You made your very own PCB.
 You can even order your first creation directly from your schematics.
 
@@ -266,7 +266,7 @@ check out my own version.
 
 ## Authors
 
-| [<img src="https://github.com/Thezap.png?size=85" width=85><br><sub>Théo Zapata</sub>](https://github.com/Thezap) | 
+| [<img src="https://github.com/Thezap.png?size=85" width=85><br><sub>Théo Zapata</sub>](https://github.com/Thezap) |
 | :---: |
 <h2 align=center>
 Organization
@@ -274,21 +274,22 @@ Organization
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 

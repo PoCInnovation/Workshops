@@ -21,16 +21,16 @@ Then tip the following command:
 
 ```shell
 # Setup
-$ mkdir -p poc-workshop-neo4j # Create a new directory
-$ cd poc-workshop-neo4j # Go in
+mkdir -p poc-workshop-neo4j # Create a new directory
+cd poc-workshop-neo4j # Go in
 
 # Installation
-$ mv -t . ~/Downloads/source.zip # Move source in the directory
-$ unzip source.zip # Extract source
-$ rm source.zip # Remove zip
+mv -t . ~/Downloads/source.zip # Move source in the directory
+unzip source.zip # Extract source
+rm source.zip # Remove zip
 ```
 
-Your directory should have the following architecture 
+Your directory should have the following architecture
 ```shell
 $ tree -a
 ├── .envrc               # Environment
@@ -55,9 +55,9 @@ You must install [direnv](https://direnv.net/) to easily use the environment con
 You can install it through the command:
 
 ```shell
-$ curl -sfL https://direnv.net/install.sh | bash # Install direnv
-$ chmod +x direnv # Give execution permission
-$ sudo mv -t /usr/local/bin direnv # Put it in binary
+curl -sfL https://direnv.net/install.sh | bash # Install direnv
+chmod +x direnv # Give execution permission
+sudo mv -t /usr/local/bin direnv # Put it in binary
 ```
 
 > 💡 You can follow the [official documentation](https://direnv.net/docs/installation.html) to install the binary.
@@ -76,7 +76,7 @@ Don't forget to reload your shell to enable the hook.
 
 ## 4. Start
 
-#### Load the environment
+### Load the environment
 
 ```shell
 $ direnv allow
@@ -84,13 +84,13 @@ direnv: loading ~/poc-workshop-neo4j/.envrc
 direnv: export +NEO4J_HOST +NEO4J_PASSWORD +NEO4J_PORT +NEO4J_USER
 ```
 
-#### Install dependencies
+### Install dependencies
 
-```
+```shell
 npm install
 ```
 
-#### Start the program
+### Start the program
 
 ```shell
 $ npm run dev
@@ -105,7 +105,7 @@ Actual configuration:
 
 ```
 
-#### Run test
+### Run test
 
 ```shell
 $ npm run test

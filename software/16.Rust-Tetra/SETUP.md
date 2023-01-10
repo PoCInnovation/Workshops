@@ -7,7 +7,7 @@ Please make sure you have the following programs installed:
  - [Tetra](https://github.com/17cupsofcoffee/tetra): A simple 2D game framework written in Rust.
 
 ### Install Rust:
- - Under all systems: 
+ - Under all systems:
 ```shell
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```

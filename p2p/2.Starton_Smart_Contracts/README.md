@@ -15,9 +15,9 @@ Let's create your first contract in [Solidity](https://docs.soliditylang.org/en/
 > 💡 You can use the online IDE [Remix](https://remix.ethereum.org/) which is really useful to develop contracts for the Ethereum blockchain.
 
 Your objective is to create a contract named `Task1`:
-- It should have an unsigned int variable named num and a function `incrAndRetrieve()` that increment num and returns its new value. 
-- It should also have a function named `worldify` that takes a `string` as an argument and return a `string` that is equal to your parameter followed by ` world!` like this: `worldify("Hello") => Hello world!`
- 
+- It should have an unsigned int variable named num and a function `incrAndRetrieve()` that increment num and returns its new value.
+- It should also have a function named `worldify` that takes a `string` as an argument and return a `string` that is equal to your parameter followed by " world!" like this: `worldify("Hello") => Hello world!`
+
 <details>
     <summary>How to easily test your contract 🤔</summary>
     <br>
@@ -47,7 +47,7 @@ If your request is successful, you should have a new contract in the **Interact*
 You successfully deployed a contract, that's great 🎉  
 In a real-world scenario though, you might want to interact with a contract that is already deployed by you or someone else.  
 You need to import a contract in Starton using a single information:
-```
+```text
 0xE39aC98F23333589558f081870c6Ac8F0bdd6B1c
 ```
 
@@ -111,21 +111,22 @@ Organization
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 

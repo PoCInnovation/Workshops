@@ -1,6 +1,6 @@
 # Workshop 7 - Mobile app with Expo
 
-✔️ Learn the basics of [React Native](https://reactnative.dev/) 
+✔️ Learn the basics of [React Native](https://reactnative.dev/)
 
 ✔️ Discover [Expo](https://expo.dev/) to easily develop a mobile app
 
@@ -27,7 +27,6 @@ Now that it's clear, time to work! The template repo is quite large, so let's di
 
 - Which `function` opens the web browser on the `Tab One` screen
 - What is the main navigator and what is the navigator describing the bottom bar
-
 
 
 ## Step 1: Basic todolist
@@ -87,7 +86,6 @@ Some precisions:
 > The [map](https://reactjs.org/docs/lists-and-keys.html) function will be very useful to iterate over our array
 
 
-
 ## Step 2: Online loading
 
 Now that we dynamically display our tasks in a single component that loops over data, let's fetch this data online rather than just writing some!
@@ -116,7 +114,6 @@ and call `getTasks` on your list component (before the return), this should prin
 - Don't forget to use the `completed` variable
 - The data fetching is asynchronous, you won't have data while it's loading, so `taskList` will be called with `React.useState<TodoDto[] | null>(null);`
 - You'll need the [useEffect hook](https://reactjs.org/docs/hooks-effect.html) to execute actions when the component is created (here, the action will be to load data)
-
 
 
 ## Step 3: QR code scanning
@@ -155,25 +152,25 @@ Our camera works great, but we cannot even do basic stuff such as taking picture
 - A **trigger** button that will take a picture and save it to the camera roll
 
 > You'll need to use [React refs](https://reactjs.org/docs/hooks-reference.html#useref) to take a picture
-> Your IDE might show an error when using the `ref` attribute, you can ignore it as it shouldn't block the compilation 
+> Your IDE might show an error when using the `ref` attribute, you can ignore it as it shouldn't block the compilation
 
 ## Bonus
 
 Here is a list of possible features you could add to your project
 
-**Easy**
+### Easy
 
 - Add styles to your todolist! Use some CSS
 - Add a [pull to refresh](https://reactnative.dev/docs/scrollview#refreshcontrol) option to your `ScrollView`s
 - Use a [Flatlist](https://reactnative.dev/docs/flatlist) instead of a `ScrollView` to have the ability to load data when the end is reached (and also have the ability to pull to refresh)
 
-**Medium**
+### Medium
 
 - Add new pages to the bottom tab navigation
 - Create a button that [navigates to another screen](https://reactnavigation.org/docs/use-navigation) when pressed: `navigation.navigate("SCREEN_NAME")`
 - Try changing the bottom tab navigation icons
 
-**Hard**
+### Hard
 
 - Create an Authentication process with a context:
   - Create another **navigator** with a single screen: the app landing screen
@@ -186,28 +183,29 @@ Here is a list of possible features you could add to your project
 ## Authors
 
 | [<img src="https://github.com/PaulMonnery.png?size=85" width=85><br><sub>Paul Monnery</sub>](https://github.com/PaulMonnery)
-| :---: | 
+| :---: |
 <h2 align=center>
 Organization
 </h2>
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 

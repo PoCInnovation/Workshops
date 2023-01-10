@@ -9,7 +9,7 @@
 
 ## Step 0: Initialization
 
-In this workshop, you'll lean how to use Flask to easily create a REST API performing operations on a database. 
+In this workshop, you'll lean how to use Flask to easily create a REST API performing operations on a database.
 
 > 💡 A quick [documentation](https://www.ibm.com/cloud/learn/rest-apis) about REST API.
 
@@ -17,7 +17,7 @@ All the required information to install the workshop's dependencies are given in
 
 ## Step 1: Create your first endpoint 🚀
 
-Now that everything is installed, let's create a basic Flask application. 
+Now that everything is installed, let's create a basic Flask application.
 > Don't worry, Flask is designed for a quick and simple start 😉
 
 - Create a file `app.py`, in which you will initialize Flask with a basic route:
@@ -25,10 +25,10 @@ Now that everything is installed, let's create a basic Flask application.
     - Use the `GET` method only
     - Respond with `Hello world`
 
-To test your route, you can use `flask run` to launch the server and open your browser at http://localhost:5000.
+To test your route, you can use `flask run` to launch the server and open your browser at <http://localhost:5000>.
 
 > 💡 Several options can be provided to `flask run` to customize it's behavior (the debug mode can be useful to reload the server when your file changes).  
-> You can also run your app from your Python file with specific parameters and launch it with `python app.py` 😉 
+> You can also run your app from your Python file with specific parameters and launch it with `python app.py` 😉
 
 ## Step 2: Register 👨
 
@@ -103,21 +103,22 @@ Organization
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 

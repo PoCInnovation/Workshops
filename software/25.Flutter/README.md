@@ -147,8 +147,8 @@ Let's take a look of how to do a list with Flutter. You have multiple choices, h
 - [List.generate](https://api.flutter.dev/flutter/dart-core/List/List.generate.html)
 
 
-    As there is no example with `widget` in the doc, here is one: 
-    
+    As there is no example with `widget` in the doc, here is one:
+
     ```dart
     Column(
         children: List.generate(
@@ -173,8 +173,8 @@ The goal of this step is to create a class that will define the attributes of a 
 
 Your todo class needs to contain the following attributes:
   
-  - A required string `title`
-  - An optional string `description`
+- A required string `title`
+- An optional string `description`
 
 Then you have to replace the list of string `_arr` that you pass as parameters of your `ToDoList` component by:
 
@@ -240,7 +240,7 @@ Now that you can navigate between your home page and your todo creation page, yo
 
   - `TextField` for the title of todo.
   - `TextField` for the description of todo.
-  - A create `Button` to [pop](https://docs.flutter.dev/cookbook/navigation/returning-data) the todo to the page pusher. 
+  - A create `Button` to [pop](https://docs.flutter.dev/cookbook/navigation/returning-data) the todo to the page pusher.
   - A cancel `Button` to close the page.
 
 ## Bonus
@@ -265,21 +265,22 @@ Organization
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 

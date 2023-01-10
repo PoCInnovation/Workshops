@@ -15,7 +15,7 @@ You can do `rm source.zip`, you don't need it anymore.
 
 You should now have the following architecture if you run `tree` command.
 
-```
+```text
 .
 ├── functional-test.sh
 ├── include
@@ -32,4 +32,4 @@ You should now have the following architecture if you run `tree` command.
 
 Push this on branch `master`.
 
-Congratulation, you are ready to start the workshop !
+Congratulation, you are ready to start the workshop!

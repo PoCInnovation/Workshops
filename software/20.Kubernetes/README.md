@@ -38,25 +38,25 @@ For example, `kubectl explain pod` will help you figure out the syntax for defin
 
 > 💡 Check out the links in the **Resources** section for guidance.
 
-If you have completed this step successfully, you should be able to see your Pod when running the following command.
+If you have completed this step successfully, you should be able to see your Pod when running the following command:
 
-```
+```shell
 kubectl get pods
 ```
 
-You can also access the output of your Pod through the following command.
+You can also access the output of your Pod through the following command:
 
-```
+```shell
 kubectl logs pod/my-pod
 ```
 
-The output of your Pod should match the output of the following command.
+The output of your Pod should match the output of this command:
 
-```
+```shell
 docker run hello-world
 ```
 
-**Resources**
+### Resources
 
 - `kubectl explain pod.*`
 - [Kubernetes cheat sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
@@ -93,11 +93,11 @@ Once your deployments YAML are valid, **apply** them with the `kubectl` command.
 
 If you have completed this step successfully, you should be able to see both your deployments and their associated pods when running the following command.
 
-```
+```shell
 kubectl get all
 ```
 
-**Resources**
+### Resources
 
 - `kubectl explain deployment.*`
 - [Deployment documentation](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
@@ -106,21 +106,21 @@ kubectl get all
 
 You might have noticed, that when you run `kubectl get all`, the pod associated to the `server-deployment` is in a state of `CrashLoopBackOff` and is said to have restarted multiple times.
 
-```
+```text
 ...
 NAME                                    READY   STATUS             RESTARTS   AGE
 pod/server-deployment-5ddbdc478-qqcwr   0/1     CrashLoopBackOff   4          115s
 ...
 ```
 
-If we investigate the issue by inspecting the deployment's logs  (`kubectl logs deployment.apps/server-deployment`)  we get the following output.
+If we investigate the issue by inspecting the deployment's logs (`kubectl logs deployment.apps/server-deployment`) we get the following output.
 
-```
+```text
 panic: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongo-service:27017, Type: Unknown, Average RTT: 0, Last error: connection() error occurred during connection handshake: dial tcp: lookup mongo-service on 10.96.0.10:53: server misbehaving }, ] }
 
 goroutine 1 [running]:
 gokube/models.init.0()
-	/app/models/db.go:26 +0x2d4
+    /app/models/db.go:26 +0x2d4
 ```
 
 Weird! The server application is telling us it cannot connect to the Mongo database.
@@ -144,7 +144,7 @@ Once it's done, apply all your changes and run `kubectl get all`. Your deploymen
 
 You can inspect the `server-deployment`'s logs to make sure everything is okay.
 
-**Resources**
+### Resources
 
 - `kubectl explain service.*`
 - [Service documentation](https://kubernetes.io/docs/concepts/services-networking/service/)
@@ -175,19 +175,19 @@ To do so we have to send an HTTP request to the web server.
 
 To access the web server, you need to forward the API port. The following command will link the port `3000` of your localhost to the port `3000` of the `server-deployment`.
 
-```
+```shell
 kubectl port-forward deployments.apps/server-deployment 3000:3000
 ```
 
 In another terminal, you can then send a request to create a new post in the database using the following command.
 
-```
+```shell
 curl --data '{"title":"A simple post","body":"Lorem ipsum dolor sit amet"}' -i localhost:3000/posts
 ```
 
 You should receive an `OK` response from the server like so:
 
-```
+```text
 HTTP/1.1 201 Created
 Content-Type: application/json; charset=utf-8
 Date: Wed, 25 Aug 2021 09:49:13 GMT
@@ -198,13 +198,13 @@ Content-Length: 105
 
 Now make a request to see all the posts.
 
-```
+```shell
 curl -i localhost:3000/posts
 ```
 
 You should see your post appear in the output.
 
-```
+```text
 HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8
 Date: Wed, 25 Aug 2021 09:55:30 GMT
@@ -215,9 +215,9 @@ Content-Length: 105
 
 Now delete the `mongo-deployment` and `server-deployment` using `kubectl`. Once that's done, your database should be gone. Now you must recreate your `mongo-deployment` and `server-deployment` using `kubectl apply`. Don't forget to re-forward the port of the `server-deployment`!
 
-We simulated a crash of your application.  If your `PersistentVolumeClaim` works, you should still be able to see your post when running the following command.
+We simulated a crash of your application. If your `PersistentVolumeClaim` works, you should still be able to see your post when running the following command.
 
-```
+```shell
 curl -i localhost:3000/posts
 ```
 
@@ -231,7 +231,7 @@ You can also play around with tools like [helm](https://helm.sh/), [rancher](htt
 
 ## Authors
 
-| [<img src="https://github.com/rojas-diego.png?size=85" width=85><br><sub>Diego Rojas</sub>](https://github.com/rojas-diego) | 
+| [<img src="https://github.com/rojas-diego.png?size=85" width=85><br><sub>Diego Rojas</sub>](https://github.com/rojas-diego) |
 | :---: |
 <h2 align=center>
 Organization
@@ -239,21 +239,22 @@ Organization
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 

@@ -10,7 +10,7 @@
 
 ## Step 0: Initialization
 
-The goal of this workshop is to create a [Kanban-like](https://www.digite.com/kanban/what-is-kanban/) application using the React library in Typescript. 
+The goal of this workshop is to create a [Kanban-like](https://www.digite.com/kanban/what-is-kanban/) application using the React library in Typescript.
 
 [React](https://github.com/facebook/react) is an open-source library created at Facebook to build User Interfaces. It is widely used because of the high performance it offers with its [Virtual DOM](https://reactjs.org/docs/faq-internals.html#what-is-the-virtual-dom), [reusable components](https://reactjs.org/docs/components-and-props.html) making it easy to build a complex UI step by step and the easier learning curve compared to other frameworks like [Angular](https://angular.io/).
 
@@ -52,10 +52,10 @@ function App(): JSX.Element {
 ```
 
 <details>
-	<summary>✔️ Result preview</summary>
-	<br>
-	<p>The background was added with simple CSS</p>
-	<img src="https://user-images.githubusercontent.com/49811529/182241478-40f5e380-8de1-4062-96c3-1acde999ad90.png"/>
+  <summary>✔️ Result preview</summary>
+  <br>
+  <p>The background was added with simple CSS</p>
+  <img src="https://user-images.githubusercontent.com/49811529/182241478-40f5e380-8de1-4062-96c3-1acde999ad90.png"/>
 </details>
 
 <br/>
@@ -84,8 +84,8 @@ For instance, the `TaskCard` component should be located in `src/components/Task
 > You can put the task's data directly in your code, we'll cover props in the next step to make your component generic 😜
 
 <details>
-	<summary>✔️ Result preview</summary>
-	<img src="https://user-images.githubusercontent.com/49811529/182241268-4877fe93-b682-4416-8304-a9a37a2d7c86.png"/>
+  <summary>✔️ Result preview</summary>
+  <img src="https://user-images.githubusercontent.com/49811529/182241268-4877fe93-b682-4416-8304-a9a37a2d7c86.png"/>
 </details>
 
 <br/>
@@ -105,8 +105,8 @@ Finally, use [React Props](https://reactjs.org/docs/components-and-props.html#re
 💡 When you create a component through an iteration, don't forget to pass a unique `key` in component props!
 
 <details>
-	<summary>✔️ Result preview</summary>
-	<img src="https://user-images.githubusercontent.com/49811529/182241779-c76d5f95-39db-4989-8ee8-dc0de5b6db97.png"/>
+  <summary>✔️ Result preview</summary>
+  <img src="https://user-images.githubusercontent.com/49811529/182241779-c76d5f95-39db-4989-8ee8-dc0de5b6db97.png"/>
 </details>
 
 <br>
@@ -127,8 +127,8 @@ Let's then use the [useState](https://www.freecodecamp.org/news/introduction-to-
 💡 You can customize your hooks to avoid unwanted cases, such as an empty field.
 
 <details>
-	<summary>✔️ Result preview</summary>
-	<img src="https://user-images.githubusercontent.com/49811529/182242490-78432edc-c932-416f-a1f1-2449ac37686c.png"/>
+  <summary>✔️ Result preview</summary>
+  <img src="https://user-images.githubusercontent.com/49811529/182242490-78432edc-c932-416f-a1f1-2449ac37686c.png"/>
 </details>
 
 <br/>
@@ -167,10 +167,11 @@ You can still enhance it's behavior, here are some examples:
 
 💡 We suggest you to take a look at [NextJS](https://nextjs.org) or [Remix](https://remix.run)!
 
-<br/><br/>
+<br/>
+
 ## Authors
 
-| [<img src="https://github.com/RezaRahemtola.png?size=85" width=85><br><sub>Reza Rahemtola</sub>](https://github.com/RezaRahemtola) | [<img src="https://github.com/EdenComp.png?size=85" width=85><br><sub>Florian Lauch</sub>](https://github.com/EdenComp) | [<img src="https://github.com/Samoten777.png?size=85" width=85><br><sub>Laure Gagner</sub>](https://github.com/Samoten777) | [<img src="https://github.com/nicolasheude.png?size=85" width=85><br><sub>Nicolas Heude</sub>](https://github.com/nicolasheude) 
+| [<img src="https://github.com/RezaRahemtola.png?size=85" width=85><br><sub>Reza Rahemtola</sub>](https://github.com/RezaRahemtola) | [<img src="https://github.com/EdenComp.png?size=85" width=85><br><sub>Florian Lauch</sub>](https://github.com/EdenComp) | [<img src="https://github.com/Samoten777.png?size=85" width=85><br><sub>Laure Gagner</sub>](https://github.com/Samoten777) | [<img src="https://github.com/nicolasheude.png?size=85" width=85><br><sub>Nicolas Heude</sub>](https://github.com/nicolasheude)
 | :---: | :---: | :---: | :---: |
 <h2 align=center>
 Organization
@@ -178,21 +179,22 @@ Organization
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 

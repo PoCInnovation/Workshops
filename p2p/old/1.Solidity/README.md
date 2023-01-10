@@ -19,7 +19,7 @@ It contains all necessary files, but for the moment they're empty 😉
 
 The project structure should be the following :
 
-```
+```text
 .
 ├── compile.js
 ├── contracts
@@ -59,7 +59,7 @@ The compiler used is `solc`, and has already been included to your `package.json
 
 You need to do the following steps to get the bytecode & ABI (Application Binary Interface) of the contract:
 
-- Retrieve the file content. The solc compiler obviously needs the contract's code to compile it, but instead of just copy/paste the code for the next step you may wan't to automate this process by reading the file dynamically. 
+- Retrieve the file content. The solc compiler obviously needs the contract's code to compile it, but instead of just copy/paste the code for the next step you may wan't to automate this process by reading the file dynamically.
 
 - Give the content to the compiler. Note that the `compile.js` file already contains a variable, but the `sources['Inbox.sol']` field is empty.
 
@@ -104,8 +104,8 @@ Okay, time to test !
     - The initial message has been set to "PoC"
     - Every account can access the message
     - Every account can set a new message
-    
-- Here is an example on how you can use mocha: 
+
+- Here is an example on how you can use mocha:
     ```javascript
     const assert = require('assert');
     
@@ -123,7 +123,7 @@ Okay, time to test !
     });
     ```
     If you run `npm run tests`, you should see the test passing.
-    
+
     Check [this](https://web3js.readthedocs.io/en/v1.3.0/web3-eth-contract.html#methods-mymethod-call) link for more information about how you can call your contract functions.
 
 ## Step 4 : Time to deploy 📤
@@ -133,7 +133,7 @@ Your smart contract is fully tested and ready to be deployed on the real blockch
 
 But deploying a smart contract is done by sending a transaction, and you probably don't want to pay real money to accomplish this step wright ?
 
-This is why testnet are useful 😉, they behave the same way as the mainnet does, but their ether value is null. 
+This is why testnet are useful 😉, they behave the same way as the mainnet does, but their ether value is null.
 
 So first, you need to install Metamask extension on your browser.
 Follow the steps required and don't forget to set the network to be the Ropsten Test Network.
@@ -144,13 +144,13 @@ Because you are sending a transaction to the real network, you have to know the 
 
 Infura can provide this information. As we support decentralization of the Ethereum blockchain here is an endpoint you can use:
 
-https://ropsten.infura.io/v3/510289ba8f254e46891aaa84a718ddd9
+<https://ropsten.infura.io/v3/510289ba8f254e46891aaa84a718ddd9>
 
 Feel free to use the code you've written during tests to deploy and interact with the contract on the Ropsten Network.
 
 ## Authors
 
-| [<img src="https://github.com/0xpanoramix.png?size=85" width=85><br><sub>Luca Georges Francois</sub>](https://github.com/0xpanoramix) | 
+| [<img src="https://github.com/0xpanoramix.png?size=85" width=85><br><sub>Luca Georges Francois</sub>](https://github.com/0xpanoramix) |
 | :---: |
 <h2 align=center>
 Organization
@@ -158,21 +158,22 @@ Organization
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 

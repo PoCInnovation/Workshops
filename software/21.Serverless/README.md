@@ -27,7 +27,7 @@ You don't allocate a specific server listening on queries to your API. You just 
 > 💡 You don't give the whole API to a server ! You just give to the cloud provider your functions one by one.  
   
 Consequently, when a query is made to call the API, it will create a container on a cloud provider's server and run the function inside.  
-The benefits are the following: 
+The benefits are the following:
 - The cloud provider creates as many containers as needed, so you have a scalable API.
 - You pay for what you use, which is the number of containers created.
 - All that without the headache of implementing a server setup. You just give to the cloud provider your functions, it handles the rest.
@@ -123,9 +123,9 @@ Now you will deploy your app using [Netlify](https://www.netlify.com/) !
    ![Netlify Trigger Deploy](.github/assets/netlifyTriggerDeploy.png)
 
   </details>
--  If you refresh your application page, you should now see the website you've previously created.
+- If you refresh your application page, you should now see the website you've previously created.
 
-**Your application is now working on production !! 🔥🔥 You can share it 😎**  
+### **Your application is now working on production !! 🔥🔥 You can share it 😎**  
 
 ## Step 3 - Create your first serverless function
 
@@ -148,7 +148,7 @@ You will now create a serverless API using the [serverless framework](https://ww
 - Update the file `serverless.yml` in order to call your new function. See the [documentation](https://www.serverless.com/framework/docs/providers/aws/guide/events/)
 - Create a file `fetchGiphy.test.ts` inside the `tests` folder and implement some code to test your new function. You can have a look at the file `tests/setup.test.ts`, or read the [Jest documentation](https://jestjs.io/docs/using-matchers) to learn how to do it
 
-**Useful commands**
+### **Useful commands**
 ```shell
 # To call a serverless function
 serverless invoke local -f [YOUR FUNCTION NAME - example: setup]
@@ -160,13 +160,13 @@ serverless invoke local -f [YOUR FUNCTION NAME] --data '{ "queryStringParameters
 yarn test
 ```
 
-## Bonus:
+## Bonus
 
 - Deploy your API with [AWS](https://aws.amazon.com/lambda/) (or better: with [Scaleway](https://www.scaleway.com/en/docs/scaleway-elements-serverless-getting-started/) 🇫🇷 ), and call it inside your serverless app !
 - Discover [Vercel](https://vercel.com), a Netlify competitor with our [workshop](https://github.com/PoCInnovation/Workshops/tree/master/software/14.Vercel)
 
 ## Author
-| [<img src="https://github.com/adrienfort.png?size=85" width=85><br><sub>Adrien Fort</sub>](https://github.com/adrienfort) | 
+| [<img src="https://github.com/adrienfort.png?size=85" width=85><br><sub>Adrien Fort</sub>](https://github.com/adrienfort) |
 | :---: |
 
 Thanks to [Tom Chauveau](https://github.com/TomChv) for contributing to this workshop by submitting his reviews !
@@ -177,21 +177,22 @@ Organization
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 

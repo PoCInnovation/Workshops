@@ -22,7 +22,7 @@ nest new nest-workshop-poc
 
 Here are the files that will be used in this workshop:
 
-```
+```text
 nest-workshop-poc
 ├── package.json               <-- node file that define dependencies, rules and commands
 ├── src
