@@ -1,0 +1,37 @@
+name: Markdown checker
+
+on:
+  pull_request
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          use-quiet-mode: 'yes'
+          use-verbose-mode: 'yes'
+          check-modified-files-only: 'yes'
+          config-file: '.github/workflows/config/markdown-links.json'
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Get changed files
+      uses: tj-actions/changed-files@v35
+      id: changed-files
+      with:
+        files: '**/*.md'
+        separator: ","
+    - uses: DavidAnson/markdownlint-cli2-action@v9
+      if: steps.changed-files.outputs.any_changed == 'true'
+      with:
+        command: config
+        globs: |
+          .github/workflows/config/.markdownlint.jsonc,
+          ${{ steps.changed-files.outputs.all_changed_files }}
+        separator: ","
