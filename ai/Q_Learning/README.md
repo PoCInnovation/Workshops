@@ -1,4 +1,4 @@
-## X - Introduction to Reinforcement Learning 📱
+## Q-Learning: Introduction to Reinforcement Learning 📱
 
 Discover Reinforcement Learning, an exciting field within Artificial Intelligence.
 
