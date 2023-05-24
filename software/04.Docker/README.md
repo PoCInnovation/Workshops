@@ -31,23 +31,24 @@ Let's learn how to use the "moulinette"'s docker to test your EPITECH projects.
 - Using `docker run` command and some arguments:
   - mount your current directory `$PWD` in your container
   - launch a shell to execute commands in your container
-  - execute `cat /etc/os-release | grep PRETTY_NAME` , you should get `Fedora 32 (Container Image)`
+  - execute `cat /etc/os-release | grep PRETTY_NAME` , you should get `Fedora 34 (Container Image)`
 - Now, find the command to display images, containers, volumes and networks.
 
-> [There is a document in the intranet that can help you](https://intra.epitech.eu/file/public/technical-documentations/doc_docker.pdf) (but be careful when copying the commands, there are many extra spaces due to PDF formatting)
+<!-- markdown-link-check-disable-next-line -->
+> [There is a document in the EPITECH intranet that can help you](https://intra.epitech.eu/file/public/technical-documentations/doc_docker.pdf) (but be careful when copying the commands, there are many extra spaces due to PDF formatting)
 
 ## Step 2: Containerization of an API with a Dockerfile
 
 Now, we will learn how to build a custom docker image thanks to a `Dockerfile`.
 
-In the [src](./src/node_api) folder, you'll find a NodeJS API. This API is very simple, it returns a message when you do a GET request on `/`.
-In a first time, download the API [here](https://downgit.github.io/#/home?url=https://github.com/PoCInnovation/Workshops/tree/master/software/04.Docker/src/node_api).
+In the [src](./src/node_api.zip) folder, you'll find a NodeJS API. This API is very simple, it returns a message when you do a GET request on `/`.
+In a first time, download the API [here](https://downgit.github.io/#/home?url=https://github.com/PoCInnovation/Workshops/tree/master/software/04.Docker/src/node_api.zip).
 
 The objective is to create a docker image of that API. You must:
 
 - Create a `Dockerfile` in the `node_api` folder.
 
-- Build an `image` from `node:12-alpine`.
+- Build an `image` from `node:16-alpine`.
 - Copy the code from the API in the image.
 - Define the environment variable `PORT` that indicate on which port the API must listen.
 - Make the API accessible from outside the image on the same port as `PORT`.
@@ -64,7 +65,7 @@ You now have a docker image which contains a node API and everything necessary t
 
 ## Step 3: Containerization of Epytodo with a docker-compose
 
-To finish, you will containerize your `Epytodo` project. If you do not have one, we give you a downloadable tar file in the [src](./src/epytodo) directory, **but use yours if it works!**
+To finish, you will containerize your `Epytodo` project. If you do not have one, we give you a downloadable ZIP file in the [src](./src/epytodo.zip) directory, **but use yours if it works!**
 
  To do that, you will create:
 - A `Dockerfile` to build the image of your API (like in Step 2, but the API is in python, so dependencies installation will be different). You must use the `python:3.7.5-alpine` image
@@ -140,6 +141,7 @@ If you want to learn more on the architecture implementation and container's man
 - [Lazydocker](https://github.com/jesseduffield/lazydocker)
 - [Docker hub](https://hub.docker.com/)
 - [Docker swarm](https://docs.docker.com/get-started/swarm-deploy/)
+- [Dockerfile best practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 
 
 ## Authors
