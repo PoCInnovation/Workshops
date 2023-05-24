@@ -1,6 +1,6 @@
 # 🕸️ P2P Workshops
 
-Peer to peer workshops to introduce students to peer-to-peer technologies and notions.
+Workshops to introduce students to peer-to-peer & blockchain technologies and notions.
 
 In each directory you will find a `README` explaining the purpose of the Workshop, and a `SETUP` if needed.
 
@@ -19,7 +19,7 @@ You will:
 - Connect more nodes using discovery.
 - Exchange data between nodes.
 
-### Workshop 2 - [Starton smart-contracts](./1.libp2p)
+### Workshop 2 - [Starton smart contracts](./1.libp2p)
 
 Introduction to smart contracts using Starton's API.
 
@@ -39,3 +39,13 @@ You will:
 - Use Foundry to deploy your contracts on a local blockchain.
 - Use Foundry to access contract's level data.
 - Use Foundry to deploy your contracts on a Ethereum testnet.
+
+### Workshop 4 - [Connect your DApp to Ledger Live](./4.DApp_Ledger_Live/)
+
+Introduction to DApps and the Ledger ecosystem.
+
+You will:
+
+- Interact with a smart contracts using wagmi
+- Integrate your application to Ledger Live
+- Use a hardware wallet to sign transactions
