@@ -79,8 +79,8 @@ Your folder structure should look like this:
 ```
 
 Your docker-compose will have 2 services:
-- `app`: Launchs your Flask API (created by your Dockerfile)
-- `db`: Launchs your `mariadb` database (more information [here](https://hub.docker.com/_/mariadb))
+- `app`: Launches your Flask API (created by your Dockerfile)
+- `db`: Launches your `mariadb` database (more information [here](https://hub.docker.com/_/mariadb))
 
 Here is a base to start off your `docker-compose.yml`
 
@@ -123,7 +123,7 @@ We want `app` and `db` to be able to communicate properly, so we are going to pu
 - `networks`: to allow the app to reach the database
 - `volumes`: to specify which volume you'll use to save the data, and to load `epytodo.sql` on database initialization
 
-:warning: The database inside the `db` container must be named `epytodo`, as written in the sql file.
+⚠️ The database inside the `db` container must be named `epytodo`, as written in the sql file.
 
 > Documentation on how [docker-compose](https://docs.docker.com/compose/) works.<br>
 > What is the default port of your flask/mysql services ?<br>
@@ -144,7 +144,7 @@ If you want to learn more on the architecture implementation and container's man
 
 ## Authors
 
-| [<img src="https://github.com/TomChv.png?size=85" width=85><br><sub>Tom Chauveau</sub>](https://github.com/TomChv) | [<img src="https://github.com/PaulMonnery.png?size=85" width=85><br><sub>Paul Monnery</sub>](https://github.com/PaulMonnery) | [<img src="https://github.com/JeromeCGithub.png?size=85" width=85><br><sub>Jérome Collet</sub>](https://github.com/JeromeCGithub) 
+| [<img src="https://github.com/TomChv.png?size=85" width=85><br><sub>Tom Chauveau</sub>](https://github.com/TomChv) | [<img src="https://github.com/PaulMonnery.png?size=85" width=85><br><sub>Paul Monnery</sub>](https://github.com/PaulMonnery) | [<img src="https://github.com/JeromeCGithub.png?size=85" width=85><br><sub>Jérome Collet</sub>](https://github.com/JeromeCGithub)
 | :---: | :---: | :---: |
 <h2 align=center>
 Organization
@@ -152,22 +152,23 @@ Organization
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

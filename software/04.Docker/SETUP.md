@@ -2,8 +2,8 @@
 
 This workshop only requires you to install docker, its dependencies and to activate the docker service. You'll need:
 
-- [docker-ce](https://docs.docker.com/engine/install/fedora/) : docker community edition
-- [docker-compose](https://docs.docker.com/compose/install/) : complementary tool to simplify the creation of images and containers
+- [docker-ce](https://docs.docker.com/engine/install/fedora/): docker community edition
+- [docker-compose](https://docs.docker.com/compose/install/): complementary tool to simplify the creation of images and containers
 
 ## Installation
 
@@ -52,7 +52,7 @@ For this workshop, you have to run your docker commands with `sudo`, if you find
 
 #### Fedora 31+
 
-:warning: If you are running fedora 31 or above, you'll probably have cgroups errors like:
+⚠️ If you are running fedora 31 or above, you'll probably have cgroups errors like:
 
 ```
 docker: Error response from daemon: cgroups: cannot found cgroup mount destination: unknown.

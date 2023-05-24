@@ -4,7 +4,7 @@ import (
 	"log"
 	"net/http"
 
-	"poc-workshop/routes"
+	"poc-workshop-go/routes"
 
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"

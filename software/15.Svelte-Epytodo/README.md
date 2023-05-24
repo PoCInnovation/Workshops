@@ -12,7 +12,7 @@
 
 All the required information to install dependencies can be found in [SETUP.md](./SETUP.md).
 
-At any time, if you feel lost with Svelte, you can go to the [tutorial](https://svelte.dev/tutorial) 
+At any time, if you feel lost with Svelte, you can go to the [tutorial](https://svelte.dev/tutorial)
 
 ## Step 1 - User information
 
@@ -30,38 +30,38 @@ It should use [text input components](https://svelte.dev/tutorial/text-inputs) t
 You must also create a register button. Don't worry about its behavior, we'll take care of it later.
 
 Of course, you could create all from scratch, but we are here to use [library components](https://madewithsvelte.com/ui-library). Time for a little bit of shopping! (Would you like to try a modal component?)<br>
-&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;
+
 <br>
-https://madewithsvelte.com/ui-library
+👉 <https://madewithsvelte.com/ui-library>
 <br/>
-&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;
+
 
 ## Step 2 - Registration
 
 Now that we have a basic component, let's add some interaction.
 The register button should trigger a function that will use [axios](https://www.npmjs.com/package/axios) to send a `POST` request on `localhost:8080/register`, with the user information:<br/>
 
-```
+```json
 {
-    "firstname": firstname,
-    "name": name,
-    "email": email,
-    "password": password
+    "firstname": "firstname",
+    "name": "name",
+    "email": "email",
+    "password": "password"
 }
 ```
 
 You should get a `token` as a response. Store it in the `token` variable, you'll be able to use it to authenticate.
 
-:warning: axios works in an asynchronous way, so the keyword `async / await` will become very handy
+⚠️ axios works in an asynchronous way, so the keyword `async / await` will become very handy
 
 
 > If you want to go further, you could apply some [jwt good practices](https://blog.logrocket.com/jwt-authentication-best-practices/), this way to store the token is actually not really safe...
 
 While you're there, create another component `src/components/login.svelte` that will basically have the same behavior as `register`, but it will only need to send 2 fields:
-```
+```json
 {
-    "email": email,
-    "password": password
+    "email": "email",
+    "password": "password"
 }
 ```
 
@@ -76,17 +76,17 @@ Also create an empty component named `src/components/todolist.svelte`
 Now let's create some routing:
 
 In your `App.svelte`, add the following line:<br/>
-```
+```js
 import { Router, Route } from 'svelte-routing';
 ```
 Create a router with 2 routes:<br/>
-  -  one  with `/` as path and will use your `<Connection>` component 
-  -  one  with `/home` as path and will us your `<todolist>` component
+- one with `/` as path and will use your `<Connection>` component
+- one with `/home` as path and will us your `<todolist>` component
 
 
 Now let's modify your `Login` and `Register` components.<br>
 Add the following import:
-```
+```js
 import { navigate } from 'svelte-routing';
 ```
 Upon receiving the token, `Login` and `Register` should redirect to `/home`
@@ -95,9 +95,7 @@ Upon receiving the token, `Login` and `Register` should redirect to `/home`
 
 Show us what you can do! Use what you have learned to fetch and send new tasks to and from the API. You can be creative and try to come up with some innovative design ideas.
 
-Use the [api documentation](https://documenter.getpostman.com/view/14600925/TzY1gbb4)
-
-Here's some idea :
+Here are a few ones:
 
 - Create a todo element component, with the required fields
 - Create a list element, that will update it's size and display all the todo elements
@@ -112,7 +110,7 @@ Here's some idea :
 
 ## Authors
 
-| [<img src="https://github.com/amozpay.png?size=85" width=85><br><sub>Amoz Pay</sub>](https://github.com/amozpay) | [<img src="https://github.com/barbo69.png?size=85" width=85><br><sub>Baptiste Barbotin</sub>](https://github.com/barbo69) 
+| [<img src="https://github.com/amozpay.png?size=85" width=85><br><sub>Amoz Pay</sub>](https://github.com/amozpay) | [<img src="https://github.com/barbo69.png?size=85" width=85><br><sub>Baptiste Barbotin</sub>](https://github.com/barbo69)
 | :---: | :---: |
 <h2 align=center>
 Organization
@@ -120,23 +118,24 @@ Organization
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
 

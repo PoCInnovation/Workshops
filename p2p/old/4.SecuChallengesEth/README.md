@@ -1,16 +1,16 @@
-# 4. Learn how to exploit Ethereum Smart Contracts !
+# 4. Learn how to exploit Ethereum Smart Contracts!
 
-In this Workshop, you will learn : 
+In this Workshop, you will learn:
 
-:heavy_check_mark: How to use Remix IDE
+✔️ How to use Remix IDE
 
-:heavy_check_mark: How does Smart Contracts are written
+✔️ How does Smart Contracts are written
 
-:heavy_check_mark: How to interact with Smart Contracts Method
+✔️ How to interact with Smart Contracts Method
 
-:heavy_check_mark: ... and how to exploit them !!
+✔️ ... and how to exploit them !!
 
-## :dizzy: Table of contents
+## 💫 Table of contents
 * [Setup](README.md#wrench-setup)
 * [Step 1 - Easy level](README.md#hand_over_mouth-step-1---easy-level)
     * [Hello Ethernaut](README.md#hello-ethernaut)
@@ -26,12 +26,12 @@ In this Workshop, you will learn :
     * [Selfie](README.md#selfie)
 * [Organisation](README.md#star2-organisation)
   
-## :wrench: Setup
+## 🔧 Setup
 
 Please follow the instructions on your [SETUP.md](SETUP.md) file.
 
-## :hand_over_mouth: Step 1 - Easy level
-> :bulb: Those challenges are here to introduce to you the [Solidity](https://docs.soliditylang.org/en/v0.4.21/) language and the
+## 🤭 Step 1 - Easy level
+> 💡 Those challenges are here to introduce to you the [Solidity](https://docs.soliditylang.org/en/v0.4.21/) language and the
 basic concepts of a smart contract and its related data.
 
 ### [Hello Ethernaut](https://ethernaut.openzeppelin.com/level/0x4E73b858fD5D7A5fc1c3455061dE52a53F35d966)
@@ -45,7 +45,7 @@ This challenge introduce you to the fallback security breach as well as Solidity
 It's going to introduce you to the basic random number generator security breach.
 
 <details>
-<summary>:book: Easy Level - Resources</summary>
+<summary>📖 Easy Level - Resources</summary>
     <li>
         <a href="https://www.tutorialspoint.com/solidity/">Syntax of Solidity language</a>
     </li>
@@ -57,9 +57,9 @@ It's going to introduce you to the basic random number generator security breach
     </li>
 </details>
 
-## :cry: Step 2 - Medium Level
+## 😢 Step 2 - Medium Level
 
-> :bulb: Here, you are really going to start practicing the Solidity language !
+> 💡 Here, you are really going to start practicing the Solidity language !
 
 ### [Gatekeeper One](https://ropsten.ethernaut.openzeppelin.com/level/0xfe1B0cb67F95Ab51e9052e70424A49A6d34769ed)
 This challenge will introduce you to the `gasleft` function, and the conversion between types.
@@ -72,12 +72,12 @@ complex smart contracts.
 ### [Vault](https://ropsten.ethernaut.openzeppelin.com/level/0xe2F72aa61fD6322C6c4d22227a594391E051F990)
 This challenge will help you understand how bigger Smart Contracts are, how does `flashloan` works the potential exploit in it.
 
-> :bulb: No resources here because in each challenge the website already provides them !
+> 💡 No resources here because in each challenge the website already provides them !
 
-## :skull_and_crossbones: Step 3 - Hard Level
+## ☠️ Step 3 - Hard Level
 
-> :bulb: Those challenges will introduce you to how the variables are stored in the Ethereum blockchain.
-> 
+> 💡 Those challenges will introduce you to how the variables are stored in the Ethereum blockchain.
+>
 ### [The rewarder](https://www.damnvulnerabledefi.xyz/challenges/5.html)
 
 ### [Compromised](https://www.damnvulnerabledefi.xyz/challenges/7.html)
@@ -92,22 +92,23 @@ Organization
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

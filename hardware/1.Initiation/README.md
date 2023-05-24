@@ -16,7 +16,7 @@ Si vous êtes intéressé par des vidéastes traitant de l'électronique/hardwar
 * This old Tony
 * NYC CNC
 * Electroboom
-       
+
 ## Préambule
 
 Merci de lire/regarder
@@ -28,7 +28,7 @@ Merci de lire/regarder
 
 <details>
     <summary> 🛠️ Matériel requis:</summary>
- 
+
 * Arduino / ESP32
 * BreadBoard
 * Cable USB
@@ -37,18 +37,18 @@ Merci de lire/regarder
 * Résistance
 
 </details>  
-  
+
 **Consigne**: Faites un circuit reliant une LED à un Arduino et allumez cette LED. Appelez un encadrant avant d'alimenter votre Arduino.
 
 >**Contraintes**: Vous ne devrez utiliser AUCUN CODE pour cet exercice. Vous n'avez pas le droit à au pin 3,3V de votre board.
 
->:warning: Est-ce que le voltage accepté par la LED est compatible avec le voltage produit par la board ?
+>⚠️ Est-ce que le voltage accepté par la LED est compatible avec le voltage produit par la board ?
 
 ## Exercice 2
 
 <details>
     <summary> 🛠️ Matériel requis:</summary>
- 
+
 * Arduino / ESP32
 * BreadBoard
 * Cable USB
@@ -66,7 +66,7 @@ Merci de lire/regarder
 
 <details>
     <summary> 🛠️ Matériel requis:</summary>
- 
+
 * Arduino / ESP32
 * BreadBoard
 * Cable USB
@@ -75,7 +75,7 @@ Merci de lire/regarder
 * Résistance
 * Potentiomètre
 
-</details> 
+</details>
 
 **Consigne**: En reprenant le circuit de l'exercice 2, faite en sorte que le délai de clignotement de la LED soit dépendant du potentiomètre.
 
@@ -85,7 +85,7 @@ Merci de lire/regarder
 
 <details>
     <summary> 🛠️ Matériel requis:</summary>
- 
+
 * Arduino / ESP32
 * BreadBoard
 * Cable USB
@@ -94,20 +94,20 @@ Merci de lire/regarder
 * Résistance
 * Potentiomètre
 
-</details> 
+</details>
 
 **Consigne**: En reprenant le circuit de l'exercice 3, faite en sorte que la LED ne clignote plus, et que l'intensité de son éclairage dépende de la valeur du potentiomètre.
 
 >**Contraintes**: Aucune
 
->:warning: Renseignez-vous sur les pins "PWM"
+>⚠️ Renseignez-vous sur les pins "PWM"
 
 
 ## Exercice 5
 
 <details>
     <summary> 🛠️ Matériel requis:</summary>
- 
+
 * Arduino / ESP32
 * BreadBoard
 * Cable USB
@@ -116,7 +116,7 @@ Merci de lire/regarder
 * 3x Résistances
 * Potentiomètre
 
-</details> 
+</details>
 
 **Consigne**: A l'aide d'un potentiomètre, faire varier la couleur de la LED RGB de rouge à bleu
 
@@ -126,7 +126,7 @@ Merci de lire/regarder
 
 <details>
     <summary> 🛠️ Matériel requis:</summary>
- 
+
 * Arduino / ESP32
 * BreadBoard
 * Cable USB
@@ -134,7 +134,7 @@ Merci de lire/regarder
 * 6x LED
 * 6x Résistances
 
-</details> 
+</details>
 
 **Consigne**: Faire clignoter 6 LED, une à la fois, dans un mouvement de va-et-vient.
 
@@ -144,7 +144,7 @@ Merci de lire/regarder
 
 <details>
     <summary> 🛠️ Matériel requis:</summary>
- 
+
 * Arduino / ESP32
 * BreadBoard
 * Cable USB
@@ -162,7 +162,7 @@ Merci de lire/regarder
 
 <details>
     <summary> 🛠️ Matériel requis:</summary>
- 
+
 * Arduino / ESP32
 * BreadBoard
 * Cable USB
@@ -175,13 +175,13 @@ Merci de lire/regarder
 
 **Consigne**: faite en sorte que le bouton change d'état (allumer/éteindre) la LED a chaque pression.
 
->:warning: INPUT_PULLUP 
+>⚠️ INPUT_PULLUP
 
 ## Exercice 9
 
 <details>
     <summary> 🛠️ Matériel requis:</summary>
- 
+
 * Arduino / ESP32
 * BreadBoard
 * Cable USB
@@ -200,7 +200,7 @@ Merci de lire/regarder
 
 <details>
     <summary> 🛠️ Matériel requis:</summary>
- 
+
 * Arduino / ESP32
 * BreadBoard
 * Cable USB
@@ -217,7 +217,7 @@ Merci de lire/regarder
 
 <details>
     <summary> 🛠️ Matériel requis:</summary>
- 
+
 * Arduino / ESP32
 * BreadBoard
 * Cable USB
@@ -232,13 +232,13 @@ Merci de lire/regarder
 
 >**Contraintes**: aucune librairie spécifiquement créer pour Arduino / ESP32 n'est autorisé.
 
->:green_square: **Bonus**: afficher la distance sous forme de graph
+>🟩 **Bonus**: afficher la distance sous forme de graph
 
 ## Exercice 12
 
 <details>
     <summary> 🛠️ Matériel requis:</summary>
- 
+
 * Arduino / ESP32
 * BreadBoard
 * Cable USB
@@ -254,7 +254,7 @@ Merci de lire/regarder
 
 <details>
     <summary> 🛠️ Matériel requis:</summary>
- 
+
 * Arduino / ESP32
 * BreadBoard
 * Cable USB
@@ -265,13 +265,13 @@ Merci de lire/regarder
 
 **Consigne**: Realiser une webui ou gui avec un LEDpicker qui pilote plusieurs LED.
 
->:warning: Appelez un encadrant avant de faire vos branchements.
+>⚠️ Appelez un encadrant avant de faire vos branchements.
 
 ## Exercice 14
 
 <details>
     <summary> 🛠️ Matériel requis:</summary>
- 
+
 * Arduino / ESP32
 * BreadBoard
 * Cable USB
@@ -282,11 +282,11 @@ Merci de lire/regarder
 
 **Consigne**: Votre Arduino / ESP32 devra se connecte à votre téléphone ou ordinateur en bluetooth et afficher la distance en cm donnée par le capteur ultrasson
 
->:warning: Appelez un encadrant avant de faire vos branchements
+> ⚠️ Appelez un encadrant avant de faire vos branchements
 
->:green_square: **Bonus**: afficher la distance sous forme de graphe
+> 🟩 **Bonus**: afficher la distance sous forme de graphe
 
-# :tada: Bravo
+# 🎉 Bravo
 Vous connaissez désormais les bases de l'arduino.
 Libre à vous d'utiliser votre imagination pour créer des circuits. Ou de combiner les exercices précedents pour de nouveau résultats.
 
@@ -296,22 +296,23 @@ Organization
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

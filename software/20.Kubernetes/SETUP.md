@@ -8,32 +8,32 @@ You can install `Docker` using the [official guide](https://docs.docker.com/get-
 
 Run these commands to download and execute the installation script.
 
-```
+```shell
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
 
-#### Enable docker
+### Enable docker
 
 Once the installation is complete, start the docker service with `sudo systemctl start docker`
 
-> :bulb: If you want Docker to run every time you start your computer, run `sudo systemctl enable docker`
+> 💡 If you want Docker to run every time you start your computer, run `sudo systemctl enable docker`
 
 If your installation was successful, you should be able to run the following command without any issues.
 
-```
+```shell
 docker run hello-world
 ```
 
 Depending on how you installed Docker, you might have to prefix all docker commands with `sudo` as shown below.
 
-```
+```shell
 sudo docker run hello-world
 ```
 
-If you're unable to install Docker, you can alternatively use [podman](https://podman.io/getting-started/installation) which works just like Docker. To use podman, simply replace `docker` by `podman` in every command that you run as shown below. 
+If you're unable to install Docker, you can alternatively use [podman](https://podman.io/getting-started/installation) which works just like Docker. To use podman, simply replace `docker` by `podman` in every command that you run as shown below.
 
-```
+```shell
 podman run hello-world
 ```
 
@@ -43,7 +43,7 @@ You can install `Minikube` using the [official guide](https://minikube.sigs.k8s.
 
 If your installation was successful, you should be able to start a cluster using the following command. It will start a local Kubernetes cluster on your machine.
 
-```
+```shell
 minikube start
 ```
 
@@ -56,7 +56,7 @@ You can install `kubectl` using the [official guide](https://kubernetes.io/docs/
 Make sure you setup [kubectl bash autocompletion](https://kubernetes.io/docs/tasks/tools/included/optional-kubectl-configs-bash-linux/) too!
 
 If you're on zsh, you can run the following command to enable the autocompletion.
-```
+```shell
 source <(kubectl completion zsh)
 ```
 

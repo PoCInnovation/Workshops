@@ -1,10 +1,10 @@
-# Workshop 1 - Solidity & Smart Contract :open_book:
+# Workshop 1 - Solidity & Smart Contract 📖
 
 During this workshop, you will create a smart contract that can run onto the Ethereum Virtual Machine.
 You'll achieve this in 4 steps : write, compile, test & deploy the contract.
 
 A smart contract is an application that can run on a blockchain.
-Once you've written a smart contract on a blockchain, the same behaviour as with the transactions applies :
+Once you've written a smart contract on a blockchain, the same behavior as with the transactions applies :
 you can not update it.
 The most popular blockchain that supports smart contract is Ethereum, this is the main reason we are using this particular one.
 
@@ -12,14 +12,14 @@ Please make sure to read each step carefully, as very useful links are given wit
 
 Every JavaScript files contains TODO instructions. Take a look at them to get more details and context about the task.
 
-## Step 0 : Initialization :rocket:
+## Step 0 : Initialization 🚀
 
-First, download and extract the `source.zip` file [here](https://github.com/PoCInnovation/Workshops/blob/master/p2p/1.Solidity/src/source.zip).
-It contains all necessary files, but for the moment they're empty :wink:
+First, download and extract the `source.zip` file [here](https://github.com/PoCInnovation/Workshops/blob/master/p2p/old/1.Solidity/src/source.zip).
+It contains all necessary files, but for the moment they're empty 😉
 
 The project structure should be the following :
 
-```
+```text
 .
 ├── compile.js
 ├── contracts
@@ -37,7 +37,7 @@ The project structure should be the following :
 
 Then, run `npm install` at the root of the downloaded folder.
 
-## Step 1 : Solidity & the contract :memo:
+## Step 1 : Solidity & the contract 📝
 
 As said before, the programming language you'll use to write the smart contract is Solidity.
 It has a similar syntax as JavaScript, but it is strongly-typed.
@@ -52,25 +52,25 @@ So your `Inbox` contract must respect the following rules :
 
 - Everyone must be able to update the message stored in the contract.
 
-## Step 2 : Compiling the contract :gear:
+## Step 2 : Compiling the contract ⚙️
 
-Now that you've written the contract, you need to compile it !
+Now that you've written the contract, you need to compile it!
 The compiler used is `solc`, and has already been included to your `package.json` dependencies file.
 
-You need to do the following steps to get the bytecode & ABI (Application Binary Interface) of the contract :
+You need to do the following steps to get the bytecode & ABI (Application Binary Interface) of the contract:
 
-- Retrieve the file content. The solc compiler obviously needs the contract's code to compile it, but instead of juste copy/paste the code for the next step you may wan't to automate this process by reading the file dynamically. 
+- Retrieve the file content. The solc compiler obviously needs the contract's code to compile it, but instead of just copy/paste the code for the next step you may wan't to automate this process by reading the file dynamically.
 
 - Give the content to the compiler. Note that the `compile.js` file already contains a variable, but the `sources['Inbox.sol']` field is empty.
 
-- Compile and extract the bytecode & ABI from the result (check [this](https://github.com/ethereum/solc-js) out :wink:).
+- Compile and extract the bytecode & ABI from the result (check [this](https://github.com/ethereum/solc-js) out 😉).
 
 - Write the bytecode & ABI to the corresponding file in the `out` folder.
 
 As you've probably guessed, the bytecode contains a compiled version of your contract that will be executed by the EVM.
 You will use the ABI to interact with the contract.
 
-## Step 3 : Tests using mocha & assert :test_tube:
+## Step 3 : Tests using mocha & assert 🧪
 
 Time to test !
 The tests are very important while writing a smart contract, because once they're deployed on a real blockchain, you can not update or delete it.
@@ -78,7 +78,7 @@ So make sure that everything is working as expected before deploying a contract.
 
 You'll use mocha as a testing framework and chai as an assertion library.
 
-Two more things before you start :
+Two more things before you start:
 
 - If you've looked at the packages in the dependencies, you probably saw `ganache`.
     Ganache will launch a virtual Ethereum network on your local environment.
@@ -98,14 +98,14 @@ Okay, time to test !
 - Then, test all of your functions.
     Note that when you declare a `public` variable in Solidity, the EVM automatically creates an accessor for this variable (a `call`).
     Whenever you call a function that modifies the contract state (i.e. stored variables), you must send a transaction to the targeted function.
-    You must test the following features :
+    You must test the following features:
   
     - The contract has been deployed properly
     - The initial message has been set to "PoC"
     - Every account can access the message
     - Every account can set a new message
-    
-- Here is an example on how you can use mocha : 
+
+- Here is an example on how you can use mocha:
     ```javascript
     const assert = require('assert');
     
@@ -123,17 +123,17 @@ Okay, time to test !
     });
     ```
     If you run `npm run tests`, you should see the test passing.
-    
+
     Check [this](https://web3js.readthedocs.io/en/v1.3.0/web3-eth-contract.html#methods-mymethod-call) link for more information about how you can call your contract functions.
 
-## Step 4 : Time to deploy :outbox_tray:
+## Step 4 : Time to deploy 📤
 
 Until now, you've only worked on your local ethereum network.
 Your smart contract is fully tested and ready to be deployed on the real blockchain !
 
 But deploying a smart contract is done by sending a transaction, and you probably don't want to pay real money to accomplish this step wright ?
 
-This is why testnet are useful :wink:, they behave the same way as the mainnet does, but their ether value is null. 
+This is why testnet are useful 😉, they behave the same way as the mainnet does, but their ether value is null.
 
 So first, you need to install Metamask extension on your browser.
 Follow the steps required and don't forget to set the network to be the Ropsten Test Network.
@@ -142,15 +142,15 @@ Then, go to [this faucet](https://faucet.dimensions.network/) and paste your wal
 You also need a new provider, since ganache only works locally. You will use the `HDWalletProvider` one provided in the `deploy.js` file.
 Because you are sending a transaction to the real network, you have to know the endpoint of an ethereum node.
 
-Infura can provide this information. As we support decentralisation of the Ethereum blockchain here is an endpoint you can use :
+Infura can provide this information. As we support decentralization of the Ethereum blockchain here is an endpoint you can use:
 
-https://ropsten.infura.io/v3/510289ba8f254e46891aaa84a718ddd9
+<https://ropsten.infura.io/v3/510289ba8f254e46891aaa84a718ddd9>
 
 Feel free to use the code you've written during tests to deploy and interact with the contract on the Ropsten Network.
 
 ## Authors
 
-| [<img src="https://github.com/PtitLuca.png?size=85" width=85><br><sub>Luca Georges Francois</sub>](https://github.com/PtitLuca) | 
+| [<img src="https://github.com/0xpanoramix.png?size=85" width=85><br><sub>Luca Georges Francois</sub>](https://github.com/0xpanoramix) |
 | :---: |
 <h2 align=center>
 Organization
@@ -158,22 +158,23 @@ Organization
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

@@ -1,4 +1,4 @@
-# :wrench: Setup
+# 🔧 Setup
 Before starting any of the following challenges, you need to set up a proper environment.
 You can use the code editor of your choice, but we highly recommend using the online Remix Editor available [here](https://remix.ethereum.org).
 

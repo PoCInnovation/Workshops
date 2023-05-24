@@ -1,6 +1,6 @@
 # ex01 - Basic tools
 
-In this first exercice, you must realise a script with pwntools.
+In this first exercise, you must realize a script with pwntools.
 It was made for you to discover some basic tools. If you do not do it with pwntools, too bad for you: The next challenges will be harder.
 
 
@@ -11,8 +11,8 @@ Here is what you must do, <ins>using pwntools</ins>:
 - interact with the shell yourself
 - exit the script
 
-The output could look like this :
-```
+The output could look like this:
+```text
     [+] Starting local process '/bin/sh': pid ....
     echo-ing hello to process
     process response: hello

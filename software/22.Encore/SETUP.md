@@ -48,9 +48,9 @@ For this workshop, you have to run your docker commands with `sudo`, if you find
 
 #### Fedora 31+
 
-:warning: If you are running fedora 31 or above, you'll probably have cgroups errors like:
+⚠️ If you are running fedora 31 or above, you'll probably have `cgroups` errors like:
 
-```
+```shell
 docker: Error response from daemon: cgroups: cannot found cgroup mount destination: unknown.
 ```
 
@@ -58,9 +58,9 @@ To fix them, follow this [solution](https://github.com/docker/for-linux/issues/2
 
 #### Podman alternative
 
-If you're unable to install Docker, you can alternatively use [podman](https://podman.io/getting-started/installation) which works just like Docker. To use podman, simply replace `docker` by `podman` in every command that you run as shown below. 
+If you're unable to install Docker, you can alternatively use [podman](https://podman.io/getting-started/installation) which works just like Docker. To use podman, simply replace `docker` by `podman` in every command that you run as shown below.
 
-```
+```shell
 podman run hello-world
 ```
 
@@ -117,7 +117,7 @@ Now, you should see a new folder in your current directory with your application
 
 Let's check what is in that folder
 
-``` shell
+```shell
 # Jump into your application's folder (e.g cd poc-workshop-encore)
 cd <application's name>
 
@@ -142,7 +142,7 @@ encore run
 
 It should display you something like below
 
-```
+```shell
 
   ✔ Building Encore application graph... Done!
   ✔ Analyzing service topology... Done!
@@ -159,7 +159,7 @@ It should display you something like below
 ```
 
 Execute a `curl` on the `World` endpoint
-```
+```shell
 curl localhost:4000/hello/John
 {
   "Message": "Hello, John!"
@@ -168,7 +168,7 @@ curl localhost:4000/hello/John
 
 You can now stop the application with a `CTRL +C` in the running terminal.
 
-> :bulb: You can also run application's test with `encore test ./<your service>`
+> 💡 You can also run application's test with `encore test ./<your service>`
 > E.g `encore test ./hello`
 
 [Go back to the exercises](./README.md)

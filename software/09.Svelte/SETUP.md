@@ -3,7 +3,7 @@
 ## 1. Installation
 
 Please make sure you have the following programs installed:
- - [node (version 14 or higher)](https://github.com/nodejs/node): javascript interpreter
+ - [node (version 14 or higher)](https://github.com/nodejs/node): JavaScript runtime
  - [npm](https://www.npmjs.com/): node package manager
 
 To install node:
@@ -12,19 +12,24 @@ To install node:
 
 ## 2. Project
 
-Create a new Svelte application with these commands :
+Create a new Svelte application with this command:
 
 ```shell
-$ npx degit sveltejs/template poc-workshop # Clone svelte template
-$ cd poc-workshop # Cd into application
-$ node scripts/setupTypeScript.js # Use Typescript
+npm init vite
+```
+and select the following options
+```shell
+✔ Project name: › svelte-workshop-poc
+✔ Select a framework: › svelte
+✔ Select a variant: › TypeScript
 ```
 
 ## 3. Start
 
 ```shell
-$ npm install # Install dependencies
-$ npm run dev # Run application in dev mod
+cd svelte-workshop-poc  # Move into the application
+npm install  # Install dependencies
+npm run dev  # Run application in dev mod
 ```
 
 [Go back to the exercise](./README.md)

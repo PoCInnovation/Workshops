@@ -7,7 +7,7 @@ Please make sure you have the following programs installed:
  - [Tetra](https://github.com/17cupsofcoffee/tetra): A simple 2D game framework written in Rust.
 
 ### Install Rust:
- - Under all systems: 
+ - Under all systems:
 ```shell
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
@@ -38,6 +38,6 @@ cargo add tetra
 
 ## 3. Start workshop
 
-> :bulb: We recommend you to follow the [Tour of Rust](https://tourofrust.com/index.html) for this workshop.
+> 💡 We recommend you to follow the [Tour of Rust](https://tourofrust.com/index.html) for this workshop.
 
 [Go back to the exercise](./README.md)

@@ -1,4 +1,4 @@
-# Setup :wrench:
+# Setup 🔧
 
 In order to launch our music platform, you have to download Docker and the `source.zip`
 which contains the code of our web application.

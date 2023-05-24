@@ -3,9 +3,9 @@
 ## Installation
 
 You will need:
-- [node (version 10 minimum)](https://github.com/nodejs/node): javascript interpreter
+- [node (version 10 minimum)](https://github.com/nodejs/node): JavaScript runtime
 - [npm](https://www.npmjs.com/): node package manager
-- [npx](https://www.npmjs.com/package/npx) : node_modules command executor
+- [npx](https://www.npmjs.com/package/npx): node_modules command executor
 
 To install node:
 - under fedora: `sudo dnf install nodejs`.
@@ -36,6 +36,10 @@ You can also display the database via a web interface:
 ```sh
 npx prisma studio
 ```
+💡 If you have an error while running this command, try to update the `prisma` packages:
+```sh
+npm add -D prisma@3.15.0 && npm add @prisma/client@3.15.0
+```
 
 ## Prisma in javascript code
 
@@ -60,8 +64,8 @@ async function main() {
   // ... you will write your Prisma Client queries here
 }
 ```
-Here we create an asyncronous function. We will code inside later.
-> if you need more informations on how async functions work, [read this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+Here we create an asynchronous function. We will code inside later.
+> if you need more information on how async functions work, [read this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
 
 <br>
 

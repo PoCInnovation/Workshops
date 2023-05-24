@@ -1,9 +1,9 @@
-# Workshop 22 - SETUP
+# Workshop 21 - SETUP
 
 ## Dependencies
 
 Please make sure you have the following programs installed:
-- [node (version 14 or higher)](https://github.com/nodejs/node): javascript interpreter
+- [node (version 14 or higher)](https://github.com/nodejs/node): JavaScript runtime
 - [npm](https://www.npmjs.com/): node package manager
 - [yarn](https://yarnpkg.com/): a better package manager
 
@@ -18,7 +18,7 @@ To install `yarn`: `npm install --global yarn`
 > You will need a Github repository to use Netlify 📂
 - Create a Github repository (named: `Serverless-Gifs-App` for example) and clone it with `git clone`
 - Download the [files](./Netlify-App.zip)
-- Run the following commands :
+- Run the following commands:
 ```shell
 mv Netlify-App/* Netlify-App/.* [YOUR REPO NAME]
 cd [YOUR REPO NAME]
@@ -31,14 +31,14 @@ yarn start
 ```
 - To check if everything is good, go to [http://localhost:3000](http://localhost:3000)
   <details>
-    <summary>You should see :</summary>
+    <summary>You should see:</summary>
   
    ![Netlify Setup Page](.github/assets/setupPage.png)
 
   </details>
 - Shut down the server (Ctrl + C)
 
-> To finish this part, we gonna push everything on github 📌
+> To finish this part, we're gonna push everything on github 📌
 - Commit and push
 
 ## Netlify
@@ -51,14 +51,14 @@ yarn start
 - Click the `Create an App` button
 - Create an account
 - You should get a private key on your dashboard
-- Take care of it, you will need it sooner !
+- Take care of it, you will need it later !
 
 ## Serverless Framework
 
-**Not inside your github repository created above**
+### **Not inside your github repository created above**
 - Install [serverless framework](https://www.serverless.com) with `npm install -g serverless`
 - Download the [files](./Serverless-API.zip)
-- Run the following commands :
+- Run the following commands:
 ```shell
 unzip Serverless-API.zip
 cd Serverless-API
@@ -68,7 +68,7 @@ yarn install
 
 # Now we gonna verify that the api is working
 yarn test
-# You should the get all the tests successfull (in green)
+# You should the get all the tests successful (in green)
 ```
 
 [Go back to the exercise](./README.md)

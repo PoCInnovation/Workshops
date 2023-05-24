@@ -1,17 +1,17 @@
-# Workshop 22 - Encore :rocket:
+# Workshop 22 - Encore 🚀
 
-:heavy_check_mark: Discover [Encore](https://encore.dev/) a powerful go framework to develop APIs.  
+✔️ Discover [Encore](https://encore.dev/) a powerful go framework to develop APIs.  
 
-:heavy_check_mark: Learn services logics
+✔️ Learn services logics
 
-:heavy_check_mark: Improve your Go and architecture design skills
+✔️ Improve your Go and architecture design skills
 
 ## Introduction
 
-With the evolution of the web the arrival of Saas, Paas, Iaas, develop and deploy an API has become a *must-have* knowledge.
+With the evolution of the web the arrival of SaaS, PaaS, IaaS, developing and deploying an API has become a *must-have* knowledge.
 More and more frameworks exist to code faster, optimize deployment, remove boring boilerplate but there is no solution that manage both of those things for you.
 
-[Encore](https://encore.dev/) does, it's a powerful golang framework that help you to build production-ready API and services without coding boilerplate, pay attention to the deployment or manage your database. In conclusion, [Encore](https://encore.dev/) helps you to stay focus on the most important thing : your product.
+[Encore](https://encore.dev/) does, it's a powerful golang framework that help you to build production-ready API and services without coding boilerplate, pay attention to the deployment or manage your database. In conclusion, [Encore](https://encore.dev/) helps you to stay focus on the most important thing: your product.
 
 In this workshop, we will create a simple delivery application that will manage packets to understand and uses all features available by [Encore](https://encore.dev/).
 
@@ -27,18 +27,18 @@ First, create a new folder named `discovery` and create the file `discovery.go` 
 
 > With encore, each directory that contains an endpoint is considered as a *services*.
 
-We are going to create **3** endpoints :
+We are going to create **3** endpoints:
 
-##### 1 - URLParam
+### 1 - URLParam
 
 That endpoint aim to retrieve the parameter from the url.
 
 Create the function `URLParam` which takes a `string` named `param` as url parameter.
 It should return an object of type `URLParamResponse`  which contains a field  `Message` of type `string`.
 
-:warning: The message's content must be `Received a query with '<$param>' as url parameter`.
+⚠️ The message's content must be `Received a query with '<$param>' as url parameter`.
 
-:bulb: You must [configure your function](https://encore.dev/docs/develop/services-and-apis#access-controls) to be reached through a request to `/url/:param` with the `GET` method.
+💡 You must [configure your function](https://encore.dev/docs/develop/services-and-apis#access-controls) to be reached through a request to `/url/:param` with the `GET` method.
 
 Example
 ```shell
@@ -49,19 +49,19 @@ curl http://localhost:4000/url/test
 
 ```
 
-##### 2 - QueryParam
+### 2 - QueryParam
 
 This one aim to retrieve the parameter from query parameters
 
-Create the function `QueryParam` which takes as query parameter two fields :
+Create the function `QueryParam` which takes as query parameter two fields:
 - `Foo` of type `string`
 - `Bar` of type `int`
 
 It should return an object of type `QueryParamResponse` which contains a field `Result` of type `string`.
 
-:warning: The result's content must be `Received a query with param foo='<$Foo>' and param Bar='<$Bar>'`
+⚠️ The result's content must be `Received a query with param foo='<$Foo>' and param Bar='<$Bar>'`
 
-:bulb: You must [configure your function](https://encore.dev/docs/develop/services-and-apis#access-controls) to be reached through a request to `/query` with the `GET` method
+💡 You must [configure your function](https://encore.dev/docs/develop/services-and-apis#access-controls) to be reached through a request to `/query` with the `GET` method
 
 Example
 ```shell
@@ -71,19 +71,19 @@ curl http://localhost:4000/query\?foo\=test\&bar\=3
 }
 ```
 
-##### 3 - BodyParam
+### 3 - BodyParam
 
 The last one aim to retrieve values from the body.
 
-Create the function `BodyData` which takes a body with two fields :
+Create the function `BodyData` which takes a body with two fields:
 - `Title` of type `string`
 - `Content` of type `string`
 
 It should return an object of type `BodyDataResponse` which contains a field `Message` of type `string`
 
-:warning: The message's content must be `Received a body with title ='<$Title>'' and content='<$Content>'`
+⚠️ The message's content must be `Received a body with title ='<$Title>'' and content='<$Content>'`
 
-:bulb: You must [configure your function](https://encore.dev/docs/develop/services-and-apis#access-controls) to be reached through a request to `/body` with a `POST` method.
+💡 You must [configure your function](https://encore.dev/docs/develop/services-and-apis#access-controls) to be reached through a request to `/body` with a `POST` method.
 
 Use the [dashboard](https://encore.dev/docs/observability/dev-dash) to test your function, it should be easier than a `curl` command.
 
@@ -105,18 +105,18 @@ The client will be forward to our other services:
 - `delivery`: manage delivery
 - `deliveryman`: manage deliverymen
 
-This way, we got independant services that share the same database to simplify data management, specialy when we will need to handle relation between our tables.
+This way, we got independent services that share the same database to simplify data management, especially when we will need to handle relation between our tables.
 
 > deliverymen will be protected with an authentication process explained further.
 
-#### Database
+### Database
 
-First, create a new folder named `delivery`, this is where we will code our `develiry-api`.
+First, create a new folder named `delivery`, this is where we will code our `delivery-api`.
 
 Before coding our API, we must define models and create our database.<br>
 We are lucky, [encore](https://encore.dev/docs/develop/databases) manage the boring stuff for you, you only have to create a `migrations` directory in a `service` that will store your `sql` files and everything will work automatically.
 
-Let's create our database :
+Let's create our database:
 - Create a `database` service
 - Create a directory `migrations` in your service
 - Create a file named `1_create_database.up.sql` in that folder
@@ -145,7 +145,7 @@ CREATE TABLE packet
 );
 ```
 
-> The purpose of this workshop is not to waste your time with postgresql, we keep it for another workshop :laught:
+> The purpose of this workshop is not to waste your time with postgresql, we keep it for another workshop 😄
 
 Then, you will need to define your entities as go code to easily manage it in our API
 
@@ -153,7 +153,7 @@ Then, you will need to define your entities as go code to easily manage it in ou
 - Create a file `entities.go`.
 - In this file, you will define a [struct](https://gobyexample.com/structs) `Packet` with fields corresponding to the database model.
 
-> :bulb: Don't lost time defining an enumeration if you are not familiar with Go.
+> 💡 Don't lost time defining an enumeration if you are not familiar with Go.
 
 You will also need to export your database client to execute SQL query on your models.
 
@@ -190,11 +190,11 @@ func Placeholder(_ context.Context) error {
 
 Here we are exporting a client from [sqlx](https://pkg.go.dev/github.com/jmoiron/sqlx) ORM, a wrapper around [sql](https://pkg.go.dev/database/sql) to execute query easily.
 
-> :bulb: Note that `encore` provide his own version of the [sql](https://pkg.go.dev/database/sql) package named `sqldb`.
+> 💡 Note that `encore` provide his own version of the [sql](https://pkg.go.dev/database/sql) package named `sqldb`.
 
-:bulb: **In this workshop, you will need to write raw SQL queries to interfact with the database. To help you, look at that [little sheatcheet](./help/requests.sql) with all queries involved.**
+💡 **In this workshop, you will need to write raw SQL queries to interact with the database. To help you, look at that [little cheatsheet](./help/requests.sql) with all queries involved.**
 
-#### Packet's time
+### Packet's time
 
 Now we will create our endpoints to manage our packets.
 
@@ -206,7 +206,7 @@ First, we must retrieve our database client, to do so a file named `packet.go` t
 
 Next, let's expose endpoints to read our packets.
 
-Create the file `get.go` that will contain two functions :
+Create the file `get.go` that will contain two functions:
 
 - `GetAll` that will retrieve **all** packets stored in the database.<br>
   You must return an object with the list of all packets and the number of package.<br>
@@ -227,9 +227,9 @@ Your endpoint must be public and reachable with a request `POST` on `/packet`
 
 Perfect, now verify your endpoint with the [awesome encore dashboard](https://encore.dev/docs/observability/dev-dash) created when you run `encore run`.
 
-#### Bonus
+### Bonus
 
-If you are a brave developer, you can continue with `Update` and `Delete`. You got the logic so it shouldn't be a big deal for you now :rocket:
+If you are a brave developer, you can continue with `Update` and `Delete`. You got the logic so it shouldn't be a big deal for you now 🚀
 
 ## Step 3 - Hire employee
 
@@ -258,7 +258,7 @@ Your `database` service should now have the following architecture.
 
 Now, create a new `deliveryman` service at the root of your folder `delivery` and a file that will retrieve your database client.
 
-#### Our first employee
+### Our first employee
 
 Let's take a look at the `deliveryman` table in the database
 
@@ -282,15 +282,15 @@ In this one, write a function `Add` that will take a `CreateDTO` as parameter th
 Then, add it to your database and return a message of confirmation.<br>
 Your endpoint must be reachable with a request `POST` on path `/deliveryman`
 
-#### What's the passphrase sir ?
+### What's the passphrase sir ?
 
 If you don't notice, there was no instruction about the kind of endpoint your `Add` function must be, is it public, private or auth ?<br>
 We don't really want to allow anyone adding an employee so we should be able to authenticate the one that trying to create a resource on our service.<br>
 Storing the caller identity will be too long for a workshop and involve to design `login` and `logout` endpoint, instead we will just use a simple `passphrase` as proof of our identity.
 
-> :warning: I **DON'T** recommend that method in production API, it's just to win time.
+> ⚠️ I **DON'T** recommend that method in production API, it's just to win time.
 
-Encore framework provide an [elegant way](https://encore.dev/docs/develop/auth) to manage our authentication system through a simple keyword : `authHandler`.
+Encore framework provide an [elegant way](https://encore.dev/docs/develop/auth) to manage our authentication system through a simple keyword: `authHandler`.
 
 Create a new service named `auth` in the `delivery` folder.
 
@@ -305,11 +305,11 @@ Now you can add the keyword `auth` to the function `Add`.
 
 Great, your endpoint is protected ! Test it with the dashboard.
 
-#### Manage deliverymen
+### Manage deliverymen
 
 You are now ready to complete other function.
 
-We want to :
+We want to:
 - List all deliverymen
 - Get a deliveryman information selected by his ID
 
@@ -323,7 +323,7 @@ We have deliverymen and packets, the only missing part is the `delivery` service
 
 Create it in the `delivery` folder (*yes they are nested*).
 
-#### Send & receive
+### Send & receive
 
 As usual, retrieve your database client in a file named `delivery.go`.
 
@@ -338,11 +338,11 @@ Now let's expose your functions.
 
 Those two functions must be public and reachable with a request `POST`. You are free to choose the name of your endpoints.
 
-> :bulb: You can also write some error handling about status. For example, a deliveryman with the status `working` can not handle an other delivery request.
+> 💡 You can also write some error handling about status. For example, a deliveryman with the status `working` can not handle an other delivery request.
 
-#### Who's the owner
+### Who's the owner
 
-> :bulb: This step is a bonus.
+> 💡 This step is a bonus.
 
 I think you notice it but we can't actually see the links between deliverymen and packets when we retrieve our list of packet or deliverymen.
 
@@ -398,9 +398,9 @@ That would be awesome to get something like this when we reach `/deliveryman`
 
 Find a way to get that result.
 
-:bulb: They are views created when initialized the database, maybe that could help you. You can find the `sql` file in `database/migrations/`.
+💡 They are views created when initialized the database, maybe that could help you. You can find the `sql` file in `database/migrations/`.
 
-Congratz ! You finished that workshop and build your own delivery API with [Encore framework](https://encore.dev/).
+Congrats! You finished that workshop and build your own delivery API with [Encore framework](https://encore.dev/).
 
 ## Bonus
 
@@ -414,12 +414,12 @@ Congratz ! You finished that workshop and build your own delivery API with [Enco
 
 - [Discover Encore community](https://encore.dev/docs/community)
 - [Encore git repository](https://github.com/encoredev/encore)
-- [Deploy in production](https://encore.dev/docs/deploy/platform)
-- [Monitor your application](https://encore.dev/docs/observability/monitoring) 
+- [Deploy in production](https://encore.dev/docs/deploy/infra)
+- [Monitor your application](https://encore.dev/docs/observability/monitoring)
 
 ## Authors
 
-| [<img src="https://github.com/TomChv.png?size=85" width=85><br><sub>Tom Chauveau</sub>](https://github.com/TomChv) | 
+| [<img src="https://github.com/TomChv.png?size=85" width=85><br><sub>Tom Chauveau</sub>](https://github.com/TomChv) |
 | :---: |
 <h2 align=center>
 Organization
@@ -427,22 +427,23 @@ Organization
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

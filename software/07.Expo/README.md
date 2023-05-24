@@ -1,5 +1,11 @@
 # Workshop 7 - Mobile app with Expo
 
+✔️ Learn the basics of [React Native](https://reactnative.dev/)
+
+✔️ Discover [Expo](https://expo.dev/) to easily develop a mobile app
+
+✔️ Explore mobile-specific features with the camera
+
 In this workshop, we will create a simple mobile in written in React Native with TypeScript. When working with mobile apps, you often need to build your app, have `xcode` or `android studio` launched, your device plugged, your ram almost full, struggling with permissions and compilations errors because of unsupported model or update etc.
 
 Expo is here to simplify all this laborious work. No wire, no android studio, no version errors, just a QR code to scan and the app is locally built and sent to the expo client on your phone. Way easier!
@@ -8,7 +14,7 @@ Expo is here to simplify all this laborious work. No wire, no android studio, no
 
 All the required information to install dependencies can be found in [SETUP.md](./SETUP.md).
 
-## Step 0.5: Informations
+## Step 0.5: Information
 
 As written in the name, react native is based on React, a very popular front-end framework to create websites. `components` are the core of React. They represent a single element in a web page, like a `text` box, a `button`, a `div`, etc. All combined, they create a fully working web page. These components are reusable, they prevent you from code duplication. This also works in React Native, component won't be web elements but will create native mobile components.
 
@@ -23,16 +29,15 @@ Now that it's clear, time to work! The template repo is quite large, so let's di
 - What is the main navigator and what is the navigator describing the bottom bar
 
 
-
 ## Step 1: Basic todolist
 
-Now that you understand a bit more the architecture of the project, let's create something! First off, wipe everything inside the `tabOneScreen.tsx` file: we will create a simple todolist component.
+Now that you understand a bit more the architecture of the project, let's create something! First off, wipe everything inside the `TabOneScreen.tsx` file: we will create a simple todolist component.
 
 The goal of the workshop of not to learn how to code in React but rather learn how to use React Native, so we won't waste time on creating basic components. Here is a `Task` component, copy everything inside your empty file:
 
 ```tsx
 import * as React from 'react';
-import { StyleSheet, ScrollView } from 'react-native';
+import { ScrollView } from 'react-native';
 import { Text, View } from '../components/Themed';
 
 function Task(props: {title: string, completed: boolean}) {
@@ -70,7 +75,7 @@ Some precisions:
 
 - React Native uses different components of React, here is the [documentation](https://reactnative.dev/docs/components-and-apis)
 
-- By default, all task `completed` props will be `false`
+- By default, all task `completed` props will be set to `false`
 
 - `taskList` is a const variable that can only be changed by the function `setTaskList` associated with it
 
@@ -79,7 +84,6 @@ Some precisions:
 - Each index of the array represents the variable that will be sent to the `Task` component
 
 > The [map](https://reactjs.org/docs/lists-and-keys.html) function will be very useful to iterate over our array
-
 
 
 ## Step 2: Online loading
@@ -91,17 +95,17 @@ Add this block of code after your imports:
 ```tsx
 import axios from 'axios'
 
-interface TodoDto {
-	userId: number;
-	id: number;
-	title: string;
-	completed: boolean;
+type TodoDto = {
+    userId: number;
+    id: number;
+    title: string;
+    completed: boolean;
 }
 
 async function getTasks(): Promise<TodoDto[]> {
-  const ret = await axios.get("https://jsonplaceholder.typicode.com/todos")
-  console.log(ret.data)
-  return ret.data
+    const ret = await axios.get("https://jsonplaceholder.typicode.com/todos")
+    console.log(ret.data)
+    return ret.data
 }
 ```
 
@@ -109,8 +113,7 @@ and call `getTasks` on your list component (before the return), this should prin
 
 - Don't forget to use the `completed` variable
 - The data fetching is asynchronous, you won't have data while it's loading, so `taskList` will be called with `React.useState<TodoDto[] | null>(null);`
-- You'll need the [useEffect](https://modern-javascript.fr/comment-utiliser-une-async-function-dans-un-hook-useeffect-avec-react/) to execute actions when the component is created (here, the action will be to load data)
-
+- You'll need the [useEffect hook](https://reactjs.org/docs/hooks-effect.html) to execute actions when the component is created (here, the action will be to load data)
 
 
 ## Step 3: QR code scanning
@@ -121,7 +124,7 @@ First off, you'll have to install new packages:
 
 ```bash
 # Stop your server and run
-expo install expo-camera expo-barcode-scanner expo-media-library
+npx expo install expo-camera expo-barcode-scanner expo-media-library
 
 # Then restart your server
 npm start
@@ -129,8 +132,9 @@ npm start
 
 > Here is the [Camera documentation](https://docs.expo.io/versions/latest/sdk/camera/), there are useful examples, search for code scanning
 
-- `handleBarCodeScanned` arguments type are `{ type: string; data: string }`
-- Your IDE might show you errors because of types but don't waste time fixing them if it doesn't block the compilation
+> You can do this in the file `TabTwoScreen.tsx` 😉
+
+- `handleBarCodeScanned` arguments type are `{ type: string; data: string }` (but you may only need `data` 😉)
 - If the QR code struggles, do not hesitate to reload the app (shake your device to trigger the option panel)
 
 You can use this QR code as an example:
@@ -147,25 +151,26 @@ Our camera works great, but we cannot even do basic stuff such as taking picture
 - A **flip** button that changes the camera type from front to back and vice versa
 - A **trigger** button that will take a picture and save it to the camera roll
 
-> You'll need to use React refs to take a picture
+> You'll need to use [React refs](https://reactjs.org/docs/hooks-reference.html#useref) to take a picture
+> Your IDE might show an error when using the `ref` attribute, you can ignore it as it shouldn't block the compilation
 
 ## Bonus
 
 Here is a list of possible features you could add to your project
 
-**Easy**
+### Easy
 
-- Add styles to your todolist ! Use some CSS
+- Add styles to your todolist! Use some CSS
 - Add a [pull to refresh](https://reactnative.dev/docs/scrollview#refreshcontrol) option to your `ScrollView`s
-- Use a [Flatlist](https://reactnative.dev/docs/scrollview#refreshcontrol) instead of a `ScrollView` to have the ability to load data when the end is reached (and also have the ability to pull to refresh)
+- Use a [Flatlist](https://reactnative.dev/docs/flatlist) instead of a `ScrollView` to have the ability to load data when the end is reached (and also have the ability to pull to refresh)
 
-**Medium**
+### Medium
 
 - Add new pages to the bottom tab navigation
 - Create a button that [navigates to another screen](https://reactnavigation.org/docs/use-navigation) when pressed: `navigation.navigate("SCREEN_NAME")`
 - Try changing the bottom tab navigation icons
 
-**Hard**
+### Hard
 
 - Create an Authentication process with a context:
   - Create another **navigator** with a single screen: the app landing screen
@@ -178,29 +183,30 @@ Here is a list of possible features you could add to your project
 ## Authors
 
 | [<img src="https://github.com/PaulMonnery.png?size=85" width=85><br><sub>Paul Monnery</sub>](https://github.com/PaulMonnery)
-| :---: | 
+| :---: |
 <h2 align=center>
 Organization
 </h2>
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

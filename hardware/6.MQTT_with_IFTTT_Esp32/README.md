@@ -10,7 +10,7 @@
   - [**`Step 05`** - SetUp IFTTT](#step-05---setup-ifttt)
   - [**`Step 06`** - Let's go code](#step-06---lets-go-code)
   - [**`Step 07`** - Turn ON and turn OFF](#step-07---turn-on-and-turn-off)
-  - [:tada: Congratulation !](#tada-congratulation-)
+  - [🎉 Congratulation !](#tada-congratulation-)
   - [Authors](#authors)
 
 ## Story
@@ -35,7 +35,7 @@ In an increasingly connected world, we are going to use your voice assistant to 
 
 </details>  
 
-### 📑 Description: 
+### 📑 Description:
 Your first objective is to light an LED on your ESP32 with code.
 
 ### 📌 Tasks:
@@ -56,7 +56,7 @@ Use the LED on your card or an external LED and turn it on.
 
 </details>
 
-### 📑 Description: 
+### 📑 Description:
 Now it's time to make your LED blink.  <br/>
 To do this, implement some code in your ESP32. <br/>
 
@@ -135,7 +135,7 @@ IFTTT is shorthand for If This Then That; it's an automation tool for connecting
 - Go on [IFTTT](https://ifttt.com/home) for create your first `Applet`.
   - Here, you will create an applet that will link your voice assistant and Adafruit (that we have set in the previous step)
 - Create new Applet.
-- The eternal choice between IOS and Android ! 
+- The eternal choice between IOS and Android !
   - If you have an **Android** this step will be much easier in the `"If this"` add `"Google assistant"` and fill in the fields.
   - If you have an **iPhone** follow this [link](https://help.ifttt.com/hc/en-us/articles/360053753113-Use-Siri-to-Run-IFTTT-Applets) to use `siri`.
     - [Here your private key for webhooks](https://ifttt.com/maker_webhooks)
@@ -175,25 +175,25 @@ Now that all the setups are done we are going to code the program allowing to su
 
 ## **`Step 07`** - Turn ON and turn OFF
 
-### 📑 Description: 
+### 📑 Description:
 Currently you only send "on" thanks to your voice assistant now it would be nice to send "off" right?
 
 ### 📌 Tasks:
 
 - Create a new `Applet` which will send off to the `on_off` feed.
 
-### ✔️ Validation: 
+### ✔️ Validation:
 
 Use your voice assistant and turn your LED on and off !
 
-## :tada: Congratulation !
+## 🎉 Congratulation !
 
 You now know the basics of MQTT ESP32. Feel free to use your imagination to impletement IoT Communcation.
 Or combine the previous exercises for new results.
 
 ## Authors
 
-| [<img src="https://github.com/Cleopha.png?size=85" width=85><br><sub>Coline SEGURET</sub>](https://github.com/Cleopha) | 
+| [<img src="https://github.com/Cleopha.png?size=85" width=85><br><sub>Coline SEGURET</sub>](https://github.com/Cleopha) |
 | :---: |
 <h2 align=center>
 Organization
@@ -201,22 +201,23 @@ Organization
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

@@ -9,7 +9,7 @@ In each directory, you will find the exercises, a README explaining the purpose 
 
 ### [🌐 Click to join our Discord](https://discord.gg/Yqq2ADGDS7)
 
-## 0 - Python3 & Jupyter Notebook 🐍
+## Python3 & Jupyter Notebook 🐍
 
 Basics of python and usage of Jupyter Notebook. You will:
 - Learn to use iPython notebooks
@@ -17,27 +17,19 @@ Basics of python and usage of Jupyter Notebook. You will:
 - Solve complex algorithm exercises
 - Master the different programming paradigms of Python
 
-## 1 - Data Science & Pandas basics 👨‍🔬
+## Data Science & Pandas basics 👨‍🔬
 Basics of Data Science and introduce Pandas. You will:
 - learn to use Pandas
-- analyse huge datasets
+- analyze huge datasets
 - clean datasets
-- visualize data analyse
+- visualize data analyses
 
-## 2 - Logistic Regression :computer:
-Creation of your first classification method. You will:
-- initialize hyperparameters
-- calculate of the loss function and usage of gradient
-- usage of optimizing algorithm
+## PyTorch 🔦
+Usage of PyTorch. You will:
+- create a model
+- solve fashion_mnist
 
-## 3 - Hidden Layer :chart_with_upwards_trend:
-Discover the effect of a hidden layer. You will:
-- create a neural network with a hidden layer
-- use neurons with a nonlinear activation function (tanh)
-- calculate the loss cross-entropy
-- implement forward and backward propagations
-
-## 4 - Tensorflow :orange_book:
+## Tensorflow 📙
 Usage of Tensorflow. You will:
 - create a Sequential model
 - use Dense layers
@@ -45,31 +37,35 @@ Usage of Tensorflow. You will:
 - classify fashion_mnist
 - classify mnist
 
-## 5 - Convolution :black_square_button:
+## Convolution ⬛
 Discover the effect and usage of convolution. You will:
 - understand the point to use convolutional neural network
 - use Conv2D
 - use Maxpooling2D
 
-## 6 - Value function :house_with_garden:
-Basics of Reinforcement Learning. You will:
-- understand the Markov Decision Process
-- use the value function
-- solve the *Antic* maze
+## Gradio Interface 📱
+- Create a Gradio interface
+- Share your app on the Gradio platform
 
-## 7 - Q-Learning 🚙
-Continuation of Reinforcement Learning. You will:
+## Q-Learning 🚙
+Basics of Reinforcement Learning. You will:
 - use Gym environment
 - use Q learning
-- solve Mountain-Car-V0
+- solve Frozen Lake
 
-## 8 - Decision Tree :evergreen_tree:
+## DQN 🚙
+Advanced Reinforcement Learning. You will:
+- use Gym environment
+- use Deep Q Networks
+- solve Lunar Lander
+
+## Decision Tree 🌲
 Discover one of the most popular supervised learning methods for classification problems. You will:
 - Use Scikit-learn
 - Create a Decision Tree
 - Create a Decision Tree Forest
 
-## 9 - Predict house price 🗺️
+## Predict house price 🗺️
 Use different machine learning techniques to predict house prices. You will:
 - Use Scikit-learn
 - Create neural networks with PyTorch
@@ -82,8 +78,6 @@ Feel free to ask us any questions.
 - [Bases Python:](https://docs.google.com/presentation/d/1pcIwhpaE8DIS47WJjhXEbS0UCTLH5rA_gf3pE6iMB5A/edit?usp=sharing)
 - [Data Analysis & Data Visualization:](https://docs.google.com/presentation/d/1Ib0v-utClIE7NmevnEupjWspj17OjX0qYI338D1cUZw/edit?usp=sharing)
 - [Bases IA:](https://drive.google.com/file/d/125KpOeQkCcQDvz07naxenn_eEN0FUwfi/view?usp=sharing)
-- [Regression Logistique:](https://docs.google.com/presentation/d/1NMEmuURgo5cJTmHlS5T6E25yqqirFsrbhn8T0p1EODM/edit?usp=sharing)
-- [Réseaux de neurones:](https://drive.google.com/file/d/1X44I3y7ZUlvbXAr0-3PbTiwAxCkId4dL/view?usp=sharing)
 - [Hidden Layers:](https://docs.google.com/presentation/d/1su1fRQnxV8pCCseJcuMlo_MugO-XjeuUthj1QkLEmuc/edit?usp=sharing)
 - [Données non linéaires:](https://drive.google.com/file/d/1kj_TQVw2IN0jg9ud0gDGAZrn_7bE9FUo/view?usp=sharing)
 - [Tensorflow:](https://slides.com/thytu/tensorflow)
@@ -98,22 +92,23 @@ Organization
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

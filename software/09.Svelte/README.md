@@ -12,61 +12,59 @@
 
 All the required information to install dependencies can be found in [SETUP.md](./SETUP.md).
 
-> :bulb: You may want to take a look at the [Svelte tutorial](https://svelte.dev/tutorial/basics) for this workshop.
+> 💡 You may want to take a look at the Svelte [tutorial](https://svelte.dev/tutorial/basics) and [documentation](https://svelte.dev/docs) for this workshop.
 
-## Step 1 - Time for Event
+## Step 1 - Your first component
 
 To begin with, we will learn how to create a simple component and display it in our page.
 
-Create a `components` directory in `src/` which will contain a file named `Event.svelte`.
+Create a `components` directory in `src/` which will contain a file named `TopBar.svelte`.
 
-This component must be a simple `div` which contains the following props:
+Inside it, you'll create a basic top bar that will be `fixed` at the top of your page and display the title of your application.
+
+> Display your component with a cool style 🚀  
+> For this, you can use CSS or a UI library like [Svelte Materialify](https://svelte-materialify.vercel.app/)
+
+Then, you can call it inside your `App.svelte` to display it 🤩
+
+### 📖 Resources
+- [Import components in Svelte](https://svelte.dev/tutorial/nested-components)
+- [Svelte's style](https://svelte.dev/tutorial/styling)
+
+## Step 2 - Time for Events
+
+You've created your first Svelte components, that's cool! But your application is a bit empty, isn't it sad? 😢
+
+Create file named `Event.svelte` in `src/components`, it will contain a component to display an event with the following props:
   - `id` as a `number`
   - `title` as a `string`
   - `description` as a `string`
   - `startingDate` as a `Date`
   - `endDate` as a `Date`
 
-> :bulb: You can export these variables as types with a [script module](https://stackoverflow.com/questions/64064506/export-typescript-type-in-svelte-file) to define your properties.
+> 💡 You can export these variables as types with a [script module](https://stackoverflow.com/questions/64064506/export-typescript-type-in-svelte-file) to define your properties.
 
-Display your component's props with a cool [style](https://developer.mozilla.org/en-US/docs/Web/CSS).
+> 💡 You may want to create an array with every month of the year displayed properly. The same applies for the days of the week.
 
-> :bulb: You may want to create an array with every month of the year displayed properly. The same applies for the days of the week.
+Then, create two events in your `App.svelte` and display them.
 
-Create two events in your `App.svelte` and display them.
+> Don't forget to apply styles to your components 😉
 
-##### Resources
-
-- [Import components in Svelte](https://svelte.dev/tutorial/nested-components)
+### 📖 Resources
 - [Properties with Svelte](https://svelte.dev/tutorial/declaring-props)
-- [Svelte's style](https://svelte.dev/tutorial/styling)
-- [For loop in Svelte](https://medium.com/@willjohnson.io/how-to-loop-through-a-list-of-data-in-svelte-baaaaf397ec4)
 
-## Step 2 - Beach umbrella
 
-You've got events, that's cool! But your application has no top bar, isn't it sad? 😢
+## Step 3 - Interaction
 
-Create a new component named `TopBar` that has a `title`.
-
-Your topBar must be `fixed` at the top of your page and display the title of your application.
-
-> :bulb: The `fixed` property can help you achieve that.
-
-> Don't forget to apply styles to your components.
-
-## Step 3 - Pop forms
-
-It's time to add more events !
+It's time to add more events 🚀
 
 Create a `Button` component which opens a `Form` component in the center of your page.
 
 Your `Button` must store the state of your form (open or closed) as a boolean. You must also add two functions to control the state of the `Form` component.
 
-You must display another `Button` to close the page when it's open.
+You have to display another `Button` to close the page when it's open.
 
-> :bulb: Take a look at the [on:submit property](https://svelte.dev/repl/8eb540552faa4651a398b182fa5cdd48?version=3.24.1).
-
-## Step 4 - Send forms
+## Step 4 - Send your form
 
 Add fields to your `Form` component to add new events.
 
@@ -76,45 +74,32 @@ You must add the following fields:
   - `start date`
   - `end date`
 
-> :bulb: The [input](https://developer.mozilla.org/fr/docs/Web/HTML/Element/Input) tag will be useful.
+> 💡 The [input](https://developer.mozilla.org/fr/docs/Web/HTML/Element/Input) tag will be useful.
+
+> 💡 Take a look at the [on:submit property](https://svelte.dev/repl/8eb540552faa4651a398b182fa5cdd48?version=3.49.0).
 
 A `button` must appear to cancel the form and another one to submit it. It should add an event to your page.
 
-> :bulb: You should use a [store](https://svelte.dev/tutorial/writable-stores) to synchronize your components.
+> 💡 You should use a [store](https://svelte.dev/tutorial/writable-stores) to synchronize your components.
 
-##### Resources
+### Resources
 
 - [Store API](https://svelte.dev/docs#svelte_store)
-
-## Step 5 - Deploy your app
-
-Congratulations! You made your first Svelte application.
-
-It's time to deploy it easily!
-
-Create a simple [Dockerfile](https://docs.docker.com/engine/reference/builder/) to deploy your app with a simple image.
-
-It should be possible to deploy your app using those commands:
-
-```
-docker build -t workshop-poc/svelte:v1 .
-docker run -p 5000:5000 workshop-poc/svelte:v1
-```
-
-> :bulb: [Install](https://github.com/PoCInnovation/Workshops/blob/master/software/04.Docker/SETUP.md) docker.
+- [For loop in Svelte](https://medium.com/@willjohnson.io/how-to-loop-through-a-list-of-data-in-svelte-baaaaf397ec4)
 
 ## Bonus
 
+Congratulations! You made your first Svelte application.
 To go further, consider implementing the following bonuses:
 
-- Improve styling with an [ui library](https://madewithsvelte.com/ui-library).
-- Add a login page to handle multiple users.
+- Add a login form to handle multiple users.
+- Create multiple pages using [SvelteKit](https://kit.svelte.dev/)
 - Implement Dark Theme support.
 
 ## Further reading
 
 - [Cool Svelte projects](https://madewithsvelte.com/)
-- [6 reasons to use Svelte](https://betterprogramming.pub/6-reasons-why-you-should-consider-svelte-for-your-next-project-45b32c92e229)
+- [6 reasons to use Svelte](https://www.eternaldev.com/blog/6-reasons-for-developers-to-consider-svelte-for-your-next-project)
 - [Svelte vs React](https://www.twilio.com/blog/react-svelte-comparing-basics)
 - [Switch from React to Svelte](https://blog.logrocket.com/should-you-switch-from-react-to-svelte/)
 - [Svelte API](https://svelte.dev/docs#Before_we_begin)
@@ -122,29 +107,30 @@ To go further, consider implementing the following bonuses:
 ## Authors
 
 | [<img src="https://github.com/TomChv.png?size=85" width=85><br><sub>Tom Chauveau</sub>](https://github.com/TomChv)
-| :---: | 
+| :---: |
 <h2 align=center>
 Organization
 </h2>
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.

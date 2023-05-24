@@ -2,8 +2,8 @@ package middlewares
 
 import "net/http"
 
-// NoCheck does nothing but call the asyncronous handler
-// serve as exemple for the student
+// NoCheck does nothing except calling the asynchronous handler
+// Use it as an example
 func NoCheck(next http.HandlerFunc) http.HandlerFunc {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		next.ServeHTTP(w, r)

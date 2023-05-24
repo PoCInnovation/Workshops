@@ -1,27 +1,9 @@
 # WORKSHOP_BLE_ESP32
 
-## Summary
-- [WORKSHOP_BLE_ESP32](#workshop_ble_esp32)
-  - [Summary](#summary)
-  - [Setup:](#setup)
-  - [**`Step 01`** - Turn on an LED](#step-01---turn-on-an-led)
-    - [📚 Documentation:](#-documentation)
-  - [**`Step 02`** -  LED flash](#step-02----led-flash)
-  - [**`Step 03`** - Set BLE server](#step-03---set-ble-server)
-    - [📚 Documentation:](#-documentation-1)
-  - [**`Step 04`** - Set Client with your phone](#step-04---set-client-with-your-phone)
-  - [**`Step 05`** - Chat Client/Server](#step-05---chat-clientserver)
-  - [**`Step 06`** - Waiting for a message](#step-06---waiting-for-a-message)
-  - [**`Step 07`** - Scan BLE](#step-07---scan-ble)
-    - [📚 Documentation:](#-documentation-2)
-  - [:tada: Congratulation !](#tada-congratulation-)
-  - [Authors](#authors)
-
-
 ## Setup:
 - [SETUP](../SETUP.md)
 
-## **`Step 01`** - Turn on an LED
+## Step 01 - Turn on an LED
 
 <details>
     <summary> 🛠️ Required Hardware:</summary>
@@ -42,7 +24,8 @@
 - [Basics Electronics](https://www.physicsclassroom.com/class/circuits/Lesson-2/Electric-Current)
 - [What is resistor ?](https://learn.sparkfun.com/tutorials/resistors/all)
 - [How Work Breadboard ?](https://www.sciencebuddies.org/science-fair-projects/references/how-to-use-a-breadboard)
-## **`Step 02`** -  LED flash
+
+## Step 02 - LED flash
 
 <details>
     <summary> 🛠️ Required Hardware:</summary>
@@ -62,7 +45,7 @@ To do this, implement some code in your ESP32.
 
 **Instruction**: When you press the button, your LED will turn off or on.
 
-## **`Step 03`** - Set BLE server
+## Step 03 - Set BLE server
 
 <details>
     <summary> 🛠️ Required Hardware:</summary>
@@ -74,7 +57,7 @@ To do this, implement some code in your ESP32.
 
 We will create a Bluetooth server with our ESP32.
 
-> * Create your local bluetooth and set `BLE ESP32 - [YourName]` as local server name.
+> Create your local bluetooth and set `BLE ESP32 - [YourName]` as local server name.
 
 To verify that your server is created, take your phone and look at the Bluetooth networks.
 If you manage to connect to yours, go to the next step!
@@ -94,16 +77,16 @@ If you manage to connect to yours, go to the next step!
 Now that we have a BLE server, we will define a client to communicate with our ESP32.<br/>
 For this, we will use a mobile application: `Serial Bluetooth Terminal`.<br/>
 
-- Go to `Devices`. 
+- Go to `Devices`.
 - Click the settings icon, and select Pair new device.
 - Choose and pair with your BLE server.
-:blub: Make sure you’ve enable your smartphone’s Bluetooth.
+💡 Make sure you’ve enable your smartphone’s Bluetooth.
 - Go back to the `Serial Bluetooth Terminal`.
 - Click the icon at the top to connect to the BLE server.
 
 You should get a `Connected` message.
 
-## **`Step 05`** - Chat Client/Server
+## Step 05 - Chat Client/Server
 
 <details>
     <summary> 🛠️ Required Hardware:</summary>
@@ -118,11 +101,11 @@ Now we want to define when a client connects or disconnects from our server.
 Add two conditions with a `Connection` / `Disconnection` display, depending on the action of your client.
 
 If the messages appear in your monitor when you click on the buttons you have successfully completed this step!*
-:blub: You can send message between your monitor and `Serial Bluetooth Terminal` !
+💡 You can send message between your monitor and `Serial Bluetooth Terminal` !
 
 Let's continue to the next step!
 
-## **`Step 06`** - Waiting for a message
+## Step 06 - Waiting for a message
 
 <details>
     <summary> 🛠️ Required Hardware:</summary>
@@ -149,7 +132,7 @@ We will:
 - Start the process again when the client sends a message.
 
 
-## **`Step 07`** - Scan BLE
+## Step 07 - Scan BLE
 
 <details>
     <summary> 🛠️ Required Hardware:</summary>
@@ -161,15 +144,15 @@ We will:
 
 We will now create a bluetooth scanner with a second ESP32.
 
-:blub: `#include <BLEScan.h>`, `#include <BLEAdvertisedDevice.h>` <br/>
-> :warning: Be careful to upload one code at a time on each board. <br/>
+💡 `#include <BLEScan.h>`, `#include <BLEAdvertisedDevice.h>` <br/>
+> ⚠️ Be careful to upload one code at a time on each board. <br/>
 
 If you find the name of your BLE server in the monitor of your scanner, you have succeeded!
 
 ### 📚 Documentation:
 - [Scan BLE](http://www.neilkolban.com/esp32/docs/cpp_utils/html/class_b_l_e_scan.html)
 
-## :tada: Congratulation !
+## 🎉 Congratulation !
 
 You now know the basics of BLE ESP32.<br/>
 Feel free to use your imagination to create circuits.<br/>
@@ -178,7 +161,7 @@ Or combine the previous exercises for new results.<br/>
 
 ## Authors
 
-| [<img src="https://github.com/OnsagerHe.png?size=85" width=85><br><sub>Albert VALENTIN</sub>](https://github.com/OnsagerHe) | 
+| [<img src="https://github.com/OnsagerHe.png?size=85" width=85><br><sub>Albert VALENTIN</sub>](https://github.com/OnsagerHe) |
 | :---: |
 <h2 align=center>
 Organization
@@ -186,23 +169,24 @@ Organization
 <br/>
 <p align='center'>
     <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
     </a>
     <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
+>
     </a>
     <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
+        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
     </a>
     <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
     </a>
 </p>
 <p align=center>
     <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white">
+        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
     </a>
 </p>
 
-> :rocket: Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
 
