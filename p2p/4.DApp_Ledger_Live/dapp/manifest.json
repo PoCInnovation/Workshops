@@ -1,0 +1,42 @@
+{
+  "id": "d-app_ledger_live",
+  "name": "Workshop PoC - DApp Ledger Live",
+  "url": "https://dapp-browser.apps.ledger.com",
+  "params": {
+    "dappUrl": "http://localhost:3000",
+    "nanoApp": "Ethereum",
+    "dappName": "Workshop PoC - DApp Ledger Live",
+    "networks": [
+      {
+        "currency": "ethereum_goerli",
+        "chainID": 5,
+        "nodeURL": "<YOUR_NODE_URL>"
+      }
+    ]
+  },
+  "homepageUrl": "https://developers.ledger.com/",
+  "platform": "all",
+  "apiVersion": "0.0.1",
+  "manifestVersion": "1",
+  "branch": "debug",
+  "categories": [
+    "tools"
+  ],
+  "currencies": "*",
+  "content": {
+    "shortDescription": {
+      "en": "Try out the Ledger Live API to test capabilities of our platform integration solution. Use at your own risk."
+    },
+    "description": {
+      "en": "Try out the Ledger Live API to test capabilities of our platform integration solution. Use at your own risk."
+    }
+  },
+  "permissions": [
+    {
+      "method": "*"
+    }
+  ],
+  "domains": [
+    "https://*"
+  ]
+}

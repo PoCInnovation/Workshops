@@ -28,10 +28,11 @@ The contract is already deployed, so you need to modify the code inside `hooks/u
 
 ### 📌 **Tasks**:
 
-- Have to look at the [ABI](./src/utils/contract.json) and deduce which function you will need to use to post a new message.
-> 💡 You can look at the existing wagmi hook at the top of the file TODO link for an example of what to do.
-It will be helpful to look at the already made Wagmi hooks [here](./src/hooks/usePostMessage.ts).
+- Have to look at the [ABI](./dapp/src/utils/contract.json) and deduce which function you will need to use to post a new message.
+> 💡 You can look at the existing wagmi hook at [the top of the file](./dapp/src/hooks/usePostMessage.ts#L7) for an example of what to do.
+It will be helpful to look at the already made Wagmi hooks [here](./dapp/src/hooks/usePostMessage.ts).
 
+> You'll need to use the [Goerli Testnet on Metamask](https://www.datawallet.com/crypto/add-goerli-to-metamask) and claim tokens with a [faucet](https://goerli-faucet.pk910.de/) or ask the workshop staff to send you some 😄
 
 ### 📚 **Documentation**:
 - [What is an ABI?](https://www.quicknode.com/guides/ethereum-development/smart-contracts/what-is-an-abi/)
@@ -60,8 +61,8 @@ Then, add `IFrameEthereumConnector` to the list of connectors inside the `src/Wa
 
 Now let's setup Ledger Live for our use case:
 - activate the [developer mode](https://developers.ledger.com/docs/live-app/developer-mode/) 
-- [add your local app](https://developers.ledger.com/docs/live-app/developer-mode/#add-a-local-app) using the given [manifest](./manifest.json).
-> The manifest contains a `json` configuration file defining, among other things, your DApp name, URL, available networks, description, etc... to provide the best experience possible to the app users in Ledger Live.
+- [add your local app](https://developers.ledger.com/docs/live-app/developer-mode/#add-a-local-app) using the given [manifest](./dapp/manifest.json).
+> The manifest contains a `json` configuration file defining, among other things, your DApp name, URL, available networks, description, etc... to provide the best experience possible to the app users in Ledger Live. You can modify it as you want, especially for the `nodeURL` (add your own Alchemy HTTPS URL) 😉
 
 > 💡 As for Metamask, make sure you have a Goerli [Testnet](https://www.ledger.com/academy/glossary/testnet) account available in Ledger Live.
 

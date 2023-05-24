@@ -18,6 +18,8 @@ To interact with our dApp, we will use two wallets:
 You will need an [Alchemy API key](https://docs.alchemy.com/docs/alchemy-quickstart-guide) that our app will be using to interact with the Ethereum blockchain.\
 Once you have it, you can add it to the `.env` file in the code given in the next step 😉
 
+Make sure to also write down the HTTPS URL, you'll need it later 👍
+
 ### During a PoC workshop
 
 If you are participating to a workshop session we organize, we'll provide you a link to a GitHub repository created for you that already contains the necessary code.
@@ -30,12 +32,11 @@ and you are ready to go 🚀
 
 ### On your own
 
-If you are following this workshop on your own, you can run the following commands to retrieve the provided code and install the project dependencies:
+If you are following this workshop on your own, you can retrieve [the provided code](./dapp/) and install the project dependencies:
 
-TODO
 ```sh
-wget URL
-cd folder
+cd dapp
+
 yarn
 ```
 
