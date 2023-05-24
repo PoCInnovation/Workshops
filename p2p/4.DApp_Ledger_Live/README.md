@@ -73,7 +73,7 @@ Now let's setup Ledger Live for our use case:
 ### ✔️ **Validation**:
 
 If you've done all this, you should now be able to use your DApp normally within Ledger Live context, and also on a browser environment with Metamask.\
-You'll have a consistent experience across both platforms, providing you with flexibility and convenience in managing your application 🔥\
+You'll have a consistent experience across both platforms, providing you with flexibility and convenience in managing your application 🔥
 
 ## Step 3: Add some style
 
@@ -135,4 +135,4 @@ Organization
     </a>
 </p>
 
-> 🚀 Follow us on our different social networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
