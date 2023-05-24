@@ -234,5 +234,5 @@ Organization
     </a>
 </p>
 
-> 🚀 Follow us on our different social networks, and put a star 🌟 on `PoC's` repositories.
+> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
 
