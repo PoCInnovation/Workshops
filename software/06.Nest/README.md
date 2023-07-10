@@ -9,9 +9,6 @@
 In this workshop, you'll use [Nest](https://nestjs.com/), a framework built on top of [Express](https://expressjs.com/) to create efficient and scalable apps. It's a very opinionated framework that provides everything you need and has built-in integration with many other frameworks (queues, type ORMs, validators, documentation, and much more!).  
 Nest fully supports TypeScript (in fact it's [built in TypeScript](https://github.com/nestjs/nest)).
 
-
-> If you aren't familiar with TypeScript, you can read [this file](https://github.com/PoCInnovation/Workshops/blob/master/software/06.Nest/src/step0/learn.md) to learn the basics.
-
 ## Step 0: Setup
 
 All the required information to start this workshop can be found in [SETUP.md](./SETUP.md)
@@ -35,104 +32,73 @@ You can now go to <http://localhost:3000/article> in your browser (or using Post
 
 > 💡 As you can see, AppService is an AppModule Provider (in `app.module.ts`) and it's [injected](https://docs.nestjs.com/providers#dependency-injection) in the controller (in the constructor).
 
-## Step 2: Variable decorator
+## Step 2: Getting started
 
-A `@Decorator()` is a Javascript feature that allows you to wrap one piece of code with another.  
-You can read more about decorators [here](https://www.sitepoint.com/javascript-decorators-what-they-are/)
+In this step, we will cover the basics of using NestJS and get familiar with its fundamental concepts. Understanding these basics will provide a solid foundation for building applications with NestJS.
 
-### Step 2.1: Use @Body() to get data from a POST request
+These are the CLI commands you will need, we will explain later:
 
-You will now use the [POST](https://en.wikipedia.org/wiki/POST_(HTTP)) method to send data via a Body.
-
-The object containing data that will be transferred is a DTO ([Data Transfer Object](https://en.wikipedia.org/wiki/Data_transfer_object)).  
-A class `article.dto` is provided [here](https://github.com/PoCInnovation/Workshops/blob/master/software/06.Nest/src/step2/article.dto.ts). It is a simple class that describes an article.
-
-With the decorator [@Body()](https://docs.nestjs.com/controllers#request-payloads) (found in `@nestjs/common`), you will be able to get the body of the request.
-
-You should now be able to create a route `/article` using `@Post()`. The type of the object will be the provided dto class.
-
-Now, add debug logs that print the received body.
-
-> Use Postman to test your new route 😉
-
-Here is an example of a body:
-```js
-{
-    "title": "simple article",
-    "body": "simple body",
-    "author": "simple author"
-}
+```sh
+nest generate controller epi_steam
+nest generate module epi_steam
+nest generate service epi_steam
 ```
 
-### Step 2.2: Use @Param() to retrieve URL route parameters
+These commands allow you to quickly generate controllers, modules, and services in NestJS. The generate command followed by the desired type (controller, module, or service) and the name of the component (epi_steam in this case) will automatically scaffold the corresponding files and update the necessary configurations.
 
-First, read a little about [route parameters](https://docs.nestjs.com/controllers#route-parameters).
+in your app.module.ts you will find something like this:
 
-You can now update the previously created `getArticle` function to take a title as a route `@Param()`.  
-Add debug logs again to check if you are correctly receiving it 🚀
+```javascript
+@Module({
+  imports: [EpiSteamModule],
+  controllers: [AppController, EpiSteamController],
+  providers: [AppService],
+})
+```
 
-> We'll use this param later to search for this title in our mocked article DB 😉
+## Step 3: Introducing the epi-steam
 
-### Step 2.3: PUT request to update data
+Upon accessing the epi-steam page, you'll notice that it currently lacks content. Let's proceed by adding some essential elements, starting with a welcoming page.
 
-A PUT request usually uses both `@Param()` (e.g. find the article to update) and `@Body()` (containing the updated article)
+- You should be able to create the epi-steam DTO, but what is a [DTO](https://betterprogramming.pub/how-to-use-data-transfer-objects-dto-for-validation-in-nest-js-7ff95309f650)?
+    - This DTO should include the following information:
+        - An ID for the primary-key
+        - The number of visitors
+        - An array of IDs representing all available games
+        - The revenue generated from each game purchase on the site.
 
-Using the `@Put()` method and what you have just learnt, write a route to get both the body and the url param.
 
-> As always, do not forget to test if everything works as intended before moving on to the next step!
+If you want to establish communication with your site, you need to employ an [APIRest](https://www.restapitutorial.com/lessons/httpmethods.html), for this project we will use **GET**, **POST**, **DELETE**, **PATCH**
 
-### Step 2.4: Bonus
+- Each time a user accesses the epi-steam/ route, they will be greeted with the message 'Welcome to epi-steam', and the number of visitors will be incremented.
 
-A controller usually contains routes with similar routes (e.g. `/user`, `/user/profile` ...).<br>
-With [controller routing](https://docs.nestjs.com/controllers#routing) you can specify a prefix to be applied to every routes of this controller (it would be `article` here)
+- The user can see the games avaibles, if there are not any games yet, you should send a message.
 
-## Step 3: Database Service
+## Step 4: The games
 
-### Step 3.1: Incorporate the Database service in your app
+Now you have your own games page but it's there are no games, let's create a game together.
 
-You can find a Provider DatabaseService [here](https://github.com/PoCInnovation/Workshops/blob/master/software/06.Nest/src/step3/database.service.ts). This provider is simulating a database by using an array as storage. You will use it for the last step as setting up and using a real database is a bit out of scope for this workshop.
+You know how to create a DTO for the epi-steam, let's create one for the games, it should contain:
+- An ID for the primary-key
+- The name
+- The price
+- The income
 
-> 💡 Make sure the import statement of `article.dto.ts` is correct in the `database.service.ts`. it may not be according to the file locations
+Always in the the **epi-steam** controller you will now need to do a few a actions:
+- Get all the games, if there are not any games yet, send a message.
+- Get a game by his ID using **@Param()**
+- Post a new game
+- Delete a game by his ID
+- Change the price for a game for the soldes
+- Buy a new game
 
-As for the AppService, you will have to add the DatabaseService in the Module Provider list and `inject` it (via the constructor) in AppService.
 
-### Step 3.2: Use the Database service
+## Step 5: The user
 
-The new service exposes 4 functions: createArticle, updateArticle, findArticle, deleteArticle
-
-As these functions are [asynchronous](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function), you will have to use `Promise`s (i.e. `await` or `.then()`). <br>
-Feel free to ask questions or read about Promises if you do not feel at ease with them.
-
-Now, update the functions in `AppService` to use the database and call them in the controller.
-
-If everything went well, you should be able to create, update and get articles!
-
-> Try with Postman!
-
-### Step 3.3: Delete
-
-What about deletion !
-
-Create a route to `@Delete()` an article on your own !
-
-### Step 3.4: Bonus
-
-NestJS [HttpExceptions](https://docs.nestjs.com/exception-filters#built-in-http-exceptions) are an elegant way to send an error response.  
-For example, the `findArticle` function may return `undefined` if no article matches the requested title.
-In that case you should send a `NotFoundException`.
-
-## Bonus
-
-If you want to go further, here are some ideas:
-- Implement a DELETE route and add data to your response to let users know everything went well.
-- Validate user input: [class-validator](https://docs.nestjs.com/techniques/validation) allows you to easily validate incoming input (i.e. Body and Query params)
-- Document your routes [NestJS swagger](https://docs.nestjs.com/recipes/swagger) offers an easy way to document your routes (with decorators).
-  It can then generate an open-api documentation using swagger.
-</details>
 
 ## Authors
 
-| [<img src="https://github.com/terra-hertz.png?size=85" width=85><br><sub>Theo Hinsinger</sub>](https://github.com/terra-hertz)
+| [<img src="https://github.com/molaryy.png?size=85" width=85><br><sub>Mohammed JBILOU</sub>](https://github.com/molaryy)
 | :---: |
 <h2 align=center>
 Organization
