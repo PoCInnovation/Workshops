@@ -406,6 +406,74 @@ def test_my_module(ModuleClass, TensorClass, ParameterClass):
     a = TestModule()
     assert (len(a.parameters()) == 2), "Parameter function is invalid"
 
+import torch as t
+
+def test_linear(LinearModule, TensorClass, ParameterClass):
+
+    print("Testing Linear forward..")
+
+    a = LinearModule(2, 4)
+    a._Linear__weights = ParameterClass(TensorClass([[2, 2], [2, 2], [2, 2], [2, 2]]))
+    a._Linear__bias = ParameterClass(TensorClass([2, 2, 2, 2]))
+    b = t.nn.Linear(2, 4)
+    b.weight = t.nn.Parameter(t.tensor([[2, 2], [2, 2], [2, 2], [2, 2]], dtype=t.float32))
+    b.bias = t.nn.Parameter(t.tensor([2, 2, 2, 2], dtype=t.float32))
+
+    y = a(TensorClass([3, 4])).data
+    y_ = b(t.tensor([3, 4], dtype=t.float32)).detach().numpy()
+    assert (y == y_).all(), "Linear result is not equivalent to torch's"
+
+    a = LinearModule(4, 1)
+    a._Linear__weights = ParameterClass(TensorClass([[2, 2, 2, 2]]))
+    a._Linear__bias = ParameterClass(TensorClass([2]))
+    b = t.nn.Linear(4, 1)
+    b.weight = t.nn.Parameter(t.tensor([[2, 2, 2, 2]], dtype=t.float32))
+    b.bias = t.nn.Parameter(t.tensor([2], dtype=t.float32))
+    y = a(TensorClass(np.array([3, 4, 5, 6]).reshape(4, 1)))
+    y_ = b(t.tensor([3, 4, 5, 6], dtype=t.float32))
+    assert (y.data == y_.detach().numpy()).all(), "Linear result is not equivalent to torch's"
+
+    print('Testing backward..')
+    y.backward()
+    y_.backward()
+
+    assert (b.weight.grad.detach().numpy() == a._Linear__weights.tensor.grad.data).all(), "Invalid backward gradients"
+
+
+def test_sgd(SGD, TensorType, ParameterType):
+
+    print("Testing SGD...")
+
+    a = TensorType([3, 4, 2])
+    b = ParameterType(TensorType([5, 6, 7]))
+    op = SGD([b], lr=0.01)
+    (a * b.tensor).backward()
+    op.step()
+
+    a_torch = t.tensor([3, 4, 2], dtype=t.float32, requires_grad=True)
+    b_torch = t.nn.Parameter(t.tensor([5, 6, 7], dtype=t.float32, requires_grad=True))
+    op_torch = t.optim.SGD([b_torch], lr=0.01)
+    loss = t.sum(a_torch * b_torch)
+    loss.backward()
+    op_torch.step()
+    assert (np.allclose(b_torch.detach().numpy(), b.tensor.data)), "Invalid sgd"
+
+def test_mseloss(MSELoss, TensorClass):
+
+    print("Testing MSE...")
+
+    y = TensorClass([3, 4, 2, 5])
+    y_target = TensorClass([5, 2, 5, 1])
+    loss = MSELoss()
+    res = loss(y, y_target)
+
+    y_torch = t.tensor([3, 4, 2, 5], dtype=t.float32)
+    y_target_torch = t.tensor([5, 2, 5, 1], dtype=t.float32)
+    loss = t.nn.MSELoss()
+    res_torch = loss(y_torch, y_target_torch)
+
+    assert (res.data == res_torch.detach().numpy()).all(), "Invalid result for MSE"
+
 
 #test_tensor_class(CorrectTensor)
 #
