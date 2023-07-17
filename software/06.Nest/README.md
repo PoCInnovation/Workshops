@@ -15,6 +15,7 @@ All the required information to start this workshop can be found in [SETUP.md](.
 
 ## Step 1: Basics
 
+📑 Description:
 - In the `app.controller.ts` file, create a `@Get()` route `/article` (the route `hello` should help you to do so)
 - You also have to create the corresponding provider to return a test value.
 
@@ -23,6 +24,8 @@ All the required information to start this workshop can be found in [SETUP.md](.
 - `📦 Providers`: In NestJS, components that can be injected into other components are called providers. Providers are defined using the @Injectable() decorator. They are typically used to encapsulate business logic, interact with databases or external APIs, or provide utility functions.
 
 - `〽️ Injection`: To inject a provider into another component, such as a controller or another provider, you can use the constructor of the dependent component. NestJS relies on TypeScript's type system to infer the required dependencies.
+
+📌 Tasks:
 
 Now, launch the server:
 
@@ -35,16 +38,24 @@ You can now go to <http://localhost:3000> in your browser (or using Postman) to 
 > As said before, the command `start:dev` makes use of `file watchers`. Every time you save a file, Nest will automatically rebuild the server with the updated file(s).  
 > This way you won't need to restart it manually after each modification 😉
 
+✔️ Validation:
+
 > 💡 As you can see, AppService is an AppModule Provider (in `app.module.ts`) and it's [injected](https://docs.nestjs.com/providers#dependency-injection) in the controller (in the constructor).
 
-## Step 2: Starting with the store
+## Step 2: Setting up the poc-shop
+
+📑 Description:
 
 In this step, we will cover the basics of using NestJS and get familiar with its fundamental concepts. Understanding these basics will provide a solid foundation for building applications with NestJS.
+
+📌 Tasks:
 
 First of all you will create a folder in the `src` folder named `poc_shop`, inside the `poc_shop` folder, create the following files:
  - poc_shop.service.ts
  - poc_shop.controller.ts
  - poc_shop.module.ts
+
+✔️ Validation:
 
 You should have the following structure:
 ```sh
@@ -54,99 +65,133 @@ src
       ├── poc_shop.controller.ts
       └── poc_shop.module.ts
 ```
+📚 Documentation:
+ - What is is a [provider]()?
+ - More about [decorators](https://docs.nestjs.com/custom-decorators)
+ - What is a [controller](https://docs.nestjs.com/controllers)?
+ - What is a [module](https://docs.nestjs.com/modules)
 
 > ### 2.1 - poc-shop provider
-A provider, in the context of your project, refers to a class that offers specific services, functionality, or data manipulation related to the poc-shop feature, for more information check [here](https://docs.nestjs.com/providers) and we will also see the dependency injections here.
 
-First of all you should import the `Injectable` decorator and then place on the class that you will also create named `PocShopService`, there you will create your first method `helloShop` it should return a message *"Welcome to the PoC-Shop"* it should look like this:
+
+A provider, in the context of your project, refers to a class that offers specific services, functionality, or data manipulation related to the poc-shop feature and we will also see the dependency injections here.
+
+
+
+First of all you should import the `Injectable` decorator and then place on the class that you will also create named `PocShopService`.
+
+✔️ Validation:
+
+it should look like this:
 
 ```ts
-import { Injectable } from '@nestjs/common';
-
 @Injectable()
-export class PocShopService {
-  helloShop() {
-    return 'Welcome to the PoC-Shop';
-  }
-}
+export class PocShopService {}
 ```
 
 > ### 2.2 - poc-shop controller
 
-In this section, you will create your first controller using the @Controller('poc-shop') decorator. Controllers are responsible for handling incoming requests and sending back responses to the client.
 
-To begin, let's create the `PocShopController` class. This class will serve as the controller for the `poc-shop` route. It will include a constructor that takes an instance of the `PocShopService` and utilizes the provider methods.
+🎮 In this section, you're about to embark on an exciting journey of creating your first controller using the @Controller('poc-shop') decorator. 🚀 Controllers play a crucial role in handling incoming requests 📥 and responding to clients with the appropriate data. 💡
 
-You will need the `Get` decorator if you want to know when the users is on the page and then create a methode that returns the `helloShop` method from the `PocShopService`.
+To kick things off, let's dive into creating the PocShopController class. This class will serve as the controller specifically designed for the poc-shop route. 🛍️ Inside this class, we'll include a constructor that accepts an instance of the PocShopService and leverages the provider methods. 💼
 
-It should look like this:
+But wait, there's more! To ensure the smooth flow of your application, you'll need to utilize the Get decorator.
+
+✔️ Validation:
+
+Now, let's take a look at the code snippet that brings it all together: 😃
 
 ```ts
-import { Controller, Get } from '@nestjs/common';
-import { PocShopService } from './poc_shop.service';
-
 @Controller('poc-shop')
 export class PocShopController {
   constructor(private readonly pocShopService: PocShopService) {}
-
-  @Get()
-  welcomeToThePocShop() {
-    return this.pocShopService.helloShop();
-  }
 }
 ```
 
-
 > ### 2.3 - poc-shop module
 
-in your app.module.ts you will find something like this:
+🔗 A module is a class annotated with a `@Module()` 🧩 **decorator**. The @Module() decorator provides metadata that Nest makes use of to organize the application `structure`.🏗️
 
-```javascript
+✔️ Validation:
+
+poc_shop.module.ts:
+```ts
 @Module({
-  imports: [EpiSteamModule],
-  controllers: [AppController, EpiSteamController],
-  providers: [AppService],
+  controllers: [PocShopController],
+  providers: [PocShopService],
 })
+export class PocShopModule {}
 ```
 
-## Step 3: Introducing the epi-steam
+app.module.ts:
+```ts
+@Module({
+  imports: [PocShopModule],
+  controllers: [AppController],
+  providers: [AppService],
+})
+export class AppModule {}
+```
 
-Upon accessing the epi-steam page, you'll notice that it currently lacks content. Let's proceed by adding some essential elements, starting with a welcoming page.
+## Step 3: Introducing the poc-shop
 
-- You should be able to create the epi-steam DTO, but what is a [DTO](https://betterprogramming.pub/how-to-use-data-transfer-objects-dto-for-validation-in-nest-js-7ff95309f650)?
-  - This DTO should include the following information:
+📑 Description:
+
+Upon accessing the poc-shop page, you'll notice that it currently lacks content.📭 Let's proceed by adding some essential elements, starting with a welcoming page. 🎉
+
+📌 Tasks:
+
+- You should be able to create the poc-shop DTO
+  > This DTO should include the following information:
     - An ID for the primary-key
     - The number of visitors
     - An array of IDs representing all available games
     - The revenue generated from each game purchase on the site.
 
-If you want to establish communication with your site, you need to employ an [APIRest](https://www.restapitutorial.com/lessons/httpmethods.html), for this project we will use **GET**, **POST**, **DELETE**, **PATCH**
+> If you want to establish communication with your site, you need to employ an [APIRest](https://www.restapitutorial.com/lessons/httpmethods.html), for this project we will use **GET**, **POST**, **DELETE**, **PATCH**
 
-- Each time a user accesses the epi-steam/ route, they will be greeted with the message 'Welcome to epi-steam', and the number of visitors will be incremented.
 
-- The user can see the games avaibles, if there are not any games yet, you should send a message.
+✔️ Validation:
+
+- Each time a user accesses the poc-shop/ route, they will be greeted with the message 'Welcome to poc-shop', and the number of visitors will be incremented.
+
+- The user can see the games available, if there are not any games yet, you should send a message.
 
 ## Step 4: The games
 
+📑 Description:
+
 Now you have your own games page but it's there are no games, let's create a game together.
 
-You know how to create a DTO for the epi-steam, let's create one for the games, it should contain:
+📌 Tasks:
+
+> You know how to create a DTO for the poc-shop, let's create one for the games, it should contain:
 
 - An ID for the primary-key
 - The name
 - The price
 - The income
 
-Always in the the **epi-steam** controller you will now need to do a few a actions:
+> Always in the the **poc-shop** controller you will now need to do a few a actions:
 
 - Get all the games, if there are not any games yet, send a message.
 - Get a game by his ID using **@Param()**
 - Post a new game
 - Delete a game by his ID
-- Change the price for a game for the soldes
+- Change the price for a game for the sales
 - Buy a new game
 
 ## Step 5: The user
+
+📑 Description:
+
+As a user it's normal to check how many games you have, if you want to refund a game or check any specific game that you have.
+
+📌 Tasks:
+ - User can refund a game
+ - User can check all the games that he has
+ - User can check only one game by his ID
 
 ## Authors
 
