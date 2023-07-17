@@ -2,7 +2,7 @@
 
 ```sh
 npm i -g @nestjs/cli
-nest new epi-steam
-cd epi-steam
+nest new my_steam
+cd my_steam
 rm src/app.controller.spec.ts
 ```
