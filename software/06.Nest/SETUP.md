@@ -2,7 +2,7 @@
 
 ```sh
 npm i -g @nestjs/cli
-nest new my_steam
-cd my_steam
+nest new poc-shop
+cd poc-shop
 rm src/app.controller.spec.ts
 ```
