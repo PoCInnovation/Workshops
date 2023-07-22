@@ -158,13 +158,15 @@ Upon accessing the poc-shop page, you'll notice that it currently lacks content.
     - The number of visitors
     - An array of IDs representing all available games
     - The revenue generated from each game purchase on the site.
+- Send `Welcome to poc-shop` message when user access to `/poc-shop`
+- The number of visitors will be incremented each time a user access to `/poc-shop` or `/poc-shop/:id`
 
 > If you want to establish communication with your site, you need to employ an [APIRest](https://www.restapitutorial.com/lessons/httpmethods.html), for this project we will use **GET**, **POST**, **DELETE**, **PATCH**
 
 
 ✔️ Validation:
 
-- Each time a user accesses the poc-shop/ route, they will be greeted with the message 'Welcome to poc-shop', and the number of visitors will be incremented.
+- Each time a user accesses the poc-shop/ route, they will be greeted with the message 'Welcome to poc-shop'.
 
 - The user can see the games available, if there are not any games yet, you should send a message.
 
