@@ -1,4 +1,4 @@
-## Create a new NestJS project:
+# Create a new NestJS project:
 
 ```sh
 npm i -g @nestjs/cli
