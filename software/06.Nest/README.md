@@ -127,6 +127,7 @@ poc_shop.module.ts:
 @Module({
   controllers: [PocShopController],
   providers: [PocShopService],
+  export: [PocShopService],
 })
 export class PocShopModule {}
 ```
