@@ -68,9 +68,9 @@ You should have the following structure:
 ```txt
 src
  └── poc_shop
-      ├── poc_shop.service.ts
       ├── poc_shop.controller.ts
-      └── poc_shop.module.ts
+      ├── poc_shop.module.ts
+      └── poc_shop.service.ts
 ```
 📚 Documentation:
  - What is is a [provider](https://docs.nestjs.com/providers)?
