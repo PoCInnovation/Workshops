@@ -16,19 +16,23 @@ All the required information to start this workshop can be found in [SETUP.md](.
 ## Step 1: Basics
 
 📑 Description:
-- In the `app.controller.ts` file, create a `@Get()` route `/article` (the route `hello` should help you to do so)
-- You also have to create the corresponding provider to return a test value.
+In this step, you will learn the fundamental concepts of NestJS and its architecture.
 
-> 📖 The documentation about [modules](https://docs.nestjs.com/modules) and [providers](https://docs.nestjs.com/providers) will teach you some basic concepts and architecture of Nest. In NestJS, **dependency injection** is primarily achieved through the use of decorators and the underlying inversion of control (IoC) container. Here's how it works:
+
+📚 Documentation:
+
+> 📖 The documentation about [modules](https://docs.nestjs.com/modules) and [providers](https://docs.nestjs.com/providers) will teach you some basic concepts and architecture of Nest. In NestJS, **dependency injection** is primarily achieved through the use of decorators and the underlying inversion of control **(IoC)** container. Here's how it works:
 
 - `📦 Providers`: In NestJS, components that can be injected into other components are called providers. Providers are defined using the @Injectable() decorator. They are typically used to encapsulate business logic, interact with databases or external APIs, or provide utility functions.
 
 - `〽️ Injection`: To inject a provider into another component, such as a controller or another provider, you can use the constructor of the dependent component. NestJS relies on TypeScript's type system to infer the required dependencies.
 
 📌 Tasks:
+- Launch the server, you will see a message 😉
+- Change the message that is returned within the app provider by *`"I love this workshop!"`*
 
-Now, launch the server:
 
+Command to launch the server:
 ```sh
 npm run start:dev
 ```
@@ -38,9 +42,11 @@ You can now go to <http://localhost:3000> in your browser (or using Postman) to 
 > As said before, the command `start:dev` makes use of `file watchers`. Every time you save a file, Nest will automatically rebuild the server with the updated file(s).  
 > This way you won't need to restart it manually after each modification 😉
 
+
+
 ✔️ Validation:
 
-> 💡 As you can see, AppService is an AppModule Provider (in `app.module.ts`) and it's [injected](https://docs.nestjs.com/providers#dependency-injection) in the controller (in the constructor).
+> 💡 Notice the message on the page? Congratulations, you just completed your first `I love this workshop!` in NestJS! 🥳
 
 ## Step 2: Setting up the poc-shop
 
@@ -55,10 +61,11 @@ First of all you will create a folder in the `src` folder named `poc_shop`, insi
  - poc_shop.controller.ts
  - poc_shop.module.ts
 
+
 ✔️ Validation:
 
 You should have the following structure:
-```sh
+```txt
 src
  └── poc_shop
       ├── poc_shop.service.ts
@@ -66,7 +73,7 @@ src
       └── poc_shop.module.ts
 ```
 📚 Documentation:
- - What is is a [provider]()?
+ - What is is a [provider](https://docs.nestjs.com/providers)?
  - More about [decorators](https://docs.nestjs.com/custom-decorators)
  - What is a [controller](https://docs.nestjs.com/controllers)?
  - What is a [module](https://docs.nestjs.com/modules)
@@ -92,7 +99,7 @@ export class PocShopService {}
 > ### 2.2 - poc-shop controller
 
 
-🎮 In this section, you're about to embark on an exciting journey of creating your first controller using the @Controller('poc-shop') decorator. 🚀 Controllers play a crucial role in handling incoming requests 📥 and responding to clients with the appropriate data. 💡
+🎮 In this section, you're about to embark on an exciting journey of creating your first controller using the `@Controller('poc-shop')` decorator. 🚀 Controllers play a crucial role in handling incoming requests 📥 and responding to clients with the appropriate data. 💡
 
 To kick things off, let's dive into creating the PocShopController class. This class will serve as the controller specifically designed for the poc-shop route. 🛍️ Inside this class, we'll include a constructor that accepts an instance of the PocShopService and leverages the provider methods. 💼
 
@@ -192,6 +199,12 @@ As a user it's normal to check how many games you have, if you want to refund a 
  - User can refund a game
  - User can check all the games that he has
  - User can check only one game by his ID
+
+## Bonus
+If you are here that means that you finished the workshop or you want to go further and learn more about nestJS 🥇.
+
+- Unless you want to restart all the data in your program every time it's down, check what is [postgreSQL](https://www.postgresql.org/) and how to use it thanks to the [ORM](https://www.freecodecamp.org/news/what-is-an-orm-the-meaning-of-object-relational-mapping-database-tools/) that makes it easier to interact with data bases, you can start with [mikroORM](https://docs.nestjs.com/recipes/mikroorm). For more information check this [video](https://youtu.be/jYFyLLqvHy8).
+- For more security in your program check about user authentication with [JWT](https://docs.nestjs.com/security/authentication)
 
 ## Authors
 
