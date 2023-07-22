@@ -158,7 +158,6 @@ Upon accessing the poc-shop page, you'll notice that it currently lacks content.
   > This DTO should include the following information:
     - The number of visitors
     - An array of IDs representing all available games
-    - The revenue generated from each game purchase on the site.
 - Send `Welcome to poc-shop` message when user access to `/poc-shop`
 - The number of visitors will be incremented each time a user access to `/poc-shop` or `/poc-shop/:id`
 
@@ -168,7 +167,6 @@ Upon accessing the poc-shop page, you'll notice that it currently lacks content.
 ✔️ Validation:
 
 - Each time a user accesses the poc-shop/ route, they will be greeted with the message 'Welcome to poc-shop'.
-
 - The user can see the games available, if there are not any games yet, you should send a message.
 
 ## Step 4: The games
@@ -179,32 +177,20 @@ Now you have your own games page but there are no games, let's create a game tog
 
 📌 Tasks:
 
-> You know how to create a DTO for the poc-shop, let's create one for the games in the `DTO/` folder and you should name it games.dto.ts, it should contain:
+> You know how to create a DTO for the poc-shop, let's create one for the games in the `DTO/` folder and you should name it *`games.dto.ts`*, it should contain:
 
 - An ID
 - A name
 - A price
 - The income of the game
 
-> Always in the the **poc-shop** controller you will now need to do a few a actions:
+> Always in the the **poc-shop** controller you will now need to do a few a actions when a user access to `poc-shop/games`:
 
 - Get all the games, if there are not any games yet, send a message.
 - Get a game by his ID using **@Param()**
 - Post a new game
 - Delete a game by his ID
 - Change the price for a game for the sales
-- Buy a new game
-
-## Step 5: The user
-
-📑 Description:
-
-As a user it's normal to check how many games you have, if you want to refund a game or check any specific game that you have.
-
-📌 Tasks:
- - User can refund a game
- - User can check all the games that he has
- - User can check only one game by his ID
 
 ## Bonus
 If you are here that means that you finished the workshop or you want to go further and learn more about nestJS 🥇.
