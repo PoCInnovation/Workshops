@@ -154,8 +154,8 @@ Upon accessing the poc-shop page, you'll notice that it currently lacks content.
 📌 Tasks:
 
 - You should be able to create the poc-shop DTO
+- Create a folder DTO in the `poc_sop/` folder and create a poc_shop.dto.ts
   > This DTO should include the following information:
-    - An ID for the primary-key
     - The number of visitors
     - An array of IDs representing all available games
     - The revenue generated from each game purchase on the site.
