@@ -147,6 +147,9 @@ export class AppModule {}
 
 Upon accessing the poc-shop page, you'll notice that it currently lacks content.📭 Let's proceed by adding some essential elements, starting with a welcoming page. 🎉
 
+📚 Documentation:
+- What is a [DTO](https://plainenglish.io/blog/use-of-dto-for-validation-in-nestjs-application-d37ff55f0560)
+
 📌 Tasks:
 
 - You should be able to create the poc-shop DTO
