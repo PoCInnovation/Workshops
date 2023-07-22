@@ -175,16 +175,16 @@ Upon accessing the poc-shop page, you'll notice that it currently lacks content.
 
 📑 Description:
 
-Now you have your own games page but it's there are no games, let's create a game together.
+Now you have your own games page but there are no games, let's create a game together.
 
 📌 Tasks:
 
-> You know how to create a DTO for the poc-shop, let's create one for the games, it should contain:
+> You know how to create a DTO for the poc-shop, let's create one for the games in the `DTO/` folder and you should name it games.dto.ts, it should contain:
 
-- An ID for the primary-key
-- The name
-- The price
-- The income
+- An ID
+- A name
+- A price
+- The income of the game
 
 > Always in the the **poc-shop** controller you will now need to do a few a actions:
 
