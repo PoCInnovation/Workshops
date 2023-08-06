@@ -16,20 +16,15 @@ All the required information to start this workshop can be found in [SETUP.md](.
 ## Step 1: Basics
 
 📑 Description:
+<br>
 In this step, you will learn the fundamental concepts of NestJS and its architecture.
-
-
-📚 Documentation:
-
-> 📖 The documentation about [modules](https://docs.nestjs.com/modules) and [providers](https://docs.nestjs.com/providers) will teach you some basic concepts and architecture of Nest. In NestJS, **dependency injection** is primarily achieved through the use of decorators and the underlying inversion of control **(IoC)** container. Here's how it works:
-
-- `📦 Providers`: In NestJS, components that can be injected into other components are called providers. Providers are defined using the @Injectable() decorator. They are typically used to encapsulate business logic, interact with databases or external APIs, or provide utility functions.
-
-- `〽️ Injection`: To inject a provider into another component, such as a controller or another provider, you can use the constructor of the dependent component. NestJS relies on TypeScript's type system to infer the required dependencies.
 
 📌 Tasks:
 - Launch the server, you will see a message 😉
 - Change the message that is returned within the app provider by *`"I love this workshop!"`*
+
+📚 Documentation:
+- Understand `📦providers` and `〽️dependency injection` [here](https://dev.to/patrick0806/understanding-providers-and-dependency-injection-in-nestjs-248e)
 
 
 Command to launch the server:
@@ -37,7 +32,7 @@ Command to launch the server:
 npm run start:dev
 ```
 
-You can now go to <http://localhost:3000> in your browser (or using Postman) to see if it works 🚀
+
 
 > As said before, the command `start:dev` makes use of `file watchers`. Every time you save a file, Nest will automatically rebuild the server with the updated file(s).  
 > This way you won't need to restart it manually after each modification 😉
@@ -46,7 +41,7 @@ You can now go to <http://localhost:3000> in your browser (or using Postman) to 
 
 ✔️ Validation:
 
-> 💡 Notice the message on the page? Congratulations, you just completed your first `I love this workshop!` in NestJS! 🥳
+> You can now go to <http://localhost:3000> in your browser (or using Postman) to see if it works 🚀. Notice the message on the page? Congratulations, you just completed your first `I love this workshop!` in NestJS! 🥳
 
 ## Step 2: Setting up the poc-shop
 
@@ -77,24 +72,15 @@ src
  - More about [decorators](https://docs.nestjs.com/custom-decorators)
  - What is a [controller](https://docs.nestjs.com/controllers)?
  - What is a [module](https://docs.nestjs.com/modules)
+ - What is dependency [injection](https://blog.devgenius.io/exploring-nest-js-dependency-injection-66a68a10acf7)
 
 > ### 2.1 - poc-shop provider
 
+A **provider**, in the context of your project, refers to a class that offers specific services, functionality, or data manipulation related to the poc-shop feature and we will also see the dependency injections here.
 
-A provider, in the context of your project, refers to a class that offers specific services, functionality, or data manipulation related to the poc-shop feature and we will also see the dependency injections here.
-
-
+Dependency **injection** is a design pattern that helps to *decouple* the components of an application and increase its *maintainability*, *scalability*, and testability. You can create a **provider** by adding the `@Injectable()` decorator to a class
 
 First of all you should import the `Injectable` decorator and then place on the class that you will also create named `PocShopService`.
-
-✔️ Validation:
-
-it should look like this:
-
-```ts
-@Injectable()
-export class PocShopService {}
-```
 
 > ### 2.2 - poc-shop controller
 
@@ -107,14 +93,8 @@ But wait, there's more! To ensure the smooth flow of your application, you'll ne
 
 ✔️ Validation:
 
-Now, let's take a look at the code snippet that brings it all together: 😃
+You should have a controller that handles the `poc-shop` route and the constructor with the provider 😄
 
-```ts
-@Controller('poc-shop')
-export class PocShopController {
-  constructor(private readonly pocShopService: PocShopService) {}
-}
-```
 
 > ### 2.3 - poc-shop module
 
@@ -122,25 +102,7 @@ export class PocShopController {
 
 ✔️ Validation:
 
-poc_shop.module.ts:
-```ts
-@Module({
-  controllers: [PocShopController],
-  providers: [PocShopService],
-  export: [PocShopService],
-})
-export class PocShopModule {}
-```
-
-app.module.ts:
-```ts
-@Module({
-  imports: [PocShopModule],
-  controllers: [AppController],
-  providers: [AppService],
-})
-export class AppModule {}
-```
+You can now link the `poc-shop` controller to the `app` thanks to the modules.
 
 ## Step 3: Introducing the poc-shop
 
