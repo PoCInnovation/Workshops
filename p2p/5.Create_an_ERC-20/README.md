@@ -1,6 +1,6 @@
 # Workshop - Create an ERC-20
 
-✔ What is a ERC-20
+✔ What is an ERC-20
 
 ✔ Make your own implementation of an ERC-20
 
