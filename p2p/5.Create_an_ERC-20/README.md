@@ -8,15 +8,15 @@
 
 ## Introduction in a few lines
 
-### What is an ERC-20 ?
+### What is an ERC-20?
 
 **ERC-20**, which stands for "Ethereum Request for Comments 20," is a **technical standard** used to **create** and **manage** tokens based on the **Ethereum blockchain**. ERC-20 tokens are **digital assets** that can represent **various forms** of value, such as financial assets, loyalty points, digital goods, and more.
 
-### Why it is useful ?
+### Why it is useful?
 
 The **primary advantage** of ERC-20 lies in its ease of **adoption** and **interoperability**. This standard **defines a set of rules** and functions that allow developers to **create tokens compatible with the Ethereum network** and existing Ethereum wallets. This means that users can store, transfer, and exchange different types of ERC-20 tokens **using the same wallets and interfaces**.
 
-### What technology is used to do this ?
+### What technology is used to do this?
 
 **Solidity** is a **programming language** specifically **designed for developing smart contracts on the Ethereum blockchain**. It enables developers to **create self-executing, autonomous, and verifiable contracts** that define rules and interactions within a **decentralized environment**. Solidity is based on **JavaScript-like syntax** and offers features such as state management, control structures, events, and calls to other contracts, enabling the **creation of complex and secure solutions** on the Ethereum blockchain. If you've never done Solidity before, take a look at the [Solidity Essentials](./Solidity.md) to understand the basics. You can also look at the [official documentation](https://docs.soliditylang.org/en/v0.8.21/).
 
