@@ -105,7 +105,7 @@ In this step, you will do the most important part: the implementation of the sta
 
 ### 📑 **Description**:
 
-In this step, you will test, with foundry, the functions that you have implemented previously.
+In this step, you will test, with [foundry](https://book.getfoundry.sh/), the functions that you have implemented previously. Any contract published on the blockchain is immutable, it cannot therefore be modified after its deployment. Testing the implementation of an ERC-20 contract is therefore essential to ensure the safety, compliance and reliability.
 
 ### 📌 **Tasks**:
 
@@ -116,6 +116,7 @@ In this step, you will test, with foundry, the functions that you have implement
 
 ### 📚 **Documentation**:
 
+- [Foundry](https://book.getfoundry.sh/)
 - [Foundry tests](https://book.getfoundry.sh/forge/fuzz-testing)
 
 ### ✔️ **Validation**:
