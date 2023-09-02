@@ -1,5 +1,7 @@
 # Setup - Foundry
 
+[Foundry](https://book.getfoundry.sh/) is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust. We will need it throughout the workshop.
+
 ## Download foundry
 
 - Open your terminal and type
