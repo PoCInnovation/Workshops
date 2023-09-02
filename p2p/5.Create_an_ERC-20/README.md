@@ -217,6 +217,12 @@ You just created your own ERC-20, well done! During this workshop, you learned w
 
 I hope you enjoyed the workshop!
 
+## To go further
+
+You have discovered what an ERC-20 is but there are still many other concepts to discover, here are some examples:
+- Discovering what is an [ERC-721 contracts](https://eips.ethereum.org/EIPS/eip-721) (NFT)
+- Deploy your ERC-20 on other blockchain, like [Sepolia](https://www.alchemy.com/overviews/sepolia-testnet)
+
 ## Authors
 
 | [<img src="https://github.com/Nfire2103.png" width=120><br><sub>Nathan FLATTIN</sub>](https://github.com/Nfire2103) |
