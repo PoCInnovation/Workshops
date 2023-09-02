@@ -63,7 +63,7 @@ In this step, you will create the variables, the mappings and the constructor ne
 > ⚠️ Take care about the [visibility](https://docs.soliditylang.org/en/v0.8.21/contracts.html#state-variable-visibility) of your variables! The names of the variables can give you clues 😉
 
 - Create in the `ERC20` contract the following [mappings](https://docs.soliditylang.org/en/v0.8.21/types.html#mapping-types):
-    - `_balances` wich corresponds to the balance of all wallets
+    - `_balances` which corresponds to the balance of all wallets
     - `_allowances` which corresponds to the number of tokens whose owner has authorized the spender to use
 > ⚠️ Take care about the [visibility](https://docs.soliditylang.org/en/v0.8.21/contracts.html#state-variable-visibility) of your mappings!
 
@@ -112,7 +112,7 @@ In this step, you will test, with [foundry](https://book.getfoundry.sh/), the fu
 - Copy the `ERC20.t.sol` file which is in the `utils` folder to the `test` folder.
     - This file contains the [foundry tests](https://book.getfoundry.sh/forge/fuzz-testing) that allow you to test all the functions of an ERC-20.
 - Execute the command `forge test` to run the tests.
-    - You can use `forge test -vvvv` to show more informations.
+    - You can use `forge test -vvvv` to show more information.
 
 ### 📚 **Documentation**:
 
@@ -129,7 +129,7 @@ Running 5 tests for test/ERC20.t.sol:ERC20Test
 [PASS] testApproveAndAllowance() (gas: 31150)
 [PASS] testBalanceOf() (gas: 11065)
 [PASS] testTotalSupply() (gas: 10862)
-[PASS] testTranferFrom() (gas: 49405)
+[PASS] testTransferFrom() (gas: 49405)
 [PASS] testTransfer() (gas: 36491)
 Test result: ok. 5 passed; 0 failed; finished in 1.72ms
 ```
@@ -140,7 +140,7 @@ If not, fix the function implementation.
 
 ### 📑 **Description**:
 
-In this step, you will deploy your ERC-20 on [Polygon's Mumbai Testnet](https://www.alchemy.com/overviews/mumbai-testnet). Testing our contrat on a testnet allows us to deploy and test our application on the Polygon network, a layer two of Ethereum, without having to spend real money. Be careful, this step requires a lot of tools. The first part of the tasks consists of the implementation of these tools and the second one of the deployment of the ERC-20.
+In this step, you will deploy your ERC-20 on [Polygon's Mumbai Testnet](https://www.alchemy.com/overviews/mumbai-testnet). Testing our contract on a testnet allows us to deploy and test our application on the Polygon network, a layer two of Ethereum, without having to spend real money. Be careful, this step requires a lot of tools. The first part of the tasks consists of the implementation of these tools and the second one of the deployment of the ERC-20.
 
 ### 📌 **Tasks**:
 
@@ -206,7 +206,7 @@ cast send $CONTRACT_ADDRESS "approve(address, uint256)" $WALLET 200 --private-ke
 
 - [Mumbai Testnet](https://www.alchemy.com/overviews/mumbai-testnet)
 - [Metamask](https://metamask.io)
-- [Add Mumbai Testner to Metamask](https://www.alchemy.com/overviews/mumbai-testnet#how-to-get-started-using-the-mumbai-testnet)
+- [Add Mumbai Testnet to Metamask](https://www.alchemy.com/overviews/mumbai-testnet#how-to-get-started-using-the-mumbai-testnet)
 - [Mumbai faucet](https://mumbaifaucet.com/)
 - [Foundry deploy](https://book.getfoundry.sh/forge/deploying)
 - [Cast command](https://book.getfoundry.sh/cast/)
@@ -226,7 +226,7 @@ You have discovered what an ERC-20 is but there are still many other concepts to
 ## Authors
 
 | [<img src="https://github.com/Nfire2103.png" width=120><br><sub>Nathan FLATTIN</sub>](https://github.com/Nfire2103) |
-|:------------------------------------------------------------------------------------------------------------:|
+| :-----------------------------------------------------------------------------------------------------------------: |
 <h2 align=center>
 Organization
 </h2>

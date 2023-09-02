@@ -41,7 +41,7 @@ contract CounterTest is Test {
         assertEq(allowance, TOKEN_APPROVED);
     }
 
-    function testTranferFrom() public {
+    function testTransferFrom() public {
         assertTrue(erc20.approve(WALLET2, TOKEN_APPROVED));
         uint256 allowance = erc20.allowance(address(this), WALLET2);
         assertEq(allowance, TOKEN_APPROVED);

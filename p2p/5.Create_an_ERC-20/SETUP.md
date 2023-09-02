@@ -8,7 +8,7 @@
 ```bash
 curl -L https://foundry.paradigm.xyz | bash
 ```
-. This will download foundryup.
+. This will download `foundryup`.
 - Then, you can download foundry by running `foundryup`
 - If everything went fine you should be able to use `forge`, `anvil`, `chisel` and `cast`.
 - If you are on macos you will need to install `libusb` with
@@ -49,7 +49,7 @@ solc_version = "0.8.20"
 
 ## VSCode Integration
 
-I recommand you to install [solidity vscode extension](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity), it is an extension that simplifies development in Solidity.
+I recommend you to install [solidity vscode extension](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity), it is an extension that simplifies development in Solidity.
 
 To be able to use it natively with foundry, you are going to do a few steps:
 
