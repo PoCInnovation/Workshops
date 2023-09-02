@@ -136,11 +136,11 @@ Test result: ok. 5 passed; 0 failed; finished in 1.72ms
 
 If not, fix the function implementation.
 
-## BONUS Step 5 - Let's deploy it
+## Step 5 - Let's deploy it
 
 ### 📑 **Description**:
 
-In this step, you will deploy your ERC-20 on Polygon's Mumbai Testnet. This step requires a lot of tools that's why it's a bonus step.
+In this step, you will deploy your ERC-20 on [Polygon's Mumbai Testnet](https://www.alchemy.com/overviews/mumbai-testnet). Testing our contrat on a testnet allows us to deploy and test our application on the Polygon network, a layer two of Ethereum, without having to spend real money. Be careful, this step requires a lot of tools. The first part of the tasks consists of the implementation of these tools and the second one of the deployment of the ERC-20.
 
 ### 📌 **Tasks**:
 
@@ -152,13 +152,13 @@ In this step, you will deploy your ERC-20 on Polygon's Mumbai Testnet. This step
     - Select `Polygon PoS` chain and `Polygon Mumbai` network.
     - Click on `Create app`.
     - Now, click on `API Key` and you can see your API key as well as your RPC URL in `HTTPS`.
-- Add [Mumbai Testnet](https://www.alchemy.com/overviews/mumbai-testnet) network to Metamask, [here](https://www.alchemy.com/overviews/mumbai-testnet#how-to-get-started-using-the-mumbai-testnet) a doc to explain how to do it.
+- Add Mumbai Testnet network to Metamask, [here](https://www.alchemy.com/overviews/mumbai-testnet#how-to-get-started-using-the-mumbai-testnet) a doc to explain how to do it.
 - Go to [Mumbai faucet](https://mumbaifaucet.com), enter your wallet address and send you MATIC.
 - Copy the `.env` file which is in the `utils` folder to your project and complete the variables except the last one.
 
 </br>
 
-The setup is now finished, let's go to the interesting part.
+The setup is now finished, let's go to the interesting part: deploy our ERC-20.
 
 - Load the environment variables:
 ```
@@ -181,6 +181,7 @@ source .env
 ```bash
 cast call $CONTRACT_ADDRESS "totalSupply()" --rpc-url $RPC_URL
 ```
+> 💡 This should display `100000` in hexadecimal
 
 Now, you can go in Metamask on Mumbai Testnet, click on `Import tokens` and put the `CONTRACT_ADDRESS`. Congratulation! You have your own token in your metamask wallet. You can now do what you want with your tokens.
 
@@ -203,10 +204,12 @@ cast send $CONTRACT_ADDRESS "approve(address, uint256)" $WALLET 200 --private-ke
 
 ### 📚 **Documentation**:
 
-- [Metamask](https://metamask.io)
 - [Mumbai Testnet](https://www.alchemy.com/overviews/mumbai-testnet)
+- [Metamask](https://metamask.io)
 - [Add Mumbai Testner to Metamask](https://www.alchemy.com/overviews/mumbai-testnet#how-to-get-started-using-the-mumbai-testnet)
 - [Mumbai faucet](https://mumbaifaucet.com/)
+- [Foundry deploy](https://book.getfoundry.sh/forge/deploying)
+- [Cast command](https://book.getfoundry.sh/cast/)
 
 ## Conclusion
 
