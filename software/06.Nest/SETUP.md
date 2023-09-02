@@ -7,17 +7,18 @@
 
 ## 2 - Project
 
-Install the **NestJS CLI**
+Install the **NestJS CLI**:
 
 ```sh
 npm i -g @nestjs/cli
 ```
-Create a new nest configured folder
+
+Then use it to create a new Nest project:
 ```sh
 nest new poc-shop
 ```
-Enter in the folder
 
+Finally, move to this new folder:
 ```sh
 cd poc-shop
 ```
