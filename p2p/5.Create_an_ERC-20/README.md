@@ -80,7 +80,7 @@ In this step, you will create the variables, the mappings and the constructor ne
 
 ### 📑 **Description**:
 
-In this step, you will do the most important part: the implementation of the standard functions.
+In this step, you will do the most important part: the implementation of the standard functions. Implementing standard functions in your ERC-20 token contract is a crucial element to ensure compatibility, interoperability, and adoption of your token within the Ethereum ecosystem.
 
 ### 📌 **Tasks**:
 
