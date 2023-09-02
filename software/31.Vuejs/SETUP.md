@@ -33,7 +33,7 @@ This will init the Vue.js project.
 
 Then, you will be presented with a list of options to include in your project.
 
-```
+```text
 ✔ Project name: … workshop-vue-poc
 ✔ Add TypeScript? … No / Yes
 ✔ Add JSX Support? … No / Yes
