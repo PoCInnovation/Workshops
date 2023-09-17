@@ -87,7 +87,7 @@ In this step, you will do the most important part: the implementation of the sta
 - Implement in the `ERC20` contract all the functions present in the `IERC20` interface.
     - You can copy function prototypes directly into the contract.
 
-> ⚠️ Don't forget to add the `override` modifier
+> ⚠️ Don't forget to update the visibility of the functions and to add the `override` modifier
 
 ### 👨‍🏫 **Advices**:
 
