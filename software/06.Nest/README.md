@@ -9,131 +9,159 @@
 In this workshop, you'll use [Nest](https://nestjs.com/), a framework built on top of [Express](https://expressjs.com/) to create efficient and scalable apps. It's a very opinionated framework that provides everything you need and has built-in integration with many other frameworks (queues, type ORMs, validators, documentation, and much more!).  
 Nest fully supports TypeScript (in fact it's [built in TypeScript](https://github.com/nestjs/nest)).
 
-
-> If you aren't familiar with TypeScript, you can read [this file](https://github.com/PoCInnovation/Workshops/blob/master/software/06.Nest/src/step0/learn.md) to learn the basics.
-
 ## Step 0: Setup
 
 All the required information to start this workshop can be found in [SETUP.md](./SETUP.md)
 
 ## Step 1: Basics
 
-- In the `app.controller.ts` file, create a `@Get()` route `/article` (the route `hello` should help you to do so)
-- You also have to create the corresponding provider to return a test value.
+### 📑 Description:
 
-> 📖 The documentation about [modules](https://docs.nestjs.com/modules) and [providers](https://docs.nestjs.com/providers) will teach you some basic concepts and architecture of Nest. The concept of [dependency injection](https://docs.nestjs.com/providers#dependency-injection) is a really interesting part of Nest.
+In this step, you will learn the fundamental concepts of NestJS and its architecture.
 
-Now, launch the server:
+### 📌 Tasks:
+
+- Launch the server, you will see a message 😉
+- Change the message that is returned within the app provider by *`"I love this workshop!"`*
+
+### 📚 Documentation:
+- Understand `📦providers` and `〽️dependency injection` [here](https://dev.to/patrick0806/understanding-providers-and-dependency-injection-in-nestjs-248e)
+
+
+Command to launch the server:
 ```sh
 npm run start:dev
 ```
 
-You can now go to <http://localhost:3000/article> in your browser (or using Postman) to see if it works 🚀
-
-> As said before, the command `start:dev` makes use of `file watchers`. Every time you save a file, Nest will automatically rebuild the server with the updated file(s).  
+> 💡 As said before, the command `start:dev` makes use of `file watchers`. Every time you save a file, Nest will automatically rebuild the server with the updated file(s).  
 > This way you won't need to restart it manually after each modification 😉
 
-> 💡 As you can see, AppService is an AppModule Provider (in `app.module.ts`) and it's [injected](https://docs.nestjs.com/providers#dependency-injection) in the controller (in the constructor).
+### ✔️ Validation:
 
-## Step 2: Variable decorator
+> You can now go to <http://localhost:3000> in your browser (or using Postman) to see if it works 🚀. Notice the message on the page?\
+> Congratulations, you just completed your first `I love this workshop!` in NestJS! 🥳
 
-A `@Decorator()` is a Javascript feature that allows you to wrap one piece of code with another.  
-You can read more about decorators [here](https://www.sitepoint.com/javascript-decorators-what-they-are/)
+## Step 2: Setting up the poc-shop
 
-### Step 2.1: Use @Body() to get data from a POST request
+### 📑 Description:
 
-You will now use the [POST](https://en.wikipedia.org/wiki/POST_(HTTP)) method to send data via a Body.
+In this step, we will cover the basics of using NestJS and get familiar with its fundamental concepts. Understanding these basics will provide a solid foundation for building applications with NestJS.
 
-The object containing data that will be transferred is a DTO ([Data Transfer Object](https://en.wikipedia.org/wiki/Data_transfer_object)).  
-A class `article.dto` is provided [here](https://github.com/PoCInnovation/Workshops/blob/master/software/06.Nest/src/step2/article.dto.ts). It is a simple class that describes an article.
+### 📌 Tasks:
 
-With the decorator [@Body()](https://docs.nestjs.com/controllers#request-payloads) (found in `@nestjs/common`), you will be able to get the body of the request.
+First of all you will create a folder in the `src` folder named `poc_shop`, inside the `poc_shop` folder, create the following files:
+ - poc_shop.service.ts
+ - poc_shop.controller.ts
+ - poc_shop.module.ts
 
-You should now be able to create a route `/article` using `@Post()`. The type of the object will be the provided dto class.
+### 📚 Documentation:
+ - What is is a [provider](https://docs.nestjs.com/providers)?
+ - More about [decorators](https://docs.nestjs.com/custom-decorators)
+ - What is a [controller](https://docs.nestjs.com/controllers)?
+ - What is a [module](https://docs.nestjs.com/modules)
+ - What is dependency [injection](https://blog.devgenius.io/exploring-nest-js-dependency-injection-66a68a10acf7)
 
-Now, add debug logs that print the received body.
+### ✔️ Validation:
 
-> Use Postman to test your new route 😉
-
-Here is an example of a body:
-```js
-{
-    "title": "simple article",
-    "body": "simple body",
-    "author": "simple author"
-}
+You should have the following structure:
+```txt
+src
+ └── poc_shop
+      ├── poc_shop.controller.ts
+      ├── poc_shop.module.ts
+      └── poc_shop.service.ts
 ```
 
-### Step 2.2: Use @Param() to retrieve URL route parameters
+### 2.1 - poc-shop provider
 
-First, read a little about [route parameters](https://docs.nestjs.com/controllers#route-parameters).
+A **provider**, in the context of your project, refers to a class that offers specific services, functionality, or data manipulation related to the poc-shop feature and we will also see the dependency injections here.
 
-You can now update the previously created `getArticle` function to take a title as a route `@Param()`.  
-Add debug logs again to check if you are correctly receiving it 🚀
+Dependency **injection** is a design pattern that helps to *decouple* the components of an application and increase its *maintainability*, *scalability*, and testability. You can create a **provider** by adding the `@Injectable()` decorator to a class
 
-> We'll use this param later to search for this title in our mocked article DB 😉
+First of all you should import the `Injectable` decorator and then place on the class that you will also create named `PocShopService`.
 
-### Step 2.3: PUT request to update data
+> ### 2.2 - poc-shop controller
 
-A PUT request usually uses both `@Param()` (e.g. find the article to update) and `@Body()` (containing the updated article)
+🎮 In this section, you're about to embark on an exciting journey of creating your first controller using the `@Controller('poc-shop')` decorator. 🚀 Controllers play a crucial role in handling incoming requests 📥 and responding to clients with the appropriate data. 💡
 
-Using the `@Put()` method and what you have just learnt, write a route to get both the body and the url param.
+To kick things off, let's dive into creating the PocShopController class. This class will serve as the controller specifically designed for the poc-shop route. 🛍️ Inside this class, we'll include a constructor that accepts an instance of the PocShopService and leverages the provider methods. 💼
 
-> As always, do not forget to test if everything works as intended before moving on to the next step!
+But wait, there's more! To ensure the smooth flow of your application, you'll need to utilize the Get decorator.
 
-### Step 2.4: Bonus
+### ✔️ Validation:
 
-A controller usually contains routes with similar routes (e.g. `/user`, `/user/profile` ...).<br>
-With [controller routing](https://docs.nestjs.com/controllers#routing) you can specify a prefix to be applied to every routes of this controller (it would be `article` here)
+You should have a controller that handles the `poc-shop` route and the constructor with the provider 😄
 
-## Step 3: Database Service
 
-### Step 3.1: Incorporate the Database service in your app
+> ### 2.3 - poc-shop module
 
-You can find a Provider DatabaseService [here](https://github.com/PoCInnovation/Workshops/blob/master/software/06.Nest/src/step3/database.service.ts). This provider is simulating a database by using an array as storage. You will use it for the last step as setting up and using a real database is a bit out of scope for this workshop.
+🔗 A module is a class annotated with a `@Module()` 🧩 **decorator**. The @Module() decorator provides metadata that Nest makes use of to organize the application `structure`.🏗️
 
-> 💡 Make sure the import statement of `article.dto.ts` is correct in the `database.service.ts`. it may not be according to the file locations
+### ✔️ Validation:
 
-As for the AppService, you will have to add the DatabaseService in the Module Provider list and `inject` it (via the constructor) in AppService.
+You can now link the `poc-shop` controller to the `app` thanks to the modules.
 
-### Step 3.2: Use the Database service
+## Step 3: Introducing the poc-shop
 
-The new service exposes 4 functions: createArticle, updateArticle, findArticle, deleteArticle
+### 📑 Description:
 
-As these functions are [asynchronous](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function), you will have to use `Promise`s (i.e. `await` or `.then()`). <br>
-Feel free to ask questions or read about Promises if you do not feel at ease with them.
+Upon accessing the poc-shop page, you'll notice that it currently lacks content.📭 Let's proceed by adding some essential elements, starting with a welcoming page. 🎉
 
-Now, update the functions in `AppService` to use the database and call them in the controller.
+### 📚 Documentation:
+- What is a [DTO](https://plainenglish.io/blog/use-of-dto-for-validation-in-nestjs-application-d37ff55f0560)
 
-If everything went well, you should be able to create, update and get articles!
+### 📌 Tasks:
 
-> Try with Postman!
+- You should be able to create the poc-shop DTO
+- Create a folder DTO in the `poc_sop/` folder and create a poc_shop.dto.ts
+  > This DTO should include the following information:
+    - The number of visitors
+    - An array of IDs representing all available games
+- Send `Welcome to poc-shop` message when user access to `/poc-shop`
+- The number of visitors will be incremented each time a user access to `/poc-shop` or `/poc-shop/:id`
 
-### Step 3.3: Delete
+> If you want to establish communication with your site, you need to employ an [REST API](https://www.restapitutorial.com/lessons/httpmethods.html), for this project we will use the **GET**, **POST**, **DELETE** and **PATCH** methods.
 
-What about deletion !
 
-Create a route to `@Delete()` an article on your own !
+### ✔️ Validation:
 
-### Step 3.4: Bonus
+- Each time a user accesses the poc-shop/ route, they will be greeted with the message 'Welcome to poc-shop'.
+- The user can see the games available, if there are not any games yet, you should send a message.
 
-NestJS [HttpExceptions](https://docs.nestjs.com/exception-filters#built-in-http-exceptions) are an elegant way to send an error response.  
-For example, the `findArticle` function may return `undefined` if no article matches the requested title.
-In that case you should send a `NotFoundException`.
+## Step 4: The games
+
+### 📑 Description:
+
+Now you have your own games page but there are no games, let's create a game together.
+
+### 📌 Tasks:
+
+> You know how to create a DTO for the poc-shop, let's create one for the games in the `DTO/` folder and you should name it *`games.dto.ts`*, it should contain:
+
+- An ID
+- A name
+- A price
+- The income of the game
+
+> Always in the the **poc-shop** controller you will now need to do a few a actions when a user access to `poc-shop/games`:
+
+- Get all the games, if there are not any games yet, send a message.
+- Get a game by his ID using **@Param()**
+- Post a new game
+- Delete a game by his ID
+- Change the price for a game for the sales
 
 ## Bonus
+If you are here that means that you finished the workshop or you want to go further and learn more about NestJS 🥇
 
-If you want to go further, here are some ideas:
-- Implement a DELETE route and add data to your response to let users know everything went well.
-- Validate user input: [class-validator](https://docs.nestjs.com/techniques/validation) allows you to easily validate incoming input (i.e. Body and Query params)
-- Document your routes [NestJS swagger](https://docs.nestjs.com/recipes/swagger) offers an easy way to document your routes (with decorators).
-  It can then generate an open-api documentation using swagger.
-</details>
+- Unless you want to restart all the data in your program every time it's down, check what is [postgreSQL](https://www.postgresql.org/) and how to use it thanks to the [ORM](https://www.freecodecamp.org/news/what-is-an-orm-the-meaning-of-object-relational-mapping-database-tools/) that makes it easier to interact with data bases, you can start with [mikroORM](https://docs.nestjs.com/recipes/mikroorm). For more information check this [video](https://youtu.be/jYFyLLqvHy8).
+- For more security in your program check about user authentication with [JWT](https://docs.nestjs.com/security/authentication)
 
 ## Authors
 
-| [<img src="https://github.com/terra-hertz.png?size=85" width=85><br><sub>Theo Hinsinger</sub>](https://github.com/terra-hertz)
+| [<img src="https://github.com/molaryy.png?size=85" width=85><br><sub>Mohammed JBILOU</sub>](https://github.com/molaryy)
 | :---: |
+
 <h2 align=center>
 Organization
 </h2>
