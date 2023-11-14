@@ -124,8 +124,8 @@ Go to your [dashboard](https://vercel.com/dashboard) and click on the `Visit` bu
 You can now play with the `url` to test your backend. Try to share your url with your friend, they can also test your application.
 
 ### 📚 Documentation:
-- Creating an API with [NextJS](https://nextjs.org/learn-pages-router/basics/api-routes/creating-api-routes)
-- How to use a [dynamic api route](https://nextjs.org/docs/pages/building-your-application/routing/dynamic-routes).
+- Creating an API with [NextJS](https://nextjs.org/docs/app/building-your-application/routing/route-handlers)
+- How to use a [dynamic api route](https://nextjs.org/docs/app/building-your-application/routing/dynamic-routes).
 
 
 ### ✔️ Validation:
