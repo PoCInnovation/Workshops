@@ -32,12 +32,14 @@ In this workshop, we will explore the power of CD as services. Here is a schema 
 
 ## Step 1 - Quick start
 
-The objective is to deploy your own blog on [Netlify](https://www.netlify.com/) or [Vercel](https://vercel.com/), here is a really basic [example](https://blissful-dijkstra-a9097f.netlify.app/) of blog with some articles.
+### 📑 Description:
+The objective is to deploy your own blog on [Netlify](https://www.netlify.com/) or [Vercel](https://vercel.com/), here is a really basic [example](https://nextjs-netlify-blog-template.netlify.app/) of a blog with some articles.
 
 > ⚠️ The primary objective is to discover the power of those platform, don't judge the design.
 
 For this workshop, we are going to use [Vercel](https://vercel.com/) because it has a perfect integration with [NextJS](https://nextjs.org/).
 
+### 📌 Tasks:
 Let's start a simple Next project.
 
 - Go to [Vercel](https://vercel.com/)
@@ -46,6 +48,8 @@ Let's start a simple Next project.
 - Create a new project with the **NextJS** template
 - Wait until your project is deployed
 
+
+### 📚 Documentation:
 > 💡 There are many templates available [here](https://github.com/vercel/next.js/tree/canary/examples)
 
 Your project is now deployed online.
@@ -54,73 +58,60 @@ Now, `clone` the Github repository in your computer.
 
 It should have the following architecture:
 
+### ✔️ Validation:
 ```shell
 .
-├── pages              # Javascript source code
-│  ├── api
-│  │ └── hello.js      # Simple backend route
-│  ├── _app.js         # Component
-│  └── index.js        # Index
-├── public             # Assets
-│  ├── favicon.ico 
-│  └── vercel.svg
-├── styles             # Styles
-│  ├── globals.css
-│  └── Home.module.css
-├── .eslintrc.json     # Code-quality rules
-├── .gitignore         # Tells git which files (or patterns) it should ignore
-├── next.config.js     # Next JS config
-├── package-lock.json  # Dependencies manager
-├── package.json       # Package manager
-└── README.md          # Starter help          
+├── app                    # Typescript source code
+│  ├── favicon.ico         
+│  ├── global.css          # Global styles
+│  ├── layout.tsx
+│  └── page.tsx
+├── next.config.js
+├── next-env.d.ts
+├── package.json
+├── package-lock.json
+├── postcss.config.js        
+├── public
+│   ├── next.svg
+│   └── vercel.svg
+├── README.md
+├── tailwind.config.ts
+└── tsconfig.json    
 ```
 
 Thanks to [NextJS](https://nextjs.org/) we can both develop the frontend and the backend of our application.
 
-You must install the dependencies with one of those commands:
-
-Yarn: `yarn`<br>
-Npm:   `npm install`
+You must install the dependencies with one of those commands:\
+Yarn: `yarn`\
+Npm:  `npm install`
 
 ## Step 2 - Serverless functions
 
+### 📑 Description:
 To design our blog, first we will need a backend to store our posts.
 
 First, let's write a simple route to understand how [NextJS](https://nextjs.org/) and [Vercel](https://vercel.com/) work with [serverless functions](https://vercel.com/docs/serverless-functions/introduction).
 
-> NextJS can create an endpoint from a file, for example you can actually reach the endpoint `<your_website>/api/hello> in your project.
+> NextJS can create an endpoint from a file, for example you can actually reach the endpoint `<your_website>/api/hello>` in your project.
 
-### Ping
+### 📌 Tasks:
+#### Ping
 
-In the `api` folder, create a file `ping.js` that will just respond `pong` when you hit the endpoint.
-
-> 💡 You should take as example the file `hello.js`.
+Create an `api` folder in the `app` folder, in the `api` folder, create a folder `ping` and in the `ping` folder create a `route.ts` file that will just respond `pong` when you hit the endpoint.
 
 > You can run your project with `yarn dev` or `npm run dev`.
 
-If you've done everything good, you should reach your endpoint through <http://localhost:3000/api/ping>. The command below should print `Success`.
+#### Hello dude!
 
-```shell
-curl -s http://localhost:3000/api/ping | grep "pong" > /dev/null && echo "Success" || echo "Fail"
-```
+Now the objective is simple: use an url parameter to say hello with a dynamic api route
 
-#### Hello dude !
-
-Now the objective is simple: use an url parameter to say hello with a [dynamic api route](https://nextjs.org/docs/api-routes/dynamic-api-routes).
-
-Create a folder `hello` and a file named `[name].js` in this folder.
+Create a folder `hello` and a folder named `[name]` in this folder create a file `route.ts`.
 
 It must:
 - Retrieve the name in the `url parameter`
 - Response with the string `Hello <parameter> !`.
 
-The command below should print `Success`
-
 > 💡 Next will automatically reload your application, you don't need to restart your server.
-
-```shell
-curl -s http://localhost:3000/api/hello/John | grep "Hello John \!" > /dev/null && echo "Success" || echo "Fail"
-```
 
 #### Deploy
 
@@ -132,8 +123,27 @@ Go to your [dashboard](https://vercel.com/dashboard) and click on the `Visit` bu
 
 You can now play with the `url` to test your backend. Try to share your url with your friend, they can also test your application.
 
+### 📚 Documentation:
+- Creating an API with [NextJS](https://nextjs.org/learn-pages-router/basics/api-routes/creating-api-routes)
+- How to use a [dynamic api route](https://nextjs.org/docs/pages/building-your-application/routing/dynamic-routes).
+
+
+### ✔️ Validation:
+If you've done everything good, you should reach your endpoint through <http://localhost:3000/api/ping>. The command below should print `Success`.
+
+```shell
+curl -s http://localhost:3000/api/ping | grep "pong" > /dev/null && echo "Success" || echo "Fail"
+```
+
+The command below should print `Success`
+
+```shell
+curl -s http://localhost:3000/api/hello/John | grep "Hello John \!" > /dev/null && echo "Success" || echo "Fail"
+```
+
 ## Step 3 - Post posts
 
+### 📑 Description:
 It's time to create our backend to manage your post.
 
 Your post must be represented like the following object:
@@ -147,25 +157,26 @@ Your post must be represented like the following object:
 ```
 
 Originally, you should store your data in a [database](https://en.wikipedia.org/wiki/Database) but it would be long so we will just store it.<br>
-Create a file named `resources.js` that export a variable that stores data in an array named `posts`.
+Create a file named `resources.ts` that export a variable that stores data in an array named `posts`.
 
-Create a file `posts.js` in `api` that will be our [REST endpoint](https://www.sitepoint.com/rest-api/) to manage posts.
+Create a folder `posts` in `api` and a `route.ts` in it that will be our REST endpoint to manage posts.
 
-It must:
+### 📌 Tasks:
 - On **GET**: Retrieve all posts stored in the API
 - On **POST**: Create a new post
   - The **body** of your request must have a `title` and a `content`, you can generate the `created_at` with `Date`.
-
-> You can retrieve the body with `req.body`.
-
-🚀 Now, you can create a folder `posts` that get an `id` as `url parameter` to do:
 - On **GET**: Retrieve the post identified by its `id`
 - On **PUT**: Update post data
 - On **DELETE**: Delete the post
 
+> You can retrieve the body with `req.body`.
+
 > 💡 You can use [Postman](https://www.postman.com/) to test your API.
 >
 > 💡 You should create some `fake data` to easily feed your frontend for the next step
+
+### 📚 Documentation:
+- What is a [REST API](https://www.sitepoint.com/rest-api/)?
 
 ### Deploy
 
@@ -173,6 +184,7 @@ You can now deploy your App on Vercel to update your application.
 
 ## Step 4 - The page is the soul's mirror
 
+### 📑 Description:
 Now you got your backend, let's create the frontend !
 
 To begin with, we will create the top bar to discover [next syntax](https://nextjs.org/docs/basic-features/pages).
@@ -180,45 +192,63 @@ To begin with, we will create the top bar to discover [next syntax](https://next
 Take a look at a `next frontend architecture`:
 
 ```shell
-├── pages
-│  ├── api
-│  │ └── # your API
-│  ├── _app.js    # Component
-│  └── index.js   # Index
-├── public        # Public assets
-│  ├── favicon.ico 
-│  └── vercel.svg
-├── styles             # Styles (CSS) directory
-│  ├── globals.css     # Global CSS style
-│  └── Home.module.css # Style scoped for Home component
-```
+├── app
+│   ├── api
+│   │    └── # your API
+│   ├── favicon.ico
+│   ├── globals.css     # Global CSS style
+│   ├── layout.tsx
+│   └── page.tsx
+├── next.config.js
+├── next-env.d.ts
+├── package.json
+├── package-lock.json
+├── postcss.config.js
+├── public              # Public assets
+│   ├── next.svg
+│   └── vercel.svg
+├── README.md
+├── src
+│   ├── resources.ts
+│   └── utils.ts
+├── tailwind.config.ts
+└── tsconfig.json
 
-Now, to create the top bar we need 2 things: a component named `TopBar` wrote in a `topBar.js` file and a `stylesheet` named `TopBar.module.css`.
+```
+### 📌 Tasks:
+In your `src` folder create a `components` folder that will store all your components and now, to create the top bar we need 2 things: a component named `TopBar` wrote in a `topBar.tsx` file and a `stylesheet` named `TopBar.module.css`.
 
 Here we go, first:
 
-- Create a file named `topBar.js` that will export a component that displays a topBar.
+- Create a file named `topBar.tsx` that will export a component that displays a topBar.
 
 > You can `return` simple html, it's not different from vanilla html for the moment.
 
-- Create a stylesheet named `TopBar.module.css` that will apply some style to our component (e.g: position, size, colors, font-size...).
+- Create a stylesheet named `TopBar.css` that will apply some style to our component (e.g: position, size, colors, font-size...).
 
-- Now you must display it to your website, go to `index.js` and remove all the code in the `return`, replace it with your component, you can use it like a html tag (e.g: `<TopBar/>`).
+- Now you must display it to your website, go to `page.tsx` and remove all the code in the `return`, replace it with your component, you can use it like a html tag (e.g: `<TopBar/>`).
 
-Push your work and share your `website url` to your friends, so they can be impressed by your skills 🚀
+### ✔️ Validation:
+You can now see your topBar 🥳, push your work and share your `website url` to your friends, so they can be impressed by your skills 🚀.
 
 ## Step 5 - View posts in your browser
 
+### 📑 Description:
 It's time to retrieve your posts and share them with the rest of the world.
 
+
+### 📌 Tasks:
 To do it, you know the recipe, just create a new component named `Posts` and a `stylesheet` named `Posts.module.css`.
 
+
+### 📚 Documentation:
 You will also need to fetch your data from your API. This [documentation](https://nextjs.org/docs/basic-features/data-fetching) can help you to do it.
 
 > 💡 To fetch your **properties**, you should use [axios](https://www.npmjs.com/package/axios)
 
 > 💡 Thanks to the NextJS integration, you don't need to care about [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing).
 
+### ✔️ Validation:
 Now you can publish your beautiful blog online and share it with your friends !
 
 ## Further steps
@@ -243,12 +273,12 @@ Here are the steps to deploy on Netlify:
 
 ## Go Further
 
-- [Github pages](https://pages.github.com/)
+- [Deploy with GitHub Pages](https://pages.github.com/)
 - [What is JamStack](https://jamstatic.fr/2019/02/07/c-est-quoi-la-jamstack/)
 - [Next GraphQL](https://github.com/vercel/next.js/tree/canary/examples/api-routes-graphql)
-- [Next Configuration](https://nextjs.org/docs/api-reference/next.config.js/introduction)
+- [How to configure Next](https://nextjs.org/docs/api-reference/next.config.js/introduction)
 - [Next Crud](https://next-crud.js.org/)
-- [Next Typescript](https://nextjs.org/docs/basic-features/typescript)
+- [Typescript with Next](https://nextjs.org/docs/basic-features/typescript)
 
 ## Authors
 
