@@ -33,12 +33,11 @@ In this workshop, we will explore the power of CD as services. Here is a schema 
 ## Step 1 - Quick start
 
 ### 📑 Description:
-The objective is to deploy your own blog on [Netlify](https://www.netlify.com/) or [Vercel](https://vercel.com/), here is a really basic [example](https://blissful-dijkstra-a9097f.netlify.app/) of blog with some articles.
+The objective is to deploy your own blog on [Netlify](https://www.netlify.com/) or [Vercel](https://vercel.com/), here is a really basic [example](https://nextjs-netlify-blog-template.netlify.app/) of a blog with some articles.
 
 > ⚠️ The primary objective is to discover the power of those platform, don't judge the design.
 
 For this workshop, we are going to use [Vercel](https://vercel.com/) because it has a perfect integration with [NextJS](https://nextjs.org/).
-<br/>
 
 ### 📌 Tasks:
 Let's start a simple Next project.
@@ -49,7 +48,6 @@ Let's start a simple Next project.
 - Create a new project with the **NextJS** template
 - Wait until your project is deployed
 
-<br/>
 
 ### 📚 Documentation:
 > 💡 There are many templates available [here](https://github.com/vercel/next.js/tree/canary/examples)
@@ -59,8 +57,6 @@ Your project is now deployed online.
 Now, `clone` the Github repository in your computer.
 
 It should have the following architecture:
-<br/>
-<br/>
 
 ### ✔️ Validation:
 ```shell
@@ -85,10 +81,9 @@ It should have the following architecture:
 
 Thanks to [NextJS](https://nextjs.org/) we can both develop the frontend and the backend of our application.
 
-You must install the dependencies with one of those commands:
-
-Yarn: `yarn`<br>
-Npm:   `npm install`
+You must install the dependencies with one of those commands:\
+Yarn: `yarn`\
+Npm:  `npm install`
 
 ## Step 2 - Serverless functions
 
@@ -97,19 +92,16 @@ To design our blog, first we will need a backend to store our posts.
 
 First, let's write a simple route to understand how [NextJS](https://nextjs.org/) and [Vercel](https://vercel.com/) work with [serverless functions](https://vercel.com/docs/serverless-functions/introduction).
 
-> NextJS can create an endpoint from a file, for example you can actually reach the endpoint `<your_website>/api/hello> in your project.
-
-<br/>
+> NextJS can create an endpoint from a file, for example you can actually reach the endpoint `<your_website>/api/hello>` in your project.
 
 ### 📌 Tasks:
 #### Ping
 
 Create an `api` folder in the `app` folder, in the `api` folder, create a folder `ping` and in the `ping` folder create a `route.ts` file that will just respond `pong` when you hit the endpoint.
 
-
 > You can run your project with `yarn dev` or `npm run dev`.
 
-#### Hello dude !
+#### Hello dude!
 
 Now the objective is simple: use an url parameter to say hello with a dynamic api route
 
@@ -132,9 +124,8 @@ Go to your [dashboard](https://vercel.com/dashboard) and click on the `Visit` bu
 You can now play with the `url` to test your backend. Try to share your url with your friend, they can also test your application.
 
 ### 📚 Documentation:
-- Creating an API with [nextjs](https://nextjs.org/learn-pages-router/basics/api-routes/creating-api-routes)
+- Creating an API with [NextJS](https://nextjs.org/learn-pages-router/basics/api-routes/creating-api-routes)
 - How to use a [dynamic api route](https://nextjs.org/docs/pages/building-your-application/routing/dynamic-routes).
-
 
 
 ### ✔️ Validation:
@@ -149,8 +140,6 @@ The command below should print `Success`
 ```shell
 curl -s http://localhost:3000/api/hello/John | grep "Hello John \!" > /dev/null && echo "Success" || echo "Fail"
 ```
-
-
 
 ## Step 3 - Post posts
 
@@ -181,8 +170,6 @@ Create a folder `posts` in `api` and a `route.ts` in it that will be our REST en
 - On **DELETE**: Delete the post
 
 > You can retrieve the body with `req.body`.
-
-
 
 > 💡 You can use [Postman](https://www.postman.com/) to test your API.
 >
@@ -286,12 +273,12 @@ Here are the steps to deploy on Netlify:
 
 ## Go Further
 
-- [Github pages](https://pages.github.com/)
+- [Deploy with GitHub Pages](https://pages.github.com/)
 - [What is JamStack](https://jamstatic.fr/2019/02/07/c-est-quoi-la-jamstack/)
 - [Next GraphQL](https://github.com/vercel/next.js/tree/canary/examples/api-routes-graphql)
-- [Next Configuration](https://nextjs.org/docs/api-reference/next.config.js/introduction)
+- [How to configure Next](https://nextjs.org/docs/api-reference/next.config.js/introduction)
 - [Next Crud](https://next-crud.js.org/)
-- [Next Typescript](https://nextjs.org/docs/basic-features/typescript)
+- [Typescript with Next](https://nextjs.org/docs/basic-features/typescript)
 
 ## Authors
 
