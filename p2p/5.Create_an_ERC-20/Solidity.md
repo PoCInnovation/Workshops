@@ -7,7 +7,7 @@
 ## Contracts
 
 - **Contracts**: The building blocks of Ethereum smart contracts.
-    - [Solidity by Example - Hello World](https://solidity-by-example.org/hello-world/)
+  - [Solidity by Example - Hello World](https://solidity-by-example.org/hello-world/)
 
 ## Data Types and State Variables
 
@@ -24,6 +24,13 @@
 - **private**: Accessible only within the contract.
   - [Solidity by Example - Visibility](https://solidity-by-example.org/visibility/)
 
+## Data Location
+
+- **Storage**: Persistent data stored on the blockchain.
+- **Memory**: Temporary data stored during function execution.
+- **Stack**: Local variables stored in function execution context.
+  - [Solidity by Example - Data Location](https://solidity-by-example.org/data-location/)
+
 ## Mappings and Arrays
 
 - **Mappings**: Key-value data structures.
@@ -34,7 +41,7 @@
 ## Functions
 
 - **Functions**: Code blocks within contracts that execute specific tasks.
-    - [Solidity by Example - Functions](https://solidity-by-example.org/function/)
+  - [Solidity by Example - Functions](https://solidity-by-example.org/function/)
 
 ## Constructor
 
@@ -60,6 +67,11 @@
 
 - **Events**: Enable logging of important contract actions for external consumption.
   - [Solidity by Example - Events](https://solidity-by-example.org/events/)
+
+## Units
+
+- **Units**: Ether and Wei are the primary units of Ethereum. 1 ether = 10^18 wei.
+  - [Solidity by Example - Units](https://solidity-by-example.org/ether-units/)
 
 ## Solidity by Example
 
