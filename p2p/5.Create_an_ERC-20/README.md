@@ -69,6 +69,7 @@ In this step, you will create the variables, the mappings and the constructor ne
 
 - Initialize `_totalSupply` in the [constructor](https://docs.soliditylang.org/en/v0.8.21/contracts.html#constructor) of the contract.
 > ⚠️ Don't forget to assign `_totalSupply` to a wallet and to emit an event
+> All the events you need to emit are already defined in the [interface](./utils/IERC20.sol). Find the right one.
 
 ### 📚 **Documentation**:
 
