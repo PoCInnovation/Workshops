@@ -190,7 +190,7 @@ source .env
 ```bash
 cast call $CONTRACT_ADDRESS "totalSupply()" --rpc-url $RPC_URL
 ```
-> 💡 This should display `100000` in hexadecimal
+> 💡 This should display the total supply of your tokens in wei.
 
 Now, you can go in Metamask on Sepolia Testnet, click on `Import tokens` and put the `CONTRACT_ADDRESS`. Congratulation! You have your own token in your metamask wallet. You can now do what you want with your tokens.
 
