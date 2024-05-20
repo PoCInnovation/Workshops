@@ -55,7 +55,7 @@ In this step, you will create the variables, the mappings and the constructor ne
 ### 📌 **Tasks**:
 
 - Create in the `ERC20` contract the following variables:
-    - All variables except `_totalSupply` will be defined on declaration
+    - All variables except `_totalSupply` will be initialized on declaration
     - `name` which corresponds to the name of the token
     - `symbol` which corresponds to the abbreviation of the token name
     - `decimals` which corresponds to the number of decimals that the token can have
@@ -67,8 +67,14 @@ In this step, you will create the variables, the mappings and the constructor ne
     - `_allowances` which corresponds to the number of tokens whose owner has authorized the spender to use
 > ⚠️ Take care about the [visibility](https://docs.soliditylang.org/en/v0.8.21/contracts.html#state-variable-visibility) of your mappings!
 
+I give you the last one, it's a little more complicated:
+
+```solidity
+mapping(address owner => mapping(address spender => uint256)) private _allowances;
+```
+
 - Initialize `_totalSupply` in the [constructor](https://docs.soliditylang.org/en/v0.8.21/contracts.html#constructor) of the contract.
-> ⚠️ Don't forget to assign `_totalSupply` to a wallet and to emit an event
+> ⚠️ Don't forget to assign `_totalSupply` to a wallet and to emit an event. All the events you need to emit are already defined in the [interface](./utils/IERC20.sol). Find the right one.
 
 ### 📚 **Documentation**:
 
@@ -140,25 +146,28 @@ If not, fix the function implementation.
 
 ### 📑 **Description**:
 
-In this step, you will deploy your ERC-20 on [Polygon's Mumbai Testnet](https://www.alchemy.com/overviews/mumbai-testnet). Testing our contract on a testnet allows us to deploy and test our application on the Polygon network, a layer two of Ethereum, without having to spend real money. Be careful, this step requires a lot of tools. The first part of the tasks consists of the implementation of these tools and the second one of the deployment of the ERC-20.
+In this step, you will deploy your ERC-20 on [Ethereum Sepolia Testnet](https://www.alchemy.com/overviews/sepolia-testnet). Testing our contract on a testnet allows us to deploy and test our application on the Ethereum network, without having to spend real money because we use test tokens. Be careful, this step requires a lot of tools. The first part of the tasks consists of the installation of these tools and the second one of the deployment of the ERC-20.
 
 ### 📌 **Tasks**:
 
-- Download [Metamask](https://metamask.io) and create an account, if you don't already have one.
+#### Installation of the tools
+
+- Download [Metamask](https://metamask.io) and create an account, if you don't already have one. It is the most popular Ethereum wallet and allows you to interact with the Ethereum blockchain.
 - Create your API key on [Alchemy](https://dashboard.alchemy.com/apps).
     - Sign in.
     - Click on `Create new app`.
     - Enter a name for your API key.
-    - Select `Polygon PoS` chain and `Polygon Mumbai` network.
+    - Select `Ethereum` chain and `Ethereum Sepolia` network.
     - Click on `Create app`.
     - Now, click on `API Key` and you can see your API key as well as your RPC URL in `HTTPS`.
-- Add Mumbai Testnet network to Metamask, [here](https://www.alchemy.com/overviews/mumbai-testnet#how-to-get-started-using-the-mumbai-testnet) a doc to explain how to do it.
-- Go to [Mumbai faucet](https://mumbaifaucet.com), enter your wallet address and send you MATIC.
+- Add Sepolia Testnet network to Metamask, [here](https://moralis.io/how-to-add-the-sepolia-network-to-metamask-full-guide/) a doc to explain how to do it.
+- Go to [Sepolia faucet](https://www.alchemy.com/faucets/ethereum-sepolia), enter your wallet address and send you ETH.
+> ⚠️ You need to have some ETH on mainnet to give you test tokens. If you don't have any, call the workshop manager.
 - Copy the `.env` file which is in the `utils` folder to your project and complete the variables except the last one.
 
-</br>
+#### Deployment of the ERC-20
 
-The setup is now finished, let's go to the interesting part: deploy our ERC-20.
+The setup is now finished, let's go to the interesting part: deploy our ERC-20. We will again use [foundry](https://book.getfoundry.sh/), the [forge create](https://book.getfoundry.sh/forge/deploying) command to deploy the contract and the [cast](https://book.getfoundry.sh/cast/) command to interact with it.
 
 - Load the environment variables:
 ```
@@ -181,9 +190,9 @@ source .env
 ```bash
 cast call $CONTRACT_ADDRESS "totalSupply()" --rpc-url $RPC_URL
 ```
-> 💡 This should display `100000` in hexadecimal
+> 💡 This should display the total supply of your tokens in wei.
 
-Now, you can go in Metamask on Mumbai Testnet, click on `Import tokens` and put the `CONTRACT_ADDRESS`. Congratulation! You have your own token in your metamask wallet. You can now do what you want with your tokens.
+Now, you can go in Metamask on Sepolia Testnet, click on `Import tokens` and put the `CONTRACT_ADDRESS`. Congratulation! You have your own token in your metamask wallet. You can now do what you want with your tokens.
 
 </br>
 
@@ -204,10 +213,10 @@ cast send $CONTRACT_ADDRESS "approve(address, uint256)" $WALLET 200 --private-ke
 
 ### 📚 **Documentation**:
 
-- [Mumbai Testnet](https://www.alchemy.com/overviews/mumbai-testnet)
+- [Ethereum Sepolia Testnet](https://www.alchemy.com/overviews/sepolia-testnet)
 - [Metamask](https://metamask.io)
-- [Add Mumbai Testnet to Metamask](https://www.alchemy.com/overviews/mumbai-testnet#how-to-get-started-using-the-mumbai-testnet)
-- [Mumbai faucet](https://mumbaifaucet.com/)
+- [Add Sepolia Testnet to Metamask](https://moralis.io/how-to-add-the-sepolia-network-to-metamask-full-guide/)
+- [Sepolia faucet](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Foundry deploy](https://book.getfoundry.sh/forge/deploying)
 - [Cast command](https://book.getfoundry.sh/cast/)
 
@@ -221,7 +230,7 @@ I hope you enjoyed the workshop!
 
 You have discovered what an ERC-20 is but there are still many other concepts to discover, here are some examples:
 - Discovering what is an [ERC-721 contracts](https://eips.ethereum.org/EIPS/eip-721) (NFT)
-- Deploy your ERC-20 on other blockchain, like [Sepolia](https://www.alchemy.com/overviews/sepolia-testnet)
+- Deploy your ERC-20 on other blockchain, like [Polygon Amoy](https://polygon.technology/blog/introducing-the-amoy-testnet-for-polygon-pos)
 
 ## Authors
 
