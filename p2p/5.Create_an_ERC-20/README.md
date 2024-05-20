@@ -4,7 +4,7 @@
 
 ✔ Make your own implementation of an ERC-20
 
-✔ Deploy an ERC-20 on an Polygon testnet
+✔ Deploy an ERC-20 on Ethereum Sepolia Testnet
 
 ## Introduction in a few lines
 
