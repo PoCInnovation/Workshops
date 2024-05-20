@@ -24,12 +24,12 @@
 - **private**: Accessible only within the contract.
   - [Solidity by Example - Visibility](https://solidity-by-example.org/visibility/)
 
-## Data Location
+## Data Locations
 
 - **Storage**: Persistent data stored on the blockchain.
 - **Memory**: Temporary data stored during function execution.
 - **Stack**: Local variables stored in function execution context.
-  - [Solidity by Example - Data Location](https://solidity-by-example.org/data-location/)
+  - [Solidity by Example - Data Locations](https://solidity-by-example.org/data-locations/)
 
 ## Mappings and Arrays
 
