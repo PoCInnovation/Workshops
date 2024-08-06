@@ -21,7 +21,7 @@ fallback() external payable {
 }
 ```
 
-### Let's break down the fallback function line by line:
+## Let's break down the fallback function line by line:
 
 1. `(bool success, bytes memory returnData) = implementation.delegatecall(msg.data);`
     - This line calls the `delegatecall` function on the `implementation` contract with the `msg.data` that was sent to the proxy. The `delegatecall` function executes the code of the `implementation` contract in the context of the proxy contract. The `success` variable will be `true` if the `delegatecall` was successful, and the `returnData` variable will contain the return data from the `delegatecall`.
