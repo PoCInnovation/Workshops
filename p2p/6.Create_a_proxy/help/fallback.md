@@ -1,4 +1,4 @@
-## Help to create the fallback function for the proxy
+# Help to create the fallback function for the proxy
 
 The fallback function is a function that is called when a contract is called with a method that is not implemented. This function is called with the method name and the arguments that were passed to the proxy.
 
