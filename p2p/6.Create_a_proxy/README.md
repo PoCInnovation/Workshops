@@ -1,10 +1,10 @@
 # Workshop - Create a proxy (ERC-1967)
 
-✔ What is a proxy
+✔ 📖 What is a proxy
 
-✔ Make your own implementation of an ERC-1967
+✔ 🛠️ Make your own implementation of an ERC-1967
 
-✔ Deploy an ERC-1967 on Ethereum Sepolia Testnet
+✔ 🚀 Deploy an ERC-1967 on Ethereum Sepolia Testnet
 
 ## Introduction in a few lines
 
@@ -12,34 +12,34 @@ If you have already heard about smart contracts, you know that it's not possible
 
 ### What is a proxy (ERC-1967)?
 
-ERC-1967 refers to the Ethereum Request for Comment 1967, which defines a proxy contract in the Ethereum blockchain ecosystem. A proxy contract acts as an intermediary between a user and the actual implementation contract.
+🤓 Hum Actually, ERC-1967 refers to the Ethereum Request for Comment 1967, which defines a proxy contract in the Ethereum blockchain ecosystem. A proxy contract acts as an intermediary between a user and the actual implementation contract.
 
 ### Why is it useful?
 
 The use of a proxy contract, such as ERC-1967, provides several benefits, including:
-- **Upgradability**: The ability to upgrade the implementation contract without changing the contract's address or user interactions.
-- **Cost-Efficiency**: Upgrading a contract using a proxy contract is more cost-effective than deploying a new contract.
-- **Security**: Proxy contracts can be used to implement security features, such as access control and permission management.
+- **Upgradability**📈: The ability to upgrade the implementation contract without changing the contract's address or user interactions.
+- **Cost-Efficiency**💰: Upgrading a contract using a proxy contract is more cost-effective than deploying a new contract.
+- **Security**🔒: Proxy contracts can be used to implement security features, such as access control and permission management.
 
 ### What technology is used to do this?
 
-**Solidity** is a **programming language** specifically **designed for developing smart contracts on the Ethereum blockchain**. It enables developers to **create self-executing, autonomous, and verifiable contracts** that define rules and interactions within a **decentralized environment**. Solidity is based on **JavaScript-like syntax** and offers features such as state management, control structures, events, and calls to other contracts, enabling the **creation of complex and secure solutions** on the Ethereum blockchain. If you've never worked with Solidity before, take a look at the [Solidity Essentials](./Solidity.md) to understand the basics. You can also consult the [official documentation](https://docs.soliditylang.org/en/v0.8.21/).
+**Solidity** is a **programming language** specifically **designed for developing smart contracts on the Ethereum blockchain**. It enables developers to **create self-executing, autonomous, and verifiable contracts** that define rules and interactions within a **decentralized environment**⛓️‍💥. Solidity is based on **JavaScript-like syntax** and offers features such as state management, control structures, events, and calls to other contracts, enabling the **creation of complex and secure solutions** on the Ethereum blockchain. If you've never worked with Solidity before, take a look at the [Solidity Essentials](./Solidity.md) to understand the basics. You can also consult the [official documentation](https://docs.soliditylang.org/en/v0.8.21/).
 
-## Step 0 - Setup
+## Step 0 - Setup 💻
 
 Please refer to the [SETUP.md](./SETUP.md) file.
 Now, let's create the needed files.
-- First, delete the `script` folder as we will not need it, as well as the `Counter.sol` and `Counter.t.sol` files.
-- Create a folder named `proxy` in the `src` folder, and then a `proxy_v1.sol` file.
-- Create a folder named `implementations` in the `src` folder and add `Counter_V1.sol` and `Counter_V2.sol` files in it.
+- 📂 First, delete the `script` folder as we will not need it, as well as the `Counter.sol` and `Counter.t.sol` files.
+- 📄 Create a folder named `proxy` in the `src` folder, and then a `proxy_v1.sol` file.
+- 📄 Create a folder named `implementations` in the `src` folder and add `Counter_V1.sol` and `Counter_V2.sol` files in it.
     - The `Counter_V1.sol` file will contain the first version of the counter contract.
     - The `Counter_V2.sol` file will contain the second version of the counter contract.
     - Feel free to look at the content of these files to understand the differences between the two versions.
     - The proxy will allow us to change the implementation easily by switching from Counter_V1 to Counter_V2 without requiring the user to change the address of the contract they call.
-- Delete the `counter.t.sol` file in the `test` folder and replace it with the `proxy.t.sol` file in the `utils` folder.
+- 🗑️ Delete the `counter.t.sol` file in the `test` folder and replace it with the `proxy.t.sol` file in the `utils` folder.
     - This file contains the tests for both the proxy contract and the counter contract.
 
-## Step 1 - Let's start creating our proxy
+## Step 1 - Let's start creating our proxy 🏁
 
 ### 📑 **Description**:
 
@@ -60,18 +60,18 @@ In this step, you will implement the delegate call mechanism, which is the basis
     - You need to use inline assembly at one time in this function.
 
 > ⚠️ Don't forget the header of the file.  
-> If you're really stuck on the fallback function, you can find help [here](./help/fallback.md), but try to do it by yourself first.
+> 🙋‍♂️ If you're really stuck on the fallback function, you can find help [here](./help/fallback.md), but try to do it by yourself first.
 
 ### 📚 **Documentation**:
 
-- [Constructor](https://docs.soliditylang.org/en/v0.8.21/contracts.html#constructor)
-- [Inline Assembly](https://docs.soliditylang.org/en/latest/assembly.html)
+- [Constructor 🛠️](https://docs.soliditylang.org/en/v0.8.21/contracts.html#constructor)
+- [Inline Assembly 📄](https://docs.soliditylang.org/en/latest/assembly.html)
 - [Variable visibility](https://docs.soliditylang.org/en/v0.8.21/contracts.html#state-variable-visibility)
-- [Delegate call](https://docs.soliditylang.org/en/v0.8.21/introduction-to-smart-contracts.html#delegatecall-and-libraries)
-- [Function visibility](https://docs.soliditylang.org/en/v0.8.21/contracts.html#function-visibility)
-- [Fallback function](https://docs.soliditylang.org/en/v0.8.21/contracts.html#fallback-function)
+- [Delegate call 📲](https://docs.soliditylang.org/en/v0.8.21/introduction-to-smart-contracts.html#delegatecall-and-libraries)
+- [Function visibility 👀](https://docs.soliditylang.org/en/v0.8.21/contracts.html#function-visibility)
+- [Fallback function 📍](https://docs.soliditylang.org/en/v0.8.21/contracts.html#fallback-function)
 
-## Step 2 - Let's test if it works
+## Step 2 - Let's test if it works 🧪
 
 ### 📑 **Description**:
 
@@ -79,12 +79,21 @@ In this step, you will test the proxy contract you have just implemented. Testin
 
 ### 📌 **Tasks**:
 
-In the `proxy.t.sol` file in the `utils` folder, you will find the tests for the proxy contract. You will have to run these tests to verify that the proxy contract works correctly using the command `forge test -vvvv` (`-vvvv` adds more details).  
+In the `proxy.t.sol` file in the `utils` folder, you will find the tests for the proxy contract.  
+You will have to run these tests to verify that the proxy contract works correctly using the command :
+
+```bash
+forge test -vvvv
+```
+- `-vvvv` adds more details.  
+
 But first, comment out all the functions starting with `test...` except the first ones (`testProxy_v1` and `testCounter`) and all variables unused.  
 
 Now, run the tests. Does it work?  
+
 Normally, only the counter test works. Why?  
 It's normal. In this version of the proxy, the delegate call uses the function logic from the `Counter_V1` contract but doesn't use its variables, so the delegate call tries to access a `count` variable that doesn't exist in the proxy contract.  
+
 So, add the `count` public variable, which is a `uint256`, before the `implem` variable in the proxy contract and initialize it to 0 in the constructor.
 Now, if you run the tests, all should work.
 
@@ -93,16 +102,17 @@ Now, if you run the tests, all should work.
 - [Foundry](https://book.getfoundry.sh/)
 - [Foundry tests](https://book.getfoundry.sh/forge/fuzz-testing)
 
-## Step 3 - Let's upgrade it
+## Step 3 - Let's upgrade it 📈
 
 ### 📑 **Description**:
 
 Having a functional proxy is great, but we need to write all the variables of the implementation function to make it work. It's not very convenient. So, let's upgrade our proxy to make it more flexible.  
+
 In this step, you will add a `setImplementation` function to the proxy contract and we will explore storage slots. This function will allow you to change the implementation contract address dynamically.
 
 ### 📌 **Tasks**:
 
-- Create a new file `proxy_v2.sol` in the `proxy` folder.
+- 📄 Create a new file `proxy_v2.sol` in the `proxy` folder.
 - Create a contract `PROXY_V2` in the `proxy_v2.sol` file.
     - This contract will be an upgrade of the `PROXY_V1` contract.
     - Copy only the fallback function from the `PROXY_V1` contract to the `PROXY_V2` contract.
@@ -112,7 +122,7 @@ In this step, you will add a `setImplementation` function to the proxy contract 
     bytes32 private constant IMPLEMENTATION_SLOT = keccak256("proxy.implementation.address");
     ```
     - This line defines a storage slot for the implementation address. A storage slot is a unique identifier used to store data in the contract's storage. The `keccak256` function generates a unique identifier based on the string `"proxy.implementation.address"`.
-    - Since there are no variables in the proxy contract (as the implementation address is stored in the contract's storage), we don't need to declare the variables from the implementation contract, thus avoiding conflicts between the variables of the proxy and the implementation.
+    - 🥊 Since there are no variables in the proxy contract (as the implementation address is stored in the contract's storage), we don't need to declare the variables from the implementation contract, thus avoiding conflicts between the variables of the proxy and the implementation.  
 - Add the following functions and use inline assembly code to modify or access the storage slot:
     - `setImplementation(address newImplementation)`, which is a public function.
         - This function will allow you to change the implementation contract address dynamically.
@@ -131,14 +141,14 @@ In this step, you will add a `setImplementation` function to the proxy contract 
 
 Test the result by uncommenting the `testProxy_v2` function and the variables used by it in the `proxy.t.sol` file.
 - In this test, we will change the implementation address and check if the fallback function works correctly.
-- As you can see in the logs, the count value doesn't reset to 0 when we change the implementation address. This is normal because the count value is stored in the proxy's storage, not in the implementation contract.
+- As you can see in the logs, the count value doesn't reset to `0` when we change the implementation address. This is normal because the count value is stored in the proxy's storage, not in the implementation contract.
 
 ### 📚 **Documentation**:
 
-- [Storage slots](https://docs.soliditylang.org/en/v0.8.21/internals/layout_in_storage.html#layout-in-storage)
-- [Inline Assembly](https://docs.soliditylang.org/en/latest/assembly.html)
+- [Storage slots 💾](https://docs.soliditylang.org/en/v0.8.21/internals/layout_in_storage.html#layout-in-storage)
+- [Inline Assembly ⛓️](https://docs.soliditylang.org/en/latest/assembly.html)
 
-## Step 4 - Let's upgrade it again
+## Step 4 - Let's upgrade it again 📈
 
 ### 📑 **Description**:
 
@@ -146,15 +156,15 @@ Great, you now have a fully functional proxy. But we can improve it further. As 
 
 ### 📌 **Tasks**:
 
-- First, create a new file `proxy_ownable_upgradable.sol` in the `proxy` folder.
+- 📄 First, create a new file `proxy_ownable_upgradable.sol` in the `proxy` folder.
 - Create a contract `PROXY_OWNABLE_UPGRADABLE` in the `proxy_ownable_upgradable.sol` file.
-    - This contract will be an upgrade of the `PROXY_V2` contract.
+    - 📈 This contract will be an upgrade of the `PROXY_V2` contract.
     - To achieve this, the contract will inherit from the `PROXY_V2` contract.
-- We need to store the `owner` address and the `version` which is a string. As learned in the previous step, we use storage slots to store these variables.
+- 💾 We need to store the `owner` address and the `version` which is a string. As learned in the previous step, we use storage slots to store these variables.
     - Add public functions to get the owner and version values from the storage.
     - Add internal functions to set the owner and version values in the storage.
         - These functions must be called by other functions in the contract.
-- Now, we need events to log changes in the implementation address and ownership:
+- 🔎 Now, we need events to log changes in the implementation address and ownership:
     - `event Upgraded(string version, address indexed implementation);`
     - `event ProxyOwnershipTransferred(address previousOwner, address newOwner);`
     - Events are useful for debugging and keeping track of changes in the contract.
@@ -165,27 +175,27 @@ Great, you now have a fully functional proxy. But we can improve it further. As 
     - `upgradeTo(string memory newVersion, address newImplementation)`, which is a public function.
         - This function will allow the owner to upgrade the implementation contract address and set a new version.
         - This function will emit the `Upgraded` event and set the new implementation address and version in the storage.
-- Create a modifier `onlyOwner` to restrict access to certain functions to the owner of the contract.
+- 🔨 Create a modifier `onlyOwner` to restrict access to certain functions to the owner of the contract.
     - This modifier will use the `msg.sender` variable to check if the function caller is the owner of the contract.
     - Add the `onlyOwner` modifier to the `transferProxyOwnership` and `upgradeTo` functions.
-- Add a constructor to set the contract owner.
+- 🛠️ Add a constructor to set the contract owner.
     - This constructor will use the `msg.sender` variable to set the contract owner.
     - This constructor will also accept parameters to set the implementation address and the contract version.
 - Finally, modify the fallback function to use the `getImplementation` function to retrieve the implementation address.
 
 ### 📚 **Documentation**:
 
-- [Inheritance](https://docs.soliditylang.org/en/v0.8.21/contracts.html#inheritance)
-- [Events](https://docs.soliditylang.org/en/v0.8.21/contracts.html#events)
-- [Access control](https://docs.soliditylang.org/en/v0.8.21/contracts.html#access-control)
-- [Modifiers](https://docs.soliditylang.org/en/v0.8.21/contracts.html#modifiers)
-- [Require](https://docs.soliditylang.org/en/v0.8.21/control-structures.html#require)
+- [Inheritance 👶](https://docs.soliditylang.org/en/v0.8.21/contracts.html#inheritance)
+- [Events 🎭](https://docs.soliditylang.org/en/v0.8.21/contracts.html#events)
+- [Access control ⛔️](https://docs.soliditylang.org/en/v0.8.21/contracts.html#access-control)
+- [Modifiers 🔨](https://docs.soliditylang.org/en/v0.8.21/contracts.html#modifiers)
+- [Require ✅](https://docs.soliditylang.org/en/v0.8.21/control-structures.html#require)
 
 ### ✔️ **Validation**:
 
 Uncomment all the functions and the variables in the `proxy.t.sol` file and run the tests with the command `forge test -vvvv`. All the tests should pass.
 
-## Step 5 - Let's deploy it
+## Step 5 - Let's deploy it 🚀
 
 ### 📑 **Description**:
 
@@ -195,7 +205,7 @@ In this step, you will deploy your ERC-1967 contract on the [Ethereum Sepolia Te
 
 #### Installation of the Tools
 
-- Download [Metamask](https://metamask.io) and create an account if you don't already have one. It is the most popular Ethereum wallet and allows you to interact with the Ethereum blockchain.
+- 📡 Download [Metamask](https://metamask.io) and create an account if you don't already have one. It is the most popular Ethereum wallet and allows you to interact with the Ethereum blockchain.
 - Get your RPCURL on [Alchemy](https://dashboard.alchemy.com/apps).
     - Sign in.
     - Click on `Create new app` and enter the project name.
@@ -275,20 +285,20 @@ cast call $PROXY "total()" --rpc-url $RPC_URL
 - [Foundry deploy](https://book.getfoundry.sh/forge/deploying)
 - [Cast command](https://book.getfoundry.sh/cast/)
 
-## Conclusion
+## Conclusion 🏁
 
 Congratulations! You've created your own proxy. During this workshop, you learned about ERC-1967 and built your own implementation. You can find a well-known implementation [here](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/proxy/Proxy.sol). Feel free to compare it with your implementation and consider adding security features to your contract.
 
 Thank you for completing this workshop! If you have any questions, don't hesitate to contact the PoC Team.
 
-## To go further
+## To go further 🔼
 
 You have discovered what an ERC-1967 is, but there are still many other concepts to explore. Here are some examples:
 - [ERC-20](https://eips.ethereum.org/EIPS/eip-20) **Token** with this PoC [workshop](https://github.com/PoCInnovation/Workshops/tree/master/p2p/5.Create_an_ERC-20)
 - [ERC-721](https://eips.ethereum.org/EIPS/eip-721) **NFT**
 - [ERC-1155](https://eips.ethereum.org/EIPS/eip-1155) **Multi Token**
 
-## Authors
+## Authors 👋
 
 | [<img src="https://github.com/Intermarch3.png" width=120><br><sub>Lucas LECLERC</sub>](https://github.com/Intermarch3) |
 | :-----------------------------------------------------------------------------------------------------------------: |

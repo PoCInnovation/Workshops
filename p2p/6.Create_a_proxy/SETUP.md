@@ -1,8 +1,8 @@
-# Setup - Foundry & VSCode extension
+# 💻 Setup - Foundry & VSCode extension
 
 [Foundry](https://book.getfoundry.sh/) is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust. We will need it throughout the workshop.
 
-## Download foundry
+## 📡 Download foundry
 
 - Open your terminal and type
 
@@ -39,7 +39,7 @@ forge init new_project
 cd new_project
 ```
 
-This should create a new directory with a brand new foundry project
+📂 This should create a new directory with a brand new foundry project
 
 If you already have a repository, you might need to add
 
@@ -55,7 +55,7 @@ You can do this by adding in the "[profile.default]" section:
 solc_version = "0.8.25"
 ```
 
-## VSCode Integration
+## 🧩 VSCode Integration
 
 I recommand you to install [solidity vscode extension](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity), it is an extension that simplifies development in Solidity.
 
