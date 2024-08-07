@@ -45,4 +45,3 @@ If the `delegatecall` is successful, it will return the return value of the func
 > ⚠️ It's the main logic of the proxy so if you have any questions feel free to ask to the PoC Team.
 
 ⏪ Back to the [Workshop](../README.md).
-```
