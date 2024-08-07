@@ -1,6 +1,6 @@
 # Installing Zig
 
-### For Fedora
+## For Fedora
 
 Since most students use Fedora, installing Zig is very simple. Just open a terminal and run the following command:
 
