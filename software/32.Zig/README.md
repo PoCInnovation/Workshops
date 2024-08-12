@@ -1,18 +1,13 @@
 # Workshop 32 - Introduction to Zig
 
 Welcome to this introductory workshop on Zig! Zig is a modern programming language that emphasizes robustness, performance and clarity. Today, you'll learn :
-✔️ how to install Zig
-✔️ create your first project
-✔️ discover the language's key concepts by creating a few projects
+✔️ How to install Zig
+✔️ Create your first project
+✔️ Discover the language's key concepts by creating a few projects
 
 ## Introduction
 
 Zig is a general-purpose programming language focused on robustness, performance, and simplicity. It offers manual memory management, safety features, built-in cross-compilation, and seamless C interoperability, making it ideal for system programming and high-performance applications.
-
-### Prerequisites
-
-- Basic programming skills (C, C++, or any other language)
-- A computer with Internet access
 
 ## Step 0 - SETUP
 
@@ -30,12 +25,14 @@ For the first exercise, we simply ask you to write `Hello world!` in your termin
 
 📌 Tasks:
 
-create a file `main.zig` in a folder called `src` with your logic to print the "hello world"
+Create a file `main.zig` in a folder called `src` with your logic to print the "hello world"
+
+src
+└── main.zig
 
 📚 Documentation:
 
-> 💡 Zig file has `zig` extension.
-> 💡 Now, that you have created a file `main.zig`, you can use other files. To use them in your `main.zig` you have to integrate the module ([read more](https://stackoverflow.com/questions/71186556/how-do-i-include-one-zig-file-from-another-zig-file))
+> 💡 Now, that you have created a file `main.zig`, you can use other zig files. To use them in your `main.zig` you have to integrate the module ([read more](https://stackoverflow.com/questions/71186556/how-do-i-include-one-zig-file-from-another-zig-file))
 
 - [Build System](https://ziglang.org/learn/build-system/)
 - [Doc.Zig](https://ziglang.org/documentation/master/)
@@ -49,8 +46,6 @@ create a file `main.zig` in a folder called `src` with your logic to print the "
     ```
 
 ## Step 2 - Palindrome?
-
-> ❗ We strongly advise you to use the resources given for this exercise.
 
 📑 Description:
 
@@ -71,6 +66,21 @@ This function must return true if the word given in parameter is a palindrome an
 
  ✔️ Validation:
 
+    Here's a main example :
+
+    pub fn main() void {
+    const stdout = std.io.getStdOut().writer();
+
+    const test_word1 = "madam";
+    const test_word2 = "hello";
+
+    const result1 = is_palindrome(test_word1);
+    const result2 = is_palindrome(test_word2);
+
+    stdout.print("{} is palindrome: {}\n", .{test_word1, result1}) catch {};
+    stdout.print("{} is palindrome: {}\n", .{test_word2, result2}) catch {};
+}
+
  When you compile and run palindrome.zig, the output should be:
 
     ```sh
@@ -83,8 +93,6 @@ This function must return true if the word given in parameter is a palindrome an
     ```
 
 ## Step 3 - Fibonacci sequence
-
-> ❗ We strongly advise you to use the resources given for this exercise.
 
 📑 Description:
 
@@ -121,8 +129,6 @@ Here is a small example of the beginning of the Fibonacci sequence:
     ```
 
 ## Step 4 - A simple and useful `Calculator`
-
-> ❗ We strongly advise you to use the resources given for this exercise.
 
 📑 Description:
 
