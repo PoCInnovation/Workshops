@@ -165,6 +165,56 @@ Here's a typical error handeling example :
     Expected Output: Error message indicating invalid input.
 ```
 
+## Step 4 - Pascal's Triangle Line
+
+📑 Description:
+
+Let's dive into a more advanced topic!
+
+The objective of this exercise is to generate the n-th line of Pascal's Triangle. Pascal's Triangle is a triangular array of binomial coefficients. For this step, you will create a function that takes an int32 parameter n and returns a list of numbers corresponding to the n-th line of the triangle.
+
+📌 Tasks:
+
+Create a file pascals_triangle.zig for this new function.
+
+Your project structure should look like this 🔽
+
+```sh
+    src
+    └── main.zig
+    └── pascals_triangle.zig
+```
+
+Implement the function to compute the n-th line of Pascal's Triangle. You will need to:
+    Create a function that computes the binomial coefficients for the given line index n.
+    Use an efficient method to calculate these coefficients.
+    Return a list of coefficients that represents the n-th line of Pascal's Triangle.
+
+Test your implementation by adding a main function that prints out the line of Pascal's Triangle for a given n.
+
+📚 Documentation:
+
+Factorials : <https://ziglang.org/documentation/master/#Factorial>
+Binomial Coefficient: <https://en.wikipedia.org/wiki/Binomial_coefficient>
+Array Manipulation <https://ziglang.org/documentation/master/#Array>
+
+✔️ Validation:
+
+To validate your exercise, compile and run your program. You should see output similar to the following:
+
+```sh
+zig build-exe src/pascals_triangle.zig
+./pascals_triangle
+```
+
+Expected output:
+
+```sh
+Line 5 of Pascal's Triangle: 1, 5, 10, 10, 5, 1
+```
+
+Ensure your program correctly calculates and displays the n-th line of Pascal's Triangle. Check different values of n to verify that the output is accurate.
+
 ## Bonuses - TO DO List and C Code translation
 
 ### TO DO List
