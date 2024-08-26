@@ -34,7 +34,7 @@ This command will create a basic project structure with the necessary files.
 
 Once the project has been created, you'll see the following structure:
 
-```css
+```sh
 .
 ├── build.zig
 ├── build.zig.zon

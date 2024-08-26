@@ -21,39 +21,55 @@ All the required information to install dependencies can be found in [SETUP.md](
 
 📑 Description:
 
-For the first exercise, we simply ask you to write `Hello world!` in your terminal when you run your program.
+For the first exercise, we simply ask you to print `Hello world!` in your terminal when you run your program.
 
 📌 Tasks:
 
 Create a file `main.zig` in a folder called `src` with your logic to print the "hello world"
 
+It should look like this 🔽
+
+```sh
 src
 └── main.zig
+```
 
 📚 Documentation:
 
-> 💡 Now, that you have created a file `main.zig`, you can use other zig files. To use them in your `main.zig` you have to integrate the module ([read more](https://stackoverflow.com/questions/71186556/how-do-i-include-one-zig-file-from-another-zig-file))
+💡 After creating your main.zig file, you can include and use logic from other Zig files in your project. To do this, you need to integrate the modules from those files into your main.zig. You can achieve this by using the @import statement to include and access the functionality defined in different Zig files.
+For more details on including Zig files, check out this guide : <https://stackoverflow.com/questions/71186556/how-do-i-include-one-zig-file-from-another-zig-file>
 
 - [Build System](https://ziglang.org/learn/build-system/)
 - [Doc.Zig](https://ziglang.org/documentation/master/)
 
 ✔️ Validation:
 
-    you should see the following :
+```sh
+zig build-exe src/main.zig
+./main
+```
 
-    ```sh
-    Hello, World!
-    ```
+you should see the following :
+
+```sh
+Hello, World!
+```
 
 ## Step 2 - Palindrome?
 
 📑 Description:
 
-For the second exercise, you have to create a function that takes as parameter a string `word`.
+For the second exercise, you have to create a function that takes as parameter a string named `word`.
 
 📌 Tasks:
 
 Create a file `palindrome.zig` for this new function.
+
+```sh
+src
+└── main.zig
+└── palindrome.zig
+```
 
 This function must return true if the word given in parameter is a palindrome and false in the opposite case.
 
@@ -66,79 +82,50 @@ This function must return true if the word given in parameter is a palindrome an
 
  ✔️ Validation:
 
-    Here's a main example :
+Here's a main example :
 
-    pub fn main() void {
+```zig
+pub fn main() void {
     const stdout = std.io.getStdOut().writer();
-
     const test_word1 = "madam";
     const test_word2 = "hello";
-
     const result1 = is_palindrome(test_word1);
     const result2 = is_palindrome(test_word2);
-
     stdout.print("{} is palindrome: {}\n", .{test_word1, result1}) catch {};
     stdout.print("{} is palindrome: {}\n", .{test_word2, result2}) catch {};
 }
+```
 
  When you compile and run palindrome.zig, the output should be:
 
-    ```sh
-    madam is palindrome: true
-    ```
-    or
+```sh
+madam is palindrome: true
+```
 
-    ```sh
-    hello is palindrome: false
-    ```
+or
 
-## Step 3 - Fibonacci sequence
+```sh
+hello is palindrome: false
+```
 
-📑 Description:
-
-For the third exercise, you need to create a function that generates and displays the Fibonacci sequence up to a specified number of elements.
-
-📌 Tasks:
-
-- Create a file `fibonacci.zig` for this new function.
-
-For the third exercise, create a function that takes one parameter:
-
-- A number `max` with type `i32` that represent the number of element to compute.
-
-- You must now display the sequence of Fibonacci from the number of starts to the `max` value.
-
-Here is a small example of the beginning of the Fibonacci sequence:
-
-    ```shell
-    0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ...
-    ```
-
-📚 Documentation:
-
- -[Fibonacci number](https://www.wikiwand.com/en/Fibonacci_number)
- -[Match](https://ziglang.org/documentation/master/#Standard-Library-Math-Functions)
- -[Vector](https://ziglang.org/documentation/master/#Vectors)
-
-  ✔️ Validation:
-
-    Given the Fibonacci sequence (see previous example), if max is 5, the function should output:
-
-    ```sh
-    0, 1, 1, 2, 3
-    ```
-
-## Step 4 - A simple and useful `Calculator`
+## Step 3 - A simple and useful `Calculator`
 
 📑 Description:
 
 Let's go further now!
 
-The objective of this fifth exercise is to create a simplifying calculator.
+The objective of this fifth exercise is to create a simplified calculator in the terimnal.
+For this step you will create a interactive calculator that will take a first number, then the operation and finally the second number and once you have all the information, compute all that and print the result.
 
 📌 Tasks:
 
 - Create a file `calculator.zig` for this new function.
+
+```sh
+src
+└── main.zig
+└── calculator.zig
+```
 
 To do this, you have to make a calculator that can do:
 
@@ -152,7 +139,7 @@ To do this, you have to make a calculator that can do:
 > 💡 Pay attention to your error handling !
 
 - Display the result of the calculation in your terminal.
-
+For this step you will create a interactive calculator that will take a first number, then the operation and finally the second number and once you have all the information, compute all that and print the result.
 📚 Documentation:
  -[Errors](https://ziglang.org/documentation/master/#Errors)
  -[Memory](https://zig.guide/standard-library/allocators)
@@ -160,23 +147,23 @@ To do this, you have to make a calculator that can do:
 
   ✔️ Validation:
 
-    You should get something like this :
+You should get something like this :
 
-    ```sh
+```sh
     First number: 5
     Operation: +
     Second number: 3
     8
-    ```
+```
 
-    Here's a typical error handeling example :
+Here's a typical error handeling example :
 
-    ```sh
+```sh
     First number: abc
     Operation: +
     Second number: 3
     Expected Output: Error message indicating invalid input.
-    ```
+```
 
 ## Bonuses - TO DO List and C Code translation
 
@@ -190,15 +177,15 @@ Now that you're used to the basics, you will do a little project to apply what y
 
 Create a command-line todo list application where you can:
 
-    - Add a new todo
-    - Delete a todo by ID
-    - View all todos
+- Add a new todo
+- Delete a todo by ID
+- View all todos
 
 Each todo should have at least three fields:
 
-    - id (auto-incremented)
-    - name
-    - description
+- id (auto-incremented) which will be an integer
+- name which will be a string
+- description which will also be a string
 
 > 💡 To easily test your functions during this workshop remember to check the testing tools mentioned above
 
@@ -209,7 +196,7 @@ Each todo should have at least three fields:
 
 ✔️ Validation:
 
-    ```sh
+```sh
     ./zig-out/bin/main
 
     Choose an action:
@@ -221,9 +208,9 @@ Each todo should have at least three fields:
     Enter name: Buy groceries
     Enter description: Milk, eggs, and bread
     Todo added successfully.
-    ```
+```
 
-    ```sh
+```sh
     Choose an action:
     5. Add Todo
     6. Delete Todo
@@ -237,9 +224,9 @@ Each todo should have at least three fields:
     11. View Todos
     12. Exit
     > 4
-    ```
+```
 
-    > 💡 Pay attention to your error handling !
+> 💡 Pay attention to your error handling !
 
 ### Use The C Translation tool
 
