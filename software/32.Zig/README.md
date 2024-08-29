@@ -140,7 +140,9 @@ To do this, you have to make a calculator that can do:
 
 - Display the result of the calculation in your terminal.
 For this step you will create a interactive calculator that will take a first number, then the operation and finally the second number and once you have all the information, compute all that and print the result.
+
 📚 Documentation:
+
  -[Errors](https://ziglang.org/documentation/master/#Errors)
  -[Memory](https://zig.guide/standard-library/allocators)
  -[ArrayList](https://zig.guide/standard-library/arraylist)
