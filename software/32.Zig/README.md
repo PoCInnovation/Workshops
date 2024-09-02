@@ -75,10 +75,10 @@ This function must return true if the word given in parameter is a palindrome an
 
 📚 Documentation:
 
- -[What is a palindrome ?](https://www.wikiwand.com/en/Palindrome)
- -[New function](https://ziglang.org/documentation/master/#Functions)
- -[The types in Zig](https://ziglang.org/documentation/master/#Primitive-Types)
- -[Control_Structures](https://zig.guide/language-basics/while-loops)
+- [What is a palindrome ?](https://www.wikiwand.com/en/Palindrome)
+- [New function](https://ziglang.org/documentation/master/#Functions)
+- [The types in Zig](https://ziglang.org/documentation/master/#Primitive-Types)
+- [Control_Structures](https://zig.guide/language-basics/while-loops)
 
  ✔️ Validation:
 
@@ -143,9 +143,9 @@ For this step you will create a interactive calculator that will take a first nu
 
 📚 Documentation:
 
- -[Errors](https://ziglang.org/documentation/master/#Errors)
- -[Memory](https://zig.guide/standard-library/allocators)
- -[ArrayList](https://zig.guide/standard-library/arraylist)
+- [Errors](https://ziglang.org/documentation/master/#Errors)
+- [Memory](https://zig.guide/standard-library/allocators)
+- [ArrayList](https://zig.guide/standard-library/arraylist)
 
   ✔️ Validation:
 
@@ -288,9 +288,9 @@ Zig provides the command zig translate-c for automatic translation from C source
 
 📚 Documentation:
 
- -[Translate-C](https://zig.guide/working-with-c/translate-c)
- -[cImport](https://zig.guide/working-with-c/c-import)
- -[LinkLibC](https://zig.guide/working-with-c/linking-libc)
+- [Translate-C](https://zig.guide/working-with-c/translate-c)
+- [cImport](https://zig.guide/working-with-c/c-import)
+- [LinkLibC](https://zig.guide/working-with-c/linking-libc)
 
 ## Conclusion
 
