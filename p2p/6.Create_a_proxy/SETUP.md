@@ -67,7 +67,7 @@ Also, I recommand you to use the extension formatter. It will format your code o
 {
   "editor.formatOnSave": true,
     "[solidity]": {
-        "editor.defaultFormatter": "JuanBlanco.solidity"
+        "editor.defaultFormatter": "NomicFoundation.hardhat-solidity"
     }
 }
 ```

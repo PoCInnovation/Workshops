@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.25;
 
-contract COUNTER_V1 {
+contract CounterV1 {
     uint256 public count;
 
     constructor() {

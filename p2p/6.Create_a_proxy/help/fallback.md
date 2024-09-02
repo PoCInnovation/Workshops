@@ -1,10 +1,10 @@
-# 🙋‍♂️ Help to create the fallback function for the proxy
+## Help to create the fallback function for the proxy
 
 The fallback function is a function that is called when a contract is called with a method that is not implemented. This function is called with the method name and the arguments that were passed to the proxy.
 
 ```solidity
 fallback() external payable {
-    (bool success, bytes memory returnData) = implementation.delegatecall(msg.data);
+    (bool success, bytes memory returnData) = implem.delegatecall(msg.data);
     if (!success) {
         if (returnData.length > 0) {
             assembly {
@@ -21,10 +21,10 @@ fallback() external payable {
 }
 ```
 
-## ⛓️‍💥 Let's break down the fallback function line by line:
+### Let's break down the fallback function line by line:
 
-1. `(bool success, bytes memory returnData) = implementation.delegatecall(msg.data);`
-    - This line calls the `delegatecall` function on the `implementation` contract with the `msg.data` that was sent to the proxy. The `delegatecall` function executes the code of the `implementation` contract in the context of the proxy contract. The `success` variable will be `true` if the `delegatecall` was successful, and the `returnData` variable will contain the return data from the `delegatecall`.
+1. `(bool success, bytes memory returnData) = implemn.delegatecall(msg.data);`
+    - This line calls the `delegatecall` function on the implementation contract with the `msg.data` that was sent to the proxy. The `delegatecall` function executes the code of the implementation contract in the context of the proxy contract. The `success` variable will be `true` if the `delegatecall` was successful, and the `returnData` variable will contain the return data from the `delegatecall`.
 
 2. `if (!success) {`
     - This line checks if the `delegatecall` was successful. If it was not successful, the code inside the `if` block will be executed.
@@ -38,10 +38,6 @@ fallback() external payable {
 4. `assembly { return(add(returnData, 32), mload(returnData)) }`
     - This line returns the `returnData` if the `delegatecall` was successful. The `returnData` contains the return value of the function that was called in the `implementation` contract.
 
-👌 Perfect now you have a fallback function that will call the `implementation` contract with the method name and arguments that were passed to the proxy.  
-
-If the `delegatecall` is successful, it will return the return value of the function that was called in the `implementation` contract. If the `delegatecall` fails, it will revert with the revert reason.
+Perfect now you have a fallback function that will call the `implementation` contract with the method name and arguments that were passed to the proxy. If the `delegatecall` is successful, it will return the return value of the function that was called in the `implementation` contract. If the `delegatecall` fails, it will revert with the revert reason.
 
 > ⚠️ It's the main logic of the proxy so if you have any questions feel free to ask to the PoC Team.
-
-⏪ Back to the [Workshop](../README.md).
