@@ -143,9 +143,11 @@ For this step you will create a interactive calculator that will take a first nu
 
 📚 Documentation:
 
+
 - [Errors](https://ziglang.org/documentation/master/#Errors)
 - [Memory](https://zig.guide/standard-library/allocators)
 - [ArrayList](https://zig.guide/standard-library/arraylist)
+
 
   ✔️ Validation:
 
