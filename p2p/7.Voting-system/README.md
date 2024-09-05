@@ -51,6 +51,10 @@ forge test
 
 if the two tests are good, you can move on the second step !
 
+### 📚 **Documentation**:
+
+ - [Constructors](https://docs.soliditylang.org/en/v0.8.27/contracts.html#constructors)
+
 ## Step 2: Deploy and integrate it
 
 ### 📑 **Description**:
@@ -60,11 +64,15 @@ In this step you'll focus on the deployment and the integration part of your sma
 ### 📌 **Tasks**:
 
 - Using Anvil and forge, deploy your smart contract on a local testnet.
-- Paste the address of your deployed contract into the environment file at the root of the dApp folder.
+- Paste the address of your deployed contract into the environment file at the root of the dApp folder named `VITE_ADDRESS`.
 
 ### ✔️ **Validation**:
 
 Once you have done this, you should now be able to see the parameters you entered when deploying the contract in the dApp.
+
+### 📚 **Documentation**:
+
+-  [Anvil](https://book.getfoundry.sh/anvil/)
 
 ## Step 4: Code the contract
 
@@ -80,13 +88,17 @@ Crucial step! I'll leave you to code the rest of the contract yourself, so you c
     - Check if the voter had already voted and if the id is correct.
     - Add a `voteCount` for the proposal.
 
-> 💡 These functions require a wallet address. If you've written `anvil` before, you have account available to use. Put one of the private keys in the `.env` file.
+> 💡 These functions require a wallet address. If you've did the previous step correctly, you have account available to use. Put one of the private keys in the `.env` file.
 
 - Code the `winningProposal` function, returning the proposal with the most `voteCount`.
 
 ### ✔️ **Validation**:
 
 If you can see all the proposals, vote for one and the winner is highlighted in green, congratulations, you have just made your first smart contract !
+
+## To go further
+
+You've just created a simple voting system smart contract ! If you want to go further you can add some feature to your contract and styling the dApp !
 
 ## Authors
 
