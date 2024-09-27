@@ -67,7 +67,7 @@ const voting = async () => {
           :winnerIndex="winner"
       />
     </div>
-    <p v-else>Not proposals yet.</p>
+    <p v-else>No proposals yet.</p>
     <div id="choice" v-if="isVoting">
       <button @click="voting">yes</button>
       <button @click="isVoting = false">no</button>

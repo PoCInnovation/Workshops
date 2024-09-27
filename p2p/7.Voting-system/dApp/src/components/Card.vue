@@ -14,7 +14,7 @@ const backgroundColor = computed(() => {
 })
 
 const textColor = computed(() => {
-  return props.index === props.winnerIndex ? 'white' : 'black'
+  return props.index === props.winnerIndex ? 'white' : undefined
 })
 
 </script>
