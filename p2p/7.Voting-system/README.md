@@ -36,10 +36,18 @@ First, we need to create the core smart contract that will power our decentraliz
 
 Remove the files from `script/`, `src/` and `test` directories. Create `VotingSystem.sol` in the `src/` folder.
 
-- Create a structure named `Proposal`
->💡 The structure should have 2 variables, `name` and `voteCount`. I let you guess their types.
+- Setup the file by adding this header
+  ```solidity
+  // SPDX-License-Identifier: UNLICENSED
+  pragma solidity ^0.8.26;
+  ```
+
+- Create a contract named `VotingSystem`
+- Declare a structure named `Proposal`
+>💡 The structure should have 2 variables, `name` and `voSteCount`. I let you guess their types.
 
 - On deployment, the contract should take an array of strings as parameters and store them in a `public` array of `Proposals`.
+>💡 A constructor is an optional function that is executed upon contract deployment, you must create one to complete the previous task.
 
 ### ✔️ **Validation**:
 
@@ -53,7 +61,8 @@ if the two tests are good, you can move on the second step !
 
 ### 📚 **Documentation**:
 
- - [Constructors](https://docs.soliditylang.org/en/v0.8.27/contracts.html#constructors)
+- [Header](https://docs.soliditylang.org/en/latest/layout-of-source-files.html)
+- [Constructors](https://docs.soliditylang.org/en/v0.8.27/contracts.html#constructors)
 
 ## Step 2: Deploy and integrate it
 
