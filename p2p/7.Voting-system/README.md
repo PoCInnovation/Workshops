@@ -73,6 +73,8 @@ In this step you'll focus on the deployment and the integration part of your sma
 ### 📌 **Tasks**:
 
 - Using Anvil and forge, deploy your smart contract on a local testnet.
+>💡 On a successful deployment, contract address appear next to the `deployed to` field.
+
 - Paste the address of your deployed contract into the environment file at the root of the dApp folder named `VITE_ADDRESS`.
 
 ### ✔️ **Validation**:
@@ -82,6 +84,7 @@ Once you have done this, you should now be able to see the parameters you entere
 ### 📚 **Documentation**:
 
 -  [Anvil](https://book.getfoundry.sh/anvil/)
+-  [Deploy a Smart Contract local on Anvil with Foundry in 2 min](https://youtu.be/e5QmJaamdPE)
 
 ## Step 4: Code the contract
 
@@ -91,9 +94,8 @@ Crucial step! I'll leave you to code the rest of the contract yourself, so you c
 
 ### 📌 **Tasks**:
 
-- Create a structure `Voter`
-
-- Code the `vote` function. It should take an id in parameter.
+- Create a structure `Voter` containing a boolean named `voted` and an uint `id`.
+- Code the `vote` function. It should take the id of the proposal in parameter.
     - Check if the voter had already voted and if the id is correct.
     - Add a `voteCount` for the proposal.
 
