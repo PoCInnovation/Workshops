@@ -86,7 +86,7 @@ Once you have done this, you should now be able to see the parameters you entere
 -  [Anvil](https://book.getfoundry.sh/anvil/)
 -  [Deploy a Smart Contract local on Anvil with Foundry in 2 min](https://youtu.be/e5QmJaamdPE)
 
-## Step 4: Code the contract
+## Step 3: Code the contract
 
 ### 📑 **Description**:
 
