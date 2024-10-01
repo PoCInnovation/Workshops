@@ -97,6 +97,7 @@ Crucial step! I'll leave you to code the rest of the contract yourself, so you c
 - Create a structure `Voter` containing a boolean named `voted` and an uint `id`.
 - Code the `vote` function. It should take the id of the proposal in parameter.
     - Check if the voter had already voted and if the id is correct.
+      > 💡 If the voter had already voted, return the string 'Already Voted.'
     - Add a `voteCount` for the proposal.
 
 > 💡 These functions require a wallet address. If you've did the previous step correctly, you have account available to use. Put one of the private keys in the `.env` file.
