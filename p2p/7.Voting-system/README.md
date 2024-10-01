@@ -1,4 +1,4 @@
-# Workshop 6 - Voting System
+  # Workshop 6 - Voting System
 
 ✔️ Write a decentralized voting system
 
@@ -101,7 +101,7 @@ Crucial step! I'll leave you to code the rest of the contract yourself, so you c
 
 > 💡 These functions require a wallet address. If you've did the previous step correctly, you have account available to use. Put one of the private keys in the `.env` file.
 
-- Code the `winningProposal` function, returning the proposal with the most `voteCount`.
+- Code the `winningProposal` function, returning the proposal id with the most `voteCount`.
 
 ### ✔️ **Validation**:
 
