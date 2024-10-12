@@ -16,7 +16,7 @@ Le **premier avantage** de l'ERC-20 réside dans sa facilité d'**adoption** et 
 
 ### Avec quelle technologie ?
 
-**Solidity** est un **langage de programmation** spécifiquement **conçu pour développer des contrats intelligents sur la blockchain Ethereum**. Il permet aux développeurs de **créer des contrats auto-exécutables, autonomes et vérifiables** qui définissent des règles et des interactions dans un **environnement décentralisé**. Solidity est basé sur une syntaxe **JavaScript-like** et offre des fonctionnalités telles que la gestion d'état, les structures de contrôle, les événements et les appels à d'autres contrats, permettant la **création de solutions complexes et sécurisées** sur la blockchain Ethereum. Si vous n'avez jamais utilisé Solidity auparavant, jetez un coup d'œil aux [Solidity Essentials](./Solidity.md) pour comprendre les bases. Vous pouvez également consulter la [documentation officielle](https://docs.soliditylang.org/en/v0.8.21/).
+**Solidity** est un **langage de programmation** spécifiquement **conçu pour développer des contrats intelligents sur la blockchain Ethereum**. Il permet aux développeurs de **créer des contrats auto-exécutables, autonomes et vérifiables** qui définissent des règles et des interactions dans un **environnement décentralisé**.
 
 ## Étape 0 - Initialisation
 
