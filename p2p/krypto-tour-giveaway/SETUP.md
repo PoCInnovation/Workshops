@@ -8,14 +8,14 @@ Rendez-vous sur [Téléchargement de VScode](https://code.visualstudio.com/downl
 
 ## Installer Foundry
 
-**Linux et macos**
+### Linux et MacOS
 - Ouvrez votre terminal et tapez
 
 ```sh
 curl -L https://foundry.paradigm.xyz | bash
 ```
 
-**Windows**
+### Windows
 - Téléchargez [Git pour windows](https://git-scm.com/downloads/win) puis lancer le programme Git Bash.
 - Tapez
 
