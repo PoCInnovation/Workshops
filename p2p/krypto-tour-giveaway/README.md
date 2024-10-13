@@ -1,7 +1,9 @@
-# Workshop Krypto Tour - Créer son token
+# Workshop Krypto Tour - Créer sa cryptomonnaie (ERC-20)
 
 ✔ Découverte de la norme ERC-20
+
 ✔ Coder son token
+
 ✔ Déployer son token sous la norme ERC-20
 
 ## Introduction en quelques lignes
