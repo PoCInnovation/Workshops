@@ -22,6 +22,9 @@ VSCode est un éditeur de texte que les développeurs utilisent pour écrire du 
 1. Allez sur le [site officiel](https://code.visualstudio.com/download) et téléchargez la version de VSCode pour votre système d'exploitation.
 2. Suivez les instructions d'installation sur le site, et une fois installé, ouvrez-le. Vous l'utiliserez pour écrire votre smart contract plus tard.
 
+> **Petit conseil :**
+> Activer l'auto save dans VSCode pour ne pas perdre votre travail et enregistrer les modifications automatiquement. Pour cela, allez dans `File` et cliquer sur `autosave`.
+
 ## Étape 2 - Installer Foundry et initialiser un projet
 
 Toutes les étapes d'installation de Foundry sont dans le [fichier SETUP.md](./SETUP.md). Suivez les instructions pour installer Foundry sur votre ordinateur.
@@ -60,10 +63,19 @@ Une blockchain locale est comme un simulateur de blockchain fonctionnant sur vot
   > **Qu'est-ce qu'une clé privée ?**
     > Une clé privée est une chaîne de caractères qui permet d'accéder à un portefeuille de crypto-monnaie. C'est comme un mot de passe, mais plus long et plus sécurisé. Ne partagez jamais votre clé privée avec quelqu'un d'autre, car cela leur donnerait accès à votre portefeuille.
 
+> **Attention :**
+> Ne fermez pas le terminal où vous avez démarré la blockchain locale.
+> Pour taper les prochaines commandes, ouvrez un nouveau terminal.
+
 ## Étape 5 - Déployer le Smart Contract
 
 ### Que signifie Déployer ?
 Lorsque vous déployez un smart contract, vous le publiez sur une blockchain afin qu'il puisse être utilisé. Une fois déployé, il est en ligne et prêt à être utilisé.
+
+> **Attention :**
+> Lancer les commandes dans le bon dossier, le dossier créer par Foundry (`krypto-tour`).
+> Pour vous déplacer dans le bon dossier, utilisez la commande `cd krypto-tour`.
+> Si vous avez des problèmes, n'hésitez pas à demander de l'aide.
 
 1. Pour déployer votre smart contract, exécutez la commande suivante :
 
