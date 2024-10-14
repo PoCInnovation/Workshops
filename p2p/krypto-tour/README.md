@@ -88,7 +88,7 @@ Appeler un smart contract signifie interagir avec lui en exécutant l'une de ses
 
    Remplacez `CONTRACT_ADDRESS` par l'adresse du smart contract que vous avez copiée précédemment.
 
-2. Vous devriez voir la sortie `Hello world`. 
+2. Vous devriez voir la sortie `Hello world`.
 
    Voici ce que fait chaque partie de la commande :
    - `cast call` est utilisé pour appeler une fonction dans le smart contract.

@@ -4,14 +4,14 @@ Foundry est une chaîne d'outils de développement de smarts contracts. Il gère
 
 ## Installer Foundry
 
-**Linux et macos**
+### **Linux et macos**
 - Ouvrez votre terminal et tapez
 
 ```sh
 curl -L https://foundry.paradigm.xyz | bash
 ```
 
-**Windows**
+### **Windows**
 - Téléchargez [Git pour windows](https://git-scm.com/downloads/win) puis lancer le programme Git Bash.
 - Tapez
 
