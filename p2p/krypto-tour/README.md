@@ -22,30 +22,9 @@ VSCode est un éditeur de texte que les développeurs utilisent pour écrire du 
 1. Allez sur le [site officiel](https://code.visualstudio.com/download) et téléchargez la version de VSCode pour votre système d'exploitation.
 2. Suivez les instructions d'installation sur le site, et une fois installé, ouvrez-le. Vous l'utiliserez pour écrire votre smart contract plus tard.
 
-## Étape 2 - Installer Foundry
+## Étape 2 - Installer Foundry et initialiser un projet
 
-Foundry est un ensemble d'outils qui vous aide à développer et tester des smart contracts rapidement.
-
-1. Suivez les instructions données [ici](https://book.getfoundry.sh/getting-started/installation) pour installer Foundry. Le guide vous accompagne dans son installation sur votre système.
-2. Après l'installation, exécutez la commande suivante dans votre terminal pour vous assurer qu'il est installé correctement :
-   Pour ouvrir un terminal dans VSCode, cliquez sur l'onglet **Terminal** dans le menu supérieur, puis cliquez sur **Nouveau Terminal**
-   ```shell
-   forge --version
-   ```
-   Si tout s'est bien passé, vous devriez voir la version actuelle de Foundry affichée.
-
-## Étape 3 - Initialiser Votre Projet
-
-### Qu'est-ce que l'Initialisation ?
-L'initialisation configure la structure de base de votre projet.
-
-1. Dans votre terminal, naviguez vers le dossier où vous souhaitez créer votre projet. Ensuite, exécutez la commande suivante pour initialiser le projet :
-
-   ```shell
-   forge init workshop
-   ```
-
-   Cela créera un nouveau dossier de projet appelé `workshop` avec quelques fichiers de démarrage.
+Toutes les étapes d'installation de Foundry sont dans le [fichier SETUP.md](./SETUP.md). Suivez les instructions pour installer Foundry sur votre ordinateur.
 
 ### Supprimer les Fichiers Inutiles
 Certains fichiers fournis avec le projet de démarrage ne sont pas nécessaires pour cet atelier.
