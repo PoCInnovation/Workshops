@@ -2,7 +2,7 @@
 
 ## Install foundry
 
-Please follow the instructions given [here](https://github.com/foundry-rs/foundry#installation).
+Please follow the instructions given [here](https://book.getfoundry.sh/getting-started/installation).
 
 After the installation, run the following command to ensure it has been properly installed on your computer:
 
@@ -17,7 +17,7 @@ It should print your current version.
 Now we will initialize the project:
 
 ```shell
-forge init workshop --no-commit
+forge init workshop
 ```
 
 ## Back to the workshop
