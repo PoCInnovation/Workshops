@@ -2,6 +2,8 @@
 
 Foundry est une chaîne d'outils de développement de smarts contracts. Il gère vos dépendances, compile votre projet, exécute des tests, déploie et vous permet d'interagir avec la blockchain à partir de la ligne de commande et via des scripts Solidity.
 
+## Installer Foundry
+
 ### Linux et MacOS
 - Ouvrez votre terminal et tapez
 
@@ -37,7 +39,7 @@ Cela devrait afficher la version actuelle de forge.
 
 Si vous avez des soucis d'installation n'hésitez pas à demander de l'aide aux organisateur de ce workshop.
 
-## Créer un projet foundry
+## Créer un projet Foundry
 
 Une fois que l'installation est faite, vous pouvez créer un nouveau projet en tapant
 
