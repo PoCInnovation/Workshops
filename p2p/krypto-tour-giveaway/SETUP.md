@@ -2,12 +2,6 @@
 
 Foundry est une chaîne d'outils de développement de smarts contracts. Il gère vos dépendances, compile votre projet, exécute des tests, déploie et vous permet d'interagir avec la blockchain à partir de la ligne de commande et via des scripts Solidity.
 
-## Télécharger VScode
-
-Rendez-vous sur [Téléchargement de VScode](https://code.visualstudio.com/download) et choisisez votre version. Suivez le processus d'installation. Visual Studio Code est un éditeur de code extensible développé par Microsoft pour Windows, Linux et macOS.
-
-## Installer Foundry
-
 ### Linux et MacOS
 - Ouvrez votre terminal et tapez
 
@@ -53,22 +47,6 @@ forge init krypto-tour
 
 Cela devrait créer un nouveau dossier contenant un tout nouveau projet foundry.
 
-La première chose à faire est d'écrire la version de solidity dans le fichier `foundry.toml` qui est le fichier de configuration de votre projet.
-
-Vous pouvez faire cela en ajoutant dans la partie `[profile.default]`:
-
-```toml
-solc_version = "0.8.20"
-```
-
-Votre fichier devrait ressembler à ça
-
-```toml
-[profile.default]
-src = "src"
-out = "out"
-libs = ["lib"]
-solc_version = "0.8.20"
-```
-
 Tout est bon, vous pouvez maintenant attaquer le workshop !
+
+[Retour au workshop !](./README.md)
