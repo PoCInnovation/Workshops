@@ -172,19 +172,17 @@ If it is the right number you should see the following output:
 
 During the first steps you interacted with your local blockchain, but now we will use a public one 🚀
 Some test networks are available for you to test your contracts, they are called [testnets](https://ethereum.org/en/developers/docs/networks/).
-In this step we will interact with the [Goerli](https://goerli.net/) testnet.
-We will use [Infura](https://infura.io/)'s nodes to interact with the blockchain. We could also have
+In this step we will interact with the [Sepolia](https://sepolia.dev/) testnet.
+We will use public's nodes to interact with the blockchain. We could also have
 run our own node, but it would take too much time.
 
 ### 📌 **Tasks**:
 
-- Create a [metamask](https://metamask.io/) account and fund it with some Goerli ETH.
-  - You can use the [faucet](https://goerlifaucet.com/) to get some Goerli ETH.
+- Create a [metamask](https://metamask.io/) account and fund it with some Sepolia ETH.
+  - You can use the [faucet](https://www.alchemy.com/faucets/ethereum-sepolia) to get some Sepolia ETH.
+  - The faucet now want you to have real ETH to counter bots so just ask PoC team to send you some.
 
-- Create an account on [Infura](https://infura.io/) and get an API key.
-  - You will use this API key to interact with the Goerli testnet.
-
-> You can now broadcast transactions to the Goerli testnet, by the endpoint `https://goerli.infura.io/v3/<YOUR_API_KEY>`.
+> You can now broadcast transactions to the Sepolia testnet, by the endpoint listed on the [chain page](https://sepolia.dev/) like this one `https://rpc.sepolia.org/`.
 
 - Now deploy and interact with your contract, like you did in the previous steps, but this time on the Goerli testnet.
 > Don't forget to use your endpoint, shutdown your local blockchain to be sure you are using the Goerli testnet.
