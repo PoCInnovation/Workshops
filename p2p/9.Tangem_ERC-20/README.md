@@ -37,7 +37,7 @@ Pour créer notre token, nous allons devoir coder un smart contract. Nous utilis
 Premièrement, vous aller avoir besoin d'utiliser la bibliothèque de smart contrats d'OpenZeppelin: OpenZeppelin est une organisation qui fournit des smart contracts sécurisés et reconnus pour la blockchain Ethereum. Pour l'installer, entrez cette commande dans votre terminal:
 
 ```sh
-forge install OpenZeppelin/openzeppelin-contracts
+forge install https://github.com/OpenZeppelin/openzeppelin-contracts
 ```
 
 C'est le moment de coder !
@@ -106,7 +106,7 @@ Remplissez le formulaire suivant avec votre adresse email et l'`address` génér
 C'est le grand moment ! Entrez cette commande, et votre token devrait se déployer ! Pensez simplement à remplacer `PRIVATE_KEY` par la clé privée de votre wallet temporaire.
 
 ```sh
-forge create src/erc20.sol --rpc-url https://polygon-mainnet.g.alchemy.com/v2/m1TWeG_zxjMLlLQD1Y1ldDhoBXE_vO2H --private-key PRIVATE_KEY
+forge create src/erc20.sol:Token --rpc-url https://polygon-mainnet.g.alchemy.com/v2/m1TWeG_zxjMLlLQD1Y1ldDhoBXE_vO2H --private-key PRIVATE_KEY
 ```
 
 La commande `forge create` permet de déployer un smart contract, ici notre token ERC20.
@@ -125,10 +125,10 @@ Maintenant que votre token est déployé sur la blockchain Polygon, vous allez p
 
 Avant de transférer vos tokens, assurez-vous d'avoir configurer votre wallet Tangem et de l'avoir connecté à l'application. Vous pouvez ensuite récupérer l'adresse de votre wallet, vous en aurez besoin pour transférer vos tokens.
 
-Entrez cette commande pour transférer vos tokens sur votre wallet Tangem. Pensez à remplacer `AMOUNT` par le nombre de tokens que vous souhaitez transférer, `ADDRESS` par l'adresse de votre wallet Tangem et `PRIVATE_KEY` par la clé privée de votre wallet temporaire.
+Entrez cette commande pour transférer vos tokens sur votre wallet Tangem. Pensez à remplacer `CONTRACT_ADDRESS` par l'adresse de votre contrat, `AMOUNT` par le nombre de tokens que vous souhaitez transférer, `ADDRESS` par l'adresse de votre wallet Tangem et `PRIVATE_KEY` par la clé privée de votre wallet temporaire.
 
 ```sh
-cast send "transfer(address,uint256)" ADDRESS $(cast to-wei AMOUNT) --rpc-url https://polygon-mainnet.g.alchemy.com/v2/m1TWeG_zxjMLlLQD1Y1ldDhoBXE_vO2H --private-key PRIVATE_KEY
+cast send CONTRACT_ADDRESS "transfer(address,uint256)" ADDRESS $(cast to-wei AMOUNT) --rpc-url https://polygon-mainnet.g.alchemy.com/v2/m1TWeG_zxjMLlLQD1Y1ldDhoBXE_vO2H --private-key PRIVATE_KEY
 ```
 
 La commande `cast send` permet de déclencher une fonction d'un smart contract. Ici, nous utilisons la fonction `transfer` du contrat ERC20 pour envoyer des tokens à une adresse spécifique.
