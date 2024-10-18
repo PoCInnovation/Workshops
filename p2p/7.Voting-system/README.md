@@ -14,7 +14,7 @@ In this workshop we'll learn the basics of solidity with a classic use case: a v
 
 ## Step 0: Initialization
 
-All the required information to install the workshop's dependencies are given in the [setup.md](./setup.md). To launch the dApp :
+All the required information to install the workshop's dependencies are given in the [SETUP.md](./SETUP.md). To launch the dApp :
 
 - Clone the "dApp" folder, afterward:
 
