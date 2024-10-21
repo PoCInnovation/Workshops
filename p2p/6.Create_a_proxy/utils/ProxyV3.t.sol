@@ -2,9 +2,9 @@
 pragma solidity ^0.8.25;
 
 import "forge-std/Test.sol";
-import "../src/proxys/ProxyV1.sol";
-import "../src/proxys/ProxyV2.sol";
-import "../src/proxys/ProxyOwnableUpgradable.sol";
+import "../src/proxies/ProxyV1.sol";
+import "../src/proxies/ProxyV2.sol";
+import "../src/proxies/ProxyOwnableUpgradable.sol";
 import "../src/implementations/CounterV1.sol";
 import "../src/implementations/CounterV2.sol";
 
