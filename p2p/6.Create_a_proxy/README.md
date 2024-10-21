@@ -33,7 +33,7 @@ Please refer to the [SETUP.md](./SETUP.md) file.
 Now, let's create the needed files.
 
 - 📂 First, delete the `script` folder as we will not need it, as well as the `Counter.sol` and `Counter.t.sol` files.
-- 📄 Create a folder named `proxys` in the `src` folder, and then a `ProxyV1.sol` file.
+- 📄 Create a folder named `proxies` in the `src` folder, and then a `ProxyV1.sol` file.
 - 📄 Create a folder named `implementations` in the `src` folder and add `CounterV1.sol` and `CounterV2.sol` files which are in the `utils` folder.
   - The `CounterV1.sol` file will contain the first version of the counter contract.
   - The `CounterV2.sol` file will contain the second version of the counter contract.
@@ -76,7 +76,7 @@ contract B {
     }
 }
 ```
-Here, if you call `delegateSetN` from contract B, the `n` variable of contract A will be updated. If you call `setN`, the `n` variable of contract B will be updated.
+Here, if you call `delegateSetN` from contract B, the `n` variable of contract B will be updated. If you call `setN` from contract B, the `n` variable of contract A will be updated.
 
 ### 📌 **Tasks**:
 
@@ -85,7 +85,7 @@ Here, if you call `delegateSetN` from contract B, the `n` variable of contract A
   - `implem`, which is an address.
     - This variable will store the address of the implementation contract.
 - Add the contract constructor in the `ProxyV1` contract.
-  - In it, initialize the `implementation` variable with the address of the implementation contract.
+  - In it, initialize the `implem` variable with the address of the implementation contract.
 - Add the `receive` function which is external payable.
   - This function will be used to receive Ether sent to the contract.
   - You can leave it empty for now, we just need to have it in the contract.
@@ -158,7 +158,7 @@ In this step, you will add a `setImplementation` function to the proxy contract 
 
 ### 📌 **Tasks**:
 
-- 📄 Create a new file `ProxyV2.sol` in the `proxy` folder.
+- 📄 Create a new file `ProxyV2.sol` in the `proxies` folder.
 - Create a contract `ProxyV2` in the `ProxyV2.sol` file.
   - This contract will be an upgrade of the `ProxyV1` contract.
   - Copy only the fallback function from the `ProxyV1` contract to the `ProxyV2` contract.
@@ -208,17 +208,17 @@ A modifier is a function-like construct used to run code before the function att
 
 ### 📌 **Tasks**:
 
-- 📄 First, create a new file `ProxyOwnableUpgradable` in the `proxy` folder.
+- 📄 First, create a new file `ProxyOwnableUpgradable` in the `proxies` folder.
 - Create a contract `ProxyOwnableUpgradable` in the `ProxyOwnableUpgradable.sol` file.
   - 📈 This contract will be an upgrade of the `ProxyV2` contract.
   - To achieve this, the contract will inherit from the `ProxyV2` contract.
-- 💾 We need to store the `owner` address and the `version` which is a string. As learned in the previous step, we use storage slots to store these variables.
+- 💾 We need to store the `owner` address. As learned in the previous step, we use storage slots to store this variable.
   - The slot convention for the owner is `bytes32(uint256(keccak256("eip1967.proxy.owner")) - 1)`.
-  - Add public functions to get the owner and version values from the storage.
-  - Add internal functions to set the owner and version values in the storage.
+  - Add public functions to get the owner value from the storage.
+  - Add internal functions to set the owner value in the storage.
     - These functions must be called by other functions in the contract.
 - 🔎 Now, we need events to log changes in the implementation address and ownership:
-  - `event Upgraded(string version, address indexed implementation);`
+  - `event Upgraded(address indexed implementation);`
   - `event ProxyOwnershipTransferred(address previousOwner, address newOwner);`
   - Events are useful for debugging and keeping track of changes in the contract.
   - Events are declared at the beginning of the contract.
@@ -226,15 +226,15 @@ A modifier is a function-like construct used to run code before the function att
   - `transferProxyOwnership(address newOwner)`, which is a public function.
     - This function will allow the current owner to transfer ownership of the proxy contract to a new owner.
     - This function will emit the `ProxyOwnershipTransferred` event and set the new owner in the storage.
-  - `upgradeTo(string memory newVersion, address newImplementation)`, which is a public function.
-    - This function will allow the owner to upgrade the implementation contract address and set a new version.
-    - This function will emit the `Upgraded` event and set the new implementation address and version in the storage.
+  - `upgradeTo(address newImplementation)`, which is a public function.
+    - This function will allow the owner to upgrade the implementation contract address.
+    - This function will emit the `Upgraded` event and set the new implementation address in the storage.
 - 🔨 Create a modifier `onlyOwner` to restrict access to certain functions to the owner of the contract.
   - This modifier will use the `msg.sender` variable to check if the function caller is the owner of the contract.
   - Add the `onlyOwner` modifier to the `transferProxyOwnership` and `upgradeTo` functions.
 - 🛠️ Add a constructor to set the contract owner.
   - This constructor will use the `msg.sender` variable to set the contract owner.
-  - This constructor will also accept parameters to set the implementation address and the contract version.
+  - This constructor will also accept parameters to set the implementation address.
 - 📝 Override the `setImplementation` function to be usable by the owner only with the `onlyOwner` modifier.
 
 ### 📚 **Documentation**:
@@ -296,7 +296,7 @@ source .env
 - Deploy your proxy contract:
 
 ```bash
-forge create src/proxys/ProxyOwnableUpgradable:ProxyOwnableUpgradable --private-key "$PRIVATE_KEY" --rpc-url $RPC_URL --constructor-args "v1" "$CONTRACT_V1"
+forge create src/proxies/ProxyOwnableUpgradable:ProxyOwnableUpgradable --private-key "$PRIVATE_KEY" --rpc-url $RPC_URL --constructor-args "v1" "$CONTRACT_V1"
 ```
 
 - Copy the address from `Deployed to` and paste it into the `.env` file under the `PROXY` variable.
