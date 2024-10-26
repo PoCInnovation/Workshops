@@ -39,12 +39,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Find Markdown files
-      id: find_markdown
-      run: |
-        echo "files=$(find . -type f -name '*.md')" >> $GITHUB_ENV
     - name: Spell checker
       uses: rojopolis/spellcheck-github-actions@v0
       with:
-        source_files: ${{ env.files }}
-        task_name: Markdown
+        config_path: .spellcheck.yaml
