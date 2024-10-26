@@ -38,10 +38,9 @@ jobs:
   spell-check:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v3
     - name: Spell checker
-      uses: actions/checkout@v3
       uses: rojopolis/spellcheck-github-actions@v0
-      name: Spellcheck
       with:
         source_files: $(find . -type f -name "*.md" -print)
         task_name: Markdown
