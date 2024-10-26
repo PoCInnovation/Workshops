@@ -35,3 +35,13 @@ jobs:
           .github/workflows/config/.markdownlint.jsonc,
           ${{ steps.changed-files.outputs.all_changed_files }}
         separator: ","
+  spell-check:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Spell checker
+      uses: actions/checkout@v3
+      uses: rojopolis/spellcheck-github-actions@v0
+      name: Spellcheck
+      with:
+        source_files: $(find . -type f -name "*.md" -print)
+        task_name: Markdown

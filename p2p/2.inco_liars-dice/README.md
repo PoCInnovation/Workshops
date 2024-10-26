@@ -4,7 +4,7 @@
 
 ✔️ Learn how to deploy and interact with a contract
 
-✔️ Discover the Starton tools to easily build blockchain applications
+✔️ Discover Inco and what's the FHE in an EVM
 
 
 ## Step 0: Initialization
@@ -103,8 +103,8 @@ But there's still a lot to discover, here are a few links:
 
 ## Authors
 
-| [<img src="https://github.com/Doozers.png?size=85" width=85><br><sub>Ismaël Fall</sub>](https://github.com/Doozers) | [<img src="https://github.com/RezaRahemtola.png?size=85" width=85><br><sub>Reza Rahemtola</sub>](https://github.com/RezaRahemtola)
-| :---: | :---: |
+| [<img src="https://github.com/Molaryy.png?size=85" width=85><br><sub>Mohammed JBILOU</sub>](https://github.com/Molaryy) |
+| :---: | 
 <h2 align=center>
 Organization
 </h2>

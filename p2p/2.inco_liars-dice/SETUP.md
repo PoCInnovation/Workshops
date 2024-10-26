@@ -6,7 +6,7 @@ To make API calls, you will need to install a tool like [Postman](https://www.po
 
 > 💡 You can also use [Hoppscotch](https://hoppscotch.io/), [curl](https://curl.haxx.se/) (often already installed on your computer), or whatever other tool you want for your tests since they will be personal, but we highly recommend `postman` as we will explain you how to use it.
 
-## Starton
+## Forge
 
 In this workshop, you'll use [Starton](https://www.starton.io/), a service to easily connect Web2 applications to blockchain with a simple API.  
 With it, you can do a lot of things: monitoring on-chain events, deploying an interacting with smart contracts, uploading files to IPFS...
