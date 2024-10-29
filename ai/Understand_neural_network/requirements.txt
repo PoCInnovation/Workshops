@@ -1,0 +1,7 @@
+numpy
+torch
+math
+matplotlib
+sklearn
+keras
+torchvision
