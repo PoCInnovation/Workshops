@@ -18,7 +18,7 @@ Please refer to the [SETUP.md](./SETUP.md) file for instructions.
 
 ✔️ Discover the basic components of a neural network and how they work
 
-✔️ As a bonus, create your own number recognition model
+✔️ As a bonus, create your own hand-written digit recognition model
 
 
 ## Conclusion
