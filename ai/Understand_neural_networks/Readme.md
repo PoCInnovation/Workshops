@@ -1,4 +1,4 @@
-# Understand Key of Neural Network (A beginners guide)
+# Understanding Neural Networks: A beginner's guide
 
 
 
@@ -8,22 +8,22 @@ Welcome to this workshop! In this session, you will gain a comprehensive underst
 
 ## Step 0 - Setup
 
-Please refer to the [SETUP.md](./SETUP.md) file.
+Please refer to the [SETUP.md](./SETUP.md) file for instructions.
 
 ## Step 1 - The beginners guide 
 
-### in this workshop :
+### In this workshop, you will :
 
-✔️ You will be able to understand the different concept of AI
+✔️ Understand the different concepts of AI
 
-✔️ You will discover all the based component of a neural-network and understand it
+✔️ Discover the basic components of a neural network and how they work
 
-✔️ In bonus you will create your own model of recognition number
+✔️ As a bonus, create your own number recognition model
 
 
 ## Conclusion
 
-Well done ! You've accomplished a lot with neural-netwok, and there is so much more to discover.
+Well done ! You've accomplished a lot with neural networks, and there is so much more to discover.
 Hope you enjoyed the workshop !
 
 ## Authors
