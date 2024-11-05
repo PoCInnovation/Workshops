@@ -1,23 +1,61 @@
-# Workshop 2 - Smart Contracts with Starton
+# Workshop 2 - Roshambo Smart Contract
 
 ✔️ Create your first smart contract in Solidity
 
 ✔️ Learn how to deploy and interact with a contract
-
-✔️ Discover Inco and what's the FHE in an EVM
 
 
 ## Step 0: Initialization
 All the required information to install the workshop's dependencies are given in the [SETUP.md](./SETUP.md)
 
 ## Step 1 - Create a contract
-Let's create your first contract in [Solidity](https://docs.soliditylang.org/en/v0.8.0/) 🚀  
+### :bookmark_tabs: **Description**:
+
+
+Let's create your Rock Paper Scissors contract in [Solidity](https://docs.soliditylang.org/en/v0.8.0/) 🚀  
 > 💡 You can use the online IDE [Remix](https://remix.ethereum.org/) which is really useful to develop contracts for the Ethereum blockchain.
 
-Your objective is to create a contract named `Task1`:
-- It should have an unsigned int variable named num and a function `incrAndRetrieve()` that increment num and returns its new value.
-- It should also have a function named `worldify` that takes a `string` as an argument and return a `string` that is equal to your parameter followed by " world!" like this: `worldify("Hello") => Hello world!`
 
+
+Your objective is to create a contract named `Roshambo`. This contract will allow two players to play the game of rock-paper-scissors with an Ethereum bet.
+
+### Key Concepts:
+- **State Variables**: These are variables whose values are permanently stored in the contract's storage. In this contract, we'll use state variables to store information such as players' addresses and their moves.
+- **Constants**: Values that remain the same throughout the contract. 
+
+
+For example,  is set to 0.001 ETH and defines the minimum amount a player must bet to participate.
+### :pushpin: **Tasks**:
+1. **Let's Raise the Stakes** 🎲  
+   - Add a constant called `MINIMAL_BET` to set a minimum bet amount—let's make it `0.001 ETH` to keep it interesting!
+
+2. **Set a Reveal Timeout** ⏳  
+   - To keep the game moving, add a `REVEAL_TIMEOUT` constant variable set to 5 minutes. This will prevent players from stalling too long.
+
+3. **Game logic** 🧑‍💻
+    - To e able to handle the logic of the game you will need 2 variables, 2 integers that will handle the `initial bet` and one that represents the `first reveal` of the player.
+
+3. **Representing Rock, Paper, Scissors** ✊🖐✌️  
+   - Since our game revolves around Rock, Paper, Scissors, find a way to represent these choices in Solidity! Also, think about how to handle any invalid choices a player might enter.
+
+4. **Define Game Outcomes** 🏆  
+   - There is a [type](https://docs.soliditylang.org/en/latest/types.html) that can help you represent possible outcomes: one of the 2 players wins, or it's a Draw or is invalid due to incorrect input from the user. This will make it easy to handle the end result.
+
+5. **Set Up Player Variables** 👤👥  
+   - Add variables for the two players. They should be able to place bets, so consider that user needs to [pay](https://ethereum.stackexchange.com/questions/64108/whats-the-difference-between-address-and-address-payable)!
+
+6. **Secret Moves with Encoding** 🔒  
+   - To keep each player's choice hidden until both have played, create two variables to store encoded moves—one for each player. This will allow us to reveal the moves only at the right time.
+
+7. **Track Moves for Both Players** ⚔️  
+   - Lastly, set up two variables that store each player's actual choice (once revealed). These will use the `Moves` type you created above in the step 3.
+
+
+## Tasks:
+- **Create the Contract**: Start by creating a new file named Roshambo.sol in Remix or in your IDE in the `src/` folder and define a contract structure.
+
+
+### :books: **Documentation**:
 <details>
     <summary>How to easily test your contract 🤔</summary>
     <br>
@@ -29,6 +67,7 @@ Your objective is to create a contract named `Task1`:
     <img src="https://user-images.githubusercontent.com/49811529/190254685-0ccee8ce-9c45-4aa8-96e0-f5407e07b7e8.png"/>
 </details>
 
+### ✔️ **Validation**:
 Finally you need to compile your smart contract and copy the [ABI and Bytecode](https://blog.chain.link/what-are-abi-and-bytecode-in-solidity/), it will be useful for the next step 😉
 
 ## Step 2 - Deploy with Starton
