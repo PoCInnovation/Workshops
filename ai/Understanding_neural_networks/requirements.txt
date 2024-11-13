@@ -5,3 +5,5 @@ scikit-learn
 keras
 tensorflow
 torchvision
+flask
+Pillow

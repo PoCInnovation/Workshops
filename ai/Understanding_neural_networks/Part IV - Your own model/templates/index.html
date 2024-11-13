@@ -2,85 +2,209 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MNIST Digit Predictor</title>
+    <title>Reconnaissance de chiffres MNIST</title>
     <style>
-        #canvas {
-            border: 1px solid black;
-            background-color: black;
-            cursor: crosshair;
-            width: 280px; /* Taille affichée */
-            height: 280px; /* Taille affichée */
+        /* Importer une police Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        /* Style global */
+        body {
+            background-color: #f0f2f5;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
         }
+
+        h1 {
+            color: #333;
+            margin-top: 30px;
+        }
+
+        /* Style du canevas */
+        #canvas {
+            border: 2px solid #333;
+            background-color: #000;
+            touch-action: none; /* Empêche le zoom sur les appareils tactiles */
+            cursor: crosshair;
+            margin-top: 20px;
+        }
+
+        /* Style des boutons */
+        .button-container {
+            margin-top: 20px;
+        }
+
         button {
-            margin-top: 10px;
-            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
             font-size: 16px;
         }
-        p {
-            font-size: 18px;
-            font-weight: bold;
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Style du résultat */
+        #result {
+            font-size: 24px;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        /* Style du tableau des probabilités */
+        #probabilities {
+            margin-top: 20px;
+        }
+
+        #probabilities table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        #probabilities th, #probabilities td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        #probabilities tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        #probabilities tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        #probabilities th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            canvas {
+                width: 240px;
+                height: 240px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Draw a Digit (28x28 Canvas)</h1>
-    <canvas id="canvas" width="28" height="28"></canvas>
-    <br>
-    <button onclick="clearCanvas()">Clear</button>
-    <button onclick="checkDigit()">Check Digit</button>
+    <h1>Reconnaissance de chiffres MNIST</h1>
+    <canvas id="canvas" width="280" height="280"></canvas>
+
+    <div class="button-container">
+        <button onclick="clearCanvas()">Effacer</button>
+        <button onclick="predict()">Prédire</button>
+    </div>
+
     <p id="result"></p>
+    <div id="probabilities"></div>
 
     <script>
         const canvas = document.getElementById('canvas');
         const ctx = canvas.getContext('2d');
-        ctx.fillStyle = "white";
-        ctx.lineWidth = 1;
-        ctx.lineCap = 'round';
+        const gridSize = 28;  // Taille de la grille du modèle
+        const cellSize = canvas.width / gridSize;  // Taille d'un "pixel" dans le canevas
 
-        let drawing = false;
+        let isDrawing = false;
 
-        // Start drawing when mouse is pressed
-        canvas.addEventListener('mousedown', () => drawing = true);
-        canvas.addEventListener('mouseup', () => {
-            drawing = false;
-            ctx.beginPath();
-        });
-        canvas.addEventListener('mouseleave', () => {
-            drawing = false;
-            ctx.beginPath();
-        });
+        // Initialiser le fond noir du canevas
+        ctx.fillStyle = 'black';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-        // Draw on the canvas
-        canvas.addEventListener('mousemove', (event) => {
-            if (drawing) {
-                const rect = canvas.getBoundingClientRect();
-                const x = event.clientX - rect.left;
-                const y = event.clientY - rect.top;
-                ctx.fillRect(x, y, 1, 1);  // Dessine un pixel à la fois
+        // Gestion des événements pour le dessin
+        canvas.addEventListener('mousedown', () => { isDrawing = true; });
+        canvas.addEventListener('mouseup', () => { isDrawing = false; });
+        canvas.addEventListener('mouseleave', () => { isDrawing = false; });
+        canvas.addEventListener('mousemove', draw);
+
+        // Fonction de dessin avec un pinceau plus large (2x2 pixels)
+        function draw(e) {
+            if (!isDrawing) return;
+
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            ctx.fillStyle = 'white';
+            for (let i = 0; i <= 1; i++) {
+                for (let j = 0; j <= 1; j++) {
+                    ctx.fillRect(
+                        Math.floor((x + i * cellSize) / cellSize) * cellSize,
+                        Math.floor((y + j * cellSize) / cellSize) * cellSize,
+                        cellSize,
+                        cellSize
+                    );
+                }
             }
-        });
-
-        // Function to clear the canvas
-        function clearCanvas() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            document.getElementById('result').textContent = '';
         }
 
-        // Function to send the image to the server for prediction
-        function checkDigit() {
-            const dataUrl = canvas.toDataURL("image/png");
+        // Effacer le canevas
+        function clearCanvas() {
+            ctx.fillStyle = 'black';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            document.getElementById('result').innerText = '';
+            document.getElementById('probabilities').innerText = '';
+        }
+
+        // Fonction pour obtenir la prédiction
+        function predict() {
+            const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            const input = [];
+
+            // Récupérer chaque "pixel" 28x28 en calculant la moyenne des cases 10x10
+            for (let y = 0; y < gridSize; y++) {
+                for (let x = 0; x < gridSize; x++) {
+                    let sum = 0;
+
+                    // Moyenne des pixels dans la case 10x10
+                    for (let dy = 0; dy < cellSize; dy++) {
+                        for (let dx = 0; dx < cellSize; dx++) {
+                            const pixelIndex = ((y * cellSize + dy) * canvas.width + (x * cellSize + dx)) * 4;
+                            const pixelValue = imageData.data[pixelIndex]; // Utilise le canal rouge
+                            sum += pixelValue;
+                        }
+                    }
+
+                    // Calcul de la moyenne et inversion pour correspondre à MNIST
+                    const avg = sum / (cellSize * cellSize * 255);
+                    input.push(1 - avg);  // Inverser pour MNIST (1 = blanc, 0 = noir)
+                }
+            }
+
             fetch('/predict', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ image: dataUrl })
+                body: JSON.stringify({image: input}),
             })
             .then(response => response.json())
             .then(data => {
-                document.getElementById('result').textContent = 'Prediction: ' + data.prediction;
-            })
-            .catch(error => console.error('Error:', error));
+                document.getElementById('result').textContent = `Prédiction : ${data.prediction}`;
+
+                // Afficher les probabilités sous forme de tableau
+                let probabilitiesHTML = '<table><tr><th>Chiffre</th><th>Probabilité (%)</th></tr>';
+                data.probabilities.forEach((prob, index) => {
+                    probabilitiesHTML += `<tr><td>${index}</td><td>${(prob * 100).toFixed(2)}%</td></tr>`;
+                });
+                probabilitiesHTML += '</table>';
+                document.getElementById('probabilities').innerHTML = probabilitiesHTML;
+            });
         }
     </script>
 </body>
