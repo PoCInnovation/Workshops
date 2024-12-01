@@ -1,0 +1,8 @@
+html {
+  background-color: rgb(41, 41, 41);
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
