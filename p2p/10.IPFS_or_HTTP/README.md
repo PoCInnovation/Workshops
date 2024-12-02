@@ -92,7 +92,7 @@ Then, the time it took to respond to the request. Afterward, the address which r
 `POST` is another **HTTP method** than `GET`. When you fill the form earlier, it was **you** that was giving the server
 some information :that is the main difference between `POST` and `GET`.
 
-> 💡 Learn more about HTTP methods [here](https://www.restapitutorial.com/lessons/httpmethods.html).
+> 💡 Learn more about HTTP methods [here](https://fr.wikipedia.org/wiki/Hypertext_Transfer_Protocol).
 
 Then, go to look at our `uploads` folder : you have the file you just downloaded in here !
 >💡 This is how HTTP works. When retrieving data, HTTP focuses on **location**.
@@ -102,7 +102,7 @@ Then, go to look at our `uploads` folder : you have the file you just downloaded
 > 💡 HTTP is cool but has its limits : if the server is down, you won't be able to retrieve the data stored. Furthermore, your government can easily block access to certain servers by their IPs that host particular website for censure purposes.
 Let's see how IPFS answers this issues.
 
-At its core, IPFS is a [distributed system](https://blog.stackpath.com/distributed-system/) for storing and accessing files, websites, applications, and data.
+At its core, IPFS is a [distributed system](https://en.wikipedia.org/wiki/Distributed_computing) for storing and accessing files, websites, applications, and data.
 Instead of referring to data (photos, articles, videos) by **location**, or which server they are stored on, IPFS refers
 to everything by that data’s [hash](https://docs.ipfs.io/concepts/hashing/#hashes-are-important), meaning the **content itself.**
 
