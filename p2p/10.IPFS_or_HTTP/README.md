@@ -27,7 +27,11 @@ Please follow each instruction on the [SETUP.md](SETUP.md) file.
 
 ### ✏️ 1.0 Discover the basics
 
-Wanna launch the back-end? It's very simple, just execute the `./backend` binary.
+Wanna launch the back-end? It's very simple, just run the container you pulled in the setup:
+
+```
+docker run -p 8080:8080 sacharbon/workshop-ipfs
+```
 
 you should have this log :
 
