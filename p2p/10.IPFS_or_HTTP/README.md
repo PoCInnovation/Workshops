@@ -1,19 +1,17 @@
-# 3. Learn the differences between HTTP and IPFS !
+# 10. Learn the differences between HTTP and IPFS
 
 ## 💫 Table of contents
+
 * [Step 0 - Setup](README.md#🔧-step-0---setup)
 * [Step 1 - HTTP](README.md#step-1---http)
-    * [Discover the basics](README.md#✏️-10-discover-the-basics)
-    * [Storage](README.md#💾-11-storage)
+  * [Discover the basics](README.md#✏️-10-discover-the-basics)
+  * [Storage](README.md#💾-11-storage)
 * [Step 2 - IPFS](README.md#step-2---ipfs)
-    * [Improve the storage](README.md#🕸️-20-improve-the-storage)
-    * [Retrieve](README.md#📥-22-retrieve)
+  * [Improve the storage](README.md#🕸️-20-improve-the-storage)
+  * [Retrieve](README.md#📥-22-retrieve)
 * [Going further](README.md#🚀-going-further)
   
-
 In this Workshop, you will learn :
-
-✔️ Run a web application with `docker-compose`
 
 ✔️ The basics of HTTP
 
@@ -22,91 +20,69 @@ In this Workshop, you will learn :
 ✔️ How to change a centralized storage into a distributed one via IPFS with Infura !
 
 ## 🔧 Step 0 - Setup
+
 Please follow each instruction on the [SETUP.md](SETUP.md) file.
 
 ## Step 1 - HTTP
+
 ### ✏️ 1.0 Discover the basics
-Wanna launch the platform? Alright, make sure you are on the [sources](./sources.zip) directory where the `Dockerfile` and
-`docker-compose.yml` are.
 
-Build the multi service container :
-```bash
-sudo docker-compose build
-```
-You have to only use this command once. After several steps, you should have this output:
-```bash
-Successfully built a998a543950c
-Successfully tagged music-share_web:latest
-```
-> 💡 The number `a998a543950c` is the id of your container, it's ok if yours is different.
+Wanna launch the back-end? It's very simple, just execute the `./backend` binary.
 
-Then, each time you want to launch your website, run :
-```bash
-docker-compose up
-```
 you should have this log :
+
 ```bash
-Starting music-share_db_1 ... done
-Starting music-share_web_1 ... done
-Attaching to music-share_db_1, music-share_web_1
-db_1   | 
-db_1   | PostgreSQL Database directory appears to contain a database; Skipping initialization
-db_1   | 
-db_1   | 2021-08-02 20:48:37.281 UTC [1] LOG:  starting PostgreSQL 13.2 (Debian 13.2-1.pgdg100+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
-db_1   | 2021-08-02 20:48:37.281 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
-db_1   | 2021-08-02 20:48:37.281 UTC [1] LOG:  listening on IPv6 address "::", port 5432
-db_1   | 2021-08-02 20:48:37.283 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-db_1   | 2021-08-02 20:48:37.286 UTC [25] LOG:  database system was shut down at 2021-08-02 20:48:32 UTC
-db_1   | 2021-08-02 20:48:37.289 UTC [1] LOG:  database system is ready to accept connections
-web_1  | No changes detected
-web_1  | Operations to perform:
-web_1  |   Apply all migrations: admin, auth, contenttypes, musicshare, sessions
-web_1  | Running migrations:
-web_1  |   No migrations to apply.
-web_1  | Watching for file changes with StatReloader
-web_1  | Performing system checks...
-web_1  | 
-web_1  | System check identified no issues (0 silenced).
-web_1  | August 02, 2021 - 20:48:39
-web_1  | Django version 3.1.6, using settings 'music_share_project.settings'
-web_1  | Starting development server at http://0.0.0.0:8000/
-web_1  | Quit the server with CONTROL-C.
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
 
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env: export GIN_MODE=release
+ - using code: gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /images                   --> main.getImages (4 handlers)
+[GIN-debug] GET    /images/:id               --> main.getImageByID (4 handlers)
+[GIN-debug] POST   /upload                   --> main.uploadImage (4 handlers)
+[GIN-debug] GET    /uploads/*filepath        --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] HEAD   /uploads/*filepath        --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:8080
 ```
-As you can see, `db_1` is our database which seems okay and ready to accept new connections,
-and `web_1` is the backend of our website. You can open your favorite browser like Firefox or Chrome (or Opera,
-no discrimination here) and go to this url: [http://0.0.0.0:8000/](http://0.0.0.0:8000/).
 
-You should see our beautiful website !!
+As you can see, there is different route for the back-end of our website. You can open your favorite browser like Firefox or Chrome (or Opera,
+no discrimination here) and go to this URL: [http://0.0.0.0:8080/images](http://0.0.0.0:8080/images).
 
-If you want to shut down the server, use `Ctrl` + `C` and then run `docker-compose down -v`.
+You should see an empty array !!
+
+If you want to shut down the server, use `Ctrl` + `C` and then run `docker stop ${id}`.
+
+Now it's time to wake the front-end up.
+
+Go to [the source of the front-end](./openocean/frontend/) and type `bun i` to download the dependencies. Then, type `bun dev` to launch the front-side of our web-app.
+
+Now visit this URL: [localhost:5173](localhost:5173). You should see a pretty UI made by two genius.
 
 ### 💾 1.1 Storage
 
-Go to the [freearchivemusic](https://freemusicarchive.org/music/Scott_Holmes/rock-background-music/country-road-drive)
-website and download the song.
-By the way, you can look for any other genres of music you prefer on this website, it is free and open source. For the example, we are going to
-stick with this song.
-Go back to [http://0.0.0.0:8000/](http://0.0.0.0:8000/), scroll down and click on the button `upload a song`.
+Go to [Unsplash](https://unsplash.com/photos/a-woman-sitting-at-a-table-using-a-cell-phone-nplkFSNschY) website and download the image.
+By the way, you can look for any other image you prefer on this website, it is free and open source. For the example, we are going to stick with this image.
+Go back to [http://localhost:5173/](http://localhost:5173), scroll down and click on the button on the `up right`.
 Fill the form correctly and validates it.
 
-You can find the code of the form in `musichare/forms.py`, and the associate model object in
-`musicshare/models.py`.
-
 Now, look at your terminal, you should see those strange logs appear:
+
 ```bash
-web_1  | [06/Aug/2021 11:02:33] "GET / HTTP/1.1" 200 4650
-web_1  | [06/Aug/2021 11:02:37] "GET /upload/ HTTP/1.1" 200 4640
-web_1  | [06/Aug/2021 11:02:57] "POST /upload/ HTTP/1.1" 302 0
-web_1  | [06/Aug/2021 11:02:57] "GET /success/ HTTP/1.1" 200 4360
-web_1  | [06/Aug/2021 11:02:59] "POST / HTTP/1.1" 200 5120
-web_1  | [06/Aug/2021 11:02:59] "GET /media/static/Scott_Holmes_Music_-_Country_Road_Drive.mp3 HTTP/1.1" 200 8983053
+[GIN] 2024/12/02 - 19:10:29 | 200 |      85.347µs |      172.17.0.1 | GET      "/images"
+[GIN] 2024/12/02 - 19:10:29 | 200 |     140.871µs |      172.17.0.1 | GET      "/images"
+[GIN] 2024/12/02 - 19:10:37 | 200 |     2.93712ms |      172.17.0.1 | POST     "/upload"
+[GIN] 2024/12/02 - 19:10:37 | 200 |      30.521µs |      172.17.0.1 | GET      "/images/08245a6c-0843-4f68-bb41-c1dea72369c7"
+[GIN] 2024/12/02 - 19:10:37 | 200 |      15.784µs |      172.17.0.1 | GET      "/images/08245a6c-0843-4f68-bb41-c1dea72369c7"
+[GIN] 2024/12/02 - 19:10:37 | 200 |    5.895332ms |      172.17.0.1 | GET      "/uploads/65fb793f-a8b5-4c88-9fbc-6432d40961ba.png"
+
 ```
+
 Let me explain:
-The first part of the message is obviously the datetime. The second one is the method, `GET`, because we want to just
-get the page ; we are asking the server to give us the `/` route which is the home page.
-Then, the `HTTP` protocol and finally two numbers. The `200` is the most interesting : it is a status, preview code. `200` means
-that the server is ok to give us that page from the `/` route, and it has been delivered correctly.
+The first part of the message is obviously the date-time. The second one is two numbers. The `200` is the most interesting : it is a status, preview code. `200` means that the server is OK to give us that page from the `/images` route, and it has been delivered correctly.
+Then, the time it took to respond to the request. Afterward, the address which requested. And finally, the method, `GET`, because we want to just get the page ; we are asking the server to give us the `/images` route which is the home page.
 
 ![](http_request_flowchart.png)
 *Scheme of a HTTP request*
@@ -118,15 +94,12 @@ some information :that is the main difference between `POST` and `GET`.
 
 > 💡 Learn more about HTTP methods [here](https://www.restapitutorial.com/lessons/httpmethods.html).
 
-Now, look at our `media/static` folder : you have the mp3 file you just downloaded in here !
->💡 This is how HTTP works. When retrieving data, HTTP focuses on **location**. Have you noticed the url ?
-First, it is `0.0.0.0` which is your local IP; then `:8000` to signify the port. Finally, the routes or file you want to
-get, joined by a `/`. That format does not ring a bell to you ? It is like a path !
+Then, go to look at our `uploads` folder : you have the file you just downloaded in here !
+>💡 This is how HTTP works. When retrieving data, HTTP focuses on **location**.
 
 ## Step 2 - IPFS
 
-> 💡 HTTP is cool but has its limits : if the server is down, you won't be able to retrieve the data stored. Furthermore,
-your government can easily block access to certain servers by their IPs that host particular website for censure purposes.
+> 💡 HTTP is cool but has its limits : if the server is down, you won't be able to retrieve the data stored. Furthermore, your government can easily block access to certain servers by their IPs that host particular website for censure purposes.
 Let's see how IPFS answers this issues.
 
 At its core, IPFS is a [distributed system](https://blog.stackpath.com/distributed-system/) for storing and accessing files, websites, applications, and data.
@@ -141,13 +114,17 @@ If this is not enough clear for you, I strongly advise you to refer to this [vid
 ### 🕸️ 2.0 Improve the storage
 
 Here is what we are going to do : We are going to upload our files directly on IPFS and not locally anymore.
-Instead of having the file locally, let's have its corresponding hash in our database.
+Instead of having the file locally, let's pin it with [Pinata](https://pinata.cloud/). Which is a pinning service.
 
-1. Go to `musicshare/models.py` and add a CharField for the hash.
-2. Go to `musicshare/views.py` and modify the code of the upload view to communicate with IPFS API in order to upload the file there.
-   Please use port `5001` for the connection.
-3. Open `musicshare/templates/musicshare/index.html` to line `179`
-   and make sure the hash of the song appears.
+1. Go to `frontend/src/hooks/` and create a new hook `usePinFileToIPFS.ts` as a manner of `usePostImage.ts` It should call the [list file Pinata API route](https://docs.pinata.cloud/api-reference/endpoint/list-files).
+> 💡 Don't forget to create an [Pinata API & Gateway key](https://app.pinata.cloud/developers/api-keys) and write it down into your a `.env`. You can create one by typing in your terminal in `frontend/` folder:
+
+ ```
+cp .env.dist .env
+```
+
+2. Go to `frontend/src/pages/Upload.tsx` and modify the code of the upload view to communicate with your new hook in order to upload the file there.
+3. Go https://app.pinata.cloud/pinmanager and make sure the hash of the song appears.
 
 <details>
 <summary>Some Trouble with IPFS API ?</summary>
@@ -156,34 +133,31 @@ Instead of having the file locally, let's have its corresponding hash in our dat
         <a href="https://en.wikipedia.org/wiki/API">What is an API ?</a>
     </li>
     <li>
-        <a href="https://infura.io/docs/ipfs">Infura IPFS API</a>
+        <a href="https://docs.pinata.cloud/quickstart">Infura IPFS API</a>
     </li>
     <li>
-        <a href="https://pypi.org/project/ipfs-api/">ipfs-Api python package</a>
+        <a href="https://axios-http.com/fr/docs/intro">ipfs-Api python package</a>
     </li>
 </details>
 
-To apply your migrations, shut down the server and relaunch it.
-
-Test another time to upload your music, copy past the hash of the newly added song and go to `https://ipfs.infura.io:5001/api/v0/cat?arg={your_hash_here}`.
-You should see your song play, even if the server has been shut down !
-
 ### 📥 2.2 Retrieve
-Last step : if anyone wants to download from our website some mp3 songs, we need to get it from IPFS.
-Since you did the previous step, this one would seem easy : in your `musicshare/views.py`
- on the `download` view, do the same thing as previously but instead of adding a file, call the `cat` (or `get`) method.
+
+Last step : if anyone wants to see from our website some images, we need to get it from IPFS.
+Since you did the previous step, this one would seem easy : in your `src/page`
+ on the `index.tsx`, do the same thing as previously but instead of adding a file, call the get method to retrieve your image.
 
 ## 🚀 Going further
-A very cool feature with IPFS is that if someone is having an IPFS node running on its machine and download your mp3 audio
-then you deleted it, you will be able to retrieve it from its node !
+
+A very cool feature with IPFS is that if someone is having an IPFS node running on its machine and download your image then you deleted it, you will be able to retrieve it from its node !
 
 * Learn [how](https://docs.ipfs.io/how-to/command-line-quick-start) you can deploy and configure your own IPFS node.
 * Want to store a lot of data on IPFS but being the only one that can access it? Look at [OrbitDB](https://orbitdb.org/).
 
 ## Authors
 
-| [<img src="https://github.com/NaadiQmmr.png?size=85" width=85><br><sub>Adina Cazalens</sub>](https://github.com/NaadiQmmr) |
+| [<img src="https://github.com/sacharbon.png?size=85" width=85><br><sub>Sacha Dujardin</sub>](https://github.com/Sacharbon) |
 | :---: |
+
 <h2 align=center>
 Organization
 </h2>

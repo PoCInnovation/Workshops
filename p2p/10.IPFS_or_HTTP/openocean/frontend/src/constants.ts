@@ -8,6 +8,6 @@ const vars = {
 const env = from(vars, {});
 
 export const constants = {
-  pinataAPIKey: env.get("VITE_PINATA_API_KEY").required().asString(),
-  pinataGateway: env.get("VITE_PINATA_GATEWAY").required().asString(),
+  pinataAPIKey: env.get("VITE_PINATA_API_KEY").asString(),
+  pinataGateway: env.get("VITE_PINATA_GATEWAY").asString(),
 };
