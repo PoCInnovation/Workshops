@@ -72,11 +72,11 @@ Then, create a second service, named `kafka`:
 
 ### ✔️ **Validation**:
 
-Run `docker-compose up --build -d`, wait 30 seconds and in a new terminal run `docker-compose logs kafka | grep -i
+Run `docker compose up --build -d`, wait 30 seconds and in a new terminal run `docker compose logs kafka | grep -i
 started`.
 It should print:
 ```shell
-$ docker-compose logs kafka | grep -i started
+$ docker compose logs kafka | grep -i started
 kafka_1      | [2021-08-08 14:06:44,854] DEBUG [ReplicaStateMachine controllerId=1002] Started replica state machine with initial state -> HashMap() (kafka.controller.ZkReplicaStateMachine)
 kafka_1      | [2021-08-08 14:06:44,856] DEBUG [PartitionStateMachine controllerId=1002] Started partition state machine with initial state -> HashMap() (kafka.controller.ZkPartitionStateMachine)
 kafka_1      | [2021-08-08 14:06:44,866] INFO [SocketServer listenerType=ZK_BROKER, nodeId=1002] Started data-plane acceptor and processor(s) for endpoint : ListenerName(LISTENER_IN) (kafka.network.SocketServer)
