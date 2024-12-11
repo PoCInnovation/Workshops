@@ -38,13 +38,6 @@ sudo dnf install docker-ce docker-ce-cli containerd.io
 
 > If you're not on fedora, [a tutorial for other distros is available](https://docs.docker.com/engine/install)
 
-To install `docker-compose`:
-
-```sh
-sudo curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
-```
-
 #### Enable docker
 
 Once the installation is complete, start the docker service with `sudo systemctl start docker`
