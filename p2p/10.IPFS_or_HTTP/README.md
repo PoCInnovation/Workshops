@@ -159,10 +159,8 @@ A very cool feature with IPFS is that if someone is having an IPFS node running 
 
 ## Authors
 
-| [<img src="https://github.com/sacharbon.png?size=85" width=85><br><sub>Sacha Dujardin</sub>](https://github.com/Sacharbon) |
-| :---: |
-| [<img src="https://github.com/lambdina.png?size=85" width=85><br><sub>Adina C.</sub>](https://github.com/lambdina) |
-| :---: |
+| [<img src="https://github.com/sacharbon.png?size=85" width=85><br><sub>Sacha Dujardin</sub>](https://github.com/Sacharbon) | [<img src="https://github.com/lambdina.png?size=85" width=85><br><sub>Adina C.</sub>](https://github.com/lambdina) |
+| :---: | :---: |
 
 <h2 align=center>
 Organization
