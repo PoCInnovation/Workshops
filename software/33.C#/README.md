@@ -31,8 +31,7 @@ Using C# with Avalonia UI offers several advantages:
 **C#** is a **modern programming language** specifically **designed to develop robust and maintainable applications**. It allows developers to **create desktop, web, mobile and gaming applications** with an **elegant and expressive syntax**. C# is based on the **.NET platform** and offers features like automatic memory management, object-oriented programming, and **perfect integration with the Microsoft ecosystem**. If you've never worked with C# before, check out the [official documentation](https://docs.microsoft.com/en-us/dotnet/csharp/) to understand the basics.
 
 ## Step 0 - Setup 💻
-
-Please refer to the [SETUP.md](./SETUP.md) file.
+Please refer to the [SETUP.md](SETUP.md) file.
 
 Once setup is complete, verify everything works:
 
