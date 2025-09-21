@@ -165,19 +165,20 @@ Deep dive into smart contract development:
 
 ---
 
-**Task 8: Add Security Warnings and Finalize Documentation**
+## 🧪 Testing Your Contract
 
-**Why this task?** Proper documentation of security considerations is crucial for smart contract development. It helps developers understand potential risks and proper usage patterns.
+### 📋 [Testing Utilities](./utils/)
+**Important**: To test your contract properly, you need to copy the complete test file with all its contents.
 
-**What you'll learn:** Security documentation, warning systems, and professional contract documentation standards.
+**Steps to set up testing:**
+1. **Copy the entire content** of `./utils/BasicContract.t.sol`
+2. **Paste it** to replace your current test file
+3. **Make sure** all imports and dependencies are included
+4. **Run the tests** using `forge test`
 
-**Tutorial:**
-- Add @warning tags to functions with security implications
-- Document the intentional vulnerability in setOwner function
-- Add @custom:security tags where appropriate
-- Ensure all functions have proper NatSpec documentation
-- Consider what warnings future developers need to know
-- 📚 **Learn more**: [Security documentation](./learn/smart-contracts.md#security-best-practices), [NatSpec standards](./learn/solidity.md#documentation)
+The test file contains all necessary imports, setup functions, and comprehensive test cases to verify your contract works correctly.
+
+---
 
 #### 🎓 Key Concepts You'll Master
 
@@ -193,10 +194,7 @@ This global variable contains the address of the account that initiated the curr
 **Security Vulnerabilities**
 Understanding common vulnerabilities helps you write more secure code. The setOwner function demonstrates why access control is crucial in smart contract development.
 
-## Utils
-
-### 🧪 [Testing Utilities](./utils/)
-Find helper files and testing templates to accelerate your development.
+---
 
 ## Authors
 
