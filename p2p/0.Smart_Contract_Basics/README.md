@@ -1,7 +1,7 @@
 # Workshop - Smart Contract Basics
 
-✔ 🌐 **Understand Blockchain and Addresses**  
-✔ 🛠️ **Create Your First Smart Contract**  
+✔ 🌐 **Understand Blockchain and Addresses**
+✔ 🛠️ **Create Your First Smart Contract**
 ✔ 🚀 **Deploy and Test on Blockchain**
 
 ## Introduction
@@ -15,29 +15,14 @@ This workshop requires **no prior blockchain knowledge**. All you need is:
 - Basic programming understanding (helpful but not required)
 - Willingness to learn new concepts
 
-## Workshop Structure
-
-This workshop is organized in a progressive learning path:
-
-### 📖 Step 1: [Blockchain Fundamentals](./BLOCKCHAIN.md)
-Start here to understand the core concepts:
-- What is blockchain and how it works
-- Understanding addresses (users vs smart contracts)
-- Why blockchain is revolutionary
-
-### 🛠️ Step 2: [Practical Tasks](./task/README.md)
-Hands-on implementation where you will:
-- Set up your development environment
-- Create your first smart contract
-- Write tests for your contract
-- Deploy on local blockchain
-- **BONUS**: Deploy on Sepolia testnet
-
 ## Getting Started
 
-1. **Read the [Blockchain Fundamentals](./BLOCKCHAIN.md)** first to understand the basics
-2. **Follow the [Practical Tasks](./task/README.md)** step by step
-3. **Ask for help** when you need it - blockchain development has a learning curve!
+1. **Follow the [Setup Guide](./SETUP.md)** to prepare your environment
+2. **Read the [Blockchain Fundamentals](./learn/blockchain.md)** first to understand the basics
+3. **Learn [Solidity](./learn/solidity.md)** programming language
+4. **Understand [Smart Contracts](./learn/smart-contracts.md)** concepts
+5. **Complete the [Practical Tasks](./task/README.md)** step by step
+6. **Ask for help** when you need it - blockchain development has a learning curve!
 
 ## What You'll Build
 
@@ -50,31 +35,172 @@ By the end of this workshop, you'll have:
 
 Let's get started! 🚀
 
+## Setup
+
+Before starting the workshop, please follow the setup instructions:
+
+### 📋 [Setup Guide](./SETUP.md)
+Complete environment setup including:
+- Installing Foundry
+- Setting up your development environment
+- Verifying installation
+
+## Learning Path
+
+This workshop is organized in a progressive learning path:
+
+### 📖 [Learn Blockchain](./learn/blockchain.md)
+Start here to understand the core concepts:
+- What is blockchain and how it works
+- Understanding addresses (users vs smart contracts)
+- Why blockchain is revolutionary
+
+### 📝 [Learn Solidity](./learn/solidity.md)
+Learn the programming language for smart contracts:
+- Solidity syntax and basics
+- Smart contract structure
+- Common patterns and best practices
+
+### 🔗 [Learn Smart Contracts](./learn/smart-contracts.md)
+Deep dive into smart contract development:
+- Smart contract lifecycle
+- Testing strategies
+- Deployment and interaction
+
+### 🛠️ Practical task
+
+#### 📋 Tasks to create BasicContract.sol
+
+**Task 1: Create Contract Structure with SPDX License and Pragma Directive**
+
+**Why this task?** Every Solidity contract must start with proper licensing and version declaration. The SPDX license identifier is crucial for legal compliance and the pragma directive ensures compatibility with specific Solidity compiler versions.
+
+**What you'll learn:** Contract structure, licensing requirements, and version management in Solidity.
+
+**Tutorial:** 
+- Start by adding the SPDX license identifier at the top of your file
+- Declare the Solidity version using pragma directive (use ^0.8.30)
+- Create the contract declaration with a descriptive name
+- Remember: The license and pragma must be the very first lines
+- 📚 **Learn more**: [Solidity basics](./learn/solidity.md#contracts)
+
+---
+
+**Task 3: Declare State Variables for Ownership and Whitelist Management**
+
+**Why this task?** State variables are the backbone of smart contracts - they store data permanently on the blockchain. Understanding how to declare and use them is fundamental to smart contract development.
+
+**What you'll learn:** State variables, visibility modifiers (public), address type, and mapping data structures.
+
+**Tutorial:**
+- Declare an `owner` variable of type `address` with public visibility
+- Create a `whitelist` mapping that associates addresses with boolean values
+- Consider what data you need to store permanently on the blockchain
+- Think about who should be able to access these variables
+- 📚 **Learn more**: [Data types and mappings](./learn/solidity.md#data-types-and-state-variables), [Address system](./learn/smart-contracts.md#address-system)
+
+---
+
+**Task 4: Implement Constructor to Initialize Contract State**
+
+**Why this task?** The constructor runs only once when the contract is deployed and is essential for setting up initial state. It's where you establish the contract's initial conditions and ownership.
+
+**What you'll learn:** Constructor functions, msg.sender global variable, and contract initialization patterns.
+
+**Tutorial:**
+- Create a constructor function (no function name, just `constructor()`)
+- Set the contract owner to the address that deployed the contract
+- Initialize the whitelist by adding the owner to it
+- Remember: constructors run only once during deployment
+- 📚 **Learn more**: [Constructor functions](./learn/solidity.md#constructor), [msg.sender explained](./learn/blockchain.md#understanding-addresses)
+
+---
+
+**Task 5: Create onlyOwner Modifier for Access Control**
+
+**Why this task?** Access control is critical in smart contracts. Modifiers provide a clean, reusable way to implement security checks. The onlyOwner pattern is one of the most common security patterns in smart contracts.
+
+**What you'll learn:** Function modifiers, access control patterns, require statements, and security best practices.
+
+**Tutorial:**
+- Create a modifier named `onlyOwner`
+- Use `require()` to check if the caller is the owner
+- Include a descriptive error message
+- Use the `_` placeholder to indicate where the function code will be inserted
+- Think about what happens when the requirement fails
+- 📚 **Learn more**: [Modifiers explained](./learn/solidity.md#modifiers), [Access control patterns](./learn/smart-contracts.md#ownership-pattern)
+
+---
+
+**Task 6: Implement setOwner Function with Intentional Security Vulnerability**
+
+**Why this task?** This task demonstrates a common security vulnerability to help you understand the importance of access control. It's an educational example of what NOT to do in production contracts.
+
+**What you'll learn:** Security vulnerabilities, the importance of access control, and how seemingly simple functions can be dangerous.
+
+**Tutorial:**
+- Create a public function called `setOwner`
+- Accept a new owner address as a parameter
+- Update the owner variable
+- Notice: This function intentionally lacks access control (this is the vulnerability!)
+- Think about who should be able to change the owner
+- 📚 **Learn more**: [Security vulnerabilities](./learn/smart-contracts.md#security-best-practices), [Function visibility](./learn/solidity.md#visibility-modifiers)
+
+---
+
+**Task 7: Build Whitelist Management Functions (add, remove, check)**
+
+**Why this task?** Whitelist functionality is common in smart contracts for managing permissions. You'll learn how to implement CRUD operations (Create, Read, Update, Delete) for on-chain data.
+
+**What you'll learn:** Function implementation, parameter handling, return values, view functions, and data manipulation.
+
+**Tutorial:**
+- Create `addToWhitelist()` function that adds an address to the whitelist
+- Create `removeFromWhitelist()` function that removes an address
+- Create `isWhitelisted()` function that checks if an address is whitelisted
+- Use the onlyOwner modifier for functions that modify state
+- Make the check function a view function (it doesn't modify state)
+- Consider what parameters each function needs
+- 📚 **Learn more**: [Function implementation](./learn/solidity.md#functions), [Mapping operations](./learn/smart-contracts.md#mapping-system)
+
+---
+
+**Task 8: Add Security Warnings and Finalize Documentation**
+
+**Why this task?** Proper documentation of security considerations is crucial for smart contract development. It helps developers understand potential risks and proper usage patterns.
+
+**What you'll learn:** Security documentation, warning systems, and professional contract documentation standards.
+
+**Tutorial:**
+- Add @warning tags to functions with security implications
+- Document the intentional vulnerability in setOwner function
+- Add @custom:security tags where appropriate
+- Ensure all functions have proper NatSpec documentation
+- Consider what warnings future developers need to know
+- 📚 **Learn more**: [Security documentation](./learn/smart-contracts.md#security-best-practices), [NatSpec standards](./learn/solidity.md#documentation)
+
+#### 🎓 Key Concepts You'll Master
+
+**Modifiers (Modifiers)**
+Modifiers are reusable code blocks that can change function behavior. They're essential for implementing access control and other cross-cutting concerns in smart contracts.
+
+**Mappings**
+Mappings are key-value data structures that are extremely gas-efficient in Solidity. They're perfect for storing relationships between addresses and other data.
+
+**msg.sender**
+This global variable contains the address of the account that initiated the current transaction. It's fundamental to authentication and access control in smart contracts.
+
+**Security Vulnerabilities**
+Understanding common vulnerabilities helps you write more secure code. The setOwner function demonstrates why access control is crucial in smart contract development.
+
+## Utils
+
+### 🧪 [Testing Utilities](./utils/)
+Find helper files and testing templates to accelerate your development.
+
 ## Authors
 
-| [<img src="https://github.com/YourGitHubUsername.png" width=120><br><sub>Your Name</sub>](https://github.com/YourGitHubUsername) |
+| [<img src="https://github.com/L3yserEpitech.png" width=120><br><sub>Your Name</sub>](https://github.com/L3yserEpitech) |
 | :----------------------------------------------------------------------------------------------------------------------------: |
-
-<h2 align="center">Organisation</h2>
-<br/>
-<p align='center'>
-    <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Logo LinkedIn">
-    </a>
-    <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Logo Instagram">
-    </a>
-    <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Logo Twitter">
-    </a>
-    <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Logo Discord">
-    </a>
-</p>
-<p align="center">
-    <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Logo Site Web">
-    </a>
-</p>
 
 > 🚀 Don't hesitate to follow us on our different platforms and give a star 🌟 to PoC's repositories.
