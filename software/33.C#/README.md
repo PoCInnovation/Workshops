@@ -41,6 +41,40 @@ dotnet run
 
 An Avalonia window should open with your base application.
 
+## Understanding the Project Structure 📁
+
+Before diving into the tasks, let's understand how a C# project with Avalonia is organized:
+
+### 📂 **Project Structure**:
+
+```
+src/
+├── Models/
+│   └── TaskItem.cs          # Data model representing a task
+├── Views/
+│   └── MainWindow.axaml     # Main UI layout (XAML file)
+├── ViewModels/
+│   └── MainWindowViewModel.cs # Logic behind the UI
+├── Program.cs               # Application entry point
+└── App.axaml               # Application-level configuration
+```
+
+### 🔍 **Key Files Explained**:
+
+- **`TaskItem.cs`** : Contains the data structure for tasks (Title, IsCompleted, etc.)
+- **`MainWindow.axaml`** : The visual interface layout (similar to HTML but for desktop apps)
+- **`MainWindowViewModel.cs`** : Contains the business logic and data binding
+- **`Program.cs`** : Starts the application and shows the main window
+
+### 💡 **How It Works**:
+
+1. **Models** define your data structure
+2. **Views** (`.axaml` files) define the visual interface
+3. **ViewModels** connect the data to the interface using data binding
+4. **Program.cs** orchestrates everything together
+
+This separation allows you to modify the interface without changing the logic, and vice versa.
+
 ## Part 1 - Essential Features ⚡ (perfect for C# beginners)
 
 Focus: simple C# classes and basic data binding with Avalonia. No complex architecture.
@@ -56,7 +90,7 @@ In C#, **properties** are special class members that provide controlled access t
 ### 📌 **Tasks**:
 
 - Examine the `src/Models/TaskItem.cs` file provided in the base project
-- Ensure that `TaskItem` contains at minimum:
+- ✅ **Already implemented**: The `TaskItem` class already contains:
   - `Title` (string) - the task title
   - `IsCompleted` (bool) - the completion state of the task
 - Optional: add a simple `Id` (string or GUID) if it helps you manage selections, otherwise skip this part
@@ -77,10 +111,14 @@ The `CheckBox` is a UI control that allows users to check or uncheck an option. 
 
 ### 📌 **Tasks**:
 
-- Locate the user interface that displays the task list
-- Add a `CheckBox` for each task in this list
-- Bind the `CheckBox`'s `IsChecked` property to the task's `IsCompleted` property
-- Ensure that when the user checks/unchecks the box, the task state updates immediately
+- **Where to work**: Open `src/Views/MainWindow.axaml` - this is where the UI is defined
+- **Find the task list**: Look for the `ListBox` or `ItemsControl` that displays tasks
+- **Add CheckBox**: Inside each task item template, add a `CheckBox` control
+- **Data binding**: Bind the `CheckBox`'s `IsChecked` property to the task's `IsCompleted` property using `{Binding IsCompleted}`
+- **Test**: Ensure that when the user checks/unchecks the box, the task state updates immediately
+
+### 💡 **Hint**:
+The task list is likely displayed using a `ListBox` with an `ItemTemplate`. You'll need to modify this template to include the `CheckBox` alongside the task title.
 
 ### ✔️ **Validation Criteria**:
 
@@ -149,17 +187,17 @@ It's important to gracefully handle error cases: missing file, corrupted JSON, o
 - [Exception handling](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/exceptions/)
 - [Avalonia application lifetimes](https://docs.avaloniaui.net/docs/concepts/application-lifetimes)
 
-## Step 5 - Keep it simple 🎯
+## Step 5 - End of Part 1 Verification ✅
 
 ### 📑 **Description**:
 
 For this first part, we prioritize simplicity and understanding of basic concepts rather than complex architecture. This approach allows you to focus on learning C# and Avalonia without being distracted by advanced patterns.
 
-### 📌 **Tasks**:
+### 📌 **Verification Checklist**:
 
-- Store everything in a single list/collection in the code-behind or a simple view model
-- Avoid repositories, services, or dependency injection for this part
-- Focus on the proper functioning of basic features
+- ✅ Store everything in a single list/collection in the code-behind or a simple view model
+- ✅ Avoid repositories, services, or dependency injection for this part
+- ✅ Focus on the proper functioning of basic features
 
 ### ✔️ **Part 1 complete when**:
 
@@ -303,16 +341,6 @@ This final step will teach you to create a seamless user experience with **auto-
 - File I/O with `File.ReadAllText` / `File.WriteAllText` (create folder if needed)
 - `DateTime.Now` and `DateTime.Compare` for date management
 - `string.Split(',')` and `string.Join(',')` for tags
-
----
-
-## How to run the application 🚀
-
-```bash
-dotnet run
-```
-
-If everything is properly configured, the window opens and displays your task list.
 
 ---
 
