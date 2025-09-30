@@ -52,7 +52,7 @@ In blockchain, **addresses** are like account numbers, but much more powerful an
 
 ### What is an Address?
 An address is a **unique identifier** that looks like this:
-```
+```text
 0x742d35Cc6673C30f4C3B2b3b5D3e36F4b80E5F2b
 ```
 
@@ -96,14 +96,14 @@ An address is a **unique identifier** that looks like this:
 Addresses are generated using **cryptography**:
 
 1. **Private Key** (secret, 64 characters): Your password
-   ```
+   ```text
    ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
    ```
 
 2. **Public Key** (derived from private key): Your identity
 
 3. **Address** (derived from public key): Your account number
-   ```
+   ```text
    0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
    ```
 
@@ -112,14 +112,14 @@ Addresses are generated using **cryptography**:
 ### How Addresses Work in Practice
 
 #### Sending Money
-```
+```text
 From: 0xAlice... (your address)
 To: 0xBob... (recipient's address)
 Amount: 1 ETH
 ```
 
 #### Interacting with Smart Contracts
-```
+```text
 From: 0xYou... (your address)
 To: 0xContract... (smart contract address)
 Action: Call function "buyToken()"
@@ -128,21 +128,21 @@ Action: Call function "buyToken()"
 ### Address Examples and Use Cases
 
 #### Personal Wallet
-```
+```text
 Address: 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045
 Purpose: Hold your cryptocurrency and NFTs
 Control: You (with your private key)
 ```
 
 #### Token Contract
-```
+```text
 Address: 0xA0b86a33E6F90b6C6E6C5c5D5d5e5c5b5a5c5D5e
 Purpose: Manage token transfers and balances
 Control: Smart contract code
 ```
 
 #### DeFi Protocol
-```
+```text
 Address: 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984
 Purpose: Enable decentralized trading
 Control: Community governance + smart contract code

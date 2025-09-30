@@ -149,7 +149,7 @@ contract SimpleBank {
 #### Function Visibility
 Functions in Solidity have different **visibility levels** that control who can call them:
 
-**Public**
+#### Public
 - Can be called by **anyone** (externally or internally)
 - Automatically creates a **getter function** for state variables
 ```solidity
@@ -158,7 +158,7 @@ function publicFunction() public returns (uint256) {
 }
 ```
 
-**External**
+#### External
 - Can **only be called from outside** the contract
 - More **gas efficient** than public for external calls
 ```solidity
@@ -167,7 +167,7 @@ function externalFunction() external returns (uint256) {
 }
 ```
 
-**Internal**
+#### Internal
 - Can only be called **within the contract** or **inherited contracts**
 ```solidity
 function internalFunction() internal returns (uint256) {
@@ -175,7 +175,7 @@ function internalFunction() internal returns (uint256) {
 }
 ```
 
-**Private**
+#### Private
 - Can only be called **within the same contract**
 ```solidity
 function privateFunction() private returns (uint256) {
@@ -186,7 +186,7 @@ function privateFunction() private returns (uint256) {
 #### State Mutability
 Functions can have different **state mutability** modifiers:
 
-**View**
+#### View
 - **Reads** blockchain state but **doesn't modify** it
 - **No gas cost** when called externally
 ```solidity
@@ -195,7 +195,7 @@ function getBalance() public view returns (uint256) {
 }
 ```
 
-**Pure**
+#### Pure
 - **Neither reads nor modifies** state
 - Performs calculations only with input parameters
 ```solidity
@@ -204,7 +204,7 @@ function add(uint256 a, uint256 b) public pure returns (uint256) {
 }
 ```
 
-**Payable**
+#### Payable
 - Can **receive Ether** along with the function call
 ```solidity
 function deposit() public payable {
@@ -425,19 +425,19 @@ foundryup
 
 #### Prerequisites for Sepolia Deployment
 
-**1. Wallet Setup (MetaMask)**
+##### 1. Wallet Setup (MetaMask)
 - Download [MetaMask](https://metamask.io/)
 - Create new wallet or import existing
 - **Secure your seed phrase** (12-24 words)
 - Add Sepolia network to MetaMask
 
-**2. RPC Provider (Alchemy)**
+##### 2. RPC Provider (Alchemy)
 - Sign up at [Alchemy](https://dashboard.alchemy.com/)
 - Create new app for Ethereum Sepolia
 - Copy your **API key** and **RPC URL**
 - Free tier provides sufficient requests for testing
 
-**3. Test ETH from Faucet**
+##### 3. Test ETH from Faucet
 - Visit [Sepolia Faucet](https://www.alchemy.com/faucets/ethereum-sepolia)
 - Enter your wallet address
 - Receive free test ETH (usually requires social verification)
@@ -450,7 +450,7 @@ PRIVATE_KEY="your_private_key_here"
 RPC_URL="https://eth-sepolia.g.alchemy.com/v2/YOUR_API_KEY"
 ```
 
-2. **Deploy contract**:
+1. **Deploy contract**:
 ```bash
 source .env
 forge create src/Contract.sol:Contract \
@@ -458,12 +458,12 @@ forge create src/Contract.sol:Contract \
     --rpc-url $RPC_URL
 ```
 
-3. **Verify deployment**:
+1. **Verify deployment**:
 ```bash
 cast call $CONTRACT_ADDRESS "someFunction()" --rpc-url $RPC_URL
 ```
 
-4. **Interact with contract**:
+1. **Interact with contract**:
 ```bash
 cast send $CONTRACT_ADDRESS "someFunction()" \
     --private-key $PRIVATE_KEY \
@@ -476,7 +476,7 @@ cast send $CONTRACT_ADDRESS "someFunction()" \
 
 ### Decentralized Finance (DeFi)
 
-**Automated Market Makers (AMMs)**
+#### Automated Market Makers (AMMs)
 ```solidity
 contract SimpleAMM {
     mapping(address => uint256) public liquidity;
@@ -495,7 +495,7 @@ contract SimpleAMM {
 }
 ```
 
-**Lending Protocol**
+#### Lending Protocol
 ```solidity
 contract SimpleLending {
     mapping(address => uint256) public deposits;
@@ -516,7 +516,7 @@ contract SimpleLending {
 
 ### Non-Fungible Tokens (NFTs)
 
-**Basic NFT Contract**
+#### Basic NFT Contract
 ```solidity
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
@@ -538,7 +538,7 @@ contract MyNFT is ERC721 {
 
 ### Supply Chain Management
 
-**Product Tracking**
+#### Product Tracking
 ```solidity
 contract SupplyChain {
     struct Product {

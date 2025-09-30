@@ -56,7 +56,7 @@ cd my-smart-contract-project
 ```
 
 This creates a new directory with the following structure:
-```
+```text
 my-smart-contract-project/
 ├── src/           # Smart contracts
 ├── test/          # Test files
