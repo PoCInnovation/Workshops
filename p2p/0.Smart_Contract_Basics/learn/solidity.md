@@ -85,4 +85,4 @@ Mastering these Solidity essentials will empower you to create your own proxy wi
 
 ## Back to the workshop
 
-[Jump !](./README.md)
+[Jump !](../README.md)
