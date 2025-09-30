@@ -210,11 +210,11 @@ Whitelist functionality is common in smart contracts for managing permissions. Y
 
 ## 🧪 Testing Your Contract
 
-### 📋 [Testing Utilities](./utils/)
+### 📋 Testing Utilities
 **Important**: To test your contract properly, you need to copy the complete test file with all its contents.
 
 **Steps to set up testing:**
-1. **Copy the entire content** of `./utils/BasicContract.t.sol`
+1. **Copy the entire content** of `./test/BasicContract.t.sol`
 2. **Paste it** to replace your current test file
 3. **Make sure** all imports and dependencies are included
 4. **Run the tests** using `forge test`

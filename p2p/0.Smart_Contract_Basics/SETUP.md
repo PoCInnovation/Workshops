@@ -150,6 +150,6 @@ If you encounter issues:
 Once your environment is set up:
 1. **Read the [Blockchain Fundamentals](./learn/blockchain.md)** to understand the basics
 2. **Learn [Solidity](./learn/solidity.md)** programming language
-3. **Start with the [Practical Tasks](./task/README.md)** to build your first smart contract
+3. **Start with the [Practical Tasks](./README.md)** to build your first smart contract
 
 You're now ready to start developing smart contracts! 🚀

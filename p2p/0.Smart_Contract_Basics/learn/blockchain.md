@@ -263,7 +263,7 @@ Now that you understand the fundamentals, you're ready to:
 Continue your learning journey:
 - [Learn Solidity](./solidity.md) - Programming language for smart contracts
 - [Learn Smart Contracts](./smart-contracts.md) - Deep dive into smart contract development
-- [Practical Tasks](../task/README.md) - Start building your first smart contract
+- [Practical Tasks](../README.md) - Start building your first smart contract
 
 ## Additional Resources
 
