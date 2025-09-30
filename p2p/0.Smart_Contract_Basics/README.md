@@ -21,7 +21,7 @@ This workshop requires **no prior blockchain knowledge**. All you need is:
 2. **Read the [Blockchain Fundamentals](./learn/blockchain.md)** first to understand the basics
 3. **Learn [Solidity](./learn/solidity.md)** programming language
 4. **Understand [Smart Contracts](./learn/smart-contracts.md)** concepts
-5. **Complete the [Practical Tasks](./task/README.md)** step by step
+5. **Complete the [Practical Tasks](#-tasks-to-create-basiccontractsol)** step by step
 6. **Ask for help** when you need it - blockchain development has a learning curve!
 
 ## What You'll Build
@@ -71,97 +71,140 @@ Deep dive into smart contract development:
 
 #### 📋 Tasks to create BasicContract.sol
 
-**Task 1: Create Contract Structure with SPDX License and Pragma Directive**
+### 📑 **Task 1: Create Contract Structure with SPDX License and Pragma Directive**
 
-**Why this task?** Every Solidity contract must start with proper licensing and version declaration. The SPDX license identifier is crucial for legal compliance and the pragma directive ensures compatibility with specific Solidity compiler versions.
+**Description:**
+Every Solidity contract must start with proper licensing and version declaration. The SPDX license identifier is crucial for legal compliance and the pragma directive ensures compatibility with specific Solidity compiler versions. This task establishes the foundation of your smart contract.
 
 **What you'll learn:** Contract structure, licensing requirements, and version management in Solidity.
 
-**Tutorial:** 
-- Start by adding the SPDX license identifier at the top of your file
+### 📌 **Tasks:**
+
+- Create a new Solidity file named `BasicContract.sol`
+- Add the SPDX license identifier at the very top of your file
 - Declare the Solidity version using pragma directive (use ^0.8.30)
 - Create the contract declaration with a descriptive name
-- Remember: The license and pragma must be the very first lines
-- 📚 **Learn more**: [Solidity basics](./learn/solidity.md#contracts)
+- Remember: The license and pragma must be the very first lines of the file
+
+### 📚 **Documentation:**
+- [Solidity basics](./learn/solidity.md#contracts)
+- [SPDX License Identifiers](https://spdx.org/licenses/)
+- [Pragma Directive](https://docs.soliditylang.org/en/latest/layout-of-source-files.html#pragma)
 
 ---
 
-**Task 3: Declare State Variables for Ownership and Whitelist Management**
+### 📑 **Task 2: Declare State Variables for Ownership and Whitelist Management**
 
-**Why this task?** State variables are the backbone of smart contracts - they store data permanently on the blockchain. Understanding how to declare and use them is fundamental to smart contract development.
+**Description:**
+State variables are the backbone of smart contracts - they store data permanently on the blockchain. Understanding how to declare and use them is fundamental to smart contract development. In this task, you'll create the core data structures for ownership and whitelist management.
 
 **What you'll learn:** State variables, visibility modifiers (public), address type, and mapping data structures.
 
-**Tutorial:**
+### 📌 **Tasks:**
+
 - Declare an `owner` variable of type `address` with public visibility
 - Create a `whitelist` mapping that associates addresses with boolean values
 - Consider what data you need to store permanently on the blockchain
 - Think about who should be able to access these variables
-- 📚 **Learn more**: [Data types and mappings](./learn/solidity.md#data-types-and-state-variables), [Address system](./learn/smart-contracts.md#address-system)
+- Remember: Public variables automatically generate getter functions
+
+### 📚 **Documentation:**
+- [Data types and mappings](./learn/solidity.md#data-types-and-state-variables)
+- [Address system](./learn/smart-contracts.md#address-system)
+- [State Variable Visibility](https://docs.soliditylang.org/en/latest/contracts.html#state-variable-visibility)
 
 ---
 
-**Task 4: Implement Constructor to Initialize Contract State**
+### 📑 **Task 3: Implement Constructor to Initialize Contract State**
 
-**Why this task?** The constructor runs only once when the contract is deployed and is essential for setting up initial state. It's where you establish the contract's initial conditions and ownership.
+**Description:**
+The constructor runs only once when the contract is deployed and is essential for setting up initial state. It's where you establish the contract's initial conditions and ownership. This function is crucial for proper contract initialization.
 
 **What you'll learn:** Constructor functions, msg.sender global variable, and contract initialization patterns.
 
-**Tutorial:**
+### 📌 **Tasks:**
+
 - Create a constructor function (no function name, just `constructor()`)
 - Set the contract owner to the address that deployed the contract
 - Initialize the whitelist by adding the owner to it
 - Remember: constructors run only once during deployment
-- 📚 **Learn more**: [Constructor functions](./learn/solidity.md#constructor), [msg.sender explained](./learn/blockchain.md#understanding-addresses)
+- The `msg.sender` contains the address of the account that deployed the contract
+
+### 📚 **Documentation:**
+- [Constructor functions](./learn/solidity.md#constructor)
+- [msg.sender explained](./learn/blockchain.md#understanding-addresses)
+- [Constructor Documentation](https://docs.soliditylang.org/en/latest/contracts.html#constructor)
 
 ---
 
-**Task 5: Create onlyOwner Modifier for Access Control**
+### 📑 **Task 4: Create onlyOwner Modifier for Access Control**
 
-**Why this task?** Access control is critical in smart contracts. Modifiers provide a clean, reusable way to implement security checks. The onlyOwner pattern is one of the most common security patterns in smart contracts.
+**Description:**
+Access control is critical in smart contracts. Modifiers provide a clean, reusable way to implement security checks. The onlyOwner pattern is one of the most common security patterns in smart contracts. This task teaches you how to implement proper access control.
 
 **What you'll learn:** Function modifiers, access control patterns, require statements, and security best practices.
 
-**Tutorial:**
+### 📌 **Tasks:**
+
 - Create a modifier named `onlyOwner`
 - Use `require()` to check if the caller is the owner
-- Include a descriptive error message
+- Include a descriptive error message for better debugging
 - Use the `_` placeholder to indicate where the function code will be inserted
-- Think about what happens when the requirement fails
-- 📚 **Learn more**: [Modifiers explained](./learn/solidity.md#modifiers), [Access control patterns](./learn/smart-contracts.md#ownership-pattern)
+- Think about what happens when the requirement fails (transaction reverts)
+
+### 📚 **Documentation:**
+- [Modifiers explained](./learn/solidity.md#modifiers)
+- [Access control patterns](./learn/smart-contracts.md#ownership-pattern)
+- [Modifiers Documentation](https://docs.soliditylang.org/en/latest/contracts.html#modifiers)
 
 ---
 
-**Task 6: Implement setOwner Function with Intentional Security Vulnerability**
+### 📑 **Task 5: Implement setOwner Function with Intentional Security Vulnerability**
 
-**Why this task?** This task demonstrates a common security vulnerability to help you understand the importance of access control. It's an educational example of what NOT to do in production contracts.
+**Description:**
+This task demonstrates a common security vulnerability to help you understand the importance of access control. It's an educational example of what NOT to do in production contracts. This vulnerability shows how seemingly simple functions can be dangerous without proper access control.
 
 **What you'll learn:** Security vulnerabilities, the importance of access control, and how seemingly simple functions can be dangerous.
 
-**Tutorial:**
+### 📌 **Tasks:**
+
 - Create a public function called `setOwner`
 - Accept a new owner address as a parameter
 - Update the owner variable
 - Notice: This function intentionally lacks access control (this is the vulnerability!)
 - Think about who should be able to change the owner
-- 📚 **Learn more**: [Security vulnerabilities](./learn/smart-contracts.md#security-best-practices), [Function visibility](./learn/solidity.md#visibility-modifiers)
+- Consider what could happen if anyone could call this function
+
+> ⚠️ **Important**: This is intentionally vulnerable! In production, you would add the `onlyOwner` modifier to this function.
+
+### 📚 **Documentation:**
+- [Security vulnerabilities](./learn/smart-contracts.md#security-best-practices)
+- [Function visibility](./learn/solidity.md#visibility-modifiers)
+- [Smart Contract Security](https://consensys.github.io/smart-contract-best-practices/)
 
 ---
 
-**Task 7: Build Whitelist Management Functions (add, remove, check)**
+### 📑 **Task 6: Build Whitelist Management Functions (add, remove, check)**
 
-**Why this task?** Whitelist functionality is common in smart contracts for managing permissions. You'll learn how to implement CRUD operations (Create, Read, Update, Delete) for on-chain data.
+**Description:**
+Whitelist functionality is common in smart contracts for managing permissions. You'll learn how to implement CRUD operations (Create, Read, Update, Delete) for on-chain data. This task completes your smart contract with practical functionality.
 
 **What you'll learn:** Function implementation, parameter handling, return values, view functions, and data manipulation.
 
-**Tutorial:**
+### 📌 **Tasks:**
+
 - Create `addToWhitelist()` function that adds an address to the whitelist
 - Create `removeFromWhitelist()` function that removes an address
 - Create `isWhitelisted()` function that checks if an address is whitelisted
-- Use the onlyOwner modifier for functions that modify state
-- Make the check function a view function (it doesn't modify state)
+- Use the `onlyOwner` modifier for functions that modify state
+- Make the check function a `view` function (it doesn't modify state)
 - Consider what parameters each function needs
-- 📚 **Learn more**: [Function implementation](./learn/solidity.md#functions), [Mapping operations](./learn/smart-contracts.md#mapping-system)
+- Remember: View functions don't modify state and are free to call
+
+### 📚 **Documentation:**
+- [Function implementation](./learn/solidity.md#functions)
+- [Mapping operations](./learn/smart-contracts.md#mapping-system)
+- [Function Visibility](https://docs.soliditylang.org/en/latest/contracts.html#function-visibility)
 
 ---
 
@@ -198,7 +241,7 @@ Understanding common vulnerabilities helps you write more secure code. The setOw
 
 ## Authors
 
-| [<img src="https://github.com/L3yserEpitech.png" width=120><br><sub>Your Name</sub>](https://github.com/L3yserEpitech) |
+| [<img src="https://github.com/L3yserEpitech.png" width=120><br><sub>Jules Lordet</sub>](https://github.com/L3yserEpitech) |
 | :----------------------------------------------------------------------------------------------------------------------------: |
 
 > 🚀 Don't hesitate to follow us on our different platforms and give a star 🌟 to PoC's repositories.

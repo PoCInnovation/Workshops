@@ -10,8 +10,7 @@ This comprehensive guide covers everything you need to know about smart contract
 4. [Development Patterns](#development-patterns)
 5. [Testing Strategies](#testing-strategies)
 6. [Deployment Guide](#deployment-guide)
-7. [Security Best Practices](#security-best-practices)
-8. [Real-World Applications](#real-world-applications)
+7. [Real-World Applications](#real-world-applications)
 
 ---
 
@@ -473,87 +472,6 @@ cast send $CONTRACT_ADDRESS "someFunction()" \
 
 ---
 
-## Security Best Practices
-
-### Input Validation
-
-Always validate function inputs:
-
-```solidity
-function transfer(address to, uint256 amount) public {
-    require(to != address(0), "Invalid recipient");
-    require(amount > 0, "Amount must be positive");
-    require(balances[msg.sender] >= amount, "Insufficient balance");
-    // ... rest of function
-}
-```
-
-### Access Control
-
-Implement proper access controls:
-
-```solidity
-mapping(address => bool) public admins;
-
-modifier onlyAdmin() {
-    require(admins[msg.sender], "Not an admin");
-    _;
-}
-
-function addAdmin(address newAdmin) public onlyOwner {
-    admins[newAdmin] = true;
-}
-```
-
-### Reentrancy Protection
-
-Use checks-effects-interactions pattern:
-
-```solidity
-contract ReentrancyGuard {
-    bool private locked;
-
-    modifier noReentrant() {
-        require(!locked, "Reentrant call");
-        locked = true;
-        _;
-        locked = false;
-    }
-}
-```
-
-### Integer Overflow Protection
-
-Use SafeMath or Solidity 0.8+ built-in protection:
-
-```solidity
-// Solidity 0.8+ automatically checks for overflow
-function add(uint256 a, uint256 b) public pure returns (uint256) {
-    return a + b; // Will revert on overflow
-}
-```
-
-### Emergency Controls
-
-Implement pause functionality:
-
-```solidity
-contract Pausable {
-    bool public paused = false;
-
-    modifier whenNotPaused() {
-        require(!paused, "Contract is paused");
-        _;
-    }
-
-    function pause() public onlyOwner {
-        paused = true;
-    }
-}
-```
-
----
-
 ## Real-World Applications
 
 ### Decentralized Finance (DeFi)
@@ -661,7 +579,7 @@ Now that you understand smart contracts deeply, you're ready to:
 
 ### Continue Your Learning Journey
 
-- [Complete the Practical Tasks](../task/README.md) - Build your first smart contract
+- [Complete the Practical Tasks](../README.md#-tasks-to-create-basiccontractsol) - Build your first smart contract
 - [Set up your environment](../SETUP.md) - Get ready for development
 - [Review Solidity basics](./solidity.md) - Strengthen your programming skills
 - [Understand blockchain fundamentals](./blockchain.md) - Deepen your knowledge

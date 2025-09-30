@@ -65,15 +65,7 @@ my-smart-contract-project/
 └── foundry.toml   # Configuration file
 ```
 
-### Step 2: Install Dependencies
-
-Install OpenZeppelin contracts (commonly used library):
-
-```bash
-forge install OpenZeppelin/openzeppelin-contracts
-```
-
-### Step 3: Build Your Project
+### Step 2: Build Your Project
 
 Compile the contracts:
 
@@ -81,7 +73,7 @@ Compile the contracts:
 forge build
 ```
 
-### Step 4: Run Tests
+### Step 3: Run Tests
 
 Run the included tests:
 
