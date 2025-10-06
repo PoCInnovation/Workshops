@@ -1,0 +1,19 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="TodoListApp.MainWindow"
+        Title="To-Do List"
+        Width="400" Height="500">
+
+    <StackPanel Margin="20">
+        <TextBlock Text="My To-Do List" FontSize="24" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBox x:Name="TaskInput" Width="250" Watermark="Enter a task..."/>
+            <Button x:Name="AddButton" Content="Add" Margin="10,0,0,0" Width="80"/>
+        </StackPanel>
+
+        <ListBox x:Name="TaskList" Height="300"/>
+
+        <Button x:Name="DeleteButton" Content="Delete selected" Margin="0,10,0,0"/>
+    </StackPanel>
+</Window>
