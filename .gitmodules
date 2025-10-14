@@ -1,0 +1,3 @@
+[submodule "p2p/6.Create_a_proxy/proxy/lib/forge-std"]
+	path = p2p/6.Create_a_proxy/proxy/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
