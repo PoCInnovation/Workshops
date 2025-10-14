@@ -177,20 +177,6 @@ cast send $CONTRACT_ADDRESS "addToWhitelist(address)" $PUBLIC_ADDRESS \
 3. **Get Test ETH**
    - Call me !
 
-4. **Get Alchemy RPC URL**
-   - Visit [Alchemy Dashboard](https://dashboard.alchemy.com/)
-   - Sign up or log in with your email
-   - Click "Create new app"
-   - Fill in the details:
-     - **Name**: `My Smart Contract Project`
-     - **Chain**: `Ethereum`
-     - **Network**: `Sepolia`
-   - Click "Create app"
-   - Once created, click on your app
-   - Click "View key" button
-   - Copy the **HTTPS** URL (it looks like: `https://eth-sepolia.g.alchemy.com/v2/YOUR_API_KEY`)
-   - **Save this URL** - you'll use it as your RPC_URL
-
 ### Step 1: Setup Environment
 
 Create a `.env` file in your project root:
@@ -198,7 +184,7 @@ Create a `.env` file in your project root:
 ```bash
 # .env file
 PRIVATE_KEY="your_private_key_from_metamask"
-RPC_URL="https://eth-sepolia.g.alchemy.com/v2/YOUR_API_KEY"
+RPC_URL="https://rpc.sepolia.org"
 ```
 
 **Security Note**: Never commit `.env` files to git!
