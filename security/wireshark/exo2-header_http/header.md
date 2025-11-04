@@ -7,16 +7,15 @@ This time, the server requests HTTP Basic authentication.
 Reminder: **Basic authentication is not secure**.
 Credentials are not encrypted, only encoded in Base64.
 
----
-
 ## 🎯 Goal
 
 Find the username and password of the user who made these requests!
 
----
+Answer expected:
+```
+titi:toto
+```
 
 ## 📂 File provided
 
 * `introduction_headers.pcapng`
-
----
