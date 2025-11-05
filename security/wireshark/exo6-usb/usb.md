@@ -12,7 +12,11 @@ Find out what he wrote !
 
 _There are some very interesting tools for decoding USB traffic, it would be worth taking a look :)_
 
----
+**Answer expected** :  
+```
+hey_le_rock
+```
+
 
 ## 📂 File provided
 
