@@ -7,7 +7,7 @@ We recommend you also use [Anaconda](https://www.anaconda.com/distribution/) to 
 
 In each directory, you will find the exercises, a README explaining the purpose of the workshop and the slides used during the workshop.
 
-### [🌐 Click to join our Discord](https://discord.gg/Yqq2ADGDS7)
+## [🌐 Click to join our Discord](https://discord.gg/Yqq2ADGDS7)
 
 ## Python3 & Jupyter Notebook 🐍
 
@@ -82,7 +82,7 @@ Discover how to fine-tune a pre-trained Large Language Model (LLM) for a specifi
 
 Feel free to ask us any questions.
 
-#### Link to every slides:
+### Link to every slides:
 
 - [Bases Python:](https://docs.google.com/presentation/d/1pcIwhpaE8DIS47WJjhXEbS0UCTLH5rA_gf3pE6iMB5A/edit?usp=sharing)
 - [Data Analysis & Data Visualization:](https://docs.google.com/presentation/d/1Ib0v-utClIE7NmevnEupjWspj17OjX0qYI338D1cUZw/edit?usp=sharing)
