@@ -71,6 +71,15 @@ Use different machine learning techniques to predict house prices. You will:
 - Create neural networks with PyTorch
 - Evaluate your algorithms
 
+## Fine-tuning 🤖
+Discover how to fine-tune a pre-trained Large Language Model (LLM) for a specific task using HuggingFace. You will:
+- Load an existing GPT-2 model with HuggingFace Transformers
+- Create and prepare your own dataset
+- Tokenize data for the model
+- Configure training parameters
+- Fine-tune an LLM model on custom data
+- Test and compare the fine-tuned model with the original
+
 Feel free to ask us any questions.
 
 #### Link to every slides:
