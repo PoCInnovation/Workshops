@@ -14,9 +14,9 @@ Based on the pcap, figure out what other blunder Edward has made. Do a quick inc
 Here's an interesting link about the **malicious activity** : [Gozi-ISFB](https://isc.sans.edu/diary/23245)
 
 Answer expected :
-* **IP Address** : `10.100.14.xxx`
-* **MAC Address** : `aa:bb:cc:dd:ee:ff`
-* **Hostname** : `Example-Host-PC`
-* **User Account Name** : `User Account Name`
-* **Date and Start Time** : `2018-01-16 22:32:42 UTC (GMT)`
-* **Summary of What Happened** : Well, just what happened in details
+> * **IP Address** : `10.100.14.xxx`
+> * **MAC Address** : `aa:bb:cc:dd:ee:ff`
+> * **Hostname** : `Example-Host-PC`
+> * **User Account Name** : `User Account Name`
+> * **Date and Start Time** : `2018-01-16 22:32:42 UTC (GMT)`
+> * **Summary of What Happened** : Well, just what happened in details
