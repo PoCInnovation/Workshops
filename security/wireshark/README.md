@@ -18,11 +18,11 @@ The **primary advantage** of Wireshark lies in its ability to **deeply analyze n
 
 ### What technology is used to do this?
 
-**Wireshark** uses **packet capture libraries** (such as libpcap on Linux/Unix and WinPcap/Npcap on Windows) to **intercept network traffic** from network interfaces. It then **parses hundreds of protocols** and **displays packet contents** in a human-readable format. The tool supports **deep packet inspection**, **statistical analysis**, and **filtering capabilities** that enable users to **focus on specific traffic patterns** or **protocols of interest**. If you've never used Wireshark before, please refer to the [SETUP.md](./SETUP.md) file to configure it properly and securely.
+**Wireshark** uses **packet capture libraries** (such as libpcap on Linux/Unix and WinPcap/Npcap on Windows) to **intercept network traffic** from network interfaces. It then **parses hundreds of protocols** and **displays packet contents** in a human-readable format. The tool supports **deep packet inspection**, **statistical analysis**, and **filtering capabilities** that enable users to **focus on specific traffic patterns** or **protocols of interest**. If you've never used Wireshark before, please refer to the [setup.md](./setup.md) file to configure it properly and securely.
 
 ## Step 0 - Setup
 
-Please refer to the [SETUP.md](./SETUP.md) file.
+Please refer to the [setup.md](./setup.md) file.
 
 ## Workshop Exercises
 
