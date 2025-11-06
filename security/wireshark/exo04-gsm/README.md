@@ -1,3 +1,0 @@
-Analyze a capture of gsm traffic. You have to find something understandable, even if at first sight some pieces of information appear to be missing...
-
-Source: root-me.org
