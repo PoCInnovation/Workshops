@@ -1,256 +1,112 @@
-# Workshop 3 - GraphQL API with Prisma2
+# Initial Setup: PostgreSQL and Express.js with Prisma
 
-In this workshop, we will learn how to create GraphQL APIs using [Prisma2](https://www.prisma.io/), Nexus-Prisma and Apollo.
+## Step 1: Installing Necessary Tools
 
-## Step 0: initialization
+Make sure Node.js and npm are installed on your machine. Then, install the following dependencies:
 
-All the required information to install the workshop dependencies are available in [SETUP.md](./SETUP.md).
+1. PostgreSQL: Download and install PostgreSQL from the official website.
+2. Create a PostgreSQL database (e.g., `workshop`).
 
-## Step 1: Retrieve posts
+## Step 2: Initializing the Express.js Project
 
-You saw in the setup a query that retrieves all users from the database. Now, do the same thing but to get all the posts.
+1. Create a new folder for your project and open it in the terminal.
+2. Run the following commands:
 
-Create the `getPosts` function:
-- It doesn't take any parameters
-- It returns a list of all the posts in the database.
+```bash
+npm init -y
+npm install express
+```
 
-All the necessary information about the database schema are in the `schema.prisma`.
+## Step 3: Installing Prisma
 
-## Step 2: Create - Read - Update - Delete
+Install Prisma as a development dependency:
 
-You've seen how data fetching with Prisma works, you'll now implement classic CRUD functions (see the title of this step).
+```bash
+npm install prisma --save-dev
+```
 
-> If needed, refer to this [page](https://www.prisma.io/docs/getting-started/quickstart-typescript#write-data-into-the-database) to see basics operations with Prisma. You will need the keyword `where`.
+Initialize Prisma by running the following command:
 
-Create the `addUser` function:
-- It takes in parameters `name` and `email`, the name and email of the user that will be created
-- It adds the user to the database
-- It returns the created userQuery
+```bash
+npx prisma init
+```
 
-Create the `addPost` function:
-- It takes in parameters `title` and `content`, the title and content of the post, as well as `authorId`, the id of the user who will be the author of the post.
-- It adds the post to the database (this post must be connected to the `authorId` received in parameter)
-- It returns the created post
+Follow the instructions to set up the connection to your PostgreSQL database. Make sure to use the connection information for the database you created earlier.
 
-Create the `getPostsByUsers` function:
-- It takes in parameter `authorId`, the id of the user whose posts we want to retrieve
-- It returns the list of posts of the requested user
+## Step 4: Creating a Simple Express.js Application
 
-Create the `removeUser` function:
-- It takes in parameter `id`, the id of the user that will be deleted
-- It returns the user who has been deleted
+Create an index.js file in the root of your project.
 
-Create the `removePost` function:
-- It takes in  parameter `id`, the id of the post that will be deleted
-- It returns the post that has been deleted
+In index.js, set up Express.js to start a basic HTTP server:
 
-## Step 3: Apollo Server and Nexus
+```javascript
 
-Prisma allows us to retrieve data from the database, but we then have to allow the users to retrieve this data. We will use [GraphQL Nexus](https://nexusjs.org/) and [Apollo server](https://www.apollographql.com/docs/apollo-server/) for this purpose.
+const express = require('express');
+const app = express();
+const PORT = 3000;
 
-You will have to install new packages to do this:
+app.get('/', (req, res) => {
+  res.send('Hello, world!');
+});
 
-<strong>Steps to install Apollo and Nexus</strong>
-- Create a new folder named `prisma-nexus-gql`.
-- Download the [zip](./src/3.prisma.zip) from our repo.
-- Extract the zip into your `prisma-nexus-gql`.
-- Run `npm install` in your `prisma-nexus-gql` folder to install the new dependencies.
-- Run `npm run migration` to migrate the prisma schema in the database.
-- Run `npm run generate` to generate prisma client and graphql queries.
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+```
 
-> You should see a warning message when you generate the schema.
+## Step 5: Using Prisma in Your Application
 
-If you subsequently run `npm start`, you will get a warning, which is normal. For the server to run properly, you have to add an `objectType` that defines the `Post` table in the `entities` folder.  
-An example of the `User` table is present in the folder, it's up to you to do `Post`.
+In the prisma folder, open the schema.prisma file.
+Define your database models. For example:
 
-> [Nexus model documentation](https://nexusjs.org/docs/plugins/prisma/overview)
+```prisma
+model User {
+  id       Int      @id @default(autoincrement())
+  username String
+  email    String   @unique
+  posts    Post[]
+}
 
-## Step 4: Setting up the CRUD with Nexus
-
-Now that your models are well defined, you can implement the data manipulations seen in Step 2, but this time with Nexus.
-
-You will build in your schema a `Query` object that will contain the methods to read data and a `Mutation` object that will contain the methods to edit data (add / update / delete).
-
-- For them to take effect, you will have to add these objects to the `type` field of your `schema` defined in `schema.ts`.
-
-> Nexus documentation about [Queries](https://nexusjs.org/docs/api/query-field) and [Mutations](https://nexusjs.org/docs/api/mutation-field)  
-> The `resolve` field is where you will call prisma to query data inside the database
-
-To test the queries/mutations you are going to set up, you can go to <http://localhost:3000/> to use a playground that lets you to test your server.
-
-We already gave the `getUsers` query and the `signupUser` mutation to let you see what the syntax looks like, and make it easier to create the next ones.  
-Below, we also give you examples to test your queries and mutations.
-
-Create the following queries:
-- `getPosts`: returns the list of all posts in the database
-- `getPostsByUser`: returns the list of all the posts of a user thanks to its `authorId`.
-- `getPublishedPosts`: returns a list of all posts that are published.
-
-Create the following mutations:
-- `writeDraft`: creates a post with a `title`, a `content` and the `authorId` of its author. By default it is not published.
-- `publishDraft`: publishes a post whose `id` is specified.
-- `deletePost`: deletes a post whose `id` is specified.
-
-Here are some examples of queries and mutations you can execute in the playground to test your functions
-<Details><Summary><strong>See Query and Mutations (Click me!)</strong></Summary>
-
-## Query
-
-### getUsers
-
-```graphql
-query {
-  getUsers {
-    id
-    name
-    email
-    posts {
-      id
-      title
-    }
-  }
+model Post {
+  id      Int      @id @default(autoincrement())
+  title   String
+  content String
+  author  User     @relation(fields: [authorId], references: [id])
+  authorId Int
 }
 ```
 
-### getPosts
+Run the following command to generate the corresponding Prisma files:
 
-```graphql
-query {
-  getPosts {
-    id
-    title
-    content
-    published
-    author {
-      id
-      name
-      email
-    }
-  }
-}
+```bash
+npx prisma generate
 ```
 
-### getPostsByUser
+Use Prisma in your Express.js application:
 
-```graphql
-query {
-  getPostsByUser(authorId: <AUTHOR_ID>) {
-    id
-    title
-    content
-  }
-}
-```
-> Note: you must replace **<AUTHOR_ID>** with the current id of an author.
+```javascript
+const express = require('express');
+const { PrismaClient } = require('@prisma/client');
 
-### getPublishedPosts
+const app = express();
+const prisma = new PrismaClient();
+const PORT = 3000;
 
-```graphql
-query {
-  getPublishedPosts {
-    id
-    title
-    content
-    published
-    author {
-      id
-      name
-      email
-    }
-  }
-}
-```
-> NOTE: you will get an empty array if you have not called the mutation to publish a post yet.
+app.get('/', async (req, res) => {
+  const users = await prisma.user.findMany();
+  res.json(users);
+});
 
-## Mutations
-
-### signupUser
-
-```graphql
-mutation {
-  signupUser(
-    name: "Paul"
-    email: "paul@prisma.io"
-  ) {
-    id
-  }
-}
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
 ```
 
-### writeDraft
 
-```graphql
-mutation {
-  writeDraft(
-    title: "Join the Prisma Slack"
-    content: "https://slack.prisma.io"
-    authorId: "__AUTHOR_ID__"
-  ) {
-    id
-    published
-  }
-}
+## Step 6: Running the Application
+
+Start the Express.js server:
+
+```bash
+node index.js
 ```
-
-### publishDraft
-
-```graphql
-mutation {
-  publishDraft(id: __POST_ID__) {
-    id
-    published
-  }
-}
-```
-
-### deletePost
-
-```graphql
-mutation {
-  deletePost(id: __POST_ID__) {
-    id
-    title
-  }
-}
-```
-
-</Details>
-
-## Bonus
-
-If you finished the workshop and don't know what to do until the end, you can try to:
-- Use the prisma studio to manipulate your db with a web interface. Run `npx prisma studio --experimental --port 3000`
-- Use the Nexus CRUD functions to drastically reduce your code, see the [documentation](https://nexusjs.org/docs/plugins/prisma/overview#example)
-- Update the database model to add new columns and tables, and your API with it.
-
-## Authors
-
-| [<img src="https://github.com/PaulMonnery.png?size=85" width=85><br><sub>Paul Monnery</sub>](https://github.com/PaulMonnery) | [<img src="https://github.com/nowlow.png?size=85" width=85><br><sub>Naoufel Berrada</sub>](https://github.com/nowlow) | [<img src="https://github.com/Axoloot.png?size=85" width=85><br><sub>Cyril de Lajudie</sub>](https://github.com/Axoloot) | [<img src="https://github.com/TomChv.png?size=85" width=85><br><sub>Tom Chauveau</sub>](https://github.com/TomChv)
-| :---: | :---: | :---: | :---: |
-<h2 align=center>
-Organization
-</h2>
-<br/>
-<p align='center'>
-    <a href="https://www.linkedin.com/company/pocinnovation/mycompany/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn logo">
-    </a>
-    <a href="https://www.instagram.com/pocinnovation/">
-        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram logo"
->
-    </a>
-    <a href="https://twitter.com/PoCInnovation">
-        <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter logo">
-    </a>
-    <a href="https://discord.com/invite/Yqq2ADGDS7">
-        <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord logo">
-    </a>
-</p>
-<p align=center>
-    <a href="https://www.poc-innovation.fr/">
-        <img src="https://img.shields.io/badge/WebSite-1a2b6d?style=for-the-badge&logo=GitHub Sponsors&logoColor=white" alt="Website logo">
-    </a>
-</p>
-
-> 🚀 Don't hesitate to follow us on our different networks, and put a star 🌟 on `PoC's` repositories.
-
