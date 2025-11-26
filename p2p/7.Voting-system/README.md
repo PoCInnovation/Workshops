@@ -44,7 +44,7 @@ Remove the files from `script/`, `src/` and `test` directories. Create `VotingSy
 
 - Create a contract named `VotingSystem`
 - Declare a structure named `Proposal`
->💡 The structure should have 2 variables, `name` and `voSteCount`. I let you guess their types.
+>💡 The structure should have 2 variables, `name` and `voteCount`. I let you guess their types.
 
 - On deployment, the contract should take an array of strings as parameters and store them in a `public` array of `Proposals`.
 >💡 A constructor is an optional function that is executed upon contract deployment, you must create one to complete the previous task.
@@ -75,7 +75,8 @@ In this step you'll focus on the deployment and the integration part of your sma
 - Using Anvil and forge, deploy your smart contract on a local testnet.
 >💡 On a successful deployment, contract address appear next to the `deployed to` field.
 
-- Paste the address of your deployed contract into the environment file at the root of the dApp folder named `VITE_ADDRESS`.
+- In the `dApp` folder, create a `.env` file at the root (if it doesn't exist) and add the following line: `VITE_ADDRESS=<your_contract_address>`
+> 💡 The contract address appears after deployment. Make sure to include the `0x` prefix when copying the address.
 
 ### ✔️ **Validation**:
 
@@ -90,23 +91,69 @@ Once you have done this, you should now be able to see the parameters you entere
 
 ### 📑 **Description**:
 
-Crucial step! I'll leave you to code the rest of the contract yourself, so you can see the results bit by bit. Feel free to redeploy your contract whenever you like with forge!
+Now that your contract is deployed and visible in the dApp, it's time to add the voting logic! In this step, you'll implement:
+- A system to track who has already voted
+- A function to vote for a proposal
+- A function to determine which proposal has the most votes
+
+Feel free to redeploy your contract with `forge` after each modification to test your changes in the dApp!
 
 ### 📌 **Tasks**:
 
-- Create a structure `Voter` containing a boolean named `voted` and an uint `id`.
-- Code the `vote` function. It should take the id of the proposal in parameter.
-    - Check if the voter had already voted and if the id is correct.
-      > 💡 If the voter had already voted, return the string 'Already Voted.'
-    - Add a `voteCount` for the proposal.
+#### 1. Create the `Voter` structure and mapping
 
-> 💡 These functions require a wallet address. If you've did the previous step correctly, you have account available to use. Put one of the private keys in the `.env` file.
+To prevent the same address from voting multiple times, we need to track each voter's state.
 
-- Code the `winningProposal` function, returning the proposal id with the most `voteCount`.
+- Create a `Voter` structure containing:
+  - A boolean `hasVoted` (indicates if this person has already voted)
+  - A `uint` `votedProposalId` (the identifier of the proposal this person voted for)
+- Create a mapping to associate each address with its voter state
+> 💡 A mapping allows you to store data associated with a key (here, the voter's address). Use `msg.sender` to get the address of the person calling the function.
+
+#### 2. Configure authentication for the dApp
+
+Before coding the `vote` function, you need to configure a private key so the dApp can send transactions.
+
+- In the `dApp` folder, add the following line to your `.env` file: `VITE_PRIVATE_KEY_ACCOUNT=<an_anvil_private_key>`
+> 💡 When you launch Anvil, several accounts with their private keys are displayed. Copy one of these private keys **with the `0x` prefix** and paste it into your `.env` file. The `viem` library requires the `0x` prefix. Restart the dApp after this modification.
+
+#### 3. Implement the `vote` function
+
+This function allows a user to vote for a proposal.
+
+- Create a `vote` function that takes a `uint` as parameter (the proposal id)
+- Check that the voter hasn't already voted:
+  - If `voters[msg.sender].hasVoted` is `true`, use `revert("Already Voted.")` to throw an error
+  > 💡 In Solidity, use `revert()` to signal errors. The error message will be caught by the frontend.
+- Check that the proposal id is valid:
+  - The id must be greater than or equal to 0
+  - The id must be less than the length of the `proposals` array
+  > 💡 You can use `require()` to check these conditions
+- If everything is valid:
+  - Mark the voter as having voted: `voters[msg.sender].hasVoted = true`
+  - Record the chosen proposal id: `voters[msg.sender].votedProposalId = <proposal_id>`
+  - Increment the vote counter: `proposals[<proposal_id>].voteCount++`
+
+#### 4. Implement the `winningProposal` function
+
+This function determines which proposal received the most votes.
+
+- Create a `winningProposal` function that returns a `uint` (the winning proposal id)
+- Loop through all proposals in the `proposals` array
+- For each proposal, compare its `voteCount` with the current maximum
+- Return the id of the proposal with the highest `voteCount`
+> 💡 In case of a tie, you can return the first proposal with the maximum votes. Use a `for` loop to iterate through the array.
 
 ### ✔️ **Validation**:
 
-If you can see all the proposals, vote for one and the winner is highlighted in green, congratulations, you have just made your first smart contract !
+To verify that everything works correctly:
+
+1. **Check the display**: In the dApp, you should see all the proposals you created during deployment
+2. **Test voting**: Click on a proposal and vote for it. The vote counter should increment
+3. **Test double-vote protection**: Try voting a second time with the same account. You should see the message "You have already voted."
+4. **Check the winner**: After voting for several proposals, the proposal with the most votes should be highlighted in green
+
+If all these steps work, congratulations, you've created your first smart contract! 🎉
 
 ## To go further
 
